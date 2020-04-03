@@ -1,5 +1,7 @@
 package SystemLogic;
 
+import Users.AssociationRepresentative;
+
 public class DB {
 
     private static DB db;
@@ -23,4 +25,9 @@ public class DB {
         return db;
     }
 
+    public static AssociationRepresentative getRepresentative() {
+
+        //choose randomly association representative
+        return null;
+    }
 }
