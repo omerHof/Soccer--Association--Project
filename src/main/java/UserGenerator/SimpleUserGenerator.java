@@ -6,7 +6,9 @@ public class SimpleUserGenerator implements IUserGenerator {
 
 
     @Override
-    public User generate(String userName, String password) {
-        return null;
+    public User generate(String userName, String password, String role, String fullName, String birthDate, String qualification, String courtRole, String teamRole) { // all the rest are not relevant for this simple user.
+
+        User newFan = new Users.Fan(userName, password);
+        return newFan;
     }
 }
