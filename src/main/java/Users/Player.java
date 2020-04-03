@@ -18,4 +18,8 @@ public class Player extends User {
         this.birthDate = birthDate;
         this.courtRole = courtRole;
     }
+
+    public boolean approveRegistration(String fullName, String role){
+        return true;
+    }
 }

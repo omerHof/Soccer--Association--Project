@@ -13,4 +13,8 @@ public class TeamOwner extends User {
         this.password = password;
         this.fullName = fullName;
     }
+
+    public boolean approveRegistration(String fullName, String role){
+        return true;
+    }
 }

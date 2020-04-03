@@ -18,4 +18,8 @@ public class Fan extends User implements Observer {
     public void update(Observable o, Object arg) {
 
     }
+
+    public boolean approveRegistration(String fullName, String role){
+        return true;
+    }
 }

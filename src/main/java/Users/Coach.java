@@ -16,4 +16,8 @@ public class Coach extends User {
         this.qualification = qualification;
         this.teamRole = teamRole;
     }
+
+    public boolean approveRegistration(String fullName, String role){
+        return true;
+    }
 }
