@@ -16,4 +16,12 @@ public class League {
         this.numOfTeams = numOfTeams;
         allSeasons = new LinkedList<>();
     }
+
+    public List<Season> getAllSeasons() {
+        return allSeasons;
+    }
+
+    public void setAllSeasons(List<Season> allSeasons) {
+        this.allSeasons = allSeasons;
+    }
 }

@@ -1,6 +1,9 @@
 package Users;
 
 import LeagueSeasonsManagment.League;
+import LeagueSeasonsManagment.Season;
+
+import java.util.List;
 
 public class AssociationRepresentative extends User {
 
@@ -34,4 +37,16 @@ public class AssociationRepresentative extends User {
 
         DB.addLeague(newLeague); //////////////// ?????????????????
     }
-}
+
+    public void addSeasonToLeague (String leagueName, int year){
+
+        League currLeague = DB.getLeague(leagueName);
+        Season newSeason = new Season(year);
+
+        List<Season> currSeasons = currLeague.getAllSeasons(); //gets all current seasons
+        ((List) currSeasons).add(newSeason); //adds the new one
+        currLeague.setAllSeasons(currSeasons); //replace old list.
+
+    }
+
+    }
