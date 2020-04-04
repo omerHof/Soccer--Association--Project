@@ -6,7 +6,7 @@ public class AssociationRepresentative extends User {
     private String password;
 
     private String fullName;
-    private static int numOfApprovals = 1 ;
+    private static int numOfApprovals = 0 ;
 
     public AssociationRepresentative(String userName, String password, String fullName) {
         this.userName = userName;
