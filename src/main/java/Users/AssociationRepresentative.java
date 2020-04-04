@@ -1,5 +1,7 @@
 package Users;
 
+import LeagueSeasonsManagment.League;
+
 public class AssociationRepresentative extends User {
 
     private String userName;
@@ -24,5 +26,12 @@ public class AssociationRepresentative extends User {
         // after 9 approvals.
         numOfApprovals=0; //begins from the start.
         return false;
+    }
+
+    public void addLeague (String leagueName, int numOfTeams){
+
+        League newLeague = new League(leagueName, numOfTeams);
+
+        DB.addLeague(newLeague); //////////////// ?????????????????
     }
 }
