@@ -2,5 +2,6 @@ package Users;
 
 import java.util.Observable;
 
-public class PersonalPage extends Observable {
+public abstract class PersonalPage extends Observable {
+
 }
