@@ -33,13 +33,17 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
         ArrayList<String> allMatches= new ArrayList<>();
 
         for(int i=0; i<rounds; i++){
-            ArrayList<Team> roundTeams=teams;
-
+            ArrayList<Game> gamesInRound= new ArrayList<>();
+            listOfGames.put(i,gamesInRound);
+            ArrayList<Team> roundTeams=new ArrayList<>();
+            for(Team t : teams) {
+                roundTeams.add(t);
+            }
             while(roundTeams.size()>1){
                 int randomIndex = rand.nextInt(roundTeams.size());
-                Team homeTeam = roundTeams.get(randomIndex);
-                Team awayTeam = roundTeams.get(randomIndex);
-                String match=homeTeam.toString()+awayTeam.toString();
+                Team homeTeam = roundTeams.get(rand.nextInt(roundTeams.size()));
+                Team awayTeam = roundTeams.get(rand.nextInt(roundTeams.size()));
+                String match=homeTeam.getName()+awayTeam.getName();
                 if(!homeTeam.equals(awayTeam) && !allMatches.contains(match)){
                     allMatches.add(match);
                     Game game=new Game(homeTeam,awayTeam);

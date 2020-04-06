@@ -1,6 +1,6 @@
 package SystemLogic;
 
-import Users.AssociationRepresentative;
+//import Users.AssociationRepresentative;
 import Users.User;
 
 import java.util.ArrayList;
@@ -65,10 +65,11 @@ public class DB {
     public static void setLeagues(ArrayList<User> leagues) {
         DB.leagues = leagues;
     }
-
+/*
     public static AssociationRepresentative getRepresentative() {
 
         //choose randomly association representative
         return null;
     }
+    */
 }

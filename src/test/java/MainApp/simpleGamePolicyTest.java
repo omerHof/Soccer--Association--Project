@@ -14,10 +14,10 @@ public class simpleGamePolicyTest {
     public static void main(String[] args) throws IOException {
         ArrayList<Team>teams=new ArrayList<>();
         HashMap<Integer, ArrayList<Game>> results= new HashMap<>();
-        Team a= new Team();
-        Team b= new Team();
-        Team c= new Team();
-        Team d= new Team();
+        Team a= new Team("aa");
+        Team b= new Team("bb");
+        Team c= new Team("cc");
+        Team d= new Team("dd");
         teams.add(a);
         teams.add(b);
         teams.add(c);
