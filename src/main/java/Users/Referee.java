@@ -1,6 +1,9 @@
 package Users;
 
+import Games.Game;
 import javafx.scene.control.Alert;
+
+import java.util.LinkedList;
 
 public class Referee extends User {
 
@@ -11,11 +14,14 @@ public class Referee extends User {
     private String fullName;
     private String qualification;
 
+    private LinkedList<Game> myGames;
+
     public Referee(String userName, String password, String fullName, String qualification) {
         this.userName = userName;
         this.password = password;
         this.fullName = fullName;
         this.qualification = qualification;
+        myGames = new LinkedList<>();
     }
 
     @Override
@@ -43,5 +49,16 @@ public class Referee extends User {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setContentText(error);
         alert.show();
+    }
+
+    public void addGame (Game g){ //adds a game to the referee's list of games.
+        myGames.add(g);
+    }
+
+    public void watchGamesList (){
+
+        for (Game g : myGames){
+            System.out.println(g.getGameDate() + " , " + g.getGameHour() + " , " + g.getHomeTeam().getName() + "-" + g.getAwayTeam().getName());
+        }
     }
 }
