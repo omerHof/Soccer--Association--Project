@@ -66,11 +66,14 @@ public class PremiumUserGenertator implements IUserGenerator {
 
     }
 
-    public boolean askForApproval (String fullName, String role){
+    public boolean askForApproval (String fullName, String role) {
 
-        AssociationRepresentative ar = DB.getRepresentative(); // a random one.
+     /*   AssociationRepresentative ar = DB.getRepresentative(); // a random one.
         boolean isApproved = ar.approveRegistration(fullName, role);
 
         return isApproved;
+    }*/
+
+        return false;
     }
 }
