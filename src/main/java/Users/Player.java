@@ -23,7 +23,7 @@ public class Player extends User {
         this.fullName = fullName;
         this.birthDate = birthDate;
         this.courtRole = courtRole;
-        page = new PlayerPersonalPage(this);// not sure
+        page = new PlayerPersonalPage(fullName,birthDate,courtRole);// not sure
         salary = 0;
 
         //this.page

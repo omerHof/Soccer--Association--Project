@@ -11,14 +11,14 @@ public  class CoachPersonalPage extends PersonalPage {
     private String teamRole;
     private Team currentTeam;
     private ArrayList<Team> teamHistory;
-    private ArrayList<User>followers;
+   // private ArrayList<User>followers;
 
 
-    public CoachPersonalPage(Coach coach){
-        name=coach.getFullName();
-       teamRole=coach.getTeamRole();
-       qualification=coach.getQualification();
-        followers = new ArrayList<>();
+    public CoachPersonalPage(String name, String qualification, String teamRole){
+        this.name=name;
+       this.qualification=qualification;
+      this.teamRole=teamRole;
+    //    followers = new ArrayList<>();
     }
 
     public String getName() {
@@ -27,6 +27,8 @@ public  class CoachPersonalPage extends PersonalPage {
 
     public void setName(String name) {
         this.name = name;
+        notifyObservers();
+
     }
 
     public String getQualification() {
@@ -35,6 +37,8 @@ public  class CoachPersonalPage extends PersonalPage {
 
     public void setQualification(String qualification) {
         this.qualification = qualification;
+        notifyObservers();
+
     }
 
     public String getTeamRole() {
@@ -43,6 +47,8 @@ public  class CoachPersonalPage extends PersonalPage {
 
     public void setTeamRole(String teamRole) {
         this.teamRole = teamRole;
+        notifyObservers();
+
     }
 
     public Team getCurrentTeam() {
@@ -51,6 +57,8 @@ public  class CoachPersonalPage extends PersonalPage {
 
     public void setCurrentTeam(Team currentTeam) {
         this.currentTeam = currentTeam;
+        notifyObservers();
+
     }
 
     public ArrayList<Team> getTeamHistory() {
@@ -59,6 +67,8 @@ public  class CoachPersonalPage extends PersonalPage {
     public void addTeamToHistoryCareer(Team team){
         teamHistory.add(team);
     }
+
+    /*
 
     public void addFollower(User user){
         followers.add(user);
@@ -70,4 +80,6 @@ public  class CoachPersonalPage extends PersonalPage {
     public ArrayList<User> getFollowers() {
         return followers;
     }
+
+     */
 }

@@ -1,10 +1,10 @@
 package Users;
 
+import Teams.Team;
 import UserGenerator.AUsersGenerator;
 import UserGenerator.SimpleUserGenerator;
 
-import java.util.Observable;
-import java.util.Observer;
+import java.util.*;
 
 public class Fan extends User implements Observer {
 
@@ -13,10 +13,13 @@ public class Fan extends User implements Observer {
     private String name;
     private String email;
 
+    private HashSet<PersonalPage> followedPages;
+
     public Fan(String userName, String password) {
 
         this.password = password;
         this.userName = userName;
+        followedPages = new HashSet<>();
     }
 
     @Override
@@ -27,6 +30,8 @@ public class Fan extends User implements Observer {
     public boolean approveRegistration(String fullName, String role){
         return true;
     }
+
+
 
     //getters
 
@@ -61,6 +66,38 @@ public class Fan extends User implements Observer {
     public void writeNewName(String name){
         setName(name);
     }
+
+
+    //get notification
+    public void getNotification(Team team){
+        ///how to add this, to what?
+
+    }
+
+    public void followThisPage(PersonalPage page){
+        page.addFollower(this);
+        followedPages.add(page);
+
+    }
+
+   public void searchPage(String str){
+        ///maybe not here
+   }
+
+    public HashSet<PersonalPage> showFollowPages(){
+        return followedPages;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

@@ -20,12 +20,10 @@ public class Coach extends User {
         this.qualification = qualification;
         this.teamRole = teamRole;
         salary=0;
-        page = new CoachPersonalPage(this);
+        page = new CoachPersonalPage(fullName,qualification,teamRole);
 
 
     }
-
-
 
     public boolean approveRegistration(String fullName, String role){
         return true;

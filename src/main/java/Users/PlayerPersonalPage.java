@@ -15,13 +15,13 @@ public class PlayerPersonalPage extends PersonalPage {
     private String position;
     private Team currentTeam;
     private ArrayList<Team> teamHistory;
-    private ArrayList<User>followers;
 
 
-    public PlayerPersonalPage(Player player){
-        name=player.getFullName();
-        birthDate=player.getBirthDate();
-        position=player.getCourtRole();
+
+    public PlayerPersonalPage(String name, String birthdate, String position){
+        this.name=name;
+        this.birthDate=birthdate;
+        this.position=position;
     }
 
     public String getName() {
@@ -30,6 +30,8 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setName(String name) {
         this.name = name;
+       notifyObservers();
+
     }
 /*
     public int getAge() {
@@ -48,6 +50,8 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
+        notifyObservers();
+
     }
 
     public int getHeight() {
@@ -56,6 +60,8 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setHeight(int height) {
         this.height = height;
+        notifyObservers();
+
     }
 
     public int getWeight() {
@@ -64,6 +70,8 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setWeight(int weight) {
         this.weight = weight;
+        notifyObservers();
+
     }
 
     public int getShirtNumber() {
@@ -72,6 +80,8 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setShirtNumber(int shirtNumber) {
         this.shirtNumber = shirtNumber;
+        notifyObservers();
+
     }
 
     public String getPosition() {
@@ -80,6 +90,8 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setPosition(String position) {
         this.position = position;
+        notifyObservers();
+
     }
 
     public Team getCurrentTeam() {
@@ -88,6 +100,8 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setCurrentTeam(Team currentTeam) {
         this.currentTeam = currentTeam;
+        notifyObservers();
+
     }
     public void addTeamToHistoryCareer(Team team){
         teamHistory.add(team);
@@ -97,14 +111,5 @@ public class PlayerPersonalPage extends PersonalPage {
         return teamHistory;
     }
 
-    public void addFollower(User user){
-        followers.add(user);
-    }
-    public void removeFollower(User user){
-        followers.remove(user);
-    }
 
-    public ArrayList<User> getFollowers() {
-        return followers;
-    }
 }
