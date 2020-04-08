@@ -30,14 +30,15 @@ public class AssociationRepresentative extends User {
         numOfApprovals=0; //begins from the start.
         return false;
     }
-/*
+
     public void addLeague (String leagueName, int numOfTeams){
 
         League newLeague = new League(leagueName, numOfTeams);
 
-        DB.addLeague(newLeague); //////////////// ?????????????????
+        // SystemLogic.DB.setLeagues(newLeague); //////////////// ?????????????????
     }
 
+    /*
     public void addSeasonToLeague (String leagueName, int year){
 
         League currLeague = DB.getLeague(leagueName);

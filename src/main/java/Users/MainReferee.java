@@ -39,10 +39,12 @@ public class MainReferee extends Referee {
     }
 
     private void deleteEvent(Game g) {
+        ///////////////////////////////// ????????????
 
     }
 
     private void editEvent(Game g) {
+        ///////////////// how to chose the event...?
 
 
     }
@@ -85,6 +87,7 @@ public class MainReferee extends Referee {
                 System.out.println("unsupported choice input"); //// error alert ?/...
             }
         }
+       // g.addEvent(newEvent); ////////////////???????????????????? wait for the EVENT BOOK !!!
     }
 
     public boolean approveRegistration (String fullName, String role){
