@@ -30,7 +30,7 @@ public class AssociationRepresentative extends User {
         numOfApprovals=0; //begins from the start.
         return false;
     }
-
+/*
     public void addLeague (String leagueName, int numOfTeams){
 
         League newLeague = new League(leagueName, numOfTeams);
@@ -47,6 +47,6 @@ public class AssociationRepresentative extends User {
         ((List) currSeasons).add(newSeason); //adds the new one
         currLeague.setAllSeasons(currSeasons); //replace old list.
 
-    }
+    }*/
 
     }

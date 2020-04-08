@@ -12,4 +12,9 @@ public class Manager extends User {
         this.password = password;
         this.fullName = fullName;
     }
+
+    @Override
+    public boolean approveRegistration(String fullName, String role) {
+        return false;
+    }
 }
