@@ -7,16 +7,13 @@ import java.util.List;
 
 public class AssociationRepresentative extends User {
 
-    private String userName;
-    private String password;
-
-    private String fullName;
     private static int numOfApprovals = 0 ;
 
-    public AssociationRepresentative(String userName, String password, String fullName) {
+    public AssociationRepresentative(String userName, String password, String fullName,String userEmail) {
         this.userName = userName;
         this.password = password;
-        this.fullName = fullName;
+        this.userFullName = fullName;
+        this.userEmail = userEmail;
     }
 
     public boolean approveRegistration(String fullName, String role){ //random (symbolic) function
