@@ -13,21 +13,21 @@ import java.util.HashMap;
 import static org.junit.Assert.*;
 
 public class SimpleGamePolicyTest {
-/*
+    ArrayList<Team> teams=new ArrayList<>();
+    HashMap<Integer, ArrayList<Game>> results= new HashMap<>();
+    Team a= new Team("aa");
+    Team b= new Team("bb");
+    Team c= new Team("cc");
+    Team d= new Team("dd");
+
     @Before
     public void setUp() throws Exception {
-        ArrayList<Team> teams=new ArrayList<>();
-        HashMap<Integer, ArrayList<Game>> results= new HashMap<>();
-        Team a= new Team("aa");
-        Team b= new Team("bb");
-        Team c= new Team("cc");
-        Team d= new Team("dd");
         teams.add(a);
         teams.add(b);
         teams.add(c);
         teams.add(d);
-        DB.getResultsInstance();
-        DB.setTeam(user);
+        DB.getInstance();
+        //DB.setTeam(user);
     }
     @After
     public void tearDown() throws Exception {
@@ -43,5 +43,5 @@ public class SimpleGamePolicyTest {
             System.out.println("error");
         }
     }
-    */
+
 }

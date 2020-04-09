@@ -10,12 +10,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class DBTest {
-
+    User user= new Administrator("a","b"," a c");
+    DB db=DB.getInstance();
     @Before
     public void setUp() throws Exception {
-        User user= new Administrator("a","b"," a c");
-        DB.getResultsInstance();
-        DB.setUser(user);
+        db.setUser(user);
     }
 
     @After
@@ -29,7 +28,7 @@ public class DBTest {
     @Test
     public void getUser() {
         try {
-            DB.getUser("a");
+            db.getUser("a");
             java.lang.System.out.println("success");
         }catch (Exception e){
             java.lang.System.out.println("wrong");
@@ -38,6 +37,14 @@ public class DBTest {
 
     @Test
     public void setUser() {
+        try {
+            User user = new Administrator("v", "p", " v d");
+            db.setUser(user);
+            java.lang.System.out.println("success");
+
+        }catch (Exception e){
+            java.lang.System.out.println("wrong");
+        }
     }
 
     @Test
@@ -83,7 +90,7 @@ public class DBTest {
     @Test
     public void getUserType() {
         try {
-            User result=DB.getUserType("Administrator");
+            User result=db.getUserType("Administrator");
             java.lang.System.out.println("success");
         }
         catch (Exception e){
