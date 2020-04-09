@@ -1,12 +1,16 @@
 package Users;
 
+import Teams.Team;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 
 public abstract class PersonalPage extends Observable {
-    private List<Observer> followers ;
+    private List<Fan> followers ;
+    String name;
+    Team currentTeam;
 
     public PersonalPage(){
         followers = new ArrayList<>();
@@ -21,10 +25,17 @@ public abstract class PersonalPage extends Observable {
         followers.remove(fan);
     }
 
-    public List<Observer> getFollowers() {
+    public List<Fan> getFollowers() {
 
        return followers;
     }
+    public String getName() {
+        return name;
+    }
+    public Team getCurrentTeam() {
+        return currentTeam;
+    }
+
 
 
 
