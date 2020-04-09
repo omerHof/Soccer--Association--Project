@@ -1,18 +1,22 @@
-package MainApp;
+package LeagueSeasonsManagment;
 
 import Games.Game;
-import LeagueSeasonsManagment.IGameInlayPolicy;
-import LeagueSeasonsManagment.SimpleGamePolicy;
+import SystemLogic.DB;
 import Teams.Team;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class simpleGamePolicyTest {
+import static org.junit.Assert.*;
 
-    public static void main(String[] args) throws IOException {
-        ArrayList<Team>teams=new ArrayList<>();
+public class SimpleGamePolicyTest {
+/*
+    @Before
+    public void setUp() throws Exception {
+        ArrayList<Team> teams=new ArrayList<>();
         HashMap<Integer, ArrayList<Game>> results= new HashMap<>();
         Team a= new Team("aa");
         Team b= new Team("bb");
@@ -22,6 +26,15 @@ public class simpleGamePolicyTest {
         teams.add(b);
         teams.add(c);
         teams.add(d);
+        DB.getResultsInstance();
+        DB.setTeam(user);
+    }
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void gameInlayPolicyAlgoImplementation() {
         try {
             IGameInlayPolicy policy = new SimpleGamePolicy(teams);
             results = policy.gameInlayPolicyAlgoImplementation();
@@ -29,5 +42,6 @@ public class simpleGamePolicyTest {
         catch (Exception e){
             System.out.println("error");
         }
-        }
+    }
+    */
 }
