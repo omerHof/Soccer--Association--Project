@@ -129,7 +129,8 @@ public class Fan extends User implements Observer {
             }
         String choose = sc.nextLine();
         if(teams.contains(choose)){
-                notificationTeams.put(choose, DB.getTeam(choose));
+
+                notificationTeams.put(choose,getTeamByName(choose));
         }
         else{
                 System.out.println("error! the team is not in the followed teams");
@@ -142,6 +143,16 @@ public class Fan extends User implements Observer {
              }
         }
 
+    }
+
+    public Team getTeamByName(String name){
+        for(HashMap.Entry<String,Team> page:followedTeams.entrySet()){
+            String key = page.getKey();
+           if(key.equals(name)){
+               return page.getValue();
+           }
+        }
+        return null;
     }
 
     public void sendComplaint(){
