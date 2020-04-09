@@ -2,13 +2,11 @@ package SystemLogic;
 
 //import Users.AssociationRepresentative;
 import LeagueSeasonsManagment.League;
+import LeagueSeasonsManagment.Season;
 import Teams.Team;
 import Users.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class DB {
 
@@ -17,9 +15,9 @@ public class DB {
     /**
      * implement data structures
      */
-    private static HashMap<String,User> users;
-    private static HashMap<String, League> leagues;
-    private static HashMap<String, Team> teams;
+    private HashMap<String,User> users;
+    private HashMap<String, League> leagues;
+    private HashMap<String, Team> teams;
 
     /**
      * constructor
@@ -30,7 +28,7 @@ public class DB {
         teams= new HashMap<>();
     }
 
-    public static DB getResultsInstance(){
+    public static DB getInstance(){
         if(db == null){
             synchronized (DB.class) {
                 if(db == null){
@@ -47,15 +45,18 @@ public class DB {
      * get user
      * @return user
      */
-    public static User getUser(String name) {
-        return users.get(name);
+    public User getUser(String name) {
+        if(users.containsKey(name)) {
+            return users.get(name);
+        }
+        return null;
     }
 
     /**
      * set user
      * @param user
      */
-    public static void setUser(User user) {
+    public void setUser(User user) {
         users.put(user.getUserName(),user);
     }
 
@@ -64,7 +65,7 @@ public class DB {
      * @param user
      * @return
      */
-    public static boolean addUser(User user){
+    public boolean addUser(User user){
         if(!users.containsKey(user.getUserName())){
             users.put(user.getUserName(),user);
             return true;
@@ -77,7 +78,7 @@ public class DB {
      * @param name
      * @return
      */
-    public static boolean removeUser(String name){
+    public boolean removeUser(String name){
         if(users.containsKey(name)){
             users.remove(name);
             return true;
@@ -91,14 +92,17 @@ public class DB {
      * get league
      * @return league
      */
-    public static League getLeague(String name) {
-        return leagues.get(name);
+    public League getLeague(String name) {
+        if(leagues.containsKey(name)) {
+            return leagues.get(name);
+        }
+        return null;
     }
     /**
      * set league
      * @param league
      */
-    public static void setLeague(League league) {
+    public void setLeague(League league) {
         leagues.put(league.getName(),league);
     }
 
@@ -107,10 +111,29 @@ public class DB {
      * @param league
      * @return
      */
-    public static boolean addLeague(League league){
+    public boolean addLeague(League league){
         if(!leagues.containsKey(league.getName())){
             leagues.put(league.getName(),league);
             return true;
+        }
+        return false;
+    }
+
+    /**
+     * add season to league
+     * @param name
+     * @param season
+     * @return
+     */
+    public boolean addSeason(String name, Season season){
+        if(leagues.containsKey(name)){
+            if(!leagues.get(name).getAllSeasons().contains(season)){
+                List<Season> newList=leagues.get(name).getAllSeasons();
+                newList.add(season);
+                leagues.get(name).setAllSeasons(newList);
+                return true;
+            }
+            return false;
         }
         return false;
     }
@@ -120,7 +143,7 @@ public class DB {
      * @param name
      * @return
      */
-    public static boolean removeLeague(String name){
+    public boolean removeLeague(String name){
         if(leagues.containsKey(name)){
             leagues.remove(name);
             return true;
@@ -134,15 +157,18 @@ public class DB {
      * get team
      * @return team
      */
-    public static Team getTeam(String name) {
-        return teams.get(name);
+    public Team getTeam(String name) {
+        if(teams.containsKey(name)) {
+            return teams.get(name);
+        }
+        return null;
     }
 
     /**
      * set team
      * @param team
      */
-    public static void setTeam(Team team) {
+    public void setTeam(Team team) {
         teams.put(team.getName(),team);
     }
 
@@ -151,7 +177,7 @@ public class DB {
      * @param team
      * @return
      */
-    public static boolean addTeam(Team team){
+    public boolean addTeam(Team team){
         if(!teams.containsKey(team.getName())){
             teams.put(team.getName(),team);
             return true;
@@ -164,7 +190,7 @@ public class DB {
      * @param name
      * @return
      */
-    public static boolean removeTeam(String name){
+    public boolean removeTeam(String name){
         if(teams.containsKey(name)){
             teams.remove(name);
             return true;
@@ -178,7 +204,7 @@ public class DB {
      * @param type
      * @return
      */
-    public static User getUserType(String type){
+    public User getUserType(String type){
 
         Iterator it = users.entrySet().iterator();
         while (it.hasNext()) {
