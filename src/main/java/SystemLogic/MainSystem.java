@@ -48,20 +48,21 @@ public class MainSystem {
     }
 
     private void appointUserToSAdministrator() {
-        User scapegoat = DB.getUsers().remove(0);//todo: change according to Yiftah
+        //User scapegoat = DB.getUsers().remove(0);//todo: change according to Yiftah
 
         //managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.);// not field
 
     }
 
     public String singUp(String userName, String password){
-        if( DB.getUsers().contains(userName)) {//todo: change according to Yiftah
+        //if( DB.getUsers().contains(userName)) {//todo: change according to Yiftah
 
-        }
+        //}
         return "successfully";
     }
 
     public String logIn(User user, String userName, String password){
+        /*
         if( !DB.getUsers().contains(userName)) {//todo: change according to Yiftah
             return "name!";
         }
@@ -73,6 +74,8 @@ public class MainSystem {
             return "successfully";
         }
 
+         */
+        return "katzi don't commit bad code!";
     }
 
     public String logOut(User user){

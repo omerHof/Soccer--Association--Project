@@ -10,7 +10,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class DBTest {
-    User user= new Administrator("a","b"," a c");
+    User user= new Administrator("a","b"," a c","e");
     DB db=DB.getInstance();
     @Before
     public void setUp() throws Exception {
@@ -38,7 +38,7 @@ public class DBTest {
     @Test
     public void setUser() {
         try {
-            User user = new Administrator("v", "p", " v d");
+            User user = new Administrator("v", "p", " v d","e");
             db.setUser(user);
             java.lang.System.out.println("success");
 

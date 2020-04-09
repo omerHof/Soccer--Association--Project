@@ -29,7 +29,7 @@ public class RefereeTest {
 
     @Test
     public void updatePersonalDetails() {
-        Referee r = new Referee("r1", "rr", "Ziv Adler", "Kavan");
+        Referee r = new Referee("r1", "rr", "Ziv Adler","ziv@adler" , "Kavan");
 
         try {
             r.updatePersonalDetails("Tali", "main");
@@ -63,7 +63,7 @@ public class RefereeTest {
 
     @Test
     public void watchGamesList() {
-        Referee r = new Referee("r1", "rr", "Ziv Adler", "Kavan");
+        Referee r = new Referee("r1", "rr", "Ziv Adler", "ziv@adler" ,"Kavan");
         ArrayList<Team> teams=new ArrayList<>();
 
         Team a= new Team("Maccabi Tel Aviv");

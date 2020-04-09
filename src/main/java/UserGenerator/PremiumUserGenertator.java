@@ -6,12 +6,12 @@ import Users.*;
 public class PremiumUserGenertator implements IUserGenerator {
 
     @Override
-    public User generate(String userName, String password, String role, String fullName, String birthDate, String qualification, String courtRole, String teamRole) {
+    public User generate(String userName, String password, String role, String fullName,String userEmail, String birthDate, String qualification, String courtRole, String teamRole) {
 
         boolean approved = askForApproval(fullName, role);
 
         if(approved) {
-            User newUser = whichUserAmI(userName, password, role, fullName, birthDate, qualification, courtRole, teamRole);
+            User newUser = whichUserAmI(userName, password, role, fullName, birthDate,userEmail, qualification, courtRole, teamRole);
             return newUser;
         }
         else
@@ -25,33 +25,33 @@ public class PremiumUserGenertator implements IUserGenerator {
      * @param userName, .......
      * @return User object
      */
-    public User whichUserAmI(String userName, String password, String role, String fullName, String birthDate, String qualification, String courtRole, String teamRole) {
+    public User whichUserAmI(String userName, String password, String role, String fullName, String userEmail, String birthDate, String qualification, String courtRole, String teamRole) {
 
         if (role != null) {
             switch (role.toLowerCase()) {
 
                 case ("player"): {//Register a player
-                    User newPlayer = new Player(userName, password, fullName, birthDate, courtRole);
+                    User newPlayer = new Player(userName, password, fullName,userEmail, birthDate, courtRole);
                     return newPlayer;
                 }
 
                 case ("coach"): {//Register a coach
-                    User newCoach = new Coach(userName, password, fullName, qualification, teamRole);
+                    User newCoach = new Coach(userName, password, fullName,userEmail, qualification, teamRole);
                     return newCoach;
                 }
 
                 case ("manager"): { //Register a manager
-                    User newManager = new Manager(userName, password, fullName);
+                    User newManager = new Manager(userName, password, fullName,userEmail);
                     return newManager;
                 }
 
                 case ("teamOwner"): { //Register a teamOwner
-                    User newTeamOwner = new TeamOwner(userName, password, fullName);
+                    User newTeamOwner = new TeamOwner(userName, password, fullName,userEmail);
                     return newTeamOwner;
                 }
 
                 case ("referee"): { //Register a referee
-                    User newReferee = new Referee(userName, password, fullName, qualification);
+                    User newReferee = new Referee(userName, password, fullName, qualification,userEmail);
                     return newReferee;
                 }
 
