@@ -1,6 +1,7 @@
 package Users;
 
 import Games.Game;
+import SystemLogic.MainSystem;
 import javafx.scene.control.Alert;
 
 import java.util.LinkedList;
@@ -34,6 +35,7 @@ public class Referee extends User {
         if (fullName != "" && qualification != ""){
             this.fullName = fullName;
             this.qualification = qualification;
+            MainSystem.LOG.info(userName + ": referee's details were updated.");
         }
         else if (fullName != "")
             this.fullName = fullName;

@@ -34,8 +34,7 @@ public class AssociationRepresentative extends User {
     public void addLeague (String leagueName, int numOfTeams){
 
         League newLeague = new League(leagueName, numOfTeams);
-
-        // SystemLogic.DB.setLeagues(newLeague); //////////////// ?????????????????
+        SystemLogic.DB.addLeague(newLeague);
     }
 
     /*
