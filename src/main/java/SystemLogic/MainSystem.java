@@ -8,15 +8,22 @@ import org.apache.logging.log4j.core.config.Configurator;
 
 import java.util.HashMap;
 
-public class System {
-    AccountSystemProxy accountSystemProxy;
-   TaxSystemProxy taxSystemProxy;
-    User currentUser;
-    HashMap<String, User> users;
-    private static final Logger LOG = LogManager.getLogger();;
+public class MainSystem {
+    private static MainSystem single_instance = null;
+    private AccountSystemProxy accountSystemProxy;
+    private TaxSystemProxy taxSystemProxy;
+    private User currentUser;
+    public static final Logger LOG = LogManager.getLogger();;
 
-    public System() {
+    private MainSystem() {
 
+    }
+
+    public static MainSystem getInstance()
+    {
+        if (single_instance == null)
+            single_instance = new MainSystem();
+        return single_instance;
     }
 
     public void initializeSystem(){
@@ -25,14 +32,12 @@ public class System {
     }
 
     public void connectToLog(){
-        LOG.info("SOME MESSAGE!");
-        LOG.debug("Debug Message!");
-        Configurator.setLevel("com.example.Foo", Level.DEBUG);
-        Configurator.setRootLevel(Level.INFO);
-        LOG.info(String.format("Logging level: %s", LOG.getLevel()));
+        LOG.info("LOG WAS CREATED!");
     }
 
     public void connectExternalSystems(){
+        accountSystemProxy = new AccountSystemProxy();
+        taxSystemProxy = new TaxSystemProxy();
 
     }
 
@@ -66,13 +71,7 @@ public class System {
         this.currentUser = currentUser;
     }
 
-    public HashMap<String, User> getUsers() {
-        return users;
-    }
 
-    public void setUsers(HashMap<String, User> users) {
-        this.users = users;
-    }
 }
 
 
