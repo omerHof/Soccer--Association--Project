@@ -183,6 +183,9 @@ public class DB {
         Iterator it = users.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
+            if (type.equals("AssociationRepresentative") && pair.getValue() instanceof AssociationRepresentative) {
+                return (User) pair.getValue();
+            }
             if (type.equals("Fan") && pair.getValue() instanceof Fan) {
                 return (User) pair.getValue();
             }
