@@ -1,5 +1,6 @@
 package SystemLogic;
 
+import UserGenerator.IUserGenerator;
 import UserGenerator.ManagmentUserGenerator;
 import Users.User;
 import org.apache.logging.log4j.LogManager;
@@ -10,7 +11,6 @@ public class MainSystem {
     private AccountSystemProxy accountSystemProxy;
     private TaxSystemProxy taxSystemProxy;
     private User currentUser = null;
-    ManagmentUserGenerator managmentUserGenerator = new ManagmentUserGenerator();
     public static final Logger LOG = LogManager.getLogger();;
 
     private MainSystem() {
@@ -48,16 +48,18 @@ public class MainSystem {
     }
 
     private void appointUserToSAdministrator() {
-        User scapegoat = DB.getUsers().remove(0);//todo: change according to Yiftah
-
-        //managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.);// not field
+        ManagmentUserGenerator managmentUserGenerator = new ManagmentUserGenerator();
+//        User scapegoat = DB.getUsers().remove(0);//todo: change according to Yiftah
+//
+//        managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.);// not field
 
     }
 
-    public String singUp(String userName, String password){
+    public String singUp(String userName, String password, IUserGenerator iUserGenerator){
         if( DB.getUsers().contains(userName)) {//todo: change according to Yiftah
 
         }
+        //iUserGenerator.generate();
         return "successfully";
     }
 
