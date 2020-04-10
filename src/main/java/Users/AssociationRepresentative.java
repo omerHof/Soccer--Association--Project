@@ -1,5 +1,6 @@
 package Users;
 
+import LeagueSeasonsManagment.IScorePolicy;
 import LeagueSeasonsManagment.League;
 import LeagueSeasonsManagment.Season;
 import SystemLogic.DB;
@@ -40,16 +41,21 @@ public class AssociationRepresentative extends User {
     }
 
 
-    public void addSeasonToLeague (String leagueName, int year){
+   /* public void addSeasonToLeague (String leagueName, int year, IScorePolicy policy,){
 
         Season newSeason = new Season(year);
         newSeason.setiGameInlayPolicy(null); ////////////// policy.
+         // שיבוץ קבוצות
+        // שיבוץ שופטים
+        // שיבוץ נציגי התאחדות אחראיים על עדכונים ממשחקים
+        // בחירת מדיניות שיבוץ משחקים
+        // כפתור הפעלת שיבוץ משחקים?
 
 
         db.addSeason(leagueName, newSeason);
 
         MainSystem.LOG.info("new season: " + leagueName + " were added to league: " + leagueName + ".");
 
-    }
+    }*/
 
 }

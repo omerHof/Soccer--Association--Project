@@ -50,7 +50,7 @@ public class MainSystem {
         User scapegoat = DB.getInstance().getUser("name"); //todo: 1. change to remove 2. get random or by name?
         Administrator administrator = (Administrator) managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.getPassword(),
                 "", scapegoat.getUserFullName(), scapegoat.getUserEmail(),
-                "","","","");
+                "","","","", "");
         DB.getInstance().addUser(administrator);
         LOG.info("Administrator was appointed successfully");
     }
@@ -62,10 +62,9 @@ public class MainSystem {
             return false;
         }
 
-        User newUser =  iUserGenerator.generate(userName, password, role, fullName, userEmail,
+        User newUser =  iUserGenerator.generate(userName, password, "",  role, fullName, userEmail,
                 birthDate, qualification, courtRole, teamRole);
         DB.getInstance().addUser(newUser);
-        LOG.info("A new user was created successfully");
         this.currentUser = newUser;
         return true;
     }
