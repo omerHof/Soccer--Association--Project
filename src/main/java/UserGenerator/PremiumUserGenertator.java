@@ -1,6 +1,7 @@
 package UserGenerator;
 
 import SystemLogic.DB;
+import SystemLogic.MainSystem;
 import Users.*;
 
 public class PremiumUserGenertator implements IUserGenerator {
@@ -15,7 +16,7 @@ public class PremiumUserGenertator implements IUserGenerator {
             return newUser;
         }
         else
-            throw new Error(); //////// a message ????
+            return null;
 
     }
 
@@ -32,6 +33,7 @@ public class PremiumUserGenertator implements IUserGenerator {
 
                 case ("player"): {//Register a player
                     User newPlayer = new Player(userName, password, fullName,userEmail, birthDate, courtRole);
+                    MainSystem.LOG.info("A new user was created successfully");
                     return newPlayer;
                 }
 
@@ -68,12 +70,11 @@ public class PremiumUserGenertator implements IUserGenerator {
 
     public boolean askForApproval (String fullName, String role) {
 
-     /*   AssociationRepresentative ar = DB.getRepresentative(); // a random one.
+        DB db1 = DB.getInstance();
+        AssociationRepresentative ar = (AssociationRepresentative) db1.getUserType("AssociationRepresentative"); // a random one.
         boolean isApproved = ar.approveRegistration(fullName, role);
 
         return isApproved;
-    }*/
-
-        return false;
     }
+
 }

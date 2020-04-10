@@ -2,7 +2,9 @@ package LeagueSeasonsManagment;
 
 import Games.Game;
 import Teams.Team;
+import Users.Referee;
 
+import java.sql.Ref;
 import java.util.List;
 
 public class Season {
@@ -11,6 +13,7 @@ public class Season {
     private List<Game> allGames;
     private List<Team> allTeams;
     private IGameInlayPolicy iGameInlayPolicy;
+    private List<Referee> allReferees;
 
     public Season(int year) {
         this.year = year;
