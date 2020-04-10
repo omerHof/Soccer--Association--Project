@@ -53,6 +53,18 @@ public class DB {
     }
 
     /**
+     * check if user exist
+     * @param name
+     * @return
+     */
+    public boolean userExist (String name){
+        if(users.containsKey(name)) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * set user
      * @param user
      */
@@ -97,6 +109,17 @@ public class DB {
             return leagues.get(name);
         }
         return null;
+    }
+    /**
+     * check if league exist
+     * @param name
+     * @return
+     */
+    public boolean leagueExist (String name){
+        if(leagues.containsKey(name)) {
+            return true;
+        }
+        return false;
     }
     /**
      * set league
@@ -164,6 +187,17 @@ public class DB {
         return null;
     }
 
+    /**
+     * check if team exist
+     * @param name
+     * @return
+     */
+    public boolean teamExist (String name){
+        if(teams.containsKey(name)) {
+            return true;
+        }
+        return false;
+    }
     /**
      * set team
      * @param team

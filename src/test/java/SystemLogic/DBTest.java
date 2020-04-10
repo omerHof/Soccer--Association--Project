@@ -10,7 +10,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class DBTest {
-    User user= new Administrator("a","b"," a c");
+    User user= new Administrator("a","b"," a c","e");
     DB db=DB.getInstance();
     @Before
     public void setUp() throws Exception {
@@ -36,9 +36,13 @@ public class DBTest {
     }
 
     @Test
+    public void userExist() {
+
+    }
+    @Test
     public void setUser() {
         try {
-            User user = new Administrator("v", "p", " v d");
+            User user = new Administrator("v", "p", " v d","e");
             db.setUser(user);
             java.lang.System.out.println("success");
 
@@ -60,6 +64,11 @@ public class DBTest {
     }
 
     @Test
+    public void leagueExist() {
+
+    }
+
+    @Test
     public void setLeague() {
     }
 
@@ -73,6 +82,11 @@ public class DBTest {
 
     @Test
     public void getTeam() {
+    }
+
+    @Test
+    public void teamExist() {
+
     }
 
     @Test
@@ -97,4 +111,6 @@ public class DBTest {
             java.lang.System.out.println("wrong");
         }
     }
+
+
 }

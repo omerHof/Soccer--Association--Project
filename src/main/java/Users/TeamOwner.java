@@ -3,15 +3,11 @@ package Users;
 public class TeamOwner extends User {
 
 
-    private String userName;
-    private String password;
-
-    private String fullName;
-
-    public TeamOwner(String userName, String password, String fullName) {
+    public TeamOwner(String userName, String password, String fullName,String userEmail) {
         this.userName = userName;
         this.password = password;
-        this.fullName = fullName;
+        this.userFullName = fullName;
+        this.userEmail = userEmail;
     }
 
     public boolean approveRegistration(String fullName, String role){

@@ -9,19 +9,18 @@ import java.util.*;
 
 public class Fan extends User implements Observer {
 
-    private String userName;
-    private String password;
-    private String name;
-    private String email;
+
 
     private HashMap<String,PersonalPage> followedPages;
     private HashMap<String,Team> followedTeams;
     private HashMap<String,Team> notificationTeams;
 
-    public Fan(String userName, String password) {
+    public Fan(String userName, String password, String fullName, String email) {
 
         this.password = password;
         this.userName = userName;
+        this.userFullName = fullName;
+        this.userEmail = email;
         followedPages = new HashMap<>();
         followedTeams = new HashMap<>();
     }
@@ -39,7 +38,7 @@ public class Fan extends User implements Observer {
 
     //getters
 
-
+/*
     public String getName() {
         return name;
     }
@@ -70,6 +69,8 @@ public class Fan extends User implements Observer {
     public void writeNewName(String name){
         setName(name);
     }
+
+ */
 
     public HashMap<String, PersonalPage> getFollowedPages() {
         return followedPages;
@@ -169,10 +170,10 @@ public class Fan extends User implements Observer {
     }
     public void watchDetails(){
         System.out.println("your details:");
-        System.out.println("full name: " +name );
+        System.out.println("full name: " +userFullName );
         System.out.println("user name: " +userName );
         System.out.println("password: " +password );
-        System.out.println("email: " +email );
+        System.out.println("email: " +userEmail );
 
 
 

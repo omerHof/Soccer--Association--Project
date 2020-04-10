@@ -6,10 +6,6 @@ import java.util.Date;
 
 public class Player extends User {
 
-    private String userName;
-    private String password;
-
-    private String fullName;
     private String birthDate;
     private String courtRole;
     private PlayerPersonalPage page;
@@ -17,10 +13,11 @@ public class Player extends User {
 
 
 
-    public Player(String userName, String password, String fullName, String birthDate, String courtRole) {
+    public Player(String userName, String password, String fullName, String userEmail ,String birthDate, String courtRole) {
         this.userName = userName;
         this.password = password;
-        this.fullName = fullName;
+        this.userFullName = fullName;
+        this.userEmail = userEmail;
         this.birthDate = birthDate;
         this.courtRole = courtRole;
         page = new PlayerPersonalPage(fullName,birthDate,courtRole);// not sure
@@ -34,7 +31,7 @@ public class Player extends User {
     }
 
 
-
+/*
     @Override
     public String getUserName() {
         return userName;
@@ -48,7 +45,7 @@ public class Player extends User {
     public String getFullName() {
         return fullName;
     }
-
+*/
     public String getBirthDate() {
         return birthDate;
     }
@@ -56,7 +53,7 @@ public class Player extends User {
     public String getCourtRole() {
         return courtRole;
     }
-
+/*
     @Override
     public void setUserName(String userName) {
         this.userName = userName;
@@ -71,7 +68,7 @@ public class Player extends User {
         this.fullName = fullName;
         page.setName(fullName);
     }
-
+*/
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
         page.setBirthDate(birthDate);

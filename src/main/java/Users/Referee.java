@@ -9,18 +9,14 @@ import java.util.LinkedList;
 public class Referee extends User {
 
 
-    private String userName;
-    private String password;
-
-    private String fullName;
     private String qualification;
-
     private LinkedList<Game> myGames;
 
-    public Referee(String userName, String password, String fullName, String qualification) {
+    public Referee(String userName, String password, String fullName,String userEmail, String qualification) {
         this.userName = userName;
         this.password = password;
-        this.fullName = fullName;
+        this.userFullName = fullName;
+        this.userEmail = userEmail;
         this.qualification = qualification;
         myGames = new LinkedList<>();
     }
@@ -33,12 +29,12 @@ public class Referee extends User {
     public void updatePersonalDetails(String fullName, String qualification){
 
         if (fullName != "" && qualification != ""){
-            this.fullName = fullName;
+            this.userFullName = fullName;
             this.qualification = qualification;
             MainSystem.LOG.info(userName + ": referee's details were updated.");
         }
         else if (fullName != "")
-            this.fullName = fullName;
+            this.userFullName = fullName;
         else if(qualification != "")
             this.qualification = qualification;
         else

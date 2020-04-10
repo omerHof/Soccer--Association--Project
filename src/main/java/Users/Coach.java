@@ -4,20 +4,18 @@ import Teams.Team;
 
 public class Coach extends User {
 
-    private String userName;
-    private String password;
 
-    private String fullName;
     private String qualification;
     private String teamRole;
     private int salary;
     private CoachPersonalPage page;
 
-    public Coach(String userName, String password, String fullName, String qualification, String teamRole) {
+    public Coach(String userName, String password, String fullName,String userEmail, String qualification, String teamRole) {
         this.userName = userName;
         this.password = password;
-        this.fullName = fullName;
+        this.userFullName = fullName;
         this.qualification = qualification;
+        this.userEmail = userEmail;
         this.teamRole = teamRole;
         salary=0;
         page = new CoachPersonalPage(fullName,qualification,teamRole);
@@ -50,11 +48,11 @@ public class Coach extends User {
     }
 
     public String getFullName() {
-        return fullName;
+        return userFullName;
     }
 
     public void setFullName(String fullName) {
-        this.fullName = fullName;
+        this.userFullName = fullName;
     }
 
     public String getQualification() {
