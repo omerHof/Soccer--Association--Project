@@ -10,7 +10,7 @@ public class League {
     private String name;
     private int numOfTeams;
     private List<Season> allSeasons;
-    private IScorePolicy iScorePolicy;
+
 
     private List<Team>teams;
 
@@ -57,7 +57,5 @@ public class League {
 
      */
 
-    public void setiScorePolicy(IScorePolicy iScorePolicy) {
-        this.iScorePolicy = iScorePolicy;
-    }
+
 }

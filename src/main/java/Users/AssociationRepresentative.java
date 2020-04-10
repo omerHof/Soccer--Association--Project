@@ -42,16 +42,22 @@ public class AssociationRepresentative extends User {
     }
 
 
-    public void addSeasonToLeague (String leagueName, int year, IScorePolicy policy, IGameInlayPolicy gamePolicy, List<String> teams, List<String> referees, List<String> representatives){
+    public void addSeasonToLeague (String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives){
 
         Season newSeason = new Season(year);
-        newSeason.setiGameInlayPolicy(null); ////////////// policy.
+
          // שיבוץ קבוצות
         // שיבוץ שופטים
         // שיבוץ נציגי התאחדות אחראיים על עדכונים ממשחקים
-        // בחירת מדיניות שיבוץ משחקים
-        // כפתור הפעלת שיבוץ משחקים?
+        //בחירת מדיניות חישוב תוצאות
+        newSeason.setIScorePolicy(scorePolicy);
 
+        newSeason.setiGameInlayPolicy(gamePolicy);
+
+        // בחירת מדיניות שיבוץ משחקים
+        IGameInlayPolicy iGameInlayPolicy = newSeason.getiGameInlayPolicy();
+        //הפעלת שיבוץ משחקים- מקבל את הקבוצות אז חייב להיקרא אחרי שיבוץ הקבוצות לעונה!!
+        iGameInlayPolicy.gameInlayPolicyAlgoImplementation();
 
         db.addSeason(leagueName, newSeason);
 

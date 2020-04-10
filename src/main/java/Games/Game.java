@@ -1,8 +1,10 @@
 package Games;
 
+import SystemLogic.DB;
 import Teams.Team;
 import Users.Referee;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,6 +16,7 @@ public class Game {
     private Date gameDate;
     private String gameHour;
     private String score;
+    private ArrayList<Event> eventBook;
 
     private List<Referee> gameReferees;
 
