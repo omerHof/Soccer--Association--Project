@@ -36,6 +36,10 @@ public class DBTest {
     }
 
     @Test
+    public void userExist() {
+
+    }
+    @Test
     public void setUser() {
         try {
             User user = new Administrator("v", "p", " v d","e");
@@ -60,6 +64,11 @@ public class DBTest {
     }
 
     @Test
+    public void leagueExist() {
+
+    }
+
+    @Test
     public void setLeague() {
     }
 
@@ -73,6 +82,11 @@ public class DBTest {
 
     @Test
     public void getTeam() {
+    }
+
+    @Test
+    public void teamExist() {
+
     }
 
     @Test
@@ -97,4 +111,6 @@ public class DBTest {
             java.lang.System.out.println("wrong");
         }
     }
+
+
 }
