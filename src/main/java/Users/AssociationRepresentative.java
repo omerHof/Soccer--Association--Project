@@ -1,5 +1,6 @@
 package Users;
 
+import LeagueSeasonsManagment.IGameInlayPolicy;
 import LeagueSeasonsManagment.IScorePolicy;
 import LeagueSeasonsManagment.League;
 import LeagueSeasonsManagment.Season;
@@ -41,7 +42,7 @@ public class AssociationRepresentative extends User {
     }
 
 
-   /* public void addSeasonToLeague (String leagueName, int year, IScorePolicy policy,){
+    public void addSeasonToLeague (String leagueName, int year, IScorePolicy policy, IGameInlayPolicy gamePolicy, List<String> teams, List<String> referees, List<String> representatives){
 
         Season newSeason = new Season(year);
         newSeason.setiGameInlayPolicy(null); ////////////// policy.
@@ -56,6 +57,6 @@ public class AssociationRepresentative extends User {
 
         MainSystem.LOG.info("new season: " + leagueName + " were added to league: " + leagueName + ".");
 
-    }*/
+    }
 
 }
