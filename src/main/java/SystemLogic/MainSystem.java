@@ -56,25 +56,15 @@ public class MainSystem {
     }
 
     public String singUp(String userName, String password, IUserGenerator iUserGenerator){
-        if( DB.getUsers().contains(userName)) {//todo: change according to Yiftah
 
-        }
         //iUserGenerator.generate();
         return "successfully";
     }
 
     public String logIn(User user, String userName, String password){
-        if( !DB.getUsers().contains(userName)) {//todo: change according to Yiftah
-            return "name!";
-        }
-        else if( !DB.getUsers().contains(password)){//todo: change according to Yiftah
-            return "password bitch!";
-        }
-        else{
-            this.currentUser = user;
-            return "successfully";
-        }
 
+
+        return null;
     }
 
     public String logOut(User user){
