@@ -57,5 +57,7 @@ public class League {
 
      */
 
-
+    public void setiScorePolicy(IScorePolicy iScorePolicy) {
+        this.iScorePolicy = iScorePolicy;
+    }
 }

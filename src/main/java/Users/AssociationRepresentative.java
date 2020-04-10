@@ -2,12 +2,15 @@ package Users;
 
 import LeagueSeasonsManagment.League;
 import LeagueSeasonsManagment.Season;
+import SystemLogic.DB;
+import SystemLogic.MainSystem;
 
 import java.util.List;
 
 public class AssociationRepresentative extends User {
 
     private static int numOfApprovals = 0 ;
+    private DB db = DB.getInstance();
 
     public AssociationRepresentative(String userName, String password, String fullName,String userEmail) {
         this.userName = userName;
@@ -31,19 +34,22 @@ public class AssociationRepresentative extends User {
     public void addLeague (String leagueName, int numOfTeams){
 
         League newLeague = new League(leagueName, numOfTeams);
-        SystemLogic.DB.addLeague(newLeague);
+        db.addLeague(newLeague);
+
+        MainSystem.LOG.info("new league: " + leagueName + " were added.");
     }
 
-    /*
+
     public void addSeasonToLeague (String leagueName, int year){
 
-        League currLeague = DB.getLeague(leagueName);
         Season newSeason = new Season(year);
+        newSeason.setiGameInlayPolicy(null); ////////////// policy.
 
-        List<Season> currSeasons = currLeague.getAllSeasons(); //gets all current seasons
-        ((List) currSeasons).add(newSeason); //adds the new one
-        currLeague.setAllSeasons(currSeasons); //replace old list.
 
-    }*/
+        db.addSeason(leagueName, newSeason);
+
+        MainSystem.LOG.info("new season: " + leagueName + " were added to league: " + leagueName + ".");
 
     }
+
+}

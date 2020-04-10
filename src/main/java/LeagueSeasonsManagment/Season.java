@@ -36,4 +36,7 @@ public class Season {
 
      */
 
+    public void setiGameInlayPolicy(IGameInlayPolicy iGameInlayPolicy) {
+        this.iGameInlayPolicy = iGameInlayPolicy;
+    }
 }
