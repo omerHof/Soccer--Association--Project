@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class MainReferee extends Referee {
 
-    public MainReferee(String userName, String password, String fullName, String qualification) {
-        super(userName, password, fullName, qualification);
+    public MainReferee(String userName, String password, String fullName,String userEmail, String qualification) {
+        super(userName, password, fullName, userEmail, qualification);
     }
 
     public void editGameEvents(Games.Game g) {

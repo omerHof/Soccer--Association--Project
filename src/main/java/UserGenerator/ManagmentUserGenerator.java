@@ -12,7 +12,7 @@ public class ManagmentUserGenerator implements IUserGenerator {
     private static String systemManagerPassword;
 
     @Override
-    public User generate(String userName, String password, String role, String fullName, String birthDate, String qualification, String courtRole, String teamRole) {
+    public User generate(String userName, String password, String role, String fullName,String userEmail,String birthDate, String qualification, String courtRole, String teamRole) {
 
         String managementPassword = askForSpecialPassword();
 
@@ -20,12 +20,12 @@ public class ManagmentUserGenerator implements IUserGenerator {
 
         if(approved){
             if (managementPassword == represantativePassword){
-                User newRepresantative = new AssociationRepresentative(userName, password, fullName);
+                User newRepresantative = new AssociationRepresentative(userName, password, fullName,userEmail );
                 return newRepresantative;
             }
 
             else if (managementPassword == systemManagerPassword){
-                User newAdministrator = new Administrator(userName, password, fullName);
+                User newAdministrator = new Administrator(userName, password, fullName,userEmail);
                 return newAdministrator;
             }
 
