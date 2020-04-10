@@ -2,6 +2,7 @@ package SystemLogic;
 
 import UserGenerator.IUserGenerator;
 import UserGenerator.ManagmentUserGenerator;
+import Users.Administrator;
 import Users.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,11 +12,9 @@ public class MainSystem {
     private AccountSystemProxy accountSystemProxy;
     private TaxSystemProxy taxSystemProxy;
     private User currentUser = null;
-    public static final Logger LOG = LogManager.getLogger();;
-
+    public static final Logger LOG = LogManager.getLogger();
     private MainSystem() {
-        //here?
-        initializeSystem();
+
     }
 
     public static MainSystem getInstance()
@@ -31,11 +30,10 @@ public class MainSystem {
     }
 
     public void initializeSystem(){
-        this.connectToLog();
-        this.connectExternalSystems();
-        this.appointUserToSAdministrator();
+        connectToLog();
+        connectExternalSystems();
+        appointUserToSAdministrator(); //how can someone be a user before initialization?
     }
-
 
 
     private void connectToLog(){
@@ -49,16 +47,27 @@ public class MainSystem {
 
     private void appointUserToSAdministrator() {
         ManagmentUserGenerator managmentUserGenerator = new ManagmentUserGenerator();
-//        User scapegoat = DB.getUsers().remove(0);//todo: change according to Yiftah
-//
-//        managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.);// not field
-
+        User scapegoat = DB.getInstance().getUser("name"); //todo: 1. change to remove 2. get random or by name?
+        Administrator administrator = (Administrator) managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.getPassword(),
+                "", scapegoat.getUserFullName(), scapegoat.getUserEmail(),
+                "","","","");
+        DB.getInstance().addUser(administrator);
+        LOG.info("Administrator was appointed successfully");
     }
 
-    public String singUp(String userName, String password, IUserGenerator iUserGenerator){
+    public boolean singUp(String userName, String password, String role, String fullName,String userEmail,
+                         String birthDate, String qualification, String courtRole, String teamRole,
+                         IUserGenerator iUserGenerator){
+        if (false){//todo: make method that checks if DB contains userName / password
+            return false;
+        }
 
-        //iUserGenerator.generate();
-        return "successfully";
+        User newUser =  iUserGenerator.generate(userName, password, role, fullName, userEmail,
+                birthDate, qualification, courtRole, teamRole);
+        DB.getInstance().addUser(newUser);
+        LOG.info("A new user was created successfully");
+        this.currentUser = newUser;
+        return true;
     }
 
     public String logIn(User user, String userName, String password){
