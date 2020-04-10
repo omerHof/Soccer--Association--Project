@@ -8,8 +8,4 @@ public class Administrator extends User {
         this.userEmail = userEmail;
         this.userFullName = fullName;
     }
-
-    public boolean approveRegistration(String fullName, String role){
-        return true;
-    }
 }

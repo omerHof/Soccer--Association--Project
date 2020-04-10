@@ -23,10 +23,6 @@ public class Coach extends User {
 
     }
 
-    public boolean approveRegistration(String fullName, String role){
-        return true;
-    }
-
     @Override
     public String getUserName() {
         return userName;

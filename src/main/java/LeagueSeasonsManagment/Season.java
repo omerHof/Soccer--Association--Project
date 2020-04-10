@@ -1,6 +1,7 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
+import Teams.Team;
 
 import java.util.List;
 
@@ -8,6 +9,7 @@ public class Season {
 
     private int year;
     private List<Game> allGames;
+    private List<Team> allTeams;
     private IGameInlayPolicy iGameInlayPolicy;
 
     public Season(int year) {
@@ -29,7 +31,11 @@ public class Season {
     public void setAllGames(List<Game>games){
         allGames=games;
     }
-   /*
+
+    public void setAllTeams(List<Team> allTeams) {
+        this.allTeams = allTeams;
+    }
+    /*
     public void GameInlayPolicyAlgoImplementation(){
         //////to complete
     }

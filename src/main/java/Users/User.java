@@ -8,7 +8,6 @@ public abstract class User {
     protected String userEmail;
     protected String userFullName;
 
-    public abstract boolean approveRegistration(String fullName, String role);
 
     public String getUserName() {
         return userName;

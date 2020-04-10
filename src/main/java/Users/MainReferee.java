@@ -90,7 +90,4 @@ public class MainReferee extends Referee {
        // g.addEvent(newEvent); ////////////////???????????????????? wait for the EVENT BOOK !!!
     }
 
-    public boolean approveRegistration (String fullName, String role){
-        return true;
-    }
 }
