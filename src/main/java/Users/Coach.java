@@ -1,67 +1,41 @@
 package Users;
 
+import SystemLogic.MainSystem;
 import Teams.Team;
+
+import java.util.Date;
 
 public class Coach extends User {
 
-
-    private String qualification;
+    private int age;
     private String teamRole;
     private int salary;
     private CoachPersonalPage page;
 
-    public Coach(String userName, String password, String fullName,String userEmail, String qualification, String teamRole) {
+    public Coach(String userName, String password, String fullName,String userEmail, String teamRole) {
         this.userName = userName;
         this.password = password;
         this.userFullName = fullName;
-        this.qualification = qualification;
         this.userEmail = userEmail;
         this.teamRole = teamRole;
         salary=0;
-        page = new CoachPersonalPage(fullName,qualification,teamRole);
+        page=null;
+        //page = new CoachPersonalPage(fullName,qualification,teamRole);
 
 
+    }
+    ///do it later
+    public CoachPersonalPage createPersonalPage(Date bithDate, Team team){
+        MainSystem.LOG.info("The coach  create personal page");
+
+        page= new CoachPersonalPage(userFullName,bithDate,teamRole,team);
+        return page;
     }
 
     public boolean approveRegistration(String fullName, String role){
         return true;
     }
 
-    @Override
-    public String getUserName() {
-        return userName;
-    }
-
-    @Override
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getFullName() {
-        return userFullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.userFullName = fullName;
-    }
-
-    public String getQualification() {
-        return qualification;
-    }
-
-    public void setQualification(String qualification) {
-        this.qualification = qualification;
-    }
 
     public String getTeamRole() {
         return teamRole;
@@ -82,8 +56,20 @@ public class Coach extends User {
     public CoachPersonalPage getPage() {
         return page;
     }
-    ///changes for personal page
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setPage(CoachPersonalPage page) {
+        this.page = page;
+    }
+    /*
+    ///changes for personal page
 
     public void setCurrentTeam(Team team){
         page.setCurrentTeam(team);
@@ -91,6 +77,8 @@ public class Coach extends User {
     public void setTeamToHistoryOfTeams(Team team){
         page.addTeamToHistoryCareer(team);
     }
+
+     */
 }
 
 
