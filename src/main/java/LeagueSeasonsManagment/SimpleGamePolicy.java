@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class SimpleGamePolicy implements IGameInlayPolicy {
 
-    private ArrayList<Team> teams;
+    private ArrayList<Team> ListTeam;
     private HashMap<Integer, ArrayList<Game>> listOfGames;
 
     /**
@@ -18,7 +18,7 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
      * @param teams
      */
     public SimpleGamePolicy(ArrayList<Team> teams) {
-        this.teams=teams;
+        this.ListTeam=teams;
         this.listOfGames= new HashMap<>();
     }
 
@@ -26,13 +26,15 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
      * this function returns the games
      * @param
      */
+    /*
     @Override
     public HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation() {
         int rounds=(teams.size()-1)*2;
         Random rand = new Random();
+        int counter=0;
         ArrayList<String> allMatches= new ArrayList<>();
 
-        for(int i=0; i<rounds; i++){
+        for(int i=1; i<=rounds; i++){
             ArrayList<Game> gamesInRound= new ArrayList<>();
             listOfGames.put(i,gamesInRound);
             ArrayList<Team> roundTeams=new ArrayList<>();
@@ -50,11 +52,90 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
                     listOfGames.get(i).add(game);
                     roundTeams.remove(homeTeam);
                     roundTeams.remove(awayTeam);
+                    counter=0;
+                }
+                else{
+                    counter++;
+                }
+                if(counter>50){
+                    i=0;
+                    listOfGames.clear();
+                    counter=0;
+                    break;
                 }
             }
         }
         return listOfGames;
+    }
+*/
 
+    /**
+     * round robin implementation
+     * @param
+     * @return
+     */
+    @Override
+    public HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation()
+    {
+        if (ListTeam.size() % 2 != 0)
+        {
+            System.out.println("odd number of teams");
+            return null;
+        }
 
+        int numDays = (ListTeam.size() - 1); // Days needed to complete tournament
+
+        ArrayList<Team> teams = new ArrayList<>();
+
+        for(Team t : ListTeam) {
+            teams.add(t);
+        }
+        teams.remove(0);
+
+        int teamsSize = teams.size();
+        int start=0;
+        addGame(start,numDays,teams,false);
+        addGame(teamsSize,teamsSize*2,teams,true);
+
+        return listOfGames;
+    }
+
+    private void addGame(int start, int numDays,ArrayList<Team> teams, boolean secondRound)
+    {
+        int teamsSize=teams.size();
+        for (int day = start; day < numDays; day++)
+        {
+            ArrayList<Game>games= new ArrayList<>();
+            Team homeTeam;
+            Team awayTeam;
+            int teamIdx = day % teamsSize;
+            if(!secondRound) {
+                homeTeam = teams.get(teamIdx);
+                awayTeam = ListTeam.get(0);
+            }
+            else{
+                homeTeam=ListTeam.get(0);
+                awayTeam=teams.get(teamIdx);
+            }
+            Game game= new Game(homeTeam,awayTeam);
+            games.add(game);
+
+            for (int idx = 1; idx < ListTeam.size()/2; idx++)
+            {
+                int firstTeam = (day + idx) % teamsSize;
+                int secondTeam = (day  + teamsSize - idx) % teamsSize;
+                if(!secondRound) {
+                    homeTeam = teams.get(firstTeam);
+                    awayTeam = teams.get(secondTeam);
+                }
+                else{
+                    homeTeam = teams.get(secondTeam);
+                    awayTeam = teams.get(firstTeam);
+                }
+                game= new Game(homeTeam,awayTeam);
+                games.add(game);
+            }
+            listOfGames.put(day+1,games);
+        }
     }
 }

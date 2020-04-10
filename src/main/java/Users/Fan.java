@@ -94,11 +94,6 @@ public class Fan extends User implements Observer {
 
     }
 
-    public boolean approveRegistration(String fullName, String role){
-        return true;
-    }
-
-
 
     //getters
 

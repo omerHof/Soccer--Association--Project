@@ -9,8 +9,4 @@ public class Manager extends User {
         this.userEmail = userEmail;
     }
 
-    @Override
-    public boolean approveRegistration(String fullName, String role) {
-        return false;
-    }
 }

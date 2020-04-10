@@ -1,6 +1,7 @@
 package Users;
 
 import Games.Game;
+import SystemLogic.MainSystem;
 import javafx.scene.control.Alert;
 
 import java.util.LinkedList;
@@ -20,16 +21,12 @@ public class Referee extends User {
         myGames = new LinkedList<>();
     }
 
-    @Override
-    public boolean approveRegistration(String fullName, String role) {
-        return false;
-    }
-
     public void updatePersonalDetails(String fullName, String qualification){
 
         if (fullName != "" && qualification != ""){
             this.userFullName = fullName;
             this.qualification = qualification;
+            MainSystem.LOG.info(userName + ": referee's details were updated.");
         }
         else if (fullName != "")
             this.userFullName = fullName;
