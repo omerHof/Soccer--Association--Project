@@ -21,11 +21,6 @@ public class Referee extends User {
         myGames = new LinkedList<>();
     }
 
-    @Override
-    public boolean approveRegistration(String fullName, String role) {
-        return false;
-    }
-
     public void updatePersonalDetails(String fullName, String qualification){
 
         if (fullName != "" && qualification != ""){
