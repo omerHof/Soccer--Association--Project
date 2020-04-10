@@ -9,8 +9,4 @@ public class TeamOwner extends User {
         this.userFullName = fullName;
         this.userEmail = userEmail;
     }
-
-    public boolean approveRegistration(String fullName, String role){
-        return true;
-    }
 }

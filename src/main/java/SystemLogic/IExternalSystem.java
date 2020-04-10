@@ -2,7 +2,7 @@ package SystemLogic;
 
 public interface IExternalSystem {
 
-    public void connectToSystem();
+    public boolean connectToSystem();
     public void SetInformation();
     public void getInformation();
 }

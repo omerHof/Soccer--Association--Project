@@ -4,8 +4,8 @@ public class TaxSystemProxy implements IExternalSystem{
     TaxSystem taxSystem;
 
     @Override
-    public void connectToSystem() {
-
+    public boolean connectToSystem() {
+        return taxSystem.connectToSystem();
     }
 
     @Override

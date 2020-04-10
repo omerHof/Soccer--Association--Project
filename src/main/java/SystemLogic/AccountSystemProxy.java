@@ -4,8 +4,8 @@ public class AccountSystemProxy implements IExternalSystem {
     AccountSystem accountSystem;
 
     @Override
-    public void connectToSystem() {
-
+    public boolean connectToSystem() {
+        return accountSystem.connectToSystem();
     }
 
     @Override

@@ -26,10 +26,6 @@ public class Player extends User {
         //this.page
     }
 
-    public boolean approveRegistration(String fullName, String role){
-        return true;
-    }
-
 
 /*
     @Override

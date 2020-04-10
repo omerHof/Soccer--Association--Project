@@ -6,7 +6,7 @@ import Users.*;
 public class PremiumUserGenertator implements IUserGenerator {
 
     @Override
-    public User generate(String userName, String password, String role, String fullName,String userEmail, String birthDate, String qualification, String courtRole, String teamRole) {
+    public User generate(String userName, String password, String managementPassword, String role, String fullName,String userEmail, String birthDate, String qualification, String courtRole, String teamRole) {
 
         boolean approved = askForApproval(fullName, role);
 

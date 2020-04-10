@@ -30,11 +30,6 @@ public class Fan extends User implements Observer {
         System.out.println("changes in"+ arg);
     }
 
-    public boolean approveRegistration(String fullName, String role){
-        return true;
-    }
-
-
 
     //getters
 
