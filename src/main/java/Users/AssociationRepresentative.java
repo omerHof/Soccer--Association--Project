@@ -37,12 +37,15 @@ public class AssociationRepresentative extends User {
     }
 
     ////////////////////////////// USE CASE 9.1 //////////////////////////////
-    public void addLeague (String leagueName, int numOfTeams){
+    public boolean addLeague (String leagueName, int numOfTeams){
 
         League newLeague = new League(leagueName, numOfTeams);
-        db.addLeague(newLeague);
-
-        MainSystem.LOG.info("new league: " + leagueName + " were added.");
+        if (db.addLeague(newLeague)){ //this league does not exist yet. OK.
+            MainSystem.LOG.info("new league: " + leagueName + " were added.");
+            return true;
+        }
+        else
+            return false;
     }
 
     ////////////////////////////// USE CASE 9.2 //////////////////////////////

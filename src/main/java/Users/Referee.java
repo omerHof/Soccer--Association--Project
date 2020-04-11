@@ -39,6 +39,9 @@ public class Referee extends User {
     }
 */
 
+    public String getQualification() {
+        return qualification;
+    }
 
     private void displayError(String error){
         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -48,7 +51,7 @@ public class Referee extends User {
 
     public void setQualification(String qualification) {
         this.qualification = qualification;
-        MainSystem.LOG.info(userName + ": referee's details were updated.");
+        MainSystem.LOG.info(this.userName + ": referee's details were updated.");
     }
 
 
@@ -61,9 +64,13 @@ public class Referee extends User {
 
         LinkedList<String> allGames = new LinkedList<>();
 
-        for (Game g : myGames) {
-            allGames.add(g.getGameDate() + " , " + g.getHomeTeam().getName() + "-" + g.getAwayTeam().getName());
+        if (myGames != null) {
+            for (Game g : myGames) {
+                if( g != null)
+                    allGames.add(g.getGameDate() + " , " + g.getHomeTeam().getName() + "-" + g.getAwayTeam().getName());
+            }
+            return allGames;
         }
-        return allGames;
+        return null;
     }
 }
