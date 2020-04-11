@@ -3,15 +3,16 @@ package LeagueSeasonsManagment;
 import Games.Game;
 import SystemLogic.DB;
 import Teams.Team;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Random;
 
+/**
+ * this class get list of teams and create a scheduling for a season
+ */
 public class SimpleGamePolicy implements IGameInlayPolicy {
 
-    private ArrayList<Team> ListTeam;
-    private HashMap<Integer, ArrayList<Game>> listOfGames;
+    private ArrayList<Team> ListTeam; // the initial list of teams
+    private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
 
     /**
      * constructor
@@ -77,39 +78,46 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
     @Override
     public HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation()
     {
-        if (ListTeam.size() % 2 != 0)
+        if (ListTeam.size() % 2 != 0) //check odd number of teams
         {
             System.out.println("odd number of teams");
             return null;
         }
 
-        int numDays = (ListTeam.size() - 1); // Days needed to complete tournament
+        int rounds = (ListTeam.size() - 1); // Days needed to complete tournament
 
         ArrayList<Team> teams = new ArrayList<>();
 
-        for(Team t : ListTeam) {
+        for(Team t : ListTeam) { //copy the list of teams
             teams.add(t);
         }
         teams.remove(0);
 
         int teamsSize = teams.size();
         int start=0;
-        addGame(start,numDays,teams,false);
+        addGame(start,rounds,teams,false);
         addGame(teamsSize,teamsSize*2,teams,true);
 
         return listOfGames;
     }
 
-    private void addGame(int start, int numDays,ArrayList<Team> teams, boolean secondRound)
+    /**
+     * this function add rounds and games of half season
+     * @param start- the initial round
+     * @param rounds- the number of games each team playing in half season
+     * @param teams- list of teams
+     * @param secondSeason- if it's first/second season
+     */
+    private void addGame(int start, int rounds,ArrayList<Team> teams, boolean secondSeason)
     {
         int teamsSize=teams.size();
-        for (int day = start; day < numDays; day++)
+        for (int day = start; day < rounds; day++)
         {
             ArrayList<Game>games= new ArrayList<>();
             Team homeTeam;
             Team awayTeam;
             int teamIdx = day % teamsSize;
-            if(!secondRound) {
+            if(!secondSeason) {
                 homeTeam = teams.get(teamIdx);
                 awayTeam = ListTeam.get(0);
             }
@@ -124,7 +132,7 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
             {
                 int firstTeam = (day + idx) % teamsSize;
                 int secondTeam = (day  + teamsSize - idx) % teamsSize;
-                if(!secondRound) {
+                if(!secondSeason) {
                     homeTeam = teams.get(firstTeam);
                     awayTeam = teams.get(secondTeam);
                 }

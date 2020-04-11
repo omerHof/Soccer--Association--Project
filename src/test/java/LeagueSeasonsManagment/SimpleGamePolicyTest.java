@@ -25,6 +25,8 @@ public class SimpleGamePolicyTest {
     Team f= new Team("chelsea");
     Team g= new Team("roma");
     Team h= new Team("juve");
+    Team i= new Team("milan");
+    Team j= new Team("inter");
 
     ArrayList<String> roundrobin=new ArrayList<>();
     @Before
@@ -35,8 +37,10 @@ public class SimpleGamePolicyTest {
         teams.add(d);
         teams.add(e);
         teams.add(f);
-        //teams.add(g);
-        //teams.add(h);
+        teams.add(g);
+        teams.add(h);
+        teams.add(i);
+        teams.add(j);
         DB.getInstance();
         //DB.setTeam(user);
 
@@ -53,37 +57,15 @@ public class SimpleGamePolicyTest {
             Iterator it = results.entrySet().iterator();
             while (it.hasNext()) {
                 Map.Entry pair = (Map.Entry) it.next();
-                ArrayList<Game> games=(ArrayList)pair.getValue();
-                for(Game g:games) {
-                    System.out.println(pair.getKey()+":"+g.getHomeTeam().getName()+" vs "+g.getAwayTeam().getName());
+                ArrayList<Game> games = (ArrayList) pair.getValue();
+                for (Game g : games) {
+                    System.out.println(pair.getKey() + ":" + g.getHomeTeam().getName() + " vs " + g.getAwayTeam().getName());
                 }
 
             }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("error");
         }
     }
-    @Test
-    public void ListMatches(){
-        try{
-            IGameInlayPolicy policy = new SimpleGamePolicy(teams);
-            results=new HashMap<>();
-            results=policy.gameInlayPolicyAlgoImplementation();
-            Iterator it = results.entrySet().iterator();
-            while (it.hasNext()) {
-                Map.Entry pair = (Map.Entry) it.next();
-                ArrayList<Game> games=(ArrayList)pair.getValue();
-                for(Game g:games) {
-                    System.out.println(pair.getKey()+":"+g.getHomeTeam().getName()+" vs "+g.getAwayTeam().getName());
-                }
-
-            }
-        }catch (Exception e){
-            System.out.println("error");
-        }
-
-    }
-
 
 }
