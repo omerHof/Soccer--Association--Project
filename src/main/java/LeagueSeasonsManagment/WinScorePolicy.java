@@ -1,14 +1,14 @@
 package LeagueSeasonsManagment;
 
-public class SimpleScorePolicy implements IScorePolicy {
+public class WinScorePolicy implements IScorePolicy {
 
     private int win;
     private int draw;
     private int lost;
-    
+
     @Override
     public void scorePolicyAlgoImplementation() {
-        win=3;
+        win=2;
         draw=1;
         lost=0;
 

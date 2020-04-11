@@ -3,56 +3,31 @@ package Users;
 import Teams.Team;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class PlayerPersonalPage extends PersonalPage {
 
-    private String name;
-    //private int age;
-    private String birthDate;
+
+
     private int height;
     private int weight;
     private int shirtNumber;
     private String position;
-    private Team currentTeam;
-    private ArrayList<Team> teamHistory;
 
 
 
-    public PlayerPersonalPage(String name, String birthdate, String position){
+    public PlayerPersonalPage(String name, Date birthdate, String position,int height,int weight,int shirtNumber, Team team){
         this.name=name;
-        this.birthDate=birthdate;
+        this.age=getAge(birthdate);
         this.position=position;
+        this.height = height;
+        this.weight = weight;
+        this.shirtNumber=shirtNumber;
+        this.currentTeam=team;
+        this.teamHistory.add(team.getName());
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-       notifyObservers();
-
-    }
-/*
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
- */
-
-    public String getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
-        notifyObservers();
-
-    }
 
     public int getHeight() {
         return height;
@@ -60,7 +35,6 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setHeight(int height) {
         this.height = height;
-        notifyObservers();
 
     }
 
@@ -70,7 +44,6 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setWeight(int weight) {
         this.weight = weight;
-        notifyObservers();
 
     }
 
@@ -80,7 +53,6 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setShirtNumber(int shirtNumber) {
         this.shirtNumber = shirtNumber;
-        notifyObservers();
 
     }
 
@@ -90,25 +62,7 @@ public class PlayerPersonalPage extends PersonalPage {
 
     public void setPosition(String position) {
         this.position = position;
-        notifyObservers();
 
-    }
-
-    public Team getCurrentTeam() {
-        return currentTeam;
-    }
-
-    public void setCurrentTeam(Team currentTeam) {
-        this.currentTeam = currentTeam;
-        notifyObservers();
-
-    }
-    public void addTeamToHistoryCareer(Team team){
-        teamHistory.add(team);
-    }
-
-    public ArrayList<Team> getTeamHistory() {
-        return teamHistory;
     }
 
 

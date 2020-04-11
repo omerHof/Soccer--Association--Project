@@ -14,27 +14,25 @@ public class ManagmentUserGenerator implements IUserGenerator {
     @Override
     public User generate(String userName, String password, String managementPassword, String role, String fullName,String userEmail,String birthDate, String qualification, String courtRole, String teamRole) {
 
-        String managementPass = askForSpecialPassword();
-
-        boolean approved = askForApproval(fullName, managementPassword);
+        boolean approved = askForApproval(fullName, managementPassword); // להשוות מול הסיסמא שיצרו אצל כצי ???
 
         if(approved){
-            if (managementPass == represantativePassword){
+            if (managementPassword == represantativePassword){
                 User newRepresantative = new AssociationRepresentative(userName, password, fullName,userEmail );
                 return newRepresantative;
             }
 
-            else if (managementPass == systemManagerPassword){
+            else if (managementPassword == systemManagerPassword){
                 User newAdministrator = new Administrator(userName, password, fullName,userEmail);
                 return newAdministrator;
             }
 
-            else // Is it even possible ???
-                throw new Error(); //////// a message ????
+            else
+                return null;
         }
 
         else
-            throw new Error(); //////// a message ????
+            return null;
     }
 
     private String askForSpecialPassword() {

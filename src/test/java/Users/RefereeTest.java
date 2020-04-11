@@ -31,30 +31,42 @@ public class RefereeTest {
     public void updatePersonalDetails() {
         Referee r = new Referee("r1", "rr", "Ziv Adler","ziv@adler" , "Kavan");
 
-        try {
-            r.updatePersonalDetails("Tali", "main");
+        assertTrue("does nothing good. !", r.userFullName.equals("Ziv Adler"));
+
+        r.setUserFullName("Tali");
+        assertFalse(" UC 9.1 is good ! - name has been updated.", r.userFullName.equals("Ziv Adler"));
+        assertTrue("UC 9.1 is good !",r.userFullName.equals("Tali"));
+
+        assertTrue(" nothing happened.", r.getQualification().equals("Kavan"));
+        r.setQualification("Nothing");
+        assertFalse(" UC 9.1 is good ! - qualification has been updated.", r.getQualification().equals("Kavan"));
+        assertTrue("UC 9.1 is good !",r.getQualification().equals("Nothing"));
+
+
+        /*try {
+           // r.updatePersonalDetails("Tali", "main");
             java.lang.System.out.println("success");
         }catch (Exception e){
             java.lang.System.out.println("wrong");
         }
         try {
-            r.updatePersonalDetails("", "main");
+            //r.updatePersonalDetails("", "main");
             java.lang.System.out.println("success");
         }catch (Exception e){
             java.lang.System.out.println("wrong");
         }
         try {
-           r.updatePersonalDetails("Tali", "");
+           //r.updatePersonalDetails("Tali", "");
             java.lang.System.out.println("success");
         }catch (Exception e){
             java.lang.System.out.println("wrong");
         }
         try {
-            r.updatePersonalDetails("", "");
+           // r.updatePersonalDetails("", "");
             java.lang.System.out.println("success");
         }catch (Exception e){
             java.lang.System.out.println("wrong");
-        }
+        }*/
     }
 
     @Test
@@ -103,6 +115,7 @@ public class RefereeTest {
         r.addGame(g3);
         r.addGame(g2);
 
+        //assertTrue();
         try {
             r.watchGamesList();
             java.lang.System.out.println("success");

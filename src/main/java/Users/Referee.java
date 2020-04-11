@@ -5,9 +5,9 @@ import SystemLogic.MainSystem;
 import javafx.scene.control.Alert;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Referee extends User {
-
 
     private String qualification;
     private LinkedList<Game> myGames;
@@ -20,6 +20,7 @@ public class Referee extends User {
         this.qualification = qualification;
         myGames = new LinkedList<>();
     }
+/*
 
     public void updatePersonalDetails(String fullName, String qualification){
 
@@ -29,14 +30,18 @@ public class Referee extends User {
             MainSystem.LOG.info(userName + ": referee's details were updated.");
         }
         else if (fullName != "")
-            this.userFullName = fullName;
+            setUserFullName(fullName);
         else if(qualification != "")
             this.qualification = qualification;
         else
             //displayError("Nothing to update!");
         System.out.println("Nothing to update!");
     }
+*/
 
+    public String getQualification() {
+        return qualification;
+    }
 
     private void displayError(String error){
         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -44,14 +49,28 @@ public class Referee extends User {
         alert.show();
     }
 
+    public void setQualification(String qualification) {
+        this.qualification = qualification;
+        MainSystem.LOG.info(this.userName + ": referee's details were updated.");
+    }
+
+
     public void addGame (Game g){ //adds a game to the referee's list of games.
         myGames.add(g);
     }
 
-    public void watchGamesList (){
 
-        for (Game g : myGames){
-            System.out.println(g.getGameDate() + " , " + g.getGameHour() + " , " + g.getHomeTeam().getName() + "-" + g.getAwayTeam().getName());
+    public List<String> watchGamesList (){
+
+        LinkedList<String> allGames = new LinkedList<>();
+
+        if (myGames != null) {
+            for (Game g : myGames) {
+                if( g != null)
+                    allGames.add(g.getGameDate() + " , " + g.getHomeTeam().getName() + "-" + g.getAwayTeam().getName());
+            }
+            return allGames;
         }
+        return null;
     }
 }
