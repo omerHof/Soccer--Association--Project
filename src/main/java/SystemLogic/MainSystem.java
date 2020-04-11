@@ -7,6 +7,9 @@ import Users.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MainSystem {
     private static MainSystem single_instance = null;
     private AccountSystemProxy accountSystemProxy;
@@ -14,13 +17,14 @@ public class MainSystem {
     private User currentUser = null;
     public static Logger LOG;
     private DB db = DB.getInstance();
-    private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private TimerPasswordBuilder timerPasswordBuilder;
+
 
     /**
      * An empty constructor
      */
     private MainSystem() {
-
+        timerPasswordBuilder = new TimerPasswordBuilder();
     }
 
     /**
@@ -42,6 +46,8 @@ public class MainSystem {
      * Use Case 1.1:
      */
     public void initializeSystem(){
+        Timer t = new Timer();
+        t.scheduleAtFixedRate(timerPasswordBuilder, 0,5*1000);
         connectToLog();
         connectExternalSystems();
         appointUserToSAdministrator(); //how can someone be a user before initialization?
@@ -81,7 +87,7 @@ public class MainSystem {
     private void appointUserToSAdministrator() {
         ManagmentUserGenerator managmentUserGenerator = new ManagmentUserGenerator();
         User scapegoat = db.getUser("name"); //todo: 1. change to remove 2. get random or by name?
-        String special_password = randomAlphaNumeric(10);
+        String special_password = timerPasswordBuilder.getPassword();
         Administrator administrator = (Administrator) managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.getPassword(),special_password
                 ,"", scapegoat.getUserFullName(), scapegoat.getUserEmail(),
                 "","","","");
@@ -94,14 +100,17 @@ public class MainSystem {
      * @param password_length (int)
      * @return random string (String)
      */
-    private String randomAlphaNumeric(int password_length) {
+/*    private String randomAlphaNumeric(int password_length) {
         StringBuilder builder = new StringBuilder();
         while (password_length-- != 0) {
             int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
             builder.append(ALPHA_NUMERIC_STRING.charAt(character));
         }
         return builder.toString();
-    }
+    }*/
+
+
+
 
     /**
      * This method is for user's signing up the system
@@ -194,4 +203,24 @@ public class MainSystem {
 
 }
 
+class TimerPasswordBuilder extends TimerTask {
+    private String password;
+    private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
+
+    @Override
+    public void run() {
+        StringBuilder builder = new StringBuilder();
+        int x =10;
+        while (x-- != 0) {
+            int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
+            builder.append(ALPHA_NUMERIC_STRING.charAt(character));
+        }
+        password =  builder.toString();
+        MainSystem.LOG.info("Special password changed at ");
+    }
+
+    public String getPassword(){
+        return password;
+    };
+}
