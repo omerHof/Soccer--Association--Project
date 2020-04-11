@@ -8,8 +8,8 @@ public class WinScorePolicy implements IScorePolicy {
 
     @Override
     public void scorePolicyAlgoImplementation() {
-        win=1;
-        draw=0;
+        win=2;
+        draw=1;
         lost=0;
 
     }

@@ -42,12 +42,28 @@ public class DB {
     /***************USER***************/
 
     /**
-     * get user
+     * get user by user name
      * @return user
      */
     public User getUser(String name) {
         if(users.containsKey(name)) {
             return users.get(name);
+        }
+        return null;
+    }
+
+    /**
+     * get user by full name
+     * @return user
+     */
+    public User getUserByFullName(String name) {
+        Iterator it = users.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            User user = (User) pair.getValue();
+            if (user.getUserFullName().equals(name)) {
+                return user;
+            }
         }
         return null;
     }
