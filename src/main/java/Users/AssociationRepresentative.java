@@ -57,7 +57,7 @@ public class AssociationRepresentative extends User {
 
         // שיבוץ שופטים
         setLeagueReferees(referees);
-        }
+
 
         // שיבוץ נציגי התאחדות אחראיים על עדכונים ממשחקים
         for (String representative : representatives){
@@ -131,10 +131,11 @@ public class AssociationRepresentative extends User {
     }
 
     ////////////////////////////// USE CASE 9.4 //////////////////////////////
-    public void setLeagueReferees (List<String> referees){
+    public void setLeagueReferees (List<String> referees) {
 
-        for (String referee : referees){
-        Referee currReferee = (Referee)db.getUserByFullName(referee);
-        db.setUser(currReferee);
+        for (String referee : referees) {
+            Referee currReferee = (Referee) db.getUserByFullName(referee);
+            db.setUser(currReferee);
+        }
     }
 }
