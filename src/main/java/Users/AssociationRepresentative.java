@@ -6,6 +6,7 @@ import LeagueSeasonsManagment.League;
 import LeagueSeasonsManagment.Season;
 import SystemLogic.DB;
 import SystemLogic.MainSystem;
+import Teams.Team;
 
 import java.util.List;
 
@@ -47,8 +48,23 @@ public class AssociationRepresentative extends User {
         Season newSeason = new Season(year);
 
          // שיבוץ קבוצות
+        for (String team : teams){
+            Team currTeam = db.getTeam(team);
+            db.setTeam(currTeam);
+        }
+
         // שיבוץ שופטים
+        for (String referee : referees){
+            Referee currReferee = (Referee)db.getUser(referee);
+            db.setUser(currReferee);
+        }
+
         // שיבוץ נציגי התאחדות אחראיים על עדכונים ממשחקים
+        for (String representative : representatives){
+            AssociationRepresentative currRepresentative = (AssociationRepresentative) db.getUser(representative);
+            db.setUser(currRepresentative);
+        }
+
         //בחירת מדיניות חישוב תוצאות
         newSeason.setIScorePolicy(scorePolicy);
 
@@ -56,12 +72,13 @@ public class AssociationRepresentative extends User {
 
         // בחירת מדיניות שיבוץ משחקים
         IGameInlayPolicy iGameInlayPolicy = newSeason.getiGameInlayPolicy();
+
         //הפעלת שיבוץ משחקים- מקבל את הקבוצות אז חייב להיקרא אחרי שיבוץ הקבוצות לעונה!!
         iGameInlayPolicy.gameInlayPolicyAlgoImplementation();
 
         db.addSeason(leagueName, newSeason);
 
-        MainSystem.LOG.info("new season: " + leagueName + " were added to league: " + leagueName + ".");
+        MainSystem.LOG.info("new season: " + year + " were added to league: " + leagueName + ".");
 
     }
 
