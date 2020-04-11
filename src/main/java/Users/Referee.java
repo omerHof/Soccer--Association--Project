@@ -56,6 +56,7 @@ public class Referee extends User {
         myGames.add(g);
     }
 
+
     public List<String> watchGamesList (){
 
         LinkedList<String> allGames = new LinkedList<>();
