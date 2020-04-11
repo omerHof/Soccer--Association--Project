@@ -2,6 +2,7 @@ package LeagueSeasonsManagment;
 
 import Games.Game;
 import Teams.Team;
+import Users.AssociationRepresentative;
 import Users.Referee;
 
 import java.sql.Ref;
@@ -16,6 +17,7 @@ public class Season {
     private IGameInlayPolicy iGameInlayPolicy;
     private IScorePolicy iScorePolicy;
     private List<Referee> allReferees;
+    private List<AssociationRepresentative> allRepresentatives;
 
     public Season(int year) {
         this.year = year;
@@ -48,6 +50,11 @@ public class Season {
     public void setAllTeams(ArrayList<Team> allTeams) {
         this.allTeams = allTeams;
     }
+
+    public void setAllRepresentatives(List<AssociationRepresentative> allRepresentatives) {
+        this.allRepresentatives = allRepresentatives;
+    }
+
     /*
     public void GameInlayPolicyAlgoImplementation(){
         //////to complete
@@ -66,6 +73,10 @@ public class Season {
             default:
                 this.iGameInlayPolicy = new SimpleGamePolicy(this.allTeams);
         }
+    }
+
+    public void setAllReferees(List<Referee> allReferees) {
+        this.allReferees = allReferees;
     }
 
     public void setIScorePolicy(String iScorePolicy) {
