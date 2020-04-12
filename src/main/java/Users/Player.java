@@ -14,7 +14,7 @@ public class Player extends User {
 
 
 
-    public Player(String userName, String password, String fullName, String userEmail ,String birthDate, String courtRole) {
+    public Player(String userName, String password, String fullName, String userEmail ,Date birthDate, String courtRole) {
         this.userName = userName;
         this.password = password;
         this.userFullName = fullName;

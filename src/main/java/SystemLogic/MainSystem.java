@@ -7,6 +7,7 @@ import Users.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -95,7 +96,7 @@ public class MainSystem {
         String special_password = timerPasswordBuilder.getPassword();
         Administrator administrator = (Administrator) managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.getPassword(),special_password
                 ,"", scapegoat.getUserFullName(), scapegoat.getUserEmail(),
-                "","","","");
+                null,"","","");
         db.addUser(administrator);
         LOG.info("Administrator was appointed successfully");
     }
@@ -116,8 +117,8 @@ public class MainSystem {
      * @param iUserGenerator
      * @return boolean answer - did the signing up work or not
      */
-    public boolean singUp(String userName, String password, String mangerPassword, String role, String fullName,String userEmail,
-                          String birthDate, String qualification, String courtRole, String teamRole,
+    public boolean singUp(String userName, String password, String mangerPassword, String role, String fullName, String userEmail,
+                          Date birthDate, String qualification, String courtRole, String teamRole,
                           IUserGenerator iUserGenerator){
         if (db.userExist(userName)){
             return false;
