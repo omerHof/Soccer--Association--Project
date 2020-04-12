@@ -23,7 +23,7 @@ public class Coach extends User {
     }
 
    public CoachPersonalPage createCoachPersonalPage(Date birthDate, Team team){
-       MainSystem.LOG.info("The coach create personal page");
+       MainSystem.LOG.info("The coach " +getUserFullName()+ " create personal page");
        page = new CoachPersonalPage(userFullName,birthDate,teamRole,team);
         return page;
    }

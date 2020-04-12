@@ -127,7 +127,7 @@ public ArrayList< PersonalPage> getFollowedPages() {
 
     }
     public void followThisPage(String pageName){
-        MainSystem.LOG.info("The user  follow page");
+        MainSystem.LOG.info(getUserFullName()+" follow the page of: "+pageName);
 
         DB DB1;
         DB1=DB.getInstance();
@@ -146,7 +146,7 @@ public ArrayList< PersonalPage> getFollowedPages() {
     }
 
     public void stopFollowThisPage(String pageName) {
-        MainSystem.LOG.info("The user stop follow page ");
+        MainSystem.LOG.info(getUserFullName()+" stop follow the page of: "+pageName);
         // PersonalPage page;
            /*
             if (followedPages.containsKey(pageName)) {
@@ -172,7 +172,8 @@ public ArrayList< PersonalPage> getFollowedPages() {
         }
     }
     public void stopFollowAllPages(){
-        MainSystem.LOG.info("The user stop follow all pages ");
+        MainSystem.LOG.info(getUserFullName()+" stop follow all pages");
+
 /*
         for(HashMap.Entry<String,PersonalPage> page:followedPages.entrySet()){
             String key = page.getKey();
@@ -191,7 +192,7 @@ public ArrayList< PersonalPage> getFollowedPages() {
     }
 
     public void followTeam(String teamName){
-        MainSystem.LOG.info("The user  follow team");
+        MainSystem.LOG.info(getUserFullName()+" follow the team : "+teamName);
         DB DB1;
         DB1=DB.getInstance();
         Team team = DB1.getTeam(teamName);
@@ -201,7 +202,7 @@ public ArrayList< PersonalPage> getFollowedPages() {
 
     }
     public void stopFollowTeam(String teamName){
-        MainSystem.LOG.info("The user stop follow teams");
+        MainSystem.LOG.info(getUserFullName()+" stop follow the team : "+teamName);
         Team team;
         if (followedTeams.containsKey(teamName)) {
             team = followedTeams.remove(teamName);
@@ -210,7 +211,7 @@ public ArrayList< PersonalPage> getFollowedPages() {
 
     }
     public void stopFollowAllTeams(){
-        MainSystem.LOG.info("The user stop follow all teams");
+        MainSystem.LOG.info(getUserFullName()+" stop follow all of the teams");
 
         Iterator it = followedTeams.entrySet().iterator();
         while (it.hasNext()) {
@@ -329,7 +330,7 @@ public ArrayList< PersonalPage> getFollowedPages() {
      */
 
     public String[] watchDetails(){
-        MainSystem.LOG.info("the user watch details");
+        MainSystem.LOG.info(getUserFullName()+" watch his details");
         String[] details = new String[4];
         details[0]=userFullName;
         details[1]=userName;

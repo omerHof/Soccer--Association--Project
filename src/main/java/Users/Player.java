@@ -29,7 +29,7 @@ public class Player extends User {
 
 
     public PlayerPersonalPage createPersonalPage(int height,int weight, int shirtNum,Team team) {
-        MainSystem.LOG.info("The player  create personal page");
+        MainSystem.LOG.info("The player " +getUserFullName()+ " create personal page");
 
         page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, team);
         return page;
