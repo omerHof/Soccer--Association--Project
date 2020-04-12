@@ -76,8 +76,8 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
      * @return
      */
     @Override
-    public HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation()
-    {
+    public HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation() {
+
         if (ListTeam.size() % 2 != 0) //check odd number of teams
         {
             System.out.println("odd number of teams");
@@ -88,17 +88,18 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
 
         ArrayList<Team> teams = new ArrayList<>();
 
-        for(Team t : ListTeam) { //copy the list of teams
+        for (Team t : ListTeam) { //copy the list of teams
             teams.add(t);
         }
         teams.remove(0);
 
         int teamsSize = teams.size();
-        int start=0;
-        addGame(start,rounds,teams,false);
-        addGame(teamsSize,teamsSize*2,teams,true);
+        int start = 0;
+        addGames(start, rounds, teams, false);
+        addGames(teamsSize, teamsSize * 2, teams, true);
 
         return listOfGames;
+
     }
 
     /**
@@ -108,7 +109,7 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
      * @param teams- list of teams
      * @param secondSeason- if it's first/second season
      */
-    private void addGame(int start, int rounds,ArrayList<Team> teams, boolean secondSeason)
+    private void addGames(int start, int rounds,ArrayList<Team> teams, boolean secondSeason)
     {
         int teamsSize=teams.size();
         for (int day = start; day < rounds; day++)

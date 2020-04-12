@@ -51,13 +51,28 @@ public class RandomGamePolicyTest {
     @Test
     public void gameInlayPolicyAlgoImplementation() {
         try {
-            IGameInlayPolicy policy = new SimpleGamePolicy(teams);
+            IGameInlayPolicy policy = new RandomGamePolicy(teams);
             results = policy.gameInlayPolicyAlgoImplementation();
             assertEquals("test failed",results.size(),teams.size()*2-2);
+
+            print();
 
         } catch (Exception e) {
             System.out.println("error");
         }
 
+    }
+    public void print(){
+        IGameInlayPolicy policy = new RandomGamePolicy(teams);
+        results = policy.gameInlayPolicyAlgoImplementation();
+        Iterator it = results.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            ArrayList<Game> games = (ArrayList) pair.getValue();
+            for (Game g : games) {
+                System.out.println(pair.getKey() + ":" + g.getHomeTeam().getName() + " vs " + g.getAwayTeam().getName());
+            }
+
+        }
     }
 }

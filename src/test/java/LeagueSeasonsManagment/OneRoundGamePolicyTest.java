@@ -4,7 +4,6 @@ import Games.Game;
 import SystemLogic.DB;
 import Teams.Team;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,21 +13,20 @@ import java.util.Iterator;
 import java.util.Map;
 
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
 
-public class SimpleGamePolicyTest {
-    ArrayList<Team> teams=new ArrayList<>();
-    HashMap<Integer, ArrayList<Game>> results= new HashMap<>();
-    Team a= new Team("barca");
-    Team b= new Team("real");
-    Team c= new Team("man u");
-    Team d= new Team("man city");
-    Team e= new Team("liverpool");
-    Team f= new Team("chelsea");
-    Team g= new Team("roma");
-    Team h= new Team("juve");
-    Team i= new Team("milan");
-    Team j= new Team("inter");
+public class OneRoundGamePolicyTest {
+    ArrayList<Team> teams = new ArrayList<>();
+    HashMap<Integer, ArrayList<Game>> results = new HashMap<>();
+    Team a = new Team("barca");
+    Team b = new Team("real");
+    Team c = new Team("man u");
+    Team d = new Team("man city");
+    Team e = new Team("liverpool");
+    Team f = new Team("chelsea");
+    Team g = new Team("roma");
+    Team h = new Team("juve");
+    Team i = new Team("milan");
+    Team j = new Team("inter");
 
     @Before
     public void setUp() throws Exception {
@@ -43,9 +41,8 @@ public class SimpleGamePolicyTest {
         teams.add(i);
         teams.add(j);
         DB.getInstance();
-        //DB.setTeam(user);
-
     }
+
     @After
     public void tearDown() throws Exception {
     }
@@ -53,19 +50,18 @@ public class SimpleGamePolicyTest {
     @Test
     public void gameInlayPolicyAlgoImplementation() {
         try {
-            //print();
-            IGameInlayPolicy policy = new SimpleGamePolicy(teams);
+            IGameInlayPolicy policy = new OneRoundGamePolicy(teams);
             results = policy.gameInlayPolicyAlgoImplementation();
-            assertEquals("test failed",results.size(),teams.size()*2-2);
+            assertEquals("test failed", teams.size()-1 ,results.size() );
+
             print();
-
-
         } catch (Exception e) {
             System.out.println("error");
         }
+
     }
     public void print(){
-        IGameInlayPolicy policy = new SimpleGamePolicy(teams);
+        IGameInlayPolicy policy = new OneRoundGamePolicy(teams);
         results = policy.gameInlayPolicyAlgoImplementation();
         Iterator it = results.entrySet().iterator();
         while (it.hasNext()) {
@@ -77,5 +73,4 @@ public class SimpleGamePolicyTest {
 
         }
     }
-
 }
