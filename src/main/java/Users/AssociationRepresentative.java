@@ -129,7 +129,7 @@ public class AssociationRepresentative extends User {
             PremiumUserGenertator premiumUserG = new PremiumUserGenertator();
 
             /////////////// change שדותתתת
-            Referee newReferee = (Referee) premiumUserG.generate(oldFan.userName, oldFan.password, "", "", fullName,
+            Referee newReferee = (Referee) premiumUserG.generate(oldFan.userName, oldFan.password, "onlyChangeStatus", "Referee", fullName,
                     oldFan.userEmail, null, "??????????????????", "", "");
 
             db.removeUser(oldFan.userName); //removes the fan

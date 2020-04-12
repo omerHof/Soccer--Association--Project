@@ -5,6 +5,7 @@ public class WinScorePolicy implements IScorePolicy {
     private int win;
     private int draw;
     private int lost;
+    String name;
 
     @Override
     public void scorePolicyAlgoImplementation() {
@@ -12,6 +13,11 @@ public class WinScorePolicy implements IScorePolicy {
         draw=1;
         lost=0;
 
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     public int getWin() {

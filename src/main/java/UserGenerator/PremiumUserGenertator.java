@@ -14,7 +14,7 @@ public class PremiumUserGenertator implements IUserGenerator {
         boolean approved = askForApproval(fullName, role);
 
         if(approved) {
-            User newUser = whichUserAmI(userName, password, role, fullName, userEmail, birthDate, qualification, courtRole, teamRole);
+            User newUser = whichUserAmI(userName, password, managementPassword, role, fullName, userEmail, birthDate, qualification, courtRole, teamRole);
             return newUser;
         }
         else
@@ -28,7 +28,7 @@ public class PremiumUserGenertator implements IUserGenerator {
      * @param userName, .......
      * @return User object
      */
-    public User whichUserAmI(String userName, String password, String role, String fullName, String userEmail, Date birthDate, String qualification, String courtRole, String teamRole) {
+    public User whichUserAmI(String userName, String password, String managementPassword, String role, String fullName, String userEmail, Date birthDate, String qualification, String courtRole, String teamRole) {
 
         if (role != null) {
             switch (role.toLowerCase()) {
@@ -59,7 +59,8 @@ public class PremiumUserGenertator implements IUserGenerator {
 
                 case ("referee"): { //Register a referee
                     User newReferee = new Referee(userName, password, fullName, qualification,userEmail);
-                    MainSystem.LOG.info("A new referee: " + userName + " was created successfully !");
+                    if(!managementPassword.equals("onlyChangeStatus")) //association representative changed a fan's status. no need to write this in LOG.
+                        MainSystem.LOG.info("A new referee: " + userName + " was created successfully !");
                     return newReferee;
                 }
 

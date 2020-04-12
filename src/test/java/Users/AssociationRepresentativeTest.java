@@ -117,19 +117,36 @@ public class AssociationRepresentativeTest {
         Fan fanTest = new Fan("f", "ff", "omer hof", "omer@hof");
         AssociationRepresentative assocTest = new AssociationRepresentative("a1", "aa", "tali", "tali@tali");
         dbTest.addUser(fanTest);
+        dbTest.addUser(assocTest);
 
-        assertNull(dbTest.getUserType("referee")); //not exists yet.
+        assertNull(dbTest.getUserType("Referee")); //not exists yet.
+        assertFalse(dbTest.getUserByFullName("omer hof") instanceof Referee);
+        assertTrue(dbTest.getUserByFullName("omer hof") instanceof Fan);
 
         assocTest.addReferee("omer hof");
-        assertEquals(dbTest.getUser("omer hof").password, "ff");
+        assertEquals(dbTest.getUserByFullName("omer hof").password, "ff");
+        assertTrue(dbTest.getUserByFullName("omer hof") instanceof Referee);
 
         assertFalse(assoTest.addReferee("notExistsUser"));
-
     }
 
     @Test
     public void removeReferee() {
+
+        Referee r1 = new Referee("r1", "rr", "ramzi ramzen", "ziv@ziv", "bla bla");
+        AssociationRepresentative assocTest = new AssociationRepresentative("a1", "aa", "tali", "tali@tali");
+        dbTest.addUser(r1);
+        dbTest.addUser(assocTest);
+
+        assertNull(dbTest.getUserType("Referee")); //not exists yet.
+        assertFalse(dbTest.getUserByFullName("omer hof") instanceof Referee);
+
+        assocTest.removeReferee("omer hof");
+        assertEquals(dbTest.getUserByFullName("omer hof").password, "ff");
+
+        assertFalse(assoTest.addReferee("notExistsUser"));
     }
+
 
     @Test
     public void setLeagueReferees() {
