@@ -29,6 +29,7 @@ public class SimpleGamePolicyTest {
     Team h= new Team("juve");
     Team i= new Team("milan");
     Team j= new Team("inter");
+    IGameInlayPolicy policy;
 
     @Before
     public void setUp() throws Exception {
@@ -44,7 +45,7 @@ public class SimpleGamePolicyTest {
         teams.add(j);
         DB.getInstance();
         //DB.setTeam(user);
-
+        policy= new SimpleGamePolicy(teams);
     }
     @After
     public void tearDown() throws Exception {
@@ -54,16 +55,26 @@ public class SimpleGamePolicyTest {
     public void gameInlayPolicyAlgoImplementation() {
         try {
             //print();
-            IGameInlayPolicy policy = new SimpleGamePolicy(teams);
+            //IGameInlayPolicy policy = new SimpleGamePolicy(teams);
             results = policy.gameInlayPolicyAlgoImplementation();
             assertEquals("test failed",results.size(),teams.size()*2-2);
-            print();
+            //print();
 
 
         } catch (Exception e) {
             System.out.println("error");
         }
     }
+
+    @Test
+    public void getName() {
+        try {
+            assertEquals("same name", "SimpleGamePolicy", policy.getName());
+        } catch (Exception e) {
+            System.out.println("error");
+        }
+    }
+
     public void print(){
         IGameInlayPolicy policy = new SimpleGamePolicy(teams);
         results = policy.gameInlayPolicyAlgoImplementation();

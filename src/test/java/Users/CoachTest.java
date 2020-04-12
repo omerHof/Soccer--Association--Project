@@ -68,6 +68,11 @@ public class CoachTest {
 
     @Test
     public void getUserName() {
+        assertEquals(c1.getUserName(),"pep");
+        c1.setUserName("pepep");
+        assertFalse(c1.getUserName().equals("pep"));
+        assertTrue(c1.getUserName().equals("pepep"));
+
 
     }
 
@@ -84,61 +89,60 @@ public class CoachTest {
 
     }
 
-    @Test
-    public void getPassword() {
-    }
-
-    @Test
-    public void setPassword() {
-
-    }
-
-    @Test
-    public void getFullName() {
-    }
-
-    @Test
-    public void setFullName() {
-    }
-
-    @Test
-    public void getQualification() {
-    }
-
-    @Test
-    public void setQualification() {
-    }
 
     @Test
     public void getTeamRole() {
+        assertEquals(c1.getTeamRole(),"Head coach");
+        assertEquals(c1.getTeamRole(),c2.getTeamRole());
     }
 
     @Test
     public void setTeamRole() {
+        c1.setTeamRole("general manager");
+        assertFalse(c1.getTeamRole().equals(c2.getTeamRole()));
+        c1.setTeamRole("Head coach");
+        assertEquals(c1.getTeamRole(),c2.getTeamRole());
 
     }
 
     @Test
     public void getSalary() {
+        assertEquals(0,c1.getSalary());
+        assertEquals(c1.getSalary(),c2.getSalary());
     }
 
     @Test
     public void setSalary() {
+        c1.setSalary(100000);
+        assertFalse(c1.getSalary()==c2.getSalary());
+
+
+
     }
-    @Test
-    public void setPage() {
-    }
+
 
     @Test
     public void getPage() {
+        //before crtating a page
+        assertEquals(c1.getPage(),null);
+
+        //after
+        PersonalPage pepPage = c1.createCoachPersonalPage(new Date(),t1);
+        assertFalse(c1.getPage()==null);
+        assertEquals(c1.getPage().getCurrentTeam(),t1);
+        
     }
 
     @Test
     public void setCurrentTeam() {
+        //before crtating a page
+        assertEquals(c1.getCurrentTeam(),null);
+
+        //after create a page
+        PersonalPage pepPage = c1.createCoachPersonalPage(new Date(),t1);
+        assertEquals(c1.getCurrentTeam(),t1);
+        assertEquals(c1.getCurrentTeam().getName(),t1.getName());
 
     }
 
-    @Test
-    public void setTeamToHistoryOfTeams() {
-    }
 }

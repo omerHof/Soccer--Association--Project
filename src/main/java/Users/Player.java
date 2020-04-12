@@ -1,5 +1,6 @@
 package Users;
 
+import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import Teams.Team;
 
@@ -12,6 +13,7 @@ public class Player extends User {
     private String courtRole;
     private PlayerPersonalPage page;
     private int salary;
+    private DB DB1;
 
 
 
@@ -24,6 +26,7 @@ public class Player extends User {
         age = getAge(birthDate);
         page =null;
         salary = 0;
+        DB1=DB.getInstance();
 
     }
 
@@ -42,15 +45,17 @@ public class Player extends User {
 
     public void setAge(int age) {
         this.age = age;
+
     }
-
-
-
-
 
 
     public void setCourtRole(String courtRole) {
         this.courtRole = courtRole;
+        if(page!=null){
+            page.setPosition(courtRole);
+        }
+        DB1.setUser(this);
+
         //page.setPosition(courtRole);
 
     }
@@ -60,36 +65,75 @@ public class Player extends User {
 
 
     ///changes for personal page
-/*
+
     public void setNumberOfShirt(int number){
-        page.setShirtNumber(number);
+        if(page!=null) {
+            page.setShirtNumber(number);
+            DB1.setUser(this);
+        }
+
     }
     public void setHeight(int height){
-        page.setHeight(height);
-    }
-    public void setWeight(int weight){
-        page.setWeight(weight);
-    }
-    public void setCurrentTeam(Team team){
-        page.setCurrentTeam(team);
+        if(page!=null) {
+            page.setHeight(height);
+            DB1.setUser(this);
+        }
     }
 
- */
+    public void setWeight(int weight){
+        if(page!=null) {
+            page.setWeight(weight);
+            DB1.setUser(this);
+        }
+    }
+    public void setCurrentTeam(Team team){
+        if(page!=null) {
+            page.setCurrentTeam(team);
+            DB1.setUser(this);
+        }
+    }
+    public int getHeight(){
+        if(page!=null){
+            return page.getHeight();
+        }
+        return 0;
+    }
+
+    public int getWeight(){
+        if(page!=null){
+            return page.getWeight();
+        }
+        return 0;
+    }
+    public int getNumberOfShirt(){
+        if(page!=null){
+            return page.getShirtNumber();
+        }
+        return 0;
+
+    }
+    public Team getCurrentTeam(){
+        if(page!=null){
+            return page.getCurrentTeam();
+        }
+        return null;
+    }
+
+
+
     public int getSalary() {
         return salary;
     }
 
     public void setSalary(int salary) {
         this.salary = salary;
+        DB1.setUser(this);
     }
 
     public PlayerPersonalPage getPage() {
         return page;
     }
 
-    public void setPage(PlayerPersonalPage page) {
-        this.page = page;
-    }
 
 
     public static int getAge(Date dateOfBirth) {

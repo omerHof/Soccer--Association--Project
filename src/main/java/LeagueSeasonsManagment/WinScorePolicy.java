@@ -1,5 +1,7 @@
 package LeagueSeasonsManagment;
 
+import java.util.ArrayList;
+
 public class WinScorePolicy implements IScorePolicy {
 
     private int win;
@@ -7,17 +9,25 @@ public class WinScorePolicy implements IScorePolicy {
     private int lost;
     String name;
 
+    public WinScorePolicy() {
+        name="WinScorePolicy";
+    }
+
     @Override
     public void scorePolicyAlgoImplementation() {
         win=2;
         draw=1;
         lost=0;
 
-    }
 
+    }
     @Override
-    public String getName() {
-        return name;
+    public ArrayList<String> priority(String points,String moreGoals, String goalDiff){
+        ArrayList<String> results= new ArrayList<>();
+        results.add(points);
+        results.add(goalDiff);
+        results.add(moreGoals);
+        return results;
     }
 
     public int getWin() {
@@ -30,5 +40,9 @@ public class WinScorePolicy implements IScorePolicy {
 
     public int getLost() {
         return lost;
+    }
+
+    public String getName() {
+        return name;
     }
 }
