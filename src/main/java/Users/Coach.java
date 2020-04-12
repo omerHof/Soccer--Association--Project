@@ -1,5 +1,6 @@
 package Users;
 
+import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import Teams.Team;
 
@@ -11,6 +12,8 @@ public class Coach extends User {
     private String teamRole;
     private int salary;
     private CoachPersonalPage page;
+    private DB  DB1;
+
 
     public Coach(String userName, String password, String fullName,String userEmail, String teamRole) {
         this.userName = userName;
@@ -19,6 +22,7 @@ public class Coach extends User {
         this.userEmail = userEmail;
         this.teamRole = teamRole;
         salary=0;
+        DB1=DB.getInstance();
 
     }
 
@@ -33,8 +37,31 @@ public class Coach extends User {
     }
 
     public void setTeamRole(String teamRole) {
+
         this.teamRole = teamRole;
+        if(page!=null){
+            page.setTeamRole(teamRole);
+        }
+        DB1.setUser(this);
+
     }
+
+    public void setCurrentTeam(Team team){
+        if(page!=null) {
+            page.setCurrentTeam(team);
+            DB1.setUser(this);
+        }
+    }
+    public Team getCurrentTeam(){
+        if(page!=null){
+            return page.getCurrentTeam();
+        }
+        return null;
+    }
+
+
+    //changes for personal page
+
 
     public int getSalary() {
         return salary;
@@ -42,15 +69,14 @@ public class Coach extends User {
 
     public void setSalary(int salary) {
         this.salary = salary;
+        DB1.setUser(this);
     }
 
     public CoachPersonalPage getPage() {
         return page;
     }
 
-    public void setPage(CoachPersonalPage page) {
-        this.page = page;
-    }
+
 }
 
 
