@@ -125,6 +125,7 @@ public class AssociationRepresentative extends User {
 
         if(db.getUserByFullName(fullName)!= null) { //checks whether this referee already exists in the DB.
 
+
             Fan oldFan = (Fan)db.getUserByFullName(fullName); //gets referee itself
             PremiumUserGenertator premiumUserG = new PremiumUserGenertator();
 
