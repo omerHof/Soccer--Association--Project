@@ -85,7 +85,9 @@ public class DB {
      * @param user
      */
     public void setUser(User user) {
-        users.put(user.getUserName(),user);
+        if(user!=null && user.getUserName()!=null && !userExist(user.getUserName())) {
+            users.put(user.getUserName(), user);
+        }
     }
 
     /**
@@ -94,7 +96,7 @@ public class DB {
      * @return
      */
     public boolean addUser(User user){
-        if(!users.containsKey(user.getUserName())){
+        if(user!=null && !users.containsKey(user.getUserName())){
             users.put(user.getUserName(),user);
             return true;
         }
@@ -142,7 +144,9 @@ public class DB {
      * @param league
      */
     public void setLeague(League league) {
-        leagues.put(league.getName(),league);
+        if (league != null && league.getName() != null && !leagueExist(league.getName())) {
+            leagues.put(league.getName(), league);
+        }
     }
 
     /**
@@ -151,7 +155,7 @@ public class DB {
      * @return
      */
     public boolean addLeague(League league){
-        if(!leagues.containsKey(league.getName())){
+        if(league!=null && !leagues.containsKey(league.getName())){
             leagues.put(league.getName(),league);
             return true;
         }
@@ -166,7 +170,7 @@ public class DB {
      */
     public boolean addSeason(String name, Season season){
         if(leagues.containsKey(name)){
-            if(!leagues.get(name).getAllSeasons().contains(season)){
+            if(season!=null && !leagues.get(name).getAllSeasons().contains(season)){
                 List<Season> newList=leagues.get(name).getAllSeasons();
                 newList.add(season);
                 leagues.get(name).setAllSeasons(newList);
@@ -219,7 +223,10 @@ public class DB {
      * @param team
      */
     public void setTeam(Team team) {
-        teams.put(team.getName(),team);
+        if (team != null && team.getName() != null && !teamExist(team.getName())) {
+            teams.put(team.getName(), team);
+
+        }
     }
 
     /**
@@ -228,7 +235,7 @@ public class DB {
      * @return
      */
     public boolean addTeam(Team team){
-        if(!teams.containsKey(team.getName())){
+        if(team!=null && !teams.containsKey(team.getName())){
             teams.put(team.getName(),team);
             return true;
         }

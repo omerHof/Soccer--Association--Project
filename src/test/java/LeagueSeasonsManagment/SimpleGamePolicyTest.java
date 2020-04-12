@@ -4,6 +4,7 @@ import Games.Game;
 import SystemLogic.DB;
 import Teams.Team;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,6 +14,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class SimpleGamePolicyTest {
     ArrayList<Team> teams=new ArrayList<>();
@@ -51,19 +53,27 @@ public class SimpleGamePolicyTest {
     @Test
     public void gameInlayPolicyAlgoImplementation() {
         try {
+            //print();
             IGameInlayPolicy policy = new SimpleGamePolicy(teams);
             results = policy.gameInlayPolicyAlgoImplementation();
-            Iterator it = results.entrySet().iterator();
-            while (it.hasNext()) {
-                Map.Entry pair = (Map.Entry) it.next();
-                ArrayList<Game> games = (ArrayList) pair.getValue();
-                for (Game g : games) {
-                    System.out.println(pair.getKey() + ":" + g.getHomeTeam().getName() + " vs " + g.getAwayTeam().getName());
-                }
+            assertEquals("test failed",results.size(),teams.size()*2-2);
 
-            }
+
         } catch (Exception e) {
             System.out.println("error");
+        }
+    }
+    public void print(){
+        IGameInlayPolicy policy = new SimpleGamePolicy(teams);
+        results = policy.gameInlayPolicyAlgoImplementation();
+        Iterator it = results.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            ArrayList<Game> games = (ArrayList) pair.getValue();
+            for (Game g : games) {
+                System.out.println(pair.getKey() + ":" + g.getHomeTeam().getName() + " vs " + g.getAwayTeam().getName());
+            }
+
         }
     }
 
