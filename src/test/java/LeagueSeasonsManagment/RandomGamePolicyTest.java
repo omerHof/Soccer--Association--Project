@@ -28,7 +28,7 @@ public class RandomGamePolicyTest {
     Team h = new Team("juve");
     Team i = new Team("milan");
     Team j = new Team("inter");
-
+    IGameInlayPolicy policy;
     @Before
     public void setUp() throws Exception {
         teams.add(a);
@@ -42,6 +42,7 @@ public class RandomGamePolicyTest {
         teams.add(i);
         teams.add(j);
         DB.getInstance();
+        policy = new RandomGamePolicy(teams);
     }
 
     @After
@@ -51,13 +52,38 @@ public class RandomGamePolicyTest {
     @Test
     public void gameInlayPolicyAlgoImplementation() {
         try {
-            IGameInlayPolicy policy = new SimpleGamePolicy(teams);
+            //IGameInlayPolicy policy = new RandomGamePolicy(teams);
             results = policy.gameInlayPolicyAlgoImplementation();
             assertEquals("test failed",results.size(),teams.size()*2-2);
+
+            print();
 
         } catch (Exception e) {
             System.out.println("error");
         }
 
+    }
+
+    @Test
+    public void getName() {
+        try {
+            assertEquals("same name", "RandomGamePolicy", policy.getName());
+        } catch (Exception e) {
+            System.out.println("error");
+        }
+    }
+
+    public void print(){
+        IGameInlayPolicy policy = new RandomGamePolicy(teams);
+        results = policy.gameInlayPolicyAlgoImplementation();
+        Iterator it = results.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            ArrayList<Game> games = (ArrayList) pair.getValue();
+            for (Game g : games) {
+                System.out.println(pair.getKey() + ":" + g.getHomeTeam().getName() + " vs " + g.getAwayTeam().getName());
+            }
+
+        }
     }
 }

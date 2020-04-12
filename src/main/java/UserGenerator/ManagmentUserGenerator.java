@@ -16,27 +16,21 @@ public class ManagmentUserGenerator implements IUserGenerator {
     @Override
     public User generate(String userName, String password, String managementPassword, String role, String fullName, String userEmail, Date birthDate, String qualification, String courtRole, String teamRole) {
 
-        boolean approved = askForApproval(fullName, managementPassword); // להשוות מול הסיסמא שיצרו אצל כצי ???
         MainSystem mainSystem = MainSystem.getInstance();
+        boolean approved = managementPassword.equals(mainSystem.getSpecialPassword()); // להשוות מול הסיסמא שיצרו אצל כצי
 
-        if(approved){
-            if (managementPassword.equals(mainSystem.getSpecialPassword())){ //represantativePassword
-                User newRepresantative = new AssociationRepresentative(userName, password, fullName,userEmail );
-                return newRepresantative;
-            }
-
-            else if (managementPassword.equals(mainSystem.getSpecialPassword())){ // systemManagerPassword
-                User newAdministrator = new Administrator(userName, password, fullName,userEmail);
-                return newAdministrator;
-            }
-
+        if (approved) {
+            if (role.equals("AssociationRepresentative"))
+                return new AssociationRepresentative(userName, password, fullName, userEmail);
+            else if (role.equals("Administrator"))
+                return new Administrator(userName, password, fullName, userEmail);
             else
                 return null;
         }
-
         else
             return null;
     }
+
 
     private String askForSpecialPassword() {
 

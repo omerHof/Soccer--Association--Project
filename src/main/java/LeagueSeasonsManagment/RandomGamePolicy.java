@@ -10,7 +10,7 @@ import java.util.HashMap;
  * this class get list of teams and create a scheduling for a season
  */
 public class RandomGamePolicy implements IGameInlayPolicy {
-
+    private String name;
     private ArrayList<Team> ListTeam; // the initial list of teams
     private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
 
@@ -20,10 +20,15 @@ public class RandomGamePolicy implements IGameInlayPolicy {
      * @param teams
      */
     public RandomGamePolicy(ArrayList<Team> teams) {
+        this.name = "RandomGamePolicy";
         this.ListTeam = teams;
         this.listOfGames = new HashMap<>();
     }
 
+    @Override
+    public String getName(){
+        return name;
+    }
 
     /**
      * random round robin implementation

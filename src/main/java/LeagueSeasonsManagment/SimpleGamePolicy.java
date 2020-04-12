@@ -11,16 +11,24 @@ import java.util.HashMap;
  */
 public class SimpleGamePolicy implements IGameInlayPolicy {
 
+    private String name;
     private ArrayList<Team> ListTeam; // the initial list of teams
     private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
 
     /**
      * constructor
+     *
      * @param teams
      */
     public SimpleGamePolicy(ArrayList<Team> teams) {
-        this.ListTeam=teams;
-        this.listOfGames= new HashMap<>();
+        name = "SimpleGamePolicy";
+        this.ListTeam = teams;
+        this.listOfGames = new HashMap<>();
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     /**
@@ -72,12 +80,13 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
 
     /**
      * round robin implementation
+     *
      * @param
      * @return
      */
     @Override
-    public HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation()
-    {
+    public HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation() {
+
         if (ListTeam.size() % 2 != 0) //check odd number of teams
         {
             System.out.println("odd number of teams");
@@ -88,62 +97,60 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
 
         ArrayList<Team> teams = new ArrayList<>();
 
-        for(Team t : ListTeam) { //copy the list of teams
+        for (Team t : ListTeam) { //copy the list of teams
             teams.add(t);
         }
         teams.remove(0);
 
         int teamsSize = teams.size();
-        int start=0;
-        addGame(start,rounds,teams,false);
-        addGame(teamsSize,teamsSize*2,teams,true);
+        int start = 0;
+        addGames(start, rounds, teams, false);
+        addGames(teamsSize, teamsSize * 2, teams, true);
 
         return listOfGames;
+
     }
 
     /**
      * this function add rounds and games of half season
-     * @param start- the initial round
-     * @param rounds- the number of games each team playing in half season
-     * @param teams- list of teams
+     *
+     * @param start-        the initial round
+     * @param rounds-       the number of games each team playing in half season
+     * @param teams-        list of teams
      * @param secondSeason- if it's first/second season
      */
-    private void addGame(int start, int rounds,ArrayList<Team> teams, boolean secondSeason)
-    {
-        int teamsSize=teams.size();
-        for (int day = start; day < rounds; day++)
-        {
-            ArrayList<Game>games= new ArrayList<>();
+    private void addGames(int start, int rounds, ArrayList<Team> teams, boolean secondSeason) {
+        int teamsSize = teams.size();
+        for (int day = start; day < rounds; day++) {
+            ArrayList<Game> games = new ArrayList<>();
             Team homeTeam;
             Team awayTeam;
             int teamIdx = day % teamsSize;
-            if(!secondSeason) {
+            if (!secondSeason) {
                 homeTeam = teams.get(teamIdx);
                 awayTeam = ListTeam.get(0);
+            } else {
+                homeTeam = ListTeam.get(0);
+                awayTeam = teams.get(teamIdx);
             }
-            else{
-                homeTeam=ListTeam.get(0);
-                awayTeam=teams.get(teamIdx);
-            }
-            Game game= new Game(homeTeam,awayTeam);
+            Game game = new Game(homeTeam, awayTeam);
             games.add(game);
 
-            for (int idx = 1; idx < ListTeam.size()/2; idx++)
-            {
+            for (int idx = 1; idx < ListTeam.size() / 2; idx++) {
                 int firstTeam = (day + idx) % teamsSize;
-                int secondTeam = (day  + teamsSize - idx) % teamsSize;
-                if(!secondSeason) {
+                int secondTeam = (day + teamsSize - idx) % teamsSize;
+                if (!secondSeason) {
                     homeTeam = teams.get(firstTeam);
                     awayTeam = teams.get(secondTeam);
-                }
-                else{
+                } else {
                     homeTeam = teams.get(secondTeam);
                     awayTeam = teams.get(firstTeam);
                 }
-                game= new Game(homeTeam,awayTeam);
+                game = new Game(homeTeam, awayTeam);
                 games.add(game);
             }
-            listOfGames.put(day+1,games);
+            listOfGames.put(day + 1, games);
         }
+
     }
 }
