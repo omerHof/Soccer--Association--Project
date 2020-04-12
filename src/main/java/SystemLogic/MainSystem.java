@@ -27,6 +27,7 @@ public class MainSystem {
      */
     private MainSystem() {
         timerPasswordBuilder = new TimerPasswordBuilder();
+        String shit = "";
     }
 
     /**
