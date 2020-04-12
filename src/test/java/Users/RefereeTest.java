@@ -34,13 +34,13 @@ public class RefereeTest {
         assertTrue("does nothing good. !", r.userFullName.equals("Ziv Adler"));
 
         r.setUserFullName("Tali");
-        assertFalse(" UC 9.1 is good ! - name has been updated.", r.userFullName.equals("Ziv Adler"));
-        assertTrue("UC 9.1 is good !",r.userFullName.equals("Tali"));
+        assertFalse(" UC 10.1 is good ! - name has been updated.", r.userFullName.equals("Ziv Adler"));
+        assertTrue("UC 10.1 is good !",r.userFullName.equals("Tali"));
 
         assertTrue(" nothing happened.", r.getQualification().equals("Kavan"));
         r.setQualification("Nothing");
-        assertFalse(" UC 9.1 is good ! - qualification has been updated.", r.getQualification().equals("Kavan"));
-        assertTrue("UC 9.1 is good !",r.getQualification().equals("Nothing"));
+        assertFalse(" UC 10.1 is good ! - qualification has been updated.", r.getQualification().equals("Kavan"));
+        assertTrue("UC 10.1 is good !",r.getQualification().equals("Nothing"));
 
 
         /*try {

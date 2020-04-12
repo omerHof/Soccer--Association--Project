@@ -79,6 +79,18 @@ public class Season {
         this.allReferees = allReferees;
     }
 
+    public ArrayList<Team> getAllTeams() {
+        return allTeams;
+    }
+
+    public List<Referee> getAllReferees() {
+        return allReferees;
+    }
+
+    public List<AssociationRepresentative> getAllRepresentatives() {
+        return allRepresentatives;
+    }
+
     public void setIScorePolicy(String iScorePolicy) {
 
         switch(iScorePolicy) {
