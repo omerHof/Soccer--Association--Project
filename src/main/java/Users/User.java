@@ -18,7 +18,7 @@ public abstract class User {
     }
 
     public void setUserName(String userName) {
-        userName = userName;
+        this.userName = userName;
     }
 
     public void setPassword(String password) {

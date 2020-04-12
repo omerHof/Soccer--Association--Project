@@ -10,6 +10,7 @@ import UserGenerator.SimpleUserGenerator;
 
 import java.sql.Ref;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class AssociationRepresentative extends User {
@@ -52,10 +53,11 @@ public class AssociationRepresentative extends User {
     public void addSeasonToLeague (String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives){
 
         Season newSeason = new Season(year);
+        MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
 
-        setLeagueTeams(newSeason, teams); // שיבוץ קבוצות מתוך הרשימה שהתקבלה
-        setLeagueReferees(newSeason, referees); //  שיבוץ שופטים מתוך רשימת השמות שהתקבלה
-        setLeagueRepresentatives(newSeason, representatives); // שיבוץ נציגי התאחדות אחראיים על עדכונים ממשחקים
+        setLeagueTeams(leagueName, newSeason, teams); // שיבוץ קבוצות מתוך הרשימה שהתקבלה
+        setLeagueReferees(leagueName, newSeason, referees); //  שיבוץ שופטים מתוך רשימת השמות שהתקבלה
+        setLeagueRepresentatives(leagueName, newSeason, representatives); // שיבוץ נציגי התאחדות אחראיים על עדכונים ממשחקים
 
         newSeason.setIScorePolicy(scorePolicy); //בחירת מדיניות חישוב תוצאות
         newSeason.setiGameInlayPolicy(gamePolicy); // בחירת מדיניות שיבוץ משחקים
@@ -67,10 +69,10 @@ public class AssociationRepresentative extends User {
 
         db.addSeason(leagueName, newSeason); //adds the season to DB.
 
-        MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
     }
 
-    private void setLeagueRepresentatives(Season season, List<String> representatives) {
+
+    private void setLeagueRepresentatives(String leagueName, Season season, List<String> representatives) {
 
         if (representatives != null) {
             ArrayList<AssociationRepresentative> allRepresentatives = new ArrayList<>();
@@ -80,16 +82,11 @@ public class AssociationRepresentative extends User {
                 allRepresentatives.add(currRepresentative);
             }
             season.setAllRepresentatives(allRepresentatives);
-            MainSystem.LOG.info("Associations Representatives were added to season: " + season.getYear());
+            MainSystem.LOG.info("Associations Representatives were added to league: " + leagueName + ", season: " + season.getYear());
         }
 
         else{
             ////////////////// display error ????????? ///////////////
-        }
-
-        for (String representative : representatives){
-            AssociationRepresentative currRepresentative = (AssociationRepresentative) db.getUser(representative);
-            db.setUser(currRepresentative);
         }
     }
 
@@ -98,7 +95,7 @@ public class AssociationRepresentative extends User {
      * @param season - to add to
      * @param teams - list of teams' names
      */
-    private void setLeagueTeams(Season season, List<String> teams) {
+    private void setLeagueTeams(String leagueName, Season season, List<String> teams) {
 
         ArrayList<Team> allTeams = new ArrayList<>();
 
@@ -109,7 +106,7 @@ public class AssociationRepresentative extends User {
                 allTeams.add(currTeam);
             }
             season.setAllTeams(allTeams);
-            MainSystem.LOG.info("Teams were added to season: " + season.getYear());
+            MainSystem.LOG.info("Teams were added to league: " + leagueName + ", season: " + season.getYear());
 
         }
         else {
@@ -119,16 +116,21 @@ public class AssociationRepresentative extends User {
     }
 
     ////////////////////////////// USE CASE 9.3.1 //////////////////////////////
-    public void addReferee (String fullName){
+    /**
+     * return user from requested type
+     * @param fullName - of the fan user we want to nominate as a referee.
+     * @return true if success, false if not.
+     */
+    public boolean addReferee (String fullName){
 
-        if(db.userExist(fullName)) { //checks whether this referee already exists in the DB.
+        if(db.getUserByFullName(fullName)!= null) { //checks whether this referee already exists in the DB.
 
             Fan oldFan = (Fan)db.getUserByFullName(fullName); //gets referee itself
             PremiumUserGenertator premiumUserG = new PremiumUserGenertator();
 
             /////////////// change שדותתתת
             Referee newReferee = (Referee) premiumUserG.generate(oldFan.userName, oldFan.password, "", "", fullName,
-                    oldFan.userEmail, "", "??????????????????", "", "");
+                    oldFan.userEmail, null, "??????????????????", "", "");
 
             db.removeUser(oldFan.userName); //removes the fan
             db.addUser(newReferee); //adds the referee.
@@ -136,10 +138,13 @@ public class AssociationRepresentative extends User {
             ////////// send email ???????????????/ //////// todo: email.
 
             MainSystem.LOG.info("the fan: " + oldFan.getUserName() + " became a referee.");
+            return true;
         }
 
-        else
-            System.out.println("user already exists.");
+        else {
+            System.out.println("this user does not exist in the system.");
+            return false;
+        }
     }
 
 
@@ -152,7 +157,7 @@ public class AssociationRepresentative extends User {
             SimpleUserGenerator simpleUserG = new SimpleUserGenerator();
 
             Fan newFan = (Fan) simpleUserG.generate(oldReferee.userName, oldReferee.password, "", "", oldReferee.userFullName,
-                    oldReferee.userEmail, "", "", "", ""); //creates a new one.
+                    oldReferee.userEmail,  null, "", "", ""); //creates a new one.
 
             ////////// send email ???????????????/ //////// todo: email.
 
@@ -167,7 +172,7 @@ public class AssociationRepresentative extends User {
     }
 
     ////////////////////////////// USE CASE 9.4 //////////////////////////////
-    public void setLeagueReferees (Season season, List<String> referees) {
+    public void setLeagueReferees (String leagueName, Season season, List<String> referees) {
 
         ArrayList<Referee> allReferees = new ArrayList<>();
 
@@ -177,6 +182,8 @@ public class AssociationRepresentative extends User {
                 allReferees.add(currReferee);
             }
             season.setAllReferees(allReferees);
+            MainSystem.LOG.info("Referees were added to league: " + leagueName + ", season: " + season.getYear());
+
         }
 
         else{

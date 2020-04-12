@@ -25,7 +25,7 @@ public class PlayerPersonalPage extends PersonalPage {
         this.weight = weight;
         this.shirtNumber=shirtNumber;
         this.currentTeam=team;
-        this.teamHistory.add(team.getName());
+//        this.teamHistory.add(team.getName());
     }
 
 

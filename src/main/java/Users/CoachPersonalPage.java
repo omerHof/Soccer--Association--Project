@@ -16,7 +16,7 @@ public  class CoachPersonalPage extends PersonalPage {
         this.age=getAge(birthdate);
         this.teamRole=teamRole;
         this.currentTeam=team;
-        this.teamHistory.add(team.getName());
+//        this.teamHistory.add(team.getName());
 
     }
 
