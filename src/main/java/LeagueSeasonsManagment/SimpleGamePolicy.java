@@ -11,6 +11,7 @@ import java.util.HashMap;
  */
 public class SimpleGamePolicy implements IGameInlayPolicy {
 
+    private String name;
     private ArrayList<Team> ListTeam; // the initial list of teams
     private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
 
@@ -19,6 +20,7 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
      * @param teams
      */
     public SimpleGamePolicy(ArrayList<Team> teams) {
+        name = "SimpleGamePolicy";
         this.ListTeam=teams;
         this.listOfGames= new HashMap<>();
     }
@@ -145,5 +147,9 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
             }
             listOfGames.put(day+1,games);
         }
+    }
+
+    public String getName() {
+        return name;
     }
 }
