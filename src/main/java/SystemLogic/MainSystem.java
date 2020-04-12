@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 public class MainSystem {
     private static MainSystem single_instance = null;
@@ -43,11 +44,13 @@ public class MainSystem {
     }
 
     /**
-     * Use Case 1.1:
+     * Use Case 1.1: This method initializes the System:
+     * Connect to the logger, connect external systems, appoint administrator, start the password builder
      */
     public void initializeSystem(){
         Timer t = new Timer();
-        t.scheduleAtFixedRate(timerPasswordBuilder, 0,5*1000);
+        t.scheduleAtFixedRate(timerPasswordBuilder, 0, TimeUnit.DAYS.toMillis(1));
+        t.scheduleAtFixedRate(timerPasswordBuilder, 0, 1000);
         connectToLog();
         connectExternalSystems();
         appointUserToSAdministrator(); //how can someone be a user before initialization?
@@ -95,22 +98,6 @@ public class MainSystem {
         LOG.info("Administrator was appointed successfully");
     }
 
-    /**
-     * This method creates a random string.
-     * @param password_length (int)
-     * @return random string (String)
-     */
-/*    private String randomAlphaNumeric(int password_length) {
-        StringBuilder builder = new StringBuilder();
-        while (password_length-- != 0) {
-            int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
-            builder.append(ALPHA_NUMERIC_STRING.charAt(character));
-        }
-        return builder.toString();
-    }*/
-
-
-
 
     /**
      * This method is for user's signing up the system
@@ -128,8 +115,8 @@ public class MainSystem {
      * @return boolean answer - did the signing up work or not
      */
     public boolean singUp(String userName, String password, String mangerPassword, String role, String fullName,String userEmail,
-                         String birthDate, String qualification, String courtRole, String teamRole,
-                         IUserGenerator iUserGenerator){
+                          String birthDate, String qualification, String courtRole, String teamRole,
+                          IUserGenerator iUserGenerator){
         if (db.userExist(userName)){
             return false;
         }
@@ -173,7 +160,13 @@ public class MainSystem {
         return true;
     }
 
-
+    /**
+     *
+     * @return String special password
+     */
+    public String getSpecialPassword(){
+        return timerPasswordBuilder.getPassword();
+    }
 
     /** GETTERS & SETTERS **/
 
@@ -207,11 +200,13 @@ class TimerPasswordBuilder extends TimerTask {
     private String password;
     private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-
+    /**
+     * This method creates a random password every day
+     */
     @Override
     public void run() {
         StringBuilder builder = new StringBuilder();
-        int x =10;
+        int x =8;
         while (x-- != 0) {
             int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
             builder.append(ALPHA_NUMERIC_STRING.charAt(character));
