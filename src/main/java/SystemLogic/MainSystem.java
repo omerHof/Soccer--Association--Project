@@ -93,7 +93,8 @@ public class MainSystem {
      */
     private void appointUserToSAdministrator() {
         ManagmentUserGenerator managmentUserGenerator = new ManagmentUserGenerator();
-        User scapegoat = db.getUser("name"); //todo: 1. change to remove 2. get random or by name?
+        User scapegoat = db.getUser("name");// get random or by name?
+        db.removeUser(scapegoat.getUserName());
         String special_password = timerPasswordBuilder.getPassword();
         Administrator administrator = (Administrator) managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.getPassword(),special_password
                 ,"", scapegoat.getUserFullName(), scapegoat.getUserEmail(),
