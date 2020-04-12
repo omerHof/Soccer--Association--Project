@@ -48,11 +48,9 @@ public class Coach extends User {
         return page;
     }
 
-
-
-
-
-
+    public void setPage(CoachPersonalPage page) {
+        this.page = page;
+    }
 }
 
 

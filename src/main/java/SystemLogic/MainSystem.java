@@ -7,6 +7,7 @@ import Users.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -27,7 +28,9 @@ public class MainSystem {
      */
     private MainSystem() {
         timerPasswordBuilder = new TimerPasswordBuilder();
-        String shit = "";
+        Timer t = new Timer();
+        t.scheduleAtFixedRate(timerPasswordBuilder, 0, TimeUnit.DAYS.toMillis(1));
+        //t.scheduleAtFixedRate(timerPasswordBuilder, 0, 1000);
     }
 
     /**
@@ -50,9 +53,6 @@ public class MainSystem {
      * Connect to the logger, connect external systems, appoint administrator, start the password builder
      */
     public void initializeSystem(){
-        Timer t = new Timer();
-        t.scheduleAtFixedRate(timerPasswordBuilder, 0, TimeUnit.DAYS.toMillis(1));
-        t.scheduleAtFixedRate(timerPasswordBuilder, 0, 1000);
         connectToLog();
         connectExternalSystems();
         appointUserToSAdministrator(); //how can someone be a user before initialization?
@@ -65,6 +65,8 @@ public class MainSystem {
 //        LOG  = LogManager.getLogger();
         LOG.info("LOG WAS CREATED!");
     }
+
+
 
     /**
      * This method initialize the external system and connect this class to them.
@@ -91,11 +93,12 @@ public class MainSystem {
      */
     private void appointUserToSAdministrator() {
         ManagmentUserGenerator managmentUserGenerator = new ManagmentUserGenerator();
-        User scapegoat = db.getUser("name"); //todo: 1. change to remove 2. get random or by name?
+        User scapegoat = db.getUser("name");// get random or by name?
+        db.removeUser(scapegoat.getUserName());
         String special_password = timerPasswordBuilder.getPassword();
         Administrator administrator = (Administrator) managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.getPassword(),special_password
                 ,"", scapegoat.getUserFullName(), scapegoat.getUserEmail(),
-                "","","","");
+                null,"","","");
         db.addUser(administrator);
         LOG.info("Administrator was appointed successfully");
     }
@@ -116,8 +119,8 @@ public class MainSystem {
      * @param iUserGenerator
      * @return boolean answer - did the signing up work or not
      */
-    public boolean singUp(String userName, String password, String mangerPassword, String role, String fullName,String userEmail,
-                          String birthDate, String qualification, String courtRole, String teamRole,
+    public boolean singUp(String userName, String password, String mangerPassword, String role, String fullName, String userEmail,
+                          Date birthDate, String qualification, String courtRole, String teamRole,
                           IUserGenerator iUserGenerator){
         if (db.userExist(userName)){
             return false;
@@ -125,6 +128,9 @@ public class MainSystem {
 
         User newUser =  iUserGenerator.generate(userName, password, mangerPassword, role, fullName, userEmail,
                 birthDate, qualification, courtRole, teamRole);
+        if(newUser==null){
+            return false;
+        }
         db.addUser(newUser);
         LOG.info("A new user " + userName + " was signed up successfully");
         this.currentUser = newUser;
@@ -141,15 +147,19 @@ public class MainSystem {
      * @return String - did the logging in work or not and why
      */
     public String logIn(String userName, String password){
+
         if(!db.userExist(userName)){
             return "name";
+        }
+        else if(db.getUser(userName)==null){
+            return "null";
         }
         else if(!db.getUser(userName).getPassword().equals(password)){
             return "password";
         }
         this.currentUser = db.getUser(userName);
         LOG.info(userName + " was logged in successfully");
-        return "ok";
+        return "OK";
     }
 
     /**
