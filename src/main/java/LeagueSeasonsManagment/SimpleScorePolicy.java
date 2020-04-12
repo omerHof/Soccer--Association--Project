@@ -1,19 +1,33 @@
 package LeagueSeasonsManagment;
 
+import java.util.ArrayList;
+
 public class SimpleScorePolicy implements IScorePolicy {
 
     String name;
     private int win;
     private int draw;
     private int lost;
-    
+
+    public SimpleScorePolicy() {
+        name = "SimpleScorePolicy";
+    }
+
     @Override
     public void scorePolicyAlgoImplementation() {
         win=3;
         draw=1;
         lost=0;
-        name = "SimpleScorePolicy";
 
+    }
+
+    @Override
+    public ArrayList<String> priority(String points, String moreGoals, String goalDiff){
+        ArrayList<String> results= new ArrayList<>();
+        results.add(points);
+        results.add(goalDiff);
+        results.add(moreGoals);
+        return results;
     }
 
     public int getWin() {

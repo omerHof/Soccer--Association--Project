@@ -27,6 +27,7 @@ public class OneRoundGamePolicyTest {
     Team h = new Team("juve");
     Team i = new Team("milan");
     Team j = new Team("inter");
+    IGameInlayPolicy policy;
 
     @Before
     public void setUp() throws Exception {
@@ -41,6 +42,7 @@ public class OneRoundGamePolicyTest {
         teams.add(i);
         teams.add(j);
         DB.getInstance();
+        policy = new OneRoundGamePolicy(teams);
     }
 
     @After
@@ -50,7 +52,7 @@ public class OneRoundGamePolicyTest {
     @Test
     public void gameInlayPolicyAlgoImplementation() {
         try {
-            IGameInlayPolicy policy = new OneRoundGamePolicy(teams);
+            //IGameInlayPolicy policy = new OneRoundGamePolicy(teams);
             results = policy.gameInlayPolicyAlgoImplementation();
             assertEquals("test failed", teams.size()-1 ,results.size() );
 
@@ -60,6 +62,17 @@ public class OneRoundGamePolicyTest {
         }
 
     }
+
+    @Test
+    public void getName() {
+        try {
+            assertEquals("same name", "OneRoundGamePolicy", policy.getName());
+        } catch (Exception e) {
+            System.out.println("error");
+        }
+    }
+
+
     public void print(){
         IGameInlayPolicy policy = new OneRoundGamePolicy(teams);
         results = policy.gameInlayPolicyAlgoImplementation();
