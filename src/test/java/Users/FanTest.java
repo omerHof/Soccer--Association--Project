@@ -118,6 +118,7 @@ public class FanTest {
     public void followThisPage() {
         int numberOfPages = f1.getFollowedPages().size();
         assertEquals(2,numberOfPages);
+        System.out.println("1 good");
 
 
         ///create new pages
@@ -126,13 +127,19 @@ public class FanTest {
         CoachPersonalPage kloppPage = klopp.createCoachPersonalPage(new Date(),liverpool);
         DBTest.addTeam(liverpool);
         DBTest.addUser(klopp);
+
         Player mane = new Player("mane123","2222","sadio mane","sadio12@gmail.com",new Date(),"inside forward");
-        mane.createPersonalPage(173,70,10,liverpool);
         DBTest.addUser(mane);
+        mane.createPersonalPage(173,70,10,liverpool);
+
+
+        //f1.followThisPage("sadio mane");
+        f1.followThisPage(kloppPage);
+        assertEquals(3,f1.getFollowedPages().size());
 
         f1.followThisPage("sadio mane");
-        f1.followThisPage(kloppPage);
         assertEquals(4,f1.getFollowedPages().size());
+
 
 
 
@@ -168,7 +175,7 @@ public class FanTest {
         assertEquals(2, f1.getFollowedPages().size());
         ///after change
         f1.stopFollowAllPages();
-        assertEquals(0,f1.getFollowedPages());
+        assertEquals(0,f1.getFollowedPages().size());
 
 
 
@@ -208,8 +215,11 @@ public class FanTest {
         DBTest.addTeam(team);
         f1.followTeam("maccabi haifa");
         assertEquals(2,f1.getFollowedTeams().size());
+        System.out.println(" test 1 work");
 
-
+        Team team2 = new Team("maccabi tel aviv");
+        DBTest.addTeam(team2);
+        f1.followTeam(team2.getName());
         f1.stopFollowAllTeams();
         assertEquals(0,f1.getFollowedTeams().size());
 
@@ -254,7 +264,7 @@ public class FanTest {
 
     @Test
     public void watchDetails() {
-        String[] testDetails = {"ido747","12345","ido kesttenbaum","ido747@gmail.com"};
+        String[] testDetails = {"ido kesttenbaum","ido747","12345","ido747@gmail.com"};
         //before changes
         assertEquals(testDetails[0],f1.watchDetails()[0]);
         assertEquals(testDetails[1],f1.watchDetails()[1]);
@@ -262,8 +272,8 @@ public class FanTest {
         assertEquals(testDetails[3],f1.watchDetails()[3]);
 
         f1.setUserName("idok");
-        assertFalse(testDetails[0].equals(f1.watchDetails()[0]));
-        assertTrue(testDetails[1].equals(f1.watchDetails()[1]));
+        assertFalse(testDetails[1].equals(f1.watchDetails()[1]));
+        assertTrue(testDetails[2].equals(f1.watchDetails()[2]));
 
 
 

@@ -15,7 +15,8 @@ public class Fan extends User implements Observer {
 
 
 
-    private HashMap<String,PersonalPage> followedPages;
+    //private HashMap<String,PersonalPage> followedPages;
+    private ArrayList<PersonalPage>followedPages;
     private HashMap<String,Team> followedTeams;
     private HashMap<String,Team> notificationTeams;
     private boolean pageAlert;
@@ -30,7 +31,8 @@ public class Fan extends User implements Observer {
         this.userName = userName;
         this.userFullName = fullName;
         this.userEmail = email;
-        followedPages = new HashMap<>();
+        //followedPages = new HashMap<>();
+        followedPages = new ArrayList<>();
         followedTeams = new HashMap<>();
         pageAlert = false;
         teamAlert = false;
@@ -97,12 +99,16 @@ public class Fan extends User implements Observer {
     }
 
 
-
+/*
     public HashMap<String, PersonalPage> getFollowedPages() {
         return followedPages;
     }
 
 
+ */
+public ArrayList< PersonalPage> getFollowedPages() {
+    return followedPages;
+}
     //get notification
     /*
     public void getNotificationOnGames(){
@@ -116,7 +122,8 @@ public class Fan extends User implements Observer {
 
     public void followThisPage(PersonalPage page){
         page.addObserver(this);
-        followedPages.put(page.getName(),page);
+        //followedPages.put(page.getName(),page);
+        followedPages.add(page);
 
     }
     public void followThisPage(String pageName){
@@ -124,7 +131,9 @@ public class Fan extends User implements Observer {
 
         DB DB1;
         DB1=DB.getInstance();
-        User user = DB1.getUser(pageName);
+
+
+        User user = DB1.getUserByFullName(pageName);
         PersonalPage page;
         if(user instanceof Player){
            page= ((Player) user).getPage();
@@ -135,21 +144,50 @@ public class Fan extends User implements Observer {
         }
         followThisPage(page);
     }
-    public void stopFollowThisPage(String pageName){
+
+    public void stopFollowThisPage(String pageName) {
         MainSystem.LOG.info("The user stop follow page ");
-            PersonalPage page;
+        // PersonalPage page;
+           /*
             if (followedPages.containsKey(pageName)) {
                 page = followedPages.remove(pageName);
                 page.deleteObserver(this);
             }
+
+            */
+
+
+        for (PersonalPage page : followedPages) {
+            if (page.getName().equals(pageName)) {
+
+                followedPages.remove(page);
+                page.deleteObserver(this);
+                break;
+
+            }
+
+
+
+
+        }
     }
     public void stopFollowAllPages(){
         MainSystem.LOG.info("The user stop follow all pages ");
-
+/*
         for(HashMap.Entry<String,PersonalPage> page:followedPages.entrySet()){
             String key = page.getKey();
             stopFollowThisPage(key);
         }
+
+ */
+
+          while (!followedPages.isEmpty()){
+              int i=0;
+              PersonalPage p =followedPages.get(i);
+              followedPages.remove(p);
+              p.deleteObserver(this);
+              i++;
+          }
     }
 
     public void followTeam(String teamName){
@@ -173,8 +211,11 @@ public class Fan extends User implements Observer {
     }
     public void stopFollowAllTeams(){
         MainSystem.LOG.info("The user stop follow all teams");
-        for(HashMap.Entry<String,Team> team:followedTeams.entrySet()){
-            String key = team.getKey();
+
+        Iterator it = followedTeams.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            String key =(String) pair.getKey();
             stopFollowTeam(key);
         }
     }

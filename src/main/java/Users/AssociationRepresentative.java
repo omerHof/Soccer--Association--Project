@@ -10,6 +10,7 @@ import UserGenerator.SimpleUserGenerator;
 
 import java.sql.Ref;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class AssociationRepresentative extends User {
@@ -128,7 +129,7 @@ public class AssociationRepresentative extends User {
 
             /////////////// change שדותתתת
             Referee newReferee = (Referee) premiumUserG.generate(oldFan.userName, oldFan.password, "", "", fullName,
-                    oldFan.userEmail, "", "??????????????????", "", "");
+                    oldFan.userEmail, new Date(), "??????????????????", "", "");
 
             db.removeUser(oldFan.userName); //removes the fan
             db.addUser(newReferee); //adds the referee.
@@ -152,7 +153,7 @@ public class AssociationRepresentative extends User {
             SimpleUserGenerator simpleUserG = new SimpleUserGenerator();
 
             Fan newFan = (Fan) simpleUserG.generate(oldReferee.userName, oldReferee.password, "", "", oldReferee.userFullName,
-                    oldReferee.userEmail, "", "", "", ""); //creates a new one.
+                    oldReferee.userEmail,  new Date(), "", "", ""); //creates a new one.
 
             ////////// send email ???????????????/ //////// todo: email.
 

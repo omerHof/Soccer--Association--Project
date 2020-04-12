@@ -51,6 +51,10 @@ public class CoachTest {
 
     @Test
     public void createPersonalPage() {
+        PersonalPage pepPage = c1.createCoachPersonalPage(new Date(),t1);
+        assertEquals(pepPage.getCurrentTeam().getName(),"Manchester city");
+        assertEquals(pepPage.getName(),c1.getUserFullName());
+
         /*
         Date date = new Date();
 
@@ -69,6 +73,9 @@ public class CoachTest {
 
     @Test
     public void setUserName() {
+
+        c1.setUserName("pepo");
+        assertEquals(c1.getUserName(),"pepo");
         /*
         c2.userName="jk1";
         assertEquals(c1.getUserName(),"jk1");
@@ -83,6 +90,7 @@ public class CoachTest {
 
     @Test
     public void setPassword() {
+
     }
 
     @Test
@@ -107,6 +115,7 @@ public class CoachTest {
 
     @Test
     public void setTeamRole() {
+
     }
 
     @Test
@@ -126,6 +135,7 @@ public class CoachTest {
 
     @Test
     public void setCurrentTeam() {
+
     }
 
     @Test
