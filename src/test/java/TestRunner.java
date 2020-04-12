@@ -14,9 +14,9 @@ public class TestRunner {
     public static void main(String[] args) {
 
         /* initialise Results*/
-        Result simpleGamePolicy_result = JUnitCore.runClasses(SimpleGamePolicyTest.class);
+        //Result simpleGamePolicy_result = JUnitCore.runClasses(SimpleGamePolicyTest.class);
         Result App_result = JUnitCore.runClasses(AppTest.class);
-        Result DB_result = JUnitCore.runClasses(DBTest.class);
+        //Result DB_result = JUnitCore.runClasses(DBTest.class);
         Result MainSystem_result = JUnitCore.runClasses(MainSystemTest.class);
         Result AssociationRepresentative_result = JUnitCore.runClasses(AssociationRepresentativeTest.class);
         Result Coach_result = JUnitCore.runClasses(CoachTest.class);
@@ -30,7 +30,7 @@ public class TestRunner {
 
         /* SystemLogic */
 //        test(DB_result);
-//        test(MainSystem_result);
+        test(MainSystem_result);
 
         /* Users */
 //        test(AssociationRepresentative_result);

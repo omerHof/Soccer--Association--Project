@@ -16,7 +16,8 @@ public class MainSystem {
     private AccountSystemProxy accountSystemProxy;
     private TaxSystemProxy taxSystemProxy;
     private User currentUser = null;
-    public static Logger LOG;
+    public static Logger LOG = LogManager.getLogger();
+
     private DB db = DB.getInstance();
     private TimerPasswordBuilder timerPasswordBuilder;
 
@@ -60,7 +61,7 @@ public class MainSystem {
      * This method initialize the logger
      */
     private void connectToLog(){
-        LOG  = LogManager.getLogger();
+//        LOG  = LogManager.getLogger();
         LOG.info("LOG WAS CREATED!");
     }
 
@@ -155,8 +156,9 @@ public class MainSystem {
      * @return boolean answer - did the logging out work or not
      */
     public boolean logOut(){
+        String userName = currentUser.getUserName();
         this.currentUser = null;
-        LOG.info(currentUser.getUserName() + " was logged in successfully");
+        LOG.info(userName + " was logged in successfully");
         return true;
     }
 
