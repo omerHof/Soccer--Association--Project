@@ -11,6 +11,7 @@ import java.util.*;
      */
     public class OneRoundGamePolicy implements IGameInlayPolicy {
 
+        private String name;
         private ArrayList<Team> ListTeam; // the initial list of teams
         private HashMap<Integer, ArrayList<Game>> tempListOfGames; // the results
         private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
@@ -21,10 +22,16 @@ import java.util.*;
          * @param teams
          */
         public OneRoundGamePolicy(ArrayList<Team> teams) {
+            this.name = "OneRoundGamePolicy";
             this.ListTeam = teams;
             this.listOfGames = new HashMap<>();
             this.tempListOfGames = new HashMap<>();
 
+        }
+
+        @Override
+        public String getName(){
+            return name;
         }
 
         /**
