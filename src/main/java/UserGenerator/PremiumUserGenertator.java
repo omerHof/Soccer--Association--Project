@@ -4,15 +4,17 @@ import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import Users.*;
 
+import java.util.Date;
+
 public class PremiumUserGenertator implements IUserGenerator {
 
     @Override
-    public User generate(String userName, String password, String managementPassword, String role, String fullName,String userEmail, String birthDate, String qualification, String courtRole, String teamRole) {
+    public User generate(String userName, String password, String managementPassword, String role, String fullName, String userEmail, Date birthDate, String qualification, String courtRole, String teamRole) {
 
         boolean approved = askForApproval(fullName, role);
 
         if(approved) {
-            User newUser = whichUserAmI(userName, password, role, fullName, birthDate,userEmail, qualification, courtRole, teamRole);
+            User newUser = whichUserAmI(userName, password, role, fullName, userEmail, birthDate, qualification, courtRole, teamRole);
             return newUser;
         }
         else
@@ -26,7 +28,7 @@ public class PremiumUserGenertator implements IUserGenerator {
      * @param userName, .......
      * @return User object
      */
-    public User whichUserAmI(String userName, String password, String role, String fullName, String userEmail, String birthDate, String qualification, String courtRole, String teamRole) {
+    public User whichUserAmI(String userName, String password, String role, String fullName, String userEmail, Date birthDate, String qualification, String courtRole, String teamRole) {
 
         if (role != null) {
             switch (role.toLowerCase()) {

@@ -37,12 +37,15 @@ public class AssociationRepresentative extends User {
     }
 
     ////////////////////////////// USE CASE 9.1 //////////////////////////////
-    public void addLeague (String leagueName, int numOfTeams){
+    public boolean addLeague (String leagueName, int numOfTeams){
 
         League newLeague = new League(leagueName, numOfTeams);
-        db.addLeague(newLeague);
-
-        MainSystem.LOG.info("new league: " + leagueName + " were added.");
+        if (db.addLeague(newLeague)){ //this league does not exist yet. OK.
+            MainSystem.LOG.info("new league: " + leagueName + " were added.");
+            return true;
+        }
+        else
+            return false;
     }
 
     ////////////////////////////// USE CASE 9.2 //////////////////////////////
@@ -77,6 +80,7 @@ public class AssociationRepresentative extends User {
                 allRepresentatives.add(currRepresentative);
             }
             season.setAllRepresentatives(allRepresentatives);
+            MainSystem.LOG.info("Associations Representatives were added to season: " + season.getYear());
         }
 
         else{
@@ -105,6 +109,8 @@ public class AssociationRepresentative extends User {
                 allTeams.add(currTeam);
             }
             season.setAllTeams(allTeams);
+            MainSystem.LOG.info("Teams were added to season: " + season.getYear());
+
         }
         else {
             //////////////////// display error ??????? /////////////
@@ -129,7 +135,7 @@ public class AssociationRepresentative extends User {
 
             ////////// send email ???????????????/ //////// todo: email.
 
-            MainSystem.LOG.info("the fan: " + fullName + " became a referee.");
+            MainSystem.LOG.info("the fan: " + oldFan.getUserName() + " became a referee.");
         }
 
         else

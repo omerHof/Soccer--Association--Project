@@ -7,20 +7,30 @@ import Users.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
+
 public class MainSystem {
     private static MainSystem single_instance = null;
     private AccountSystemProxy accountSystemProxy;
     private TaxSystemProxy taxSystemProxy;
     private User currentUser = null;
-    public static Logger LOG;
+    public static Logger LOG = LogManager.getLogger();
+
     private DB db = DB.getInstance();
-    private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private TimerPasswordBuilder timerPasswordBuilder;
+
 
     /**
      * An empty constructor
      */
     private MainSystem() {
-
+        timerPasswordBuilder = new TimerPasswordBuilder();
+        Timer t = new Timer();
+        t.scheduleAtFixedRate(timerPasswordBuilder, 0, TimeUnit.DAYS.toMillis(1));
+        //t.scheduleAtFixedRate(timerPasswordBuilder, 0, 1000);
     }
 
     /**
@@ -39,7 +49,8 @@ public class MainSystem {
     }
 
     /**
-     * Use Case 1.1:
+     * Use Case 1.1: This method initializes the System:
+     * Connect to the logger, connect external systems, appoint administrator, start the password builder
      */
     public void initializeSystem(){
         connectToLog();
@@ -51,9 +62,11 @@ public class MainSystem {
      * This method initialize the logger
      */
     private void connectToLog(){
-        LOG  = LogManager.getLogger();
+//        LOG  = LogManager.getLogger();
         LOG.info("LOG WAS CREATED!");
     }
+
+
 
     /**
      * This method initialize the external system and connect this class to them.
@@ -81,27 +94,14 @@ public class MainSystem {
     private void appointUserToSAdministrator() {
         ManagmentUserGenerator managmentUserGenerator = new ManagmentUserGenerator();
         User scapegoat = db.getUser("name"); //todo: 1. change to remove 2. get random or by name?
-        String special_password = randomAlphaNumeric(10);
+        String special_password = timerPasswordBuilder.getPassword();
         Administrator administrator = (Administrator) managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.getPassword(),special_password
                 ,"", scapegoat.getUserFullName(), scapegoat.getUserEmail(),
-                "","","","");
+                null,"","","");
         db.addUser(administrator);
         LOG.info("Administrator was appointed successfully");
     }
 
-    /**
-     * This method creates a random string.
-     * @param password_length (int)
-     * @return random string (String)
-     */
-    private String randomAlphaNumeric(int password_length) {
-        StringBuilder builder = new StringBuilder();
-        while (password_length-- != 0) {
-            int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
-            builder.append(ALPHA_NUMERIC_STRING.charAt(character));
-        }
-        return builder.toString();
-    }
 
     /**
      * This method is for user's signing up the system
@@ -118,15 +118,18 @@ public class MainSystem {
      * @param iUserGenerator
      * @return boolean answer - did the signing up work or not
      */
-    public boolean singUp(String userName, String password, String mangerPassword, String role, String fullName,String userEmail,
-                         String birthDate, String qualification, String courtRole, String teamRole,
-                         IUserGenerator iUserGenerator){
+    public boolean singUp(String userName, String password, String mangerPassword, String role, String fullName, String userEmail,
+                          Date birthDate, String qualification, String courtRole, String teamRole,
+                          IUserGenerator iUserGenerator){
         if (db.userExist(userName)){
             return false;
         }
 
         User newUser =  iUserGenerator.generate(userName, password, mangerPassword, role, fullName, userEmail,
                 birthDate, qualification, courtRole, teamRole);
+        if(newUser==null){
+            return false;
+        }
         db.addUser(newUser);
         LOG.info("A new user " + userName + " was signed up successfully");
         this.currentUser = newUser;
@@ -143,15 +146,19 @@ public class MainSystem {
      * @return String - did the logging in work or not and why
      */
     public String logIn(String userName, String password){
+
         if(!db.userExist(userName)){
             return "name";
+        }
+        else if(db.getUser(userName)==null){
+            return "null";
         }
         else if(!db.getUser(userName).getPassword().equals(password)){
             return "password";
         }
         this.currentUser = db.getUser(userName);
         LOG.info(userName + " was logged in successfully");
-        return "ok";
+        return "OK";
     }
 
     /**
@@ -159,12 +166,19 @@ public class MainSystem {
      * @return boolean answer - did the logging out work or not
      */
     public boolean logOut(){
+        String userName = currentUser.getUserName();
         this.currentUser = null;
-        LOG.info(currentUser.getUserName() + " was logged in successfully");
+        LOG.info(userName + " was logged in successfully");
         return true;
     }
 
-
+    /**
+     *
+     * @return String special password
+     */
+    public String getSpecialPassword(){
+        return timerPasswordBuilder.getPassword();
+    }
 
     /** GETTERS & SETTERS **/
 
@@ -194,4 +208,26 @@ public class MainSystem {
 
 }
 
+class TimerPasswordBuilder extends TimerTask {
+    private String password;
+    private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
+    /**
+     * This method creates a random password every day
+     */
+    @Override
+    public void run() {
+        StringBuilder builder = new StringBuilder();
+        int x =8;
+        while (x-- != 0) {
+            int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
+            builder.append(ALPHA_NUMERIC_STRING.charAt(character));
+        }
+        password =  builder.toString();
+        MainSystem.LOG.info("Special password changed at ");
+    }
+
+    public String getPassword(){
+        return password;
+    };
+}
