@@ -5,19 +5,20 @@ import Teams.Team;
 import Users.AssociationRepresentative;
 import Users.Referee;
 
-import java.sql.Ref;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Season {
 
     private int year;
-    private ArrayList<Game> allGames;
+    private HashMap<Integer, ArrayList<Game>> allGames;
     private ArrayList<Team> allTeams;
     private IGameInlayPolicy iGameInlayPolicy;
     private IScorePolicy iScorePolicy;
     private List<Referee> allReferees;
     private List<AssociationRepresentative> allRepresentatives;
+    private SeasonScoreBoard seasonScoreBoard;
 
     public Season(int year) {
         this.year = year;
@@ -27,9 +28,7 @@ public class Season {
     public int getYear() {
         return year;
     }
-    public List<Game> getAllGames() {
-        return allGames;
-    }
+
 
     public IGameInlayPolicy getiGameInlayPolicy() {
         return iGameInlayPolicy;
@@ -43,9 +42,7 @@ public class Season {
     public void setYear(int newYear){
         this.year=newYear;
     }
-    public void setAllGames(ArrayList<Game>games){
-        allGames=games;
-    }
+
 
     public void setAllTeams(ArrayList<Team> allTeams) {
         this.allTeams = allTeams;
@@ -53,6 +50,14 @@ public class Season {
 
     public void setAllRepresentatives(List<AssociationRepresentative> allRepresentatives) {
         this.allRepresentatives = allRepresentatives;
+    }
+
+    public HashMap<Integer, ArrayList<Game>> getAllGames() {
+        return allGames;
+    }
+
+    public void setAllGames(HashMap<Integer, ArrayList<Game>> allGames) {
+        this.allGames = allGames;
     }
 
     /*

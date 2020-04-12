@@ -9,14 +9,24 @@ import java.util.Observable;
 
 public class Team extends Observable {
 
+    public enum teamStatus {
+        active, close , PermanentlyClosed
+    }
 
+    private teamStatus status;
     private String name;
     private ArrayList<Player>players;
     private ArrayList<Coach>coaches;
     private Stadium stadium;
-    private TeamOwner owner;
+    private ArrayList<TeamOwner> teamOwners;
     private Manager manager;
     private ArrayList<Game> gameList;
+
+    public Team(String name, ArrayList<TeamOwner> teamOwners) {
+        this.name = name;
+        this.teamOwners = teamOwners;
+        this.status = teamStatus.active;
+    }
 
     public ArrayList<Player> getPlayers() {
         return players;
@@ -60,14 +70,7 @@ public class Team extends Observable {
         notifyObservers(stadium);
     }
 
-    public TeamOwner getOwner() {
-        return owner;
-    }
 
-    public void setOwner(TeamOwner owner) {
-        this.owner = owner;
-
-    }
 
     public Manager getManager() {
         return manager;
@@ -76,7 +79,7 @@ public class Team extends Observable {
     public void setManager(Manager manager) {
         this.manager = manager;
         setChanged();
-        notifyObservers(owner);
+        //notifyObservers(owner);
     }
 
     public ArrayList<Game> getGameList() {
@@ -99,4 +102,7 @@ public class Team extends Observable {
         this.name = name;
     }
 
+    public teamStatus getStatus() {
+        return status;
+    }
 }

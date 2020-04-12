@@ -4,21 +4,23 @@ import SystemLogic.DB;
 import Teams.Team;
 import Users.Referee;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Game {
 
+    public enum gameStatus {
+        preGame,active, finish, close
+    }
+
+    private gameStatus status;
     private Team homeTeam;
     private Team awayTeam;
     private Date gameDate;
     private String gameHour;
     private String score;
     private ArrayList<Event> eventBook;
-
     private List<Referee> gameReferees;
+    private String finalReport;
 
     public Game(Team homeTeam, Team awayTeam) {
         this.homeTeam = homeTeam;
@@ -72,5 +74,37 @@ public class Game {
 
     public void setGameReferees(List<Referee> gameReferees) {
         this.gameReferees = gameReferees;
+    }
+}
+
+class DayToGame extends TimerTask {
+
+    @Override
+    public void run() {
+
+    }
+}
+
+class StartGame extends TimerTask{
+
+    @Override
+    public void run() {
+
+    }
+}
+
+class EndGame extends TimerTask{
+
+    @Override
+    public void run() {
+
+    }
+}
+
+class CloseGame extends TimerTask{
+
+    @Override
+    public void run() {
+
     }
 }
