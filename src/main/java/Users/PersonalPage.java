@@ -12,13 +12,6 @@ public abstract class PersonalPage extends Observable {
 
 
 
-    /*
-        public List<Fan> getFollowers() {
-
-           return
-        }
-
-     */
     public String getName() {
         return name;
     }
@@ -52,6 +45,10 @@ public abstract class PersonalPage extends Observable {
 
     public void setTeamHistory(ArrayList<String> teamHistory) {
         this.teamHistory = teamHistory;
+    }
+
+    public void setOneTeamToHistory(String team){
+        teamHistory.add(team);
     }
 
 

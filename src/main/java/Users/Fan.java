@@ -7,6 +7,7 @@ import Teams.Team;
 import UserGenerator.AUsersGenerator;
 import UserGenerator.SimpleUserGenerator;
 import javafx.scene.control.Alert;
+import sun.security.util.Password;
 
 import java.util.*;
 
@@ -32,6 +33,7 @@ public class Fan extends User implements Observer {
         followedPages = new HashMap<>();
         followedTeams = new HashMap<>();
         pageAlert = false;
+        teamAlert = false;
     }
 
     public boolean isPageAlert() {
@@ -95,47 +97,13 @@ public class Fan extends User implements Observer {
     }
 
 
-    //getters
-
-/*
-    public String getName() {
-        return name;
-    }
-
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    //edit user details
-    public void writeNewUserName(String username) {
-        setUserName(username);
-    }
-    public void writeNewUPassword(String password){
-        setPassword(password);
-    }
-    public void writeNewEmail(String email){
-        setEmail(email);
-    }
-    public void writeNewName(String name){
-        setName(name);
-    }
-
- */
 
     public HashMap<String, PersonalPage> getFollowedPages() {
         return followedPages;
     }
-    //get notification
 
+
+    //get notification
     /*
     public void getNotificationOnGames(){
         selectTeams();/// the fan selected the teams that he want to get notidications about them
@@ -298,15 +266,6 @@ public class Fan extends User implements Observer {
 
      */
 
-    public Team getTeamByName(String name){
-        for(HashMap.Entry<String,Team> page:followedTeams.entrySet()){
-            String key = page.getKey();
-           if(key.equals(name)){
-               return page.getValue();
-           }
-        }
-        return null;
-    }
 
     /*
     //next iteration
@@ -328,22 +287,17 @@ public class Fan extends User implements Observer {
     }
      */
 
-    public void watchDetails(String details){
+    public String[] watchDetails(){
         MainSystem.LOG.info("the user watch details");
+        String[] details = new String[4];
+        details[0]=userFullName;
+        details[1]=userName;
+        details[2]= password;
+        details[3]=userEmail;
+        return details;
 
-        //not sure
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText(details);
-        alert.show();
 
-        /*
-        System.out.println("your details:");
-        System.out.println("full name: " +userFullName );
-        System.out.println("user name: " +userName );
-        System.out.println("password: " +password );
-        System.out.println("email: " +userEmail );
 
-         */
 
     }
 
