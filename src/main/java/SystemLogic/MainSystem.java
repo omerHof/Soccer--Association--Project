@@ -28,7 +28,9 @@ public class MainSystem {
      */
     private MainSystem() {
         timerPasswordBuilder = new TimerPasswordBuilder();
-        String shit = "";
+        Timer t = new Timer();
+        t.scheduleAtFixedRate(timerPasswordBuilder, 0, TimeUnit.DAYS.toMillis(1));
+        //t.scheduleAtFixedRate(timerPasswordBuilder, 0, 1000);
     }
 
     /**
@@ -51,9 +53,6 @@ public class MainSystem {
      * Connect to the logger, connect external systems, appoint administrator, start the password builder
      */
     public void initializeSystem(){
-        Timer t = new Timer();
-        t.scheduleAtFixedRate(timerPasswordBuilder, 0, TimeUnit.DAYS.toMillis(1));
-        t.scheduleAtFixedRate(timerPasswordBuilder, 0, 1000);
         connectToLog();
         connectExternalSystems();
         appointUserToSAdministrator(); //how can someone be a user before initialization?
@@ -66,6 +65,8 @@ public class MainSystem {
 //        LOG  = LogManager.getLogger();
         LOG.info("LOG WAS CREATED!");
     }
+
+
 
     /**
      * This method initialize the external system and connect this class to them.
@@ -126,6 +127,9 @@ public class MainSystem {
 
         User newUser =  iUserGenerator.generate(userName, password, mangerPassword, role, fullName, userEmail,
                 birthDate, qualification, courtRole, teamRole);
+        if(newUser==null){
+            return false;
+        }
         db.addUser(newUser);
         LOG.info("A new user " + userName + " was signed up successfully");
         this.currentUser = newUser;
@@ -142,15 +146,19 @@ public class MainSystem {
      * @return String - did the logging in work or not and why
      */
     public String logIn(String userName, String password){
+
         if(!db.userExist(userName)){
             return "name";
+        }
+        else if(db.getUser(userName)==null){
+            return "null";
         }
         else if(!db.getUser(userName).getPassword().equals(password)){
             return "password";
         }
         this.currentUser = db.getUser(userName);
         LOG.info(userName + " was logged in successfully");
-        return "ok";
+        return "OK";
     }
 
     /**
