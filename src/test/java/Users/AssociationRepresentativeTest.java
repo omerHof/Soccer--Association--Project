@@ -138,13 +138,13 @@ public class AssociationRepresentativeTest {
         dbTest.addUser(r1);
         dbTest.addUser(assocTest);
 
-        assertNull(dbTest.getUserType("Referee")); //not exists yet.
-        assertFalse(dbTest.getUserByFullName("omer hof") instanceof Referee);
+        assertNull(dbTest.getUserType("Fan")); //not exists yet.
+        assertTrue(dbTest.getUserByFullName("ramzi ramzen") instanceof Referee);
 
-        assocTest.removeReferee("omer hof");
-        assertEquals(dbTest.getUserByFullName("omer hof").password, "ff");
+        assertTrue(assocTest.removeReferee("ramzi ramzen"));
+        assertTrue(dbTest.getUserByFullName("ramzi ramzen") instanceof Fan);
 
-        assertFalse(assoTest.addReferee("notExistsUser"));
+        assertFalse(assoTest.removeReferee("notExistsUser"));
     }
 
 

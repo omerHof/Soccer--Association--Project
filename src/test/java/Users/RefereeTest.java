@@ -42,31 +42,6 @@ public class RefereeTest {
         assertFalse(" UC 10.1 is good ! - qualification has been updated.", r.getQualification().equals("Kavan"));
         assertTrue("UC 10.1 is good !",r.getQualification().equals("Nothing"));
 
-
-        /*try {
-           // r.updatePersonalDetails("Tali", "main");
-            java.lang.System.out.println("success");
-        }catch (Exception e){
-            java.lang.System.out.println("wrong");
-        }
-        try {
-            //r.updatePersonalDetails("", "main");
-            java.lang.System.out.println("success");
-        }catch (Exception e){
-            java.lang.System.out.println("wrong");
-        }
-        try {
-           //r.updatePersonalDetails("Tali", "");
-            java.lang.System.out.println("success");
-        }catch (Exception e){
-            java.lang.System.out.println("wrong");
-        }
-        try {
-           // r.updatePersonalDetails("", "");
-            java.lang.System.out.println("success");
-        }catch (Exception e){
-            java.lang.System.out.println("wrong");
-        }*/
     }
 
     @Test

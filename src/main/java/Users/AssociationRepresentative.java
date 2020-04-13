@@ -37,7 +37,7 @@ public class AssociationRepresentative extends User {
         return false;
     }
 
-    ////////////////////////////// USE CASE 9.1 //////////////////////////////
+    ////////////////////////////// USE CASE 9.1 ////////////////////////////// VVV
     public boolean addLeague (String leagueName, int numOfTeams){
 
         League newLeague = new League(leagueName, numOfTeams);
@@ -49,7 +49,7 @@ public class AssociationRepresentative extends User {
             return false;
     }
 
-    ////////////////////////////// USE CASE 9.2 //////////////////////////////
+    ////////////////////////////// USE CASE 9.2 ////////////////////////////// VVV
     public void addSeasonToLeague (String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives){
 
         Season newSeason = new Season(year);
@@ -115,7 +115,7 @@ public class AssociationRepresentative extends User {
 
     }
 
-    ////////////////////////////// USE CASE 9.3.1 //////////////////////////////
+    ////////////////////////////// USE CASE 9.3.1 ////////////////////////////// VVV
     /**
      * return user from requested type
      * @param fullName - of the fan user we want to nominate as a referee.
@@ -149,12 +149,12 @@ public class AssociationRepresentative extends User {
     }
 
 
-    ////////////////////////////// USE CASE 9.3.2 //////////////////////////////
-    public void removeReferee (String username){
+    ////////////////////////////// USE CASE 9.3.2 ////////////////////////////// VVV
+    public boolean removeReferee (String fullName){
 
-        if(db.userExist(username)) { //checks whether this referee already exists in the DB.
+        if( db.getUserByFullName(fullName) != null ) { //checks whether this referee already exists in the DB.
 
-            Referee oldReferee = (Referee)db.getUser(username); //gets referee itself
+            Referee oldReferee = (Referee)db.getUserByFullName(fullName); //gets referee itself
             SimpleUserGenerator simpleUserG = new SimpleUserGenerator();
 
             Fan newFan = (Fan) simpleUserG.generate(oldReferee.userName, oldReferee.password, "", "", oldReferee.userFullName,
@@ -162,17 +162,20 @@ public class AssociationRepresentative extends User {
 
             ////////// send email ???????????????/ //////// todo: email.
 
-            db.removeUser(oldReferee.userFullName); //removes referee
+            db.removeUser(oldReferee.userName); //removes referee
             db.addUser(newFan); //adds as a fan.
 
-            MainSystem.LOG.info("referee: " + newFan.userName + " was removed, and added as a simple fans.");
+            MainSystem.LOG.info("referee: " + newFan.userName + " was removed, and added as a simple fan.");
+            return true;
         }
 
-        else
+        else {
             System.out.println("Can not remove a referee that does not exist in the DB.");
+            return false;
+        }
     }
 
-    ////////////////////////////// USE CASE 9.4 //////////////////////////////
+    ////////////////////////////// USE CASE 9.4 ////////////////////////////// VVV
     public void setLeagueReferees (String leagueName, Season season, List<String> referees) {
 
         ArrayList<Referee> allReferees = new ArrayList<>();
