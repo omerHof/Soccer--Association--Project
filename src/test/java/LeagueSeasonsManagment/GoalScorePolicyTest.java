@@ -8,13 +8,13 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class WinScorePolicyTest {
+public class GoalScorePolicyTest {
 
     IScorePolicy policy;
     @Before
     public void setUp() throws Exception {
 
-        policy= new WinScorePolicy();
+        policy= new GoalScorePolicy();
     }
 
     @After
@@ -76,7 +76,7 @@ public class WinScorePolicyTest {
     @Test
     public void getName() {
         try {
-            assertEquals("same name", "WinScorePolicy", policy.getName());
+            assertEquals("same name", "GoalScorePolicy", policy.getName());
         } catch (Exception e) {
             System.out.println("error");
         }

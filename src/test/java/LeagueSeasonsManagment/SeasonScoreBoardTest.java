@@ -61,7 +61,7 @@ public class SeasonScoreBoardTest {
     @Test
     public void sortByValue() {
         try{
-            //seasonScoreBoard.sortByValue(seasonScoreBoard.getTable());
+            seasonScoreBoard.sortByValue();
         }catch (Exception e) {
             System.out.println("error");
         }
@@ -70,10 +70,12 @@ public class SeasonScoreBoardTest {
     @Test
     public void showTable() {
         try{
-            seasonScoreBoard.getTable().get(2).getStatistics().setScore(3);
-            seasonScoreBoard.getTable().get(4).getStatistics().setScore(3);
-            seasonScoreBoard.getTable().get(4).getStatistics().setScore(3);
-            seasonScoreBoard.getTable().get(4).getStatistics().setScore(3);
+            seasonScoreBoard.getTeamByName("barca").getStatistics().setScore(3);
+            seasonScoreBoard.getTeamByName("man u").getStatistics().setScore(3);
+            seasonScoreBoard.getTeamByName("barca").getStatistics().setGoals(3);
+            seasonScoreBoard.getTeamByName("man u").getStatistics().setGoals(4);
+            seasonScoreBoard.getTeamByName("barca").getStatistics().setGc(1);
+            seasonScoreBoard.getTeamByName("man u").getStatistics().setGc(3);
 
             seasonScoreBoard.sortByValue();
             seasonScoreBoard.showTable();

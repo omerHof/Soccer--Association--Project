@@ -2,7 +2,7 @@ package LeagueSeasonsManagment;
 
 import java.util.ArrayList;
 
-public class WinScorePolicy implements IScorePolicy {
+public class GoalScorePolicy implements IScorePolicy {
 
     private int win;
     private int draw;
@@ -11,8 +11,8 @@ public class WinScorePolicy implements IScorePolicy {
     private boolean goalDiff;
 
 
-    public WinScorePolicy() {
-        name="WinScorePolicy";
+    public GoalScorePolicy() {
+        name="GoalScorePolicy";
         goalDiff= false;
     }
 

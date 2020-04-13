@@ -37,13 +37,8 @@ public class SimpleScorePolicyTest {
 
     @Test
     public void priority() {
-        try {/*
-            policy.scorePolicyAlgoImplementation();
-            ArrayList<String> priority = policy.priority("points", "moreGoals","goalDiff");
-            assertEquals("same priority", "points",priority.get(0));
-            assertEquals("same priority", "goalDiff",priority.get(1));
-            assertEquals("same priority", "moreGoals",priority.get(2));
-*/
+        try {
+
         }catch (Exception e) {
             System.out.println("error");
         }

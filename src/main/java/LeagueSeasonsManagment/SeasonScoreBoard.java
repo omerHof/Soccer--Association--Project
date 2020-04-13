@@ -24,18 +24,34 @@ public class SeasonScoreBoard {
         this.table = initTable();
     }
 
+    /**
+     * get table
+     * @return
+     */
     public ArrayList<Team> getTable() {
         return table;
     }
 
+    /**
+     * set table
+     * @param table
+     */
     public void setTable(ArrayList<Team>table) {
         this.table = table;
     }
 
+    /**
+     * get policy
+     * @return
+     */
     public IScorePolicy getPolicy() {
         return policy;
     }
 
+    /**
+     * set policy
+     * @param policy
+     */
     public void setPolicy(IScorePolicy policy) {
         this.policy = policy;
     }
@@ -62,11 +78,27 @@ public class SeasonScoreBoard {
         Collections.sort(table);
     }
 
+    public Team getTeamByName(String name){
+        for(Team team:table){
+            if(team.getName().equals(name)){
+                return team;
+            }
+        }
+        return null;
+    }
 
+    /**
+     * print table
+     */
     public void showTable(){
         int i=1;
+        System.out.println("Table:");
         for(Team team:table){
-            System.out.println(1+". Name: "+ team.getName()+" score: "+team.getStatistics().getScore());
+            System.out.println(i+". Name: "+ team.getName()+" | score: "+team.getStatistics().getScore()+
+                    " | w:"+ team.getStatistics().getWins()+" | d: "+ team.getStatistics().getTie()+" | l: "+ team.getStatistics().getLoses()+
+                    " | goals:"+team.getStatistics().getGoals()+
+                    " | goals c:"+ team.getStatistics().getGc()+" | dif: "+ team.getStatistics().getDif());
+            i++;
         }
     }
 }

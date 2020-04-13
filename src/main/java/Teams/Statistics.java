@@ -51,11 +51,11 @@ public class Statistics implements Comparable {
     }
 
     public int getGoals() {
-        return gc;
+        return gs;
     }
 
     public void setGoals(int goals) {
-        this.gc += goals;
+        this.gs += goals;
     }
 
     public int getTie() {
