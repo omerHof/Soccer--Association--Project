@@ -4,7 +4,6 @@ import Games.Game;
 import Users.*;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Observable;
 
 public class Team extends Observable {
@@ -14,6 +13,7 @@ public class Team extends Observable {
     }
 
     private teamStatus status;
+    private Statistics statistics;
     private String name;
     private ArrayList<Player>players;
     private ArrayList<Coach>coaches;
