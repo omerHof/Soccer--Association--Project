@@ -51,7 +51,7 @@ public class PremiumUserGenertator implements IUserGenerator {
                     return newManager;
                 }
 
-                case ("teamOwner"): { //Register a teamOwner
+                case ("teamowner"): { //Register a teamOwner
                     User newTeamOwner = new TeamOwner(userName, password, fullName,userEmail);
                     MainSystem.LOG.info("A new team owner: " + userName + " was created successfully !");
                     return newTeamOwner;
