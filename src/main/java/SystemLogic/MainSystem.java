@@ -29,8 +29,8 @@ public class MainSystem {
     private MainSystem() {
         timerPasswordBuilder = new TimerPasswordBuilder();
         Timer t = new Timer();
-        t.scheduleAtFixedRate(timerPasswordBuilder, 0, TimeUnit.DAYS.toMillis(1));
-        //t.scheduleAtFixedRate(timerPasswordBuilder, 0, 1000);
+        //t.scheduleAtFixedRate(timerPasswordBuilder, 0, TimeUnit.DAYS.toMillis(1));
+        t.scheduleAtFixedRate(timerPasswordBuilder, 0, 2000);
     }
 
     /**
@@ -97,7 +97,7 @@ public class MainSystem {
         db.removeUser(scapegoat.getUserName());
         String special_password = timerPasswordBuilder.getPassword();
         Administrator administrator = (Administrator) managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.getPassword(),special_password
-                ,"", scapegoat.getUserFullName(), scapegoat.getUserEmail(),
+                ,"Administrator", scapegoat.getUserFullName(), scapegoat.getUserEmail(),
                 null,"","","");
         db.addUser(administrator);
         LOG.info("Administrator was appointed successfully");
@@ -119,24 +119,28 @@ public class MainSystem {
      * @param iUserGenerator
      * @return boolean answer - did the signing up work or not
      */
-    public boolean singUp(String userName, String password, String mangerPassword, String role, String fullName, String userEmail,
+    public String singUp(String userName, String password, String mangerPassword, String role, String fullName, String userEmail,
                           Date birthDate, String qualification, String courtRole, String teamRole,
                           IUserGenerator iUserGenerator){
         if (db.userExist(userName)){
-            return false;
+            return "exist";
         }
 
         User newUser =  iUserGenerator.generate(userName, password, mangerPassword, role, fullName, userEmail,
                 birthDate, qualification, courtRole, teamRole);
         if(newUser==null){
-            return false;
+            return "null";
         }
+
         db.addUser(newUser);
         LOG.info("A new user " + userName + " was signed up successfully");
-        this.currentUser = newUser;
-        LOG.info(userName + " was logged in successfully");
+        if(this.currentUser==null){
+            this.currentUser = newUser;
+            LOG.info(userName + " was logged in successfully");
+            return "signed up and logged in";
+        }
 
-        return true;
+        return "signed up only";
     }
 
     /**
@@ -147,7 +151,9 @@ public class MainSystem {
      * @return String - did the logging in work or not and why
      */
     public String logIn(String userName, String password){
-
+        if(this.currentUser!=null){
+            return "occupied";
+        }
         if(!db.userExist(userName)){
             return "name";
         }
@@ -159,7 +165,7 @@ public class MainSystem {
         }
         this.currentUser = db.getUser(userName);
         LOG.info(userName + " was logged in successfully");
-        return "OK";
+        return "logged in";
     }
 
     /**

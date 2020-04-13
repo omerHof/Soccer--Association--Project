@@ -1,5 +1,6 @@
 package SystemLogic;
 
+import UserGenerator.PremiumUserGenertator;
 import UserGenerator.SimpleUserGenerator;
 import org.junit.*;
 import org.junit.FixMethodOrder;
@@ -7,6 +8,7 @@ import org.junit.runners.MethodSorters;
 
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -38,7 +40,9 @@ public class MainSystemTest {
 
     @Test
     public void AGetInstance() {
-
+        MainSystem same1 = MainSystem.getInstance();
+        MainSystem same2 = MainSystem.getInstance();
+        assertSame(same1, same2);
     }
 
     @Test
@@ -49,22 +53,41 @@ public class MainSystemTest {
     @Test
     public void CSingUp() {
         SimpleUserGenerator  simpleUserGenerator = new SimpleUserGenerator();
-        //Date birth_date = new Date(1992, 4,3);
-        boolean ans = mainSystem.singUp("Kroi","kod66666", "", "",
+
+        String result = mainSystem.singUp("Kroi","kod66666", "", "",
                 "Roi Katz","roik16@gmail.com", null, "", "", "",
                 simpleUserGenerator);
-        assertTrue(ans);
+        assertEquals(result, "signed up and logged in");
         assertTrue(data_base.userExist("Kroi"));
         assertEquals(mainSystem.getCurrentUser().getUserName(),"Kroi" );
+
+        String result2 = mainSystem.singUp("carlo","kod11111", "", "",
+                "Roberto Carlos","carlos@gmail.com", null, "", "", "",
+                simpleUserGenerator);
+
+        assertEquals(result2, "signed up only");
+        assertTrue(data_base.userExist("carlo"));
+        assertEquals(mainSystem.getCurrentUser().getUserName(),"Kroi" );
+
     }
 
     @Test
-    public void DLogIn() {
+    public void ELogIn() {
+        String str1 = mainSystem.logIn("noExist","doesn't matter");
+        assertEquals(str1, "name");
 
+        String str2 = mainSystem.logIn("carlo","wrong_password");
+        assertEquals(str2, "password");
+
+        String str3 = mainSystem.logIn("carlo","kod11111");
+        assertEquals(str3, "logged in");
+
+        String str4 = mainSystem.logIn("kroi","kod66666");
+        assertEquals(str4, "occupied");
     }
 
     @Test
-    public void ELogOut() {
+    public void DLogOut() {
         mainSystem.logOut();
         assertNull(mainSystem.getCurrentUser());
     }
