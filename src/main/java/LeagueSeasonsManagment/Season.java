@@ -22,6 +22,7 @@ public class Season {
 
     public Season(int year) {
         this.year = year;
+        this.seasonScoreBoard= new SeasonScoreBoard(allTeams,iScorePolicy);
     }
 
     //getters
