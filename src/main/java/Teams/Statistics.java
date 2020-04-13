@@ -1,6 +1,8 @@
 package Teams;
 
-public class Statistics {
+import LeagueSeasonsManagment.IScorePolicy;
+
+public class Statistics implements Comparable {
 
     private int score;
     private int wins;
@@ -8,9 +10,11 @@ public class Statistics {
     private int tie;
     private int gs;
     private int gc;
+    private IScorePolicy policy;
 
-    public Statistics() {
+    public Statistics(IScorePolicy policy) {
         setNewSeasonStatistics();
+        this.policy = policy;
     }
 
     private void setNewSeasonStatistics() {
@@ -18,7 +22,7 @@ public class Statistics {
         this.wins = 0;
         this.loses = 0;
         this.tie = 0;
-        this.gs= 0;
+        this.gs = 0;
         this.gc = 0;
     }
 
@@ -69,4 +73,49 @@ public class Statistics {
     public void setGc(int gc) {
         this.gc += gc;
     }
+
+    public int getDif() {
+        return gs - gc;
+    }
+
+    @Override
+    public int compareTo(Object obj) {
+        Statistics other = (Statistics) obj;
+        if (this.getScore() > other.getScore()) {
+            return -1;
+        }
+        if (this.getScore() < other.getScore()) {
+            return 1;
+        }
+        if (this.getScore() == other.getScore() && policy.isGoalDiff()) {
+            if (this.getDif() > other.getDif()) {
+                return -1;
+            }
+            if (this.getDif() < other.getDif()) {
+                return 1;
+            }
+            if (this.getGoals() > other.getGoals()) {
+                return -1;
+            }
+            if (this.getGoals() < other.getGoals()) {
+                return 1;
+            }
+        }
+        if (this.getScore() == other.getScore() && !policy.isGoalDiff()) {
+            if (this.getGoals() > other.getGoals()) {
+                return -1;
+            }
+            if (this.getGoals() < other.getGoals()) {
+                return 1;
+            }
+            if (this.getDif() > other.getDif()) {
+                return -1;
+            }
+            if (this.getDif() < other.getDif()) {
+                return 1;
+            }
+        }
+        return 0;
+    }
 }
+
