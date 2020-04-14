@@ -6,14 +6,14 @@ import Users.User;
 public class Event {
 
     public enum eventType {
-        goal, offside, foul, redTicket, yellowTicket, injury, substitiotion;
+        goal, offside, foul, redTicket, yellowTicket, injury, substitiotion ;
     }
 
     private Integer eventTime;
     private eventType type;
     private String playerName; //or just a string??
 
-    public Event(int eventTime, eventType type, String playerName) {
+    public Event(eventType type, int eventTime, String playerName) {
         this.eventTime = eventTime;
         this.type = type;
         this.playerName = playerName;

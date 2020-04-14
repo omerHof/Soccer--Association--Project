@@ -44,6 +44,8 @@ public class Game {
         return gameHour;
     }
 
+    public gameStatus getStatus() { return status; }
+
     public String getScore() {
         return score;
     }
@@ -74,6 +76,10 @@ public class Game {
 
     public void setGameReferees(List<Referee> gameReferees) {
         this.gameReferees = gameReferees;
+    }
+
+    public void addEvent (Event event){
+        eventBook.add(event);
     }
 }
 
