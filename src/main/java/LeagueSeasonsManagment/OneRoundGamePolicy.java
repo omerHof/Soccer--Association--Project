@@ -18,6 +18,7 @@ import java.util.*;
     private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
     private LocalDateTime timeOfGame;
 
+
     /**
      * constructor
      *

@@ -261,6 +261,7 @@ public class DB {
      * @param type
      * @return
      */
+
     public User getUserType(String type){
 
         Iterator it = users.entrySet().iterator();

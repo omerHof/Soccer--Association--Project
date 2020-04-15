@@ -51,6 +51,7 @@ public class OneRoundGamePolicyTest {
     public void tearDown() throws Exception {
     }
 
+
     @Test
     public void gameInlayPolicyAlgoImplementation() {
         try {

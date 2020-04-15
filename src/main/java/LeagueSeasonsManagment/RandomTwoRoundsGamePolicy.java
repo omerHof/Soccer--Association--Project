@@ -17,6 +17,7 @@ public class RandomTwoRoundsGamePolicy implements IGameInlayPolicy {
     private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
     private LocalDateTime timeOfGame;
 
+
     /**
      * constructor
      *

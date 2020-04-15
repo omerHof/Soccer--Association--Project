@@ -166,6 +166,7 @@ public class DBTest {
             ArrayList<Team>teams= new ArrayList<>();
             Season goodSeason = new Season(2020,teams,referees,representatives,"RegularScorePolicy","TwoRoundsGamePolicy");
 
+
             assertTrue("test failed", db.addSeason("premier league",goodSeason));
             assertFalse("test failed", db.addSeason("a",goodSeason));
             assertFalse("test failed", db.addSeason("premier league",goodSeason));

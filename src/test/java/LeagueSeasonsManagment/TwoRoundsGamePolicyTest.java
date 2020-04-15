@@ -45,6 +45,7 @@ public class TwoRoundsGamePolicyTest {
         //DB.setTeam(user);
         policy= new TwoRoundsGamePolicy(teams,year);
     }
+
     @After
     public void tearDown() throws Exception {
     }

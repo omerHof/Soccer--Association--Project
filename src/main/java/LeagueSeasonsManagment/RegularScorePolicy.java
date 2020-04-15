@@ -15,6 +15,7 @@ public class RegularScorePolicy implements IScorePolicy {
         goalDiff= true;
     }
 
+
     @Override
     public void scorePolicyAlgoImplementation() {
         win=3;

@@ -67,6 +67,7 @@ public class SeasonScoreBoard {
             team.getStatistics().setNewSeasonStatistics(policy);
             table.add(team);
         }
+
         return table;
     }
 

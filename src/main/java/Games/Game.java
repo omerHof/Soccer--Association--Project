@@ -12,6 +12,8 @@ import java.util.*;
 
 public class Game extends Observable{
 
+
+
     public enum gameStatus {
         preGame,active, finish, close
     }
@@ -80,12 +82,22 @@ public class Game extends Observable{
      * set alarms when the game start
      */
     private void endGame() {
+        LocalDateTime GameEndTime =  timeOfGame.plus(90,ChronoUnit.MINUTES);
+        EndGame endGame= new EndGame();
+        LocalDateTime from =LocalDateTime.now();
+        Duration duration = Duration.between(from, GameEndTime);
+        timer.schedule(endGame,duration.getSeconds());
     }
 
     /**
      * set alarms when the game close
      */
     private void closeGame() {
+        LocalDateTime closeGameTime =  timeOfGame.plus(5,ChronoUnit.DAYS);
+        CloseGame closeGame= new CloseGame();
+        LocalDateTime from =LocalDateTime.now();
+        Duration duration = Duration.between(from, closeGameTime);
+        timer.schedule(closeGame,duration.getSeconds());
     }
 
     public Team getHomeTeam() {
@@ -112,6 +124,15 @@ public class Game extends Observable{
 
     public List<Referee> getGameReferees() {
         return gameReferees;
+    }
+
+    public AssociationRepresentative getRepresentative() {
+        return representative;
+    }
+
+
+    public void setAssociationRepresentative(AssociationRepresentative representative) {
+        this.representative = representative;
     }
 
     public void setHomeTeam(Team homeTeam) {
