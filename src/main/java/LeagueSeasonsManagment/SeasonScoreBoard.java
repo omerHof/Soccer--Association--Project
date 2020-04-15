@@ -63,8 +63,8 @@ public class SeasonScoreBoard {
     private ArrayList<Team> initTable() {
         ArrayList<Team> table= new ArrayList();
         for(Team team:teams){
-            Statistics statistics= new Statistics(policy);
-            team.setStatistics(statistics);
+            //Statistics statistics= new Statistics(policy);
+            team.getStatistics().setNewSeasonStatistics(policy);
             table.add(team);
         }
         return table;

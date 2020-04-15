@@ -13,17 +13,18 @@ public class Statistics implements Comparable {
     private IScorePolicy policy;
 
     public Statistics(IScorePolicy policy) {
-        setNewSeasonStatistics();
-        this.policy = policy;
+        setNewSeasonStatistics(policy);
     }
 
-    private void setNewSeasonStatistics() {
+    public void setNewSeasonStatistics(IScorePolicy policy) {
         this.score = 0;
         this.wins = 0;
         this.loses = 0;
         this.tie = 0;
         this.gs = 0;
         this.gc = 0;
+        this.policy = policy;
+
     }
 
     public int getScore() {

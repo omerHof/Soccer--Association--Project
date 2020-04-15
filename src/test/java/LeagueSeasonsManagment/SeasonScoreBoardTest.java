@@ -34,7 +34,7 @@ public class SeasonScoreBoardTest {
 
     @Before
     public void setUp() throws Exception {
-        policy= new SimpleScorePolicy();
+        policy= new GoalScorePolicy();
         statisticsA= new Statistics(policy);
         a.setStatistics(statisticsA);
         teams.add(a);
@@ -70,8 +70,8 @@ public class SeasonScoreBoardTest {
     @Test
     public void showTable() {
         try{
-            seasonScoreBoard.getTeamByName("barca").getStatistics().setScore(3);
-            seasonScoreBoard.getTeamByName("man u").getStatistics().setScore(3);
+            seasonScoreBoard.getTeamByName("barca").getStatistics().setScore(5);
+            seasonScoreBoard.getTeamByName("man u").getStatistics().setScore(4);
             seasonScoreBoard.getTeamByName("barca").getStatistics().setGoals(3);
             seasonScoreBoard.getTeamByName("man u").getStatistics().setGoals(4);
             seasonScoreBoard.getTeamByName("barca").getStatistics().setGc(1);

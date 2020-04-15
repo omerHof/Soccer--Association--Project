@@ -2,6 +2,7 @@ package Games;
 
 import SystemLogic.DB;
 import Teams.Team;
+import Users.AssociationRepresentative;
 import Users.Referee;
 
 import java.util.*;
@@ -20,12 +21,25 @@ public class Game {
     private String score;
     private ArrayList<Event> eventBook;
     private List<Referee> gameReferees;
+    private AssociationRepresentative representative;
     private String finalReport;
 
+    /**
+     * constructor
+     * @param homeTeam
+     * @param awayTeam
+     */
     public Game(Team homeTeam, Team awayTeam) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         gameReferees = new LinkedList<>();
+    }
+
+    /**
+     * constructor
+     */
+    public Game(Team homeTeam, Team awayTeam,List<Referee> gameReferees, AssociationRepresentative representative){
+
     }
 
     public Team getHomeTeam() {
