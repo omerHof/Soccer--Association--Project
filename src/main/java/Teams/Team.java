@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Observable;
 
-public class Team extends Observable implements Comparable {
+public class Team implements Comparable {
 
     public enum teamStatus {
         active, close , PermanentlyClosed
@@ -114,9 +114,6 @@ public class Team extends Observable implements Comparable {
           page.addPlayer(player);
           db.setTeam(this);
         }
-        players.put(player.getUserName(), player);
-        setChanged();
-        notifyObservers(player);
         MainSystem.LOG.info("the player " + player.getUserName() + " was added successfully to the team " + this.getName());
     }
 
@@ -126,9 +123,6 @@ public class Team extends Observable implements Comparable {
             page.removePlayer(player);
             db.setTeam(this);
         }
-        players.remove(player.getUserName());
-        setChanged();
-        notifyObservers(player);
         MainSystem.LOG.info("the player " + player.getUserName() + " was removed successfully from the team " + this.getName());
     }
 
@@ -138,9 +132,6 @@ public class Team extends Observable implements Comparable {
             page.addCoach(coach);
             db.setTeam(this);
         }
-        coaches.put(coach.getUserName(), coach);
-        setChanged();
-        notifyObservers(coach);
         MainSystem.LOG.info("the coach " + coach.getUserName() + " was added successfully to the team " + this.getName());
     }
 
@@ -150,9 +141,6 @@ public class Team extends Observable implements Comparable {
             page.removeCoach(coach);
             db.setTeam(this);
         }
-        coaches.remove(coach.getUserName());
-        setChanged();
-        notifyObservers(coach);
         MainSystem.LOG.info("the coach " + coach.getUserName() + " was removed successfully to the team " + this.getName());
     }
 
@@ -162,9 +150,6 @@ public class Team extends Observable implements Comparable {
             page.addManager(manager);
             db.setTeam(this);
         }
-        managers.put(manager.getUserName(), manager);
-        setChanged();
-        notifyObservers(manager);
         MainSystem.LOG.info("the manager " + manager.getUserName() + " was added successfully to the team " + this.getName());
     }
 
@@ -174,29 +159,16 @@ public class Team extends Observable implements Comparable {
             page.removeManager(manager);
             db.setTeam(this);
         }
-        managers.remove(manager.getUserName());
-        setChanged();
-        notifyObservers(manager);
         MainSystem.LOG.info("the manager " + manager.getUserName() + " was removed successfully to the team " + this.getName());
     }
 
     public void addTeamOwner(TeamOwner teamOwner) {
         teamOwners.put(teamOwner.getUserFullName(), teamOwner);
-        /*
-        setChanged();
-        notifyObservers(teamOwner);
-
-         */
         MainSystem.LOG.info("the team owner " + teamOwner.getUserName() + " was added successfully to the team " + this.getName());
     }
 
     public void removeTeamOwner(TeamOwner teamOwner) {
         teamOwners.remove(teamOwner.getUserFullName());
-        /*
-        setChanged();
-        notifyObservers(teamOwner);
-
-         */
         MainSystem.LOG.info("the team owner " + teamOwner.getUserName() + " was removed successfully to the team " + this.getName());
     }
 
