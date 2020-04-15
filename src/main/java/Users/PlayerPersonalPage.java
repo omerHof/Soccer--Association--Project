@@ -8,14 +8,10 @@ import java.util.Date;
 
 public class PlayerPersonalPage extends PersonalPage {
 
-
-
     private int height;
     private int weight;
     private int shirtNumber;
     private String position;
-
-
 
     public PlayerPersonalPage(String name, int age, String position,int height,int weight,int shirtNumber, Team team){
         this.name=name;
