@@ -1,6 +1,7 @@
 package Teams;
 
 import Games.Game;
+import SystemLogic.MainSystem;
 import SystemLogic.DB;
 import Users.*;
 
@@ -9,7 +10,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Observable;
 
-public class Team  implements Comparable {
+public class Team implements Comparable {
 
     public enum teamStatus {
         active, close , PermanentlyClosed
@@ -81,6 +82,7 @@ public class Team  implements Comparable {
         }
         if (assent instanceof Stadium){
             setStadium((Stadium) assent);
+            MainSystem.LOG.info("The stadium " + stadium.getName() + "was added successfully to the team " + this.getName());
         }
         this.assents.add(assent);
     }
@@ -99,7 +101,9 @@ public class Team  implements Comparable {
             removeTeamOwner((TeamOwner) assent);
         }
         if (assent instanceof Stadium){
+            String stadium_name = stadium.getName();
             setStadium(null);
+            MainSystem.LOG.info("The stadium " + stadium_name + "was removed successfully to the team " + this.getName());
         }
         this.assents.remove(assent);
     }
@@ -110,6 +114,7 @@ public class Team  implements Comparable {
           page.addPlayer(player);
           db.setTeam(this);
         }
+        MainSystem.LOG.info("the player " + player.getUserName() + " was added successfully to the team " + this.getName());
     }
 
     public void removePlayer(Player player) {
@@ -118,6 +123,7 @@ public class Team  implements Comparable {
             page.removePlayer(player);
             db.setTeam(this);
         }
+        MainSystem.LOG.info("the player " + player.getUserName() + " was removed successfully from the team " + this.getName());
     }
 
     public void addCoach(Coach coach) {
@@ -126,6 +132,7 @@ public class Team  implements Comparable {
             page.addCoach(coach);
             db.setTeam(this);
         }
+        MainSystem.LOG.info("the coach " + coach.getUserName() + " was added successfully to the team " + this.getName());
     }
 
     public void removeCoach(Coach coach) {
@@ -134,6 +141,7 @@ public class Team  implements Comparable {
             page.removeCoach(coach);
             db.setTeam(this);
         }
+        MainSystem.LOG.info("the coach " + coach.getUserName() + " was removed successfully to the team " + this.getName());
     }
 
     public void addManager(Manager manager) {
@@ -142,6 +150,7 @@ public class Team  implements Comparable {
             page.addManager(manager);
             db.setTeam(this);
         }
+        MainSystem.LOG.info("the manager " + manager.getUserName() + " was added successfully to the team " + this.getName());
     }
 
     public void removeManager(Manager manager) {
@@ -150,24 +159,17 @@ public class Team  implements Comparable {
             page.removeManager(manager);
             db.setTeam(this);
         }
+        MainSystem.LOG.info("the manager " + manager.getUserName() + " was removed successfully to the team " + this.getName());
     }
 
     public void addTeamOwner(TeamOwner teamOwner) {
         teamOwners.put(teamOwner.getUserFullName(), teamOwner);
-        /*
-        setChanged();
-        notifyObservers(teamOwner);
-
-         */
+        MainSystem.LOG.info("the team owner " + teamOwner.getUserName() + " was added successfully to the team " + this.getName());
     }
 
     public void removeTeamOwner(TeamOwner teamOwner) {
         teamOwners.remove(teamOwner.getUserFullName());
-        /*
-        setChanged();
-        notifyObservers(teamOwner);
-
-         */
+        MainSystem.LOG.info("the team owner " + teamOwner.getUserName() + " was removed successfully to the team " + this.getName());
     }
 
     public HashMap<String, Coach> getCoaches()

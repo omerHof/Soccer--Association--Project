@@ -1,6 +1,7 @@
 package Teams;
 
 public class Stadium implements Assent{
+    private String name;
     private double worth;
     private int capacity;
     private double price;
@@ -25,6 +26,14 @@ public class Stadium implements Assent{
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
