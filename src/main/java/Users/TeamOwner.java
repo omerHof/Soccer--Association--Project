@@ -18,7 +18,9 @@ public class TeamOwner extends User implements Assent {
     }
 
     public void askPermission (){//todo: necessary?
-
+        DB db = DB.getInstance();
+        AssociationRepresentative ar = (AssociationRepresentative) db.getUserType("AssociationRepresentative");
+        this.permission = ar.approveRegistration("who", "cares");
     }
 
     public void openTeam(String team_name){//after he got permission
