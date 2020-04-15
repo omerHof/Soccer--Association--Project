@@ -24,6 +24,7 @@ public class Team extends Observable implements Comparable {
     private ArrayList<Game> gameList;
     private teamStatus status;
     private Statistics statistics;
+    private double budget;
 
     public Team(String name, HashMap<String, TeamOwner> teamOwners) {
         this.name = name;
@@ -66,8 +67,33 @@ public class Team extends Observable implements Comparable {
         this.assents.add(assent);
     }
 
+   public void removeAssent(Assent assent){
+        if(assent instanceof Player){
+            removePlayer((Player)assent);
+        }
+        if(assent instanceof Coach){
+            removeCoach((Coach)assent);
+        }
+        if(assent instanceof Manager){
+            removeManager((Manager) assent);
+        }
+        if(assent instanceof TeamOwner){
+            removeTeamOwner((TeamOwner) assent);
+        }
+        if (assent instanceof Stadium){
+            setStadium(null);
+        }
+        this.assents.remove(assent);
+    }
+
     public void addPlayer(Player player) {
         players.put(player.getUserName(), player);
+        setChanged();
+        notifyObservers(player);
+    }
+
+    public void removePlayer(Player player) {
+        players.remove(player.getUserName());
         setChanged();
         notifyObservers(player);
     }
@@ -77,14 +103,33 @@ public class Team extends Observable implements Comparable {
         setChanged();
         notifyObservers(coach);
     }
+
+    public void removeCoach(Coach coach) {
+        coaches.remove(coach.getUserName());
+        setChanged();
+        notifyObservers(coach);
+    }
+
     public void addManager(Manager manager) {
         managers.put(manager.getUserName(), manager);
         setChanged();
         notifyObservers(manager);
     }
 
+    public void removeManager(Manager manager) {
+        managers.remove(manager.getUserName());
+        setChanged();
+        notifyObservers(manager);
+    }
+
     public void addTeamOwner(TeamOwner teamOwner) {
         teamOwners.put(teamOwner.getUserName(), teamOwner);
+        setChanged();
+        notifyObservers(teamOwner);
+    }
+
+    public void removeTeamOwner(TeamOwner teamOwner) {
+        teamOwners.remove(teamOwner.getUserName());
         setChanged();
         notifyObservers(teamOwner);
     }
@@ -165,6 +210,14 @@ public class Team extends Observable implements Comparable {
 
     public teamStatus getStatus() {
         return status;
+    }
+
+    public double getBudget() {
+        return budget;
+    }
+
+    public void setBudget(double budget) {
+        this.budget = budget;
     }
 
     @Override

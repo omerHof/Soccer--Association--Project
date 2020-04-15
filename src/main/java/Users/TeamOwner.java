@@ -1,10 +1,8 @@
 package Users;
 import SystemLogic.DB;
-import SystemLogic.MainSystem;
 import Teams.Assent;
 import Teams.Team;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TeamOwner extends User implements Assent {
@@ -32,25 +30,20 @@ public class TeamOwner extends User implements Assent {
         }
     }
 
+    public String addAssent(Assent assent){
+        if(assent == null){
+            return "null";
+        }
 
-    public void editUserDetails(){
+        if(this.team.containsAssent(assent)){
+            return "already added";
+        }
 
-    }
-
-    public void showStadium(){
-
-    }
-
-    public void addStadium(){
-
-    }
-
-    public void removeStadium(){
-
-    }
-
-    public void editStadiumDetails(){
-
+        else{
+            this.team.addAssent(assent);
+            buyAssent(assent.getWorth());
+        }
+        return "";
     }
 
     public void appointTeamOwner(){
@@ -59,6 +52,17 @@ public class TeamOwner extends User implements Assent {
 
     public void appointManager(){
 
+    }
+
+    public void buyAssent(double price){
+        //todo: add sanctions
+        double newBudget = this.team.getBudget() - price;
+        this.team.setBudget(newBudget);
+    }
+
+    public void sellAssent(double price){
+        double newBudget = this.team.getBudget() + price;
+        this.team.setBudget(newBudget);
     }
 
     public void closeTeam(){
@@ -80,6 +84,7 @@ public class TeamOwner extends User implements Assent {
     public void setWorth(double worth) {
         this.worth = worth;
     }
+
 
     public boolean isPermission() {
         return permission;
