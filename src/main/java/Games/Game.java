@@ -166,6 +166,8 @@ public class Game extends Observable{
     public void addEvent (Event event){
         eventBook.add(event);
     }
+
+
 }
 
 class DayToGame extends TimerTask {
