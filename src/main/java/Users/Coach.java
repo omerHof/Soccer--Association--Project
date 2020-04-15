@@ -4,6 +4,7 @@ import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import Teams.Team;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Coach extends User {
@@ -49,6 +50,7 @@ public class Coach extends User {
     public void setCurrentTeam(Team team){
         if(page!=null) {
             page.setCurrentTeam(team);
+            page.setOneTeamToHistory(team.getName());
             DB1.setUser(this);
         }
     }
@@ -74,6 +76,20 @@ public class Coach extends User {
 
     public CoachPersonalPage getPage() {
         return page;
+    }
+
+    public void setTeamHistory(ArrayList<String> teamHistoryList){
+        if(page!=null){
+            page.setTeamHistory(teamHistoryList);
+            DB1.setUser(this);
+        }
+    }
+
+    public ArrayList<Team> getTeamHistory() {
+        if(page!=null){
+            return page.getTeamHistory();
+        }
+        return null;
     }
 
 
