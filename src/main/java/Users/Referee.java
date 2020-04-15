@@ -6,8 +6,10 @@ import javafx.scene.control.Alert;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
-public class Referee extends User {
+public class Referee extends User implements Observer {
 
     private String qualification;
     private LinkedList<Game> myGames;
@@ -72,5 +74,16 @@ public class Referee extends User {
             return allGames;
         }
         return null;
+    }
+
+    public void followThisGame(Game game){
+        game.addObserver(this);
+        //followedPages.put(page.getName(),page);
+        myGames.add(game);
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+
     }
 }

@@ -1,8 +1,11 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
+import SystemLogic.DB;
+import SystemLogic.MainSystem;
 import Teams.Team;
 import Users.AssociationRepresentative;
+import Users.MainReferee;
 import Users.Referee;
 import Users.User;
 
@@ -18,10 +21,12 @@ public class Season {
     private IGameInlayPolicy iGameInlayPolicy;
     private IScorePolicy iScorePolicy;
     private SeasonScoreBoard seasonScoreBoard;
+    private DB db;
 
     public Season(int year, ArrayList<Team> allTeams, ArrayList<Referee> allReferees,
                   ArrayList<AssociationRepresentative> allReps, String scorePolicy, String gamePolicy) {
 
+        db = DB.getInstance();
         this.year = year;
         this.allReferees = allReferees;
         this.allTeams = allTeams;
@@ -35,8 +40,7 @@ public class Season {
 
         this.allGames = iGameInlayPolicy.gameInlayPolicyAlgoImplementation(); //adds list of games to each mahzor.
 
-        assignUsersToGames(allReferees, null, 2); //assign 2 referees for each game
-        assignUsersToGames(null, allReps, 1); //assign 1 representative for each game.
+        assignUsersToGames(3); //assign 4 referees for each game, and 1 association rep.
 
     }
 
@@ -45,34 +49,39 @@ public class Season {
      * assign referees or association representatives to all games
      * @param amount - how many referees to assign for each game.
      */
-    private void assignUsersToGames(ArrayList<Referee> allReferees, ArrayList<AssociationRepresentative> allReps, int amount) {
+    private void assignUsersToGames(int amount) {
 
-        ArrayList<Game> currMahzorGames = new ArrayList<>();
+        if (allReferees != null && allRepresentatives != null) {
 
-        for (int mahzor : allGames.keySet()){ //every weak.
-            currMahzorGames = allGames.get(mahzor); //gets current mahzor's games.
+            ArrayList<Game> currMahzorGames = new ArrayList<>();
 
-            List<AssociationRepresentative> copyAsso = new LinkedList<>(allReps); // WORK ????????? copy.!! doesn't change originalll
-            Referee ref;
+            for (int mahzor : allGames.keySet()) { //every weak.
+                currMahzorGames = allGames.get(mahzor); //gets current mahzor's games.
 
-            List<Referee> copyReferees = new ArrayList<>(allReferees); // WORK ????????? copy.!! doesn't change originalll
-            List<Referee> gameReferees = new LinkedList<>(); //to add current random referees to.
+                //List<AssociationRepresentative> copyAsso = new LinkedList<>(allReps); // WORK ????????? copy.!! doesn't change originalll
+                Referee ref;
 
-            //ArrayList<Referee> copyReferees = new ArrayList<>();
-            //copyReferees.addAll(allReferees);
+                //ArrayList<Referee> copyReferees = new ArrayList<>();
+                //copyReferees.addAll(allReferees);
 
-            for (Game game : currMahzorGames){
-                if (allReferees != null && allReps != null) {
-                    for (int i=0; i < amount; i++){
+                for (Game game : currMahzorGames) {
 
-                        ref = (Referee)getRandomReferee(copyReferees);
+                    List<Referee> gameReferees = new LinkedList<>(); //to add current random referees to.
+
+                    for (int i = 0; i < amount; i++) {
+
+                        ref = getRandomReferee(allReferees);
                         gameReferees.add(ref); //maybe not wor. doresss.
                         /////// gameReferees.add(new Referee(ref.getUserName(), ref.getPassword(), ref.getUserFullName(), ref.getUserEmail(), ref.getQualification())); //assign the random referee ((copy)) to the game.
                         ref.addGame(game); // and the opposite...
                     }
-                    AssociationRepresentative asso = (AssociationRepresentative)getRandomAsso(allReps);
+                    AssociationRepresentative asso = getRandomAsso(allRepresentatives);
                     game.setAssociationRepresentative(asso); //assign asso to the game
                     asso.setMyGame(game); //adds the game to asso' list og games.
+
+                    MainReferee mainReferee = (MainReferee) db.getUserType("MainReferee");
+                    gameReferees.add(mainReferee); //adds 1 main referee to list of game also.
+                    mainReferee.addGame(game); //and opposite....
 
                     game.setGameReferees(gameReferees); //adds the referees' list to the current game.
                 }
@@ -93,41 +102,36 @@ public class Season {
                     game.setAssociationRepresentative(asso); //assign asso to the game
                     asso.setMyGame(game); //adds the game to asso' list og games.
                 }*/
-
-                else //no option.
-                    System.out.println(" cannot create a new season without referees nor association.");
-
             }
-
         }
-
-
+        else //no option.
+            System.out.println(" cannot create a new season without referees nor association.");
     }
 
     /**
      * this function returns a random referee.
-     * @param copyList - a copy of the Referees' list of the season.
+     * @param refereeList - a copy of the Referees' list of the season.
      * @return Referee - to assign for a game.
      */
-    private User getRandomReferee(List<Referee> copyList) {
+    private Referee getRandomReferee(List<Referee> refereeList) {
 
         Random random = new Random();
-        int rand = random.nextInt(copyList.size()+1);
+        int rand = random.nextInt(refereeList.size()+1);
 
-        return copyList.remove(rand);
+        return refereeList.get(rand);
      }
 
     /**
      * this function returns a random AssociationRepresentative.
-     * @param copyList - a copy of the AssociationRepresentative' list of the season.
+     * @param assoList - a copy of the AssociationRepresentative' list of the season.
      * @return AssociationRepresentative - to assign for a game.
      */
-    private User getRandomAsso(List<AssociationRepresentative> copyList) {
+    private AssociationRepresentative getRandomAsso(List<AssociationRepresentative> assoList) {
 
         Random random = new Random();
-        int rand = random.nextInt(copyList.size()+1);
+        int rand = random.nextInt(assoList.size()+1);
 
-        return copyList.get(rand);
+        return assoList.get(rand);
     }
 
     //getters
