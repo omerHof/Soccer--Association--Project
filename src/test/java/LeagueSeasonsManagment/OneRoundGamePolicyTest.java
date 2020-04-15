@@ -28,6 +28,7 @@ public class OneRoundGamePolicyTest {
     Team i = new Team("milan");
     Team j = new Team("inter");
     IGameInlayPolicy policy;
+    int year;
 
     @Before
     public void setUp() throws Exception {
@@ -42,17 +43,19 @@ public class OneRoundGamePolicyTest {
         teams.add(i);
         teams.add(j);
         DB.getInstance();
-        policy = new OneRoundGamePolicy(teams);
+        year=2020;
+        policy = new OneRoundGamePolicy(teams,year);
     }
 
     @After
     public void tearDown() throws Exception {
     }
 
+
     @Test
     public void gameInlayPolicyAlgoImplementation() {
         try {
-            //IGameInlayPolicy policy = new OneRoundGamePolicy(teams);
+            IGameInlayPolicy policy = new OneRoundGamePolicy(teams,year);
             results = policy.gameInlayPolicyAlgoImplementation();
             assertEquals("test failed", teams.size()-1 ,results.size() );
 
@@ -74,7 +77,7 @@ public class OneRoundGamePolicyTest {
 
 
     public void print(){
-        IGameInlayPolicy policy = new OneRoundGamePolicy(teams);
+        IGameInlayPolicy policy = new OneRoundGamePolicy(teams,year);
         results = policy.gameInlayPolicyAlgoImplementation();
         Iterator it = results.entrySet().iterator();
         while (it.hasNext()) {

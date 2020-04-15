@@ -11,6 +11,7 @@ public class GoalScorePolicy implements IScorePolicy {
     private boolean goalDiff;
 
 
+
     public GoalScorePolicy() {
         name="GoalScorePolicy";
         goalDiff= false;

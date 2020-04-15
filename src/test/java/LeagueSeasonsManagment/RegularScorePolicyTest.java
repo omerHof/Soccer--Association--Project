@@ -4,17 +4,15 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.*;
 
-public class SimpleScorePolicyTest {
+public class RegularScorePolicyTest {
 
     IScorePolicy policy;
     @Before
     public void setUp() throws Exception {
 
-        policy= new SimpleScorePolicy();
+        policy= new RegularScorePolicy();
     }
 
     @After
@@ -77,7 +75,7 @@ public class SimpleScorePolicyTest {
     @Test
     public void getName() {
         try {
-            assertEquals("same name", "SimpleScorePolicy", policy.getName());
+            assertEquals("same name", "RegularScorePolicy", policy.getName());
         } catch (Exception e) {
             System.out.println("error");
         }

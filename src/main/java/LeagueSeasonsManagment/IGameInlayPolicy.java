@@ -11,4 +11,5 @@ public interface IGameInlayPolicy {
 
     HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation();
     String getName();
+
 }

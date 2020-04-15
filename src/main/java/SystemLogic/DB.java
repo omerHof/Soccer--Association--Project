@@ -261,6 +261,7 @@ public class DB {
      * @param type
      * @return
      */
+
     public User getUserType(String type){
 
         Iterator it = users.entrySet().iterator();
@@ -279,6 +280,9 @@ public class DB {
                 return (User) pair.getValue();
             }
             if (type.equals("Player") && pair.getValue() instanceof Player) {
+                return (User) pair.getValue();
+            }
+            if (type.equals("MainReferee") && pair.getValue() instanceof MainReferee) {
                 return (User) pair.getValue();
             }
             if (type.equals("Referee") && pair.getValue() instanceof Referee) {

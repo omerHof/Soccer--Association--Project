@@ -12,23 +12,23 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-public class RandomGamePolicyTest {
-
-    ArrayList<Team> teams = new ArrayList<>();
-    HashMap<Integer, ArrayList<Game>> results = new HashMap<>();
-    Team a = new Team("barca");
-    Team b = new Team("real");
-    Team c = new Team("man u");
-    Team d = new Team("man city");
-    Team e = new Team("liverpool");
-    Team f = new Team("chelsea");
-    Team g = new Team("roma");
-    Team h = new Team("juve");
-    Team i = new Team("milan");
-    Team j = new Team("inter");
+public class TwoRoundsGamePolicyTest {
+    ArrayList<Team> teams=new ArrayList<>();
+    HashMap<Integer, ArrayList<Game>> results= new HashMap<>();
+    Team a= new Team("barca");
+    Team b= new Team("real");
+    Team c= new Team("man u");
+    Team d= new Team("man city");
+    Team e= new Team("liverpool");
+    Team f= new Team("chelsea");
+    Team g= new Team("roma");
+    Team h= new Team("juve");
+    Team i= new Team("milan");
+    Team j= new Team("inter");
     IGameInlayPolicy policy;
+    int year= 2020;
     @Before
     public void setUp() throws Exception {
         teams.add(a);
@@ -42,7 +42,8 @@ public class RandomGamePolicyTest {
         teams.add(i);
         teams.add(j);
         DB.getInstance();
-        policy = new RandomGamePolicy(teams);
+        //DB.setTeam(user);
+        policy= new TwoRoundsGamePolicy(teams,year);
     }
 
     @After
@@ -52,29 +53,29 @@ public class RandomGamePolicyTest {
     @Test
     public void gameInlayPolicyAlgoImplementation() {
         try {
-            //IGameInlayPolicy policy = new RandomGamePolicy(teams);
+            //print();
+            //IGameInlayPolicy policy = new TwoRoundsGamePolicy(teams);
             results = policy.gameInlayPolicyAlgoImplementation();
             assertEquals("test failed",results.size(),teams.size()*2-2);
-
             print();
+
 
         } catch (Exception e) {
             System.out.println("error");
         }
-
     }
 
     @Test
     public void getName() {
         try {
-            assertEquals("same name", "RandomGamePolicy", policy.getName());
+            assertEquals("same name", "TwoRoundsGamePolicy", policy.getName());
         } catch (Exception e) {
             System.out.println("error");
         }
     }
 
     public void print(){
-        IGameInlayPolicy policy = new RandomGamePolicy(teams);
+        IGameInlayPolicy policy = new TwoRoundsGamePolicy(teams,year);
         results = policy.gameInlayPolicyAlgoImplementation();
         Iterator it = results.entrySet().iterator();
         while (it.hasNext()) {
@@ -86,4 +87,5 @@ public class RandomGamePolicyTest {
 
         }
     }
+
 }

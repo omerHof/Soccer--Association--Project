@@ -17,6 +17,7 @@ public class GoalScorePolicyTest {
         policy= new GoalScorePolicy();
     }
 
+
     @After
     public void tearDown() throws Exception {
     }

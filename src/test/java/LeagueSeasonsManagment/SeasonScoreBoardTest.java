@@ -54,6 +54,7 @@ public class SeasonScoreBoardTest {
         DB.getInstance();
     }
 
+
     @After
     public void tearDown() throws Exception {
     }

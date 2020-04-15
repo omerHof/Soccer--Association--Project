@@ -11,12 +11,9 @@ import UserGenerator.PremiumUserGenertator;
 import UserGenerator.SimpleUserGenerator;
 
 import java.sql.Ref;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
-public class AssociationRepresentative extends User {
+public class AssociationRepresentative extends User implements Observer {
 
     private static int numOfApprovals = 0 ;
     private DB db = DB.getInstance();
@@ -250,5 +247,10 @@ public class AssociationRepresentative extends User {
 
     public void setMyGame(Game newGame) {
         myGames.add(newGame);
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+
     }
 }
