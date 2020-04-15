@@ -4,6 +4,7 @@ import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import Teams.Stadium;
 import Teams.Team;
+import Teams.TeamPage;
 import UserGenerator.AUsersGenerator;
 import UserGenerator.SimpleUserGenerator;
 import javafx.scene.control.Alert;
@@ -64,9 +65,9 @@ public class Fan extends User implements Observer {
             pageMessage= team.getName();
             System.out.println("new update! "+name+" has moved to "+pageMessage);
         }
-        if(o instanceof Team){
+        if(o instanceof TeamPage){
             teamAlert=true;
-            Team team = (Team)o;
+            TeamPage team = (TeamPage)o;
             if(arg instanceof Player){
                 Player player=( Player)arg;
                 pageMessage= player.getUserFullName();
@@ -80,6 +81,9 @@ public class Fan extends User implements Observer {
                 System.out.println("new update! the Coach "+pageMessage+" has moved to "+team.getName());
             }
             else if(arg instanceof Stadium){
+                Stadium stadium=( Stadium)arg;
+               // pageMessage= stadium.getName();
+                System.out.println("new update! the team "+team.getName()+" has a new stadium");
 
             }
             else if(arg instanceof TeamOwner){
@@ -94,6 +98,8 @@ public class Fan extends User implements Observer {
                 System.out.println("new update! the Manager "+pageMessage+" has moved to "+team.getName());
 
             }
+
+
         }
 
     }
@@ -191,8 +197,9 @@ public ArrayList< PersonalPage> getFollowedPages() {
         DB DB1;
         DB1=DB.getInstance();
         Team team = DB1.getTeam(teamName);
+        TeamPage teamPage = team.getPage();
 
-        team.addObserver(this);
+        teamPage.addObserver(this);
         followedTeams.put(teamName,team);
 
     }
@@ -201,7 +208,8 @@ public ArrayList< PersonalPage> getFollowedPages() {
         Team team;
         if (followedTeams.containsKey(teamName)) {
             team = followedTeams.remove(teamName);
-            team.deleteObserver(this);
+            TeamPage teamPage = team.getPage();
+            teamPage.deleteObserver(this);
         }
     }
     public void stopFollowAllTeams(){
