@@ -299,6 +299,44 @@ public class DB {
     }
 
 
+    public int checkQuantityOfUsersByType(String type) {
+        Iterator it = users.entrySet().iterator();
+        int count = 0;
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            if (type.equals("AssociationRepresentative") && pair.getValue() instanceof AssociationRepresentative) {
+                count++;
+            }
+            if (type.equals("Fan") && pair.getValue() instanceof Fan) {
+                count++;
+            }
+            if (type.equals("Coach") && pair.getValue() instanceof Coach) {
+                count++;
+            }
+            if (type.equals("Manager") && pair.getValue() instanceof Manager) {
+                count++;
+            }
+            if (type.equals("Player") && pair.getValue() instanceof Player) {
+                count++;
+                ;
+            }
+            if (type.equals("MainReferee") && pair.getValue() instanceof MainReferee) {
+                count++;
+            }
+            if (type.equals("Referee") && pair.getValue() instanceof Referee) {
+                count++;
+            }
+            if (type.equals("TeamOwner") && pair.getValue() instanceof TeamOwner) {
+                count++;
+            }
+            if (type.equals("Administrator") && pair.getValue() instanceof Administrator) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
 /*
     public static AssociationRepresentative getRepresentative() {
 

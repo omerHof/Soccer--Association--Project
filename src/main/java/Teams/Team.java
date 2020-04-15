@@ -42,6 +42,7 @@ public class Team implements Comparable {
 
     public Team(String name) {
         this.name = name;
+        this.status = teamStatus.active;
         page = null;
         db = DB.getInstance();
     }
@@ -106,6 +107,10 @@ public class Team implements Comparable {
             MainSystem.LOG.info("The stadium " + stadium_name + "was removed successfully to the team " + this.getName());
         }
         this.assents.remove(assent);
+    }
+
+    public void setStatus(teamStatus status) {
+        this.status = status;
     }
 
     public void addPlayer(Player player) {
