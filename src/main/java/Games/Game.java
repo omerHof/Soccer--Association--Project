@@ -23,6 +23,7 @@ public class Game {
     private List<Referee> gameReferees;
     private AssociationRepresentative representative;
     private String finalReport;
+    private AssociationRepresentative associationRepresentative;
 
     /**
      * constructor
@@ -94,6 +95,10 @@ public class Game {
 
     public void addEvent (Event event){
         eventBook.add(event);
+    }
+
+    public void setAssociationRepresentative(AssociationRepresentative associationRepresentative) {
+        this.associationRepresentative = associationRepresentative;
     }
 }
 
