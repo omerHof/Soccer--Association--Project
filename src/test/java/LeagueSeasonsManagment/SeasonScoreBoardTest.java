@@ -7,6 +7,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -50,7 +51,8 @@ public class SeasonScoreBoardTest {
         statisticsE= new Statistics(policy);
         e.setStatistics(statisticsE);
         teams.add(e);
-        seasonScoreBoard= new SeasonScoreBoard(teams,policy);
+        LocalDateTime time =LocalDateTime.now();
+        seasonScoreBoard= new SeasonScoreBoard(teams,policy,time,teams.size()*2);
         DB.getInstance();
     }
 

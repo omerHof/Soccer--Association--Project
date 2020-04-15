@@ -1,10 +1,9 @@
 package LeagueSeasonsManagment;
 
-import Games.Game;
-import Teams.Statistics;
 import Teams.Team;
-import com.sun.org.glassfish.external.statistics.Statistic;
-
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class SeasonScoreBoard {
@@ -12,16 +11,22 @@ public class SeasonScoreBoard {
     private ArrayList<Team> teams;
     private ArrayList<Team> table;
     private IScorePolicy policy;
+    private LocalDateTime firstGameDate;
+    private int numOfWeeks;
 
     /**
      * constructor
      * @param teams
      * @param policy
+     * @param firstGameDate
      */
-    public SeasonScoreBoard(ArrayList<Team> teams,IScorePolicy policy) {
+    public SeasonScoreBoard(ArrayList<Team> teams,IScorePolicy policy, LocalDateTime firstGameDate, int numOfWeeks) {
         this.teams = teams;
         this.policy= policy;
         this.table = initTable();
+        this.firstGameDate = firstGameDate;
+        this.numOfWeeks = numOfWeeks;
+        updateTable();
     }
 
     /**
@@ -101,6 +106,53 @@ public class SeasonScoreBoard {
                     " | goals c:"+ team.getStatistics().getGc()+" | dif: "+ team.getStatistics().getDif());
             i++;
         }
+    }
+
+    /**
+     *
+     */
+   public void updateTable() {
+        try {
+            Timer timer = new Timer();
+            LocalDateTime timeToUpdate;
+            timeToUpdate = firstGameDate.plus(2, ChronoUnit.HOURS);
+            update dayToGame = new update(this, timer,numOfWeeks);
+            LocalDateTime from = LocalDateTime.now();
+            Duration duration = Duration.between(from, timeToUpdate);
+            timer.scheduleAtFixedRate(dayToGame, duration.getSeconds(), 604800000);
+
+        }catch (Exception e){
+
+        }
+   }
+}
+/**
+ * this class represent the time to update the score board
+ */
+class update extends TimerTask{
+
+    SeasonScoreBoard scoreBoard;
+    Timer timer;
+    int numberOfWeeks;
+    int counter;
+
+    public update(SeasonScoreBoard scoreBoard, Timer timer, int numberOfWeeks) {
+        this.scoreBoard = scoreBoard;
+        this.timer=timer;
+        this.numberOfWeeks = numberOfWeeks;
+        this.counter=0;
+    }
+
+    @Override
+    public void run() {
+        if(numberOfWeeks>counter) {
+            scoreBoard.sortByValue();
+            counter++;
+        }
+        else{
+            timer.cancel();
+        }
+
     }
 }
 
