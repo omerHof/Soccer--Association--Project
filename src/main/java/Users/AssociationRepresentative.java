@@ -253,4 +253,11 @@ public class AssociationRepresentative extends User implements Observer {
     public void update(Observable o, Object arg) {
 
     }
+
+
+    public void followThisGame(Game game){
+        game.addObserver(this);
+        myGames.add(game);
+    }
+
 }

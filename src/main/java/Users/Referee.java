@@ -78,7 +78,6 @@ public class Referee extends User implements Observer {
 
     public void followThisGame(Game game){
         game.addObserver(this);
-        //followedPages.put(page.getName(),page);
         myGames.add(game);
     }
 

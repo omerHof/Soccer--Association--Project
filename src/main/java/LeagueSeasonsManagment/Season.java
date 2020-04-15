@@ -9,6 +9,7 @@ import Users.MainReferee;
 import Users.Referee;
 import Users.User;
 
+import java.sql.Ref;
 import java.util.*;
 
 public class Season {
@@ -46,19 +47,17 @@ public class Season {
 
 
     /**
-     * assign referees or association representatives to all games
-     * @param amount - how many referees to assign for each game.
+     * assign referees and association representatives to all games
+     * @param amount - how many standard referees to assign for each game.
      */
     private void assignUsersToGames(int amount) {
 
         if (allReferees != null && allRepresentatives != null) {
 
-            ArrayList<Game> currMahzorGames = new ArrayList<>();
+            for (int mahzor : allGames.keySet()) { //every week.
+                ArrayList<Game> currMahzorGames = allGames.get(mahzor); //gets current mahzor's games.
 
-            for (int mahzor : allGames.keySet()) { //every weak.
-                currMahzorGames = allGames.get(mahzor); //gets current mahzor's games.
-
-                //List<AssociationRepresentative> copyAsso = new LinkedList<>(allReps); // WORK ????????? copy.!! doesn't change originalll
+                List<User> mahzorReferees = new LinkedList<>(); //to check constraints and doubles.
                 Referee ref;
 
                 //ArrayList<Referee> copyReferees = new ArrayList<>();
@@ -66,42 +65,36 @@ public class Season {
 
                 for (Game game : currMahzorGames) {
 
-                    List<Referee> gameReferees = new LinkedList<>(); //to add current random referees to.
-
                     for (int i = 0; i < amount; i++) {
 
-                        ref = getRandomReferee(allReferees);
-                        gameReferees.add(ref); //maybe not wor. doresss.
-                        /////// gameReferees.add(new Referee(ref.getUserName(), ref.getPassword(), ref.getUserFullName(), ref.getUserEmail(), ref.getQualification())); //assign the random referee ((copy)) to the game.
-                        ref.addGame(game); // and the opposite...
+                        ref = getRandomReferee();
+
+                        if (!mahzorReferees.contains(ref)){ //doesn't contain this referee already
+                            ref.followThisGame(game); //adds both ways.
+                            mahzorReferees.add(ref);
+                        }
+
+                        else { //try finding another referee
+                            i--;
+                            continue;
+                        }
                     }
-                    AssociationRepresentative asso = getRandomAsso(allRepresentatives);
-                    game.setAssociationRepresentative(asso); //assign asso to the game
-                    asso.setMyGame(game); //adds the game to asso' list og games.
+
+                    AssociationRepresentative asso = getRandomAsso();
+                    while (mahzorReferees.contains(asso)) { //until gets a new one.
+                        asso = getRandomAsso();
+                    }
+                    asso.followThisGame(game); //adds both ways.
+                    mahzorReferees.add(asso);
 
                     MainReferee mainReferee = (MainReferee) db.getUserType("MainReferee");
-                    gameReferees.add(mainReferee); //adds 1 main referee to list of game also.
-                    mainReferee.addGame(game); //and opposite....
-
-                    game.setGameReferees(gameReferees); //adds the referees' list to the current game.
-                }
-/*
-                else if (allReferees != null){ //assign only referees.  //// even possible ???????
-                    for (int i=0; i < amount; i++){
-
-                        ref = (Referee)getRandomReferee(copyReferees);
-                        gameReferees.add(ref); //maybe not wor. doresss.
-                        /////// gameReferees.add(new Referee(ref.getUserName(), ref.getPassword(), ref.getUserFullName(), ref.getUserEmail(), ref.getQualification())); //assign the random referee ((copy)) to the game.
-                        ref.addGame(game); // and the opposite...
+                    while (mahzorReferees.contains(mainReferee)) { //until gets a new one.
+                        mainReferee = (MainReferee) db.getUserType("MainReferee");
                     }
-                    game.setGameReferees(gameReferees); //adds the referees' list to the current game.
-                }
-                else if (allReps != null) { //assign only reps. //// even possible ???????
+                    mainReferee.followThisGame(game); //adds both ways.
+                    mahzorReferees.add(mainReferee);
 
-                    AssociationRepresentative asso = (AssociationRepresentative)getRandomAsso(allReps);
-                    game.setAssociationRepresentative(asso); //assign asso to the game
-                    asso.setMyGame(game); //adds the game to asso' list og games.
-                }*/
+                }
             }
         }
         else //no option.
@@ -110,28 +103,26 @@ public class Season {
 
     /**
      * this function returns a random referee.
-     * @param refereeList - a copy of the Referees' list of the season.
      * @return Referee - to assign for a game.
      */
-    private Referee getRandomReferee(List<Referee> refereeList) {
+    private Referee getRandomReferee() {
 
         Random random = new Random();
-        int rand = random.nextInt(refereeList.size()+1);
+        int rand = random.nextInt(allReferees.size()+1);
 
-        return refereeList.get(rand);
+        return allReferees.get(rand);
      }
 
     /**
      * this function returns a random AssociationRepresentative.
-     * @param assoList - a copy of the AssociationRepresentative' list of the season.
      * @return AssociationRepresentative - to assign for a game.
      */
-    private AssociationRepresentative getRandomAsso(List<AssociationRepresentative> assoList) {
+    private AssociationRepresentative getRandomAsso() {
 
         Random random = new Random();
-        int rand = random.nextInt(assoList.size()+1);
+        int rand = random.nextInt(allRepresentatives.size()+1);
 
-        return assoList.get(rand);
+        return allRepresentatives.get(rand);
     }
 
     //getters
