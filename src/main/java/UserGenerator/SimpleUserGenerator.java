@@ -14,3 +14,4 @@ public class SimpleUserGenerator implements IUserGenerator {
         return newFan;
     }
 }
+

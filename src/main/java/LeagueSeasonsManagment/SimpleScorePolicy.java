@@ -8,9 +8,11 @@ public class SimpleScorePolicy implements IScorePolicy {
     private int win;
     private int draw;
     private int lost;
+    private boolean goalDiff;
 
     public SimpleScorePolicy() {
         name = "SimpleScorePolicy";
+        goalDiff= true;
     }
 
     @Override
@@ -21,13 +23,8 @@ public class SimpleScorePolicy implements IScorePolicy {
 
     }
 
-    @Override
-    public ArrayList<String> priority(String points, String moreGoals, String goalDiff){
-        ArrayList<String> results= new ArrayList<>();
-        results.add(points);
-        results.add(goalDiff);
-        results.add(moreGoals);
-        return results;
+    public boolean isGoalDiff() {
+        return goalDiff;
     }
 
     public int getWin() {

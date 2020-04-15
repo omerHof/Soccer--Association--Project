@@ -1,6 +1,7 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
+import SystemLogic.MainSystem;
 import Teams.Team;
 import Users.AssociationRepresentative;
 import Users.Referee;
@@ -14,14 +15,29 @@ public class Season {
     private int year;
     private HashMap<Integer, ArrayList<Game>> allGames;
     private ArrayList<Team> allTeams;
+    private ArrayList<Referee> allReferees;
+    private ArrayList<AssociationRepresentative> allRepresentatives;
     private IGameInlayPolicy iGameInlayPolicy;
     private IScorePolicy iScorePolicy;
-    private List<Referee> allReferees;
-    private List<AssociationRepresentative> allRepresentatives;
     private SeasonScoreBoard seasonScoreBoard;
 
-    public Season(int year) {
+    public Season(int year, ArrayList<Team> allTeams, ArrayList<Referee> allReferees,
+                  ArrayList<AssociationRepresentative> allReps, String scorePolicy, String gamePolicy) {
+
         this.year = year;
+        this.allReferees = allReferees;
+        this.allTeams = allTeams;
+        this.allRepresentatives = allReps;
+
+        setiGameInlayPolicy(gamePolicy);
+        setIScorePolicy(scorePolicy);
+        this.seasonScoreBoard= new SeasonScoreBoard(allTeams,iScorePolicy);
+
+        IGameInlayPolicy iGameInlayPolicy = getiGameInlayPolicy();
+
+        //הפעלת שיבוץ משחקים- מקבל את הקבוצות אז חייב להיקרא אחרי שיבוץ הקבוצות לעונה!!
+        iGameInlayPolicy.gameInlayPolicyAlgoImplementation();
+
     }
 
     //getters
@@ -48,7 +64,7 @@ public class Season {
         this.allTeams = allTeams;
     }
 
-    public void setAllRepresentatives(List<AssociationRepresentative> allRepresentatives) {
+    public void setAllRepresentatives(ArrayList<AssociationRepresentative> allRepresentatives) {
         this.allRepresentatives = allRepresentatives;
     }
 
@@ -80,7 +96,7 @@ public class Season {
         }
     }
 
-    public void setAllReferees(List<Referee> allReferees) {
+    public void setAllReferees(ArrayList<Referee> allReferees) {
         this.allReferees = allReferees;
     }
 
@@ -108,5 +124,13 @@ public class Season {
             default:
                 this.iScorePolicy = new SimpleScorePolicy();
         }
+    }
+
+    public SeasonScoreBoard getSeasonScoreBoard() {
+        return seasonScoreBoard;
+    }
+
+    public void setSeasonScoreBoard(SeasonScoreBoard seasonScoreBoard) {
+        this.seasonScoreBoard = seasonScoreBoard;
     }
 }

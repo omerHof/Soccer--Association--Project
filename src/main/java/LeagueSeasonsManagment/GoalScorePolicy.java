@@ -2,15 +2,18 @@ package LeagueSeasonsManagment;
 
 import java.util.ArrayList;
 
-public class WinScorePolicy implements IScorePolicy {
+public class GoalScorePolicy implements IScorePolicy {
 
     private int win;
     private int draw;
     private int lost;
     String name;
+    private boolean goalDiff;
 
-    public WinScorePolicy() {
-        name="WinScorePolicy";
+
+    public GoalScorePolicy() {
+        name="GoalScorePolicy";
+        goalDiff= false;
     }
 
     @Override
@@ -21,13 +24,8 @@ public class WinScorePolicy implements IScorePolicy {
 
 
     }
-    @Override
-    public ArrayList<String> priority(String points,String moreGoals, String goalDiff){
-        ArrayList<String> results= new ArrayList<>();
-        results.add(points);
-        results.add(goalDiff);
-        results.add(moreGoals);
-        return results;
+    public boolean isGoalDiff() {
+        return goalDiff;
     }
 
     public int getWin() {

@@ -8,13 +8,13 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class WinScorePolicyTest {
+public class GoalScorePolicyTest {
 
     IScorePolicy policy;
     @Before
     public void setUp() throws Exception {
 
-        policy= new WinScorePolicy();
+        policy= new GoalScorePolicy();
     }
 
     @After
@@ -37,11 +37,6 @@ public class WinScorePolicyTest {
     @Test
     public void priority() {
         try {
-            policy.scorePolicyAlgoImplementation();
-            ArrayList<String> priority = policy.priority("points", "moreGoals","goalDiff");
-            assertEquals("same priority", "points",priority.get(0));
-            assertEquals("same priority", "goalDiff",priority.get(1));
-            assertEquals("same priority", "moreGoals",priority.get(2));
 
         }catch (Exception e) {
             System.out.println("error");
@@ -81,7 +76,7 @@ public class WinScorePolicyTest {
     @Test
     public void getName() {
         try {
-            assertEquals("same name", "WinScorePolicy", policy.getName());
+            assertEquals("same name", "GoalScorePolicy", policy.getName());
         } catch (Exception e) {
             System.out.println("error");
         }

@@ -4,16 +4,16 @@ import Games.Game;
 import Users.*;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Observable;
 
-public class Team extends Observable {
+public class Team extends Observable implements Comparable {
 
     public enum teamStatus {
         active, close , PermanentlyClosed
     }
 
     private teamStatus status;
+    private Statistics statistics;
     private String name;
     private ArrayList<Player>players;
     private ArrayList<Coach>coaches;
@@ -32,6 +32,14 @@ public class Team extends Observable {
         return players;
     }
 
+
+    public Statistics getStatistics() {
+        return statistics;
+    }
+
+    public void setStatistics(Statistics statistics) {
+        this.statistics = statistics;
+    }
 
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
@@ -104,5 +112,11 @@ public class Team extends Observable {
 
     public teamStatus getStatus() {
         return status;
+    }
+
+    @Override
+    public int compareTo(Object obj) {
+        Team other=(Team)obj;
+        return this.getStatistics().compareTo(other.getStatistics());
     }
 }
