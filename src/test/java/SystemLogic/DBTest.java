@@ -4,8 +4,12 @@ import LeagueSeasonsManagment.League;
 import LeagueSeasonsManagment.Season;
 import Teams.Team;
 import Users.Administrator;
+import Users.AssociationRepresentative;
+import Users.Referee;
 import Users.User;
 import org.junit.*;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -157,7 +161,10 @@ public class DBTest {
     @Test
     public void addSeason() {
         try {
-            Season goodSeason = new Season(2020);
+            ArrayList<Referee>referees= new ArrayList<>();
+            ArrayList<AssociationRepresentative>representatives= new ArrayList<>();
+            ArrayList<Team>teams= new ArrayList<>();
+            Season goodSeason = new Season(2020,teams,referees,representatives,"RegularScorePolicy","TwoRoundsGamePolicy");
 
             assertTrue("test failed", db.addSeason("premier league",goodSeason));
             assertFalse("test failed", db.addSeason("a",goodSeason));

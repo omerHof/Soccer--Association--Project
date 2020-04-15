@@ -3,27 +3,34 @@ package LeagueSeasonsManagment;
 import Games.Game;
 import SystemLogic.DB;
 import Teams.Team;
+
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
  * this class get list of teams and create a scheduling for a season
  */
-public class SimpleGamePolicy implements IGameInlayPolicy {
+public class TwoRoundsGamePolicy implements IGameInlayPolicy {
 
     private String name;
     private ArrayList<Team> ListTeam; // the initial list of teams
     private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
+    LocalDateTime timeOfGame;
+
 
     /**
      * constructor
      *
      * @param teams
      */
-    public SimpleGamePolicy(ArrayList<Team> teams) {
-        name = "SimpleGamePolicy";
+    public TwoRoundsGamePolicy(ArrayList<Team> teams, int year) {
+        name = "TwoRoundsGamePolicy";
         this.ListTeam = teams;
         this.listOfGames = new HashMap<>();
+        timeOfGame = LocalDateTime.of(year, Month.JANUARY,1,19,0,0);
     }
 
     @Override
@@ -133,7 +140,7 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
                 homeTeam = ListTeam.get(0);
                 awayTeam = teams.get(teamIdx);
             }
-            Game game = new Game(homeTeam, awayTeam);
+            Game game = new Game(homeTeam, awayTeam, timeOfGame);
             games.add(game);
 
             for (int idx = 1; idx < ListTeam.size() / 2; idx++) {
@@ -146,10 +153,11 @@ public class SimpleGamePolicy implements IGameInlayPolicy {
                     homeTeam = teams.get(secondTeam);
                     awayTeam = teams.get(firstTeam);
                 }
-                game = new Game(homeTeam, awayTeam);
+                game = new Game(homeTeam, awayTeam, timeOfGame);
                 games.add(game);
             }
             listOfGames.put(day + 1, games);
+            timeOfGame=timeOfGame.plus(1, ChronoUnit.WEEKS);
         }
 
     }

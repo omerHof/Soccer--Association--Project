@@ -1,4 +1,4 @@
-import LeagueSeasonsManagment.SimpleGamePolicyTest;
+import LeagueSeasonsManagment.TwoRoundsGamePolicyTest;
 import MainApp.AppTest;
 import SystemLogic.DBTest;
 import SystemLogic.MainSystemTest;
@@ -14,7 +14,7 @@ public class TestRunner {
     public static void main(String[] args) {
 
         /* initialise Results*/
-        Result simpleGamePolicy_result = JUnitCore.runClasses(SimpleGamePolicyTest.class);
+        Result simpleGamePolicy_result = JUnitCore.runClasses(TwoRoundsGamePolicyTest.class);
         Result App_result = JUnitCore.runClasses(AppTest.class);
         Result DB_result = JUnitCore.runClasses(DBTest.class);
         Result MainSystem_result = JUnitCore.runClasses(MainSystemTest.class);

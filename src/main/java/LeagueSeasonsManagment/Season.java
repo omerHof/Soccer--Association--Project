@@ -1,7 +1,6 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
-import SystemLogic.MainSystem;
 import Teams.Team;
 import Users.AssociationRepresentative;
 import Users.Referee;
@@ -85,14 +84,14 @@ public class Season {
 
     public void setiGameInlayPolicy(String iGameInlayPolicy) {
         switch(iGameInlayPolicy) {
-            case "SimpleGamePolicy":
-                this.iGameInlayPolicy = new SimpleGamePolicy(this.allTeams);
+            case "TwoRoundsGamePolicy":
+                this.iGameInlayPolicy = new TwoRoundsGamePolicy(this.allTeams,getYear());
                 break;
             case "OtherGamePolicy":
                 // code block
                 break;
             default:
-                this.iGameInlayPolicy = new SimpleGamePolicy(this.allTeams);
+                this.iGameInlayPolicy = new TwoRoundsGamePolicy(this.allTeams,getYear());
         }
     }
 
@@ -115,14 +114,14 @@ public class Season {
     public void setIScorePolicy(String iScorePolicy) {
 
         switch(iScorePolicy) {
-            case "SimpleScorePolicy":
-                this.iScorePolicy = new SimpleScorePolicy();
+            case "RegularScorePolicy":
+                this.iScorePolicy = new RegularScorePolicy();
                 break;
             case "OtherScorePolicy":
                 // code block
                 break;
             default:
-                this.iScorePolicy = new SimpleScorePolicy();
+                this.iScorePolicy = new RegularScorePolicy();
         }
     }
 

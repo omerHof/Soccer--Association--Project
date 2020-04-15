@@ -89,7 +89,7 @@ public class AssociationRepresentativeTest {
         dbTest.setUser(a1);
         //dbTest.setTeam(new Team("Maccabi Tel Aviv"));
 
-        assoTest.addSeasonToLeague("Alufut", 2020, "SimpleScorePolicy", "SimpleGamePolicy", teams, referees, repress);
+        assoTest.addSeasonToLeague("Alufut", 2020, "RegularScorePolicy", "TwoRoundsGamePolicy", teams, referees, repress);
         List<Season> allSeasons = dbTest.getLeague("Alufut").getAllSeasons();
         Season newS = allSeasons.get(0); //gets the season object that was added.
 
@@ -97,8 +97,8 @@ public class AssociationRepresentativeTest {
         Referee testReferee = newS.getAllReferees().get(0);
         assertTrue(testReferee.getQualification().equals("bla bla"));
 
-        assertTrue(newS.getiScorePolicy().getName().equals("SimpleScorePolicy"));   //  todo: check thissss /v/v/d/f//f//f/
-        assertFalse(newS.getiGameInlayPolicy().getName().equals("SimpleGamePolicy")); // suppose to be notSimple   todo: check thissss
+        assertTrue(newS.getiScorePolicy().getName().equals("RegularScorePolicy"));   //  todo: check thissss /v/v/d/f//f//f/
+        assertFalse(newS.getiGameInlayPolicy().getName().equals("TwoRoundsGamePolicy")); // suppose to be notSimple   todo: check thissss
 
         List<Referee> allRef = newS.getAllReferees();
         assertTrue(allRef.get(0).userFullName.equals("ramzi ramzen"));

@@ -281,6 +281,9 @@ public class DB {
             if (type.equals("Player") && pair.getValue() instanceof Player) {
                 return (User) pair.getValue();
             }
+            if (type.equals("MainReferee") && pair.getValue() instanceof MainReferee) {
+                return (User) pair.getValue();
+            }
             if (type.equals("Referee") && pair.getValue() instanceof Referee) {
                 return (User) pair.getValue();
             }
