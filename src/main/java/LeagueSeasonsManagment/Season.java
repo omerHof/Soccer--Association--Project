@@ -35,13 +35,14 @@ public class Season {
 
         setiGameInlayPolicy(gamePolicy);
         setIScorePolicy(scorePolicy);
-        this.seasonScoreBoard= new SeasonScoreBoard(allTeams,iScorePolicy);
 
-        IGameInlayPolicy iGameInlayPolicy = getiGameInlayPolicy();
+        //IGameInlayPolicy iGameInlayPolicy = getiGameInlayPolicy();
 
         this.allGames = iGameInlayPolicy.gameInlayPolicyAlgoImplementation(); //adds list of games to each mahzor.
 
         assignUsersToGames(3); //assign 4 referees for each game, and 1 association rep.
+        this.seasonScoreBoard= new SeasonScoreBoard(allTeams,iScorePolicy,allGames.get(1).get(0).getTimeOfGame(),allGames.size());
+
 
     }
 
@@ -108,7 +109,7 @@ public class Season {
     private Referee getRandomReferee() {
 
         Random random = new Random();
-        int rand = random.nextInt(allReferees.size()+1);
+        int rand = random.nextInt(allReferees.size());
 
         return allReferees.get(rand);
      }
@@ -120,7 +121,7 @@ public class Season {
     private AssociationRepresentative getRandomAsso() {
 
         Random random = new Random();
-        int rand = random.nextInt(allRepresentatives.size()+1);
+        int rand = random.nextInt(allRepresentatives.size());
 
         return allRepresentatives.get(rand);
     }

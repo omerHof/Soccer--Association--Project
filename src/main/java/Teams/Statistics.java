@@ -41,6 +41,7 @@ public class Statistics implements Comparable {
 
     public void setWins() {
         this.wins++;
+        this.setScore(policy.getWin());
     }
 
     public int getLoses() {
@@ -49,6 +50,7 @@ public class Statistics implements Comparable {
 
     public void setLoses() {
         this.loses++;
+        this.setScore(policy.getLost());
     }
 
     public int getGoals() {
@@ -65,6 +67,8 @@ public class Statistics implements Comparable {
 
     public void setTie() {
         this.tie++;
+        this.setScore(policy.getDraw());
+
     }
 
     public int getGc() {

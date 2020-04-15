@@ -42,4 +42,9 @@ public class Event {
     public void setPlayerName(String  playerName) {
         this.playerName = playerName;
     }
+
+    public String evenToString(){
+        String event=eventTime+type.name()+playerName;
+        return event;
+    }
 }
