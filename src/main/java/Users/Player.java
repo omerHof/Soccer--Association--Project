@@ -2,19 +2,21 @@ package Users;
 
 import SystemLogic.DB;
 import SystemLogic.MainSystem;
+import Teams.Assent;
 import Teams.Team;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Player extends User {
+public class Player extends User implements Assent {
 
     private int age;
     private String courtRole;
     private PlayerPersonalPage page;
     private int salary;
     private DB DB1;
-
+    private double worth;
 
 
     public Player(String userName, String password, String fullName, String userEmail ,Date birthDate, String courtRole) {
@@ -89,6 +91,7 @@ public class Player extends User {
     public void setCurrentTeam(Team team){
         if(page!=null) {
             page.setCurrentTeam(team);
+            page.setOneTeamToHistory(team.getName());
             DB1.setUser(this);
         }
     }
@@ -133,6 +136,30 @@ public class Player extends User {
     public PlayerPersonalPage getPage() {
         return page;
     }
+
+    public void setTeamHistory(ArrayList<String> teamHistoryList){
+        if(page!=null){
+             page.setTeamHistory(teamHistoryList);
+             DB1.setUser(this);
+        }
+    }
+
+    @Override
+    public double getWorth() {
+        return worth;
+    }
+
+    public void setWorth(double worth) {
+        this.worth = worth;
+    }
+
+    public ArrayList<Team> getTeamHistory() {
+        if(page!=null){
+            return page.getTeamHistory();
+        }
+        return null;
+    }
+
 
 
 

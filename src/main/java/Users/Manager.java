@@ -1,6 +1,9 @@
 package Users;
 
-public class Manager extends User {
+import Teams.Assent;
+
+public class Manager extends User implements Assent {
+    private double worth;
 
     public Manager(String userName, String password, String fullName, String userEmail) {
         this.userName = userName;
@@ -9,4 +12,11 @@ public class Manager extends User {
         this.userEmail = userEmail;
     }
 
+    public double getWorth() {
+        return worth;
+    }
+
+    public void setWorth(double worth) {
+        this.worth = worth;
+    }
 }

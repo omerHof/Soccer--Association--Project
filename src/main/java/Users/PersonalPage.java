@@ -1,5 +1,6 @@
 package Users;
 
+import SystemLogic.DB;
 import Teams.Team;
 
 import java.util.*;
@@ -8,7 +9,7 @@ public abstract class PersonalPage extends Observable {
     protected String name;
     protected Team currentTeam;
     protected int age;
-    protected ArrayList<String> teamHistory;
+    protected ArrayList<Team> teamHistory;
 
 
 
@@ -39,17 +40,42 @@ public abstract class PersonalPage extends Observable {
         this.age = age;
     }
 
-    public ArrayList<String> getTeamHistory() {
+    public ArrayList<Team> getTeamHistory() {
         return teamHistory;
     }
 
-    public void setTeamHistory(ArrayList<String> teamHistory) {
-        this.teamHistory = teamHistory;
+    public void setTeamHistory(ArrayList<String>teamHistoryList) {
+
+        DB db = DB.getInstance();
+        for(String team: teamHistoryList){
+            if(db.getTeam(team)!=null){
+                Team t = db.getTeam(team);
+                teamHistory.add(t);
+            }
+            else{
+                Team t = new Team(team);
+                db.addTeam(t);
+                teamHistory.add(t);
+            }
+        }
     }
 
+
     public void setOneTeamToHistory(String team){
-        teamHistory.add(team);
+        DB db = DB.getInstance();
+
+        Team t = db.getTeam(team);
+        if(t!=null) {
+            teamHistory.add(t);
+        }
+        else{
+            t = new Team(team);
+            db.addTeam(t);
+            teamHistory.add(t);
+        }
     }
+
+
 
 
     public static int getAge(Date dateOfBirth) {

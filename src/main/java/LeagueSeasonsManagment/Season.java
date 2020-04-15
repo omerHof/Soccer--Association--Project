@@ -4,10 +4,9 @@ import Games.Game;
 import Teams.Team;
 import Users.AssociationRepresentative;
 import Users.Referee;
+import Users.User;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Season {
 
@@ -34,9 +33,101 @@ public class Season {
 
         IGameInlayPolicy iGameInlayPolicy = getiGameInlayPolicy();
 
-        //הפעלת שיבוץ משחקים- מקבל את הקבוצות אז חייב להיקרא אחרי שיבוץ הקבוצות לעונה!!
-        iGameInlayPolicy.gameInlayPolicyAlgoImplementation();
+        this.allGames = iGameInlayPolicy.gameInlayPolicyAlgoImplementation(); //adds list of games to each mahzor.
 
+        assignUsersToGames(allReferees, null, 2); //assign 2 referees for each game
+        assignUsersToGames(null, allReps, 1); //assign 1 representative for each game.
+
+    }
+
+
+    /**
+     * assign referees or association representatives to all games
+     * @param amount - how many referees to assign for each game.
+     */
+    private void assignUsersToGames(ArrayList<Referee> allReferees, ArrayList<AssociationRepresentative> allReps, int amount) {
+
+        ArrayList<Game> currMahzorGames = new ArrayList<>();
+
+        for (int mahzor : allGames.keySet()){ //every weak.
+            currMahzorGames = allGames.get(mahzor); //gets current mahzor's games.
+
+            List<AssociationRepresentative> copyAsso = new LinkedList<>(allReps); // WORK ????????? copy.!! doesn't change originalll
+            Referee ref;
+
+            List<Referee> copyReferees = new ArrayList<>(allReferees); // WORK ????????? copy.!! doesn't change originalll
+            List<Referee> gameReferees = new LinkedList<>(); //to add current random referees to.
+
+            //ArrayList<Referee> copyReferees = new ArrayList<>();
+            //copyReferees.addAll(allReferees);
+
+            for (Game game : currMahzorGames){
+                if (allReferees != null && allReps != null) {
+                    for (int i=0; i < amount; i++){
+
+                        ref = (Referee)getRandomReferee(copyReferees);
+                        gameReferees.add(ref); //maybe not wor. doresss.
+                        /////// gameReferees.add(new Referee(ref.getUserName(), ref.getPassword(), ref.getUserFullName(), ref.getUserEmail(), ref.getQualification())); //assign the random referee ((copy)) to the game.
+                        ref.addGame(game); // and the opposite...
+                    }
+                    AssociationRepresentative asso = (AssociationRepresentative)getRandomAsso(allReps);
+                    game.setAssociationRepresentative(asso); //assign asso to the game
+                    asso.setMyGame(game); //adds the game to asso' list og games.
+
+                    game.setGameReferees(gameReferees); //adds the referees' list to the current game.
+                }
+/*
+                else if (allReferees != null){ //assign only referees.  //// even possible ???????
+                    for (int i=0; i < amount; i++){
+
+                        ref = (Referee)getRandomReferee(copyReferees);
+                        gameReferees.add(ref); //maybe not wor. doresss.
+                        /////// gameReferees.add(new Referee(ref.getUserName(), ref.getPassword(), ref.getUserFullName(), ref.getUserEmail(), ref.getQualification())); //assign the random referee ((copy)) to the game.
+                        ref.addGame(game); // and the opposite...
+                    }
+                    game.setGameReferees(gameReferees); //adds the referees' list to the current game.
+                }
+                else if (allReps != null) { //assign only reps. //// even possible ???????
+
+                    AssociationRepresentative asso = (AssociationRepresentative)getRandomAsso(allReps);
+                    game.setAssociationRepresentative(asso); //assign asso to the game
+                    asso.setMyGame(game); //adds the game to asso' list og games.
+                }*/
+
+                else //no option.
+                    System.out.println(" cannot create a new season without referees nor association.");
+
+            }
+
+        }
+
+
+    }
+
+    /**
+     * this function returns a random referee.
+     * @param copyList - a copy of the Referees' list of the season.
+     * @return Referee - to assign for a game.
+     */
+    private User getRandomReferee(List<Referee> copyList) {
+
+        Random random = new Random();
+        int rand = random.nextInt(copyList.size()+1);
+
+        return copyList.remove(rand);
+     }
+
+    /**
+     * this function returns a random AssociationRepresentative.
+     * @param copyList - a copy of the AssociationRepresentative' list of the season.
+     * @return AssociationRepresentative - to assign for a game.
+     */
+    private User getRandomAsso(List<AssociationRepresentative> copyList) {
+
+        Random random = new Random();
+        int rand = random.nextInt(copyList.size()+1);
+
+        return copyList.get(rand);
     }
 
     //getters

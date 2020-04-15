@@ -13,13 +13,14 @@ import UserGenerator.SimpleUserGenerator;
 import java.sql.Ref;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 public class AssociationRepresentative extends User {
 
     private static int numOfApprovals = 0 ;
     private DB db = DB.getInstance();
-    private ArrayList<Game> allGames;
+    private List<Game> myGames;
 
 
     public AssociationRepresentative(String userName, String password, String fullName,String userEmail) {
@@ -27,7 +28,7 @@ public class AssociationRepresentative extends User {
         this.password = password;
         this.userFullName = fullName;
         this.userEmail = userEmail;
-        allGames = new ArrayList<>();
+        myGames = new LinkedList<>();
     }
 
     public boolean approveRegistration(String fullName, String role){ //random (symbolic) function
@@ -67,7 +68,6 @@ public class AssociationRepresentative extends User {
 
         Season newSeason = new Season(year, allTeams, allReferees, allReps, scorePolicy, gamePolicy);
 
-
 /*
         //MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
 
@@ -79,10 +79,14 @@ public class AssociationRepresentative extends User {
         //הפעלת שיבוץ משחקים- מקבל את הקבוצות אז חייב להיקרא אחרי שיבוץ הקבוצות לעונה!!
         iGameInlayPolicy.gameInlayPolicyAlgoImplementation();*/
 
-        db.addSeason(leagueName, newSeason); //adds the season to DB.
-        MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
+        if (newSeason != null) {
+            db.addSeason(leagueName, newSeason); //adds the season to DB.}
+            MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
+        }
 
-    }
+        else
+            System.out.println("couldn't create a new season here.");
+        }
 
     /**
      * adds all associationRepresentative to this season - help function
@@ -237,12 +241,14 @@ public class AssociationRepresentative extends User {
      */
     private Game findActiveGame(){
 
-        for (Game game : allGames)
+        for (Game game : myGames)
             if(game.getStatus().equals(Game.gameStatus.active))
                 return game;
 
         return null; //no active game at the moment.
     }
 
-
+    public void setMyGame(Game newGame) {
+        myGames.add(newGame);
+    }
 }

@@ -4,6 +4,8 @@ import Games.Game;
 import Users.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Observable;
 
 public class Team extends Observable implements Comparable {
@@ -12,26 +14,26 @@ public class Team extends Observable implements Comparable {
         active, close , PermanentlyClosed
     }
 
+    private String name;
+    private HashMap<String, Player> players;
+    private HashMap<String, Coach> coaches;
+    private HashMap<String, Manager> managers;
+    private HashMap<String, TeamOwner> teamOwners;
+    private HashSet<Assent> assents;
+    private Stadium stadium;
+    private ArrayList<Game> gameList;
     private teamStatus status;
     private Statistics statistics;
-    private String name;
-    private ArrayList<Player>players;
-    private ArrayList<Coach>coaches;
-    private Stadium stadium;
-    private ArrayList<TeamOwner> teamOwners;
-    private Manager manager;
-    private ArrayList<Game> gameList;
 
-    public Team(String name, ArrayList<TeamOwner> teamOwners) {
+    public Team(String name, HashMap<String, TeamOwner> teamOwners) {
         this.name = name;
         this.teamOwners = teamOwners;
         this.status = teamStatus.active;
     }
 
-    public ArrayList<Player> getPlayers() {
-        return players;
+    public Team(String name) {
+        this.name = name;
     }
-
 
     public Statistics getStatistics() {
         return statistics;
@@ -41,31 +43,92 @@ public class Team extends Observable implements Comparable {
         this.statistics = statistics;
     }
 
-    public void setPlayers(ArrayList<Player> players) {
+    public boolean containsAssent(Assent assent){
+        return assents.contains(assent);
+    }
+
+    public void addAssent(Assent assent){
+        if(assent instanceof Player){
+            addPlayer((Player)assent);
+        }
+        if(assent instanceof Coach){
+            addCoach((Coach)assent);
+        }
+        if(assent instanceof Manager){
+            addManager((Manager) assent);
+        }
+        if(assent instanceof TeamOwner){
+            addTeamOwner((TeamOwner) assent);
+        }
+        if (assent instanceof Stadium){
+            setStadium((Stadium) assent);
+        }
+        this.assents.add(assent);
+    }
+
+    public void addPlayer(Player player) {
+        players.put(player.getUserName(), player);
+        setChanged();
+        notifyObservers(player);
+    }
+
+    public void addCoach(Coach coach) {
+        coaches.put(coach.getUserName(), coach);
+        setChanged();
+        notifyObservers(coach);
+    }
+    public void addManager(Manager manager) {
+        managers.put(manager.getUserName(), manager);
+        setChanged();
+        notifyObservers(manager);
+    }
+
+    public void addTeamOwner(TeamOwner teamOwner) {
+        teamOwners.put(teamOwner.getUserName(), teamOwner);
+        setChanged();
+        notifyObservers(teamOwner);
+    }
+
+    public HashMap<String, Coach> getCoaches()
+    {
+        return coaches;
+    }
+
+    public HashMap<String, Player> getPlayers()
+    {
+        return players;
+    }
+
+    public HashMap<String, Manager> getManagers() {
+        return managers;
+    }
+
+    public HashMap<String, TeamOwner> getTeamOwners() {
+        return teamOwners;
+    }
+
+    public void setPlayers(HashMap<String, Player> players) {
         this.players = players;
         setChanged();
         notifyObservers(players);
     }
-    public void setPlayer(Player player) {
-        players.add(player);
-        setChanged();
-        notifyObservers(player);
-    }
-    public void setCoach(Coach Coach) {
-        coaches.add(Coach);
-        setChanged();
-        notifyObservers(Coach);
-    }
 
-    public ArrayList<Coach> getCoaches() {
-        return coaches;
-    }
-
-    public void setCoaches(ArrayList<Coach> coaches) {
+    public void setCoaches(HashMap<String, Coach> coaches) {
         this.coaches = coaches;
         setChanged();
         notifyObservers(coaches);
+    }
 
+    public void setManagers(HashMap<String, Manager> managers) {
+        this.managers = managers;
+        setChanged();
+        notifyObservers(managers);
+    }
+
+    public void setTeamOwners(HashMap<String, TeamOwner> teamOwners) {
+        this.teamOwners = teamOwners;
+        setChanged();
+        notifyObservers(teamOwners);
     }
 
     public Stadium getStadium() {
@@ -79,15 +142,9 @@ public class Team extends Observable implements Comparable {
     }
 
 
-
-    public Manager getManager() {
-        return manager;
-    }
-
-    public void setManager(Manager manager) {
-        this.manager = manager;
-        setChanged();
-        //notifyObservers(owner);
+    public boolean containsPlayer(String player_name){
+        //return players.
+        return true;
     }
 
     public ArrayList<Game> getGameList() {
@@ -96,10 +153,6 @@ public class Team extends Observable implements Comparable {
 
     public void setGameList(ArrayList<Game> gameList) {
         this.gameList = gameList;
-    }
-
-    public Team(String name) {
-        this.name = name;
     }
 
     public String getName() {
