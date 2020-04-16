@@ -26,6 +26,7 @@ public class GameTest {
     Referee referee3;
     MainReferee mainReferee;
 
+
     ArrayList<AssociationRepresentative> representatives;
     AssociationRepresentative representative;
     Team a= new Team("barca");

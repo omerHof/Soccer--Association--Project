@@ -1,11 +1,10 @@
 package SystemLogic;
 
+import Games.Game;
 import LeagueSeasonsManagment.*;
+import Teams.Statistics;
 import Teams.Team;
-import Users.Administrator;
-import Users.AssociationRepresentative;
-import Users.Referee;
-import Users.User;
+import Users.*;
 import org.junit.*;
 
 import java.util.ArrayList;
@@ -18,25 +17,62 @@ public class DBTest {
     private ArrayList<Season> seasons;
     private Season season;
     private ArrayList<Team> teams;
-    private Team team;
     private ArrayList<Referee>referees;
     private ArrayList<AssociationRepresentative>representatives;
     private IGameInlayPolicy gameInlayPolicy;
     private IScorePolicy scorePolicy;
     DB db=DB.getInstance();
 
+    private Referee referee1;
+    private Referee referee2;
+    private Referee referee3;
+    private MainReferee mainReferee;
+
+    private AssociationRepresentative representative;
+    private Team a= new Team("barca");
+    private Team b= new Team("real");
+
+
+    private Statistics statisticsA;
+    private Statistics statisticsB;
+
+
+    IScorePolicy policy;
+
+    Game game;
+
     @Before
     public void setUp() throws Exception {
-        team= new Team("Barca");
         user= new Administrator("The King","1234","Oren Hason","OrenHason@gmail.com");
         league= new League("premier league",10);
         seasons = new ArrayList<>();
         teams = new ArrayList<>();
-        teams.add(team);
         referees= new ArrayList<>();
         representatives = new ArrayList<>();
         gameInlayPolicy = new TwoRoundsGamePolicy(teams,2020);
         scorePolicy = new RegularScorePolicy();
+
+        policy= new RegularScorePolicy();
+
+        referee1 = new Referee("a","a","a","a","a");
+        referees.add(referee1);
+        referee2 = new Referee("a","a","a","a","a");
+        referees.add(referee2);
+        referee3 = new Referee("a","a","a","a","a");
+        referees.add(referee3);
+        mainReferee = new MainReferee("a","a","a","a","a");
+        DB.getInstance().setUser(mainReferee);
+        representative = new AssociationRepresentative("a","a","a","a");
+        representatives.add(representative);
+
+        statisticsA= new Statistics(policy);
+        a.setStatistics(statisticsA);
+        teams.add(a);
+        statisticsB= new Statistics(policy);
+        b.setStatistics(statisticsB);
+        teams.add(b);
+
+
 
         season = new Season(2020,teams,referees,representatives,scorePolicy.getName(),gameInlayPolicy.getName());
         seasons.add(season);
@@ -44,7 +80,11 @@ public class DBTest {
 
         db.setUser(user);
         db.setLeague(league);
-        db.setTeam(team);
+        db.setTeam(a);
+        db.setTeam(b);
+
+        a.setBudget(100);
+        System.out.println(db.getTeam("barca").getBudget());
     }
 
     @After
@@ -209,7 +249,7 @@ public class DBTest {
     @Test
     public void getTeam() {
         try {
-            assertEquals("test failed",team.getName(),db.getTeam("Barca").getName());
+            assertEquals("test failed",a.getName(),db.getTeam("Barca").getName());
             assertEquals("test failed",null,db.getTeam("a"));
         }catch (Exception e){
             java.lang.System.out.println("test failed");
@@ -219,7 +259,7 @@ public class DBTest {
     @Test
     public void teamExist() {
         try {
-            assertTrue("test failed",db.teamExist("Barca"));
+            assertTrue("test failed",db.teamExist("barca"));
             assertFalse("test failed",db.teamExist("a"));
         }catch (Exception e){
             java.lang.System.out.println("test failed");
@@ -258,8 +298,8 @@ public class DBTest {
     @Test
     public void removeTeam() {
         try {
-            assertTrue("test failed",db.removeTeam("Barca"));
-            assertFalse("test failed",db.removeTeam("Barca"));
+            assertTrue("test failed",db.removeTeam("barca"));
+            assertFalse("test failed",db.removeTeam("barca"));
 
         }catch (Exception e){
             java.lang.System.out.println("test failed");
