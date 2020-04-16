@@ -9,8 +9,10 @@ import Users.MainReferee;
 import Users.Referee;
 import Users.User;
 
+import java.awt.*;
 import java.sql.Ref;
 import java.util.*;
+import java.util.List;
 
 public class Season {
 
@@ -43,9 +45,7 @@ public class Season {
         assignUsersToGames(3); //assign 3 referees for each game, 1 main referee, and 1 association rep.
         this.seasonScoreBoard = new SeasonScoreBoard(allTeams,iScorePolicy,allGames.get(1).get(0).getTimeOfGame(),allGames.size());
 
-
     }
-
 
     /**
      * assign referees and association representatives to all games
@@ -90,6 +90,13 @@ public class Season {
                     }
                     mainReferee.followThisGame(game); //adds both ways.
                     mahzorRefereesAndAsso.add(mainReferee);
+
+                    //////////////////////////////////// set teams' games: ////////////////
+                    Team away = game.getAwayTeam();
+                    Team home = game.getHomeTeam();
+
+                    away.addGame(game);
+                    home.addGame(game);
                 }
             }
         }

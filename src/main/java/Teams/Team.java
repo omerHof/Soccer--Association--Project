@@ -262,6 +262,11 @@ public class Team implements Comparable {
         }
     }
 
+    public void addGame (Game game){
+        if (game != null)
+            gameList.add(game);
+    }
+
     public teamStatus getStatus() {
         return status;
     }
