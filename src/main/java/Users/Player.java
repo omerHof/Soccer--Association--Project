@@ -6,6 +6,7 @@ import Teams.Assent;
 import Teams.Team;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -26,11 +27,10 @@ public class Player extends User implements Assent {
         this.userFullName = fullName;
         this.userEmail = userEmail;
         this.courtRole = courtRole;
-        age = getAge(birthDate);
+        age = getCurrentAge(birthDate);
         page =null;
         salary = 0;
         DB1=DB.getInstance();
-
     }
 
 
@@ -45,11 +45,13 @@ public class Player extends User implements Assent {
     public int getAge() {
         return age;
     }
-
+/*
     public void setAge(int age) {
         this.age = age;
 
     }
+
+ */
 
 
     public void setCourtRole(String courtRole) {
@@ -164,32 +166,10 @@ public class Player extends User implements Assent {
 
 
 
-    public static int getAge(LocalDate  dateOfBirth) {
-
-        Calendar today = Calendar.getInstance();
-        Calendar birthDate = Calendar.getInstance();
-
-        int age = 0;
-
-        //birthDate.setTime(dateOfBirth);
-        if (birthDate.after(today)) {
-            throw new IllegalArgumentException("Can't be born in the future");
-        }
-
-        age = today.get(Calendar.YEAR) - birthDate.get(Calendar.YEAR);
-
-        // If birth date is greater than todays date (after 2 days adjustment of leap year) then decrement age one year
-        if ( (birthDate.get(Calendar.DAY_OF_YEAR) - today.get(Calendar.DAY_OF_YEAR) > 3) ||
-                (birthDate.get(Calendar.MONTH) > today.get(Calendar.MONTH ))){
-            age--;
-
-            // If birth date and todays date are of same month and birth day of month is greater than todays day of month then decrement age
-        }else if ((birthDate.get(Calendar.MONTH) == today.get(Calendar.MONTH )) &&
-                (birthDate.get(Calendar.DAY_OF_MONTH) > today.get(Calendar.DAY_OF_MONTH ))){
-            age--;
-        }
-
-        return age;
+    public int getCurrentAge(LocalDate dateOfBirth) {
+        LocalDate today = LocalDate.now();                          //Today's date
+        Period p = Period.between(dateOfBirth, today);
+        return p.getYears();
     }
 
 }

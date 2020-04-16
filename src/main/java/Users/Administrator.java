@@ -85,6 +85,14 @@ f.	לכתוב בקובץ הלוג.
         if(user!=null){
             if(user instanceof AssociationRepresentative){
                 if(db.checkQuantityOfUsersByType("AssociationRepresentative")>=2){
+                    AssociationRepresentative associationRep = (AssociationRepresentative)user;
+                    /*
+                    if(associationRep.findActive()!=null) {//not sure ask tali
+                        associationRep.passMyGames();//// not sure, ask tali
+                    }
+
+                     */
+
                     //2.	במידה ויש לו משחקים פתוחים – להעביר אותם לנציג אחר (פונקציה של נציג התאחדות).
                     ///do the delete
                     db.removeUser(user.getUserName());

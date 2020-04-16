@@ -5,6 +5,7 @@ import SystemLogic.MainSystem;
 import Teams.Assent;
 import Teams.Team;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -27,7 +28,7 @@ public class Coach extends User implements Assent {
 
     }
 
-   public CoachPersonalPage createCoachPersonalPage(Date birthDate, Team team){
+   public CoachPersonalPage createCoachPersonalPage(LocalDate birthDate, Team team){
        MainSystem.LOG.info("The coach " +getUserFullName()+ " create personal page");
        page = new CoachPersonalPage(userFullName,birthDate,teamRole,team);
         return page;
