@@ -1,6 +1,7 @@
 package Games;
 
 import SystemLogic.DB;
+import SystemLogic.MainSystem;
 import Teams.Statistics;
 import Teams.Team;
 import Users.AssociationRepresentative;
@@ -213,7 +214,6 @@ class DayToGame extends TimerTask {
     public void run() {
         homeTeam.getPage().notifyObservers("DayToGame");
         awayTeam.getPage().notifyObservers("DayToGame");
-
     }
 }
 
@@ -244,6 +244,7 @@ class StartGame extends TimerTask{
         homeTeam.getPage().notifyObservers("game Start!");
         awayTeam.getPage().notifyObservers("game Start!");
         game.setStatus(Game.gameStatus.active);
+        MainSystem.LOG.info("The game between: "+game.getHomeTeam().getName()+" and "+game.getAwayTeam().getName()+ "started");
     }
 }
 
@@ -281,6 +282,8 @@ class EndGame extends TimerTask{
         homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);
         game.setFinalReport(eventListToReport(game.getEventBook()));
         setStatistic();
+        MainSystem.LOG.info("The game between: "+game.getHomeTeam().getName()+" and "+game.getAwayTeam().getName()+ "ended");
+
     }
 
     /**
@@ -345,5 +348,7 @@ class CloseGame extends TimerTask{
     @Override
     public void run() {
         game.setStatus(Game.gameStatus.close);
+        MainSystem.LOG.info("The game between: "+game.getHomeTeam().getName()+" and "+game.getAwayTeam().getName()+ "is close");
+
     }
 }
