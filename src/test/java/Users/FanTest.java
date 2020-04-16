@@ -6,6 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -21,6 +22,7 @@ public class FanTest {
 
     PlayerPersonalPage messiPage;
     CoachPersonalPage klingerPage;
+    //LocalDate localDate;
 
 
 
@@ -29,9 +31,10 @@ public class FanTest {
 
     @Before
     public void setUp() throws Exception {
+        LocalDate localDate2 = LocalDate.of(1999,1,1);
         f1 = new Fan("ido747","12345","ido kesttenbaum","ido747@gmail.com");
         t1 = new Team("hapoel tel aviv");
-        p1 = new Player("messi","12345","leo messi","leo123@gmail.com",null,"striker");
+        p1 = new Player("messi","12345","leo messi","leo123@gmail.com",localDate2,"striker");
         c1 = new Coach("klinger","123","nir klinger","nir123@gmail.com","head coach");
         DBTest = DB.getInstance();
         DBTest.addUser(f1);
@@ -45,7 +48,7 @@ public class FanTest {
          messiPage = p1.getPage();
         f1.followThisPage(messiPage);
 
-        c1.createCoachPersonalPage(new Date(),t1);
+        c1.createCoachPersonalPage(localDate2,t1);
          klingerPage =c1.getPage();
         f1.followThisPage(klingerPage);
 
@@ -119,12 +122,13 @@ public class FanTest {
         int numberOfPages = f1.getFollowedPages().size();
         assertEquals(2,numberOfPages);
         System.out.println("1 good");
+        LocalDate localDate2 = LocalDate.of(1999,1,1);
 
 
         ///create new pages
         Coach klopp = new Coach("jorgenklopp","123","jorgen klopp","jo@gmail.com","head coach");
         Team liverpool = new Team("liverpool");
-        CoachPersonalPage kloppPage = klopp.createCoachPersonalPage(new Date(),liverpool);
+        CoachPersonalPage kloppPage = klopp.createCoachPersonalPage(localDate2,liverpool);
         DBTest.addTeam(liverpool);
         DBTest.addUser(klopp);
 

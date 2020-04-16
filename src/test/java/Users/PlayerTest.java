@@ -6,6 +6,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.Date;
 
 import static org.junit.Assert.*;
@@ -17,10 +23,16 @@ public class PlayerTest {
     Team t2;
     DB dbtest;
 
+
+
+
     @Before
     public void setUp() throws Exception {
-        p1 = new Player("cr7","777","cristiano ronaldo","cr7@gmail.com",null,"striker");
-        p2 = new Player("neymarrrr","7757","neymar","nnn@gmail.com",null,"striker");
+       // LocalDateTime date1 = LocalDateTime.now();
+        LocalDate localDate = LocalDate.now(); //creating LocalDate instance
+        LocalDate localDate2 = LocalDate.of(1999,1,1);
+        p1 = new Player("cr7","777","cristiano ronaldo","cr7@gmail.com",localDate,"striker");
+        p2 = new Player("neymarrrr","7757","neymar","nnn@gmail.com",localDate2,"striker");
         t1=new Team("juventus");
         t2=new Team("psg");
         dbtest = DB.getInstance();
@@ -47,6 +59,8 @@ public class PlayerTest {
 
     @Test
     public void getAge() {
+        assertEquals(p2.getAge(),21);
+        assertEquals(p1.getAge(),0);
     }
 
     @Test

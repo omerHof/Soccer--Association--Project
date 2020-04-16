@@ -6,6 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import static org.junit.Assert.*;
@@ -30,7 +31,9 @@ public class PersonalPageTest {
         t1=new Team("Manchester city");
         t2=new Team("Liverpool");
         t3=new Team("Hapoel tel aviv");
-         pepPage = c1.createCoachPersonalPage(new Date(),t1);
+        LocalDate localDate2 = LocalDate.of(1999,1,1);
+
+        pepPage = c1.createCoachPersonalPage(localDate2,t1);
 
 
 

@@ -6,6 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import static org.junit.Assert.*;
@@ -18,7 +19,7 @@ public class CoachTest {
     Team t2;
     Team t3;
     DB dbtest;
-
+    LocalDate localDate;
 
     @Before
     public void setUp() throws Exception {
@@ -35,6 +36,8 @@ public class CoachTest {
         dbtest.addUser(c1);
         dbtest.addUser(c2);
         dbtest.addUser(c3);
+        LocalDate localDate = LocalDate.now(); //creating LocalDate instance
+
 
     }
 
@@ -51,7 +54,8 @@ public class CoachTest {
 
     @Test
     public void createPersonalPage() {
-        PersonalPage pepPage = c1.createCoachPersonalPage(new Date(),t1);
+
+        PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1);
         assertEquals(pepPage.getCurrentTeam().getName(),"Manchester city");
         assertEquals(pepPage.getName(),c1.getUserFullName());
 
@@ -127,7 +131,7 @@ public class CoachTest {
         assertEquals(c1.getPage(),null);
 
         //after
-        PersonalPage pepPage = c1.createCoachPersonalPage(new Date(),t1);
+        PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1);
         assertFalse(c1.getPage()==null);
         assertEquals(c1.getPage().getCurrentTeam(),t1);
         
@@ -139,7 +143,7 @@ public class CoachTest {
         assertEquals(c1.getCurrentTeam(),null);
 
         //after create a page
-        PersonalPage pepPage = c1.createCoachPersonalPage(new Date(),t1);
+        PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1);
         assertEquals(c1.getCurrentTeam(),t1);
         assertEquals(c1.getCurrentTeam().getName(),t1.getName());
 
