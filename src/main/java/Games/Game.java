@@ -95,7 +95,7 @@ public class Game extends Observable{
      */
     private void closeGame() {
         LocalDateTime closeGameTime =  timeOfGame.plus(5,ChronoUnit.DAYS);
-        CloseGame closeGame= new CloseGame(this);
+        CloseGame closeGame= new CloseGame(homeTeam,awayTeam,this,score);
         LocalDateTime from =LocalDateTime.now();
         Duration duration = Duration.between(from, closeGameTime);
         timer.schedule(closeGame,duration.getSeconds());
@@ -256,21 +256,20 @@ class EndGame extends TimerTask{
     private Team awayTeam;
     private Game game;
     private String score;
-    private int homeTeamGoals;
-    private int awayTeamGoals;
+
 
     /**
      * constructor
      * @param homeTeam
      * @param awayTeam
+     * @param game
+     * @param score
      */
     public EndGame(Team homeTeam, Team awayTeam, Game game, String score) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         this.game = game;
         this.score = score;
-        this.homeTeamGoals=0;
-        this.awayTeamGoals=0;
     }
 
     @Override
@@ -281,7 +280,6 @@ class EndGame extends TimerTask{
         double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();
         homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);
         game.setFinalReport(eventListToReport(game.getEventBook()));
-        setStatistic();
         MainSystem.LOG.info("The game between: "+game.getHomeTeam().getName()+" and "+game.getAwayTeam().getName()+ "ended");
 
     }
@@ -297,6 +295,43 @@ class EndGame extends TimerTask{
             report += event.evenToString() + "\t";
         }
         return report;
+    }
+
+
+}
+
+/**
+ * this class represent 5 hours after a game
+ */
+class CloseGame extends TimerTask{
+    private Team homeTeam;
+    private Team awayTeam;
+    private Game game;
+    private int homeTeamGoals;
+    private int awayTeamGoals;
+    private String score;
+
+    /**
+     * constructor
+     * @param homeTeam
+     * @param awayTeam
+     * @param game
+     */
+    public CloseGame(Team homeTeam, Team awayTeam, Game game, String score) {
+        this.game = game;
+        this.homeTeam = homeTeam;
+        this.awayTeam = awayTeam;
+        this.homeTeamGoals=0;
+        this.awayTeamGoals=0;
+        this.score=score;
+    }
+
+    @Override
+    public void run() {
+        game.setStatus(Game.gameStatus.close);
+        setStatistic();
+        MainSystem.LOG.info("The game between: "+game.getHomeTeam().getName()+" and "+game.getAwayTeam().getName()+ "is close");
+
     }
 
     /**
@@ -328,27 +363,5 @@ class EndGame extends TimerTask{
         }
         homeTeam.setStatistics(homeTeamStatistics);
         awayTeam.setStatistics(awayTeamStatistics);
-    }
-}
-
-/**
- * this class represent 5 hours after a game
- */
-class CloseGame extends TimerTask{
-
-    Game game;
-    /**
-     * constructor
-     * @param game
-     */
-    public CloseGame(Game game) {
-        this.game = game;
-    }
-
-    @Override
-    public void run() {
-        game.setStatus(Game.gameStatus.close);
-        MainSystem.LOG.info("The game between: "+game.getHomeTeam().getName()+" and "+game.getAwayTeam().getName()+ "is close");
-
     }
 }
