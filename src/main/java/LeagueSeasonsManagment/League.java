@@ -57,5 +57,15 @@ public class League {
 
      */
 
+    public Season getSeasonByYear (int year){
+        if (year > 0){
+            for (Season season : allSeasons){
+                if (season.getYear() == year)
+                    return season;
+            }
+        }
+        return null;
+    }
+
 
 }

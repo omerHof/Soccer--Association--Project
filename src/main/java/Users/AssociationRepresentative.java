@@ -241,9 +241,21 @@ public class AssociationRepresentative extends User implements Observer {
 
     public boolean passMyGames (){
 
-        AssociationRepresentative toPassAsso = (AssociationRepresentative)db.getUserType("AssociationRepresentative");
+        int year = myGames.get(0).getTimeOfGame().getYear(); //my season's year.
+        String myLeague = db.whatLeagueImAt(this, year);
 
-        //while ()
+        AssociationRepresentative substituteAsso = (AssociationRepresentative)db.getUserType("AssociationRepresentative"); //random one.
+        String substituteLeague = db.whatLeagueImAt(substituteAsso, year);
+
+        while (myLeague.equals(substituteLeague)){ //keep getting random asso' till the leagues are not overlapping.
+            substituteAsso = (AssociationRepresentative)db.getUserType("AssociationRepresentative"); //random one.
+            substituteLeague = db.whatLeagueImAt(substituteAsso, year);
+        }
+
+        //finally found a good substitute.
+        for ( Game game : myGames){
+            substituteAsso.setMyGame(game);
+        }
         return true;
     }
 
