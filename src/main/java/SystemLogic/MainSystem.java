@@ -7,6 +7,7 @@ import Users.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -120,8 +121,8 @@ public class MainSystem {
      * @return boolean answer - did the signing up work or not
      */
     public String singUp(String userName, String password, String mangerPassword, String role, String fullName, String userEmail,
-                          Date birthDate, String qualification, String courtRole, String teamRole,
-                          IUserGenerator iUserGenerator){
+                         LocalDate birthDate, String qualification, String courtRole, String teamRole,
+                         IUserGenerator iUserGenerator){
         if (db.userExist(userName)){
             return "exist";
         }

@@ -19,8 +19,6 @@ import static org.junit.Assert.*;
 
 public class GameTest {
     Season season;
-
-    SeasonScoreBoard seasonScoreBoard;
     ArrayList<Team> teams;
     ArrayList<Referee> referees;
     Referee referee1;

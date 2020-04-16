@@ -2,92 +2,69 @@ package Users;
 
 import Games.Event;
 import Games.Game;
+import SystemLogic.MainSystem;
+import com.sun.javafx.collections.ArrayListenerHelper;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MainReferee extends Referee {
 
-    public MainReferee(String userName, String password, String fullName,String userEmail, String qualification) {
+    public MainReferee(String userName, String password, String fullName, String userEmail, String qualification) {
         super(userName, password, fullName, userEmail, qualification);
     }
 
-    public void editGameEvents(Games.Game g) {
+    private void deleteEvent(Event.eventType type, int time, String playerName) {
 
-        Scanner sc = new Scanner(System.in); //System.in is a standard input stream
-        System.out.print("What do you want to do? /n for adding an event please press 1 /n" +
-                "to edit an existing event please press 2 /n" +
-                "to delete an event please press 3. /n" +
-                "press 0 when you finish update.");
-        String chose = sc.nextLine();              //reads string
+        Game gameToDeleteFrom = findCloseGame();
+        ArrayList<Event> gameEventBook = gameToDeleteFrom.getEventBook();
 
-        while (chose != "0") {
-            switch (chose) {
-                case ("1"): {//Register a player
-                    //addEvent(g);
-                }
-                case ("2"): {
-                    editEvent(g);
-                }
-                case ("3"): {
-                    deleteEvent(g);
-                }
-                default: {  //not legal.
-                    System.out.println("unsupported choice input"); //// error alert ?/...
-                }
-            }
+        for (Event event : gameEventBook){
+            if(event.getType().equals(type) && event.getEventTime()==time && event.getPlayerName().equals(playerName)) //the exact event we want to delete.
+                gameEventBook.remove(event); //removes the event from original
+        }
+
+        gameToDeleteFrom.setEventBook(gameEventBook); // really necessary ???????
+    }
+
+    private void editEvent(Event.eventType type, int time, String playerName) {
+
+        Game gameToEdit = findCloseGame();
+
+
+
+    }
+
+    private void addEvent(Event.eventType type, int time, String playerName) {
+
+        Game gameToAddTo = findCloseGame();
+
+        if (gameToAddTo != null) { //there is a close game he can still edit (within 5 hours).
+            Event addEvent = new Event(type, time, playerName);
+
+            MainSystem.LOG.info("A new event: " + type + " was added to game: " + gameToAddTo.getHomeTeam().getName() + "-" + gameToAddTo.getAwayTeam().getName() + ", " + gameToAddTo.getGameDate());
+            gameToAddTo.addEvent(addEvent);
         }
     }
 
-    private void deleteEvent(Game g) {
-        ///////////////////////////////// ????????????
+    private Game findCloseGame() {
+        for (Game game : super.myGames)
+            if(game.getStatus().equals(Game.gameStatus.close))
+                return game;
 
+        return null; //no active game at the moment.
     }
 
-    private void editEvent(Game g) {
-        ///////////////// how to chose the event...?
+/*    private void createFinalReport (int numGame, List<String> allEvents){
 
+        Game gameToFinalReport = findCloseGame();
 
-    }
-
-/*    private void addEvent(Game g) {
-
-        Scanner sc = new Scanner(System.in); //System.in is a standard input stream
-        System.out.println("Please enter an event type: (1 - goal, 2 - offside, 3 - foul, 4 - redTicket, 5 - yellowTicket, 6 - injury, 7 - substitiotion)");
-        Integer eventType = sc.nextInt();
-        System.out.println("Please enter the event time:");
-        Integer eventMinute = sc.nextInt();
-        System.out.println("Please enter the player's name:");
-        String eventPlayer = sc.nextLine();
-
-        Event newEvent = new Event(eventMinute, null, eventPlayer);
-
-        switch (eventType) {
-            case (1): {
-                newEvent.setType(Event.eventType.goal);
-            }
-            case (2): {
-                newEvent.setType(Event.eventType.offside);
-            }
-            case (3): {
-                newEvent.setType(Event.eventType.foul);
-            }
-            case (4): {
-                newEvent.setType(Event.eventType.redTicket);
-            }
-            case (5): {
-                newEvent.setType(Event.eventType.yellowTicket);
-            }
-            case (6): {
-                newEvent.setType(Event.eventType.injury);
-            }
-            case (7): {
-                newEvent.setType(Event.eventType.substitiotion);
-            }
-            default: {  //not legal.
-                System.out.println("unsupported choice input"); //// error alert ?/...
-            }
+        String finalReport = "";
+        for (String event : allEvents){
+            finalReport = finalReport + event;
         }
-       // g.addEvent(newEvent); ////////////////???????????????????? wait for the EVENT BOOK !!!
+
+        gameToFinalReport.setFinalReport(finalReport);
     }*/
-
 }

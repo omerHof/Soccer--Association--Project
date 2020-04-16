@@ -265,6 +265,7 @@ public class DB {
     public User getUserType(String type){
 
         Iterator it = users.entrySet().iterator();
+
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
             if (type.equals("AssociationRepresentative") && pair.getValue() instanceof AssociationRepresentative) {
@@ -298,7 +299,48 @@ public class DB {
         return null;
     }
 
+    /**
+     * return users list from requested type
+     * @param type
+     * @return
+     */
 
+    public ArrayList<User> getUserTypeList(String type){
+        Iterator it = users.entrySet().iterator();
+        ArrayList<User>userTypeList=new ArrayList<>();
+
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            if (type.equals("AssociationRepresentative") && pair.getValue() instanceof AssociationRepresentative) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Fan") && pair.getValue() instanceof Fan) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Coach") && pair.getValue() instanceof Coach) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Manager") && pair.getValue() instanceof Manager) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Player") && pair.getValue() instanceof Player) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("MainReferee") && pair.getValue() instanceof MainReferee) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Referee") && pair.getValue() instanceof Referee) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("TeamOwner") && pair.getValue() instanceof TeamOwner) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Administrator") && pair.getValue() instanceof Administrator) {
+                userTypeList.add((User) pair.getValue());
+            }
+        }
+        return userTypeList;
+    }
     public int checkQuantityOfUsersByType(String type) {
         Iterator it = users.entrySet().iterator();
         int count = 0;
@@ -336,6 +378,29 @@ public class DB {
         return count;
     }
 
+    /**
+     * this function searches for a league with the given season (year) that contains the given asso'
+     * @param year - season requested
+     * @param asso - the AssociationRepresentative to find
+     * @return name of league found
+     */
+    public String whatLeagueImAt (AssociationRepresentative asso, int year){
+
+        Iterator it = leagues.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            League league = (League) pair.getValue();
+            Season season = league.getSeasonByYear(year); //finds the correct season.
+
+            List<AssociationRepresentative> allAsso = season.getAllRepresentatives(); // of the league
+            for (AssociationRepresentative currAsso : allAsso) {
+                if (currAsso.getUserName().equals(asso.getUserName())) { //the asso' does exist in this season' list.
+                    return league.getName();
+                }
+            }
+        }
+        return ""; //this asso' doesn't exist in any leaue-year requested.
+    }
 
 /*
     public static AssociationRepresentative getRepresentative() {

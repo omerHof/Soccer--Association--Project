@@ -12,7 +12,7 @@ import java.util.Observer;
 public class Referee extends User implements Observer {
 
     private String qualification;
-    private LinkedList<Game> myGames;
+    protected LinkedList<Game> myGames;
 
     public Referee(String userName, String password, String fullName,String userEmail, String qualification) {
         this.userName = userName;
