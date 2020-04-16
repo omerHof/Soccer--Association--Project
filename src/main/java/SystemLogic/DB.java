@@ -378,6 +378,29 @@ public class DB {
         return count;
     }
 
+    /**
+     * this function searches for a league with the given season (year) that contains the given asso'
+     * @param year - season requested
+     * @param asso - the AssociationRepresentative to find
+     * @return name of league found
+     */
+    public String whatLeagueImAt (AssociationRepresentative asso, int year){
+
+        Iterator it = leagues.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            League league = (League) pair.getValue();
+            Season season = league.getSeasonByYear(year); //finds the correct season.
+
+            List<AssociationRepresentative> allAsso = season.getAllRepresentatives(); // of the league
+            for (AssociationRepresentative currAsso : allAsso) {
+                if (currAsso.getUserName().equals(asso.getUserName())) { //the asso' does exist in this season' list.
+                    return league.getName();
+                }
+            }
+        }
+        return ""; //this asso' doesn't exist in any leaue-year requested.
+    }
 
 /*
     public static AssociationRepresentative getRepresentative() {
