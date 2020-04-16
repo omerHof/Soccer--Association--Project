@@ -17,6 +17,13 @@ public class TeamOwner extends User implements Assent {
     private HashMap<String, Manager> managers_appointments = new HashMap<>();
     //private HashMap<String, Boolean> authorizations = new HashMap<>();
 
+    /**
+     * Constructor
+     * @param userName
+     * @param password
+     * @param fullName
+     * @param userEmail
+     */
     public TeamOwner(String userName, String password, String fullName,String userEmail) {
         this.userName = userName;
         this.password = password;
@@ -24,12 +31,21 @@ public class TeamOwner extends User implements Assent {
         this.userEmail = userEmail;
     }
 
+    /**
+     * This method asks permission from the association representative to open a new team.
+     * The answer is assigned to the field permission.
+     */
     public void askPermissionToOpenTeam (){
         DB db = DB.getInstance();
-        AssociationRepresentative ar = (AssociationRepresentative) db.getUserType("AssociationRepresentative");
-        this.permission = ar.approveRegistration("who", "cares");
+        AssociationRepresentative associationRepresentative = (AssociationRepresentative) db.getUserType("AssociationRepresentative");
+        this.permission = associationRepresentative.approveRegistration("who", "cares");
     }
 
+    /**
+     * This method opens a new team or reopen it after it was closed
+     * @param team_name
+     * @param initialBudget
+     */
     public void openTeam(String team_name, double initialBudget){//after he got permission
         if(permission) {
             if(team==null) {
@@ -45,6 +61,13 @@ public class TeamOwner extends User implements Assent {
         }
     }
 
+    /**
+     * Thia methods adds new assent (new users or new stadium) to the team.
+     * Send to the appointing method, if it is necessary.
+     * @param assent
+     * @param new_assent
+     * @return
+     */
     public String addAssent(Assent assent, double new_assent){
         if(assent == null || team==null){
             return "null";
@@ -70,7 +93,12 @@ public class TeamOwner extends User implements Assent {
         return "added successfully";
     }
 
-    public  String removeAssent(Assent assent){
+    /**
+     * This method removes assent (new users or new stadium) to the team.
+     * @param assent
+     * @return
+     */
+    public String removeAssent(Assent assent){
         if(assent == null || team ==null){
             return "null";
         }
@@ -87,6 +115,12 @@ public class TeamOwner extends User implements Assent {
         return "removed successfully";
     }
 
+    /**
+     * This method changes the assent's worth
+     * @param assent
+     * @param new_worth
+     * @return
+     */
     public String changeAssentWorth(Assent assent, double new_worth){
         if(assent == null || team==null){
             return "null";
@@ -103,6 +137,13 @@ public class TeamOwner extends User implements Assent {
         return "changed successfully";
     }
 
+    /**
+     * This method appoints user to owner/manager of the team
+     * @param user
+     * @param role
+     * @param worth
+     * @return
+     */
     public String appoint(User user, String role, double worth){
         if(user == null  || !(role.equals("manager") | role.equals("teamowner"))){
             return "null";
@@ -142,6 +183,11 @@ public class TeamOwner extends User implements Assent {
         return "appointed";
     }
 
+    /**
+     * This method removes user of being owner of the team and changes him to fan
+     * @param teamOwner
+     * @return
+     */
     public String removeAppointmentTeamOwner(TeamOwner teamOwner){
         if(teamOwner == null){
             return "null";
@@ -170,6 +216,11 @@ public class TeamOwner extends User implements Assent {
         return null;
     }
 
+    /**
+     * This method removes user of being manager of the team and changes him to fan
+     * @param manager
+     * @return
+     */
     public String removeAppointmentManager(Manager manager){
         if(manager == null){
             return "null";
@@ -195,6 +246,10 @@ public class TeamOwner extends User implements Assent {
         return null;
     }
 
+    /**
+     * This updates the team's budget and change the boolean variant "afford" if the budget is to low.
+     * @param amount
+     */
     private void outcome(double amount){
         double oldBudget = this.team.getBudget();
         double newBudget = oldBudget - amount;
@@ -205,6 +260,10 @@ public class TeamOwner extends User implements Assent {
         }
     }
 
+    /**
+     * This updates the team's budget
+     * @param amount
+     */
     private void income(double amount){
         double oldBudget = this.team.getBudget();
         double newBudget = oldBudget + amount;
@@ -212,6 +271,14 @@ public class TeamOwner extends User implements Assent {
         MainSystem.LOG.info("The team budget increased from " + oldBudget + " to " + newBudget);
     }
 
+    /**
+     * This method send to the private methods "outcome" and "income" due to the amount's type
+     * If a user in the team should be inform about this action, he gets a notification.
+     * @param amount
+     * @param type
+     * @param toUser
+     * @param user
+     */
     public void reportFinance(double amount, String type, boolean toUser, User user) {
         if (type.equals("income")) {
             income(amount);
@@ -225,6 +292,10 @@ public class TeamOwner extends User implements Assent {
         }
     }
 
+    /**
+     * This method closing the team by changing its status to "close".
+     * @return
+     */
     public String closeTeam(){
         if(team.getStatus().equals(Team.teamStatus.close)){
             return "team is closed";
@@ -233,6 +304,8 @@ public class TeamOwner extends User implements Assent {
         MainSystem.LOG.info("The team " + team.getName() + " is closed");
         return "close";
     }
+
+    /** ----------------- GETTERS AND SETTERS ----------------- **/
 
     public Team getTeam() {
         return team;
