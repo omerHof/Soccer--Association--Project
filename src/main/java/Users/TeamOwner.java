@@ -1,17 +1,18 @@
 package Users;
 import SystemLogic.DB;
 import SystemLogic.MainSystem;
+import SystemLogic.Notification;
 import Teams.Assent;
 import Teams.Team;
-import UserGenerator.ManagmentUserGenerator;
 import UserGenerator.PremiumUserGenertator;
-
+import UserGenerator.SimpleUserGenerator;
 import java.util.HashMap;
 
 public class TeamOwner extends User implements Assent {
     private Team team = null;
     private double worth;
     private boolean permission;
+    private boolean afford = true;
     private HashMap<String, TeamOwner> team_owners_appointments = new HashMap<>();
     private HashMap<String, Manager> managers_appointments = new HashMap<>();
     //private HashMap<String, Boolean> authorizations = new HashMap<>();
@@ -23,57 +24,75 @@ public class TeamOwner extends User implements Assent {
         this.userEmail = userEmail;
     }
 
-    public void askPermission (){//todo: necessary?
+    public void askPermissionToOpenTeam (){
         DB db = DB.getInstance();
         AssociationRepresentative ar = (AssociationRepresentative) db.getUserType("AssociationRepresentative");
         this.permission = ar.approveRegistration("who", "cares");
     }
 
-    public void openTeam(String team_name){//after he got permission
+    public void openTeam(String team_name, double initialBudget){//after he got permission
         if(permission) {
-            HashMap<String , TeamOwner> me = new HashMap<>();
-            me.put(super.getUserName(), this);
-            team = new Team(team_name, me);
-            DB.getInstance().addTeam(team);
+            if(team==null) {
+                HashMap<String, TeamOwner> me = new HashMap<>();
+                me.put(super.getUserName(), this);
+                team = new Team(team_name, me);
+                team.setBudget(initialBudget);
+                DB.getInstance().addTeam(team);
+            }
+            else{
+                team.setStatus(Team.teamStatus.active);
+            }
         }
     }
 
     public String addAssent(Assent assent, double new_assent){
-        if(assent == null){
+        if(assent == null || team==null){
             return "null";
+        }
+
+        if(team.getStatus().equals(Team.teamStatus.close)){
+            return "team is closed";
         }
 
         if(this.team.containsAssent(assent)){
             return "already added";
         }
-
-        else{
-            if (assent.getWorth()==0) {         //means: first time the assent is added to team
-                assent.setWorth(new_assent);
-            }
-            this.team.addAssent(assent);
-            buyAssent(assent.getWorth());
+        if(!afford){
+            return "money isn't growing on the trees!";
         }
+
+        if (assent.getWorth()==0) {         //means: first time the assent is added to team
+            assent.setWorth(new_assent);
+        }
+        this.team.addAssent(assent);
+        outcome(assent.getWorth());
+
         return "added successfully";
     }
 
     public  String removeAssent(Assent assent){
-        if(assent == null){
+        if(assent == null || team ==null){
             return "null";
+        }
+        if(team.getStatus().equals(Team.teamStatus.close)){
+            return "team is closed";
         }
         if(!this.team.containsAssent(assent)){
             return "not in the team";
         }
         else{
             this.team.removeAssent(assent);
-            sellAssent(assent.getWorth());
+            income(assent.getWorth());
         }
         return "removed successfully";
     }
 
     public String changeAssentWorth(Assent assent, double new_worth){
-        if(assent == null){
+        if(assent == null || team==null){
             return "null";
+        }
+        if(team.getStatus().equals(Team.teamStatus.close)){
+            return "team is closed";
         }
         if(!this.team.containsAssent(assent)){
             return "not in the team";
@@ -84,51 +103,135 @@ public class TeamOwner extends User implements Assent {
         return "changed successfully";
     }
 
-    public String appointTeamOwner(User user, double worth){
-        if(user == null){
+    public String appoint(User user, String role, double worth){
+        if(user == null  || !(role.equals("manager") | role.equals("teamowner"))){
             return "null";
         }
-        if(user instanceof TeamOwner && ((TeamOwner)user).getTeam()!=null){
+        if((user instanceof Manager && role.equals("manager") )|| user instanceof TeamOwner){
             return "already has team";
         }
+        if(team.getStatus().equals(Team.teamStatus.close)){
+            return "team is closed";
+        }
+        if(!afford){
+            return "money isn't growing on the trees!";
+        }
+
         PremiumUserGenertator premiumUserGenertator = new PremiumUserGenertator();
         DB db = DB.getInstance();
         db.removeUser(user.getUserName());
-        TeamOwner teamOwner = (TeamOwner) premiumUserGenertator.generate(user.getUserName(),user.getPassword(),""
-                ,"", user.getUserFullName(), user.getUserEmail(), null,"","","");
-        db.addUser(teamOwner);
-        addAssent(teamOwner, worth);
-        team_owners_appointments.put(teamOwner.getUserName(), teamOwner);
-        MainSystem.LOG.info(this.userName + " appointed " + teamOwner.getUserName() + " to " + this.team.getName() + "'s owner");
+        User new_user =  premiumUserGenertator.generate(user.getUserName(),user.getPassword(),""
+                ,role, user.getUserFullName(), user.getUserEmail(), null,"","","");
+        if(role.equals("teamowner")){
+            TeamOwner teamOwner = (TeamOwner)new_user;
+            db.addUser(teamOwner);
+            addAssent(teamOwner, worth);
+            team_owners_appointments.put(new_user.getUserName(), (TeamOwner) new_user);
+        }
+        if(role.equals("manager")){
+            Manager manager = (Manager)new_user;
+            db.addUser(manager);
+            addAssent(manager, worth);
+            managers_appointments.put(new_user.getUserName(), (Manager) new_user);
+        }
+
+        String message ="You have been appointed to " + role +  " of the team " + this.team.getName();
+        Notification notification = new Notification(this, message, new_user);
+        notification.send();
+        MainSystem.LOG.info(this.userName + " appointed " + new_user.getUserName() + " to " + this.team.getName() + "'s " + role);
         return "appointed";
     }
 
-    public String appointManager(Manager manager){
+    public String removeAppointmentTeamOwner(TeamOwner teamOwner){
+        if(teamOwner == null){
+            return "null";
+        }
+        if(team.getStatus().equals(Team.teamStatus.close)){
+            return "team is closed";
+        }
+        if(!team_owners_appointments.containsValue(teamOwner)){
+            return "not appointed by me!";
+        }
+        for (String owner: team_owners_appointments.keySet()){
+            teamOwner.removeAppointmentTeamOwner(team_owners_appointments.get(owner));
+        }
+        this.removeAssent(teamOwner);
+        this.team_owners_appointments.remove(teamOwner.getUserName());
+        SimpleUserGenerator simpleUserGenerator = new SimpleUserGenerator();
+        DB db = DB.getInstance();
+        db.removeUser(teamOwner.getUserName());
+        Fan fan =  (Fan)simpleUserGenerator.generate(teamOwner.getUserName(),teamOwner.getPassword(),""
+                ,"", teamOwner.getUserFullName(), teamOwner.getUserEmail(), null,"","","");
+        db.addUser(fan);
+        String message ="You have been removed of being team  owner of the team " + this.team.getName();
+        Notification notification = new Notification(this, message, fan);
+        notification.send();
+        MainSystem.LOG.info(fan.getUserName()+ "'s appointment was removed");
+        return null;
+    }
+
+    public String removeAppointmentManager(Manager manager){
         if(manager == null){
             return "null";
         }
-        managers_appointments.put(manager.getUserName(), manager);
-        MainSystem.LOG.info(this.userName + " appointed " + manager.getUserName() + " to " + this.team.getName() + "'s manager");
-        return "appointed";
+        if(team.getStatus().equals(Team.teamStatus.close)){
+            return "team is closed";
+        }
+        if(!managers_appointments.containsValue(manager)){
+            return "not appointed by me!";
+        }
+        this.removeAssent(manager);
+        this.managers_appointments.remove(manager.getUserName());
+        SimpleUserGenerator simpleUserGenerator = new SimpleUserGenerator();
+        DB db = DB.getInstance();
+        db.removeUser(manager.getUserName());
+        Fan fan =  (Fan)simpleUserGenerator.generate(manager.getUserName(),manager.getPassword(),""
+                ,"", manager.getUserFullName(), manager.getUserEmail(), null,"","","");
+        db.addUser(fan);
+        String message ="You have been removed of being manager of the team " + this.team.getName();
+        Notification notification = new Notification(this, message, fan);
+        notification.send();
+        MainSystem.LOG.info(fan.getUserName()+ "'s appointment was removed");
+        return null;
     }
 
-    public void buyAssent(double price){
-        //todo: add sanctions
+    private void outcome(double amount){
         double oldBudget = this.team.getBudget();
-        double newBudget = oldBudget - price;
+        double newBudget = oldBudget - amount;
         this.team.setBudget(newBudget);
         MainSystem.LOG.info("The team budget decreased from " + oldBudget + " to " + newBudget);
+        if(newBudget<=10000){
+            afford = false;
+        }
     }
 
-    public void sellAssent(double price){
+    private void income(double amount){
         double oldBudget = this.team.getBudget();
-        double newBudget = oldBudget + price;
+        double newBudget = oldBudget + amount;
         this.team.setBudget(newBudget);
         MainSystem.LOG.info("The team budget increased from " + oldBudget + " to " + newBudget);
     }
 
-    public void closeTeam(){
+    public void reportFinance(double amount, String type, boolean toUser, User user) {
+        if (type.equals("income")) {
+            income(amount);
+        } else {
+            outcome(amount);
+            if (toUser){
+                String message = "You have been paid "+ amount + " gogo'im";
+                Notification notification = new Notification(this, message, user);
+                notification.send();
+            }
+        }
+    }
 
+    public String closeTeam(){
+        if(team.getStatus().equals(Team.teamStatus.close)){
+            return "team is closed";
+        }
+        team.setStatus(Team.teamStatus.close);
+        MainSystem.LOG.info("The team " + team.getName() + " is closed");
+        return "close";
     }
 
     public Team getTeam() {
