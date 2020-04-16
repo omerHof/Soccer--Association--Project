@@ -41,6 +41,10 @@ public class Referee extends User implements Observer {
     }
 */
 
+    public LinkedList<Game> getMyGames() {
+        return myGames;
+    }
+
     public String getQualification() {
         return qualification;
     }

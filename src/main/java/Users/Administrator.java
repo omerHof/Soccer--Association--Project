@@ -2,11 +2,11 @@ package Users;
 
 import Games.Game;
 import SystemLogic.DB;
+import SystemLogic.Notification;
 import Teams.Team;
 
 import java.security.acl.Owner;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class Administrator extends User {
 
@@ -33,24 +33,46 @@ g.	שולח להם התראה (?).
 
      */
 
-    public void closeTeamForPermanent(String name){
+    public void closeTeamForPermanent(String name) {
         DB db = DB.getInstance();
         Team team = db.getTeam(name);
         boolean hasMoreGames = false;
-        if(team!=null){
+        if (team != null) {
             ArrayList<Game> gameList = team.getGameList();
-            for(Game g: gameList){
-                if((g.getStatus()== Game.gameStatus.active)||(g.getStatus()== Game.gameStatus.preGame)){
-                    hasMoreGames=true;
+            for (Game g : gameList) {
+                if ((g.getStatus() == Game.gameStatus.active) || (g.getStatus() == Game.gameStatus.preGame)) {
+                    hasMoreGames = true;
                 }
             }
-            if(hasMoreGames==false) {
+            if (hasMoreGames == false) {
                 team.setStatus(Team.teamStatus.PermanentlyClosed);
                 HashMap<String, TeamOwner> owners = team.getTeamOwners();
                 HashMap<String, Manager> managers = team.getManagers();
-                ///send notification to owner and managers
+
+
+                //send notification to all owners
+                Iterator it = owners.entrySet().iterator();
+                while (it.hasNext()) {
+                    Map.Entry pair = (Map.Entry) it.next();
+                    TeamOwner owner = (TeamOwner) pair.getValue();
+                    Notification notification1 = new Notification(this, "the team is permanently closed", owner);
+                    notification1.send();
+                    it.remove();
+                }
+
+                //send notification to all managers
+                Iterator it2 = managers.entrySet().iterator();
+                while (it.hasNext()) {
+                    Map.Entry pair = (Map.Entry) it.next();
+                    Manager manager = (Manager) pair.getValue();
+                    Notification notification1 = new Notification(this, "the team is permanently closed", manager);
+                    notification1.send();
+                    it.remove();
+                }
+            } else {
+                System.out.println("the team cant be closed for permanent because it has open games");
             }
-         }
+        }
     }
 
 
@@ -79,75 +101,108 @@ f.	לכתוב בקובץ הלוג.
 
      */
 
-    public void deleteUserFromSystem(String name){
+    public void deleteUserFromSystem(String name) {
         DB db = DB.getInstance();
         User user = db.getUserByFullName(name);
-        if(user!=null){
-            if(user instanceof AssociationRepresentative){
-                if(db.checkQuantityOfUsersByType("AssociationRepresentative")>=2){
-                    AssociationRepresentative associationRep = (AssociationRepresentative)user;
+        if (user != null) {
+            if (user instanceof AssociationRepresentative) {
+                if (db.checkQuantityOfUsersByType("AssociationRepresentative") >= 2) {
+                    AssociationRepresentative associationRep = (AssociationRepresentative) user;
 
-                    if(associationRep.findActiveGame()!=null) {//not sure ask tali
+                    if (associationRep.findActiveGame() != null) {//not sure ask tali
                         associationRep.passMyGames();//// not sure, ask tali
                     }
-
-
-
-                    //2.	במידה ויש לו משחקים פתוחים – להעביר אותם לנציג אחר (פונקציה של נציג התאחדות).
-                    ///do the delete
                     db.removeUser(user.getUserName());
                 }
-
-                /*
-                AssociationRepresentative associationRep = (AssociationRepresentative)user;
-                associationRep.set
-
-                 */
-
-            }
-            else if(user instanceof Administrator){
-                if(db.checkQuantityOfUsersByType("Administrator")>=2){
+            } else if (user instanceof Administrator) {
+                if (db.checkQuantityOfUsersByType("Administrator") >= 2) {
                     db.removeUser(user.getUserName());
-
-                    ///do the delete
                 }
-            }
-
-            else if(user instanceof Fan){
-                Fan fan = (Fan)user;
+            } else if (user instanceof Fan) {
+                Fan fan = (Fan) user;
                 fan.stopFollowAllTeams();
                 fan.stopFollowAllPages();
-
-
                 //2.	נדרש להסיר את המעקב שלו מכל המשחקים (לדעתי יקרה אוטומטי כאשר יוסר המעקב מקבוצה ?)
                 ///do the delete
                 db.removeUser(user.getUserName());
-            }
+            } else if (user instanceof TeamOwner) {
+                if (db.checkQuantityOfUsersByType("TeamOwner") >= 2) {
+                    TeamOwner owner = (TeamOwner) user;
+                    owner.removeAppointmentTeamOwner(owner);              //ask katzi
 
-           else if(user instanceof TeamOwner){
-                if(db.checkQuantityOfUsersByType("TeamOwner")>=2){
-                    TeamOwner owner = (TeamOwner)user;
-                    //2.	הפעלת מחיקת בעל קבוצה (קיימת פונקציה שכזאת בבעל קבוצה).
                     ///do the delete
                     db.removeUser(user.getUserName());
-
                 }
 
             }
 
-            else{
-                /*
-                v.	במידה ומדובר במשתמש אחר – (שופט, מאמן, שחקן)
-1.	לוודא שלא משובץ למשחק פתוח.
-vi.	שים לב שלא קיים כאן משתמש מסוג מנהל קבוצה – תשאל את כצי אם יש אילוץ מיוחד לפני מחיקתו
 
-                 */
-
+            else if(user instanceof Referee) {
+                Referee ref = (Referee) user;
+                LinkedList<Game> games = ref.getMyGames();
+                boolean isActive = false;
+                for (Game g : games) {
+                    if ((g.getStatus() == Game.gameStatus.active) || (g.getStatus() == Game.gameStatus.preGame)) {
+                        isActive = true;
+                        break;
+                    }
+                }
+                    if(isActive==false){
+                        db.removeUser(user.getUserName());
+                    }
             }
 
-        }
 
+            else if (user instanceof Player) {
+                Player player = (Player) user;
+                PersonalPage page = player.getPage();
+                if (page != null) {
+                    Team team = page.getCurrentTeam();
+                    if (team != null) {
+                        ArrayList<Game> gamesList = team.getGameList();
+                        boolean isActive = false;
+                        for (Game game : gamesList) {
+                            if ((game.getStatus() == Game.gameStatus.active) || (game.getStatus() == Game.gameStatus.preGame)) {
+                                isActive = true;
+                                break;
+                            }
+                        }
+                        if (isActive == false) {
+                            team.removePlayer(player);
+                            db.removeUser(user.getUserName());
+                        }
+                    }
+                }
+            }
+
+            else if (user instanceof Coach){
+                Coach coach = (Coach) user;
+                PersonalPage page = coach.getPage();
+                if (page != null) {
+                    Team team = page.getCurrentTeam();
+                    if (team != null) {
+                        ArrayList<Game> gamesList = team.getGameList();
+                        boolean isActive = false;
+                        for (Game game : gamesList) {
+                            if ((game.getStatus() == Game.gameStatus.active) || (game.getStatus() == Game.gameStatus.preGame)) {
+                                isActive = true;
+                                break;
+                            }
+                        }
+                        if (isActive == false) {
+                            team.removeCoach(coach);
+                            db.removeUser(user.getUserName());
+                        }
+                    }
+                }
+            }
+        }
     }
 
+
+    ////need to do
+    public String watchLog(){
+        return null;
+    }
 
 }
