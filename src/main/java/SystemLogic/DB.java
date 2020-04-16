@@ -265,6 +265,7 @@ public class DB {
     public User getUserType(String type){
 
         Iterator it = users.entrySet().iterator();
+
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
             if (type.equals("AssociationRepresentative") && pair.getValue() instanceof AssociationRepresentative) {
@@ -298,7 +299,48 @@ public class DB {
         return null;
     }
 
+    /**
+     * return users list from requested type
+     * @param type
+     * @return
+     */
 
+    public ArrayList<User> getUserTypeList(String type){
+        Iterator it = users.entrySet().iterator();
+        ArrayList<User>userTypeList=new ArrayList<>();
+
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            if (type.equals("AssociationRepresentative") && pair.getValue() instanceof AssociationRepresentative) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Fan") && pair.getValue() instanceof Fan) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Coach") && pair.getValue() instanceof Coach) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Manager") && pair.getValue() instanceof Manager) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Player") && pair.getValue() instanceof Player) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("MainReferee") && pair.getValue() instanceof MainReferee) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Referee") && pair.getValue() instanceof Referee) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("TeamOwner") && pair.getValue() instanceof TeamOwner) {
+                userTypeList.add((User) pair.getValue());
+            }
+            if (type.equals("Administrator") && pair.getValue() instanceof Administrator) {
+                userTypeList.add((User) pair.getValue());
+            }
+        }
+        return userTypeList;
+    }
     public int checkQuantityOfUsersByType(String type) {
         Iterator it = users.entrySet().iterator();
         int count = 0;

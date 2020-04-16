@@ -5,6 +5,13 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import static java.util.concurrent.TimeUnit.DAYS;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class SeasonScoreBoard {
 
@@ -113,14 +120,12 @@ public class SeasonScoreBoard {
      */
    public void updateTable() {
         try {
-            Timer timer = new Timer();
             LocalDateTime timeToUpdate;
             timeToUpdate = firstGameDate.plus(2, ChronoUnit.HOURS);
-            update dayToGame = new update(this, timer,numOfWeeks);
             LocalDateTime from = LocalDateTime.now();
             Duration duration = Duration.between(from, timeToUpdate);
-            timer.scheduleAtFixedRate(dayToGame, duration.getSeconds(), 604800000);
-
+            UpdateTable updateTable = new UpdateTable(duration.getSeconds(), this, new AtomicInteger(numOfWeeks));
+            updateTable.beep();
         }catch (Exception e){
 
         }
@@ -129,30 +134,32 @@ public class SeasonScoreBoard {
 /**
  * this class represent the time to update the score board
  */
-class update extends TimerTask{
 
+class UpdateTable {
+
+    long delay;
+    private AtomicInteger count;
+    private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
     SeasonScoreBoard scoreBoard;
-    Timer timer;
-    int numberOfWeeks;
-    int counter;
 
-    public update(SeasonScoreBoard scoreBoard, Timer timer, int numberOfWeeks) {
-        this.scoreBoard = scoreBoard;
-        this.timer=timer;
-        this.numberOfWeeks = numberOfWeeks;
-        this.counter=0;
+    public UpdateTable(Long tDelay,SeasonScoreBoard scoreBoard1, AtomicInteger numOfWeeks) {
+        delay = tDelay;
+        scoreBoard = scoreBoard1;
+        count = numOfWeeks;
     }
+    public void beep() {
+        final Runnable beeper = new Runnable() {
+            public void run() {
+                count.getAndDecrement();
+                scoreBoard.sortByValue();
 
-    @Override
-    public void run() {
-        if(numberOfWeeks>counter) {
-            scoreBoard.sortByValue();
-            counter++;
-        }
-        else{
-            timer.cancel();
-        }
-
+                if (count.get() == 0) {
+                    scheduler.shutdown();
+                }
+            }
+        };
+        final ScheduledFuture<?> beeperHandle = scheduler.scheduleAtFixedRate(
+                beeper, delay, 7, DAYS);
     }
 }
 
