@@ -1,7 +1,6 @@
 package SystemLogic;
 
-import LeagueSeasonsManagment.League;
-import LeagueSeasonsManagment.Season;
+import LeagueSeasonsManagment.*;
 import Teams.Team;
 import Users.Administrator;
 import Users.AssociationRepresentative;
@@ -16,14 +15,33 @@ import static org.junit.Assert.*;
 public class DBTest {
     private User user;
     private League league;
+    private ArrayList<Season> seasons;
+    private Season season;
+    private ArrayList<Team> teams;
     private Team team;
+    private ArrayList<Referee>referees;
+    private ArrayList<AssociationRepresentative>representatives;
+    private IGameInlayPolicy gameInlayPolicy;
+    private IScorePolicy scorePolicy;
     DB db=DB.getInstance();
 
     @Before
     public void setUp() throws Exception {
+        team= new Team("Barca");
         user= new Administrator("The King","1234","Oren Hason","OrenHason@gmail.com");
         league= new League("premier league",10);
-        team= new Team("Barca");
+        seasons = new ArrayList<>();
+        teams = new ArrayList<>();
+        teams.add(team);
+        referees= new ArrayList<>();
+        representatives = new ArrayList<>();
+        gameInlayPolicy = new TwoRoundsGamePolicy(teams,2020);
+        scorePolicy = new RegularScorePolicy();
+
+        season = new Season(2020,teams,referees,representatives,scorePolicy.getName(),gameInlayPolicy.getName());
+        seasons.add(season);
+        league.setAllSeasons(seasons);
+
         db.setUser(user);
         db.setLeague(league);
         db.setTeam(team);
