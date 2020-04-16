@@ -40,8 +40,8 @@ public class Season {
 
         this.allGames = iGameInlayPolicy.gameInlayPolicyAlgoImplementation(); //adds list of games to each mahzor.
 
-        assignUsersToGames(3); //assign 4 referees for each game, and 1 association rep.
-        this.seasonScoreBoard= new SeasonScoreBoard(allTeams,iScorePolicy,allGames.get(1).get(0).getTimeOfGame(),allGames.size());
+        assignUsersToGames(3); //assign 3 referees for each game, 1 main referee, and 1 association rep.
+        this.seasonScoreBoard = new SeasonScoreBoard(allTeams,iScorePolicy,allGames.get(1).get(0).getTimeOfGame(),allGames.size());
 
 
     }
@@ -58,7 +58,7 @@ public class Season {
             for (int mahzor : allGames.keySet()) { //every week.
                 ArrayList<Game> currMahzorGames = allGames.get(mahzor); //gets current mahzor's games.
 
-                List<User> mahzorReferees = new LinkedList<>(); //to check constraints and doubles.
+                List<User> mahzorRefereesAndAsso = new LinkedList<>(); //to check constraints and doubles.
                 Referee ref;
 
                 //ArrayList<Referee> copyReferees = new ArrayList<>();
@@ -67,34 +67,29 @@ public class Season {
                 for (Game game : currMahzorGames) {
 
                     for (int i = 0; i < amount; i++) {
-
                         ref = getRandomReferee();
 
-                        if (!mahzorReferees.contains(ref)){ //doesn't contain this referee already
-                            ref.followThisGame(game); //adds both ways.
-                            mahzorReferees.add(ref);
+                        while (mahzorRefereesAndAsso.contains(ref)){ // contains this referee already
+                            ref = getRandomReferee(); //gets another one
                         }
 
-                        else { //try finding another referee
-                            i--;
-                            continue;
-                        }
+                        ref.followThisGame(game); //adds both ways.
+                        mahzorRefereesAndAsso.add(ref);
                     }
 
                     AssociationRepresentative asso = getRandomAsso();
-                    while (mahzorReferees.contains(asso)) { //until gets a new one.
+                    while (mahzorRefereesAndAsso.contains(asso)) { //until gets a new one.
                         asso = getRandomAsso();
                     }
                     asso.followThisGame(game); //adds both ways.
-                    mahzorReferees.add(asso);
+                    mahzorRefereesAndAsso.add(asso);
 
                     MainReferee mainReferee = (MainReferee) db.getUserType("MainReferee");
-                    while (mahzorReferees.contains(mainReferee)) { //until gets a new one.
+                    while (mahzorRefereesAndAsso.contains(mainReferee)) { //until gets a new one.
                         mainReferee = (MainReferee) db.getUserType("MainReferee");
                     }
                     mainReferee.followThisGame(game); //adds both ways.
-                    mahzorReferees.add(mainReferee);
-
+                    mahzorRefereesAndAsso.add(mainReferee);
                 }
             }
         }

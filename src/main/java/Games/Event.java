@@ -14,9 +14,11 @@ public class Event {
     private String playerName; //or just a string??
 
     public Event(eventType type, int eventTime, String playerName) {
-        this.eventTime = eventTime;
-        this.type = type;
-        this.playerName = playerName;
+        if (eventTime >= 0 && eventTime <= 120 && playerName != "") {
+            this.eventTime = eventTime;
+            this.type = type;
+            this.playerName = playerName;
+        }
     }
 
     public int getEventTime() {

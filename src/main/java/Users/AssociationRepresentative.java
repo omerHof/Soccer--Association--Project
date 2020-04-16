@@ -65,17 +65,6 @@ public class AssociationRepresentative extends User implements Observer {
 
         Season newSeason = new Season(year, allTeams, allReferees, allReps, scorePolicy, gamePolicy);
 
-/*
-        //MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
-
-        newSeason.setIScorePolicy(scorePolicy); //בחירת מדיניות חישוב תוצאות
-        newSeason.setiGameInlayPolicy(gamePolicy); // בחירת מדיניות שיבוץ משחקים
-
-        IGameInlayPolicy iGameInlayPolicy = newSeason.getiGameInlayPolicy();
-
-        //הפעלת שיבוץ משחקים- מקבל את הקבוצות אז חייב להיקרא אחרי שיבוץ הקבוצות לעונה!!
-        iGameInlayPolicy.gameInlayPolicyAlgoImplementation();*/
-
         if (newSeason != null) {
             db.addSeason(leagueName, newSeason); //adds the season to DB.}
             MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
@@ -83,7 +72,7 @@ public class AssociationRepresentative extends User implements Observer {
 
         else
             System.out.println("couldn't create a new season here.");
-        }
+    }
 
     /**
      * adds all associationRepresentative to this season - help function
@@ -216,7 +205,7 @@ public class AssociationRepresentative extends User implements Observer {
     ////////////////////////////// USE CASE 10.3 ////////////////////////////// VVV
     /**
      * this function adds an event to an active game's event book.
-     * @return true if successed, false if not.
+     * @return true if successes, false if not.
      */
     private boolean addGameEvent(Event.eventType type, int time, String playerName){
 
@@ -225,6 +214,7 @@ public class AssociationRepresentative extends User implements Observer {
         if(gameToAdd!= null) { //there is an active game
             Event newEvent = new Event(type, time, playerName);
             gameToAdd.addEvent(newEvent);
+
             MainSystem.LOG.info("A new event: " + type + " was added to game: " + gameToAdd.getHomeTeam().getName() + "-" + gameToAdd.getAwayTeam().getName() + ", " + gameToAdd.getGameDate());
             return true;
         }
@@ -248,6 +238,16 @@ public class AssociationRepresentative extends User implements Observer {
     public void setMyGame(Game newGame) {
         myGames.add(newGame);
     }
+
+    public boolean passMyGames (){
+
+        AssociationRepresentative toPassAsso = (AssociationRepresentative)db.getUserType("AssociationRepresentative");
+
+        //while ()
+        return true;
+    }
+
+
 
     @Override
     public void update(Observable o, Object arg) {

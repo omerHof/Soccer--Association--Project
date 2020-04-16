@@ -5,6 +5,7 @@ import SystemLogic.MainSystem;
 import Teams.Assent;
 import Teams.Team;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,7 +20,7 @@ public class Player extends User implements Assent {
     private double worth;
 
 
-    public Player(String userName, String password, String fullName, String userEmail ,Date birthDate, String courtRole) {
+    public Player(String userName, String password, String fullName, String userEmail, LocalDate birthDate, String courtRole) {
         this.userName = userName;
         this.password = password;
         this.userFullName = fullName;
@@ -163,14 +164,14 @@ public class Player extends User implements Assent {
 
 
 
-    public static int getAge(Date dateOfBirth) {
+    public static int getAge(LocalDate  dateOfBirth) {
 
         Calendar today = Calendar.getInstance();
         Calendar birthDate = Calendar.getInstance();
 
         int age = 0;
 
-        birthDate.setTime(dateOfBirth);
+        //birthDate.setTime(dateOfBirth);
         if (birthDate.after(today)) {
             throw new IllegalArgumentException("Can't be born in the future");
         }
