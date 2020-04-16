@@ -226,7 +226,7 @@ public class AssociationRepresentative extends User implements Observer {
      * gets the only active game
      * @return Game
      */
-    private Game findActiveGame(){
+    public Game findActiveGame(){
 
         for (Game game : myGames)
             if(game.getStatus().equals(Game.gameStatus.active))
