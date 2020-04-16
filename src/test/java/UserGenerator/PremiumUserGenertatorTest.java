@@ -7,6 +7,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import static org.junit.Assert.*;
@@ -30,7 +31,7 @@ public class PremiumUserGenertatorTest {
     @Test
     public void generate() {
 
-        Player testPlayer = (Player) preG.generate("p1", "94929", "", "player", "Aviv Alush", "tali@aviv", new Date(), "", "balam", "");
+        Player testPlayer = (Player) preG.generate("p1", "94929", "", "player", "Aviv Alush", "tali@aviv", null, "", "balam", "");
         assertNotNull(testPlayer);
 
         Manager testManager = (Manager) preG.generate("m1", "94929", "", "manager", "omer hof", "o@o", null, "", "", "");

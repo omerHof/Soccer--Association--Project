@@ -13,6 +13,12 @@ public class Notification {
     private User receiver;
     private notificationStatus status;
 
+    /**
+     * Contructor
+     * @param sender
+     * @param context
+     * @param receiver
+     */
     public Notification(User sender, String context, User receiver) {
         this.sender = sender;
         this.context = context;
@@ -20,6 +26,9 @@ public class Notification {
         this.status = notificationStatus.notSent;
     }
 
+    /**
+     * This method send the notification from the sender to the receiver
+     */
     public void send(){
         if(status == notificationStatus.notSent) {
             sender.getSentNotifications().add(this);
@@ -28,6 +37,10 @@ public class Notification {
         }
     }
 
+    /**
+     *
+     * @return the notification's context
+     */
     public String read(){
         status = notificationStatus.read;
         return this.context;
@@ -37,6 +50,7 @@ public class Notification {
         return sender;
     }
 
+    /** ----------------- GETTERS AND SETTERS ----------------- **/
     public void setSender(User sender) {
         this.sender = sender;
     }
