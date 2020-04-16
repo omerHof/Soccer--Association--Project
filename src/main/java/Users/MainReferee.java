@@ -6,6 +6,7 @@ import SystemLogic.MainSystem;
 import com.sun.javafx.collections.ArrayListenerHelper;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MainReferee extends Referee {
@@ -27,7 +28,9 @@ public class MainReferee extends Referee {
         gameToDeleteFrom.setEventBook(gameEventBook); // really necessary ???????
     }
 
-    private void editEvent(Game g) {
+    private void editEvent(Event.eventType type, int time, String playerName) {
+
+        Game gameToEdit = findCloseGame();
 
 
 
@@ -52,4 +55,16 @@ public class MainReferee extends Referee {
 
         return null; //no active game at the moment.
     }
+
+/*    private void createFinalReport (int numGame, List<String> allEvents){
+
+        Game gameToFinalReport = findCloseGame();
+
+        String finalReport = "";
+        for (String event : allEvents){
+            finalReport = finalReport + event;
+        }
+
+        gameToFinalReport.setFinalReport(finalReport);
+    }*/
 }

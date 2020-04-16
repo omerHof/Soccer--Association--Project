@@ -31,7 +31,7 @@ public class FanTest {
     public void setUp() throws Exception {
         f1 = new Fan("ido747","12345","ido kesttenbaum","ido747@gmail.com");
         t1 = new Team("hapoel tel aviv");
-        p1 = new Player("messi","12345","leo messi","leo123@gmail.com",new Date(),"striker");
+        p1 = new Player("messi","12345","leo messi","leo123@gmail.com",null,"striker");
         c1 = new Coach("klinger","123","nir klinger","nir123@gmail.com","head coach");
         DBTest = DB.getInstance();
         DBTest.addUser(f1);
@@ -128,7 +128,7 @@ public class FanTest {
         DBTest.addTeam(liverpool);
         DBTest.addUser(klopp);
 
-        Player mane = new Player("mane123","2222","sadio mane","sadio12@gmail.com",new Date(),"inside forward");
+        Player mane = new Player("mane123","2222","sadio mane","sadio12@gmail.com",null,"inside forward");
         DBTest.addUser(mane);
         mane.createPersonalPage(173,70,10,liverpool);
 

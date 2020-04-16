@@ -19,8 +19,8 @@ public class PlayerTest {
 
     @Before
     public void setUp() throws Exception {
-        p1 = new Player("cr7","777","cristiano ronaldo","cr7@gmail.com",new Date(),"striker");
-        p2 = new Player("neymarrrr","7757","neymar","nnn@gmail.com",new Date(),"striker");
+        p1 = new Player("cr7","777","cristiano ronaldo","cr7@gmail.com",null,"striker");
+        p2 = new Player("neymarrrr","7757","neymar","nnn@gmail.com",null,"striker");
         t1=new Team("juventus");
         t2=new Team("psg");
         dbtest = DB.getInstance();
