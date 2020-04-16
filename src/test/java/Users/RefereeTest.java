@@ -48,7 +48,7 @@ public class RefereeTest {
     public void addGame() {
     }
 
-    @Test
+   /* @Test
     public void watchGamesList() {
         Referee r = new Referee("r1", "rr", "Ziv Adler", "ziv@adler" ,"Kavan");
         ArrayList<Team> teams=new ArrayList<>();
@@ -97,5 +97,5 @@ public class RefereeTest {
         }catch (Exception e){
             java.lang.System.out.println("wrong");
         }
-    }
+    }*/
 }

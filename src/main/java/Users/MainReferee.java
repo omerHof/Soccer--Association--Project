@@ -23,7 +23,7 @@ public class MainReferee extends Referee {
         while (chose != "0") {
             switch (chose) {
                 case ("1"): {//Register a player
-                    addEvent(g);
+                    //addEvent(g);
                 }
                 case ("2"): {
                     editEvent(g);
@@ -49,7 +49,7 @@ public class MainReferee extends Referee {
 
     }
 
-    private void addEvent(Game g) {
+/*    private void addEvent(Game g) {
 
         Scanner sc = new Scanner(System.in); //System.in is a standard input stream
         System.out.println("Please enter an event type: (1 - goal, 2 - offside, 3 - foul, 4 - redTicket, 5 - yellowTicket, 6 - injury, 7 - substitiotion)");
@@ -88,6 +88,6 @@ public class MainReferee extends Referee {
             }
         }
        // g.addEvent(newEvent); ////////////////???????????????????? wait for the EVENT BOOK !!!
-    }
+    }*/
 
 }

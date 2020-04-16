@@ -8,7 +8,6 @@ import Users.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Observable;
 
 public class Team implements Comparable {
 
