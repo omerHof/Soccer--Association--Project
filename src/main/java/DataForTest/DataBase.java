@@ -95,6 +95,8 @@ public class DataBase {
     private MainReferee mainReferee4;
     private MainReferee mainReferee5;
 
+    private AssociationRepresentative representative;
+
     private AssociationRepresentative representative1;
     private AssociationRepresentative representative2;
     private AssociationRepresentative representative3;
@@ -217,6 +219,81 @@ public class DataBase {
 
         administrator = new Administrator("The King", "1234", "Oren Hason", "OrenHason@gmail.com");
 
+        /**Teams in String**/
+        /*
+        ArrayList<String> stringTeams = new ArrayList<>();
+        String barca = "barca";
+        String real = "real";
+        String man_u = "man u";
+        String man_city = "man city";
+        String liverpool = "liverpool";
+        String chelsea = "chelsea";
+        String roma = "roma";
+        String juve = "juve";
+        String milan = "milan";
+        String inter = "inter";
+        stringTeams.add(barca);
+        stringTeams.add(real);
+        stringTeams.add(man_u);
+        stringTeams.add(man_city);
+        stringTeams.add(liverpool);
+        stringTeams.add(chelsea);
+        stringTeams.add(roma);
+        stringTeams.add(juve);
+        stringTeams.add(milan);
+        stringTeams.add(inter);
+        */
+        /**Referee in String**/
+        /*
+        ArrayList<String> stringReferees = new ArrayList<>();
+        String referee1 = "referee1";
+        String referee2 = "referee2";
+        String referee3 = "referee3";
+        String referee4 = "referee4";
+        String referee5 = "referee5";
+        String referee6 = "referee6";
+        String referee7 = "referee7";
+        String referee8 = "referee8";
+        String referee9 = "referee9";
+        String referee10 = "referee10";
+        String referee11 = "referee11";
+        String referee12 = "referee12";
+        String referee13 = "referee13";
+        String referee14 = "referee14";
+        String referee15 = "referee15";
+        stringReferees.add(referee1);
+        stringReferees.add(referee2);
+        stringReferees.add(referee3);
+        stringReferees.add(referee4);
+        stringReferees.add(referee5);
+        stringReferees.add(referee6);
+        stringReferees.add(referee7);
+        stringReferees.add(referee8);
+        stringReferees.add(referee9);
+        stringReferees.add(referee10);
+        stringReferees.add(referee11);
+        stringReferees.add(referee12);
+        stringReferees.add(referee13);
+        stringReferees.add(referee14);
+        stringReferees.add(referee15);
+        */
+
+
+        /**AssociationRepresentative in String**/
+        /*
+        ArrayList<String> stringRepresentatives = new ArrayList<>();
+        String representative1 = "representative1";
+        String representative2 = "representative2";
+        String representative3 = "representative3";
+        String representative4 = "representative4";
+        String representative5 = "representative5";
+        stringRepresentatives.add(representative1);
+        stringRepresentatives.add(representative2);
+        stringRepresentatives.add(representative3);
+        stringRepresentatives.add(representative4);
+        stringRepresentatives.add(representative5);
+        */
+
 
         /**Management**/
         league = new League("Champions league", 10);
@@ -224,6 +301,9 @@ public class DataBase {
         seasons = new ArrayList<>();
         seasons.add(season);
         league.setAllSeasons(seasons);
+        //representative = new AssociationRepresentative("representative", "a", "a", "a");
+        //representative.addSeasonToLeague("Champions league",2020,scorePolicy.getName(), gameInlayPolicy.getName(),stringTeams,stringReferees,stringRepresentatives);
+
 
         /**DB**/
 
@@ -269,6 +349,7 @@ public class DataBase {
         db.setTeam(h);
         db.setTeam(i);
         db.setTeam(j);
+
     }
 
 }

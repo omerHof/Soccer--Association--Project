@@ -42,7 +42,7 @@ public class Season {
 
         this.allGames = iGameInlayPolicy.gameInlayPolicyAlgoImplementation(); //adds list of games to each mahzor.
 
-        assignUsersToGames(3); //assign 3 referees for each game, 1 main referee, and 1 association rep.
+        //assignUsersToGames(3); //assign 3 referees for each game, 1 main referee, and 1 association rep.
         this.seasonScoreBoard = new SeasonScoreBoard(allTeams,iScorePolicy,allGames.get(1).get(0).getTimeOfGame(),allGames.size());
 
     }
@@ -176,9 +176,13 @@ public class Season {
             case "TwoRoundsGamePolicy":
                 this.iGameInlayPolicy = new TwoRoundsGamePolicy(this.allTeams,getYear());
                 break;
-            case "OtherGamePolicy":
-                // code block
+            case "OneRoundGamePolicy":
+                this.iGameInlayPolicy = new OneRoundGamePolicy(this.allTeams, getYear());
                 break;
+            case "RandomTwoRoundsGamePolicy":
+                this.iGameInlayPolicy = new RandomTwoRoundsGamePolicy(this.allTeams, getYear());
+                break;
+
             default:
                 this.iGameInlayPolicy = new TwoRoundsGamePolicy(this.allTeams,getYear());
         }
@@ -206,8 +210,8 @@ public class Season {
             case "RegularScorePolicy":
                 this.iScorePolicy = new RegularScorePolicy();
                 break;
-            case "OtherScorePolicy":
-                // code block
+            case "GoalScorePolicy":
+                this.iScorePolicy = new GoalScorePolicy();
                 break;
             default:
                 this.iScorePolicy = new RegularScorePolicy();
