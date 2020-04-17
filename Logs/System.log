@@ -240,3 +240,34 @@
 2020.04.13 20:29:36.660 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
 2020.04.13 20:29:36.662 INFO  SystemLogic.MainSystem - r1: referee's details were updated.
 2020.04.13 20:32:44.021 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.16 19:48:36.277 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.17 18:59:31.825 INFO  SystemLogic.MainSystem - the player ver was added successfully to the team hapoel tel aviv
+2020.04.17 18:59:31.831 INFO  SystemLogic.MainSystem - the player ez7 was added successfully to the team hapoel tel aviv
+2020.04.17 18:59:31.831 INFO  SystemLogic.MainSystem - the player ez7 was added successfully to the team maccabi tel aviv
+2020.04.17 19:18:06.618 INFO  SystemLogic.MainSystem - the player ver was added successfully to the team hapoel tel aviv
+2020.04.17 19:18:06.625 INFO  SystemLogic.MainSystem - the player ez7 was added successfully to the team hapoel tel aviv
+2020.04.17 19:18:06.625 INFO  SystemLogic.MainSystem - the player ez7 was removed successfully from the team hapoel tel aviv
+2020.04.17 19:18:06.626 INFO  SystemLogic.MainSystem - the player ez7 was added successfully to the team maccabi tel aviv
+2020.04.17 19:19:22.023 INFO  SystemLogic.MainSystem - the player ver was added successfully to the team hapoel tel aviv
+2020.04.17 19:19:22.027 INFO  SystemLogic.MainSystem - the player ez7 was added successfully to the team hapoel tel aviv
+2020.04.17 19:19:22.027 INFO  SystemLogic.MainSystem - the player ez7 was removed successfully from the team hapoel tel aviv
+2020.04.17 19:19:22.028 INFO  SystemLogic.MainSystem - the player ez7 was added successfully to the team maccabi tel aviv
+2020.04.17 19:19:37.624 INFO  SystemLogic.MainSystem - the player ver was added successfully to the team hapoel tel aviv
+2020.04.17 19:19:37.629 INFO  SystemLogic.MainSystem - the player ez7 was added successfully to the team hapoel tel aviv
+2020.04.17 19:19:37.630 INFO  SystemLogic.MainSystem - the player ez7 was removed successfully from the team hapoel tel aviv
+2020.04.17 19:19:37.630 INFO  SystemLogic.MainSystem - the player ez7 was added successfully to the team maccabi tel aviv
+2020.04.17 19:25:10.230 INFO  SystemLogic.MainSystem - the player ver was added successfully to the team hapoel tel aviv
+2020.04.17 19:25:10.236 INFO  SystemLogic.MainSystem - the player ez7 was removed successfully from the team hapoel tel aviv
+2020.04.17 19:26:28.552 INFO  SystemLogic.MainSystem - the player ver was added successfully to the team hapoel tel aviv
+2020.04.17 19:26:28.555 INFO  SystemLogic.MainSystem - the player ver was removed successfully from the team hapoel tel aviv
+2020.04.17 19:27:02.939 INFO  SystemLogic.MainSystem - the player ver was added successfully to the team hapoel tel aviv
+2020.04.17 19:27:02.948 INFO  SystemLogic.MainSystem - the player ver was removed successfully from the team hapoel tel aviv
+2020.04.17 19:57:30.257 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team hapoel tel aviv
+2020.04.17 19:57:56.782 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team hapoel tel aviv
+2020.04.17 20:00:22.802 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team hapoel tel aviv
+2020.04.17 20:00:22.806 INFO  SystemLogic.MainSystem - the coach kling was removed successfully to the team hapoel tel aviv
+2020.04.17 20:00:22.808 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team maccabi tel aviv
+2020.04.17 20:01:23.423 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team hapoel tel aviv
+2020.04.17 20:01:23.426 INFO  SystemLogic.MainSystem - the coach kling was removed successfully to the team hapoel tel aviv
+2020.04.17 20:01:47.475 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team hapoel tel aviv
+2020.04.17 20:01:47.478 INFO  SystemLogic.MainSystem - the coach kling was removed successfully to the team hapoel tel aviv

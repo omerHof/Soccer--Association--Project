@@ -133,4 +133,5 @@ public class TeamPage extends Observable {
     public void setNation(String nation) {
         this.nation = nation;
     }
+
 }

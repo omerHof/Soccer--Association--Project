@@ -226,4 +226,5 @@ f.	לכתוב בקובץ הלוג.
         return logString;
     }
 
+
 }
