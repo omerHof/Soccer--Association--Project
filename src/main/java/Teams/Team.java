@@ -202,6 +202,7 @@ public class Team implements Comparable {
             db.setTeam(team);
         }
         teamOwners.put(teamOwner.getUserFullName(), teamOwner);
+        teamOwner.setTeam(this);
         MainSystem.LOG.info("the team owner " + teamOwner.getUserName() + " was added successfully to the team " + this.getName());
     }
 
