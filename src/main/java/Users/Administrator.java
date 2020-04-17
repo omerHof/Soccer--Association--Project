@@ -2,9 +2,14 @@ package Users;
 
 import Games.Game;
 import SystemLogic.DB;
+import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Team;
+import sun.rmi.runtime.Log;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.security.acl.Owner;
 import java.util.*;
 
@@ -202,7 +207,23 @@ f.	לכתוב בקובץ הלוג.
 
     ////need to do
     public String watchLog(){
-        return null;
+        String logString ="";
+
+
+        try{
+            FileInputStream fstream = new FileInputStream("System.log");
+            BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+            String strLine;
+            /* read log line by line */
+            while ((strLine = br.readLine()) != null)   {
+                /* parse strLine to obtain what you want */
+                logString =logString +"\n"+ strLine;
+            }
+            fstream.close();
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+        }
+        return logString;
     }
 
 }

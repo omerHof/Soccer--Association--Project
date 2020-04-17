@@ -1,5 +1,6 @@
 package Users;
 
+import Games.Game;
 import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import Teams.Stadium;
@@ -24,6 +25,14 @@ public class Fan extends User implements Observer {
     private String pageMessage;
     private boolean teamAlert;
     private String teamMessage;
+
+    private boolean preGameAlert;
+    private String preGameMessage;
+    private boolean startGameAlert;
+    private String startGameMessage;
+    private boolean endGameAlert;
+    private String endGameMessage;
+
     //private Search searcher;
 
     public Fan(String userName, String password, String fullName, String email) {
@@ -37,6 +46,10 @@ public class Fan extends User implements Observer {
         followedTeams = new HashMap<>();
         pageAlert = false;
         teamAlert = false;
+        preGameAlert=false;
+        startGameAlert = false;
+        endGameAlert = false;
+
     }
 
     public boolean isPageAlert() {
@@ -58,48 +71,58 @@ public class Fan extends User implements Observer {
     @Override
     public void update(Observable o, Object arg) {
         MainSystem.LOG.info("The user  get update");
-        if(o instanceof PersonalPage){
-            Team team = (Team)arg;
-            String name = (String)((PersonalPage) o).getName();
-            pageAlert=true;
-            pageMessage= team.getName();
-            System.out.println("new update! "+name+" has moved to "+pageMessage);
+        if (o instanceof PersonalPage) {
+            Team team = (Team) arg;
+            String name = (String) ((PersonalPage) o).getName();
+            pageAlert = true;
+            pageMessage = team.getName();
+            System.out.println("new update! " + name + " has moved to " + pageMessage);
         }
-        if(o instanceof TeamPage){
-            teamAlert=true;
-            TeamPage team = (TeamPage)o;
-            if(arg instanceof Player){
-                Player player=( Player)arg;
-                pageMessage= player.getUserFullName();
-                System.out.println("new update! the player "+pageMessage+" has moved to "+team.getName());
+        if (o instanceof TeamPage) {
+            teamAlert = true;
+            TeamPage team = (TeamPage) o;
+            if (arg instanceof Player) {
+                Player player = (Player) arg;
+                pageMessage = player.getUserFullName();
+                System.out.println("new update! the player " + pageMessage + " has moved to " + team.getName());
 
+            } else if (arg instanceof Coach) {
+                Coach Coach = (Coach) arg;
+                pageMessage = Coach.getUserFullName();
+                System.out.println("new update! the Coach " + pageMessage + " has moved to " + team.getName());
+            } else if (arg instanceof Stadium) {
+                Stadium stadium = (Stadium) arg;
+                // pageMessage= stadium.getName();
+                System.out.println("new update! the team " + team.getName() + " has a new stadium");
+
+            } else if (arg instanceof TeamOwner) {
+                TeamOwner TeamOwner = (TeamOwner) arg;
+                pageMessage = TeamOwner.getUserFullName();
+                System.out.println("new update! the TeamOwner " + pageMessage + " has moved to " + team.getName());
+
+            } else if (arg instanceof Manager) {
+                Manager Manager = (Manager) arg;
+                pageMessage = Manager.getUserFullName();
+                System.out.println("new update! the Manager " + pageMessage + " has moved to " + team.getName());
+
+            } else if (arg instanceof Game) {
+                Game game = (Game) arg;
+                Team homeTeam = game.getHomeTeam();
+                Team awayTeam = game.getAwayTeam();
+                if (game.getStatus() == Game.gameStatus.preGame) {
+                    preGameAlert = true;
+                    System.out.println("REMINDER! in 1 day the game between " + homeTeam + " and " + awayTeam + " will start");
+
+                }
+                if (game.getStatus() == Game.gameStatus.active) {
+                    startGameAlert = true;
+                    System.out.println("new update! the game between " + homeTeam + " and " + awayTeam + " has started!");
+                }
+                if (game.getStatus() == Game.gameStatus.finish) {
+                    endGameAlert = true;
+                    System.out.println("new update! the game between " + homeTeam + " and " + awayTeam + " has finish in score " + game.getScore());
+                }
             }
-
-            else if(arg instanceof Coach){
-                Coach Coach=( Coach)arg;
-                pageMessage= Coach.getUserFullName();
-                System.out.println("new update! the Coach "+pageMessage+" has moved to "+team.getName());
-            }
-            else if(arg instanceof Stadium){
-                Stadium stadium=( Stadium)arg;
-               // pageMessage= stadium.getName();
-                System.out.println("new update! the team "+team.getName()+" has a new stadium");
-
-            }
-            else if(arg instanceof TeamOwner){
-                TeamOwner TeamOwner=( TeamOwner)arg;
-                pageMessage= TeamOwner.getUserFullName();
-                System.out.println("new update! the TeamOwner "+pageMessage+" has moved to "+team.getName());
-
-            }
-            else if(arg instanceof Manager){
-                Manager Manager=( Manager)arg;
-                pageMessage= Manager.getUserFullName();
-                System.out.println("new update! the Manager "+pageMessage+" has moved to "+team.getName());
-
-            }
-
-
         }
 
     }

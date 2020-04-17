@@ -19,6 +19,7 @@ public class Player extends User implements Assent {
     private int salary;
     private DB DB1;
     private double worth;
+    private Team currentTeam;
 
 
     public Player(String userName, String password, String fullName, String userEmail, LocalDate birthDate, String courtRole) {
@@ -31,6 +32,7 @@ public class Player extends User implements Assent {
         page =null;
         salary = 0;
         DB1=DB.getInstance();
+        currentTeam = null;
     }
 
 
@@ -38,6 +40,7 @@ public class Player extends User implements Assent {
         MainSystem.LOG.info("The player " +getUserFullName()+ " create personal page");
 
         page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, team);
+        setCurrentTeam(team);
         return page;
     }
 
@@ -92,11 +95,13 @@ public class Player extends User implements Assent {
         }
     }
     public void setCurrentTeam(Team team){
+        currentTeam=team;
         if(page!=null) {
             page.setCurrentTeam(team);
             page.setOneTeamToHistory(team.getName());
-            DB1.setUser(this);
         }
+        DB1.setUser(this);
+
     }
     public int getHeight(){
         if(page!=null){
@@ -119,10 +124,7 @@ public class Player extends User implements Assent {
 
     }
     public Team getCurrentTeam(){
-        if(page!=null){
-            return page.getCurrentTeam();
-        }
-        return null;
+       return currentTeam;
     }
 
 
