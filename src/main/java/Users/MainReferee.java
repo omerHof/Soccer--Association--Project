@@ -15,9 +15,19 @@ public class MainReferee extends Referee {
         super(userName, password, fullName, userEmail, qualification);
     }
 
-    private void deleteEvent(Event.eventType type, int time, String playerName) {
+    ////////////////////////////// USE CASE 10.4 //////////////////////////////
+    private void editGameEvents (String report){
 
-        Game gameToDeleteFrom = findCloseGame();
+        Game gameToEdit = findFinishGame();
+
+        if(report != null)
+            gameToEdit.setFinalReport(report);
+    }
+
+
+/*    private void deleteEvent(Event.eventType type, int time, String playerName) {
+
+        Game gameToDeleteFrom = findFinishGame();
         ArrayList<Event> gameEventBook = gameToDeleteFrom.getEventBook();
 
         for (Event event : gameEventBook){
@@ -26,19 +36,23 @@ public class MainReferee extends Referee {
         }
 
         gameToDeleteFrom.setEventBook(gameEventBook); // really necessary ???????
-    }
+    }*/
 
-    private void editEvent(Event.eventType type, int time, String playerName) {
+ /*   private void editGEvent(Event.eventType type, int time, String playerName) {
 
-        Game gameToEdit = findCloseGame();
+        Game gameToEdit = findFinishGame();
 
+        if (gameToEdit != null) { //there is a close game he can still edit (within 5 hours).
+            Event addEvent = new Event(type, time, playerName);
 
+            gameToEdit.addEvent(addEvent);
+            MainSystem.LOG.info("A new event: " + type + " was added to game: " + gameToAddTo.getHomeTeam().getName() + "-" + gameToAddTo.getAwayTeam().getName() + ", " + gameToAddTo.getGameDate());
+        }
+    }*/
 
-    }
+   /* private void addEvent(Event.eventType type, int time, String playerName) {
 
-    private void addEvent(Event.eventType type, int time, String playerName) {
-
-        Game gameToAddTo = findCloseGame();
+        Game gameToAddTo = findFinishGame();
 
         if (gameToAddTo != null) { //there is a close game he can still edit (within 5 hours).
             Event addEvent = new Event(type, time, playerName);
@@ -46,14 +60,15 @@ public class MainReferee extends Referee {
             MainSystem.LOG.info("A new event: " + type + " was added to game: " + gameToAddTo.getHomeTeam().getName() + "-" + gameToAddTo.getAwayTeam().getName() + ", " + gameToAddTo.getGameDate());
             gameToAddTo.addEvent(addEvent);
         }
-    }
+    }*/
 
-    private Game findCloseGame() {
+    //returns a game that already ended, but still within 5 hours, so can be edited.
+    private Game findFinishGame() {
         for (Game game : super.myGames)
-            if(game.getStatus().equals(Game.gameStatus.close))
+            if(game.getStatus().equals(Game.gameStatus.finish))
                 return game;
 
-        return null; //no active game at the moment.
+        return null; //no finish game at the moment.
     }
 
 /*    private void createFinalReport (int numGame, List<String> allEvents){

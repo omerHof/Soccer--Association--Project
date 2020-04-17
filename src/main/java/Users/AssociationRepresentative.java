@@ -5,6 +5,7 @@ import Games.Game;
 import LeagueSeasonsManagment.*;
 import SystemLogic.DB;
 import SystemLogic.MainSystem;
+import SystemLogic.Notification;
 import Teams.Team;
 import UserGenerator.IUserGenerator;
 import UserGenerator.PremiumUserGenertator;
@@ -140,7 +141,8 @@ public class AssociationRepresentative extends User implements Observer {
             db.removeUser(oldFan.userName); //removes the fan
             db.addUser(newReferee); //adds the referee.
 
-            ////////// send email ???????????????/ //////// todo: email.
+            Notification notification = new Notification(this, "Congrats! You were added as a referee in the system.", newReferee);
+            notification.send(); //send a notification to this added referee.
 
             MainSystem.LOG.info("the fan: " + oldFan.getUserName() + " became a referee.");
             return true;
@@ -164,10 +166,11 @@ public class AssociationRepresentative extends User implements Observer {
             Fan newFan = (Fan) simpleUserG.generate(oldReferee.userName, oldReferee.password, "", "", oldReferee.userFullName,
                     oldReferee.userEmail,  null, "", "", ""); //creates a new one.
 
-            ////////// send email ???????????????/ //////// todo: email.
-
             db.removeUser(oldReferee.userName); //removes referee
             db.addUser(newFan); //adds as a fan.
+
+            Notification notification = new Notification(this, "Unfortunately You are no longer a referee in the system, your status is now a fan.", newFan);
+            notification.send(); //send a notification to this added referee.
 
             MainSystem.LOG.info("referee: " + newFan.userName + " was removed, and added as a simple fan.");
             return true;
@@ -194,7 +197,6 @@ public class AssociationRepresentative extends User implements Observer {
             }
             //season.setAllReferees(allReferees);
             //MainSystem.LOG.info("Referees were added to league: " + leagueName + ", season: " + season.getYear());
-
         }
 
         else{
