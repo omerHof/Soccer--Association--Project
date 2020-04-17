@@ -1,74 +1,27 @@
 package Games;
 
-import LeagueSeasonsManagment.*;
+import DataForTest.DateBase;
 import SystemLogic.DB;
-import Teams.Statistics;
-import Teams.Team;
-import Users.AssociationRepresentative;
-import Users.MainReferee;
-import Users.Referee;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDateTime;
 import java.time.Month;
-import java.util.ArrayList;
-
 import static org.junit.Assert.*;
 
 public class GameTest {
-    Season season;
-    ArrayList<Team> teams;
-    ArrayList<Referee> referees;
-    Referee referee1;
-    Referee referee2;
-    Referee referee3;
-    MainReferee mainReferee;
 
-    ArrayList<AssociationRepresentative> representatives;
-    AssociationRepresentative representative;
-    Team a= new Team("barca");
-    Team b= new Team("real");
-
-
-    Statistics statisticsA;
-    Statistics statisticsB;
-
-
-    IScorePolicy policy;
-
+    DB db = DB.getInstance();
+    DateBase test = new DateBase();
     Game game;
 
     @Before
     public void setUp() throws Exception {
-        DB.getInstance();
 
-        teams=new ArrayList<>();
-        policy= new RegularScorePolicy();
-
-        referees = new ArrayList<>();
-        referee1 = new Referee("a","a","a","a","a");
-        referees.add(referee1);
-        referee2 = new Referee("a","a","a","a","a");
-        referees.add(referee2);
-        referee3 = new Referee("a","a","a","a","a");
-        referees.add(referee3);
-        mainReferee = new MainReferee("a","a","a","a","a");
-        DB.getInstance().setUser(mainReferee);
-        representatives = new ArrayList<>();
-        representative = new AssociationRepresentative("a","a","a","a");
-        representatives.add(representative);
-
-        statisticsA= new Statistics(policy);
-        a.setStatistics(statisticsA);
-        teams.add(a);
-        statisticsB= new Statistics(policy);
-        b.setStatistics(statisticsB);
-        teams.add(b);
-
-        season= new Season(2020,teams,referees,representatives, "RegularScorePolicy","TwoRoundsGamePolicy");
-        game = season.getAllGames().get(1).get(0);
+        game = db.getLeague("Champions league").getSeasonByYear(2020).getAllGames().get(1).get(0);
+        //db.getTeam("barca").setBudget(100);
+        //double money = db.getLeague("Champions league").getSeasonByYear(2020).getSeasonScoreBoard().getTeamByName("barca").getBudget();
     }
 
     @After
