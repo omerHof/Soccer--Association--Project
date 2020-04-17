@@ -23,7 +23,6 @@ public class Game extends Observable{
     private gameStatus status;
     private Team homeTeam;
     private Team awayTeam;
-    private Date gameDate;//todo remove
     private String score;
     private ArrayList<Event> eventBook;
     private List<Referee> gameReferees;
@@ -117,8 +116,8 @@ public class Game extends Observable{
         return awayTeam;
     }
 
-    public Date getGameDate() {
-        return gameDate;
+    public LocalDateTime getGameDate() {
+        return timeOfGame;
     }
 
     public gameStatus getStatus() { return status; }
@@ -164,8 +163,8 @@ public class Game extends Observable{
         this.awayTeam = awayTeam;
     }
 
-    public void setGameDate(Date gameDate) {
-        this.gameDate = gameDate;
+    public void setGameDate(LocalDateTime gameDate) {
+        this.timeOfGame = gameDate;
     }
 
     public void setScore(String score) {

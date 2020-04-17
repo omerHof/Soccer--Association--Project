@@ -38,12 +38,12 @@ public class Search {
      */
     public List<Object> search (String toSearch, Category category){
 
-        List<Object> toReturn = new LinkedList<>();
+        List<Object> toReturn;
 
         if (category!= null)
-            searchByCategory(toSearch, category);
+            toReturn = searchByCategory(toSearch, category);
         else
-            searchAll(toSearch);
+            toReturn = searchAll(toSearch);
 
     return toReturn;
     }

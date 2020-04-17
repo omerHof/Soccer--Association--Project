@@ -1,6 +1,6 @@
 package Games;
 
-import DataForTest.DateBase;
+import DataForTest.DataBase;
 import SystemLogic.DB;
 import org.junit.After;
 import org.junit.Before;
@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class GameTest {
 
     DB db = DB.getInstance();
-    DateBase test = new DateBase();
+    DataBase test = new DataBase();
     Game game;
 
     @Before
