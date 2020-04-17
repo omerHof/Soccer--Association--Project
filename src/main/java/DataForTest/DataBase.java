@@ -19,7 +19,7 @@ import Users.*;
 
 import java.util.ArrayList;
 
-public class DateBase {
+public class DataBase {
 
 
     DB db;
@@ -106,7 +106,7 @@ public class DateBase {
     /**
      * constructor
      */
-    public DateBase() {
+    public DataBase() {
 
         db = DB.getInstance();
 
