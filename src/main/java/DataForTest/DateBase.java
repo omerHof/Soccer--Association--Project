@@ -1,4 +1,15 @@
-package Games;
+package DataForTest;
+
+import LeagueSeasonsManagment.*;
+import SystemLogic.DB;
+import Teams.Statistics;
+import Teams.Team;
+import Users.Administrator;
+import Users.AssociationRepresentative;
+import Users.MainReferee;
+import Users.Referee;
+
+import java.util.ArrayList;
 
 import LeagueSeasonsManagment.*;
 import SystemLogic.DB;
@@ -8,22 +19,28 @@ import Users.*;
 
 import java.util.ArrayList;
 
-public class HelpTest {
+public class DateBase {
 
 
     DB db;
 
-    /**Management**/
+    /**
+     * Management
+     **/
     private League league;
     private ArrayList<Season> seasons;
     private Season season;
 
 
-    /**Policies**/
+    /**
+     * Policies
+     **/
     private IGameInlayPolicy gameInlayPolicy;
     private IScorePolicy scorePolicy;
 
-    /**Teams**/
+    /**
+     * Teams
+     **/
     private ArrayList<Team> teams;
     private Team a = new Team("barca");
     private Team b = new Team("real");
@@ -37,7 +54,9 @@ public class HelpTest {
     private Team j = new Team("inter");
 
 
-    /**Statistics**/
+    /**
+     * Statistics
+     **/
     private Statistics statisticsA;
     private Statistics statisticsB;
     private Statistics statisticsC;
@@ -50,9 +69,11 @@ public class HelpTest {
     private Statistics statisticsJ;
 
 
-    /**Users**/
-    private ArrayList<Referee>referees;
-    private ArrayList<AssociationRepresentative>representatives;
+    /**
+     * Users
+     **/
+    private ArrayList<Referee> referees;
+    private ArrayList<AssociationRepresentative> representatives;
     private Referee referee1;
     private Referee referee2;
     private Referee referee3;
@@ -85,12 +106,12 @@ public class HelpTest {
     /**
      * constructor
      */
-    public HelpTest() {
+    public DateBase() {
 
-        db=DB.getInstance();
+        db = DB.getInstance();
 
         /**Policies-score**/
-        scorePolicy= new RegularScorePolicy();
+        scorePolicy = new RegularScorePolicy();
 
         /**Teams**/
         teams = new ArrayList<>();
@@ -106,25 +127,25 @@ public class HelpTest {
         Team j = new Team("inter");
 
         /**Statistics**/
-        statisticsA= new Statistics(scorePolicy);
+        statisticsA = new Statistics(scorePolicy);
         a.setStatistics(statisticsA);
-        statisticsB= new Statistics(scorePolicy);
+        statisticsB = new Statistics(scorePolicy);
         b.setStatistics(statisticsB);
-        statisticsC= new Statistics(scorePolicy);
+        statisticsC = new Statistics(scorePolicy);
         c.setStatistics(statisticsC);
-        statisticsD= new Statistics(scorePolicy);
+        statisticsD = new Statistics(scorePolicy);
         d.setStatistics(statisticsD);
-        statisticsE= new Statistics(scorePolicy);
+        statisticsE = new Statistics(scorePolicy);
         e.setStatistics(statisticsE);
-        statisticsF= new Statistics(scorePolicy);
+        statisticsF = new Statistics(scorePolicy);
         f.setStatistics(statisticsF);
-        statisticsG= new Statistics(scorePolicy);
+        statisticsG = new Statistics(scorePolicy);
         g.setStatistics(statisticsG);
-        statisticsH= new Statistics(scorePolicy);
+        statisticsH = new Statistics(scorePolicy);
         h.setStatistics(statisticsH);
-        statisticsI= new Statistics(scorePolicy);
+        statisticsI = new Statistics(scorePolicy);
         i.setStatistics(statisticsI);
-        statisticsJ= new Statistics(scorePolicy);
+        statisticsJ = new Statistics(scorePolicy);
         j.setStatistics(statisticsJ);
 
         teams.add(a);
@@ -140,53 +161,53 @@ public class HelpTest {
 
 
         /**Policies-game**/
-        gameInlayPolicy= new OneRoundGamePolicy(teams,2020);
+        gameInlayPolicy = new OneRoundGamePolicy(teams, 2020);
 
 
         /**Users**/
         referees = new ArrayList<>();
-        referee1 = new Referee("referee1","a","a","a","a");
+        referee1 = new Referee("referee1", "a", "a", "a", "a");
         referees.add(referee1);
-        referee2 = new Referee("referee2","a","a","a","a");
+        referee2 = new Referee("referee2", "a", "a", "a", "a");
         referees.add(referee2);
-        referee3 = new Referee("referee3","a","a","a","a");
+        referee3 = new Referee("referee3", "a", "a", "a", "a");
         referees.add(referee3);
-        referee4 = new Referee("referee4","a","a","a","a");
+        referee4 = new Referee("referee4", "a", "a", "a", "a");
         referees.add(referee4);
-        referee5 = new Referee("referee5","a","a","a","a");
+        referee5 = new Referee("referee5", "a", "a", "a", "a");
         referees.add(referee5);
-        referee6 = new Referee("referee6","a","a","a","a");
+        referee6 = new Referee("referee6", "a", "a", "a", "a");
         referees.add(referee6);
-        referee7 = new Referee("referee7","a","a","a","a");
+        referee7 = new Referee("referee7", "a", "a", "a", "a");
         referees.add(referee7);
-        referee8 = new Referee("referee8","a","a","a","a");
+        referee8 = new Referee("referee8", "a", "a", "a", "a");
         referees.add(referee8);
-        referee9 = new Referee("referee9","a","a","a","a");
+        referee9 = new Referee("referee9", "a", "a", "a", "a");
         referees.add(referee9);
-        referee10 = new Referee("referee10","a","a","a","a");
+        referee10 = new Referee("referee10", "a", "a", "a", "a");
         referees.add(referee10);
-        referee11 = new Referee("referee11","a","a","a","a");
+        referee11 = new Referee("referee11", "a", "a", "a", "a");
         referees.add(referee11);
-        referee12 = new Referee("referee12","a","a","a","a");
+        referee12 = new Referee("referee12", "a", "a", "a", "a");
         referees.add(referee12);
-        referee13 = new Referee("referee13","a","a","a","a");
+        referee13 = new Referee("referee13", "a", "a", "a", "a");
         referees.add(referee13);
-        referee14 = new Referee("referee14","a","a","a","a");
+        referee14 = new Referee("referee14", "a", "a", "a", "a");
         referees.add(referee14);
-        referee15 = new Referee("referee15","a","a","a","a");
+        referee15 = new Referee("referee15", "a", "a", "a", "a");
         referees.add(referee15);
-        mainReferee1 = new MainReferee("mainReferee1","a","a","a","a");
-        mainReferee2 = new MainReferee("mainReferee2","a","a","a","a");
-        mainReferee3 = new MainReferee("mainReferee3","a","a","a","a");
-        mainReferee4 = new MainReferee("mainReferee4","a","a","a","a");
-        mainReferee5 = new MainReferee("mainReferee5","a","a","a","a");
+        mainReferee1 = new MainReferee("mainReferee1", "a", "a", "a", "a");
+        mainReferee2 = new MainReferee("mainReferee2", "a", "a", "a", "a");
+        mainReferee3 = new MainReferee("mainReferee3", "a", "a", "a", "a");
+        mainReferee4 = new MainReferee("mainReferee4", "a", "a", "a", "a");
+        mainReferee5 = new MainReferee("mainReferee5", "a", "a", "a", "a");
 
         representatives = new ArrayList<>();
-        representative1 = new AssociationRepresentative("representative1","a","a","a");
-        representative2 = new AssociationRepresentative("representative2","a","a","a");
-        representative3= new AssociationRepresentative("representative3","a","a","a");
-        representative4 = new AssociationRepresentative("representative4","a","a","a");
-        representative5 = new AssociationRepresentative("representative5","a","a","a");
+        representative1 = new AssociationRepresentative("representative1", "a", "a", "a");
+        representative2 = new AssociationRepresentative("representative2", "a", "a", "a");
+        representative3 = new AssociationRepresentative("representative3", "a", "a", "a");
+        representative4 = new AssociationRepresentative("representative4", "a", "a", "a");
+        representative5 = new AssociationRepresentative("representative5", "a", "a", "a");
 
         representatives.add(representative1);
         representatives.add(representative2);
@@ -194,12 +215,12 @@ public class HelpTest {
         representatives.add(representative4);
         representatives.add(representative5);
 
-        administrator = new Administrator("The King","1234","Oren Hason","OrenHason@gmail.com");
+        administrator = new Administrator("The King", "1234", "Oren Hason", "OrenHason@gmail.com");
 
 
         /**Management**/
-        league = new League("Champions league",10);
-        season = new Season(2020,teams,referees,representatives,scorePolicy.getName(),gameInlayPolicy.getName());
+        league = new League("Champions league", 10);
+        season = new Season(2020, teams, referees, representatives, scorePolicy.getName(), gameInlayPolicy.getName());
         seasons = new ArrayList<>();
         seasons.add(season);
         league.setAllSeasons(seasons);
@@ -237,7 +258,6 @@ public class HelpTest {
         db.setUser(representative5);
 
         db.setUser(administrator);
-
 
         db.setTeam(a);
         db.setTeam(b);
