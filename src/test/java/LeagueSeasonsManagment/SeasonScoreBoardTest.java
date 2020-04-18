@@ -1,5 +1,7 @@
 package LeagueSeasonsManagment;
 
+import DataForTest.DataBase;
+import Games.Game;
 import SystemLogic.DB;
 import Teams.Statistics;
 import Teams.Team;
@@ -15,47 +17,14 @@ import static org.junit.Assert.*;
 
 public class SeasonScoreBoardTest {
 
-    SeasonScoreBoard seasonScoreBoard;
-    ArrayList<Team> teams=new ArrayList<>();
-
-    Team a= new Team("barca");
-    Team b= new Team("real");
-    Team c= new Team("man u");
-    Team d= new Team("man city");
-    Team e= new Team("liverpool");
-
-    Statistics statisticsA;
-    Statistics statisticsB;
-    Statistics statisticsC;
-    Statistics statisticsD;
-    Statistics statisticsE;
-
-    IScorePolicy policy;
-
+    DB db = DB.getInstance();
+    DataBase test = new DataBase();
+    Season season;
 
     @Before
     public void setUp() throws Exception {
-        policy= new GoalScorePolicy();
-        statisticsA= new Statistics(policy);
-        a.setStatistics(statisticsA);
-        teams.add(a);
-        statisticsB= new Statistics(policy);
-        b.setStatistics(statisticsB);
-        teams.add(b);
-        statisticsC= new Statistics(policy);
-        c.setStatistics(statisticsC);
-        teams.add(c);
-        statisticsD= new Statistics(policy);
-        d.setStatistics(statisticsD);
-        teams.add(d);
-        statisticsE= new Statistics(policy);
-        e.setStatistics(statisticsE);
-        teams.add(e);
-        LocalDateTime time =LocalDateTime.now();
-        seasonScoreBoard= new SeasonScoreBoard(teams,policy,time,teams.size()*2);
-        DB.getInstance();
+        season = db.getLeague("Champions league").getSeasonByYear(2021);
     }
-
 
     @After
     public void tearDown() throws Exception {
@@ -64,7 +33,8 @@ public class SeasonScoreBoardTest {
     @Test
     public void sortByValue() {
         try{
-            seasonScoreBoard.sortByValue();
+            //season.getSeasonScoreBoard().sortByValue();
+            Thread.sleep(60000);
         }catch (Exception e) {
             System.out.println("error");
         }
@@ -73,6 +43,7 @@ public class SeasonScoreBoardTest {
     @Test
     public void showTable() {
         try{
+            SeasonScoreBoard seasonScoreBoard = season.getSeasonScoreBoard();
             seasonScoreBoard.getTeamByName("barca").getStatistics().setScore(5);
             seasonScoreBoard.getTeamByName("man u").getStatistics().setScore(4);
             seasonScoreBoard.getTeamByName("barca").getStatistics().setGoals(3);

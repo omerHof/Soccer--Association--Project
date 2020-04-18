@@ -104,7 +104,7 @@ public class TwoRoundsGamePolicy implements IGameInlayPolicy {
                 games.add(game);
             }
             listOfGames.put(day + 1, games);
-            timeOfGame = timeOfGame.plus(1, ChronoUnit.MINUTES);//todo change to week
+            timeOfGame = timeOfGame.plus(30, ChronoUnit.SECONDS);//todo change to 1 week
         }
     }
 }

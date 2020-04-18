@@ -10,6 +10,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 import static java.util.concurrent.TimeUnit.DAYS;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
  * this class represent the table of a season
@@ -33,7 +34,8 @@ public class SeasonScoreBoard {
         this.teams = teams;
         this.policy = policy;
         this.table = initTable();
-        this.firstGameDate = firstGameDate;
+        //this.firstGameDate = firstGameDate;//todo put this line
+        this.firstGameDate = LocalDateTime.now();//todo remove this line
         this.numOfWeeks = numOfWeeks;
         updateTable(); //class- update the table after every week game
     }
@@ -83,6 +85,7 @@ public class SeasonScoreBoard {
      */
     public void sortByValue() {
         Collections.sort(table);
+        showTable();
     }
 
     /**
@@ -107,7 +110,7 @@ public class SeasonScoreBoard {
     public void updateTable() {
         try {
             LocalDateTime timeToUpdate;
-            timeToUpdate = firstGameDate.plus(2, ChronoUnit.HOURS);
+            timeToUpdate = firstGameDate.plus(10, ChronoUnit.SECONDS);//todo change to 2 hours
             LocalDateTime from = LocalDateTime.now();
             Duration duration = Duration.between(from, timeToUpdate);
             UpdateTable updateTable = new UpdateTable(duration.getSeconds(), this, new AtomicInteger(numOfWeeks));
@@ -146,7 +149,7 @@ class UpdateTable {
             }
         };
         final ScheduledFuture<?> beeperHandle = scheduler.scheduleAtFixedRate(
-                beeper, delay, 7, DAYS);
+                beeper, delay, 30, SECONDS);//todo change to 7 days
     }
 }
 
