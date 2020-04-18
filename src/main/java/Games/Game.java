@@ -255,6 +255,8 @@ class EndGame extends TimerTask{
     private Team awayTeam;
     private Game game;
     private String score;
+    private int homeTeamGoals;
+    private int awayTeamGoals;
 
 
     /**
@@ -269,6 +271,8 @@ class EndGame extends TimerTask{
         this.awayTeam = awayTeam;
         this.game = game;
         this.score = score;
+        this.homeTeamGoals = 0;
+        this.awayTeamGoals = 0;
     }
 
     @Override
@@ -278,11 +282,40 @@ class EndGame extends TimerTask{
         game.setStatus(Game.gameStatus.finish);
         double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();
         homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);
+        setStatistic();
         game.setFinalReport(eventListToReport(game.getEventBook()));
         MainSystem.LOG.info("The game between: "+game.getHomeTeam().getName()+" and "+game.getAwayTeam().getName()+ "ended");
 
     }
 
+    /**
+     * set the statistic from the game to the teams
+     */
+    private void setStatistic() {
+        String[] result = score.split("-");
+        homeTeamGoals = Integer.parseInt(result[0]);
+        awayTeamGoals = Integer.parseInt(result[1]);
+        Statistics homeTeamStatistics = homeTeam.getStatistics();
+        Statistics awayTeamStatistics = awayTeam.getStatistics();
+
+        homeTeamStatistics.setGoals(homeTeamGoals);
+        homeTeamStatistics.setGc(awayTeamGoals);
+        awayTeamStatistics.setGoals(awayTeamGoals);
+        awayTeamStatistics.setGc(homeTeamGoals);
+
+        if (homeTeamGoals > awayTeamGoals) {
+            homeTeamStatistics.setWins();
+            awayTeamStatistics.setLoses();
+        } else if (homeTeamGoals < awayTeamGoals) {
+            awayTeamStatistics.setWins();
+            homeTeamStatistics.setLoses();
+        } else {
+            homeTeamStatistics.setTie();
+            awayTeamStatistics.setTie();
+        }
+        homeTeam.setStatistics(homeTeamStatistics);
+        awayTeam.setStatistics(awayTeamStatistics);
+    }
     /**
      * create the report from the event list
      * @param eventBook
@@ -306,8 +339,6 @@ class CloseGame extends TimerTask{
     private Team homeTeam;
     private Team awayTeam;
     private Game game;
-    private int homeTeamGoals;
-    private int awayTeamGoals;
     private String score;
 
     /**
@@ -320,47 +351,15 @@ class CloseGame extends TimerTask{
         this.game = game;
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
-        this.homeTeamGoals=0;
-        this.awayTeamGoals=0;
         this.score=score;
     }
 
     @Override
     public void run() {
         game.setStatus(Game.gameStatus.close);
-        setStatistic();
         MainSystem.LOG.info("The game between: "+game.getHomeTeam().getName()+" and "+game.getAwayTeam().getName()+ "is close");
 
     }
 
-    /**
-     * set the statistic from the game to the teams
-     */
-    private void setStatistic() {
-        String[] result=score.split("-");
-        homeTeamGoals=Integer.parseInt(result[0]);
-        awayTeamGoals=Integer.parseInt(result[1]);
-        Statistics homeTeamStatistics = homeTeam.getStatistics();
-        Statistics awayTeamStatistics = awayTeam.getStatistics();
 
-        homeTeamStatistics.setGoals(homeTeamGoals);
-        homeTeamStatistics.setGc(awayTeamGoals);
-        awayTeamStatistics.setGoals(awayTeamGoals);
-        awayTeamStatistics.setGc(homeTeamGoals);
-
-        if(homeTeamGoals>awayTeamGoals){
-            homeTeamStatistics.setWins();
-            awayTeamStatistics.setLoses();
-        }
-        else if(homeTeamGoals<awayTeamGoals){
-            awayTeamStatistics.setWins();
-            homeTeamStatistics.setLoses();
-        }
-        else{
-            homeTeamStatistics.setTie();
-            awayTeamStatistics.setTie();
-        }
-        homeTeam.setStatistics(homeTeamStatistics);
-        awayTeam.setStatistics(awayTeamStatistics);
-    }
 }
