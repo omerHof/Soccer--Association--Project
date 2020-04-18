@@ -122,36 +122,93 @@ public class UserManagement {
         return "";
     }
 
-    public String getTeamRole(){
+    public String getCoachTeamRole(){
         return ((Coach) currentUser).getTeamRole();
     }
 
-    public void setTeamRole(String teamRole) {
+    public void setCoachTeamRole(String teamRole) {
         ((Coach) currentUser).setTeamRole(teamRole);
     }
 
-    public int getSalay(){
+    public int getCoachSalay(){
         return ((Coach) currentUser).getSalary();
     }
 
-    public Team getCurrentTeam(){
+    public Team getCoachCurrentTeam(){
         return ((Coach) currentUser).getCurrentTeam();    }
 
-    public void setCurrentTeam(Team team){
+    public void setCoachCurrentTeam(Team team){
         ((Coach) currentUser).setCurrentTeam(team);
     }
 
-    public int getAge(){
+    public int getCoachAge(){
         CoachPersonalPage coachPersonalPage =  ((Coach) currentUser).getPage();
         return coachPersonalPage.getAge();
     }
 
-    public void setAge(int age){
+    public void setCoachAge(int age){
         CoachPersonalPage coachPersonalPage =  ((Coach) currentUser).getPage();
         coachPersonalPage.setAge(age);
     }
 
-    ////////////////PERSONAL PAGE MANAGEMENT FUNCTIONALITY//////////////////
+    ////////////////PLAYER MANAGEMENT FUNCTIONALITY//////////////////
+
+    public void createPlayerPersonalPage(int height,int weight, int shirtNum,String team){
+        ((Player) currentUser).createPersonalPage(height, weight, shirtNum, team);
+    }
+
+    public String getPlayerPageAsString(){
+        PlayerPersonalPage playerPersonalPage = ((Player) currentUser).getPage();
+        //NEED TO TURN IT STRING
+        return "";
+    }
+
+    public int getPlayerAge(){
+         return  ((Player) currentUser).getAge();
+    }
+
+    public String getCourtRole() {
+        return  ((Player) currentUser).getCourtRole();
+    }
+
+    public void setCourtRole(String courtRole) {
+        ((Player) currentUser).setCourtRole(courtRole);
+    }
+    public int getNumberOfShirt(){
+        return ((Player) currentUser).getNumberOfShirt();
+    }
+
+    public void setNumberOfShirt(int number){
+        ((Player) currentUser).setNumberOfShirt(number);
+    }
+
+    public void setHeight(int height){
+        ((Player) currentUser).setHeight(height);
+    }
+
+    public int getHeight(){
+        return  ((Player) currentUser).getHeight();
+    }
+
+    public int getWeight(){
+        return ((Player) currentUser).getWeight();
+    }
+
+    public void setWeight(int weight){
+        ((Player) currentUser).setWeight(weight);
+    }
+
+    public void setPlayerCurrentTeam(Team team){
+        ((Player) currentUser).setCurrentTeam(team);
+    }
+    public Team getCurrentTeam(){
+        return  ((Player) currentUser).getCurrentTeam();
+    }
+
+    public int getSalary() {
+        return  ((Player) currentUser).getSalary();
+    }
+
 
 
 
