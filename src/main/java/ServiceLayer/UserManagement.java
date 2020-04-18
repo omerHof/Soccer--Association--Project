@@ -137,7 +137,7 @@ public class UserManagement {
     public Team getCoachCurrentTeam(){
         return ((Coach) currentUser).getCurrentTeam();    }
 
-    public void setCoachCurrentTeam(Team team){
+    public void setCoachCurrentTeam(String team){
         ((Coach) currentUser).setCurrentTeam(team);
     }
 
@@ -198,7 +198,7 @@ public class UserManagement {
         ((Player) currentUser).setWeight(weight);
     }
 
-    public void setPlayerCurrentTeam(Team team){
+    public void setPlayerCurrentTeam(String team){
         ((Player) currentUser).setCurrentTeam(team);
     }
     public Team getCurrentTeam(){
