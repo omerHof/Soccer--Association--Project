@@ -44,13 +44,17 @@ g.	שולח להם התראה (?).
         boolean hasMoreGames = false;
         if (team != null) {
             ArrayList<Game> gameList = team.getGameList();
-            for (Game g : gameList) {
-                if ((g.getStatus() == Game.gameStatus.active) || (g.getStatus() == Game.gameStatus.preGame)) {
-                    hasMoreGames = true;
+            if(gameList!=null) {
+                for (Game g : gameList) {
+                    if ((g.getStatus() == Game.gameStatus.active) || (g.getStatus() == Game.gameStatus.preGame)) {
+                        hasMoreGames = true;
+                    }
                 }
             }
             if (hasMoreGames == false) {
                 team.setStatus(Team.teamStatus.PermanentlyClosed);
+                MainSystem.LOG.info("the team " +name+" is permanently closed by the administrator");
+
                 HashMap<String, TeamOwner> owners = team.getTeamOwners();
                 HashMap<String, Manager> managers = team.getManagers();
 
@@ -60,19 +64,23 @@ g.	שולח להם התראה (?).
                 while (it.hasNext()) {
                     Map.Entry pair = (Map.Entry) it.next();
                     TeamOwner owner = (TeamOwner) pair.getValue();
-                    Notification notification1 = new Notification(this, "the team is permanently closed", owner);
+                    Notification notification1 = new Notification(this, "the team "+name+" is permanently closed", owner);
                     notification1.send();
+                    MainSystem.LOG.info("notification sent to the team owner "+owner.getUserFullName());
+
                     it.remove();
                 }
 
                 //send notification to all managers
                 Iterator it2 = managers.entrySet().iterator();
-                while (it.hasNext()) {
-                    Map.Entry pair = (Map.Entry) it.next();
+                while (it2.hasNext()) {
+                    Map.Entry pair = (Map.Entry) it2.next();
                     Manager manager = (Manager) pair.getValue();
-                    Notification notification1 = new Notification(this, "the team is permanently closed", manager);
-                    notification1.send();
-                    it.remove();
+                    Notification notification2 = new Notification(this, "the team "+name+" is permanently closed", manager);
+                    notification2.send();
+                    MainSystem.LOG.info("notification sent to the manager "+manager.getUserFullName());
+
+                    it2.remove();
                 }
             } else {
                 System.out.println("the team cant be closed for permanent because it has open games");
@@ -80,31 +88,6 @@ g.	שולח להם התראה (?).
         }
     }
 
-
-    /*
-    2.	הסרת משתמש מהמערכת –
-a.	מקבל כקלט מחרוזת עם השם המלא של המשתמש.
-b.	שולף את המשתמש מהDB.
-c.	בודק מה תפקיד המשתמש. מבצע switch case –
-i.	במידה ומדובר במשתמש מסוג נציג התאחדות:
-1.	נדרש לוודא כי ישנם לפחות 2 משתמשים מסוג זה במערכת.
-2.	במידה ויש לו משחקים פתוחים – להעביר אותם לנציג אחר (פונקציה של נציג התאחדות).
-ii.	במידה ומדובר במנהל מערכת –
-1.	נדרש לוודא כי ישנם לפחות 2 משתמשים מסוג זה במערכת לפני המחיקה.
-iii.	במידה ומדובר במשתמש מסוג אוהד –
-1.	נדרש להסיר את המעקב שלו מכל העמודים הרלוונטים (קבוצה, שחקן, מאמן).
-2.	נדרש להסיר את המעקב שלו מכל המשחקים (לדעתי יקרה אוטומטי כאשר יוסר המעקב מקבוצה ?)
-iv.	במידה ומדובר במשתמש מסוג בעל קבוצה–
-1.	נדרש לוודא שלקבוצה ישנם לפחות 2 בעלים.
-2.	הפעלת מחיקת בעל קבוצה (קיימת פונקציה שכזאת בבעל קבוצה).
-v.	במידה ומדובר במשתמש אחר – (שופט, מאמן, שחקן)
-1.	לוודא שלא משובץ למשחק פתוח.
-vi.	שים לב שלא קיים כאן משתמש מסוג מנהל קבוצה – תשאל את כצי אם יש אילוץ מיוחד לפני מחיקתו.
-d.	במידה והתנאים מתקיימים תבוצע המחיקה (חלק מהמחיקות מתבצעות במחלקות עצמן וחלק יצטרכו להיות מבוצעות כאן תלוי בסוג המשתמש)
-e.	להסיר מהDB
-f.	לכתוב בקובץ הלוג.
-
-     */
 
     public void deleteUserFromSystem(String name) {
         DB db = DB.getInstance();
@@ -118,6 +101,11 @@ f.	לכתוב בקובץ הלוג.
                         associationRep.passMyGames();//// not sure, ask tali
                     }
                     db.removeUser(user.getUserName());
+                    MainSystem.LOG.info("the user of Association representative " +name+" is deleted by the administrator");
+
+                }
+                else{
+                    System.out.println("no delete! the system has less then 2 Association representatives");
                 }
             } else if (user instanceof Administrator) {
                 if (db.checkQuantityOfUsersByType("Administrator") >= 2) {

@@ -13,8 +13,8 @@ public abstract class User {
     protected String userEmail;
     protected String userFullName;
 
-    protected ArrayList<Notification> receivedNotifications;
-    protected ArrayList<Notification> sentNotifications;
+    protected ArrayList<Notification> receivedNotifications = new ArrayList<>();
+    protected ArrayList<Notification> sentNotifications = new ArrayList<>();
 
     public void sendTo (User receiver, Notification notification){
         this.sentNotifications.add(notification);

@@ -93,7 +93,7 @@ public class FanTest {
 
     @Test
     public void update() {
-     p1.setCurrentTeam(t1);
+     p1.setCurrentTeam(t1.getName());
 
     }
 

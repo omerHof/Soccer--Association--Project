@@ -120,7 +120,7 @@ public class PlayerTest {
         //after create a page
         PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1.getName());
         assertEquals(p1.getCurrentTeam(),t1);
-        p1.setCurrentTeam(t2);
+        p1.setCurrentTeam(t2.getName());
         assertFalse(p1.getCurrentTeam().getName().equals("juventus"));
         assertEquals(p1.getCurrentTeam().getName(),t2.getName());
 
