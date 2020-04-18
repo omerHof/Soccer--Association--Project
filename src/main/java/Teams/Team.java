@@ -120,48 +120,273 @@ public class Team implements Comparable {
         this.status = status;
     }
 
-    public void addPlayer(Player player) {
+
+
+
+
+    ////by string
+
+    public boolean addPlayer(String player) {
+        User user = db.getUserByFullName(player);
+        Player p = (Player)user;
+        if(p==null){
+            System.out.println("the user not found in the db");
+           return false;
+        }
+
+        Team team = p.getCurrentTeam();
+        if(team!=null) {
+            team.removePlayer(player);
+            db.setTeam(team);
+        }
+        players.put(player, p);
+        p.setCurrentTeam(name);
+        db.setTeam(this);
+
+        if(page!=null){
+            page.addPlayer(p);
+        }
+        MainSystem.LOG.info("the player " + player + " was added successfully to the team " + this.getName());
+        return true;
+    }
+
+    public boolean removePlayer(String player) {
+        User user = db.getUserByFullName(player);
+        Player p = (Player)user;
+        if(p==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+        if(!players.containsKey(player)){
+            System.out.println("the player is not belong to the team");
+            return false;
+        }
+
+        players.remove(player);
+        p.setCurrentTeam(null);
+        db.setTeam(this);
+        if(page!=null){
+            page.removePlayer(p);
+        }
+        MainSystem.LOG.info("the player " + player + " was removed successfully from the team " + this.getName());
+        return true;
+    }
+
+    public boolean addCoach(String coach) {
+        User user = db.getUserByFullName(coach);
+        Coach c = (Coach) user;
+        if(c==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+
+        Team team = c.getCurrentTeam();
+        if(team!=null) {
+            team.removeCoach(coach);
+            db.setTeam(team);
+        }
+        coaches.put(coach, c);
+        c.setCurrentTeam(name);
+        db.setTeam(this);
+
+        if(page!=null){
+            page.addCoach(c);
+        }
+        MainSystem.LOG.info("the coach " + coach + " was added successfully to the team " + this.getName());
+        return true;
+    }
+    public boolean removeCoach(String coach) {
+        User user = db.getUserByFullName(coach);
+        Coach c = (Coach)user;
+        if(c==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+        if(!coaches.containsKey(coach)){
+            System.out.println("the coach is not belong to the team");
+            return false;
+        }
+
+        coaches.remove(coach);
+        c.setCurrentTeam(null);
+        db.setTeam(this);
+        if(page!=null){
+            page.removeCoach(c);
+        }
+        MainSystem.LOG.info("the coach " + coach + " was removed successfully from the team " + this.getName());
+        return true;
+    }
+
+    public boolean addManager(String manager) {
+        User user = db.getUserByFullName(manager);
+        Manager m = (Manager) user;
+        if(m==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+
+        Team team = m.getTeam();
+        if(team!=null) {
+            team.removeManager(m);
+            db.setTeam(team);
+        }
+        managers.put(manager, m);
+        m.setTeam(team);
+        db.setTeam(this);
+
+        if(page!=null){
+            page.addManager(m);
+        }
+        MainSystem.LOG.info("the manager " + manager + " was added successfully to the team " + this.getName());
+        return true;
+    }
+    public boolean removeManager(String manager) {
+        User user = db.getUserByFullName(manager);
+        Manager m = (Manager) user;
+        if(m==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+        if(!managers.containsKey(manager)){
+            System.out.println("the manager is not belong to the team");
+            return false;
+        }
+
+        managers.remove(manager);
+        m.setTeam(null);
+        db.setTeam(this);
+        if(page!=null){
+            page.removeManager(m);
+        }
+        MainSystem.LOG.info("the manager " + manager + " was removed successfully from the team " + this.getName());
+        return true;
+    }
+
+
+    public boolean addTeamOwner(String teamOwner) {
+        User user = db.getUserByFullName(teamOwner);
+        TeamOwner owner = (TeamOwner) user;
+        if(owner==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+
+        Team team = owner.getTeam();
+        if(team!=null) {
+            team.removeTeamOwner(owner);
+            db.setTeam(team);
+        }
+        teamOwners.put(teamOwner, owner);
+        owner.setTeam(team);
+        db.setTeam(this);
+
+
+        MainSystem.LOG.info("the team owner " + teamOwner + " was added successfully to the team " + this.getName());
+        return true;
+    }
+    public boolean removeTeamOwner(String teamOwner) {
+        User user = db.getUserByFullName(teamOwner);
+        TeamOwner owner = (TeamOwner) user;
+        if(owner==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+        if(!teamOwners.containsKey(teamOwner)){
+            System.out.println("the team owner is not belong to the team");
+            return false;
+        }
+
+        teamOwners.remove(teamOwner);
+        owner.setTeam(null);
+        db.setTeam(this);
+
+        MainSystem.LOG.info("the team owner " + teamOwner + " was removed successfully from the team " + this.getName());
+        return true;
+    }
+
+
+
+
+
+    ////by object
+    public boolean addPlayer(Player player) {
+
+        if(player==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+
         Team team = player.getCurrentTeam();
         if(team!=null) {
             team.removePlayer(player);
             db.setTeam(team);
         }
         players.put(player.getUserFullName(), player);
-        player.setCurrentTeam(this);
+        player.setCurrentTeam(name);
         db.setTeam(this);
 
         if(page!=null){
             page.addPlayer(player);
         }
-        MainSystem.LOG.info("the player " + player.getUserName() + " was added successfully to the team " + this.getName());
+        MainSystem.LOG.info("the player " + player.getUserFullName() + " was added successfully to the team " + this.getName());
+        return true;
     }
 
-    public void removePlayer(Player player) {
+
+
+
+    public boolean removePlayer(Player player) {
+
+        if(player==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+        if(!players.containsKey(player.getUserFullName())){
+            System.out.println("the player is not belong to the team");
+            return false;
+        }
+
         players.remove(player.getUserFullName());
         player.setCurrentTeam(null);
         db.setTeam(this);
         if(page!=null){
             page.removePlayer(player);
         }
-        MainSystem.LOG.info("the player " + player.getUserName() + " was removed successfully from the team " + this.getName());
+        MainSystem.LOG.info("the player " + player.getUserFullName() + " was removed successfully from the team " + this.getName());
+        return true;
     }
 
-    public void addCoach(Coach coach) {
+
+    public boolean addCoach(Coach coach) {
+
+        if(coach==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
         Team team = coach.getCurrentTeam();
         if(team!=null) {
             team.removeCoach(coach);
             db.setTeam(team);
         }
         coaches.put(coach.getUserFullName(), coach);
-        coach.setCurrentTeam(this);
+        coach.setCurrentTeam(name);
         db.setTeam(this);
         if(page!=null){
             page.addCoach(coach);
         }
         MainSystem.LOG.info("the coach " + coach.getUserName() + " was added successfully to the team " + this.getName());
+        return true;
     }
 
-    public void removeCoach(Coach coach) {
+    public boolean removeCoach(Coach coach) {
+        if(coach==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+        if(!coaches.containsKey(coach.getUserFullName())){
+            System.out.println("the coach is not belong to the team");
+            return false;
+        }
         coaches.remove(coach.getUserFullName());
         coach.setCurrentTeam(null);
         db.setTeam(this);
@@ -169,9 +394,14 @@ public class Team implements Comparable {
             page.removeCoach(coach);
         }
         MainSystem.LOG.info("the coach " + coach.getUserName() + " was removed successfully to the team " + this.getName());
+        return true;
     }
 
-    public void addManager(Manager manager) {
+    public boolean addManager(Manager manager) {
+        if(manager==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
         Team team = manager.getTeam();
         if(team!=null){
             team.removeManager(manager);
@@ -183,9 +413,18 @@ public class Team implements Comparable {
             page.addManager(manager);
         }
         MainSystem.LOG.info("the manager " + manager.getUserName() + " was added successfully to the team " + this.getName());
+        return true;
     }
 
-    public void removeManager(Manager manager) {
+    public boolean removeManager(Manager manager) {
+        if(manager==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+        if(!managers.containsKey(manager.getUserFullName())){
+            System.out.println("the manager is not belong to the team");
+            return false;
+        }
         managers.remove(manager.getUserFullName());
         manager.setTeam(null);
         db.setTeam(this);
@@ -193,9 +432,14 @@ public class Team implements Comparable {
             page.removeManager(manager);
         }
         MainSystem.LOG.info("the manager " + manager.getUserName() + " was removed successfully to the team " + this.getName());
+        return true;
     }
 
-    public void addTeamOwner(TeamOwner teamOwner) {
+    public boolean addTeamOwner(TeamOwner teamOwner) {
+        if(teamOwner==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
         Team team = teamOwner.getTeam();
         if(team!=null){
             team.removeTeamOwner(teamOwner);
@@ -204,13 +448,23 @@ public class Team implements Comparable {
         teamOwners.put(teamOwner.getUserFullName(), teamOwner);
         teamOwner.setTeam(this);
         MainSystem.LOG.info("the team owner " + teamOwner.getUserName() + " was added successfully to the team " + this.getName());
+        return true;
     }
 
-    public void removeTeamOwner(TeamOwner teamOwner) {
+    public boolean removeTeamOwner(TeamOwner teamOwner) {
+        if(teamOwner==null){
+            System.out.println("the user not found in the db");
+            return false;
+        }
+        if(!teamOwners.containsKey(teamOwner.getUserFullName())){
+            System.out.println("the team owner is not belong to the team");
+            return false;
+        }
         teamOwners.remove(teamOwner.getUserFullName());
         teamOwner.setTeam(null);
         db.setTeam(this);
         MainSystem.LOG.info("the team owner " + teamOwner.getUserName() + " was removed successfully to the team " + this.getName());
+        return true;
     }
 
     public HashMap<String, Coach> getCoaches()
