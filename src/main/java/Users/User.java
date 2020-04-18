@@ -1,5 +1,6 @@
 package Users;
 
+import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 
 import java.util.ArrayList;
@@ -66,5 +67,15 @@ public abstract class User {
 
     public void setSentNotifications(ArrayList<Notification> sentNotifications) {
         this.sentNotifications = sentNotifications;
+    }
+
+    public String[] watchDetails(){
+        //MainSystem.LOG.info(getUserFullName()+" watch his details");
+        String[] details = new String[4];
+        details[0]=userFullName;
+        details[1]=userName;
+        details[2]= password;
+        details[3]=userEmail;
+        return details;
     }
 }

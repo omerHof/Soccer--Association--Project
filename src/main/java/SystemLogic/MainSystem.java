@@ -56,7 +56,11 @@ public class MainSystem {
     public void initializeSystem(){
         connectToLog();
         connectExternalSystems();
-        appointUserToSAdministrator(); //how can someone be a user before initialization?
+        User user = db.getUserType("Administrator");
+        if (user==null){
+            appointUserToSAdministrator();
+        }
+
     }
 
     /**
@@ -64,7 +68,7 @@ public class MainSystem {
      */
     private void connectToLog(){
 //        LOG  = LogManager.getLogger();
-        LOG.info("LOG WAS CREATED!");
+        LOG.info("LOG FILE IS CONNECTED!");
     }
 
 
@@ -94,11 +98,9 @@ public class MainSystem {
      */
     private void appointUserToSAdministrator() {
         ManagmentUserGenerator managmentUserGenerator = new ManagmentUserGenerator();
-        User scapegoat = db.getUser("name");// get random or by name?
-        db.removeUser(scapegoat.getUserName());
         String special_password = timerPasswordBuilder.getPassword();
-        Administrator administrator = (Administrator) managmentUserGenerator.generate(scapegoat.getUserName(),scapegoat.getPassword(),special_password
-                ,"Administrator", scapegoat.getUserFullName(), scapegoat.getUserEmail(),
+        Administrator administrator = (Administrator) managmentUserGenerator.generate("admin","admin01",special_password
+                ,"Administrator", "admin admin", "admin@gmail.com",
                 null,"","","");
         db.addUser(administrator);
         LOG.info("Administrator was appointed successfully");
