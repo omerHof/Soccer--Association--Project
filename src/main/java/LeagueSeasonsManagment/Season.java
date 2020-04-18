@@ -91,7 +91,7 @@ public class Season {
                     mainReferee.followThisGame(game); //adds both ways.
                     mahzorRefereesAndAsso.add(mainReferee);
 
-                    //////////////////////////////////// set teams' games: ////////////////
+                    //////////////////////////////////// set teams' games: /////////////////////////////////
                     Team away = game.getAwayTeam();
                     Team home = game.getHomeTeam();
 
