@@ -77,19 +77,25 @@ public class Fan extends User implements Observer {
             Team team = (Team) arg;
             String name = (String) ((PersonalPage) o).getName();
             User sender = db.getUserByFullName(name);
-            pageAlert = true;
             pageMessage = team.getName();
             String message = "new update! " + name + " has moved to " + pageMessage;
             Notification notification = new Notification(sender,message,this);
             notification.send();
         }
         if (o instanceof TeamPage) {
-            teamAlert = true;
             TeamPage team = (TeamPage) o;
+            Team t = db.getTeam(team.getName());
+            User managerSender;
+            if(t.getManagers().size()!=0) {
+                managerSender = team.getManagers().entrySet().stream().findFirst().get().getValue();
+            }
+            else{
+                managerSender = t.getManagers().get(0);
+            }
+
             if (arg instanceof Player) {
                 Player player = (Player) arg;
                 pageMessage = player.getUserFullName();
-                User managerSender = team.getManagers().entrySet().stream().findFirst().get().getValue();
                 String message = "new update! the player " + pageMessage + " has moved to " + team.getName();
                 Notification notification = new Notification(managerSender,message,this);
                 notification.send();
@@ -97,39 +103,55 @@ public class Fan extends User implements Observer {
             } else if (arg instanceof Coach) {
                 Coach Coach = (Coach) arg;
                 pageMessage = Coach.getUserFullName();
-                System.out.println("new update! the Coach " + pageMessage + " has moved to " + team.getName());
-            } else if (arg instanceof Stadium) {
+                String message = "new update! the coach " + pageMessage + " has moved to " + team.getName();
+                Notification notification = new Notification(managerSender,message,this);
+                notification.send();
+            }
+
+            else if (arg instanceof Stadium) {
                 Stadium stadium = (Stadium) arg;
-                // pageMessage= stadium.getName();
-                System.out.println("new update! the team " + team.getName() + " has a new stadium");
+                pageMessage= stadium.getName();
+                String message = "new update! the team " + team.getName() + " has move to the stadium "+pageMessage;
+                Notification notification = new Notification(managerSender,message,this);
+                notification.send();
 
             } else if (arg instanceof TeamOwner) {
                 TeamOwner TeamOwner = (TeamOwner) arg;
                 pageMessage = TeamOwner.getUserFullName();
-                System.out.println("new update! the TeamOwner " + pageMessage + " has moved to " + team.getName());
+                String message = "new update! the team owner " + pageMessage + " has moved to " + team.getName();
+                Notification notification = new Notification(managerSender,message,this);
+                notification.send();
+
 
             } else if (arg instanceof Manager) {
                 Manager Manager = (Manager) arg;
                 pageMessage = Manager.getUserFullName();
-                System.out.println("new update! the Manager " + pageMessage + " has moved to " + team.getName());
+                String message = "new update! the manager " + pageMessage + " has moved to " + team.getName();
+                Notification notification = new Notification(managerSender,message,this);
+                notification.send();
 
-            } else if (arg instanceof Game) {
+            } else if (arg instanceof String) {
+                /*
                 Game game = (Game) arg;
                 Team homeTeam = game.getHomeTeam();
                 Team awayTeam = game.getAwayTeam();
+
+                 */
+                String updateFromGame = (String)arg;
+                /*
+                if(updateFromGame)
                 if (game.getStatus() == Game.gameStatus.preGame) {
-                    preGameAlert = true;
                     System.out.println("REMINDER! in 1 day the game between " + homeTeam + " and " + awayTeam + " will start");
 
                 }
                 if (game.getStatus() == Game.gameStatus.active) {
-                    startGameAlert = true;
                     System.out.println("new update! the game between " + homeTeam + " and " + awayTeam + " has started!");
                 }
                 if (game.getStatus() == Game.gameStatus.finish) {
-                    endGameAlert = true;
                     System.out.println("new update! the game between " + homeTeam + " and " + awayTeam + " has finish in score " + game.getScore());
                 }
+
+                 */
             }
         }
 
