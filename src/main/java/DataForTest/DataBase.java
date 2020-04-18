@@ -163,7 +163,7 @@ public class DataBase {
 
 
         /**Policies-game**/
-        gameInlayPolicy = new OneRoundGamePolicy(teams, 2020);
+        gameInlayPolicy = new OneRoundGamePolicy(teams, 2021);
 
 
         /**Users**/
@@ -297,7 +297,7 @@ public class DataBase {
 
         /**Management**/
         league = new League("Champions league", 10);
-        season = new Season(2020, teams, referees, representatives, scorePolicy.getName(), gameInlayPolicy.getName());
+        season = new Season(2021, teams, referees, representatives, scorePolicy.getName(), gameInlayPolicy.getName());
         seasons = new ArrayList<>();
         seasons.add(season);
         league.setAllSeasons(seasons);

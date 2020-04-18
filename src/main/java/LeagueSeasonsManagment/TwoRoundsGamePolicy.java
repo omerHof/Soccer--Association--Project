@@ -1,11 +1,8 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
-import SystemLogic.DB;
 import Teams.Team;
-
 import java.time.LocalDateTime;
-import java.time.Month;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,78 +15,30 @@ public class TwoRoundsGamePolicy implements IGameInlayPolicy {
     private String name;
     private ArrayList<Team> ListTeam; // the initial list of teams
     private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
-    LocalDateTime timeOfGame;
-
+    private LocalDateTime timeOfGame;
 
     /**
      * constructor
-     *
      * @param teams
+     * @param year
      */
     public TwoRoundsGamePolicy(ArrayList<Team> teams, int year) {
         name = "TwoRoundsGamePolicy";
         this.ListTeam = teams;
         this.listOfGames = new HashMap<>();
-        timeOfGame = LocalDateTime.of(year, Month.JANUARY,1,19,0,0);
+        //timeOfGame = LocalDateTime.of(year, Month.JANUARY,1,19,0,0);//todo add to code this line
+        timeOfGame = LocalDateTime.now().plus(5, ChronoUnit.SECONDS);
     }
 
+    /*****getters and setters*****/
     @Override
     public String getName() {
         return name;
     }
 
     /**
-     * this function returns the games
-     * @param
-     */
-    /*
-    @Override
-    public HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation() {
-        int rounds=(teams.size()-1)*2;
-        Random rand = new Random();
-        int counter=0;
-        ArrayList<String> allMatches= new ArrayList<>();
-
-        for(int i=1; i<=rounds; i++){
-            ArrayList<Game> gamesInRound= new ArrayList<>();
-            listOfGames.put(i,gamesInRound);
-            ArrayList<Team> roundTeams=new ArrayList<>();
-            for(Team t : teams) {
-                roundTeams.add(t);
-            }
-            while(roundTeams.size()>1){
-                int randomIndex = rand.nextInt(roundTeams.size());
-                Team homeTeam = roundTeams.get(rand.nextInt(roundTeams.size()));
-                Team awayTeam = roundTeams.get(rand.nextInt(roundTeams.size()));
-                String match=homeTeam.getName()+awayTeam.getName();
-                if(!homeTeam.equals(awayTeam) && !allMatches.contains(match)){
-                    allMatches.add(match);
-                    Game game=new Game(homeTeam,awayTeam);
-                    listOfGames.get(i).add(game);
-                    roundTeams.remove(homeTeam);
-                    roundTeams.remove(awayTeam);
-                    counter=0;
-                }
-                else{
-                    counter++;
-                }
-                if(counter>50){
-                    i=0;
-                    listOfGames.clear();
-                    counter=0;
-                    break;
-                }
-            }
-        }
-        return listOfGames;
-    }
-*/
-
-    /**
-     * round robin implementation
-     *
-     * @param
-     * @return
+     * round robin implementation- from list of team create list of games
+     * @return list of games
      */
     @Override
     public HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation() {
@@ -115,12 +64,10 @@ public class TwoRoundsGamePolicy implements IGameInlayPolicy {
         addGames(teamsSize, teamsSize * 2, teams, true);
 
         return listOfGames;
-
     }
 
     /**
      * this function add rounds and games of half season
-     *
      * @param start-        the initial round
      * @param rounds-       the number of games each team playing in half season
      * @param teams-        list of teams
@@ -157,9 +104,7 @@ public class TwoRoundsGamePolicy implements IGameInlayPolicy {
                 games.add(game);
             }
             listOfGames.put(day + 1, games);
-            timeOfGame=timeOfGame.plus(1, ChronoUnit.WEEKS);
+            timeOfGame = timeOfGame.plus(1, ChronoUnit.MINUTES);//todo change to week
         }
-
-
     }
 }

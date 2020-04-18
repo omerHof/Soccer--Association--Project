@@ -228,7 +228,7 @@ public class AssociationRepresentative extends User implements Observer {
      * this function adds an event to an active game's event book.
      * @return true if successes, false if not.
      */
-    private boolean addGameEvent(Event.eventType type, int time, String playerName){
+    public boolean addGameEvent(Event.eventType type, int time, String playerName){
 
         Game gameToAdd = findActiveGame();
 

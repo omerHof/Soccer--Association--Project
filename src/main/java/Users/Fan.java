@@ -3,6 +3,7 @@ package Users;
 import Games.Game;
 import SystemLogic.DB;
 import SystemLogic.MainSystem;
+import SystemLogic.Notification;
 import Teams.Stadium;
 import Teams.Team;
 import Teams.TeamPage;
@@ -70,13 +71,17 @@ public class Fan extends User implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
+        DB db = DB.getInstance();
         MainSystem.LOG.info("The user  get update");
         if (o instanceof PersonalPage) {
             Team team = (Team) arg;
             String name = (String) ((PersonalPage) o).getName();
+            User sender = db.getUserByFullName(name);
             pageAlert = true;
             pageMessage = team.getName();
-            System.out.println("new update! " + name + " has moved to " + pageMessage);
+            String message = "new update! " + name + " has moved to " + pageMessage;
+            Notification notification = new Notification(sender,message,this);
+            notification.send();
         }
         if (o instanceof TeamPage) {
             teamAlert = true;
@@ -84,7 +89,10 @@ public class Fan extends User implements Observer {
             if (arg instanceof Player) {
                 Player player = (Player) arg;
                 pageMessage = player.getUserFullName();
-                System.out.println("new update! the player " + pageMessage + " has moved to " + team.getName());
+                User managerSender = team.getManagers().entrySet().stream().findFirst().get().getValue();
+                String message = "new update! the player " + pageMessage + " has moved to " + team.getName();
+                Notification notification = new Notification(managerSender,message,this);
+                notification.send();
 
             } else if (arg instanceof Coach) {
                 Coach Coach = (Coach) arg;
@@ -354,33 +362,6 @@ public ArrayList< PersonalPage> getFollowedPages() {
 
     }
      */
-
-    public String[] watchDetails(){
-        MainSystem.LOG.info(getUserFullName()+" watch his details");
-        String[] details = new String[4];
-        details[0]=userFullName;
-        details[1]=userName;
-        details[2]= password;
-        details[3]=userEmail;
-        return details;
-
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
