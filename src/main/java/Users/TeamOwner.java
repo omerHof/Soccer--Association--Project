@@ -56,7 +56,7 @@ public class TeamOwner extends User implements Assent {
                 DB.getInstance().addTeam(team);
             }
             else{
-                team.setStatus(Team.teamStatus.active);
+                team.setStatus(Team.teamStatus.active);//todo: regular close
             }
         }
     }
