@@ -54,70 +54,85 @@ public class AssociationRepresentative extends User implements Observer {
     }
 
     ////////////////////////////// USE CASE 9.2 ////////////////////////////// VVV
-    public void addSeasonToLeague (String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives){
+    public String addSeasonToLeague (String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives){
 
-        ArrayList<Team> allTeams = new ArrayList<>();
-        ArrayList<Referee> allReferees = new ArrayList<>();
-        ArrayList<AssociationRepresentative> allReps = new ArrayList<>();
+        ArrayList<Team> allTeams;
+        ArrayList<Referee> allReferees;
+        ArrayList<AssociationRepresentative> allReps;
 
-        setLeagueTeams(teams, allTeams);
-        setLeagueReferees(referees, allReferees);
-        setLeagueRepresentatives(representatives, allReps);
+        allTeams = setLeagueTeams(teams);
+        allReferees = setLeagueReferees(referees);
+        allReps = setLeagueRepresentatives(representatives);
 
-        Season newSeason = new Season(year, allTeams, allReferees, allReps, scorePolicy, gamePolicy);
+        Season newSeason;
 
-        if (newSeason != null) {
-            db.addSeason(leagueName, newSeason); //adds the season to DB.}
-            MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
+        if(scorePolicy!=null && gamePolicy!= null) {
+            newSeason = new Season(year, allTeams, allReferees, allReps, scorePolicy, gamePolicy);
+
+            if (newSeason != null) {
+                db.addSeason(leagueName, newSeason); //adds the season to DB.}
+                MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
+                return "new season: " + year + " was added to league: " + leagueName + ".";
+            }
+            else
+                return "couldn't create a new season here.";
         }
 
         else
-            System.out.println("couldn't create a new season here.");
+            return "couldn't create a new season here.";
     }
 
     /**
      * adds all associationRepresentative to this season - help function
-     * @param representatives - to add to
      * @param representativesNames - list of AssociationRepresentative's names
      */
-    private void setLeagueRepresentatives(List<String> representativesNames, ArrayList<AssociationRepresentative> representatives) {
+    private ArrayList<AssociationRepresentative> setLeagueRepresentatives(List<String> representativesNames) {
 
-        if (representatives != null && representativesNames != null) {
+        ArrayList<AssociationRepresentative> allReps = new ArrayList<>();
+
+        if (representativesNames != null) {
 
             for (String representative : representativesNames) {
-                AssociationRepresentative currRepresentative = (AssociationRepresentative) db.getUserByFullName(representative);
-                representatives.add(currRepresentative);
+                User currRepresentative = db.getUserByFullName(representative);
+
+                if(currRepresentative instanceof AssociationRepresentative)
+                    allReps.add((AssociationRepresentative)currRepresentative);
             }
+            return allReps;
             //season.setAllRepresentatives(allRepresentatives);
             //MainSystem.LOG.info("Associations Representatives were added to league: " + leagueName + ", season: " + season.getYear());
         }
 
         else{
+            return null;
             ////////////////// display error ????????? ///////////////
         }
     }
 
     /**
      * adds all teams to this season - help function
-     * @param teams - to add to
      * @param teamsNames - list of teams' names
      */
-    private void setLeagueTeams(List<String> teamsNames, ArrayList<Team> teams) {
+    private ArrayList<Team> setLeagueTeams(List<String> teamsNames) {
 
-        if (teams != null && teamsNames!= null) {
+        ArrayList<Team> teams = new ArrayList<>();
+        if (teamsNames!= null) {
 
             for (String team : teamsNames) {
                 Team currTeam = db.getTeam(team);
-                teams.add(currTeam);
+
+                if(currTeam.getStatus().equals(Team.teamStatus.active) && !currTeam.getCoaches().isEmpty() && !currTeam.getPlayers().isEmpty()) //checks that the team is legal.
+                    teams.add(currTeam);
             }
+            return teams;
             //season.setAllTeams(allTeams);
             //MainSystem.LOG.info("Teams were added to league: " + leagueName + ", season: " + season.getYear());
 
         }
         else {
+            return null;
             //////////////////// display error ??????? /////////////
         }
-
     }
 
     ////////////////////////////// USE CASE 9.3.1 ////////////////////////////// VVV
@@ -136,7 +151,7 @@ public class AssociationRepresentative extends User implements Observer {
 
             /////////////// change שדותתתת
             Referee newReferee = (Referee) premiumUserG.generate(oldFan.userName, oldFan.password, "onlyChangeStatus", "Referee", fullName,
-                    oldFan.userEmail, null, "??????????????????", "", "");
+                    oldFan.userEmail, null, "linesmen", "", "");
 
             db.removeUser(oldFan.userName); //removes the fan
             db.addUser(newReferee); //adds the referee.
@@ -185,21 +200,25 @@ public class AssociationRepresentative extends User implements Observer {
     ////////////////////////////// USE CASE 9.4 ////////////////////////////// VVV
     /**
      * adds all teams to this season - help function
-     * @param referees - to add to
      * @param refereesNames - list of referees' names
      */
-    public void setLeagueReferees (List<String> refereesNames, ArrayList<Referee> referees) {
+    public ArrayList<Referee> setLeagueReferees (List<String> refereesNames) {
 
-        if (referees != null && refereesNames != null) {
+        ArrayList<Referee> allReferees = new ArrayList<>();
+
+        if (refereesNames != null) {
             for (String referee : refereesNames) {
-                Referee currReferee = (Referee) db.getUserByFullName(referee);
-                referees.add(currReferee);
+                User currReferee = db.getUserByFullName(referee);
+                if(currReferee instanceof Referee)
+                    allReferees.add((Referee)currReferee);
             }
+            return allReferees;
             //season.setAllReferees(allReferees);
             //MainSystem.LOG.info("Referees were added to league: " + leagueName + ", season: " + season.getYear());
         }
 
         else{
+            return null;
             ////////////////// display error ????????? ///////////////
         }
     }

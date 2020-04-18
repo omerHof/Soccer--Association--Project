@@ -14,6 +14,8 @@ public class Referee extends User implements Observer {
     private String qualification;
     protected LinkedList<Game> myGames;
 
+
+
     public Referee(String userName, String password, String fullName,String userEmail, String qualification) {
         this.userName = userName;
         this.password = password;
@@ -49,12 +51,6 @@ public class Referee extends User implements Observer {
         return qualification;
     }
 
-    private void displayError(String error){
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setContentText(error);
-        alert.show();
-    }
-
     public void setQualification(String qualification) {
         this.qualification = qualification;
         MainSystem.LOG.info(this.userName + ": referee's details were updated.");
@@ -84,6 +80,8 @@ public class Referee extends User implements Observer {
         game.addObserver(this);
         myGames.add(game);
     }
+
+
 
     @Override
     public void update(Observable o, Object arg) {

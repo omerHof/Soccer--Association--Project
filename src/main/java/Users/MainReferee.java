@@ -16,12 +16,23 @@ public class MainReferee extends Referee {
     }
 
     ////////////////////////////// USE CASE 10.4 //////////////////////////////
-    private void editGameEvents (String report){
+    public void editGameEvents (String report){
 
         Game gameToEdit = findFinishGame();
 
-        if(report != null)
+        if(report != null && gameToEdit!= null)
             gameToEdit.setFinalReport(report);
+    }
+
+
+    public String displayGameEvents (){
+
+        Game gameToEdit = findFinishGame();
+
+        if(gameToEdit != null)
+            return gameToEdit.getFinalReport();
+
+        return "";
     }
 
 
