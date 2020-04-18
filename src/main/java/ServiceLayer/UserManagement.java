@@ -2,12 +2,12 @@ package ServiceLayer;
 
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
+import Teams.Team;
 import UserGenerator.IUserGenerator;
 import UserGenerator.ManagmentUserGenerator;
 import UserGenerator.PremiumUserGenertator;
 import UserGenerator.SimpleUserGenerator;
-import Users.Fan;
-import Users.User;
+import Users.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -109,6 +109,49 @@ public class UserManagement {
     public void stopFollowAllTeams(){
         ((Fan) currentUser).stopFollowAllTeams();
     }
+
+    ////////////////COACH MANAGEMENT FUNCTIONALITY//////////////////
+
+    public void createCoachPersonalPage(LocalDate birthDate, String team){
+        ((Coach) currentUser).createCoachPersonalPage(birthDate,team);
+    }
+
+    public String getCoachPageAsString(){
+        CoachPersonalPage coachPersonalPage =  ((Coach) currentUser).getPage();
+        //NEED TO TURN IT TO STRING
+        return "";
+    }
+
+    public String getTeamRole(){
+        return ((Coach) currentUser).getTeamRole();
+    }
+
+    public void setTeamRole(String teamRole) {
+        ((Coach) currentUser).setTeamRole(teamRole);
+    }
+
+    public int getSalay(){
+        return ((Coach) currentUser).getSalary();
+    }
+
+    public Team getCurrentTeam(){
+        return ((Coach) currentUser).getCurrentTeam();    }
+
+    public void setCurrentTeam(Team team){
+        ((Coach) currentUser).setCurrentTeam(team);
+    }
+
+    public int getAge(){
+        CoachPersonalPage coachPersonalPage =  ((Coach) currentUser).getPage();
+        return coachPersonalPage.getAge();
+    }
+
+    public void setAge(int age){
+        CoachPersonalPage coachPersonalPage =  ((Coach) currentUser).getPage();
+        coachPersonalPage.setAge(age);
+    }
+
+    ////////////////PERSONAL PAGE MANAGEMENT FUNCTIONALITY//////////////////
 
 
 
