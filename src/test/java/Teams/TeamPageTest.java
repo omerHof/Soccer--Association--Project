@@ -29,24 +29,14 @@ public class TeamPageTest {
     }
 
     @Test
-    public void setPlayers() {
-    }
-
-    @Test
     public void getCoaches() {
     }
 
-    @Test
-    public void setCoaches() {
-    }
 
     @Test
     public void getManagers() {
     }
 
-    @Test
-    public void setManagers() {
-    }
 
     @Test
     public void getHistory() {

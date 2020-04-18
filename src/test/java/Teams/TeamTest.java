@@ -259,10 +259,14 @@ public class TeamTest {
 
     @Test
     public void getName() {
+        assertEquals(hapoel.getName(),"hapoel tel aviv");
     }
 
     @Test
     public void setName() {
+        maccabi.setName("macccabi");
+        assertFalse(maccabi.getName()=="maccabi tel aviv");
+        assertEquals(maccabi.getName(),"macccabi");
     }
 
     @Test
@@ -271,14 +275,19 @@ public class TeamTest {
 
     @Test
     public void getStatus() {
+        assertEquals(hapoel.getStatus(), Team.teamStatus.active);
     }
 
     @Test
     public void getBudget() {
+        assertTrue(hapoel.getBudget()==0);
+
     }
 
     @Test
     public void setBudget() {
+        hapoel.setBudget(1);
+        assertTrue(hapoel.getBudget()==1);
     }
 
     @Test

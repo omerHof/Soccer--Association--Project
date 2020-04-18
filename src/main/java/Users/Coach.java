@@ -30,10 +30,15 @@ public class Coach extends User implements Assent {
 
     }
 
-   public CoachPersonalPage createCoachPersonalPage(LocalDate birthDate, Team team){
+   public CoachPersonalPage createCoachPersonalPage(LocalDate birthDate, String team){
        MainSystem.LOG.info("The coach " +getUserFullName()+ " create personal page");
+       Team currTeam = DB1.getTeam(team);
+       if(currTeam==null){
+           currTeam = new Team(team);
+           DB1.addTeam(currTeam);
+       }
        page = new CoachPersonalPage(userFullName,birthDate,teamRole,team);
-       setCurrentTeam(team);
+       setCurrentTeam(currTeam);
         return page;
    }
 

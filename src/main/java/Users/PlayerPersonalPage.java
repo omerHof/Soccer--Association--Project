@@ -1,5 +1,6 @@
 package Users;
 
+import SystemLogic.DB;
 import Teams.Team;
 
 import java.util.ArrayList;
@@ -13,14 +14,17 @@ public class PlayerPersonalPage extends PersonalPage {
     private int shirtNumber;
     private String position;
 
-    public PlayerPersonalPage(String name, int age, String position,int height,int weight,int shirtNumber, Team team){
+    public PlayerPersonalPage(String name, int age, String position,int height,int weight,int shirtNumber, String team){
         this.name=name;
         this.age=age;
         this.position=position;
         this.height = height;
         this.weight = weight;
         this.shirtNumber=shirtNumber;
-        this.currentTeam=team;
+        teamHistory= new ArrayList<>();
+
+        DB db = DB.getInstance();
+        this.currentTeam = db.getTeam(team);
 //        this.teamHistory.add(team.getName());
     }
 
