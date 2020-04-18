@@ -7,7 +7,6 @@ import Teams.Team;
 import Users.AssociationRepresentative;
 import Users.Fan;
 import Users.Referee;
-
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
@@ -291,7 +290,10 @@ class EndGame extends TimerTask {
         game.setStatus(Game.gameStatus.finish);
         //double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();//todo now there is'nt stadium
         //homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);
-        game.setScore("3-2");//todo remove
+        Random rand = new Random();//todo remove
+        int randomNum = rand.nextInt((6 - 0) + 1) + 0;//todo remove
+        int randomNum2 = rand.nextInt((6 - 0) + 1) + 0;//todo remove
+        game.setScore(randomNum + "-" + randomNum2);//todo remove
         setStatistic();
         game.setFinalReport(eventListToReport(game.getEventBook()));
         MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " ended. the score: " + game.getScore());
