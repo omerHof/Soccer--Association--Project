@@ -43,7 +43,7 @@ public class FanTest {
         DBTest.addTeam(t1);
 
 
-
+/*
         p1.createPersonalPage(167,70,10,new Team("barcelona"));
          messiPage = p1.getPage();
         f1.followThisPage(messiPage);
@@ -52,6 +52,8 @@ public class FanTest {
          klingerPage =c1.getPage();
         f1.followThisPage(klingerPage);
 
+
+ */
 
 
 
@@ -91,17 +93,25 @@ public class FanTest {
 
     @Test
     public void update() {
-        messiPage.setCurrentTeam(t1);
-        assertEquals(true,f1.isPageAlert());
-        assertEquals("hapoel tel aviv",f1.getPageMessage());
-
+     p1.setCurrentTeam(t1);
 
     }
 
     @Test
     public void getFollowedPages() {
+        p1.createPersonalPage(167,65,10,"barcelona");
+        assertEquals(0,f1.getFollowedPages().size());
+        PlayerPersonalPage page = p1.getPage();
+        f1.followThisPage(page);
+        assertEquals(1,f1.getFollowedPages().size());
+        LocalDate date1 = LocalDate.of(1970,5,5);
+        c1.createCoachPersonalPage(date1,t1.getName());
+        f1.followThisPage("nir klinger");
+        assertEquals(2,f1.getFollowedPages().size());
 
+        /*
         //before changes
+
 
         followedPagesTest.put("leo messi",messiPage);
         followedPagesTest.put("nir klinger",klingerPage);
@@ -114,6 +124,8 @@ public class FanTest {
         f1.stopFollowThisPage("leo messi");
         assertTrue(f1.getFollowedPages().size()!=followedPagesTest.size());
 
+
+         */
 
     }
 
@@ -128,13 +140,13 @@ public class FanTest {
         ///create new pages
         Coach klopp = new Coach("jorgenklopp","123","jorgen klopp","jo@gmail.com","head coach");
         Team liverpool = new Team("liverpool");
-        CoachPersonalPage kloppPage = klopp.createCoachPersonalPage(localDate2,liverpool);
+        CoachPersonalPage kloppPage = klopp.createCoachPersonalPage(localDate2,liverpool.getName());
         DBTest.addTeam(liverpool);
         DBTest.addUser(klopp);
 
         Player mane = new Player("mane123","2222","sadio mane","sadio12@gmail.com",null,"inside forward");
         DBTest.addUser(mane);
-        mane.createPersonalPage(173,70,10,liverpool);
+        mane.createPersonalPage(173,70,10,liverpool.getName());
 
 
         //f1.followThisPage("sadio mane");
@@ -242,9 +254,6 @@ public class FanTest {
         assertEquals(f1.getFollowedTeams(),followedTeamsTest);
     }
 
-    @Test
-    public void getNotificationTeams() {
-    }
 
     @Test
     public void isTeamAlert() {

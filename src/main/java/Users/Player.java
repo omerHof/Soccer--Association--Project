@@ -36,11 +36,17 @@ public class Player extends User implements Assent {
     }
 
 
-    public PlayerPersonalPage createPersonalPage(int height,int weight, int shirtNum,Team team) {
+    public PlayerPersonalPage createPersonalPage(int height,int weight, int shirtNum,String team) {
         MainSystem.LOG.info("The player " +getUserFullName()+ " create personal page");
-
-        page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, team);
-        setCurrentTeam(team);
+        Team currTeam = DB1.getTeam(team);
+        if(currTeam==null){
+        page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, null);
+            System.out.println("the team is not exist");
+        }
+        else {
+            page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, team);
+            setCurrentTeam(currTeam.getName());
+        }
         return page;
     }
 
@@ -94,15 +100,22 @@ public class Player extends User implements Assent {
             DB1.setUser(this);
         }
     }
-    public void setCurrentTeam(Team team){
-        currentTeam=team;
+    public boolean setCurrentTeam(String team){
+       Team t =  DB1.getTeam(team);
+       if(t==null){
+           System.out.println("the team is not exist");
+           return false;
+       }
+        currentTeam=t;
         if(page!=null) {
-            page.setCurrentTeam(team);
-            page.setOneTeamToHistory(team.getName());
+            page.setCurrentTeam(t);
+            page.setOneTeamToHistory(team);
         }
         DB1.setUser(this);
+        return true;
 
     }
+
     public int getHeight(){
         if(page!=null){
             return page.getHeight();
@@ -123,10 +136,12 @@ public class Player extends User implements Assent {
         return 0;
 
     }
-    public Team getCurrentTeam(){
-       return currentTeam;
+    public String getCurrentTeamName(){
+       return currentTeam.getName();
     }
-
+    public Team getCurrentTeam(){
+        return currentTeam;
+    }
 
 
     public int getSalary() {
@@ -145,7 +160,6 @@ public class Player extends User implements Assent {
     public void setTeamHistory(ArrayList<String> teamHistoryList){
         if(page!=null){
              page.setTeamHistory(teamHistoryList);
-             DB1.setUser(this);
         }
     }
 
@@ -158,7 +172,7 @@ public class Player extends User implements Assent {
         this.worth = worth;
     }
 
-    public ArrayList<Team> getTeamHistory() {
+    public ArrayList<String> getTeamHistory() {
         if(page!=null){
             return page.getTeamHistory();
         }

@@ -55,7 +55,7 @@ public class CoachTest {
     @Test
     public void createPersonalPage() {
 
-        PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1);
+        PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1.getName());
         assertEquals(pepPage.getCurrentTeam().getName(),"Manchester city");
         assertEquals(pepPage.getName(),c1.getUserFullName());
 
@@ -131,7 +131,7 @@ public class CoachTest {
         assertEquals(c1.getPage(),null);
 
         //after
-        PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1);
+        PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1.getName());
         assertFalse(c1.getPage()==null);
         assertEquals(c1.getPage().getCurrentTeam(),t1);
         
@@ -143,7 +143,7 @@ public class CoachTest {
         assertEquals(c1.getCurrentTeam(),null);
 
         //after create a page
-        PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1);
+        PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1.getName());
         assertEquals(c1.getCurrentTeam(),t1);
         assertEquals(c1.getCurrentTeam().getName(),t1.getName());
 

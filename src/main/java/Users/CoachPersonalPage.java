@@ -1,5 +1,6 @@
 package Users;
 
+import SystemLogic.DB;
 import Teams.Team;
 
 import java.time.LocalDate;
@@ -12,11 +13,14 @@ public  class CoachPersonalPage extends PersonalPage {
     private String teamRole;
 
 
-    public CoachPersonalPage(String name, LocalDate birthdate, String teamRole, Team team){
+    public CoachPersonalPage(String name, LocalDate birthdate, String teamRole, String team){
         this.name=name;
         this.age=getCurrentAge(birthdate);
         this.teamRole=teamRole;
-        this.currentTeam=team;
+        teamHistory= new ArrayList<>();
+        DB db = DB.getInstance();
+        this.currentTeam = db.getTeam(team);
+
 //        this.teamHistory.add(team.getName());
 
     }

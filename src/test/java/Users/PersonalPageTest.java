@@ -33,7 +33,7 @@ public class PersonalPageTest {
         t3=new Team("Hapoel tel aviv");
         LocalDate localDate2 = LocalDate.of(1999,1,1);
 
-        pepPage = c1.createCoachPersonalPage(localDate2,t1);
+        pepPage = c1.createCoachPersonalPage(localDate2,t1.getName());
 
 
 

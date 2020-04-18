@@ -2,7 +2,9 @@ package Teams;
 
 import SystemLogic.DB;
 import Users.Coach;
+import Users.Manager;
 import Users.Player;
+import Users.TeamOwner;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -181,42 +183,66 @@ public class TeamTest {
 
     @Test
     public void addManager() {
+        Manager manager = new Manager("aa","aa","aaa","aaaa");
+        hapoel.addManager(manager);
+        assertEquals(hapoel.getManagers().size(),1);
+        maccabi.addManager(manager);
+        assertEquals(hapoel.getManagers().size(),0);
+        assertEquals(maccabi.getManagers().size(),1);
+
+
+
     }
 
     @Test
     public void removeManager() {
+        Manager manager = new Manager("aa","aa","aaa","aaaa");
+        hapoel.addManager(manager);
+        hapoel.removeManager(manager);
+        assertEquals(hapoel.getManagers().size(),0);
     }
 
     @Test
     public void addTeamOwner() {
+        TeamOwner teamOwner = new TeamOwner("rerere","rerer","rrrr","rere");
+        hapoel.addTeamOwner(teamOwner);
+        assertEquals(hapoel.getTeamOwners().size(),1);
+        maccabi.addTeamOwner(teamOwner);
+        assertEquals(hapoel.getTeamOwners().size(),0);
+        assertEquals(maccabi.getTeamOwners().size(),1);
+
+
     }
 
     @Test
     public void removeTeamOwner() {
+        TeamOwner teamOwner = new TeamOwner("rerere","rerer","rrrr","rere");
+        hapoel.addTeamOwner(teamOwner);
+        assertEquals(hapoel.getTeamOwners().size(),1);
+        hapoel.removeTeamOwner(teamOwner);
+        assertEquals(hapoel.getTeamOwners().size(),0);
+
     }
 
-    @Test
-    public void getCoaches() {
-    }
-
-    @Test
-    public void getPlayers() {
-    }
-
-    @Test
-    public void getManagers() {
-    }
-
-    @Test
-    public void getTeamOwners() {
-    }
 
     @Test
     public void getStadium() {
+        assertEquals(null,hapoel.getStadium());
+
+        Stadium stadium = new Stadium(20000,15000,10000000);
+        hapoel.setStadium(stadium);
+        assertEquals(hapoel.getStadium().getCapacity(),15000);
     }
 
     @Test
     public void setStadium() {
+        Stadium stadium = new Stadium(20000,15000,10000000);
+        hapoel.setStadium(stadium);
+        assertEquals(hapoel.getStadium().getCapacity(),15000);
+        Stadium stadium2 = new Stadium(20000,30000,10000000);
+        hapoel.setStadium(stadium2);
+        assertEquals(hapoel.getStadium().getCapacity(),30000);
+
     }
 
     @Test
@@ -233,10 +259,14 @@ public class TeamTest {
 
     @Test
     public void getName() {
+        assertEquals(hapoel.getName(),"hapoel tel aviv");
     }
 
     @Test
     public void setName() {
+        maccabi.setName("macccabi");
+        assertFalse(maccabi.getName()=="maccabi tel aviv");
+        assertEquals(maccabi.getName(),"macccabi");
     }
 
     @Test
@@ -245,14 +275,19 @@ public class TeamTest {
 
     @Test
     public void getStatus() {
+        assertEquals(hapoel.getStatus(), Team.teamStatus.active);
     }
 
     @Test
     public void getBudget() {
+        assertTrue(hapoel.getBudget()==0);
+
     }
 
     @Test
     public void setBudget() {
+        hapoel.setBudget(1);
+        assertTrue(hapoel.getBudget()==1);
     }
 
     @Test

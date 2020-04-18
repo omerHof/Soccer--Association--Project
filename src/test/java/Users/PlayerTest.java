@@ -52,7 +52,7 @@ public class PlayerTest {
 
     @Test
     public void createPersonalPage() {
-        PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1);
+        PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1.getName());
         assertFalse(ronaldoPage.getCurrentTeam().getName()=="Manchester city");
         assertEquals(ronaldoPage.getName(),"cristiano ronaldo");
     }
@@ -105,7 +105,7 @@ public class PlayerTest {
         assertEquals(p1.getPage(),null);
 
         //after
-        PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1);
+        PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1.getName());
         assertFalse(p1.getPage()==null);
         assertEquals(p1.getPage().getCurrentTeam(),t1);
 
@@ -118,7 +118,7 @@ public class PlayerTest {
         assertEquals(p1.getCurrentTeam(),null);
 
         //after create a page
-        PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1);
+        PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1.getName());
         assertEquals(p1.getCurrentTeam(),t1);
         p1.setCurrentTeam(t2);
         assertFalse(p1.getCurrentTeam().getName().equals("juventus"));

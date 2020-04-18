@@ -12,7 +12,7 @@ public abstract class PersonalPage extends Observable {
     protected String name;
     protected Team currentTeam;
     protected int age;
-    protected ArrayList<Team> teamHistory;
+    protected ArrayList<String> teamHistory;
 
 
 
@@ -43,7 +43,7 @@ public abstract class PersonalPage extends Observable {
         this.age = age;
     }
 
-    public ArrayList<Team> getTeamHistory() {
+    public ArrayList<String> getTeamHistory() {
         return teamHistory;
     }
 
@@ -53,12 +53,7 @@ public abstract class PersonalPage extends Observable {
         for(String team: teamHistoryList){
             if(db.getTeam(team)!=null){
                 Team t = db.getTeam(team);
-                teamHistory.add(t);
-            }
-            else{
-                Team t = new Team(team);
-                db.addTeam(t);
-                teamHistory.add(t);
+                teamHistory.add(t.getName());
             }
         }
     }
@@ -69,16 +64,12 @@ public abstract class PersonalPage extends Observable {
 
         Team t = db.getTeam(team);
         if(t!=null) {
-            teamHistory.add(t);
+            teamHistory.add(t.getName());
         }
         else{
-            t = new Team(team);
-            db.addTeam(t);
-            teamHistory.add(t);
+            System.out.println("the team is not exist");
         }
     }
-
-
 
 
     public int getCurrentAge(LocalDate dateOfBirth) {
