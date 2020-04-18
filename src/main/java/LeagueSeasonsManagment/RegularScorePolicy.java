@@ -1,10 +1,13 @@
 package LeagueSeasonsManagment;
 
-import java.util.ArrayList;
-
+/**
+ * this class represent the score policy:
+ * 3 point for win, 1 point for draw and 0 point for lose
+ * this policy prefer Gives priority to a team with better goal different than a team with more goals
+ */
 public class RegularScorePolicy implements IScorePolicy {
 
-    String name;
+    private String name;
     private int win;
     private int draw;
     private int lost;
@@ -12,22 +15,29 @@ public class RegularScorePolicy implements IScorePolicy {
 
     public RegularScorePolicy() {
         name = "RegularScorePolicy";
-        goalDiff= true;
+        goalDiff = true;
     }
 
-
+    /**
+     * score policy
+     */
     @Override
     public void scorePolicyAlgoImplementation() {
-        win=3;
-        draw=1;
-        lost=0;
-
+        win = 3;
+        draw = 1;
+        lost = 0;
     }
 
+    /**
+     * prefer goal different
+     *
+     * @return
+     */
     public boolean isGoalDiff() {
         return goalDiff;
     }
 
+    /***** getters ans setters*****/
     public int getWin() {
         return win;
     }

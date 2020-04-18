@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 import static org.junit.Assert.*;
 
-public class DayToGameTest {
+public class CloseGameTest {
     DB db = DB.getInstance();
     DataBase test = new DataBase();
     Game game;
@@ -18,6 +18,7 @@ public class DayToGameTest {
     @Before
     public void setUp() throws Exception {
         game = db.getLeague("Champions league").getSeasonByYear(2021).getAllGames().get(1).get(0);
+
     }
 
     @After
@@ -29,15 +30,17 @@ public class DayToGameTest {
         try {
             System.out.println(LocalDateTime.now());
             System.out.println(game.getTimeOfGame());
-            Thread.sleep(1000);
             System.out.println(game.getStatus());
 
-            assertEquals("status is not active", Game.gameStatus.preGame, game.getStatus());
             Thread.sleep(5000);
             System.out.println(game.getStatus());
+            Thread.sleep(3000);
+            System.out.println(game.getStatus());
+            Thread.sleep(3000);
+            System.out.println(game.getStatus());
+            assertEquals("status is not active", Game.gameStatus.close, game.getStatus());
         } catch (Exception e) {
             System.out.println("error");
         }
-
     }
 }

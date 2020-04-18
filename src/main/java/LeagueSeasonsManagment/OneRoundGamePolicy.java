@@ -7,10 +7,10 @@ import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.*;
 
-    /**
-     * this class get list of teams and create a scheduling for a season
-     */
-    public class OneRoundGamePolicy implements IGameInlayPolicy {
+/**
+ * this class get list of teams and create a scheduling for a season
+ */
+public class OneRoundGamePolicy implements IGameInlayPolicy {
 
     private String name;
     private ArrayList<Team> ListTeam; // the initial list of teams
@@ -18,10 +18,8 @@ import java.util.*;
     private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
     private LocalDateTime timeOfGame;
 
-
     /**
      * constructor
-     *
      * @param teams
      */
     public OneRoundGamePolicy(ArrayList<Team> teams, int year) {
@@ -29,8 +27,7 @@ import java.util.*;
         this.ListTeam = teams;
         this.listOfGames = new HashMap<>();
         this.tempListOfGames = new HashMap<>();
-        timeOfGame = LocalDateTime.of(year, Month.JANUARY, 1, 19, 0, 0);
-
+        this.timeOfGame = LocalDateTime.of(year, Month.JANUARY, 1, 19, 0, 0);
     }
 
     @Override
@@ -40,9 +37,7 @@ import java.util.*;
 
     /**
      * round robin implementation
-     *
-     * @param
-     * @return
+     * @return the list of games
      */
     @Override
     public HashMap<Integer, ArrayList<Game>> gameInlayPolicyAlgoImplementation() {
@@ -55,11 +50,11 @@ import java.util.*;
             if ((int) pair.getKey() < ListTeam.size()) {
                 listOfGames.put((int) pair.getKey(), (ArrayList<Game>) pair.getValue());
             }
-
         }
         return listOfGames;
     }
 }
+
 
 
 
