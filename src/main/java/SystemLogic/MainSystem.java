@@ -167,8 +167,15 @@ public class MainSystem {
             return "password";
         }
         this.currentUser = db.getUser(userName);
+        if(currentUser.isNonReadNotifications()){
+            showNotification();//todo: complete method!
+        }
         LOG.info(userName + " was logged in successfully");
         return "logged in";
+    }
+
+    private void showNotification() {
+        //todo: complete method!
     }
 
     /**

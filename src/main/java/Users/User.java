@@ -1,6 +1,5 @@
 package Users;
 
-import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 
 import java.util.ArrayList;
@@ -13,13 +12,9 @@ public abstract class User {
     protected String userEmail;
     protected String userFullName;
 
-    protected ArrayList<Notification> receivedNotifications;
-    protected ArrayList<Notification> sentNotifications;
-
-    public void sendTo (User receiver, Notification notification){
-        this.sentNotifications.add(notification);
-        receiver.receivedNotifications.add(notification);
-    }
+    protected ArrayList<Notification> receivedNotifications = new ArrayList<>();
+    protected ArrayList<Notification> readNotifications = new ArrayList<>();
+    private boolean nonReadNotifications = false;
 
     public String getUserName() {
         return userName;
@@ -61,12 +56,20 @@ public abstract class User {
         this.receivedNotifications = receivedNotifications;
     }
 
-    public ArrayList<Notification> getSentNotifications() {
-        return sentNotifications;
+    public ArrayList<Notification> getReadNotifications() {
+        return readNotifications;
     }
 
-    public void setSentNotifications(ArrayList<Notification> sentNotifications) {
-        this.sentNotifications = sentNotifications;
+    public void setReadNotifications(ArrayList<Notification> readNotifications) {
+        this.readNotifications = readNotifications;
+    }
+
+    public boolean isNonReadNotifications() {
+        return nonReadNotifications;
+    }
+
+    public void setNonReadNotifications(boolean nonReadNotifications) {
+        this.nonReadNotifications = nonReadNotifications;
     }
 
     public String[] watchDetails(){
