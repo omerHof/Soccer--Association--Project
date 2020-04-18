@@ -220,8 +220,8 @@ class DayToGame extends TimerTask {
 
     @Override
     public void run() {
-        //homeTeam.getPage().notifyObservers("DayToGame");//todo add
-        //awayTeam.getPage().notifyObservers("DayToGame");//todo add
+        homeTeam.getPage().notifyObservers("DayToGame betweem: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
+        awayTeam.getPage().notifyObservers("DayToGame betweem: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
     }
 }
 
@@ -249,8 +249,8 @@ class StartGame extends TimerTask {
 
     @Override
     public void run() {
-        //homeTeam.getPage().notifyObservers("game Start!");//todo
-        //awayTeam.getPage().notifyObservers("game Start!");//todo
+        homeTeam.getPage().notifyObservers("game Start between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo
+        awayTeam.getPage().notifyObservers("game Start between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo
         game.setStatus(Game.gameStatus.active);
         MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " started");
     }
@@ -285,8 +285,8 @@ class EndGame extends TimerTask {
 
     @Override
     public void run() {
-        //homeTeam.getPage().notifyObservers("score: "+homeTeam.getName()+" "+ score+" "+awayTeam.getName());//todo
-        //awayTeam.getPage().notifyObservers("score: "+homeTeam.getName()+" "+ score+" "+awayTeam.getName());//todo
+        homeTeam.getPage().notifyObservers("End game between: "+homeTeam.getName()+" and "+awayTeam.getName()+"in a score: "+score);//todo
+        awayTeam.getPage().notifyObservers("End game between: "+homeTeam.getName()+" and "+awayTeam.getName()+"in a score: "+score);//todo
         game.setStatus(Game.gameStatus.finish);
         //double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();//todo now there is'nt stadium
         //homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);

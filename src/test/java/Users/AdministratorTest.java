@@ -116,6 +116,11 @@ public class AdministratorTest {
           /*
         administrator
          */
+          ad.deleteUserFromSystem(ad.getUserFullName());
+          Administrator admin = new Administrator("d","d","dddd","ddd");
+          db.addUser(admin);
+          ad.deleteUserFromSystem(admin.getUserFullName());
+          assertEquals(1,db.checkQuantityOfUsersByType("Administrator"));
 
     }
 

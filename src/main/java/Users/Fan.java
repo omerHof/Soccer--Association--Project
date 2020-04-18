@@ -131,13 +131,12 @@ public class Fan extends User implements Observer {
                 notification.send();
 
             } else if (arg instanceof String) {
-                /*
-                Game game = (Game) arg;
-                Team homeTeam = game.getHomeTeam();
-                Team awayTeam = game.getAwayTeam();
 
-                 */
                 String updateFromGame = (String)arg;
+                String message = updateFromGame;
+                Notification notification = new Notification(managerSender,message,this);
+                notification.send();
+
                 /*
                 if(updateFromGame)
                 if (game.getStatus() == Game.gameStatus.preGame) {

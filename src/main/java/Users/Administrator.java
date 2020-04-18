@@ -110,6 +110,11 @@ g.	שולח להם התראה (?).
             } else if (user instanceof Administrator) {
                 if (db.checkQuantityOfUsersByType("Administrator") >= 2) {
                     db.removeUser(user.getUserName());
+                    MainSystem.LOG.info("the user of administarator " +name+" is deleted by the administrator");
+
+                }
+                else{
+                    System.out.println("no delete! the system has less then 2 administrator");
                 }
             } else if (user instanceof Fan) {
                 Fan fan = (Fan) user;
