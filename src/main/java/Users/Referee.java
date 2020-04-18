@@ -1,7 +1,9 @@
 package Users;
 
 import Games.Game;
+import SystemLogic.DB;
 import SystemLogic.MainSystem;
+import SystemLogic.Notification;
 import javafx.scene.control.Alert;
 
 import java.util.LinkedList;
@@ -85,6 +87,11 @@ public class Referee extends User implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
+        User user = DB.getInstance().getUserType("AssociationRepresentative");
+        String message = (String) arg;
+        Notification notification = new Notification(user,message,this);
+        notification.send();
+
 
     }
 }

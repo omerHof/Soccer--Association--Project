@@ -71,7 +71,7 @@ public class Game extends Observable {
      */
     private void dayToGame() {
         LocalDateTime dayBefore = timeOfGame.minus(1, ChronoUnit.SECONDS);//todo change seconds to days
-        DayToGame dayToGame = new DayToGame(gameReferees, representative, homeTeam, awayTeam);
+        DayToGame dayToGame = new DayToGame(gameReferees, representative, homeTeam, awayTeam, this);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, dayBefore);
         timer.schedule(dayToGame, duration.getSeconds() * 1000);
@@ -203,6 +203,7 @@ class DayToGame extends TimerTask {
     private AssociationRepresentative representative;
     private Team homeTeam;
     private Team awayTeam;
+    private Game game;
 
     /**
      * constructor
@@ -211,17 +212,19 @@ class DayToGame extends TimerTask {
      * @param homeTeam
      * @param awayTeam
      */
-    public DayToGame(List<Referee> referees, AssociationRepresentative representative, Team homeTeam, Team awayTeam) {
+    public DayToGame(List<Referee> referees, AssociationRepresentative representative, Team homeTeam, Team awayTeam, Game game) {
         this.referees = referees;
         this.representative = representative;
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
+        this.game= game;
     }
 
     @Override
     public void run() {
-        homeTeam.getPage().notifyObservers("DayToGame betweem: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
-        awayTeam.getPage().notifyObservers("DayToGame betweem: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
+        homeTeam.getPage().notifyObservers("DayToGame between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
+        awayTeam.getPage().notifyObservers("DayToGame between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
+        game.notifyObservers("Day To Game you are assigned to between: "+homeTeam.getName()+" and "+awayTeam.getName());
     }
 }
 

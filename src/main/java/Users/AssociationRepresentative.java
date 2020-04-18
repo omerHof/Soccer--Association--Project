@@ -292,7 +292,10 @@ public class AssociationRepresentative extends User implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-
+        User user = DB.getInstance().getUserType("AssociationRepresentative");
+        String message = (String) arg;
+        Notification notification = new Notification(user,message,this);
+        notification.send();
     }
 
 
