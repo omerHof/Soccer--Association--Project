@@ -9,10 +9,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import static java.util.concurrent.TimeUnit.DAYS;
-import static java.util.concurrent.TimeUnit.SECONDS;
 
+/**
+ * this class represent the table of a season
+ */
 public class SeasonScoreBoard {
 
     private ArrayList<Team> teams;
@@ -26,74 +27,37 @@ public class SeasonScoreBoard {
      * @param teams
      * @param policy
      * @param firstGameDate
+     * @param numOfWeeks
      */
-    public SeasonScoreBoard(ArrayList<Team> teams,IScorePolicy policy, LocalDateTime firstGameDate, int numOfWeeks) {
+    public SeasonScoreBoard(ArrayList<Team> teams, IScorePolicy policy, LocalDateTime firstGameDate, int numOfWeeks) {
         this.teams = teams;
-        this.policy= policy;
+        this.policy = policy;
         this.table = initTable();
         this.firstGameDate = firstGameDate;
         this.numOfWeeks = numOfWeeks;
-        updateTable();
+        updateTable(); //class- update the table after every week game
     }
 
-    /**
-     * get table
-     * @return
-     */
+    /*****getters and setters*****/
     public ArrayList<Team> getTable() {
         return table;
     }
 
-    /**
-     * set table
-     * @param table
-     */
-    public void setTable(ArrayList<Team>table) {
+    public void setTable(ArrayList<Team> table) {
         this.table = table;
     }
 
-    /**
-     * get policy
-     * @return
-     */
     public IScorePolicy getPolicy() {
         return policy;
     }
 
-    /**
-     * set policy
-     * @param policy
-     */
     public void setPolicy(IScorePolicy policy) {
         this.policy = policy;
     }
 
-    /**
-     * init table
-     * @return
-     */
-    private ArrayList<Team> initTable() {
-        ArrayList<Team> table= new ArrayList();
-        for(Team team:teams){
-            //Statistics statistics= new Statistics(policy);
-            team.getStatistics().setNewSeasonStatistics(policy);
-            table.add(team);
-        }
-
-        return table;
-    }
-
-    /**
-     * sort table by chosen score policy
-     */
-    public void sortByValue()
-    {
-        Collections.sort(table);
-    }
-
-    public Team getTeamByName(String name){
-        for(Team team:table){
-            if(team.getName().equals(name)){
+    public Team getTeamByName(String name) {
+        for (Team team : table) {
+            if (team.getName().equals(name)) {
                 return team;
             }
         }
@@ -101,24 +65,46 @@ public class SeasonScoreBoard {
     }
 
     /**
-     * print table
+     * init table- init the table with all teams and initial statistics
+     * @return table
      */
-    public void showTable(){
-        int i=1;
+    private ArrayList<Team> initTable() {
+        ArrayList<Team> table = new ArrayList();
+        for (Team team : teams) {
+            //Statistics statistics= new Statistics(policy);
+            team.getStatistics().setNewSeasonStatistics(policy);
+            table.add(team);
+        }
+        return table;
+    }
+
+    /**
+     * sort table by chosen score policy
+     */
+    public void sortByValue() {
+        Collections.sort(table);
+    }
+
+    /**
+     * print table- help function
+     */
+    public void showTable() {
+        int i = 1;
         System.out.println("Table:");
-        for(Team team:table){
-            System.out.println(i+". Name: "+ team.getName()+" | score: "+team.getStatistics().getScore()+
-                    " | w:"+ team.getStatistics().getWins()+" | d: "+ team.getStatistics().getTie()+" | l: "+ team.getStatistics().getLoses()+
-                    " | goals:"+team.getStatistics().getGoals()+
-                    " | goals c:"+ team.getStatistics().getGc()+" | dif: "+ team.getStatistics().getDif());
+        for (Team team : table) {
+            System.out.println(i + ". Name: " + team.getName() + " | score: " + team.getStatistics().getScore() +
+                    " | w:" + team.getStatistics().getWins() + " | d: " + team.getStatistics().getTie() + " | l: " + team.getStatistics().getLoses() +
+                    " | goals:" + team.getStatistics().getGoals() +
+                    " | goals c:" + team.getStatistics().getGc() + " | dif: " + team.getStatistics().getDif());
             i++;
         }
     }
 
     /**
-     *
+     * this function scheduling the start of updating the table and using the updateTable class
+     * to update every week after the game by number of teams
      */
-   public void updateTable() {
+    public void updateTable() {
         try {
             LocalDateTime timeToUpdate;
             timeToUpdate = firstGameDate.plus(2, ChronoUnit.HOURS);
@@ -126,33 +112,34 @@ public class SeasonScoreBoard {
             Duration duration = Duration.between(from, timeToUpdate);
             UpdateTable updateTable = new UpdateTable(duration.getSeconds(), this, new AtomicInteger(numOfWeeks));
             updateTable.beep();
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
-   }
+    }
 }
+
 /**
  * this class represent the time to update the score board
  */
 
 class UpdateTable {
 
-    long delay;
+    private long delay;
     private AtomicInteger count;
     private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-    SeasonScoreBoard scoreBoard;
+    private SeasonScoreBoard scoreBoard;
 
-    public UpdateTable(Long tDelay,SeasonScoreBoard scoreBoard1, AtomicInteger numOfWeeks) {
-        delay = tDelay;
-        scoreBoard = scoreBoard1;
-        count = numOfWeeks;
+    public UpdateTable(Long tDelay, SeasonScoreBoard scoreBoard1, AtomicInteger numOfWeeks) {
+        this.delay = tDelay;
+        this.scoreBoard = scoreBoard1;
+        this.count = numOfWeeks;
     }
+
     public void beep() {
         final Runnable beeper = new Runnable() {
             public void run() {
                 count.getAndDecrement();
                 scoreBoard.sortByValue();
-
                 if (count.get() == 0) {
                     scheduler.shutdown();
                 }

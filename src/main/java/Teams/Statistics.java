@@ -2,6 +2,9 @@ package Teams;
 
 import LeagueSeasonsManagment.IScorePolicy;
 
+/**
+ * this class represent the statistics of a team
+ */
 public class Statistics implements Comparable {
 
     private int score;
@@ -16,6 +19,11 @@ public class Statistics implements Comparable {
         setNewSeasonStatistics(policy);
     }
 
+    /**
+     * initial the statistic for a team
+     *
+     * @param policy
+     */
     public void setNewSeasonStatistics(IScorePolicy policy) {
         this.score = 0;
         this.wins = 0;
@@ -24,8 +32,9 @@ public class Statistics implements Comparable {
         this.gs = 0;
         this.gc = 0;
         this.policy = policy;
-
     }
+
+    /*****getters ans setters*****/
 
     public int getScore() {
         return score;
@@ -68,7 +77,6 @@ public class Statistics implements Comparable {
     public void setTie() {
         this.tie++;
         this.setScore(policy.getDraw());
-
     }
 
     public int getGc() {
@@ -83,6 +91,11 @@ public class Statistics implements Comparable {
         return gs - gc;
     }
 
+    /**
+     * compare between two statistics
+     * @param obj other team stat
+     * @return which stat is better
+     */
     @Override
     public int compareTo(Object obj) {
         Statistics other = (Statistics) obj;
@@ -123,4 +136,3 @@ public class Statistics implements Comparable {
         return 0;
     }
 }
-

@@ -20,6 +20,7 @@ public class Season {
     private HashMap<Integer, ArrayList<Game>> allGames;
     private ArrayList<Team> allTeams;
     private ArrayList<Referee> allReferees;
+    //private ArrayList<MainReferee> allMainReferees;
     private ArrayList<AssociationRepresentative> allRepresentatives;
     private IGameInlayPolicy iGameInlayPolicy;
     private IScorePolicy iScorePolicy;
@@ -42,16 +43,17 @@ public class Season {
 
         this.allGames = iGameInlayPolicy.gameInlayPolicyAlgoImplementation(); //adds list of games to each mahzor.
 
-        //assignUsersToGames(3); //assign 3 referees for each game, 1 main referee, and 1 association rep.
-        this.seasonScoreBoard = new SeasonScoreBoard(allTeams,iScorePolicy,allGames.get(1).get(0).getTimeOfGame(),allGames.size());
+        assignUsersToGames(3); //assign 3 referees for each game, 1 main referee, and 1 association rep.
+        this.seasonScoreBoard = new SeasonScoreBoard(allTeams, iScorePolicy, allGames.get(1).get(0).getTimeOfGame(), allGames.size());
 
     }
 
     /**
      * assign referees and association representatives to all games
+     *
      * @param amount - how many standard referees to assign for each game.
      */
-    private void assignUsersToGames(int amount) {
+    public void assignUsersToGames(int amount) {
 
         if (allReferees != null && allRepresentatives != null) {
 
@@ -69,7 +71,7 @@ public class Season {
                     for (int i = 0; i < amount; i++) {
                         ref = getRandomReferee();
 
-                        while (mahzorRefereesAndAsso.contains(ref)){ // contains this referee already
+                        while (mahzorRefereesAndAsso.contains(ref) || ref instanceof MainReferee) { // contains this referee already
                             ref = getRandomReferee(); //gets another one
                         }
 
@@ -84,9 +86,12 @@ public class Season {
                     asso.followThisGame(game); //adds both ways.
                     mahzorRefereesAndAsso.add(asso);
 
-                    MainReferee mainReferee = (MainReferee) db.getUserType("MainReferee");
-                    while (mahzorRefereesAndAsso.contains(mainReferee)) { //until gets a new one.
-                        mainReferee = (MainReferee) db.getUserType("MainReferee");
+                    //MainReferee mainReferee = (MainReferee) db.getUserType("MainReferee");
+                    MainReferee mainReferee = getRandomMainReferee();
+
+                    while (mainReferee == null || mahzorRefereesAndAsso.contains(mainReferee)) { //until gets a new one.
+                        mainReferee = getRandomMainReferee();
+                        //mainReferee = (MainReferee) db.getUserType("MainReferee");
                     }
                     mainReferee.followThisGame(game); //adds both ways.
                     mahzorRefereesAndAsso.add(mainReferee);
@@ -99,13 +104,13 @@ public class Season {
                     home.addGame(game);
                 }
             }
-        }
-        else //no option.
+        } else //no option.
             System.out.println(" cannot create a new season without referees nor association.");
     }
 
     /**
      * this function returns a random referee.
+     *
      * @return Referee - to assign for a game.
      */
     private Referee getRandomReferee() {
@@ -114,10 +119,11 @@ public class Season {
         int rand = random.nextInt(allReferees.size());
 
         return allReferees.get(rand);
-     }
+    }
 
     /**
      * this function returns a random AssociationRepresentative.
+     *
      * @return AssociationRepresentative - to assign for a game.
      */
     private AssociationRepresentative getRandomAsso() {
@@ -127,6 +133,26 @@ public class Season {
 
         return allRepresentatives.get(rand);
     }
+
+    private MainReferee getRandomMainReferee() {
+
+        Random random = new Random();
+        int rand = random.nextInt(allReferees.size());
+
+        Referee toReturn = allReferees.get(rand);
+        if (toReturn instanceof MainReferee)
+            return (MainReferee) toReturn;
+
+/*
+        for (int i = 0; i < allReferees.size(); i++) {
+            if(allReferees.get(i) instanceof MainReferee && cur)
+                return (MainReferee)allReferees.get(i);
+        }*/
+        return null;
+    }
+
+
+
 
     //getters
     public int getYear() {

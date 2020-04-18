@@ -301,39 +301,323 @@
 2020.04.18 14:05:20.412 INFO  SystemLogic.MainSystem - The player leo messi create personal page
 2020.04.18 14:05:20.417 INFO  SystemLogic.MainSystem - The coach nir klinger create personal page
 2020.04.18 14:05:20.417 INFO  SystemLogic.MainSystem - ido kesttenbaum follow the page of: nir klinger
-2020.04.18 18:41:06.790 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team maccabi netanya
-2020.04.18 18:41:06.795 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team maccabi netanya
-2020.04.18 18:41:44.435 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team maccabi netanya
-2020.04.18 18:41:44.438 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team maccabi netanya
-2020.04.18 18:43:34.618 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team maccabi netanya
-2020.04.18 18:43:34.623 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team maccabi netanya
-2020.04.18 18:47:45.491 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team maccabi netanya
-2020.04.18 18:47:45.495 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team maccabi netanya
-2020.04.18 18:58:57.185 INFO  SystemLogic.MainSystem - the team maccabi netanya is permanently closed by the administrator
-2020.04.18 18:58:57.192 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team maccabi netanya
-2020.04.18 18:58:57.192 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team maccabi netanya
-2020.04.18 18:58:57.193 INFO  SystemLogic.MainSystem - the team maccabi netanya is permanently closed by the administrator
-2020.04.18 19:00:17.125 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team maccabi netanya
-2020.04.18 19:00:17.129 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team maccabi netanya
-2020.04.18 19:00:17.129 INFO  SystemLogic.MainSystem - the team maccabi netanya is permanently closed by the administrator
-2020.04.18 19:06:13.957 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team maccabi netanya
-2020.04.18 19:06:13.963 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team maccabi netanya
-2020.04.18 19:06:13.965 INFO  SystemLogic.MainSystem - the team maccabi netanya is permanently closed by the administrator
-2020.04.18 19:06:13.968 INFO  SystemLogic.MainSystem - notification sent to the team owner bibi
-2020.04.18 19:08:47.349 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team maccabi netanya
-2020.04.18 19:08:47.352 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team maccabi netanya
-2020.04.18 19:08:47.352 INFO  SystemLogic.MainSystem - the team maccabi netanya is permanently closed by the administrator
-2020.04.18 19:08:47.355 INFO  SystemLogic.MainSystem - notification sent to the team owner bibi
-2020.04.18 19:09:06.314 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team maccabi netanya
-2020.04.18 19:09:06.317 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team maccabi netanya
-2020.04.18 19:09:06.317 INFO  SystemLogic.MainSystem - the team maccabi netanya is permanently closed by the administrator
-2020.04.18 19:09:06.319 INFO  SystemLogic.MainSystem - notification sent to the team owner bibi
-2020.04.18 19:09:06.319 INFO  SystemLogic.MainSystem - notification sent to the manager someone
-2020.04.18 19:12:07.363 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team maccabi netanya
-2020.04.18 19:12:07.367 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team maccabi netanya
-2020.04.18 19:12:07.368 INFO  SystemLogic.MainSystem - the team maccabi netanya is permanently closed by the administrator
-2020.04.18 19:12:07.372 INFO  SystemLogic.MainSystem - notification sent to the team owner bibi
-2020.04.18 19:12:07.373 INFO  SystemLogic.MainSystem - notification sent to the manager someone
-2020.04.18 19:22:18.242 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
-2020.04.18 19:23:26.839 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
-2020.04.18 19:24:13.619 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.18 15:50:30.466 INFO  SystemLogic.MainSystem - The game between: roma and liverpoolstarted
+2020.04.18 15:50:30.470 INFO  SystemLogic.MainSystem - The game between: milan and romastarted
+2020.04.18 15:50:30.470 INFO  SystemLogic.MainSystem - The game between: inter and romastarted
+2020.04.18 15:50:30.471 INFO  SystemLogic.MainSystem - The game between: inter and barcastarted
+2020.04.18 15:50:30.471 INFO  SystemLogic.MainSystem - The game between: barca and milanstarted
+2020.04.18 15:50:30.468 INFO  SystemLogic.MainSystem - The game between: man u and man citystarted
+2020.04.18 15:50:30.467 INFO  SystemLogic.MainSystem - The game between: juve and romastarted
+2020.04.18 15:50:30.467 INFO  SystemLogic.MainSystem - The game between: liverpool and man ustarted
+2020.04.18 15:50:30.468 INFO  SystemLogic.MainSystem - The game between: chelsea and juvestarted
+2020.04.18 15:50:30.467 INFO  SystemLogic.MainSystem - The game between: roma and chelseastarted
+2020.04.18 15:50:30.472 INFO  SystemLogic.MainSystem - The game between: liverpool and juvestarted
+2020.04.18 15:50:30.468 INFO  SystemLogic.MainSystem - The game between: milan and barcastarted
+2020.04.18 15:50:30.473 INFO  SystemLogic.MainSystem - The game between: milan and liverpoolstarted
+2020.04.18 15:50:30.467 INFO  SystemLogic.MainSystem - The game between: man city and barcastarted
+2020.04.18 15:50:30.467 INFO  SystemLogic.MainSystem - The game between: juve and interstarted
+2020.04.18 15:50:30.473 INFO  SystemLogic.MainSystem - The game between: man city and romastarted
+2020.04.18 15:50:30.473 INFO  SystemLogic.MainSystem - The game between: juve and barcastarted
+2020.04.18 15:50:30.469 INFO  SystemLogic.MainSystem - The game between: milan and realstarted
+2020.04.18 15:50:30.469 INFO  SystemLogic.MainSystem - The game between: inter and milanstarted
+2020.04.18 15:50:30.474 INFO  SystemLogic.MainSystem - The game between: real and chelseastarted
+2020.04.18 15:50:30.474 INFO  SystemLogic.MainSystem - The game between: real and juvestarted
+2020.04.18 15:50:30.474 INFO  SystemLogic.MainSystem - The game between: man u and liverpoolstarted
+2020.04.18 15:50:30.474 INFO  SystemLogic.MainSystem - The game between: liverpool and interstarted
+2020.04.18 15:50:30.473 INFO  SystemLogic.MainSystem - The game between: real and interstarted
+2020.04.18 15:50:30.466 INFO  SystemLogic.MainSystem - The game between: roma and barcastarted
+2020.04.18 15:50:30.475 INFO  SystemLogic.MainSystem - The game between: roma and realstarted
+2020.04.18 15:50:30.475 INFO  SystemLogic.MainSystem - The game between: juve and milanstarted
+2020.04.18 15:50:30.469 INFO  SystemLogic.MainSystem - The game between: man u and milanstarted
+2020.04.18 15:50:30.475 INFO  SystemLogic.MainSystem - The game between: man city and milanstarted
+2020.04.18 15:50:30.468 INFO  SystemLogic.MainSystem - The game between: juve and man citystarted
+2020.04.18 15:50:30.475 INFO  SystemLogic.MainSystem - The game between: inter and realstarted
+2020.04.18 15:50:30.475 INFO  SystemLogic.MainSystem - The game between: liverpool and barcastarted
+2020.04.18 15:50:30.476 INFO  SystemLogic.MainSystem - The game between: real and man ustarted
+2020.04.18 15:50:30.475 INFO  SystemLogic.MainSystem - The game between: roma and man citystarted
+2020.04.18 15:50:30.469 INFO  SystemLogic.MainSystem - The game between: man u and barcastarted
+2020.04.18 15:50:30.477 INFO  SystemLogic.MainSystem - The game between: milan and chelseastarted
+2020.04.18 15:50:30.477 INFO  SystemLogic.MainSystem - The game between: man city and realstarted
+2020.04.18 15:50:30.469 INFO  SystemLogic.MainSystem - The game between: real and barcastarted
+2020.04.18 15:50:30.478 INFO  SystemLogic.MainSystem - The game between: inter and man citystarted
+2020.04.18 15:50:30.478 INFO  SystemLogic.MainSystem - The game between: juve and chelseastarted
+2020.04.18 15:50:30.467 INFO  SystemLogic.MainSystem - The game between: juve and liverpoolstarted
+2020.04.18 15:50:30.478 INFO  SystemLogic.MainSystem - The game between: chelsea and barcastarted
+2020.04.18 15:50:30.478 INFO  SystemLogic.MainSystem - The game between: man u and juvestarted
+2020.04.18 15:50:30.478 INFO  SystemLogic.MainSystem - The game between: barca and man ustarted
+2020.04.18 15:50:30.467 INFO  SystemLogic.MainSystem - The game between: chelsea and man ustarted
+2020.04.18 15:50:30.475 INFO  SystemLogic.MainSystem - The game between: man u and interstarted
+2020.04.18 15:50:30.479 INFO  SystemLogic.MainSystem - The game between: liverpool and man citystarted
+2020.04.18 15:50:30.479 INFO  SystemLogic.MainSystem - The game between: real and milanstarted
+2020.04.18 15:50:30.479 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpoolstarted
+2020.04.18 15:50:30.480 INFO  SystemLogic.MainSystem - The game between: roma and man ustarted
+2020.04.18 15:50:30.474 INFO  SystemLogic.MainSystem - The game between: chelsea and interstarted
+2020.04.18 15:50:30.480 INFO  SystemLogic.MainSystem - The game between: chelsea and man citystarted
+2020.04.18 15:50:30.480 INFO  SystemLogic.MainSystem - The game between: barca and romastarted
+2020.04.18 15:50:30.480 INFO  SystemLogic.MainSystem - The game between: man city and chelseastarted
+2020.04.18 15:50:30.481 INFO  SystemLogic.MainSystem - The game between: real and liverpoolstarted
+2020.04.18 15:50:30.481 INFO  SystemLogic.MainSystem - The game between: real and man citystarted
+2020.04.18 15:50:30.481 INFO  SystemLogic.MainSystem - The game between: inter and liverpoolstarted
+2020.04.18 15:50:30.481 INFO  SystemLogic.MainSystem - The game between: roma and milanstarted
+2020.04.18 15:50:30.481 INFO  SystemLogic.MainSystem - The game between: inter and chelseastarted
+2020.04.18 15:50:30.481 INFO  SystemLogic.MainSystem - The game between: juve and man ustarted
+2020.04.18 15:50:30.482 INFO  SystemLogic.MainSystem - The game between: milan and man citystarted
+2020.04.18 15:50:30.482 INFO  SystemLogic.MainSystem - The game between: barca and liverpoolstarted
+2020.04.18 15:50:30.482 INFO  SystemLogic.MainSystem - The game between: man u and chelseastarted
+2020.04.18 15:50:30.482 INFO  SystemLogic.MainSystem - The game between: roma and interstarted
+2020.04.18 15:50:30.483 INFO  SystemLogic.MainSystem - The game between: juve and realstarted
+2020.04.18 15:50:30.540 INFO  SystemLogic.MainSystem - The game between: barca and man citystarted
+2020.04.18 15:50:30.545 INFO  SystemLogic.MainSystem - The game between: roma and juvestarted
+2020.04.18 15:50:30.545 INFO  SystemLogic.MainSystem - The game between: milan and interstarted
+2020.04.18 15:50:30.545 INFO  SystemLogic.MainSystem - The game between: liverpool and chelseastarted
+2020.04.18 15:50:30.545 INFO  SystemLogic.MainSystem - The game between: man u and realstarted
+2020.04.18 15:50:30.601 INFO  SystemLogic.MainSystem - The game between: barca and chelseastarted
+2020.04.18 15:50:30.601 INFO  SystemLogic.MainSystem - The game between: man city and interstarted
+2020.04.18 15:50:30.602 INFO  SystemLogic.MainSystem - The game between: man u and romastarted
+2020.04.18 15:50:30.602 INFO  SystemLogic.MainSystem - The game between: milan and juvestarted
+2020.04.18 15:50:30.602 INFO  SystemLogic.MainSystem - The game between: liverpool and realstarted
+2020.04.18 15:50:30.662 INFO  SystemLogic.MainSystem - The game between: liverpool and romastarted
+2020.04.18 15:50:30.662 INFO  SystemLogic.MainSystem - The game between: man city and juvestarted
+2020.04.18 15:50:30.663 INFO  SystemLogic.MainSystem - The game between: chelsea and realstarted
+2020.04.18 15:50:30.667 INFO  SystemLogic.MainSystem - The game between: barca and interstarted
+2020.04.18 15:50:30.668 INFO  SystemLogic.MainSystem - The game between: milan and man ustarted
+2020.04.18 15:50:30.750 INFO  SystemLogic.MainSystem - The game between: man city and man ustarted
+2020.04.18 15:50:30.757 INFO  SystemLogic.MainSystem - The game between: liverpool and milanstarted
+2020.04.18 15:50:30.768 INFO  SystemLogic.MainSystem - The game between: barca and realstarted
+2020.04.18 15:50:30.769 INFO  SystemLogic.MainSystem - The game between: inter and juvestarted
+2020.04.18 15:50:30.770 INFO  SystemLogic.MainSystem - The game between: chelsea and romastarted
+2020.04.18 15:50:30.787 INFO  SystemLogic.MainSystem - The game between: barca and juvestarted
+2020.04.18 15:50:30.788 INFO  SystemLogic.MainSystem - The game between: real and romastarted
+2020.04.18 15:50:30.789 INFO  SystemLogic.MainSystem - The game between: inter and man ustarted
+2020.04.18 15:50:30.790 INFO  SystemLogic.MainSystem - The game between: chelsea and milanstarted
+2020.04.18 15:50:30.790 INFO  SystemLogic.MainSystem - The game between: man city and liverpoolstarted
+2020.04.18 15:54:22.759 INFO  SystemLogic.MainSystem - The game between: barca and man city started
+2020.04.18 15:54:22.761 INFO  SystemLogic.MainSystem - The game between: inter and roma started
+2020.04.18 15:54:22.761 INFO  SystemLogic.MainSystem - The game between: barca and inter started
+2020.04.18 15:54:22.759 INFO  SystemLogic.MainSystem - The game between: inter and man city started
+2020.04.18 15:54:22.762 INFO  SystemLogic.MainSystem - The game between: man city and man u started
+2020.04.18 15:54:22.759 INFO  SystemLogic.MainSystem - The game between: real and barca started
+2020.04.18 15:54:22.762 INFO  SystemLogic.MainSystem - The game between: milan and chelsea started
+2020.04.18 15:54:22.758 INFO  SystemLogic.MainSystem - The game between: real and chelsea started
+2020.04.18 15:54:22.763 INFO  SystemLogic.MainSystem - The game between: milan and inter started
+2020.04.18 15:54:22.763 INFO  SystemLogic.MainSystem - The game between: roma and liverpool started
+2020.04.18 15:54:22.760 INFO  SystemLogic.MainSystem - The game between: man u and inter started
+2020.04.18 15:54:22.763 INFO  SystemLogic.MainSystem - The game between: real and milan started
+2020.04.18 15:54:22.759 INFO  SystemLogic.MainSystem - The game between: juve and chelsea started
+2020.04.18 15:54:22.760 INFO  SystemLogic.MainSystem - The game between: liverpool and juve started
+2020.04.18 15:54:22.760 INFO  SystemLogic.MainSystem - The game between: roma and inter started
+2020.04.18 15:54:22.758 INFO  SystemLogic.MainSystem - The game between: roma and man city started
+2020.04.18 15:54:22.764 INFO  SystemLogic.MainSystem - The game between: real and juve started
+2020.04.18 15:54:22.758 INFO  SystemLogic.MainSystem - The game between: barca and liverpool started
+2020.04.18 15:54:22.764 INFO  SystemLogic.MainSystem - The game between: juve and man u started
+2020.04.18 15:54:22.759 INFO  SystemLogic.MainSystem - The game between: roma and chelsea started
+2020.04.18 15:54:22.765 INFO  SystemLogic.MainSystem - The game between: real and man u started
+2020.04.18 15:54:22.765 INFO  SystemLogic.MainSystem - The game between: chelsea and man u started
+2020.04.18 15:54:22.764 INFO  SystemLogic.MainSystem - The game between: roma and man u started
+2020.04.18 15:54:22.765 INFO  SystemLogic.MainSystem - The game between: liverpool and milan started
+2020.04.18 15:54:22.765 INFO  SystemLogic.MainSystem - The game between: liverpool and barca started
+2020.04.18 15:54:22.765 INFO  SystemLogic.MainSystem - The game between: inter and real started
+2020.04.18 15:54:22.765 INFO  SystemLogic.MainSystem - The game between: chelsea and milan started
+2020.04.18 15:54:22.765 INFO  SystemLogic.MainSystem - The game between: barca and roma started
+2020.04.18 15:54:22.766 INFO  SystemLogic.MainSystem - The game between: milan and real started
+2020.04.18 15:54:22.764 INFO  SystemLogic.MainSystem - The game between: man city and inter started
+2020.04.18 15:54:22.766 INFO  SystemLogic.MainSystem - The game between: real and roma started
+2020.04.18 15:54:22.766 INFO  SystemLogic.MainSystem - The game between: man u and man city started
+2020.04.18 15:54:22.766 INFO  SystemLogic.MainSystem - The game between: liverpool and chelsea started
+2020.04.18 15:54:22.766 INFO  SystemLogic.MainSystem - The game between: milan and man city started
+2020.04.18 15:54:22.763 INFO  SystemLogic.MainSystem - The game between: barca and real started
+2020.04.18 15:54:22.767 INFO  SystemLogic.MainSystem - The game between: liverpool and roma started
+2020.04.18 15:54:22.767 INFO  SystemLogic.MainSystem - The game between: roma and real started
+2020.04.18 15:54:22.767 INFO  SystemLogic.MainSystem - The game between: inter and juve started
+2020.04.18 15:54:22.766 INFO  SystemLogic.MainSystem - The game between: man u and juve started
+2020.04.18 15:54:22.767 INFO  SystemLogic.MainSystem - The game between: milan and man u started
+2020.04.18 15:54:22.767 INFO  SystemLogic.MainSystem - The game between: chelsea and barca started
+2020.04.18 15:54:22.766 INFO  SystemLogic.MainSystem - The game between: juve and real started
+2020.04.18 15:54:22.768 INFO  SystemLogic.MainSystem - The game between: inter and chelsea started
+2020.04.18 15:54:22.767 INFO  SystemLogic.MainSystem - The game between: milan and roma started
+2020.04.18 15:54:22.768 INFO  SystemLogic.MainSystem - The game between: man u and chelsea started
+2020.04.18 15:54:22.767 INFO  SystemLogic.MainSystem - The game between: barca and man u started
+2020.04.18 15:54:22.768 INFO  SystemLogic.MainSystem - The game between: inter and man u started
+2020.04.18 15:54:22.768 INFO  SystemLogic.MainSystem - The game between: chelsea and juve started
+2020.04.18 15:54:22.768 INFO  SystemLogic.MainSystem - The game between: liverpool and real started
+2020.04.18 15:54:22.768 INFO  SystemLogic.MainSystem - The game between: juve and man city started
+2020.04.18 15:54:22.769 INFO  SystemLogic.MainSystem - The game between: man city and roma started
+2020.04.18 15:54:22.769 INFO  SystemLogic.MainSystem - The game between: juve and milan started
+2020.04.18 15:54:22.769 INFO  SystemLogic.MainSystem - The game between: chelsea and roma started
+2020.04.18 15:54:22.769 INFO  SystemLogic.MainSystem - The game between: milan and liverpool started
+2020.04.18 15:54:22.770 INFO  SystemLogic.MainSystem - The game between: barca and chelsea started
+2020.04.18 15:54:22.769 INFO  SystemLogic.MainSystem - The game between: milan and barca started
+2020.04.18 15:54:22.769 INFO  SystemLogic.MainSystem - The game between: milan and juve started
+2020.04.18 15:54:22.770 INFO  SystemLogic.MainSystem - The game between: inter and milan started
+2020.04.18 15:54:22.770 INFO  SystemLogic.MainSystem - The game between: inter and liverpool started
+2020.04.18 15:54:22.770 INFO  SystemLogic.MainSystem - The game between: chelsea and real started
+2020.04.18 15:54:22.771 INFO  SystemLogic.MainSystem - The game between: liverpool and inter started
+2020.04.18 15:54:22.771 INFO  SystemLogic.MainSystem - The game between: liverpool and man u started
+2020.04.18 15:54:22.771 INFO  SystemLogic.MainSystem - The game between: man city and liverpool started
+2020.04.18 15:54:22.771 INFO  SystemLogic.MainSystem - The game between: man city and chelsea started
+2020.04.18 15:54:22.771 INFO  SystemLogic.MainSystem - The game between: man u and roma started
+2020.04.18 15:54:22.771 INFO  SystemLogic.MainSystem - The game between: juve and roma started
+2020.04.18 15:54:22.772 INFO  SystemLogic.MainSystem - The game between: barca and juve started
+2020.04.18 15:54:22.772 INFO  SystemLogic.MainSystem - The game between: real and man city started
+2020.04.18 15:54:22.772 INFO  SystemLogic.MainSystem - The game between: man city and barca started
+2020.04.18 15:54:22.772 INFO  SystemLogic.MainSystem - The game between: juve and liverpool started
+2020.04.18 15:54:22.772 INFO  SystemLogic.MainSystem - The game between: man u and milan started
+2020.04.18 15:54:22.772 INFO  SystemLogic.MainSystem - The game between: inter and barca started
+2020.04.18 15:54:22.772 INFO  SystemLogic.MainSystem - The game between: liverpool and man city started
+2020.04.18 15:54:22.772 INFO  SystemLogic.MainSystem - The game between: man city and real started
+2020.04.18 15:54:22.773 INFO  SystemLogic.MainSystem - The game between: juve and barca started
+2020.04.18 15:54:22.812 INFO  SystemLogic.MainSystem - The game between: man u and real started
+2020.04.18 15:54:22.814 INFO  SystemLogic.MainSystem - The game between: roma and barca started
+2020.04.18 15:54:22.815 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool started
+2020.04.18 15:54:22.817 INFO  SystemLogic.MainSystem - The game between: man city and milan started
+2020.04.18 15:54:22.817 INFO  SystemLogic.MainSystem - The game between: juve and inter started
+2020.04.18 15:54:22.873 INFO  SystemLogic.MainSystem - The game between: man city and juve started
+2020.04.18 15:54:22.873 INFO  SystemLogic.MainSystem - The game between: chelsea and inter started
+2020.04.18 15:54:22.874 INFO  SystemLogic.MainSystem - The game between: roma and milan started
+2020.04.18 15:54:22.874 INFO  SystemLogic.MainSystem - The game between: real and liverpool started
+2020.04.18 15:54:22.874 INFO  SystemLogic.MainSystem - The game between: man u and barca started
+2020.04.18 15:54:22.936 INFO  SystemLogic.MainSystem - The game between: man u and liverpool started
+2020.04.18 15:54:22.936 INFO  SystemLogic.MainSystem - The game between: real and inter started
+2020.04.18 15:54:22.936 INFO  SystemLogic.MainSystem - The game between: chelsea and man city started
+2020.04.18 15:54:22.936 INFO  SystemLogic.MainSystem - The game between: barca and milan started
+2020.04.18 15:54:22.942 INFO  SystemLogic.MainSystem - The game between: roma and juve started
+2020.04.18 16:07:36.476 INFO  SystemLogic.MainSystem - The game between: man city and roma started
+2020.04.18 16:07:36.476 INFO  SystemLogic.MainSystem - The game between: barca and juve started
+2020.04.18 16:07:36.476 INFO  SystemLogic.MainSystem - The game between: man u and real started
+2020.04.18 16:07:36.476 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool started
+2020.04.18 16:07:36.476 INFO  SystemLogic.MainSystem - The game between: milan and inter started
+2020.04.18 16:19:02.079 INFO  SystemLogic.MainSystem - The game between: milan and chelsea started
+2020.04.18 16:19:02.079 INFO  SystemLogic.MainSystem - The game between: real and juve started
+2020.04.18 16:19:02.079 INFO  SystemLogic.MainSystem - The game between: man u and roma started
+2020.04.18 16:19:02.079 INFO  SystemLogic.MainSystem - The game between: man city and inter started
+2020.04.18 16:19:02.079 INFO  SystemLogic.MainSystem - The game between: liverpool and barca started
+2020.04.18 16:20:19.532 INFO  SystemLogic.MainSystem - The game between: man u and juve started
+2020.04.18 16:20:19.532 INFO  SystemLogic.MainSystem - The game between: barca and chelsea started
+2020.04.18 16:20:19.532 INFO  SystemLogic.MainSystem - The game between: real and man city started
+2020.04.18 16:20:19.532 INFO  SystemLogic.MainSystem - The game between: roma and inter started
+2020.04.18 16:20:19.532 INFO  SystemLogic.MainSystem - The game between: milan and liverpool started
+2020.04.18 16:21:18.584 INFO  SystemLogic.MainSystem - The game between: chelsea and real started
+2020.04.18 16:21:18.584 INFO  SystemLogic.MainSystem - The game between: man u and inter started
+2020.04.18 16:21:18.584 INFO  SystemLogic.MainSystem - The game between: juve and barca started
+2020.04.18 16:21:18.584 INFO  SystemLogic.MainSystem - The game between: roma and man city started
+2020.04.18 16:21:18.584 INFO  SystemLogic.MainSystem - The game between: liverpool and milan started
+2020.04.18 16:22:29.688 INFO  SystemLogic.MainSystem - The game between: man city and man u started
+2020.04.18 16:22:29.688 INFO  SystemLogic.MainSystem - The game between: milan and chelsea started
+2020.04.18 16:22:29.688 INFO  SystemLogic.MainSystem - The game between: roma and real started
+2020.04.18 16:22:29.688 INFO  SystemLogic.MainSystem - The game between: barca and juve started
+2020.04.18 16:22:29.688 INFO  SystemLogic.MainSystem - The game between: liverpool and inter started
+2020.04.18 16:26:13.920 INFO  SystemLogic.MainSystem - The game between: milan and man u started
+2020.04.18 16:26:13.920 INFO  SystemLogic.MainSystem - The game between: barca and man city started
+2020.04.18 16:26:13.920 INFO  SystemLogic.MainSystem - The game between: real and juve started
+2020.04.18 16:26:13.920 INFO  SystemLogic.MainSystem - The game between: roma and liverpool started
+2020.04.18 16:26:13.920 INFO  SystemLogic.MainSystem - The game between: chelsea and inter started
+2020.04.18 16:26:51.904 INFO  SystemLogic.MainSystem - The game between: roma and man u started
+2020.04.18 16:26:51.904 INFO  SystemLogic.MainSystem - The game between: inter and man city started
+2020.04.18 16:26:51.904 INFO  SystemLogic.MainSystem - The game between: chelsea and juve started
+2020.04.18 16:26:51.904 INFO  SystemLogic.MainSystem - The game between: real and liverpool started
+2020.04.18 16:26:51.904 INFO  SystemLogic.MainSystem - The game between: barca and milan started
+2020.04.18 16:27:47.046 INFO  SystemLogic.MainSystem - The game between: inter and milan started
+2020.04.18 16:27:47.046 INFO  SystemLogic.MainSystem - The game between: real and roma started
+2020.04.18 16:27:47.046 INFO  SystemLogic.MainSystem - The game between: man city and man u started
+2020.04.18 16:27:47.046 INFO  SystemLogic.MainSystem - The game between: barca and chelsea started
+2020.04.18 16:27:47.046 INFO  SystemLogic.MainSystem - The game between: juve and liverpool started
+2020.04.18 16:29:41.409 INFO  SystemLogic.MainSystem - The game between: chelsea and milan started
+2020.04.18 16:29:41.408 INFO  SystemLogic.MainSystem - The game between: juve and roma started
+2020.04.18 16:29:41.409 INFO  SystemLogic.MainSystem - The game between: liverpool and man u started
+2020.04.18 16:29:41.408 INFO  SystemLogic.MainSystem - The game between: real and man city started
+2020.04.18 16:29:41.408 INFO  SystemLogic.MainSystem - The game between: barca and inter started
+2020.04.18 16:30:45.943 INFO  SystemLogic.MainSystem - The game between: inter and chelsea started
+2020.04.18 16:30:45.942 INFO  SystemLogic.MainSystem - The game between: juve and man u started
+2020.04.18 16:30:45.943 INFO  SystemLogic.MainSystem - The game between: barca and real started
+2020.04.18 16:30:45.942 INFO  SystemLogic.MainSystem - The game between: man city and liverpool started
+2020.04.18 16:30:45.942 INFO  SystemLogic.MainSystem - The game between: roma and milan started
+2020.04.18 16:30:48.515 INFO  SystemLogic.MainSystem - The game between: man city and liverpoolended
+2020.04.18 16:30:48.515 INFO  SystemLogic.MainSystem - The game between: roma and milanended
+2020.04.18 16:30:48.516 INFO  SystemLogic.MainSystem - The game between: barca and realended
+2020.04.18 16:30:48.516 INFO  SystemLogic.MainSystem - The game between: inter and chelseaended
+2020.04.18 16:30:48.516 INFO  SystemLogic.MainSystem - The game between: juve and man uended
+2020.04.18 16:32:01.988 INFO  SystemLogic.MainSystem - The game between: man u and liverpool started
+2020.04.18 16:32:01.988 INFO  SystemLogic.MainSystem - The game between: barca and inter started
+2020.04.18 16:32:01.989 INFO  SystemLogic.MainSystem - The game between: chelsea and roma started
+2020.04.18 16:32:01.989 INFO  SystemLogic.MainSystem - The game between: milan and man city started
+2020.04.18 16:32:01.988 INFO  SystemLogic.MainSystem - The game between: juve and real started
+2020.04.18 16:32:04.554 INFO  SystemLogic.MainSystem - The game between: man u and liverpoolis close
+2020.04.18 16:32:04.554 INFO  SystemLogic.MainSystem - The game between: milan and man cityis close
+2020.04.18 16:32:04.554 INFO  SystemLogic.MainSystem - The game between: man u and liverpoolended
+2020.04.18 16:32:04.554 INFO  SystemLogic.MainSystem - The game between: milan and man cityended
+2020.04.18 16:32:04.555 INFO  SystemLogic.MainSystem - The game between: barca and interis close
+2020.04.18 16:32:04.555 INFO  SystemLogic.MainSystem - The game between: juve and realis close
+2020.04.18 16:32:04.555 INFO  SystemLogic.MainSystem - The game between: chelsea and romais close
+2020.04.18 16:32:04.555 INFO  SystemLogic.MainSystem - The game between: juve and realended
+2020.04.18 16:32:04.555 INFO  SystemLogic.MainSystem - The game between: chelsea and romaended
+2020.04.18 16:32:04.555 INFO  SystemLogic.MainSystem - The game between: barca and interended
+2020.04.18 16:33:03.592 INFO  SystemLogic.MainSystem - The game between: chelsea and man u started
+2020.04.18 16:33:03.592 INFO  SystemLogic.MainSystem - The game between: juve and real started
+2020.04.18 16:33:03.592 INFO  SystemLogic.MainSystem - The game between: barca and man city started
+2020.04.18 16:33:03.592 INFO  SystemLogic.MainSystem - The game between: roma and inter started
+2020.04.18 16:33:03.592 INFO  SystemLogic.MainSystem - The game between: milan and liverpool started
+2020.04.18 16:33:06.141 INFO  SystemLogic.MainSystem - The game between: milan and liverpoolended
+2020.04.18 16:33:06.142 INFO  SystemLogic.MainSystem - The game between: chelsea and man uis close
+2020.04.18 16:33:06.142 INFO  SystemLogic.MainSystem - The game between: juve and realis close
+2020.04.18 16:33:06.142 INFO  SystemLogic.MainSystem - The game between: roma and interis close
+2020.04.18 16:33:06.142 INFO  SystemLogic.MainSystem - The game between: chelsea and man uended
+2020.04.18 16:33:06.142 INFO  SystemLogic.MainSystem - The game between: juve and realended
+2020.04.18 16:33:06.142 INFO  SystemLogic.MainSystem - The game between: roma and interended
+2020.04.18 16:33:06.143 INFO  SystemLogic.MainSystem - The game between: milan and liverpoolis close
+2020.04.18 16:33:06.143 INFO  SystemLogic.MainSystem - The game between: barca and man cityis close
+2020.04.18 16:33:06.143 INFO  SystemLogic.MainSystem - The game between: barca and man cityended
+2020.04.18 16:36:22.518 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool started
+2020.04.18 16:36:22.518 INFO  SystemLogic.MainSystem - The game between: man u and barca started
+2020.04.18 16:36:22.518 INFO  SystemLogic.MainSystem - The game between: roma and man city started
+2020.04.18 16:36:22.518 INFO  SystemLogic.MainSystem - The game between: milan and real started
+2020.04.18 16:36:22.518 INFO  SystemLogic.MainSystem - The game between: juve and inter started
+2020.04.18 16:36:25.089 INFO  SystemLogic.MainSystem - The game between: juve and inter ended. the score: 3-2
+2020.04.18 16:36:25.090 INFO  SystemLogic.MainSystem - The game between: juve and inter is close
+2020.04.18 16:36:25.094 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool is close
+2020.04.18 16:36:25.094 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool ended. the score: 3-2
+2020.04.18 16:36:25.095 INFO  SystemLogic.MainSystem - The game between: roma and man city is close
+2020.04.18 16:36:25.095 INFO  SystemLogic.MainSystem - The game between: milan and real is close
+2020.04.18 16:36:25.095 INFO  SystemLogic.MainSystem - The game between: milan and real ended. the score: 3-2
+2020.04.18 16:36:25.095 INFO  SystemLogic.MainSystem - The game between: roma and man city ended. the score: 3-2
+2020.04.18 16:36:25.096 INFO  SystemLogic.MainSystem - The game between: man u and barca is close
+2020.04.18 16:36:25.096 INFO  SystemLogic.MainSystem - The game between: man u and barca ended. the score: 3-2
+2020.04.18 18:10:49.015 INFO  SystemLogic.MainSystem - The game between: liverpool and barca started
+2020.04.18 18:10:49.016 INFO  SystemLogic.MainSystem - The game between: man u and roma started
+2020.04.18 18:10:49.015 INFO  SystemLogic.MainSystem - The game between: real and inter started
+2020.04.18 18:10:49.016 INFO  SystemLogic.MainSystem - The game between: milan and juve started
+2020.04.18 18:10:49.015 INFO  SystemLogic.MainSystem - The game between: chelsea and man city started
+2020.04.18 18:10:51.583 INFO  SystemLogic.MainSystem - The game between: milan and juve ended. the score: 3-2
+2020.04.18 18:10:51.583 INFO  SystemLogic.MainSystem - The game between: man u and roma ended. the score: 3-2
+2020.04.18 18:10:51.584 INFO  SystemLogic.MainSystem - The game between: liverpool and barca ended. the score: 3-2
+2020.04.18 18:10:51.584 INFO  SystemLogic.MainSystem - The game between: real and inter ended. the score: 3-2
+2020.04.18 18:10:51.584 INFO  SystemLogic.MainSystem - The game between: chelsea and man city ended. the score: 3-2
+2020.04.18 18:10:54.584 INFO  SystemLogic.MainSystem - The game between: man u and roma is close
+2020.04.18 18:10:54.584 INFO  SystemLogic.MainSystem - The game between: milan and juve is close
+2020.04.18 18:10:54.585 INFO  SystemLogic.MainSystem - The game between: chelsea and man city is close
+2020.04.18 18:10:54.585 INFO  SystemLogic.MainSystem - The game between: real and inter is close
+2020.04.18 18:10:54.585 INFO  SystemLogic.MainSystem - The game between: liverpool and barca is close
+2020.04.18 18:13:43.892 INFO  SystemLogic.MainSystem - The game between: juve and milan started
+2020.04.18 18:13:43.892 INFO  SystemLogic.MainSystem - The game between: roma and chelsea started
+2020.04.18 18:13:43.892 INFO  SystemLogic.MainSystem - The game between: man city and liverpool started
+2020.04.18 18:13:43.892 INFO  SystemLogic.MainSystem - The game between: man u and real started
+2020.04.18 18:13:43.892 INFO  SystemLogic.MainSystem - The game between: barca and inter started
+2020.04.18 18:13:46.466 INFO  SystemLogic.MainSystem - The game between: juve and milan ended. the score: 3-2
+2020.04.18 18:13:46.465 INFO  SystemLogic.MainSystem - The game between: barca and inter ended. the score: 3-2
+2020.04.18 18:13:46.465 INFO  SystemLogic.MainSystem - The game between: man u and real ended. the score: 3-2
+2020.04.18 18:13:46.466 INFO  SystemLogic.MainSystem - The game between: roma and chelsea ended. the score: 3-2
+2020.04.18 18:13:46.467 INFO  SystemLogic.MainSystem - The game between: man city and liverpool ended. the score: 3-2
+2020.04.18 18:13:49.464 INFO  SystemLogic.MainSystem - The game between: man u and real is close
+2020.04.18 18:13:49.464 INFO  SystemLogic.MainSystem - The game between: barca and inter is close
+2020.04.18 18:13:49.465 INFO  SystemLogic.MainSystem - The game between: man city and liverpool is close
+2020.04.18 18:13:49.465 INFO  SystemLogic.MainSystem - The game between: roma and chelsea is close
+2020.04.18 18:13:49.465 INFO  SystemLogic.MainSystem - The game between: juve and milan is close
+2020.04.18 18:14:47.870 INFO  SystemLogic.MainSystem - The game between: man city and chelsea started
+2020.04.18 18:14:47.871 INFO  SystemLogic.MainSystem - The game between: liverpool and roma started
+2020.04.18 18:14:47.870 INFO  SystemLogic.MainSystem - The game between: inter and milan started
+2020.04.18 18:14:47.871 INFO  SystemLogic.MainSystem - The game between: man u and real started
+2020.04.18 18:14:47.870 INFO  SystemLogic.MainSystem - The game between: barca and juve started
+2020.04.18 18:16:10.525 INFO  SystemLogic.MainSystem - The game between: man u and chelsea started
+2020.04.18 18:16:10.525 INFO  SystemLogic.MainSystem - The game between: inter and milan started
+2020.04.18 18:16:10.525 INFO  SystemLogic.MainSystem - The game between: roma and man city started
+2020.04.18 18:16:10.525 INFO  SystemLogic.MainSystem - The game between: liverpool and barca started
+2020.04.18 18:16:10.525 INFO  SystemLogic.MainSystem - The game between: real and juve started
