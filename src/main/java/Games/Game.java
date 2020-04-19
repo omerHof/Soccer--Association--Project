@@ -51,7 +51,7 @@ public class Game extends Observable {
         this.timeOfGame = timeOfGame;
         this.timer = new Timer();
         this.status = gameStatus.preGame;
-        setAlarms();//set alarm to Stakeholders about the game
+        //setAlarms();//set alarm to Stakeholders about the game
         this.eventBook = new ArrayList<>();
         this.score = "0-0";
     }
