@@ -1,10 +1,12 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
+import SystemLogic.DB;
 import Teams.Team;
 
 import java.time.LocalDateTime;
 import java.time.Month;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 /**
@@ -17,7 +19,7 @@ public class OneRoundGamePolicy implements IGameInlayPolicy {
     private HashMap<Integer, ArrayList<Game>> tempListOfGames; // the results
     private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
     private LocalDateTime timeOfGame;
-
+    private int day;
     /**
      * constructor
      * @param teams
@@ -27,7 +29,9 @@ public class OneRoundGamePolicy implements IGameInlayPolicy {
         this.ListTeam = teams;
         this.listOfGames = new HashMap<>();
         this.tempListOfGames = new HashMap<>();
-        this.timeOfGame = LocalDateTime.of(year, Month.JANUARY, 1, 19, 0, 0);
+        this.day = DB.getInstance().getLeagues()+1;
+        //this.timeOfGame = LocalDateTime.of(year, Month.JANUARY, day, 19, 0, 0);//todo add to code this line
+        timeOfGame = LocalDateTime.now().plus(5, ChronoUnit.SECONDS);
     }
 
     @Override

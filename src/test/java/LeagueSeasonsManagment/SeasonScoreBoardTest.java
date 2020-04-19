@@ -3,8 +3,10 @@ package LeagueSeasonsManagment;
 import DataForTest.DataBase;
 import Games.Game;
 import SystemLogic.DB;
+import SystemLogic.MainSystem;
 import Teams.Statistics;
 import Teams.Team;
+import Users.AssociationRepresentative;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,13 +19,16 @@ import static org.junit.Assert.*;
 
 public class SeasonScoreBoardTest {
 
-    DB db = DB.getInstance();
+    private DB db;
+    private AssociationRepresentative assoTest;
+    private MainSystem mainSystem;
     DataBase test = new DataBase();
-    Season season;
 
     @Before
     public void setUp() throws Exception {
-        season = db.getLeague("Champions league").getSeasonByYear(2021);
+        db = DB.getInstance();
+        mainSystem = MainSystem.getInstance();
+        assoTest = new AssociationRepresentative("YS", "123", "Yiftah Szoke", "yszoke@gmail.com");
     }
 
     @After
@@ -43,16 +48,7 @@ public class SeasonScoreBoardTest {
     @Test
     public void showTable() {
         try{
-            SeasonScoreBoard seasonScoreBoard = season.getSeasonScoreBoard();
-            seasonScoreBoard.getTeamByName("barca").getStatistics().setScore(5);
-            seasonScoreBoard.getTeamByName("man u").getStatistics().setScore(4);
-            seasonScoreBoard.getTeamByName("barca").getStatistics().setGoals(3);
-            seasonScoreBoard.getTeamByName("man u").getStatistics().setGoals(4);
-            seasonScoreBoard.getTeamByName("barca").getStatistics().setGc(1);
-            seasonScoreBoard.getTeamByName("man u").getStatistics().setGc(3);
 
-            seasonScoreBoard.sortByValue();
-            seasonScoreBoard.showTable();
         }catch (Exception e) {
             System.out.println("error");
         }

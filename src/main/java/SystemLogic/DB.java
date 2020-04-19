@@ -155,6 +155,9 @@ public class DB {
             leagues.put(league.getName(), league);
         }
     }
+    public int getLeagues(){
+        return leagues.size();
+    }
 
     /**
      * add league if user name not contain already
