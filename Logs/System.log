@@ -624,3 +624,577 @@
 2020.04.18 20:54:05.191 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
 2020.04.18 20:56:22.152 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
 2020.04.18 20:56:22.160 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 13:57:59.492 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 13:57:59.496 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 13:57:59.497 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 13:57:59.498 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 13:57:59.500 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 13:59:13.384 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 13:59:13.391 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 13:59:13.392 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 13:59:13.393 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 13:59:13.393 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 13:59:13.394 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:00:27.308 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:00:27.311 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:00:27.312 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:00:27.312 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:00:27.313 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:00:27.314 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:01:11.848 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:01:11.854 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:01:11.854 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:01:11.855 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:01:11.855 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:01:11.856 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:02:10.703 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:02:10.709 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:02:10.709 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:02:10.710 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:02:10.711 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:02:10.711 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:02:10.712 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 14:02:10.712 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 14:02:10.712 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 14:05:51.397 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:05:51.404 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:05:51.405 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:05:51.406 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:05:51.406 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:05:51.407 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:05:51.409 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:05:51.411 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 14:05:51.412 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel pardesia
+2020.04.19 14:07:45.575 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:07:45.579 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:07:45.579 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:07:45.580 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:07:45.581 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:07:45.581 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:07:45.584 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:07:45.584 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 14:07:45.585 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel pardesia
+2020.04.19 14:07:51.852 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:07:51.863 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:07:51.864 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:07:51.867 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:07:51.868 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:07:51.869 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:07:51.874 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:08:09.047 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 14:08:44.895 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel pardesia
+2020.04.19 14:14:51.070 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:14:51.074 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:14:51.075 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:14:51.075 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:14:51.076 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:14:51.076 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:14:51.078 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:14:51.078 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel pardesia
+2020.04.19 14:17:38.934 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:17:38.940 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:17:38.941 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:17:38.941 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:17:38.942 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:17:38.942 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:17:38.944 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:17:38.944 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel pardesia
+2020.04.19 14:17:38.945 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 14:17:38.945 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 14:17:38.945 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 14:19:19.025 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:19:19.028 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:19:19.028 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:19:19.029 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:19:19.030 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:19:19.032 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:19:19.033 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:19:19.034 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:19:19.034 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:20:04.657 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:20:04.662 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:20:04.662 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:20:04.663 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:20:04.668 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:20:04.670 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:20:04.671 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:20:04.672 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:20:04.673 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:22:13.131 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:22:13.140 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:22:13.140 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:22:13.143 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:22:13.144 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:22:13.144 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:22:13.147 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:22:13.147 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:22:29.127 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:26:43.488 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:26:43.494 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:26:43.496 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:26:43.497 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:26:43.498 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:26:43.498 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:26:43.500 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:26:43.500 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:26:43.501 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:27:06.814 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:27:06.818 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:27:06.818 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:27:06.819 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:27:06.819 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:27:06.819 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:27:06.820 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:27:06.821 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:27:06.821 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:27:35.629 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:27:35.635 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:27:35.636 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:27:35.636 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:27:35.637 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:27:35.637 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:27:35.639 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:27:35.639 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:27:35.640 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:27:58.730 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:27:58.740 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:27:58.740 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:27:58.747 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:27:58.747 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:27:58.748 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:27:58.752 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:27:58.755 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:27:58.755 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:31:49.158 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:31:49.163 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:31:49.163 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:31:49.164 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:31:49.164 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:31:49.165 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:31:49.166 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:31:49.167 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:31:49.167 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:38:33.374 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:38:33.377 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:38:33.377 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:38:33.378 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:38:33.379 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:38:33.379 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:38:33.381 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:38:33.381 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:38:33.382 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:38:45.144 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:38:45.147 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:38:45.147 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:38:45.148 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:38:45.148 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:38:45.149 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:38:45.150 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:38:45.150 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:38:45.151 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:39:02.973 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:39:02.979 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:39:02.980 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:39:02.981 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:39:02.982 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:39:02.983 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:39:02.986 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:39:02.988 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:39:02.989 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:39:28.047 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:39:28.050 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:39:28.051 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:39:28.051 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:39:28.052 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:39:28.053 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:39:28.054 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:39:28.055 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:39:28.058 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:39:52.317 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:39:52.321 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:39:52.323 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:39:52.323 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:39:52.324 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:39:52.325 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:39:52.328 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:39:52.329 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:39:52.329 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:42:25.560 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:42:25.564 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:42:25.564 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:42:25.564 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:42:25.565 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:42:25.566 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:42:25.567 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:42:25.569 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:42:25.571 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 14:42:25.571 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel pardesia
+2020.04.19 14:42:25.571 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 14:42:25.572 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 14:42:25.572 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 14:48:00.137 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:48:00.140 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:48:00.141 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:48:00.141 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:48:00.142 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:48:00.143 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:48:00.144 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:48:00.145 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:48:00.145 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 14:48:00.145 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 14:48:00.145 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 14:48:41.460 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:48:41.463 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:48:41.464 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:48:41.465 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:48:41.466 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:48:41.466 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:48:41.467 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:48:41.468 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:48:41.468 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 14:48:41.468 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 14:48:41.469 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 14:56:28.296 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:56:28.302 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:56:28.303 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:56:28.305 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:56:28.306 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:56:28.306 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:56:28.309 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:56:28.309 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:58:16.288 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 14:58:16.289 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 14:58:16.289 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 14:58:42.443 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 14:58:42.447 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 14:58:42.448 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 14:58:42.449 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 14:58:42.452 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 14:58:42.452 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 14:58:42.454 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 14:58:42.454 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 14:58:42.455 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 14:58:42.455 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 14:58:42.456 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:00:35.449 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:00:35.453 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:00:35.454 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:00:35.455 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:00:35.456 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:00:35.456 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:00:35.459 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:00:35.462 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:00:52.518 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:00:52.523 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:00:52.525 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:00:52.526 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:00:52.527 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:00:52.528 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:00:52.530 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:00:52.531 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:01:41.897 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:01:41.903 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:01:41.906 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:01:41.909 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:01:41.910 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:01:41.910 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:01:41.913 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:01:41.914 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:01:59.560 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel pardesia
+2020.04.19 15:02:36.166 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:02:36.172 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:02:36.173 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:02:36.176 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:02:36.177 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:02:36.183 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:02:36.185 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:02:36.188 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:05:13.979 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 15:05:13.980 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 15:05:13.981 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:05:20.069 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:05:20.072 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:05:20.073 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:05:20.073 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:05:20.074 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:05:20.075 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:05:20.079 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:05:20.080 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:05:20.080 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 15:05:20.080 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 15:05:20.080 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:06:54.178 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:06:54.182 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:06:54.183 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:06:54.184 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:06:54.184 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:06:54.184 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:06:54.186 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:06:54.187 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:06:54.189 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 15:06:54.191 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 15:06:54.191 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:08:33.178 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:08:33.184 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:08:33.184 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:08:33.187 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:08:33.187 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:08:33.188 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:08:33.190 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:08:33.190 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:09:31.385 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 15:09:31.389 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 15:09:31.389 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:09:39.209 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:09:39.215 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:09:39.216 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:09:39.218 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:09:39.219 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:09:39.220 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:09:39.222 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:09:39.223 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:12:09.439 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 15:12:09.440 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 15:12:09.441 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:12:15.877 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:12:15.883 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:12:15.884 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:12:15.886 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:12:15.889 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:12:15.889 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:12:15.890 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:12:15.891 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:13:02.515 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 15:13:02.516 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 15:13:02.516 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:13:07.187 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:13:07.191 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:13:07.191 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:13:07.192 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:13:07.193 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:13:07.193 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:13:07.196 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:13:07.196 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:13:37.672 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:13:37.679 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:13:37.680 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:13:37.682 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:13:37.683 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:13:37.683 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:13:37.685 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:13:37.686 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:17:34.588 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 15:17:34.590 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 15:17:34.591 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:17:40.083 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:17:40.087 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:17:40.087 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:17:40.088 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:17:40.088 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:17:40.089 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:17:40.090 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:17:40.091 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:17:40.092 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 15:18:37.780 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:18:37.784 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:18:37.784 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:18:37.785 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:18:37.785 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:18:37.786 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:18:37.790 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:18:37.791 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:18:37.792 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 15:18:51.077 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:18:51.081 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:18:51.082 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:18:51.083 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:18:51.083 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:18:51.084 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:18:51.086 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:18:51.087 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:18:51.087 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 15:23:41.420 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:23:41.428 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:23:41.429 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:23:41.430 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:23:41.430 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:23:41.431 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:23:41.434 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:23:41.434 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:23:41.435 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 15:23:41.435 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 15:23:41.435 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:24:10.846 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:24:10.851 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:24:10.851 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:24:10.852 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:24:10.852 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:24:10.853 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:24:10.854 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:24:10.855 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:24:10.855 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 15:25:02.357 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:25:02.360 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:25:02.360 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:25:02.361 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:25:02.361 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:25:02.362 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:25:02.363 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:25:02.364 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:25:02.364 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 15:25:13.574 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:25:13.577 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:25:13.578 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:25:13.578 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:25:13.579 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:25:13.579 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:25:13.580 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:25:13.581 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:25:13.581 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 15:30:26.502 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:30:26.506 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:30:26.507 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:30:26.508 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:30:26.508 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:30:26.508 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:30:26.510 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:30:26.510 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:30:26.511 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 15:30:26.511 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel pardesia
+2020.04.19 15:30:26.511 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 15:30:26.511 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 15:30:26.511 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:32:56.142 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:32:56.145 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:32:56.146 INFO  SystemLogic.MainSystem - The coach pep guardiola create personal page
+2020.04.19 15:32:56.147 INFO  SystemLogic.MainSystem - The player leo messi create personal page
+2020.04.19 15:32:56.148 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: pep guardiola
+2020.04.19 15:32:56.148 INFO  SystemLogic.MainSystem - ido kestenbaum follow the page of: leo messi
+2020.04.19 15:32:56.149 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel pardesia
+2020.04.19 15:32:56.150 INFO  SystemLogic.MainSystem - ido kestenbaum follow the team : hapoel beer sheva
+2020.04.19 15:32:56.150 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel beer sheva
+2020.04.19 15:32:56.150 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow the team : hapoel pardesia
+2020.04.19 15:32:56.150 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all of the teams
+2020.04.19 15:32:56.151 INFO  SystemLogic.MainSystem - ido kestenbaum stop follow all pages
+2020.04.19 15:32:56.151 INFO  SystemLogic.MainSystem - the fan ido kestenbaum is deleted by the administrator
+2020.04.19 15:45:10.150 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:45:10.153 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:45:10.153 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team hapoel pardesia
+2020.04.19 15:45:59.289 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:45:59.293 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:45:59.293 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team hapoel pardesia
+2020.04.19 15:47:37.371 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:47:37.376 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:47:37.376 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team hapoel pardesia
+2020.04.19 15:48:05.086 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:48:05.089 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:48:05.090 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team hapoel pardesia
+2020.04.19 15:48:20.536 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:48:20.540 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:48:20.541 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team hapoel pardesia
+2020.04.19 15:48:20.541 INFO  SystemLogic.MainSystem - the team owner ido was added successfully to the team hapoel pardesia
+2020.04.19 15:48:57.452 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:48:57.455 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:48:57.456 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team hapoel pardesia
+2020.04.19 15:48:57.456 INFO  SystemLogic.MainSystem - the team owner ido was added successfully to the team hapoel pardesia
+2020.04.19 15:51:19.587 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:51:19.593 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:51:19.593 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team hapoel pardesia
+2020.04.19 15:51:19.594 INFO  SystemLogic.MainSystem - the team owner ido was added successfully to the team hapoel pardesia
+2020.04.19 15:51:35.651 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:51:35.658 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:51:35.660 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team hapoel pardesia
+2020.04.19 15:51:35.660 INFO  SystemLogic.MainSystem - the team owner ido was added successfully to the team hapoel pardesia
+2020.04.19 15:54:14.606 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 15:54:14.611 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 15:54:14.612 INFO  SystemLogic.MainSystem - the team owner bigboss was added successfully to the team hapoel pardesia
+2020.04.19 15:54:14.613 INFO  SystemLogic.MainSystem - the team owner ido was added successfully to the team hapoel pardesia
+2020.04.19 17:20:15.033 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:20:15.037 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:23:13.265 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:23:13.271 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:23:13.289 INFO  SystemLogic.MainSystem - the referee dddd is deleted by the administrator
+2020.04.19 17:24:45.490 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:24:45.494 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:24:45.506 INFO  SystemLogic.MainSystem - the referee dddd is deleted by the administrator
+2020.04.19 17:24:45.507 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:26:05.734 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:26:05.737 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:26:05.747 INFO  SystemLogic.MainSystem - the referee dddd is deleted by the administrator
+2020.04.19 17:26:05.748 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:27:21.996 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:27:22.001 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:27:22.014 INFO  SystemLogic.MainSystem - the referee dddd is deleted by the administrator
+2020.04.19 17:27:22.014 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:30:30.370 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:30:30.374 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:30:30.383 INFO  SystemLogic.MainSystem - the referee dddd is deleted by the administrator
+2020.04.19 17:30:30.383 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:31:00.425 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:31:00.431 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:31:00.443 INFO  SystemLogic.MainSystem - the referee dddd is deleted by the administrator
+2020.04.19 17:31:00.443 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:31:50.487 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:31:50.491 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:31:50.504 INFO  SystemLogic.MainSystem - the referee dddd is deleted by the administrator
+2020.04.19 17:31:50.505 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:33:40.818 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:33:40.822 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:33:40.830 INFO  SystemLogic.MainSystem - the referee dddd is deleted by the administrator
+2020.04.19 17:33:40.831 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:34:26.073 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:34:26.076 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:34:26.088 INFO  SystemLogic.MainSystem - the referee dddd is deleted by the administrator
+2020.04.19 17:34:26.088 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:39:05.803 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:39:05.808 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:39:05.808 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:39:05.809 INFO  SystemLogic.MainSystem - the player leo messi was removed successfully from the team hapoel pardesia
+2020.04.19 17:39:05.809 INFO  SystemLogic.MainSystem - the player leo messi is deleted by the administrator
+2020.04.19 17:39:11.643 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:39:11.647 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:39:11.648 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:39:11.649 INFO  SystemLogic.MainSystem - the player leo messi was removed successfully from the team hapoel pardesia
+2020.04.19 17:39:11.649 INFO  SystemLogic.MainSystem - the player leo messi is deleted by the administrator
+2020.04.19 17:42:18.686 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:42:18.689 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:42:18.690 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:42:18.690 INFO  SystemLogic.MainSystem - the player leo messi was removed successfully from the team hapoel pardesia
+2020.04.19 17:42:18.690 INFO  SystemLogic.MainSystem - the player leo messi is deleted by the administrator
+2020.04.19 17:42:18.691 INFO  SystemLogic.MainSystem - the coach pep was added successfully to the team hapoel pardesia
+2020.04.19 17:42:18.691 INFO  SystemLogic.MainSystem - the coach pep was removed successfully to the team hapoel pardesia
+2020.04.19 17:42:18.691 INFO  SystemLogic.MainSystem - the coach pep guardiola is deleted by the administrator
+2020.04.19 17:44:16.994 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:44:16.998 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:44:16.999 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:44:16.999 INFO  SystemLogic.MainSystem - the player leo messi was removed successfully from the team hapoel pardesia
+2020.04.19 17:44:17.000 INFO  SystemLogic.MainSystem - the player leo messi is deleted by the administrator
+2020.04.19 17:44:17.000 INFO  SystemLogic.MainSystem - the coach pep was added successfully to the team hapoel pardesia
+2020.04.19 17:44:17.000 INFO  SystemLogic.MainSystem - the coach pep was removed successfully to the team hapoel pardesia
+2020.04.19 17:44:17.001 INFO  SystemLogic.MainSystem - the coach pep guardiola is deleted by the administrator
+2020.04.19 17:49:06.158 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:49:06.164 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:49:06.164 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:49:06.165 INFO  SystemLogic.MainSystem - the player leo messi was removed successfully from the team hapoel pardesia
+2020.04.19 17:49:06.165 INFO  SystemLogic.MainSystem - the player leo messi is deleted by the administrator
+2020.04.19 17:49:06.165 INFO  SystemLogic.MainSystem - the coach pep was added successfully to the team hapoel pardesia
+2020.04.19 17:49:06.165 INFO  SystemLogic.MainSystem - the coach pep was removed successfully to the team hapoel pardesia
+2020.04.19 17:49:06.166 INFO  SystemLogic.MainSystem - the coach pep guardiola is deleted by the administrator
+2020.04.19 17:49:32.760 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:49:32.764 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:49:32.765 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:49:32.765 INFO  SystemLogic.MainSystem - the player leo messi was removed successfully from the team hapoel pardesia
+2020.04.19 17:49:32.765 INFO  SystemLogic.MainSystem - the player leo messi is deleted by the administrator
+2020.04.19 17:49:32.766 INFO  SystemLogic.MainSystem - the coach pep was added successfully to the team hapoel pardesia
+2020.04.19 17:49:32.766 INFO  SystemLogic.MainSystem - the coach pep was removed successfully to the team hapoel pardesia
+2020.04.19 17:49:32.767 INFO  SystemLogic.MainSystem - the coach pep guardiola is deleted by the administrator
+2020.04.19 17:52:33.500 INFO  SystemLogic.MainSystem - the user of Association representative oren hason is deleted by the administrator
+2020.04.19 17:52:33.507 INFO  SystemLogic.MainSystem - the user of administarator dddd is deleted by the administrator
+2020.04.19 17:52:33.507 INFO  SystemLogic.MainSystem - the manager bestManager was added successfully to the team hapoel pardesia
+2020.04.19 17:52:33.508 INFO  SystemLogic.MainSystem - the manager someone is deleted by the administrator
+2020.04.19 17:52:33.508 INFO  SystemLogic.MainSystem - the player leo messi was added successfully to the team hapoel pardesia
+2020.04.19 17:52:33.508 INFO  SystemLogic.MainSystem - the player leo messi was removed successfully from the team hapoel pardesia
+2020.04.19 17:52:33.509 INFO  SystemLogic.MainSystem - the player leo messi is deleted by the administrator
+2020.04.19 17:52:33.509 INFO  SystemLogic.MainSystem - the coach pep was added successfully to the team hapoel pardesia
+2020.04.19 17:52:33.509 INFO  SystemLogic.MainSystem - the coach pep was removed successfully to the team hapoel pardesia
+2020.04.19 17:52:33.510 INFO  SystemLogic.MainSystem - the coach pep guardiola is deleted by the administrator

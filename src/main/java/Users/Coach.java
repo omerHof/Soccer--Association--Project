@@ -35,7 +35,6 @@ public class Coach extends User implements Assent {
        Team currTeam = DB1.getTeam(team);
        if(currTeam==null){
            page = new CoachPersonalPage(userFullName,birthDate,teamRole,null);
-           System.out.println("the team is not exist");
        }
        else{
            page = new CoachPersonalPage(userFullName,birthDate,teamRole,team);
@@ -62,7 +61,6 @@ public class Coach extends User implements Assent {
         Team t =  DB1.getTeam(team);
 
         if(t==null){
-            System.out.println("the team is not exist");
            return false;
         }
         currentTeam=t;

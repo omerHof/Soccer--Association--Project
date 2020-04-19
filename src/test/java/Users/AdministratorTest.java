@@ -4,6 +4,7 @@ import Games.Game;
 import SystemLogic.DB;
 import SystemLogic.Notification;
 import Teams.Team;
+import Teams.TeamPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -122,8 +123,88 @@ public class AdministratorTest {
           ad.deleteUserFromSystem(admin.getUserFullName());
           assertEquals(1,db.checkQuantityOfUsersByType("Administrator"));
 
-    }
 
+          /*
+          fan
+
+          LocalDate date = LocalDate.of(1970,5,11);
+          CoachPersonalPage coachPage = coach.createCoachPersonalPage(date,team1.getName());
+          PlayerPersonalPage playerPage = player.createPersonalPage(167,65,10,team1.getName());
+          fan.followThisPage("pep guardiola");
+          fan.followThisPage("leo messi");
+          assertEquals(fan.getFollowedPages().size(),2);
+          TeamPage teamPage = team1.createPage("non","israel");
+          fan.followTeam("hapoel pardesia");
+          assertEquals(fan.getFollowedTeams().size(),1);
+        TeamPage teamPage2 = team2.createPage("non","israel");
+        fan.followTeam(team2.getName());
+        assertEquals(fan.getFollowedTeams().size(),2);
+        ad.deleteUserFromSystem(fan.getUserFullName());
+        assertEquals(fan.getFollowedTeams().size(),0);
+
+           */
+
+
+
+
+/*
+          ad.deleteUserFromSystem(fan.getUserFullName());
+        assertEquals(fan.getFollowedPages().size(),0);
+        assertEquals(fan.getFollowedTeams().size(),0);
+
+
+ */
+
+/*
+team owner
+
+         team1.addTeamOwner(owner);
+         ad.deleteUserFromSystem(owner.getUserFullName());
+         assertEquals(team1.getTeamOwners().size(),1);
+         TeamOwner owner2 = new TeamOwner("ddddddddd","ddsdas","ido","dsdsa");
+        db.addUser(owner2);
+
+        team1.addTeamOwner("ido");
+        assertEquals(team1.getTeamOwners().size(),2);
+        System.out.println(team1.getStatus());
+        ad.deleteUserFromSystem("ido");
+        */
+
+
+
+
+        ///ref
+        LocalDateTime date = LocalDateTime.of(2020,4,22,17,00);
+        /*
+        Game g = new Game(team1,team2,date);
+        team1.addGame(g);
+        team2.addGame(g);
+        referee.addGame(g);
+
+
+        String message = ad.deleteUserFromSystem(referee.getUserFullName());
+        assertEquals(message,"no delete, the referee has an open games");
+        Referee ref2 = new Referee("dd","dd","dddd","dsdad","d");
+        db.addUser(ref2);
+        String message2 = ad.deleteUserFromSystem(ref2.getUserFullName());
+        assertEquals(message2,"the user deleted succsesfully");
+
+         */
+
+
+        team1.addManager(manager);
+        String message5 = ad.deleteUserFromSystem(manager.getUserFullName());
+assertEquals("the user deleted succsesfully",message5);
+        ///player
+        team1.addPlayer(player);
+        assertEquals(team1.getPlayers().size(),1);
+        String message3 = ad.deleteUserFromSystem(player.getUserFullName());
+        assertEquals(team1.getPlayers().size(),0);
+        assertEquals(message3,"the user deleted succsesfully");
+        team1.addCoach(coach);
+String message4 = ad.deleteUserFromSystem(coach.getUserFullName());
+assertEquals(message4,"the user deleted succsesfully");
+}
     @Test
     public void watchLog() {
     }
