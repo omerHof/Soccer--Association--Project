@@ -1,6 +1,7 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
+import SystemLogic.DB;
 import Teams.Team;
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -16,6 +17,7 @@ public class RandomTwoRoundsGamePolicy implements IGameInlayPolicy {
     private ArrayList<Team> ListTeam; // the initial list of teams
     private HashMap<Integer, ArrayList<Game>> listOfGames; // the results
     private LocalDateTime timeOfGame;
+    private int day;
 
     /**
      * constructor
@@ -25,7 +27,8 @@ public class RandomTwoRoundsGamePolicy implements IGameInlayPolicy {
         this.name = "RandomTwoRoundsGamePolicy";
         this.ListTeam = teams;
         this.listOfGames = new HashMap<>();
-        this.timeOfGame = LocalDateTime.of(year, Month.JANUARY, 1, 19, 0, 0);
+        this.day = DB.getInstance().getLeagues()+1;
+        this.timeOfGame = LocalDateTime.of(year, Month.JANUARY, day, 19, 0, 0);
     }
 
     @Override

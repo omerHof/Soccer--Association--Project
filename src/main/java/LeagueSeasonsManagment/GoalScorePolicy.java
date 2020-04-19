@@ -19,6 +19,9 @@ public class GoalScorePolicy implements IScorePolicy {
     public GoalScorePolicy() {
         name = "GoalScorePolicy";
         goalDiff = false;
+        win = 2;
+        draw = 1;
+        lost = 0;
     }
 
     /**
@@ -26,9 +29,7 @@ public class GoalScorePolicy implements IScorePolicy {
      */
     @Override
     public void scorePolicyAlgoImplementation() {
-        win = 2;
-        draw = 1;
-        lost = 0;
+
     }
 
     /**
