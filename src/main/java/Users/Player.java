@@ -41,7 +41,6 @@ public class Player extends User implements Assent {
         Team currTeam = DB1.getTeam(team);
         if(currTeam==null){
         page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, null);
-            System.out.println("the team is not exist");
         }
         else {
             page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, team);
@@ -103,7 +102,6 @@ public class Player extends User implements Assent {
     public boolean setCurrentTeam(String team){
        Team t =  DB1.getTeam(team);
        if(t==null){
-           System.out.println("the team is not exist");
            return false;
        }
         currentTeam=t;

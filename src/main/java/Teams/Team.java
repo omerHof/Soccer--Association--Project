@@ -133,7 +133,6 @@ public class Team implements Comparable {
         User user = db.getUserByFullName(player);
         Player p = (Player)user;
         if(p==null){
-            System.out.println("the user not found in the db");
            return false;
         }
 
@@ -157,11 +156,9 @@ public class Team implements Comparable {
         User user = db.getUserByFullName(player);
         Player p = (Player)user;
         if(p==null){
-            System.out.println("the user not found in the db");
             return false;
         }
         if(!players.containsKey(player)){
-            System.out.println("the player is not belong to the team");
             return false;
         }
 
@@ -179,7 +176,6 @@ public class Team implements Comparable {
         User user = db.getUserByFullName(coach);
         Coach c = (Coach) user;
         if(c==null){
-            System.out.println("the user not found in the db");
             return false;
         }
 
@@ -202,11 +198,9 @@ public class Team implements Comparable {
         User user = db.getUserByFullName(coach);
         Coach c = (Coach)user;
         if(c==null){
-            System.out.println("the user not found in the db");
             return false;
         }
         if(!coaches.containsKey(coach)){
-            System.out.println("the coach is not belong to the team");
             return false;
         }
 
@@ -224,7 +218,6 @@ public class Team implements Comparable {
         User user = db.getUserByFullName(manager);
         Manager m = (Manager) user;
         if(m==null){
-            System.out.println("the user not found in the db");
             return false;
         }
 
@@ -247,11 +240,9 @@ public class Team implements Comparable {
         User user = db.getUserByFullName(manager);
         Manager m = (Manager) user;
         if(m==null){
-            System.out.println("the user not found in the db");
             return false;
         }
         if(!managers.containsKey(manager)){
-            System.out.println("the manager is not belong to the team");
             return false;
         }
 
@@ -270,7 +261,6 @@ public class Team implements Comparable {
         User user = db.getUserByFullName(teamOwner);
         TeamOwner owner = (TeamOwner) user;
         if(owner==null){
-            System.out.println("the user not found in the db");
             return false;
         }
 
@@ -291,11 +281,9 @@ public class Team implements Comparable {
         User user = db.getUserByFullName(teamOwner);
         TeamOwner owner = (TeamOwner) user;
         if(owner==null){
-            System.out.println("the user not found in the db");
             return false;
         }
         if(!teamOwners.containsKey(teamOwner)){
-            System.out.println("the team owner is not belong to the team");
             return false;
         }
 
@@ -315,7 +303,6 @@ public class Team implements Comparable {
     public boolean addPlayer(Player player) {
 
         if(player==null){
-            System.out.println("the user not found in the db");
             return false;
         }
 
@@ -341,11 +328,9 @@ public class Team implements Comparable {
     public boolean removePlayer(Player player) {
 
         if(player==null){
-            System.out.println("the user not found in the db");
             return false;
         }
         if(!players.containsKey(player.getUserFullName())){
-            System.out.println("the player is not belong to the team");
             return false;
         }
 
@@ -363,7 +348,6 @@ public class Team implements Comparable {
     public boolean addCoach(Coach coach) {
 
         if(coach==null){
-            System.out.println("the user not found in the db");
             return false;
         }
         Team team = coach.getCurrentTeam();
@@ -387,7 +371,6 @@ public class Team implements Comparable {
             return false;
         }
         if(!coaches.containsKey(coach.getUserFullName())){
-            System.out.println("the coach is not belong to the team");
             return false;
         }
         coaches.remove(coach.getUserFullName());
@@ -402,7 +385,6 @@ public class Team implements Comparable {
 
     public boolean addManager(Manager manager) {
         if(manager==null){
-            System.out.println("the user not found in the db");
             return false;
         }
         Team team = manager.getTeam();
@@ -421,11 +403,9 @@ public class Team implements Comparable {
 
     public boolean removeManager(Manager manager) {
         if(manager==null){
-            System.out.println("the user not found in the db");
             return false;
         }
         if(!managers.containsKey(manager.getUserFullName())){
-            System.out.println("the manager is not belong to the team");
             return false;
         }
         managers.remove(manager.getUserFullName());
@@ -440,7 +420,6 @@ public class Team implements Comparable {
 
     public boolean addTeamOwner(TeamOwner teamOwner) {
         if(teamOwner==null){
-            System.out.println("the user not found in the db");
             return false;
         }
         Team team = teamOwner.getTeam();
@@ -456,11 +435,9 @@ public class Team implements Comparable {
 
     public boolean removeTeamOwner(TeamOwner teamOwner) {
         if(teamOwner==null){
-            System.out.println("the user not found in the db");
             return false;
         }
         if(!teamOwners.containsKey(teamOwner.getUserFullName())){
-            System.out.println("the team owner is not belong to the team");
             return false;
         }
         teamOwners.remove(teamOwner.getUserFullName());

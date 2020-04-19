@@ -203,16 +203,6 @@ public ArrayList< PersonalPage> getFollowedPages() {
     }
 
     public void stopFollowThisPage(String pageName) {
-        MainSystem.LOG.info(getUserFullName()+" stop follow the page of: "+pageName);
-        // PersonalPage page;
-           /*
-            if (followedPages.containsKey(pageName)) {
-                page = followedPages.remove(pageName);
-                page.deleteObserver(this);
-            }
-
-            */
-
 
         for (PersonalPage page : followedPages) {
             if (page.getName().equals(pageName)) {
@@ -223,18 +213,10 @@ public ArrayList< PersonalPage> getFollowedPages() {
             }
 
         }
+        MainSystem.LOG.info(getUserFullName()+" stop follow the page of: "+pageName);
+
     }
     public void stopFollowAllPages(){
-        MainSystem.LOG.info(getUserFullName()+" stop follow all pages");
-
-/*
-        for(HashMap.Entry<String,PersonalPage> page:followedPages.entrySet()){
-            String key = page.getKey();
-            stopFollowThisPage(key);
-        }
-
- */
-
           while (!followedPages.isEmpty()){
               int i=0;
               PersonalPage p =followedPages.get(i);
@@ -242,38 +224,48 @@ public ArrayList< PersonalPage> getFollowedPages() {
               p.deleteObserver(this);
               i++;
           }
+        MainSystem.LOG.info(getUserFullName()+" stop follow all pages");
+
     }
 
-    public void followTeam(String teamName){
-        MainSystem.LOG.info(getUserFullName()+" follow the team : "+teamName);
+    public boolean followTeam(String teamName){
         DB DB1;
         DB1=DB.getInstance();
         Team team = DB1.getTeam(teamName);
+        if(team==null){
+            return false;
+        }
         TeamPage teamPage = team.getPage();
-
         teamPage.addObserver(this);
         followedTeams.put(teamName,team);
-
+        MainSystem.LOG.info(getUserFullName()+" follow the team : "+teamName);
+        return true;
     }
-    public void stopFollowTeam(String teamName){
-        MainSystem.LOG.info(getUserFullName()+" stop follow the team : "+teamName);
+    public void stopFollowTeam(String teamName){ ///to fix bug
         Team team;
         if (followedTeams.containsKey(teamName)) {
             team = followedTeams.remove(teamName);
             TeamPage teamPage = team.getPage();
             teamPage.deleteObserver(this);
+
         }
+        MainSystem.LOG.info(getUserFullName()+" stop follow the team : "+teamName);
+
+
     }
     public void stopFollowAllTeams(){
-        MainSystem.LOG.info(getUserFullName()+" stop follow all of the teams");
+        HashMap<String,Team>copyFollowedTeams = getFollowedTeams();
 
-        Iterator it = followedTeams.entrySet().iterator();
+        Iterator it = copyFollowedTeams.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
             String key =(String) pair.getKey();
-            stopFollowTeam(key);
             it.remove();
+            stopFollowTeam(key);
+
         }
+        MainSystem.LOG.info(getUserFullName()+" stop follow all of the teams");
+
     }
 
    public void searchPage(String str){

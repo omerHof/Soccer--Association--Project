@@ -23,22 +23,7 @@ public class Administrator extends User {
     }
 
 
-    /*
-
-
-    1.	הסרת קבוצה לצמיתות –
-a.	הפונקציה מקבלת כקלט את שם הקבוצה
-b.	שולפת את הקבוצה מהDB
-c.	מוודא שאין לה משחקים פתוחים/ משחקים שעוד לא התקיימו.
-d.	במידה וכך, משנה את הסטטאוס שלה ל**"לא פעילה לצמיתות".
-e.	**הסבר לגבי לא פעילה לצמיתות – לא יהיה ניתן לשייך אותה לעונות לעולם.
-f.	שולף את בעלי הקבוצה ואת מנהלי הקבוצה.
-g.	שולח להם התראה (?).
-
-
-     */
-
-    public void closeTeamForPermanent(String name) {
+    public String closeTeamForPermanent(String name) {
         DB db = DB.getInstance();
         Team team = db.getTeam(name);
         boolean hasMoreGames = false;
@@ -48,6 +33,7 @@ g.	שולח להם התראה (?).
                 for (Game g : gameList) {
                     if ((g.getStatus() == Game.gameStatus.active) || (g.getStatus() == Game.gameStatus.preGame)) {
                         hasMoreGames = true;
+
                     }
                 }
             }
@@ -82,14 +68,16 @@ g.	שולח להם התראה (?).
 
                     it2.remove();
                 }
+                return "the team closed for permanent";
             } else {
-                System.out.println("the team cant be closed for permanent because it has open games");
+               return "the team cant be closed for permanent because it has open games";
             }
         }
+        return "";
     }
 
 
-    public void deleteUserFromSystem(String name) {
+    public String deleteUserFromSystem(String name) {
         DB db = DB.getInstance();
         User user = db.getUserByFullName(name);
         if (user != null) {
@@ -102,34 +90,40 @@ g.	שולח להם התראה (?).
                     }
                     db.removeUser(user.getUserName());
                     MainSystem.LOG.info("the user of Association representative " +name+" is deleted by the administrator");
-
+                    return "the user deleted succsesfully";
                 }
                 else{
-                    System.out.println("no delete! the system has less then 2 Association representatives");
+                   return "no delete! the system has less then 2 Association representatives";
                 }
             } else if (user instanceof Administrator) {
                 if (db.checkQuantityOfUsersByType("Administrator") >= 2) {
                     db.removeUser(user.getUserName());
                     MainSystem.LOG.info("the user of administarator " +name+" is deleted by the administrator");
-
+                    return "the user deleted succsesfully";
                 }
                 else{
-                    System.out.println("no delete! the system has less then 2 administrator");
+                    return "no delete! the system has less then 2 administrator";
                 }
             } else if (user instanceof Fan) {
                 Fan fan = (Fan) user;
                 fan.stopFollowAllTeams();
                 fan.stopFollowAllPages();
+
                 //2.	נדרש להסיר את המעקב שלו מכל המשחקים (לדעתי יקרה אוטומטי כאשר יוסר המעקב מקבוצה ?)
                 ///do the delete
                 db.removeUser(user.getUserName());
+                MainSystem.LOG.info("the fan " +name+" is deleted by the administrator");
+                return "the user deleted succsesfully";
+
             } else if (user instanceof TeamOwner) {
                 if (db.checkQuantityOfUsersByType("TeamOwner") >= 2) {
                     TeamOwner owner = (TeamOwner) user;
-                    owner.removeAppointmentTeamOwner(owner);              //ask katzi
-
-                    ///do the delete
-                    db.removeUser(user.getUserName());
+                    owner.removeAppointmentTeamOwner(owner);
+                    MainSystem.LOG.info("the team owner " +name+" is deleted by the administrator");
+                    return "the user deleted succsesfully";
+                }
+                else{
+                   return "the team has less then 2 team owners";
                 }
 
             }
@@ -142,11 +136,14 @@ g.	שולח להם התראה (?).
                 for (Game g : games) {
                     if ((g.getStatus() == Game.gameStatus.active) || (g.getStatus() == Game.gameStatus.preGame)) {
                         isActive = true;
-                        break;
+                        return "no delete, the referee has an open games";
                     }
                 }
                     if(isActive==false){
                         db.removeUser(user.getUserName());
+                        MainSystem.LOG.info("the referee " +name+" is deleted by the administrator");
+                        return "the user deleted succsesfully";
+
                     }
             }
 
@@ -154,47 +151,61 @@ g.	שולח להם התראה (?).
             else if (user instanceof Player) {
                 Player player = (Player) user;
                 PersonalPage page = player.getPage();
-                if (page != null) {
-                    Team team = page.getCurrentTeam();
-                    if (team != null) {
-                        ArrayList<Game> gamesList = team.getGameList();
-                        boolean isActive = false;
-                        for (Game game : gamesList) {
-                            if ((game.getStatus() == Game.gameStatus.active) || (game.getStatus() == Game.gameStatus.preGame)) {
-                                isActive = true;
-                                break;
-                            }
-                        }
-                        if (isActive == false) {
-                            team.removePlayer(player);
-                            db.removeUser(user.getUserName());
+
+                Team team = player.getCurrentTeam();
+                if (team != null) {
+                    ArrayList<Game> gamesList = team.getGameList();
+                    boolean isActive = false;
+                    for (Game game : gamesList) {
+                        if ((game.getStatus() == Game.gameStatus.active) || (game.getStatus() == Game.gameStatus.preGame)) {
+                            isActive = true;
+                            return "no delete, the player has an open games";
                         }
                     }
+                    if (isActive == false) {
+                        team.removePlayer(player);
+                        db.removeUser(user.getUserName());
+                        MainSystem.LOG.info("the player " + name + " is deleted by the administrator");
+                        return "the user deleted succsesfully";
+                    }
+
                 }
             }
+
 
             else if (user instanceof Coach){
                 Coach coach = (Coach) user;
                 PersonalPage page = coach.getPage();
-                if (page != null) {
-                    Team team = page.getCurrentTeam();
+
+                    Team team = coach.getCurrentTeam();
                     if (team != null) {
                         ArrayList<Game> gamesList = team.getGameList();
                         boolean isActive = false;
                         for (Game game : gamesList) {
                             if ((game.getStatus() == Game.gameStatus.active) || (game.getStatus() == Game.gameStatus.preGame)) {
                                 isActive = true;
-                                break;
+                                return "no delete, the coach has an open games";
                             }
                         }
                         if (isActive == false) {
                             team.removeCoach(coach);
                             db.removeUser(user.getUserName());
+                            MainSystem.LOG.info("the coach " +name+" is deleted by the administrator");
+                            return "the user deleted succsesfully";
                         }
                     }
-                }
+
+            }
+
+            else if (user instanceof Manager){
+                db.removeUser(user.getUserName());
+                MainSystem.LOG.info("the manager " +name+" is deleted by the administrator");
+                return "the user deleted succsesfully";
+
             }
         }
+        return "the user deleted succsesfully";
+
     }
 
 
