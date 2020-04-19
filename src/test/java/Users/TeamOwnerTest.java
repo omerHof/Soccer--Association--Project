@@ -22,6 +22,7 @@ public class TeamOwnerTest {
 
     @Test
     public void openTeam() {
+
     }
 
     @Test
