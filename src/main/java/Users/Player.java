@@ -102,6 +102,8 @@ public class Player extends User implements Assent {
     public boolean setCurrentTeam(String team){
        Team t =  DB1.getTeam(team);
        if(t==null){
+           page.setCurrentTeam(t);
+           currentTeam=t;
            return false;
        }
         currentTeam=t;
@@ -110,6 +112,7 @@ public class Player extends User implements Assent {
             page.setOneTeamToHistory(team);
         }
         DB1.setUser(this);
+        MainSystem.LOG.info("The player " +getUserFullName()+ " has move to the team "+team);
         return true;
 
     }
