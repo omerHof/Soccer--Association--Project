@@ -254,16 +254,19 @@ public ArrayList< PersonalPage> getFollowedPages() {
 
     }
     public void stopFollowAllTeams(){
-        HashMap<String,Team>copyFollowedTeams = getFollowedTeams();
-
-        Iterator it = copyFollowedTeams.entrySet().iterator();
+        Iterator it = followedTeams.entrySet().iterator();
+        Team team;
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
             String key =(String) pair.getKey();
+            Team value = (Team)pair.getValue();
             it.remove();
-            stopFollowTeam(key);
+            TeamPage teamPage = value.getPage();
+            teamPage.deleteObserver(this);
+            MainSystem.LOG.info(getUserFullName()+" stop follow the team : "+key);
 
         }
+
         MainSystem.LOG.info(getUserFullName()+" stop follow all of the teams");
 
     }

@@ -124,11 +124,11 @@ public class AdministratorTest {
           assertEquals(1,db.checkQuantityOfUsersByType("Administrator"));
 
 
-          /*
-          fan
 
-          LocalDate date = LocalDate.of(1970,5,11);
-          CoachPersonalPage coachPage = coach.createCoachPersonalPage(date,team1.getName());
+          //fan
+
+          LocalDate date2 = LocalDate.of(1970,5,11);
+          CoachPersonalPage coachPage = coach.createCoachPersonalPage(date2,team1.getName());
           PlayerPersonalPage playerPage = player.createPersonalPage(167,65,10,team1.getName());
           fan.followThisPage("pep guardiola");
           fan.followThisPage("leo messi");
@@ -139,10 +139,14 @@ public class AdministratorTest {
         TeamPage teamPage2 = team2.createPage("non","israel");
         fan.followTeam(team2.getName());
         assertEquals(fan.getFollowedTeams().size(),2);
+assertEquals(teamPage.countObservers(),1);
         ad.deleteUserFromSystem(fan.getUserFullName());
         assertEquals(fan.getFollowedTeams().size(),0);
 
-           */
+        assertEquals(teamPage.countObservers(),0);
+
+
+
 
 
 
@@ -191,7 +195,7 @@ team owner
 
          */
 
-
+/*
         team1.addManager(manager);
         String message5 = ad.deleteUserFromSystem(manager.getUserFullName());
 assertEquals("the user deleted succsesfully",message5);
@@ -204,8 +208,14 @@ assertEquals("the user deleted succsesfully",message5);
         team1.addCoach(coach);
 String message4 = ad.deleteUserFromSystem(coach.getUserFullName());
 assertEquals(message4,"the user deleted succsesfully");
+
+
+ */
+
 }
     @Test
     public void watchLog() {
+        String str = ad.watchLog();
+        System.out.println(str);
     }
 }

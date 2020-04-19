@@ -215,7 +215,7 @@ public class Administrator extends User {
 
 
         try{
-            FileInputStream fstream = new FileInputStream("System.log");
+            FileInputStream fstream = new FileInputStream("Logs/System.log");
             BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
             String strLine;
             /* read log line by line */
