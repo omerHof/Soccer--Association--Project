@@ -117,17 +117,6 @@ public class GameTest {
     }
 
     @Test
-    public void setAssociationRepresentative() {
-        try {
-            AssociationRepresentative representative = new AssociationRepresentative("abd", "a", "aa", "a@a");
-            game.setAssociationRepresentative(representative);
-            assertEquals("didnt set", "abd", game.getRepresentative().getUserName());
-        } catch (Exception e) {
-            System.out.println("error");
-        }
-    }
-
-    @Test
     public void getEventBook() {
         try {
             Event event = new Event(Event.eventType.goal, 80, "messi");
