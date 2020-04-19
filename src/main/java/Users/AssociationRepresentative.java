@@ -29,6 +29,10 @@ public class AssociationRepresentative extends User implements Observer {
         myGames = new LinkedList<>();
     }
 
+    public List<Game> getMyGames() {
+        return myGames;
+    }
+
     public boolean approveRegistration(String fullName, String role){ //random (symbolic) function
 
         if (numOfApprovals < 9) {
@@ -296,24 +300,28 @@ public class AssociationRepresentative extends User implements Observer {
         List<User> allAssociations = db.getUserTypeList("AssociationRepresentative");
         AssociationRepresentative substituteAsso = (AssociationRepresentative)allAssociations.get(i); //first Asso'
 
-        //int substituteYear = substituteAsso.myGames.get(0).getGameDate().getYear();
-        String substituteLeague = db.whatLeagueImAt(substituteAsso, year);
+        int substituteYear = substituteAsso.getMyGames().get(0).getGameDate().getYear();
+        String substituteLeague = db.whatLeagueImAt(substituteAsso, substituteYear);
 
-        while (!outOfAsso && myLeague.equals(substituteLeague)){ //keep getting random asso' till the leagues are not overlapping.
+        while (!outOfAsso && myLeague.equals(substituteLeague) && substituteAsso.getMyGames().get(0).getTimeOfGame().equals(this.myGames.get(0).getTimeOfGame())){ //keep getting random asso' till the leagues are not overlapping.
             i++;
             if (i == allAssociations.size()-1){ //the asso' list s over. no good asso' to pass to.
                 outOfAsso = true; //last chance.
             }
             substituteAsso = (AssociationRepresentative)allAssociations.get(i); //next one in list.
-            //substituteYear = substituteAsso.myGames.get(0).getGameDate().getYear();
-            substituteLeague = db.whatLeagueImAt(substituteAsso, year); //gets his league's name.
+            substituteYear = substituteAsso.myGames.get(0).getGameDate().getYear();
+            substituteLeague = db.whatLeagueImAt(substituteAsso, substituteYear); //gets his league's name.
         }
 
-        //finally found a good substitute.
-        for (Game game : myGames){
-            substituteAsso.setMyGame(game); //transfer game by game.
+        if(!outOfAsso) {
+            //finally found a good substitute.
+            for (Game game : myGames) {
+                substituteAsso.setMyGame(game); //transfer game by game.
+            }
+            return true;
+
         }
-        return true;
+        return false;
     }
 
 
