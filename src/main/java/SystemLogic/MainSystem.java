@@ -8,10 +8,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.TimeUnit;
 
 public class MainSystem {
     private static MainSystem single_instance = null;
@@ -70,8 +68,6 @@ public class MainSystem {
 //        LOG  = LogManager.getLogger();
         LOG.info("LOG FILE IS CONNECTED!");
     }
-
-
 
     /**
      * This method initialize the external system and connect this class to them.

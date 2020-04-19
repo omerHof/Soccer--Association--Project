@@ -94,6 +94,23 @@ public class DataBase {
     private MainReferee mainReferee3;
     private MainReferee mainReferee4;
     private MainReferee mainReferee5;
+    private TeamOwner teamOwner1;
+    private TeamOwner teamOwner2;
+    private TeamOwner teamOwner3;
+    private TeamOwner teamOwner4;
+    private TeamOwner teamOwner5;
+    private TeamOwner teamOwner6;
+    private TeamOwner teamOwner7;
+    private Manager manager1;
+    private Manager manager2;
+    private Manager manager3;
+    private Manager manager4;
+    private Player almostOwner1;
+    private Player almostOwner2;
+    private Player almostManager1;
+    private Coach almostOwner3;
+    private Coach almostOwner4;
+    private Coach almostManager2;
 
     private AssociationRepresentative representative;
 
@@ -219,6 +236,29 @@ public class DataBase {
 
         administrator = new Administrator("The King", "1234", "Oren Hason", "OrenHason@gmail.com");
 
+        /** Owners **/
+        teamOwner1 = new TeamOwner("teamOwner1", "1234", "teamOwnerName", "teamOwner.com");
+        teamOwner2 = new TeamOwner("teamOwner2", "1234", "teamOwnerName", "teamOwner.com");
+        teamOwner3 = new TeamOwner("teamOwner3", "1234", "teamOwnerName", "teamOwner.com");
+        teamOwner4 = new TeamOwner("teamOwner4", "1234", "teamOwnerName", "teamOwner.com");
+        teamOwner5 = new TeamOwner("teamOwner5", "1234", "teamOwnerName", "teamOwner.com");
+        teamOwner6 = new TeamOwner("teamOwner6", "1234", "teamOwnerName", "teamOwner.com");
+        teamOwner7 = new TeamOwner("teamOwner7", "1234", "teamOwnerName", "teamOwner.com");
+
+        /** Users that yet to be owners/managers **/
+        almostOwner1 = new Player("almostOwner1","1234", "playerName", "player.com", null, "player_that_plays");
+        almostOwner2 = new Player("almostOwner2","1234", "playerName", "player.com", null, "player_that_plays");
+        almostOwner3 = new Coach("almostOwner3","1234", "coachName", "coach.com", "coach_that_coaches");
+        almostOwner4 = new Coach("almostOwner4","1234", "coachName", "coach.com", "coach_that_coaches");
+        almostManager1 = new Player("almostManager1","1234", "playerName", "player.com", null, "player_that_plays");
+        almostManager2 = new Coach("almostManager2","1234", "coachName", "coach.com",  "coach_that_coaches");
+
+        /** Managers **/
+        manager1 = new Manager("manager1", "1234", "mmanagerName", "manager.com");
+        manager2 = new Manager("manager2", "1234", "mmanagerName", "manager.com");
+        manager3 = new Manager("manager3", "1234", "mmanagerName", "manager.com");
+        manager4 = new Manager("manager4", "1234", "mmanagerName", "manager.com");
+
         /**Teams in String**/
         /*
         ArrayList<String> stringTeams = new ArrayList<>();
@@ -338,6 +378,26 @@ public class DataBase {
         db.setUser(representative5);
 
         db.setUser(administrator);
+
+        db.setUser(teamOwner1);
+        db.setUser(teamOwner2);
+        db.setUser(teamOwner3);
+        db.setUser(teamOwner4);
+        db.setUser(teamOwner5);
+        db.setUser(teamOwner6);
+        db.setUser(teamOwner7);
+        db.setUser(almostOwner1);
+        db.setUser(almostOwner2);
+        db.setUser(almostOwner3);
+        db.setUser(almostOwner4);
+        db.setUser(almostManager1);
+        db.setUser(almostManager2);
+
+        db.setUser(manager1);
+        db.setUser(manager2);
+        db.setUser(manager3);
+        db.setUser(manager4);
+
 
         db.setTeam(a);
         db.setTeam(b);

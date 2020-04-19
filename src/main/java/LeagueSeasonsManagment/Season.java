@@ -20,7 +20,6 @@ public class Season {
     private HashMap<Integer, ArrayList<Game>> allGames;
     private ArrayList<Team> allTeams;
     private ArrayList<Referee> allReferees;
-    //private ArrayList<MainReferee> allMainReferees;
     private ArrayList<AssociationRepresentative> allRepresentatives;
     private IGameInlayPolicy iGameInlayPolicy;
     private IScorePolicy iScorePolicy;
@@ -63,9 +62,6 @@ public class Season {
                 List<User> mahzorRefereesAndAsso = new LinkedList<>(); //to check constraints and doubles.
                 Referee ref;
 
-                //ArrayList<Referee> copyReferees = new ArrayList<>();
-                //copyReferees.addAll(allReferees);
-
                 for (Game game : currMahzorGames) {
 
                     for (int i = 0; i < amount; i++) {
@@ -86,12 +82,10 @@ public class Season {
                     asso.followThisGame(game); //adds both ways.
                     mahzorRefereesAndAsso.add(asso);
 
-                    //MainReferee mainReferee = (MainReferee) db.getUserType("MainReferee");
                     MainReferee mainReferee = getRandomMainReferee();
 
                     while (mainReferee == null || mahzorRefereesAndAsso.contains(mainReferee)) { //until gets a new one.
                         mainReferee = getRandomMainReferee();
-                        //mainReferee = (MainReferee) db.getUserType("MainReferee");
                     }
                     mainReferee.followThisGame(game); //adds both ways.
                     mahzorRefereesAndAsso.add(mainReferee);
@@ -143,14 +137,8 @@ public class Season {
         if (toReturn instanceof MainReferee)
             return (MainReferee) toReturn;
 
-/*
-        for (int i = 0; i < allReferees.size(); i++) {
-            if(allReferees.get(i) instanceof MainReferee && cur)
-                return (MainReferee)allReferees.get(i);
-        }*/
         return null;
     }
-
 
 
 
@@ -158,7 +146,6 @@ public class Season {
     public int getYear() {
         return year;
     }
-
 
     public IGameInlayPolicy getiGameInlayPolicy() {
         return iGameInlayPolicy;
@@ -172,7 +159,6 @@ public class Season {
     public void setYear(int newYear){
         this.year=newYear;
     }
-
 
     public void setAllTeams(ArrayList<Team> allTeams) {
         this.allTeams = allTeams;

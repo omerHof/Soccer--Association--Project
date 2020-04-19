@@ -228,7 +228,7 @@ public class AssociationRepresentative extends User implements Observer {
      * this function adds an event to an active game's event book.
      * @return true if successes, false if not.
      */
-    public boolean addGameEvent(Event.eventType type, int time, String playerName){
+    public boolean addGameEvent(Event.eventType type, int time, String playerName, String whichTeam){
 
         Game gameToAdd = findActiveGame();
 
@@ -236,7 +236,21 @@ public class AssociationRepresentative extends User implements Observer {
             Event newEvent = new Event(type, time, playerName);
             gameToAdd.addEvent(newEvent);
 
-            MainSystem.LOG.info("A new event: " + type + " was added to game: " + gameToAdd.getHomeTeam().getName() + "-" + gameToAdd.getAwayTeam().getName() + ", " + gameToAdd.getGameDate());
+            if(type.toString().equals("goal")){
+                String score = gameToAdd.getScore();
+                int homeScore = Integer.parseInt(score.substring(0,score.indexOf("-")));
+                int awayScore = Integer.parseInt(score.substring(score.indexOf("-")+1));
+
+                if (whichTeam.equals("home"))
+                    homeScore = homeScore+1;
+                else // away team
+                    awayScore = awayScore +1;
+
+                score = homeScore + "-" + awayScore;
+                gameToAdd.setScore(score);
+            }
+
+            MainSystem.LOG.info("A new event: " + type + "(" + playerName + ",'" + time + ") was added to game: " + gameToAdd.getHomeTeam().getName() + "-" + gameToAdd.getAwayTeam().getName() + ", " + gameToAdd.getGameDate());
             return true;
         }
         else //no active game to add events to.
@@ -270,6 +284,7 @@ public class AssociationRepresentative extends User implements Observer {
         List<User> allAssociations = db.getUserTypeList("AssociationRepresentative");
         AssociationRepresentative substituteAsso = (AssociationRepresentative)allAssociations.get(i); //first Asso'
 
+        //int substituteYear = substituteAsso.myGames.get(0).getGameDate().getYear();
         String substituteLeague = db.whatLeagueImAt(substituteAsso, year);
 
         while (!outOfAsso && myLeague.equals(substituteLeague)){ //keep getting random asso' till the leagues are not overlapping.
@@ -278,6 +293,7 @@ public class AssociationRepresentative extends User implements Observer {
                 outOfAsso = true; //last chance.
             }
             substituteAsso = (AssociationRepresentative)allAssociations.get(i); //next one in list.
+            //substituteYear = substituteAsso.myGames.get(0).getGameDate().getYear();
             substituteLeague = db.whatLeagueImAt(substituteAsso, year); //gets his league's name.
         }
 
