@@ -212,7 +212,7 @@ public class Season {
         return allReferees;
     }
 
-    public List<AssociationRepresentative> getAllRepresentatives() {
+    public ArrayList<AssociationRepresentative> getAllRepresentatives() {
         return allRepresentatives;
     }
 

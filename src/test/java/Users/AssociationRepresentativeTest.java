@@ -622,21 +622,44 @@ public class AssociationRepresentativeTest {
     @Test
     public void passMyGames() {
 
-        //System.out.println("NOT HEREEEE");
+        League league = db.getLeague("Alufot");
+        Season season = league.getSeasonByYear(2020);
 
-        Season test = db.getLeague("Alufot").getSeasonByYear(2020);
+        AssociationRepresentative passFrom =  (AssociationRepresentative)db.getUserType("AssociationRepresentative");
 
-        test.getYear();
+
+        ArrayList<AssociationRepresentative> representatives = season.getAllRepresentatives();
+
+        AssociationRepresentative asso666test = new AssociationRepresentative("taliTest", "taata", "representative666", "tali@gmail");
+        Team a = new Team("barca");
+        Team b = new Team("real");
+
+        LocalDateTime date2 = LocalDateTime.of(2020, 4, 19, 17, 30);
+        Game game = new Game(a, b, date2);
+
+        asso666test.setMyGame(game);
+        representatives.add(asso666test);
+
+        season.setAllRepresentatives(representatives);
+
+        db.setUser(asso666test);
+        //assoTest.addSeasonToLeague("Champions league", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
+
+        assertTrue(passFrom.passMyGames());
+
+        //Season test = db.getLeague("Alufot").getSeasonByYear(2020);
+
+        //test.getYear();
         //assoTest.addSeasonToLeague("Alufot", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
 
-     /*   League league2 = new League("Champions league", 10);
+        /*League league2 = new League("Champions league", 10);
         assoTest.addLeague("Champions league", 10);
         stringRepresentatives.add(representativeTest);
         db.addLeague(league2);
 
         AssociationRepresentative asso666test = new AssociationRepresentative("taliTest", "taata", "representative666", "tali@gmail");
 
-        LocalDateTime date2 = LocalDateTime.of(2020,4,19, 17, 30);
+        LocalDateTime date2 = LocalDateTime.of(2020, 4, 19, 17, 30);
         Game game = new Game(a, b, date2);
 
         asso666test.setMyGame(game);
@@ -646,4 +669,5 @@ public class AssociationRepresentativeTest {
 
         assertTrue(representativee1.passMyGames());*/
     }
+
 }
