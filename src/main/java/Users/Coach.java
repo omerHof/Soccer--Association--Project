@@ -64,11 +64,14 @@ public class Coach extends User implements Assent {
            return false;
         }
         currentTeam=t;
+
         if(page!=null) {
             page.setCurrentTeam(t);
             page.setOneTeamToHistory(team);
         }
         DB1.setUser(this);
+        MainSystem.LOG.info("The coach " +getUserFullName()+ " has move to the team "+team);
+
         return true;
     }
     public String getCurrentTeamName(){

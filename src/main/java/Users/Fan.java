@@ -72,7 +72,7 @@ public class Fan extends User implements Observer {
     @Override
     public void update(Observable o, Object arg) {
         DB db = DB.getInstance();
-        MainSystem.LOG.info("The user  get update");
+        MainSystem.LOG.info("The user get update");
         if (o instanceof PersonalPage) {
             Team team = (Team) arg;
             String name = (String) ((PersonalPage) o).getName();
@@ -90,13 +90,21 @@ public class Fan extends User implements Observer {
                 managerSender = team.getManagers().entrySet().stream().findFirst().get().getValue();
             }
             else{
-                managerSender = t.getManagers().get(0);
+                managerSender = t.getTeamOwners().entrySet().stream().findFirst().get().getValue();
             }
 
             if (arg instanceof Player) {
                 Player player = (Player) arg;
                 pageMessage = player.getUserFullName();
-                String message = "new update! the player " + pageMessage + " has moved to " + team.getName();
+                String teamName = player.getCurrentTeamName();
+                String message;
+                if(team.getName()==teamName) {
+                     message = "new update! the player " + pageMessage + " has moved to " + team.getName();
+                }
+                else{
+                     message = "new update! the player " + pageMessage + " has left the team" + team.getName();
+
+                }
                 Notification notification = new Notification(managerSender,message,this);
                 notification.send();
 

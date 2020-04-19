@@ -1,12 +1,16 @@
 package Users;
 
+import Games.Game;
 import SystemLogic.DB;
+import Teams.Stadium;
 import Teams.Team;
+import Teams.TeamPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -32,7 +36,7 @@ public class FanTest {
     @Before
     public void setUp() throws Exception {
         LocalDate localDate2 = LocalDate.of(1999,1,1);
-        f1 = new Fan("ido747","12345","ido kesttenbaum","ido747@gmail.com");
+        f1 = new Fan("ido747","12345","ido kestenbaum","ido747@gmail.com");
         t1 = new Team("hapoel tel aviv");
         p1 = new Player("messi","12345","leo messi","leo123@gmail.com",localDate2,"striker");
         c1 = new Coach("klinger","123","nir klinger","nir123@gmail.com","head coach");
@@ -93,7 +97,108 @@ public class FanTest {
 
     @Test
     public void update() {
-     p1.setCurrentTeam(t1.getName());
+        Team barca = new Team("barcelona");
+        DBTest.addTeam(barca);
+        Team real = new Team("real madrid");
+        DBTest.addTeam(real);
+        TeamPage barcaPage = barca.createPage("team in spain","spain");
+        TeamPage realPage = real.createPage("team in spain","spain");
+       TeamPage hapoelPage = t1.createPage("team in israel","israel");
+
+       TeamOwner hapoelOwner = new TeamOwner("aa","aa","nisanov","dsdsadas");
+        TeamOwner barcaOwner = new TeamOwner("arrrra","aa","bartulemeo","dsdsadffas");
+        TeamOwner realOwner = new TeamOwner("222222","aa","peres","dsdsadffas");
+        DBTest.addUser(hapoelOwner);
+        DBTest.addUser(barcaOwner);
+        DBTest.addUser(realOwner);
+        t1.addTeamOwner(hapoelOwner.getUserFullName());
+        barca.addTeamOwner(barcaOwner.getUserFullName());
+        real.addTeamOwner(realOwner.getUserFullName());
+
+        PlayerPersonalPage messiPage = p1.createPersonalPage(167,65,10,barca.getName());
+        LocalDate date = LocalDate.of(1965,12,12);
+        CoachPersonalPage klingerPage =c1.createCoachPersonalPage(date,null);
+
+/*
+        ////followed player move team
+        f1.followThisPage(p1.getUserFullName());
+
+        t1.addPlayer(p1.getUserFullName());
+        //p1.setCurrentTeam(t1.getName());
+        assertEquals(f1.getReceivedNotifications().get(0).getContext(),"new update! leo messi has moved to hapoel tel aviv");
+        assertEquals(f1.getReceivedNotifications().size(),1);
+        barca.addPlayer(p1.getUserFullName());
+        assertEquals(f1.getReceivedNotifications().get(1).read(),"new update! leo messi has moved to barcelona");
+        assertEquals(f1.getReceivedNotifications().get(1).getSender(),p1);
+
+        ////followed coach move team
+
+        f1.followThisPage(c1.getUserFullName());
+        barca.addCoach(c1);
+        assertEquals(f1.getReceivedNotifications().get(2).read(),"new update! nir klinger has moved to barcelona");
+        assertEquals(f1.getReceivedNotifications().get(2).getSender(),c1);
+        assertEquals(barca.getPlayers().size(),1);
+        assertEquals(barca.getCoaches().size(),1);
+        assertEquals(t1.getCoaches().size(),0);
+        assertEquals(t1.getPlayers().size(),0);
+
+        f1.stopFollowAllPages();
+        assertEquals(f1.getFollowedPages().size(),0);
+
+
+ */
+
+        ///follow team
+        f1.followTeam(t1.getName());
+        t1.addPlayer(p1);
+        assertEquals(f1.getReceivedNotifications().get(0).getContext(),"new update! the player leo messi has moved to hapoel tel aviv");
+        t1.addCoach(c1.getUserFullName());
+        assertEquals(f1.getReceivedNotifications().get(1).getContext(),"new update! the coach nir klinger has moved to hapoel tel aviv");
+        Stadium stadium = new Stadium(12222,12222,12222);
+        stadium.setName("bloomfield");
+        t1.setStadium(stadium);
+        assertEquals(f1.getReceivedNotifications().get(2).getContext(),"new update! the team hapoel tel aviv has move to the stadium "+stadium.getName());
+
+        Manager manager = new Manager("ssss","dsds","managerr","fsdfsdf");
+        DBTest.addUser(manager);
+        t1.addManager(manager);
+        assertEquals(f1.getReceivedNotifications().get(3).getContext(),"new update! the manager managerr has moved to hapoel tel aviv");
+
+
+
+        ////// game notifications
+
+
+        LocalDateTime gameDate = LocalDateTime.of(2020,4,19,21,45);
+        Game g = new Game(barca,real,gameDate);
+        barca.addGame(g);
+        real.addGame(g);
+
+        f1.followTeam(barca.getName());
+
+
+       // System.out.println(f1.getReceivedNotifications().get(4).getContext());
+        System.out.println(g.getTimeOfGame());
+        System.out.println(g.getStatus());
+        LocalDateTime from = LocalDateTime.now();
+        System.out.println(from);
+
+        // assertEquals(f1.getReceivedNotifications().get(4).getContext(),"DayToGame between: "+barca.getName()+" and "+real.getName());
+
+
+
+
+        //t1.removePlayer(p1);
+       // System.out.println(f1.getReceivedNotifications().get(1).getContext());
+
+
+
+
+
+
+
+
+
 
     }
 

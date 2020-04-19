@@ -474,8 +474,10 @@ public class Team implements Comparable {
         this.stadium = stadium;
         if(page!=null){
             page.setStadium(stadium);
-            db.setTeam(this);
         }
+        db.setTeam(this);
+        MainSystem.LOG.info("the team "+name+ " has a new stadium");
+
     }
 
 
