@@ -31,8 +31,6 @@ public class Game extends Observable {
     private Team awayTeam;
     private String score;
     private ArrayList<Event> eventBook;
-    private List<Referee> gameReferees;
-    private AssociationRepresentative representative;
     private String finalReport;
     private LocalDateTime timeOfGame;
     private Timer timer;
@@ -47,7 +45,6 @@ public class Game extends Observable {
     public Game(Team homeTeam, Team awayTeam, LocalDateTime timeOfGame) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
-        this.gameReferees = new LinkedList<>();
         this.timeOfGame = timeOfGame;
         this.timer = new Timer();
         this.status = gameStatus.preGame;
@@ -71,7 +68,7 @@ public class Game extends Observable {
      */
     private void dayToGame() {
         LocalDateTime dayBefore = timeOfGame.minus(1, ChronoUnit.SECONDS);//todo change seconds to days
-        DayToGame dayToGame = new DayToGame(gameReferees, representative, homeTeam, awayTeam, this);
+        DayToGame dayToGame = new DayToGame(homeTeam, awayTeam, this);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, dayBefore);
         timer.schedule(dayToGame, duration.getSeconds() * 1000);
@@ -82,7 +79,7 @@ public class Game extends Observable {
      */
     private void startGame() {
         LocalDateTime GameTime = timeOfGame;
-        StartGame startGame = new StartGame(representative, homeTeam, awayTeam, this);
+        StartGame startGame = new StartGame(homeTeam, awayTeam, this);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, GameTime);
         timer.schedule(startGame, duration.getSeconds() * 1000);
@@ -138,17 +135,6 @@ public class Game extends Observable {
         return score;
     }
 
-    public List<Referee> getGameReferees() {
-        return gameReferees;
-    }
-
-    public AssociationRepresentative getRepresentative() {
-        return representative;
-    }
-
-    public void setAssociationRepresentative(AssociationRepresentative representative) {
-        this.representative = representative;
-    }
 
     public ArrayList<Event> getEventBook() {
         return eventBook;
@@ -182,9 +168,6 @@ public class Game extends Observable {
         this.score = score;
     }
 
-    public void setGameReferees(List<Referee> gameReferees) {
-        this.gameReferees = gameReferees;
-    }
 
     public void setStatus(gameStatus status) {
         this.status = status;
@@ -200,21 +183,17 @@ public class Game extends Observable {
  */
 class DayToGame extends TimerTask {
     private List<Referee> referees;
-    private AssociationRepresentative representative;
     private Team homeTeam;
     private Team awayTeam;
     private Game game;
 
     /**
      * constructor
-     * @param referees
-     * @param representative
      * @param homeTeam
      * @param awayTeam
      */
-    public DayToGame(List<Referee> referees, AssociationRepresentative representative, Team homeTeam, Team awayTeam, Game game) {
-        this.referees = referees;
-        this.representative = representative;
+    public DayToGame(Team homeTeam, Team awayTeam, Game game) {
+
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         this.game= game;
@@ -232,19 +211,16 @@ class DayToGame extends TimerTask {
  * this class represent the start of a game
  */
 class StartGame extends TimerTask {
-    private AssociationRepresentative representative;
     private Team homeTeam;
     private Team awayTeam;
     private Game game;
 
     /**
      * constructor
-     * @param representative
      * @param homeTeam
      * @param awayTeam
      */
-    public StartGame(AssociationRepresentative representative, Team homeTeam, Team awayTeam, Game game) {
-        this.representative = representative;
+    public StartGame(Team homeTeam, Team awayTeam, Game game) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         this.game = game;
