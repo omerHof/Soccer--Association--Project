@@ -56,6 +56,9 @@ public class AssociationRepresentative extends User implements Observer {
     ////////////////////////////// USE CASE 9.2 ////////////////////////////// VVV
     public String addSeasonToLeague (String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives){
 
+        if (teams==null || referees== null || representatives==null || (referees.size() < (teams.size()*1.5)))
+            return "couldn't create a new season: " + year + " - not enough referees/representatives";
+
         ArrayList<Team> allTeams;
         ArrayList<Referee> allReferees;
         ArrayList<AssociationRepresentative> allReps;
@@ -63,6 +66,15 @@ public class AssociationRepresentative extends User implements Observer {
         allTeams = setLeagueTeams(teams);
         allReferees = setLeagueReferees(referees);
         allReps = setLeagueRepresentatives(representatives);
+
+        int countMainRefereeConstraint = 0;
+        for (int i = 0; i < allReferees.size(); i++) {
+            if (allReferees.get(i) instanceof MainReferee)
+                countMainRefereeConstraint++;
+        }
+
+        if(countMainRefereeConstraint < (teams.size()/2))
+            return "couldn't create a new season: " + year + " - not enough main referees";
 
         Season newSeason;
 
