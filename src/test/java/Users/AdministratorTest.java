@@ -165,15 +165,17 @@ team owner
 
  */
          team1.addTeamOwner(owner);
-         ad.deleteUserFromSystem(owner.getUserFullName());
+         assertEquals(ad.deleteUserFromSystem(owner.getUserFullName()),"the team has less then 2 team owners");
          assertEquals(team1.getTeamOwners().size(),1);
-         TeamOwner owner2 = new TeamOwner("ddddddddd","ddsdas","abramovich","dsdsa");
+         TeamOwner owner2 = new TeamOwner("avi","ddsdas","abramovich","dsdsa");
         db.addUser(owner2);
-
-        team1.addTeamOwner("abramovich");
+        team1.addTeamOwner(owner2);
         assertEquals(team1.getTeamOwners().size(),2);
-        System.out.println(team1.getStatus());
-        System.out.println(team1.getTeamOwners().size());
+        String message = ad.deleteUserFromSystem(owner.getUserFullName());
+
+        assertEquals(message,"the user deleted succsesfully");
+        assertEquals(team1.getTeamOwners().size(),1);
+
        // ad.deleteUserFromSystem("abramovich");
 
 

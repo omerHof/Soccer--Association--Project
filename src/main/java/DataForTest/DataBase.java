@@ -119,6 +119,7 @@ public class DataBase {
     private AssociationRepresentative representativee5;
 
     private Administrator administrator;
+    private Fan fan1;
 
 
     Player vermut;
@@ -415,6 +416,14 @@ public class DataBase {
         hhh = new Coach("klnnning", "1212", "nir klinger", "dsdasd", "head coach");
         iii = new Coach("klinssssg", "1212", "nir klinger", "dsdasd", "head coach");
 
+        /**fan**/
+
+        fan1 = new Fan("idok7777","12345","ido kest","ido747@gmail.com");
+
+
+
+
+
         /**DB**/
 
         db.setLeague(league);
@@ -471,6 +480,8 @@ public class DataBase {
         db.setUser(manager2);
         db.setUser(manager3);
         db.setUser(manager4);
+
+        db.setUser(fan1);
 
         //adds all coaches nd players.
         db.addUser(vermut);
@@ -533,6 +544,18 @@ public class DataBase {
 
         assoTest.addSeasonToLeague("Alufot", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
         assoTest.addSeasonToLeague("Alufot", 2021, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
+
+        ///create pages teams
+
+        c.createPage("team in england","england");
+        d.createPage("team in england","england");
+        ///fan follow team
+        fan1.followTeam(c.getName());
+        fan1.followTeam(d.getName());
+
+
+
+
 
         // Season season = db.getLeague("Alufot").getAllSeasons().get(0);
         //season.getiGameInlayPolicy();
