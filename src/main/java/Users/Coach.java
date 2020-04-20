@@ -25,13 +25,13 @@ public class Coach extends User implements Assent {
         this.userEmail = userEmail;
         this.teamRole = teamRole;
         salary=0;
-        DB1=DB.getInstance();
         currentTeam=null;
 
     }
 
    public CoachPersonalPage createCoachPersonalPage(LocalDate birthDate, String team){
        MainSystem.LOG.info("The coach " +getUserFullName()+ " create personal page");
+       DB1=DB.getInstance();
        Team currTeam = DB1.getTeam(team);
        if(currTeam==null){
            page = new CoachPersonalPage(userFullName,birthDate,teamRole,null);
@@ -58,6 +58,7 @@ public class Coach extends User implements Assent {
     }
 
     public boolean setCurrentTeam(String team){
+        DB1=DB.getInstance();
         Team t =  DB1.getTeam(team);
 
         if(t==null){

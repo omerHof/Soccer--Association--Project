@@ -1,5 +1,6 @@
 package Users;
 
+import DataForTest.DataBase;
 import Games.Game;
 import SystemLogic.DB;
 import Teams.Stadium;
@@ -17,6 +18,8 @@ import java.util.HashMap;
 import static org.junit.Assert.*;
 
 public class FanTest {
+
+    /*
     Fan f1;
     Team t1;
     Player p1;
@@ -33,8 +36,15 @@ public class FanTest {
      HashMap<String,PersonalPage> followedPagesTest = new HashMap<>();
      HashMap<String,Team> followedTeamsTest = new HashMap<>();
 
+     */
+
+    DB db = DB.getInstance();
+    DataBase test = new DataBase();
+   // Game game = db.getLeague("Alufut").getAllSeasons().get(1).getAllGames().get(1).get(0);
+
     @Before
     public void setUp() throws Exception {
+        /*
         LocalDate localDate2 = LocalDate.of(1999,1,1);
         f1 = new Fan("ido747","12345","ido kestenbaum","ido747@gmail.com");
         t1 = new Team("hapoel tel aviv");
@@ -46,18 +56,10 @@ public class FanTest {
         DBTest.addUser(c1);
         DBTest.addTeam(t1);
 
-
-/*
-        p1.createPersonalPage(167,70,10,new Team("barcelona"));
-         messiPage = p1.getPage();
-        f1.followThisPage(messiPage);
-
-        c1.createCoachPersonalPage(localDate2,t1);
-         klingerPage =c1.getPage();
-        f1.followThisPage(klingerPage);
+         */
 
 
- */
+
 
 
 
@@ -69,6 +71,7 @@ public class FanTest {
 
     @After
     public void tearDown() throws Exception {
+        /*
        DBTest.removeUser(f1.getUserName());
         DBTest.removeUser(p1.getUserName());
         DBTest.removeUser(c1.getUserName());
@@ -77,6 +80,8 @@ public class FanTest {
         t1=null;
         p1=null;
         c1=null;
+
+         */
     }
 
     @Test
@@ -97,6 +102,7 @@ public class FanTest {
 
     @Test
     public void update() {
+        /*
         Team barca = new Team("barcelona");
         DBTest.addTeam(barca);
         Team real = new Team("real madrid");
@@ -118,6 +124,8 @@ public class FanTest {
         PlayerPersonalPage messiPage = p1.createPersonalPage(167,65,10,barca.getName());
         LocalDate date = LocalDate.of(1965,12,12);
         CoachPersonalPage klingerPage =c1.createCoachPersonalPage(date,null);
+
+         */
 
 /*
         ////followed player move team
@@ -147,6 +155,9 @@ public class FanTest {
 
 
  */
+
+
+/*
 
         ///follow team
         f1.followTeam(t1.getName());
@@ -194,24 +205,42 @@ public class FanTest {
 
 
 
+ */
 
 
 
 
-        /*
+
+
 
         ////// game notifications
+       // System.out.println(test);
 
+/*
+       User user = db.getUserByFullName("ido kest");
+       Fan fan1 = (Fan)user;
+        System.out.println(fan1.getReceivedNotifications().get(0).getContext());
+
+
+ */
+
+
+
+
+
+
+/*
         f1.followTeam(barca.getName());
-        LocalDateTime gameDate = LocalDateTime.of(2020,4,19,22,32);
+        LocalDateTime gameDate = LocalDateTime.of(2020,4,21,17,18);
         Game g = new Game(barca,real,gameDate);
         barca.addGame(g);
         real.addGame(g);
         g.setStatus(Game.gameStatus.active);
-       System.out.println(f1.getReceivedNotifications().get(4).getContext());
+       System.out.println(f1.getReceivedNotifications().get(12).getContext());
 
 
-         */
+
+ */
 
         // assertEquals(f1.getReceivedNotifications().get(4).getContext(),"DayToGame between: "+barca.getName()+" and "+real.getName());
 
@@ -220,6 +249,18 @@ public class FanTest {
 
         //t1.removePlayer(p1);
        // System.out.println(f1.getReceivedNotifications().get(1).getContext());
+        User user = db.getUserByFullName("ido kest");
+        Fan fan = (Fan)user;
+        Team t1 = fan.getFollowedTeams().get("man u");
+        System.out.println(t1.getGameList().size());
+        Game game = t1.getGameList().get(0);
+
+        System.out.println(game.getHomeTeam().getName());
+        System.out.println(game.getAwayTeam().getName());
+        System.out.println(game.getTimeOfGame());
+
+
+        System.out.println(fan.getReceivedNotifications().size());
 
 
 
@@ -232,8 +273,10 @@ public class FanTest {
 
     }
 
+
     @Test
     public void getFollowedPages() {
+        /*
         p1.createPersonalPage(167,65,10,"barcelona");
         assertEquals(0,f1.getFollowedPages().size());
         PlayerPersonalPage page = p1.getPage();
@@ -262,10 +305,12 @@ public class FanTest {
 
          */
 
+
     }
 
     @Test
     public void followThisPage() {
+        /*
         int numberOfPages = f1.getFollowedPages().size();
         assertEquals(2,numberOfPages);
         System.out.println("1 good");
@@ -294,6 +339,8 @@ public class FanTest {
 
 
 
+
+         */
     }
 
     @Test
@@ -303,6 +350,7 @@ public class FanTest {
 
     @Test
     public void stopFollowThisPage() {
+        /*
 
 
         ///before change
@@ -318,10 +366,13 @@ public class FanTest {
         assertEquals(0,f1.getFollowedPages().size());
 
 
+
+         */
     }
 
     @Test
     public void stopFollowAllPages() {
+        /*
         ///before change
         assertEquals(2, f1.getFollowedPages().size());
         ///after change
@@ -329,11 +380,14 @@ public class FanTest {
         assertEquals(0,f1.getFollowedPages().size());
 
 
+         */
+
 
     }
 
     @Test
     public void followTeam() {
+        /*
         ///before change
         assertEquals(0, f1.getFollowedTeams().size());
 
@@ -346,10 +400,13 @@ public class FanTest {
         f1.followTeam("barcelona");
         assertEquals(2, f1.getFollowedTeams().size());
 
+
+         */
     }
 
     @Test
     public void stopFollowTeam() {
+        /*
 
         f1.followTeam("hapoel tel aviv");
         assertEquals(1, f1.getFollowedTeams().size());
@@ -357,10 +414,13 @@ public class FanTest {
         f1.stopFollowTeam("hapoel tel aviv");
         assertEquals(0,f1.getFollowedTeams().size());
 
+         */
+
     }
 
     @Test
     public void stopFollowAllTeams() {
+        /*
         f1.followTeam("hapoel tel aviv");
         Team team = new Team("maccabi haifa");
         DBTest.addTeam(team);
@@ -375,6 +435,8 @@ public class FanTest {
         assertEquals(0,f1.getFollowedTeams().size());
 
 
+         */
+
     }
 
     @Test
@@ -383,10 +445,13 @@ public class FanTest {
 
     @Test
     public void getFollowedTeams() {
+        /*
         f1.followTeam("hapoel tel aviv");
         followedTeamsTest.put(t1.getName(),t1);
 
         assertEquals(f1.getFollowedTeams(),followedTeamsTest);
+
+         */
     }
 
 
@@ -410,21 +475,5 @@ public class FanTest {
     public void getTeamByName() {
     }
 
-    @Test
-    public void watchDetails() {
-        String[] testDetails = {"ido kesttenbaum","ido747","12345","ido747@gmail.com"};
-        //before changes
-        assertEquals(testDetails[0],f1.watchDetails()[0]);
-        assertEquals(testDetails[1],f1.watchDetails()[1]);
-        assertEquals(testDetails[2],f1.watchDetails()[2]);
-        assertEquals(testDetails[3],f1.watchDetails()[3]);
 
-        f1.setUserName("idok");
-        assertFalse(testDetails[1].equals(f1.watchDetails()[1]));
-        assertTrue(testDetails[2].equals(f1.watchDetails()[2]));
-
-
-
-
-    }
 }

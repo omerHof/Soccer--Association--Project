@@ -503,6 +503,17 @@ public class DataBase {
         db.addUser(ggg);
         db.addUser(hh);
         db.addUser(iii);
+        db.setTeam(a);
+        db.setTeam(b);
+        db.setTeam(c);
+        db.setTeam(d);
+        db.setTeam(e);
+        db.setTeam(f);
+        db.setTeam(g);
+        db.setTeam(h);
+        db.setTeam(i);
+        db.setTeam(j);
+
 
         a.addCoach(klinger);
         b.addCoach(aaa);
@@ -526,16 +537,6 @@ public class DataBase {
         i.addPlayer(gg);
         j.addPlayer(hh);
 
-        db.setTeam(a);
-        db.setTeam(b);
-        db.setTeam(c);
-        db.setTeam(d);
-        db.setTeam(e);
-        db.setTeam(f);
-        db.setTeam(g);
-        db.setTeam(h);
-        db.setTeam(i);
-        db.setTeam(j);
 
         db.addLeague(league);
 
