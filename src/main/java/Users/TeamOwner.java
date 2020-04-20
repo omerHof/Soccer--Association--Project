@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class TeamOwner extends User implements Assent {
     private Team team = null;
     private double worth;
-    private boolean permission;
+    private boolean permission =false;
     private boolean afford = true;
     private HashMap<String, TeamOwner> team_owners_appointments = new HashMap<>();
     private HashMap<String, Manager> managers_appointments = new HashMap<>();
@@ -37,7 +37,7 @@ public class TeamOwner extends User implements Assent {
      */
     public void askPermissionToOpenTeam (){
         DB db = DB.getInstance();
-        AssociationRepresentative associationRepresentative = (AssociationRepresentative) db.getUserType("AssociationRepresentative");
+        AssociationRepresentative associationRepresentative = (AssociationRepresentative) db.getUserType("AssociationRepresentative");//todo: check tali
         this.permission = associationRepresentative.approveRegistration("who", "cares");
     }
 
@@ -62,13 +62,26 @@ public class TeamOwner extends User implements Assent {
     }
 
     /**
+     * This method closing the team by changing its status to "close".
+     * @return
+     */
+    public String closeTeam(){
+        if(team.getStatus().equals(Team.teamStatus.close)){
+            return "team is closed";
+        }
+        team.setStatus(Team.teamStatus.close);
+        MainSystem.LOG.info("The team " + team.getName() + " is closed");
+        return "close";
+    }
+
+    /**
      * Thia methods adds new assent (new users or new stadium) to the team.
      * Send to the appointing method, if it is necessary.
      * @param assent
-     * @param new_assent
+     * @param new_worth
      * @return
      */
-    public String addAssent(Assent assent, double new_assent){
+    public String addAssent(Assent assent, double new_worth){
         if(assent == null || team==null){
             return "null";
         }
@@ -85,7 +98,7 @@ public class TeamOwner extends User implements Assent {
         }
 
         if (assent.getWorth()==0) {         //means: first time the assent is added to team
-            assent.setWorth(new_assent);
+            assent.setWorth(new_worth);
         }
         this.team.addAssent(assent);
         outcome(assent.getWorth());
@@ -165,14 +178,18 @@ public class TeamOwner extends User implements Assent {
                 ,role, user.getUserFullName(), user.getUserEmail(), null,"","","");
         if(role.equals("teamowner")){
             TeamOwner teamOwner = (TeamOwner)new_user;
+            teamOwner.setWorth(300000);
             db.addUser(teamOwner);
-            addAssent(teamOwner, worth);
+            team.addAssent(teamOwner);
+           // teamOwner.setTeam(team);
             team_owners_appointments.put(new_user.getUserName(), (TeamOwner) new_user);
         }
         if(role.equals("manager")){
             Manager manager = (Manager)new_user;
+            manager.setWorth(200000);
             db.addUser(manager);
-            addAssent(manager, worth);
+            team.addAssent(manager);
+           // manager.setTeam(team);
             managers_appointments.put(new_user.getUserName(), (Manager) new_user);
         }
 
@@ -200,6 +217,9 @@ public class TeamOwner extends User implements Assent {
         }
         for (String owner: team_owners_appointments.keySet()){
             teamOwner.removeAppointmentTeamOwner(team_owners_appointments.get(owner));
+        }
+        for (String manager: managers_appointments.keySet()){
+            teamOwner.removeAppointmentManager(managers_appointments.get(manager));
         }
         this.removeAssent(teamOwner);
         this.team_owners_appointments.remove(teamOwner.getUserName());
@@ -292,18 +312,7 @@ public class TeamOwner extends User implements Assent {
         }
     }
 
-    /**
-     * This method closing the team by changing its status to "close".
-     * @return
-     */
-    public String closeTeam(){
-        if(team.getStatus().equals(Team.teamStatus.close)){
-            return "team is closed";
-        }
-        team.setStatus(Team.teamStatus.close);
-        MainSystem.LOG.info("The team " + team.getName() + " is closed");
-        return "close";
-    }
+
 
     /** ----------------- GETTERS AND SETTERS ----------------- **/
 
@@ -330,5 +339,29 @@ public class TeamOwner extends User implements Assent {
 
     public void setPermission(boolean permission) {
         this.permission = permission;
+    }
+
+    public boolean isAfford() {
+        return afford;
+    }
+
+    public void setAfford(boolean afford) {
+        this.afford = afford;
+    }
+
+    public HashMap<String, TeamOwner> getTeam_owners_appointments() {
+        return team_owners_appointments;
+    }
+
+    public void setTeam_owners_appointments(HashMap<String, TeamOwner> team_owners_appointments) {
+        this.team_owners_appointments = team_owners_appointments;
+    }
+
+    public HashMap<String, Manager> getManagers_appointments() {
+        return managers_appointments;
+    }
+
+    public void setManagers_appointments(HashMap<String, Manager> managers_appointments) {
+        this.managers_appointments = managers_appointments;
     }
 }

@@ -4594,3 +4594,176 @@
 2020.04.19 17:16:09.092 INFO  SystemLogic.MainSystem - Special password changed at 
 2020.04.19 17:16:09.092 INFO  SystemLogic.MainSystem - Special password changed at 
 2020.04.19 17:16:09.093 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.19 21:34:20.428 INFO  SystemLogic.MainSystem - The team Arnon Sturm Graz is closed
+2020.04.19 21:35:20.955 INFO  SystemLogic.MainSystem - The team Arnon Sturm Graz is closed
+2020.04.19 21:35:20.962 INFO  SystemLogic.MainSystem - The stadium nullwas added successfully to the team Arnon Sturm Graz
+2020.04.19 21:35:20.963 INFO  SystemLogic.MainSystem - The team budget decreased from 12000.0 to -88000.0
+2020.04.19 21:43:23.856 INFO  SystemLogic.MainSystem - The team Arnon Sturm Graz is closed
+2020.04.19 21:43:23.864 INFO  SystemLogic.MainSystem - The stadium nullwas added successfully to the team Arnon Sturm Graz
+2020.04.19 21:43:23.864 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.19 22:25:54.757 INFO  SystemLogic.MainSystem - The team Arnon Sturm Graz is closed
+2020.04.19 22:25:54.765 INFO  SystemLogic.MainSystem - The stadium nullwas added successfully to the team Arnon Sturm Graz
+2020.04.19 22:25:54.766 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.19 22:26:29.574 INFO  SystemLogic.MainSystem - the coach coach was added successfully to the team Arnon Sturm Graz
+2020.04.19 22:26:29.579 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to -400000.0
+2020.04.19 22:35:40.528 INFO  SystemLogic.MainSystem - The stadium Ha'Urvawas added successfully to the team Celtic veBenel
+2020.04.19 22:35:40.532 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.19 22:35:40.533 INFO  SystemLogic.MainSystem - The stadium Ha'Urvawas removed successfully to the team Celtic veBenel
+2020.04.19 22:35:40.533 INFO  SystemLogic.MainSystem - The team budget increased from 200000.0 to 300000.0
+2020.04.20 12:08:06.795 INFO  SystemLogic.MainSystem - the coach coach was added successfully to the team Celtic veBenel
+2020.04.20 12:08:06.805 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to -300000.0
+2020.04.20 12:15:14.767 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 12:15:14.775 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 12:15:14.775 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 12:15:14.777 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 12:18:41.914 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 12:18:41.922 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 12:18:41.924 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 12:18:41.924 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 12:18:41.924 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 12:18:41.924 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 12:18:41.930 INFO  SystemLogic.MainSystem - The team budget decreased from 100000.0 to 50000.0
+2020.04.20 12:18:42.024 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 12:18:42.024 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 12:18:42.024 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 12:18:42.024 INFO  SystemLogic.MainSystem - The team budget decreased from 50000.0 to 0.0
+2020.04.20 12:18:42.024 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 12:23:30.974 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 12:23:30.984 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 12:23:30.984 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 12:23:30.984 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 12:23:30.984 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 12:23:30.984 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 12:23:30.989 INFO  SystemLogic.MainSystem - The team budget decreased from 100000.0 to 50000.0
+2020.04.20 12:23:30.989 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 12:23:30.991 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 12:23:30.991 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 12:23:30.991 INFO  SystemLogic.MainSystem - The team budget decreased from 50000.0 to 0.0
+2020.04.20 12:23:30.991 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 12:57:08.914 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 12:57:08.922 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 12:57:08.924 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 12:57:08.924 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 12:57:08.924 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 12:57:08.924 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 12:57:08.930 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 12:57:08.930 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 12:57:08.930 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 12:57:08.930 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 13:07:14.515 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 13:07:14.519 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 13:07:14.520 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 13:07:14.521 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 13:07:14.522 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 13:07:14.523 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 13:07:14.526 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 13:07:14.527 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 13:07:14.527 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 13:07:14.528 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 13:08:39.023 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 13:08:39.031 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 13:08:39.031 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 13:08:39.132 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 13:08:39.133 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 13:08:39.133 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 13:08:39.133 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 13:08:39.142 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 13:08:39.143 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 13:08:39.143 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 13:11:32.705 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 13:11:32.709 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 13:11:32.711 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 13:11:32.712 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 13:11:32.714 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 13:11:32.715 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 13:11:32.717 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 13:11:32.718 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 13:11:32.718 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 13:11:32.718 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 13:13:01.743 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 13:13:01.793 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 13:13:01.793 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 13:13:01.793 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 13:13:01.798 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 13:13:01.798 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 13:13:01.802 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 13:13:01.802 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 13:13:01.802 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 13:13:01.803 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 13:14:14.475 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 13:14:14.485 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 13:14:14.485 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 13:14:14.485 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 13:14:14.485 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 13:14:14.485 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 13:14:14.485 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 13:14:14.485 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 13:14:14.485 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 13:14:14.493 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 13:52:32.795 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 13:52:32.805 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 13:52:32.807 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 13:52:32.810 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 13:52:32.810 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 13:52:32.815 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 13:52:32.839 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 13:52:32.840 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 13:52:32.840 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 13:52:32.840 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 13:55:55.825 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 13:55:55.830 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 13:55:55.830 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 13:55:55.830 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 13:55:55.835 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 13:55:55.835 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 13:55:55.840 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 13:55:55.840 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 13:55:55.840 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 13:55:55.840 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 13:56:55.545 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 13:56:55.549 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 13:56:55.549 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 13:56:55.553 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 13:56:55.553 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 13:56:55.555 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 13:56:55.555 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 13:56:55.555 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 13:56:55.555 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 13:56:55.555 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 13:57:21.434 INFO  SystemLogic.MainSystem - the coach owner was added successfully to the team Celtic veBenel
+2020.04.20 13:57:21.434 INFO  SystemLogic.MainSystem - The team budget decreased from 300000.0 to 200000.0
+2020.04.20 13:57:21.434 INFO  SystemLogic.MainSystem - the coach manager was added successfully to the team Celtic veBenel
+2020.04.20 13:57:21.440 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 100000.0
+2020.04.20 13:57:21.442 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 13:57:21.442 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Celtic veBenel
+2020.04.20 13:57:21.444 INFO  SystemLogic.MainSystem - teamOwner2 appointed owner to Celtic veBenel's teamowner
+2020.04.20 13:57:21.444 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 13:57:21.444 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Celtic veBenel
+2020.04.20 13:57:21.444 INFO  SystemLogic.MainSystem - teamOwner2 appointed manager to Celtic veBenel's manager
+2020.04.20 14:09:19.795 INFO  SystemLogic.MainSystem - A new team owner: owner was created successfully !
+2020.04.20 14:09:19.799 INFO  SystemLogic.MainSystem - the team owner owner was added successfully to the team Pablo Rozenburg
+2020.04.20 14:09:19.799 INFO  SystemLogic.MainSystem - teamOwner3 appointed owner to Pablo Rozenburg's teamowner
+2020.04.20 14:09:19.804 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 14:09:19.804 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Pablo Rozenburg
+2020.04.20 14:09:19.805 INFO  SystemLogic.MainSystem - owner appointed manager to Pablo Rozenburg's manager
+2020.04.20 14:09:19.805 INFO  SystemLogic.MainSystem - A new team owner: another_owner was created successfully !
+2020.04.20 14:09:19.805 INFO  SystemLogic.MainSystem - the team owner another_owner was added successfully to the team Pablo Rozenburg
+2020.04.20 14:09:19.805 INFO  SystemLogic.MainSystem - owner appointed another_owner to Pablo Rozenburg's teamowner
+2020.04.20 14:09:19.805 INFO  SystemLogic.MainSystem - the team owner owner was removed successfully to the team Pablo Rozenburg
+2020.04.20 14:09:19.807 INFO  SystemLogic.MainSystem - The team budget increased from 400000.0 to 700000.0
+2020.04.20 14:09:19.809 INFO  SystemLogic.MainSystem - owner's appointment was removed
+2020.04.20 14:09:56.509 INFO  SystemLogic.MainSystem - A new team owner: zimri was created successfully !
+2020.04.20 14:09:56.509 INFO  SystemLogic.MainSystem - the team owner zimri was added successfully to the team Pablo Rozenburg
+2020.04.20 14:09:56.515 INFO  SystemLogic.MainSystem - teamOwner3 appointed zimri to Pablo Rozenburg's teamowner
+2020.04.20 14:10:12.391 INFO  SystemLogic.MainSystem - A new team owner: zimri was created successfully !
+2020.04.20 14:10:12.393 INFO  SystemLogic.MainSystem - the team owner zimri was added successfully to the team Pablo Rozenburg
+2020.04.20 14:10:12.441 INFO  SystemLogic.MainSystem - teamOwner3 appointed zimri to Pablo Rozenburg's teamowner
+2020.04.20 14:10:12.441 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 14:10:12.443 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Pablo Rozenburg
+2020.04.20 14:10:12.443 INFO  SystemLogic.MainSystem - zimri appointed manager to Pablo Rozenburg's manager
+2020.04.20 14:10:12.443 INFO  SystemLogic.MainSystem - A new team owner: another_owner was created successfully !
+2020.04.20 14:10:12.443 INFO  SystemLogic.MainSystem - the team owner another_owner was added successfully to the team Pablo Rozenburg
+2020.04.20 14:10:12.443 INFO  SystemLogic.MainSystem - zimri appointed another_owner to Pablo Rozenburg's teamowner
+2020.04.20 14:10:12.443 INFO  SystemLogic.MainSystem - the team owner zimri was removed successfully to the team Pablo Rozenburg
+2020.04.20 14:10:12.443 INFO  SystemLogic.MainSystem - The team budget increased from 400000.0 to 700000.0
+2020.04.20 14:10:12.451 INFO  SystemLogic.MainSystem - zimri's appointment was removed

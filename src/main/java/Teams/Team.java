@@ -41,6 +41,7 @@ public class Team implements Comparable {
         coaches = new HashMap<>();
         managers = new HashMap<>();
         gameList = new ArrayList<>();
+        assents = new HashSet<>();
     }
 
     public Team(String name) {

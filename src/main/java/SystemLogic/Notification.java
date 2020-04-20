@@ -31,8 +31,8 @@ public class Notification {
      */
     public void send(){
         if(status == notificationStatus.notSent) {
-            sender.getSentNotifications().add(this);
             receiver.getReceivedNotifications().add(this);
+            receiver.setNotReadNotifications(true);
             status = notificationStatus.sent;
         }
     }
@@ -43,6 +43,11 @@ public class Notification {
      */
     public String read(){
         status = notificationStatus.read;
+        receiver.getReceivedNotifications().remove(this);
+        receiver.getReadNotifications().add(this);
+        if (receiver.getReceivedNotifications().size()==0){
+            receiver.setNotReadNotifications(false);
+        }
         return this.context;
     }
 
