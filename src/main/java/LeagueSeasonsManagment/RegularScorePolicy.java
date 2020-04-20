@@ -16,6 +16,9 @@ public class RegularScorePolicy implements IScorePolicy {
     public RegularScorePolicy() {
         name = "RegularScorePolicy";
         goalDiff = true;
+        win = 3;
+        draw = 1;
+        lost = 0;
     }
 
     /**
@@ -23,9 +26,7 @@ public class RegularScorePolicy implements IScorePolicy {
      */
     @Override
     public void scorePolicyAlgoImplementation() {
-        win = 3;
-        draw = 1;
-        lost = 0;
+
     }
 
     /**

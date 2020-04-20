@@ -48,7 +48,7 @@ public class Game extends Observable {
         this.timeOfGame = timeOfGame;
         this.timer = new Timer();
         this.status = gameStatus.preGame;
-        //setAlarms();//set alarm to Stakeholders about the game
+        setAlarms();//set alarm to Stakeholders about the game
         this.eventBook = new ArrayList<>();
         this.score = "0-0";
     }
@@ -201,9 +201,10 @@ class DayToGame extends TimerTask {
 
     @Override
     public void run() {
-        homeTeam.getPage().notifyObservers("DayToGame between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
-        awayTeam.getPage().notifyObservers("DayToGame between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
+        //homeTeam.getPage().notifyObservers("DayToGame between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
+        //awayTeam.getPage().notifyObservers("DayToGame between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
         game.notifyObservers("Day To Game you are assigned to between: "+homeTeam.getName()+" and "+awayTeam.getName());
+        MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " will start in 24 hours!");
     }
 }
 
@@ -228,8 +229,8 @@ class StartGame extends TimerTask {
 
     @Override
     public void run() {
-        homeTeam.getPage().notifyObservers("game Start between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo
-        awayTeam.getPage().notifyObservers("game Start between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo
+        //homeTeam.getPage().notifyObservers("game Start between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo
+        //awayTeam.getPage().notifyObservers("game Start between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo
         game.setStatus(Game.gameStatus.active);
         MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " started");
     }
@@ -264,8 +265,8 @@ class EndGame extends TimerTask {
 
     @Override
     public void run() {
-        homeTeam.getPage().notifyObservers("End game between: "+homeTeam.getName()+" and "+awayTeam.getName()+"in a score: "+score);//todo
-        awayTeam.getPage().notifyObservers("End game between: "+homeTeam.getName()+" and "+awayTeam.getName()+"in a score: "+score);//todo
+        //homeTeam.getPage().notifyObservers("End game between: "+homeTeam.getName()+" and "+awayTeam.getName()+"in a score: "+score);//todo
+        //awayTeam.getPage().notifyObservers("End game between: "+homeTeam.getName()+" and "+awayTeam.getName()+"in a score: "+score);//todo
         game.setStatus(Game.gameStatus.finish);
         //double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();//todo now there is'nt stadium
         //homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);

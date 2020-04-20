@@ -54,7 +54,6 @@ public class DataBase {
     private Team i = new Team("milan");
     private Team j = new Team("inter");
 
-
     /**
      * Statistics
      **/
@@ -276,14 +275,14 @@ public class DataBase {
 
 /** Users that yet to be owners/managers **/
 
-        LocalDate date11 = LocalDate.of(1994,6,28);
+        LocalDate date11 = LocalDate.of(1994, 6, 28);
 
-        almostOwner1 = new Player("almostOwner1","1234", "playerName", "player.com", date11, "player_that_plays");
-        almostOwner2 = new Player("almostOwner2","1234", "playerName", "player.com", date11, "player_that_plays");
-        almostOwner3 = new Coach("almostOwner3","1234", "coachName", "coach.com", "coach_that_coaches");
-        almostOwner4 = new Coach("almostOwner4","1234", "coachName", "coach.com", "coach_that_coaches");
-        almostManager1 = new Player("almostManager1","1234", "playerName", "player.com", date11, "player_that_plays");
-        almostManager2 = new Coach("almostManager2","1234", "coachName", "coach.com",  "coach_that_coaches");
+        almostOwner1 = new Player("almostOwner1", "1234", "playerName", "player.com", date11, "player_that_plays");
+        almostOwner2 = new Player("almostOwner2", "1234", "playerName", "player.com", date11, "player_that_plays");
+        almostOwner3 = new Coach("almostOwner3", "1234", "coachName", "coach.com", "coach_that_coaches");
+        almostOwner4 = new Coach("almostOwner4", "1234", "coachName", "coach.com", "coach_that_coaches");
+        almostManager1 = new Player("almostManager1", "1234", "playerName", "player.com", date11, "player_that_plays");
+        almostManager2 = new Coach("almostManager2", "1234", "coachName", "coach.com", "coach_that_coaches");
 
 
         /** Managers **/
@@ -380,41 +379,41 @@ public class DataBase {
 
 
         /**Management**/
-        league = new League("Champions league", 10);
-        season = new Season(2021, teams, referees, representatives, scorePolicy.getName(), gameInlayPolicy.getName());
-        seasons = new ArrayList<>();
-        seasons.add(season);
-        league.setAllSeasons(seasons);
+        //league = new League("Champions league", 10);
+        //season = new Season(2021, teams, referees, representatives, scorePolicy.getName(), gameInlayPolicy.getName());
+        //seasons = new ArrayList<>();
+        //seasons.add(season);
+        //league.setAllSeasons(seasons);
         //representative = new AssociationRepresentative("representative", "a", "a", "a");
         //representative.addSeasonToLeague("Champions league",2020,scorePolicy.getName(), gameInlayPolicy.getName(),stringTeams,stringReferees,stringRepresentatives);
 
 
         /**Coach and Player - for teams**/
 
-        LocalDate date1 = LocalDate.of(1985,1,12);
-        LocalDate date2 = LocalDate.of(1987,6,12);
+        LocalDate date1 = LocalDate.of(1985, 1, 12);
+        LocalDate date2 = LocalDate.of(1987, 6, 12);
 
-        vermut = new Player("ver","123","gili vermut","g",date1,"midelfer");
-        zahavi = new Player("ez7","123","rean zahavi","eeee",date2,"striker");
-        aa = new Player("ver1","123","gili vermut","g",date1,"midelfer");
-        bb = new Player("ez71","123","rean zahavi","eeee",date2,"striker");
-        cc = new Player("ver2","123","gili vermut","g",date1,"midelfer");
-        dd = new Player("ez72","123","rean zahavi","eeee",date2,"striker");
-        ee = new Player("ver3","123","gili vermut","g",date1,"midelfer");
-        ff = new Player("ez37","123","rean zahavi","eeee",date2,"striker");
-        gg = new Player("ver4","123","gili vermut","g",date1,"midelfer");
-        hh = new Player("ez75","123","rean zahavi","eeee",date2,"striker");
+        vermut = new Player("ver", "123", "gili vermut", "g", date1, "midelfer");
+        zahavi = new Player("ez7", "123", "rean zahavi", "eeee", date2, "striker");
+        aa = new Player("ver1", "123", "gili vermut", "g", date1, "midelfer");
+        bb = new Player("ez71", "123", "rean zahavi", "eeee", date2, "striker");
+        cc = new Player("ver2", "123", "gili vermut", "g", date1, "midelfer");
+        dd = new Player("ez72", "123", "rean zahavi", "eeee", date2, "striker");
+        ee = new Player("ver3", "123", "gili vermut", "g", date1, "midelfer");
+        ff = new Player("ez37", "123", "rean zahavi", "eeee", date2, "striker");
+        gg = new Player("ver4", "123", "gili vermut", "g", date1, "midelfer");
+        hh = new Player("ez75", "123", "rean zahavi", "eeee", date2, "striker");
 
-        klinger = new Coach("kling","1212","nir klinger","dsdasd","head coach");
-        aaa = new Coach("klin","1212","nir klinger","dsdasd","head coach");
-        bbb = new Coach("kli","1212","nir klinger","dsdasd","head coach");
-        ccc = new Coach("kl","1212","nir klinger","dsdasd","head coach");
-        ddd = new Coach("k","1212","nir klinger","dsdasd","head coach");
-        eee = new Coach("klingg","1212","nir klinger","dsdasd","head coach");
-        fff = new Coach("klinggg","1212","nir klinger","dsdasd","head coach");
-        ggg = new Coach("klinggggg","1212","nir klinger","dsdasd","head coach");
-        hhh = new Coach("klnnning","1212","nir klinger","dsdasd","head coach");
-        iii = new Coach("klinssssg","1212","nir klinger","dsdasd","head coach");
+        klinger = new Coach("kling", "1212", "nir klinger", "dsdasd", "head coach");
+        aaa = new Coach("klin", "1212", "nir klinger", "dsdasd", "head coach");
+        bbb = new Coach("kli", "1212", "nir klinger", "dsdasd", "head coach");
+        ccc = new Coach("kl", "1212", "nir klinger", "dsdasd", "head coach");
+        ddd = new Coach("k", "1212", "nir klinger", "dsdasd", "head coach");
+        eee = new Coach("klingg", "1212", "nir klinger", "dsdasd", "head coach");
+        fff = new Coach("klinggg", "1212", "nir klinger", "dsdasd", "head coach");
+        ggg = new Coach("klinggggg", "1212", "nir klinger", "dsdasd", "head coach");
+        hhh = new Coach("klnnning", "1212", "nir klinger", "dsdasd", "head coach");
+        iii = new Coach("klinssssg", "1212", "nir klinger", "dsdasd", "head coach");
 
         /**DB**/
 
@@ -452,7 +451,6 @@ public class DataBase {
         db.setUser(klinger);
         db.setUser(zahavi);
 
-
         db.setUser(administrator);
 
         db.setUser(teamOwner1);
@@ -474,7 +472,6 @@ public class DataBase {
         db.setUser(manager3);
         db.setUser(manager4);
 
-
         //adds all coaches nd players.
         db.addUser(vermut);
         db.addUser(zahavi);
@@ -495,7 +492,6 @@ public class DataBase {
         db.addUser(ggg);
         db.addUser(hh);
         db.addUser(iii);
-
 
         a.addCoach(klinger);
         b.addCoach(aaa);
@@ -519,7 +515,6 @@ public class DataBase {
         i.addPlayer(gg);
         j.addPlayer(hh);
 
-
         db.setTeam(a);
         db.setTeam(b);
         db.setTeam(c);
@@ -539,7 +534,7 @@ public class DataBase {
         assoTest.addSeasonToLeague("Alufot", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
         assoTest.addSeasonToLeague("Alufot", 2021, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
 
-       // Season season = db.getLeague("Alufot").getAllSeasons().get(0);
+        // Season season = db.getLeague("Alufot").getAllSeasons().get(0);
         //season.getiGameInlayPolicy();
     }
 }
