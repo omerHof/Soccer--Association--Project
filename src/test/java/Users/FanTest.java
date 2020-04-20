@@ -168,20 +168,14 @@ public class FanTest {
 
         ////// game notifications
 
-
-        LocalDateTime gameDate = LocalDateTime.of(2020,4,19,21,45);
+        f1.followTeam(barca.getName());
+        LocalDateTime gameDate = LocalDateTime.of(2020,4,19,22,32);
         Game g = new Game(barca,real,gameDate);
         barca.addGame(g);
         real.addGame(g);
+        g.setStatus(Game.gameStatus.active);
+       System.out.println(f1.getReceivedNotifications().get(4).getContext());
 
-        f1.followTeam(barca.getName());
-
-
-       // System.out.println(f1.getReceivedNotifications().get(4).getContext());
-        System.out.println(g.getTimeOfGame());
-        System.out.println(g.getStatus());
-        LocalDateTime from = LocalDateTime.now();
-        System.out.println(from);
 
         // assertEquals(f1.getReceivedNotifications().get(4).getContext(),"DayToGame between: "+barca.getName()+" and "+real.getName());
 
