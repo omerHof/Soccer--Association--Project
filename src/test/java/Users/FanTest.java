@@ -163,8 +163,42 @@ public class FanTest {
         DBTest.addUser(manager);
         t1.addManager(manager);
         assertEquals(f1.getReceivedNotifications().get(3).getContext(),"new update! the manager managerr has moved to hapoel tel aviv");
+        f1.followTeam(barca.getName());
+        barca.addPlayer(p1);
+        assertEquals(f1.getReceivedNotifications().get(4).getContext(),"new update! the player leo messi has left the team hapoel tel aviv");
+        assertEquals(f1.getReceivedNotifications().get(5).getContext(),"new update! the player leo messi has moved to barcelona");
+
+        barca.addCoach(c1);
+        assertEquals(f1.getReceivedNotifications().get(6).getContext(),"new update! the coach nir klinger has left the team hapoel tel aviv");
+        assertEquals(f1.getReceivedNotifications().get(7).getContext(),"new update! the coach nir klinger has moved to barcelona");
+
+        Stadium stadium2 = new Stadium(12222,12222,12222);
+        stadium2.setName("bloomfield2");
+        t1.setStadium(stadium2);
+        assertEquals(f1.getReceivedNotifications().get(8).getContext(),"new update! the team hapoel tel aviv has move to the stadium "+stadium2.getName());
 
 
+        barca.addManager(manager);
+        assertEquals(f1.getReceivedNotifications().get(9).getContext(),"new update! the manager managerr has left  hapoel tel aviv");
+        assertEquals(f1.getReceivedNotifications().get(10).getContext(),"new update! the manager managerr has moved to barcelona");
+        barca.removeManager(manager.getUserFullName());
+
+        assertEquals(f1.getReceivedNotifications().get(11).getContext(),"new update! the manager managerr has left  barcelona");
+        assertEquals(f1.getReceivedNotifications().get(11).getSender().getUserFullName(),"bartulemeo");
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
 
         ////// game notifications
 
@@ -176,6 +210,8 @@ public class FanTest {
         g.setStatus(Game.gameStatus.active);
        System.out.println(f1.getReceivedNotifications().get(4).getContext());
 
+
+         */
 
         // assertEquals(f1.getReceivedNotifications().get(4).getContext(),"DayToGame between: "+barca.getName()+" and "+real.getName());
 

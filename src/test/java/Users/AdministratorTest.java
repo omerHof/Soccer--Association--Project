@@ -162,17 +162,20 @@ assertEquals(teamPage.countObservers(),1);
 /*
 team owner
 
+
+ */
          team1.addTeamOwner(owner);
          ad.deleteUserFromSystem(owner.getUserFullName());
          assertEquals(team1.getTeamOwners().size(),1);
-         TeamOwner owner2 = new TeamOwner("ddddddddd","ddsdas","ido","dsdsa");
+         TeamOwner owner2 = new TeamOwner("ddddddddd","ddsdas","abramovich","dsdsa");
         db.addUser(owner2);
 
-        team1.addTeamOwner("ido");
+        team1.addTeamOwner("abramovich");
         assertEquals(team1.getTeamOwners().size(),2);
         System.out.println(team1.getStatus());
-        ad.deleteUserFromSystem("ido");
-        */
+        System.out.println(team1.getTeamOwners().size());
+       // ad.deleteUserFromSystem("abramovich");
+
 
 
 
