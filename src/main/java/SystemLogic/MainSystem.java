@@ -163,8 +163,18 @@ public class MainSystem {
             return "password";
         }
         this.currentUser = db.getUser(userName);
+        if (currentUser.isNonReadNotifications()){
+            showNotification();
+        }
         LOG.info(userName + " was logged in successfully");
         return "logged in";
+    }
+
+    /**
+     * This method alert the user that he has non read notifications;
+     */
+    private void showNotification() {
+
     }
 
     /**

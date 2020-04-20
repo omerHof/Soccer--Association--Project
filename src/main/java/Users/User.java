@@ -14,12 +14,9 @@ public abstract class User {
     protected String userFullName;
 
     protected ArrayList<Notification> receivedNotifications = new ArrayList<>();
-    protected ArrayList<Notification> sentNotifications = new ArrayList<>();
+    protected ArrayList<Notification> readNotifications = new ArrayList<>();
 
-    public void sendTo (User receiver, Notification notification){
-        this.sentNotifications.add(notification);
-        receiver.receivedNotifications.add(notification);
-    }
+    protected boolean notReadNotifications = false;
 
     public String getUserName() {
         return userName;
@@ -61,12 +58,20 @@ public abstract class User {
         this.receivedNotifications = receivedNotifications;
     }
 
-    public ArrayList<Notification> getSentNotifications() {
-        return sentNotifications;
+    public ArrayList<Notification> getReadNotifications() {
+        return readNotifications;
     }
 
-    public void setSentNotifications(ArrayList<Notification> sentNotifications) {
-        this.sentNotifications = sentNotifications;
+     public void setReadNotifications(ArrayList<Notification> readNotifications) {
+        this.readNotifications = readNotifications;
+    }
+
+    public boolean isNonReadNotifications() {
+        return notReadNotifications;
+    }
+
+    public void setNotReadNotifications(boolean notReadNotifications) {
+        this.notReadNotifications = notReadNotifications;
     }
 
     public String[] watchDetails(){
