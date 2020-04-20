@@ -61,7 +61,10 @@ public class Coach extends User implements Assent {
         Team t =  DB1.getTeam(team);
 
         if(t==null){
-           return false;
+            page.setCurrentTeam(t);
+            currentTeam=t;
+            return false;
+
         }
         currentTeam=t;
 

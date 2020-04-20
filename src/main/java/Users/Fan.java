@@ -85,7 +85,9 @@ public class Fan extends User implements Observer {
         if (o instanceof TeamPage) {
             TeamPage team = (TeamPage) o;
             Team t = db.getTeam(team.getName());
+            String teamName = team.getName();
             User managerSender;
+            String message="";
             if(t.getManagers().size()!=0) {
                 managerSender = team.getManagers().entrySet().stream().findFirst().get().getValue();
             }
@@ -96,22 +98,27 @@ public class Fan extends User implements Observer {
             if (arg instanceof Player) {
                 Player player = (Player) arg;
                 pageMessage = player.getUserFullName();
-                String teamName = player.getCurrentTeamName();
-                String message;
-                if(team.getName()==teamName) {
-                     message = "new update! the player " + pageMessage + " has moved to " + team.getName();
-                }
-                else{
-                     message = "new update! the player " + pageMessage + " has left the team" + team.getName();
+                if(player.getCurrentTeam()==null||t.getName()!=teamName){
+                    message = "new update! the player " + pageMessage + " has left the team " + team.getName();
 
                 }
+                else if(t.getName()==teamName) {
+                     message = "new update! the player " + pageMessage + " has moved to " + team.getName();
+                }
+
                 Notification notification = new Notification(managerSender,message,this);
                 notification.send();
 
             } else if (arg instanceof Coach) {
-                Coach Coach = (Coach) arg;
-                pageMessage = Coach.getUserFullName();
-                String message = "new update! the coach " + pageMessage + " has moved to " + team.getName();
+                Coach coach = (Coach) arg;
+                pageMessage = coach.getUserFullName();
+                if(coach.getCurrentTeam()==null||t.getName()!=teamName){
+                    message = "new update! the coach " + pageMessage + " has left the team " + team.getName();
+
+                }
+                else if(t.getName()==teamName) {
+                    message = "new update! the coach " + pageMessage + " has moved to " + team.getName();
+                }
                 Notification notification = new Notification(managerSender,message,this);
                 notification.send();
             }
@@ -119,29 +126,37 @@ public class Fan extends User implements Observer {
             else if (arg instanceof Stadium) {
                 Stadium stadium = (Stadium) arg;
                 pageMessage= stadium.getName();
-                String message = "new update! the team " + team.getName() + " has move to the stadium "+pageMessage;
+                 message = "new update! the team " + team.getName() + " has move to the stadium "+pageMessage;
                 Notification notification = new Notification(managerSender,message,this);
                 notification.send();
 
             } else if (arg instanceof TeamOwner) {
                 TeamOwner TeamOwner = (TeamOwner) arg;
                 pageMessage = TeamOwner.getUserFullName();
-                String message = "new update! the team owner " + pageMessage + " has moved to " + team.getName();
+                 message = "new update! the team owner " + pageMessage + " has moved to " + team.getName();
                 Notification notification = new Notification(managerSender,message,this);
                 notification.send();
 
 
             } else if (arg instanceof Manager) {
-                Manager Manager = (Manager) arg;
-                pageMessage = Manager.getUserFullName();
-                String message = "new update! the manager " + pageMessage + " has moved to " + team.getName();
-                Notification notification = new Notification(managerSender,message,this);
-                notification.send();
+                Manager manager = (Manager) arg;
+                pageMessage = manager.getUserFullName();
+                if(manager.getTeam()==null||manager.getTeam().getName()!=t.getName()){
+                    message = "new update! the manager " + pageMessage + " has left  " + team.getName();
+                    Notification notification = new Notification(managerSender,message,this);
+                    notification.send();
+                }
+                else{
+                    message = "new update! the manager " + pageMessage + " has moved to " + team.getName();
+                    Notification notification = new Notification(managerSender,message,this);
+                    notification.send();
+                }
+
 
             } else if (arg instanceof String) {
 
                 String updateFromGame = (String)arg;
-                String message = updateFromGame;
+                 message = updateFromGame;
                 Notification notification = new Notification(managerSender,message,this);
                 notification.send();
 
