@@ -4837,3 +4837,11 @@
 2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - manager's appointment was removed
 2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - The team budget increased from 900000.0 to 1200000.0
 2020.04.20 14:40:12.030 INFO  SystemLogic.MainSystem - zimri's appointment was removed
+2020.04.20 20:25:56.428 INFO  SystemLogic.MainSystem - The team budget increased from 200000.0 to 215000.0
+2020.04.20 20:25:56.433 INFO  SystemLogic.MainSystem - The team budget decreased from 215000.0 to 190000.0
+2020.04.20 20:28:10.532 INFO  SystemLogic.MainSystem - The team budget increased from 200000.0 to 215000.0
+2020.04.20 20:28:10.536 INFO  SystemLogic.MainSystem - The team budget decreased from 215000.0 to 190000.0
+2020.04.20 20:28:42.908 INFO  SystemLogic.MainSystem - The team budget increased from 200000.0 to 215000.0
+2020.04.20 20:28:42.914 INFO  SystemLogic.MainSystem - The team budget decreased from 215000.0 to 190000.0
+2020.04.20 20:39:59.543 INFO  SystemLogic.MainSystem - the manager m was added successfully to the team Arnon Sturm Graz
+2020.04.20 20:39:59.548 INFO  SystemLogic.MainSystem - The team budget decreased from 200000.0 to 190000.0

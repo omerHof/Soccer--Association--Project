@@ -1,12 +1,10 @@
 package Users;
 
-import DataForTest.DataBase;
 import SystemLogic.DB;
 import Teams.Stadium;
 import Teams.Team;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -48,9 +46,6 @@ public class TeamOwnerTest {
     public void tearDown() throws Exception {
     }
 
-    @Test
-    public void askPermissionToOpenTeam() {
-    }
 
     @Test
     public void openTeam() {
@@ -68,11 +63,6 @@ public class TeamOwnerTest {
         assertEquals(team.getStatus(), Team.teamStatus.active);
         try_to_add_assent = teamOwner1.addAssent(stadium, 10);
         assertEquals(try_to_add_assent, "added successfully");
-    }
-
-    @Test
-    public void closeTeam() {
-
     }
 
     @Test
@@ -109,7 +99,7 @@ public class TeamOwnerTest {
 
     @Test
     public void appoint() {
-        ;       Coach coach = new Coach("owner","1234", "coachName", "coach.com", "coach_that_coaches");
+        Coach coach = new Coach("owner","1234", "coachName", "coach.com", "coach_that_coaches");
         Coach coach2 = new Coach("manager","1234", "coachName", "coach.com", "coach_that_coaches");
         teamOwner2.addAssent(coach, 100000);
         teamOwner2.addAssent(coach2, 100000);
@@ -143,23 +133,28 @@ public class TeamOwnerTest {
         User fan1 = db.getUser("zimri");
         User fan2 = db.getUser("manager");
         User fan3 = db.getUser("another_owner");
-
         assertTrue(fan1 instanceof Fan);
         assertTrue(fan2 instanceof Fan);
         assertTrue(fan3 instanceof Fan);
     }
 
     @Test
-    public void removeAppointmentManager() {
-    }
-
-    @Test
     public void reportFinance() {
+        double budget = teamOwner1.getTeam().getBudget();
+        teamOwner1.reportFinance(15000, "income", false, null);
+        budget += 15000;
+        assertTrue(budget == teamOwner1.getTeam().getBudget());
+        Coach coach = new Coach("zimri","1234", "coachName", "coach.com", "coach_that_coaches");
+        teamOwner1.reportFinance(25000, "outcome", true, coach);
+        assertTrue(coach.isNonReadNotifications());
+        String surprise = coach.getReceivedNotifications().get(0).read();
+        assertEquals(surprise, "You have been paid 25000.0 gogo'im");
+        assertFalse(coach.isNonReadNotifications());
+
+
     }
 
-    @Test
-    public void isPermission() {
-    }
+
 
 
 }

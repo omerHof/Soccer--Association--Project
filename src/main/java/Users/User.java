@@ -2,8 +2,9 @@ package Users;
 
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
+import Teams.Team;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public abstract class User {
 
@@ -17,6 +18,40 @@ public abstract class User {
     protected ArrayList<Notification> readNotifications = new ArrayList<>();
 
     protected boolean notReadNotifications = false;
+
+    /**
+     * This method is for any user that want to send complain for the team
+     * The complaint is sent to the team's manager as a notification
+     * @param complaint
+     * @param team
+     * @return
+     */
+    public boolean complain(String complaint, Team team){
+        if(team==null){
+            return false;
+        }
+        Iterator it = team.getManagers().entrySet().iterator();
+        if(it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            new Notification(this, complaint, (Manager) (pair.getValue())).send();
+        }
+        else{
+            return false;
+        }
+        return true;
+    }
+
+    public String[] watchDetails(){
+        //MainSystem.LOG.info(getUserFullName()+" watch his details");
+        String[] details = new String[4];
+        details[0]=userFullName;
+        details[1]=userName;
+        details[2]= password;
+        details[3]=userEmail;
+        return details;
+    }
+
+    /** ---------------- GETTERS AND SETTERS ---------------- **/
 
     public String getUserName() {
         return userName;
@@ -74,13 +109,5 @@ public abstract class User {
         this.notReadNotifications = notReadNotifications;
     }
 
-    public String[] watchDetails(){
-        //MainSystem.LOG.info(getUserFullName()+" watch his details");
-        String[] details = new String[4];
-        details[0]=userFullName;
-        details[1]=userName;
-        details[2]= password;
-        details[3]=userEmail;
-        return details;
-    }
+
 }
