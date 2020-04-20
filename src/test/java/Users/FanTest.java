@@ -254,12 +254,9 @@ public class FanTest {
         Team t1 = fan.getFollowedTeams().get("man u");
         System.out.println(t1.getGameList().size());
         Game game = t1.getGameList().get(0);
-
-        System.out.println(game.getHomeTeam().getName());
-        System.out.println(game.getAwayTeam().getName());
+        System.out.println(game.getHomeTeam());
+        System.out.println(game.getAwayTeam());
         System.out.println(game.getTimeOfGame());
-
-
         System.out.println(fan.getReceivedNotifications().size());
 
 

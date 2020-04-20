@@ -207,8 +207,12 @@ class DayToGame extends TimerTask {
     @Override
     public void run() {
         game.setChange();
-        //homeTeam.getPage().notifyObservers("DayToGame between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
-        //awayTeam.getPage().notifyObservers("DayToGame between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
+        if(homeTeam.getPage()!=null) {
+            homeTeam.getPage().notifyObservers("DayToGame between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo add
+        }
+        if(awayTeam.getPage()!=null) {
+            awayTeam.getPage().notifyObservers("DayToGame between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo add
+        }
 
         game.notifyObservers("Day To Game you are assigned to between: "+homeTeam.getName()+" and "+awayTeam.getName());
         MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " will start in 24 hours!");
@@ -236,8 +240,12 @@ class StartGame extends TimerTask {
 
     @Override
     public void run() {
-        //homeTeam.getPage().notifyObservers("game Start between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo
-        //awayTeam.getPage().notifyObservers("game Start between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo
+        if(homeTeam.getPage()!=null) {
+            homeTeam.getPage().notifyObservers("game Start between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo
+        }
+        if(awayTeam.getPage()!=null) {
+            awayTeam.getPage().notifyObservers("game Start between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo
+        }
         game.setStatus(Game.gameStatus.active);
         MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " started");
     }
@@ -273,8 +281,12 @@ class EndGame extends TimerTask {
     @Override
     public void run() {
         game.setChange();
-        //homeTeam.getPage().notifyObservers("End game between: "+homeTeam.getName()+" and "+awayTeam.getName()+"in a score: "+score);//todo
-        //awayTeam.getPage().notifyObservers("End game between: "+homeTeam.getName()+" and "+awayTeam.getName()+"in a score: "+score);//todo
+        if(homeTeam.getPage()!=null) {
+            homeTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + "in a score: " + score);//todo
+        }
+        if(awayTeam.getPage()!=null) {
+            awayTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + "in a score: " + score);//todo
+        }
         game.setStatus(Game.gameStatus.finish);
         //double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();//todo now there is'nt stadium
         //homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);
