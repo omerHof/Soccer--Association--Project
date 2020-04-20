@@ -116,9 +116,17 @@ public class Administrator extends User {
                 return "the user deleted succsesfully";
 
             } else if (user instanceof TeamOwner) {
-                if (db.checkQuantityOfUsersByType("TeamOwner") >= 2) {
-                    TeamOwner owner = (TeamOwner) user;
-                    owner.removeAppointmentTeamOwner(owner);
+                TeamOwner owner = (TeamOwner) user;
+                Team team = owner.getTeam();
+                if (team.getTeamOwners().size() >= 2) {
+                    for (String str: owner.getTeam_owners_appointments().keySet()){
+                        owner.removeAppointmentTeamOwner(owner.getTeam_owners_appointments().get(str));
+                    }
+                    for (String manager: owner.getManagers_appointments().keySet()){
+                        owner.removeAppointmentManager(owner.getManagers_appointments().get(manager));
+                    }
+                    team.removeAssent(owner);
+                    db.removeUser(owner.getUserName());
                     MainSystem.LOG.info("the team owner " +name+" is deleted by the administrator");
                     return "the user deleted succsesfully";
                 }

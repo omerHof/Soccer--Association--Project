@@ -139,7 +139,7 @@ public class AdministratorTest {
         TeamPage teamPage2 = team2.createPage("non","israel");
         fan.followTeam(team2.getName());
         assertEquals(fan.getFollowedTeams().size(),2);
-assertEquals(teamPage.countObservers(),1);
+       assertEquals(teamPage.countObservers(),1);
         ad.deleteUserFromSystem(fan.getUserFullName());
         assertEquals(fan.getFollowedTeams().size(),0);
 
