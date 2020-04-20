@@ -204,6 +204,7 @@ class DayToGame extends TimerTask {
         //homeTeam.getPage().notifyObservers("DayToGame between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
         //awayTeam.getPage().notifyObservers("DayToGame between: "+homeTeam.getName()+" and "+awayTeam.getName());//todo add
         game.notifyObservers("Day To Game you are assigned to between: "+homeTeam.getName()+" and "+awayTeam.getName());
+        MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " will start in 24 hours!");
     }
 }
 
