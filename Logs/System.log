@@ -4767,3 +4767,73 @@
 2020.04.20 14:10:12.443 INFO  SystemLogic.MainSystem - the team owner zimri was removed successfully to the team Pablo Rozenburg
 2020.04.20 14:10:12.443 INFO  SystemLogic.MainSystem - The team budget increased from 400000.0 to 700000.0
 2020.04.20 14:10:12.451 INFO  SystemLogic.MainSystem - zimri's appointment was removed
+2020.04.20 14:17:21.019 INFO  SystemLogic.MainSystem - A new team owner: zimri was created successfully !
+2020.04.20 14:17:21.027 INFO  SystemLogic.MainSystem - the team owner zimri was added successfully to the team Pablo Rozenburg
+2020.04.20 14:17:21.029 INFO  SystemLogic.MainSystem - teamOwner3 appointed zimri to Pablo Rozenburg's teamowner
+2020.04.20 14:17:21.029 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 14:17:21.029 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Pablo Rozenburg
+2020.04.20 14:17:21.029 INFO  SystemLogic.MainSystem - zimri appointed manager to Pablo Rozenburg's manager
+2020.04.20 14:17:21.029 INFO  SystemLogic.MainSystem - A new team owner: another_owner was created successfully !
+2020.04.20 14:17:21.034 INFO  SystemLogic.MainSystem - the team owner another_owner was added successfully to the team Pablo Rozenburg
+2020.04.20 14:17:21.034 INFO  SystemLogic.MainSystem - zimri appointed another_owner to Pablo Rozenburg's teamowner
+2020.04.20 14:17:21.034 INFO  SystemLogic.MainSystem - the team owner zimri was removed successfully to the team Pablo Rozenburg
+2020.04.20 14:17:21.034 INFO  SystemLogic.MainSystem - The team budget increased from 400000.0 to 700000.0
+2020.04.20 14:17:21.037 INFO  SystemLogic.MainSystem - zimri's appointment was removed
+2020.04.20 14:18:17.581 INFO  SystemLogic.MainSystem - A new team owner: zimri was created successfully !
+2020.04.20 14:18:17.589 INFO  SystemLogic.MainSystem - the team owner zimri was added successfully to the team Pablo Rozenburg
+2020.04.20 14:18:17.591 INFO  SystemLogic.MainSystem - teamOwner3 appointed zimri to Pablo Rozenburg's teamowner
+2020.04.20 14:18:17.591 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 14:18:17.591 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Pablo Rozenburg
+2020.04.20 14:18:17.591 INFO  SystemLogic.MainSystem - zimri appointed manager to Pablo Rozenburg's manager
+2020.04.20 14:18:17.591 INFO  SystemLogic.MainSystem - A new team owner: another_owner was created successfully !
+2020.04.20 14:18:17.591 INFO  SystemLogic.MainSystem - the team owner another_owner was added successfully to the team Pablo Rozenburg
+2020.04.20 14:18:17.591 INFO  SystemLogic.MainSystem - zimri appointed another_owner to Pablo Rozenburg's teamowner
+2020.04.20 14:22:04.929 INFO  SystemLogic.MainSystem - the team owner zimri was removed successfully to the team Pablo Rozenburg
+2020.04.20 14:22:04.929 INFO  SystemLogic.MainSystem - The team budget increased from 400000.0 to 700000.0
+2020.04.20 14:22:04.938 INFO  SystemLogic.MainSystem - zimri's appointment was removed
+2020.04.20 14:23:44.442 INFO  SystemLogic.MainSystem - A new team owner: zimri was created successfully !
+2020.04.20 14:23:44.450 INFO  SystemLogic.MainSystem - the team owner zimri was added successfully to the team Pablo Rozenburg
+2020.04.20 14:23:44.450 INFO  SystemLogic.MainSystem - teamOwner3 appointed zimri to Pablo Rozenburg's teamowner
+2020.04.20 14:23:44.450 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 14:23:44.454 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Pablo Rozenburg
+2020.04.20 14:23:44.454 INFO  SystemLogic.MainSystem - zimri appointed manager to Pablo Rozenburg's manager
+2020.04.20 14:23:44.454 INFO  SystemLogic.MainSystem - A new team owner: another_owner was created successfully !
+2020.04.20 14:23:44.454 INFO  SystemLogic.MainSystem - the team owner another_owner was added successfully to the team Pablo Rozenburg
+2020.04.20 14:23:44.454 INFO  SystemLogic.MainSystem - zimri appointed another_owner to Pablo Rozenburg's teamowner
+2020.04.20 14:24:22.428 INFO  SystemLogic.MainSystem - the team owner zimri was removed successfully to the team Pablo Rozenburg
+2020.04.20 14:24:22.428 INFO  SystemLogic.MainSystem - The team budget increased from 400000.0 to 700000.0
+2020.04.20 14:24:22.428 INFO  SystemLogic.MainSystem - zimri's appointment was removed
+2020.04.20 14:38:10.034 INFO  SystemLogic.MainSystem - A new team owner: zimri was created successfully !
+2020.04.20 14:38:10.036 INFO  SystemLogic.MainSystem - the team owner zimri was added successfully to the team Pablo Rozenburg
+2020.04.20 14:38:10.040 INFO  SystemLogic.MainSystem - teamOwner3 appointed zimri to Pablo Rozenburg's teamowner
+2020.04.20 14:38:10.040 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 14:38:10.040 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Pablo Rozenburg
+2020.04.20 14:38:10.044 INFO  SystemLogic.MainSystem - zimri appointed manager to Pablo Rozenburg's manager
+2020.04.20 14:38:10.044 INFO  SystemLogic.MainSystem - A new team owner: another_owner was created successfully !
+2020.04.20 14:38:10.044 INFO  SystemLogic.MainSystem - the team owner another_owner was added successfully to the team Pablo Rozenburg
+2020.04.20 14:38:10.046 INFO  SystemLogic.MainSystem - zimri appointed another_owner to Pablo Rozenburg's teamowner
+2020.04.20 14:38:10.046 INFO  SystemLogic.MainSystem - the team owner another_owner was removed successfully to the team Pablo Rozenburg
+2020.04.20 14:38:10.046 INFO  SystemLogic.MainSystem - The team budget increased from 400000.0 to 700000.0
+2020.04.20 14:38:10.050 INFO  SystemLogic.MainSystem - another_owner's appointment was removed
+2020.04.20 14:38:10.050 INFO  SystemLogic.MainSystem - the manager manager was removed successfully to the team Pablo Rozenburg
+2020.04.20 14:38:10.054 INFO  SystemLogic.MainSystem - The team budget increased from 700000.0 to 900000.0
+2020.04.20 14:38:10.054 INFO  SystemLogic.MainSystem - manager's appointment was removed
+2020.04.20 14:38:10.054 INFO  SystemLogic.MainSystem - The team budget increased from 900000.0 to 1200000.0
+2020.04.20 14:38:10.056 INFO  SystemLogic.MainSystem - zimri's appointment was removed
+2020.04.20 14:40:12.013 INFO  SystemLogic.MainSystem - A new team owner: zimri was created successfully !
+2020.04.20 14:40:12.013 INFO  SystemLogic.MainSystem - the team owner zimri was added successfully to the team Pablo Rozenburg
+2020.04.20 14:40:12.021 INFO  SystemLogic.MainSystem - teamOwner3 appointed zimri to Pablo Rozenburg's teamowner
+2020.04.20 14:40:12.021 INFO  SystemLogic.MainSystem - A new team manager: manager was created successfully !
+2020.04.20 14:40:12.021 INFO  SystemLogic.MainSystem - the manager manager was added successfully to the team Pablo Rozenburg
+2020.04.20 14:40:12.021 INFO  SystemLogic.MainSystem - zimri appointed manager to Pablo Rozenburg's manager
+2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - A new team owner: another_owner was created successfully !
+2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - the team owner another_owner was added successfully to the team Pablo Rozenburg
+2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - zimri appointed another_owner to Pablo Rozenburg's teamowner
+2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - the team owner another_owner was removed successfully to the team Pablo Rozenburg
+2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - The team budget increased from 400000.0 to 700000.0
+2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - another_owner's appointment was removed
+2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - the manager manager was removed successfully to the team Pablo Rozenburg
+2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - The team budget increased from 700000.0 to 900000.0
+2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - manager's appointment was removed
+2020.04.20 14:40:12.023 INFO  SystemLogic.MainSystem - The team budget increased from 900000.0 to 1200000.0
+2020.04.20 14:40:12.030 INFO  SystemLogic.MainSystem - zimri's appointment was removed

@@ -140,7 +140,13 @@ public class TeamOwnerTest {
         zimri.appoint(coach2, "manager",16);
         zimri.appoint(coach3, "teamowner",17);
         teamOwner3.removeAppointmentTeamOwner(zimri);
+        User fan1 = db.getUser("zimri");
+        User fan2 = db.getUser("manager");
+        User fan3 = db.getUser("another_owner");
 
+        assertTrue(fan1 instanceof Fan);
+        assertTrue(fan2 instanceof Fan);
+        assertTrue(fan3 instanceof Fan);
     }
 
     @Test
