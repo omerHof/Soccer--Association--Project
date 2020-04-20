@@ -181,7 +181,7 @@ public class TeamOwner extends User implements Assent {
             teamOwner.setWorth(300000);
             db.addUser(teamOwner);
             team.addAssent(teamOwner);
-           // teamOwner.setTeam(team);
+           teamOwner.setTeam(team);
             team_owners_appointments.put(new_user.getUserName(), (TeamOwner) new_user);
         }
         if(role.equals("manager")){
@@ -189,7 +189,7 @@ public class TeamOwner extends User implements Assent {
             manager.setWorth(200000);
             db.addUser(manager);
             team.addAssent(manager);
-           // manager.setTeam(team);
+           manager.setTeam(team);
             managers_appointments.put(new_user.getUserName(), (Manager) new_user);
         }
 
@@ -215,11 +215,11 @@ public class TeamOwner extends User implements Assent {
         if(!team_owners_appointments.containsValue(teamOwner)){
             return "not appointed by me!";
         }
-        for (String owner: team_owners_appointments.keySet()){
-            teamOwner.removeAppointmentTeamOwner(team_owners_appointments.get(owner));
+        for (String owner: teamOwner.getTeam_owners_appointments().keySet()){
+            teamOwner.removeAppointmentTeamOwner(teamOwner.getTeam_owners_appointments().get(owner));
         }
-        for (String manager: managers_appointments.keySet()){
-            teamOwner.removeAppointmentManager(managers_appointments.get(manager));
+        for (String manager: teamOwner.getManagers_appointments().keySet()){
+            teamOwner.removeAppointmentManager(teamOwner.getManagers_appointments().get(manager));
         }
         this.removeAssent(teamOwner);
         this.team_owners_appointments.remove(teamOwner.getUserName());
