@@ -26,6 +26,7 @@ public class Coach extends User implements Assent {
         this.teamRole = teamRole;
         salary=0;
         currentTeam=null;
+        page = null;
 
     }
 

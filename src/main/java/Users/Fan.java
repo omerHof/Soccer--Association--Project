@@ -222,7 +222,9 @@ public ArrayList< PersonalPage> getFollowedPages() {
         else{
             page= ((Coach) user).getPage();
         }
-        followThisPage(page);
+        if(page!=null) {
+            followThisPage(page);
+        }
     }
 
     public void stopFollowThisPage(String pageName) {
@@ -259,6 +261,9 @@ public ArrayList< PersonalPage> getFollowedPages() {
             return false;
         }
         TeamPage teamPage = team.getPage();
+        if(teamPage==null){
+            return false;
+        }
         teamPage.addObserver(this);
         followedTeams.put(teamName,team);
         MainSystem.LOG.info(getUserFullName()+" follow the team : "+teamName);
@@ -270,9 +275,8 @@ public ArrayList< PersonalPage> getFollowedPages() {
             team = followedTeams.remove(teamName);
             TeamPage teamPage = team.getPage();
             teamPage.deleteObserver(this);
-
+            MainSystem.LOG.info(getUserFullName()+" stop follow the team : "+teamName);
         }
-        MainSystem.LOG.info(getUserFullName()+" stop follow the team : "+teamName);
 
 
     }
