@@ -733,6 +733,7 @@ public class AssociationRepresentativeTest {
         //Season newSeason = new Season(2021, teams, referees, representatives, scorePolicy.getName(), gameInlayPolicy.getName()); //creates a new
 
         assertEquals(db.getUserTypeList("AssociationRepresentative").size(), 5);
+
         assertTrue(passFrom.passMyGames());
 
 
@@ -746,7 +747,5 @@ public class AssociationRepresentativeTest {
         assoTest.addLeague("Champions league", 10);
         stringRepresentatives.add(representativeTest);
         db.addLeague(league2);*/
-
-
     }
 }
