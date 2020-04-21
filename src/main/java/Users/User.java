@@ -41,6 +41,9 @@ public abstract class User {
                 case "leagues":
                     categoryToSend = Search.Category.leagues;
                     break;
+
+                default:
+                    categoryToSend = null;
             }
         }
         Search search = new Search(searchLine,categoryToSend);

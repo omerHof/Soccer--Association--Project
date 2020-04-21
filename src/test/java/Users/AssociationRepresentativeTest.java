@@ -26,45 +26,17 @@ public class AssociationRepresentativeTest {
     private AssociationRepresentative assoTest;
     private MainSystem mainSystem;
 
-    DataBase test = new DataBase();
-
-/*
-    private List<String> teams = new LinkedList<>();
-    private List<String> referees = new LinkedList<>();
-    private List<String> repress = new LinkedList<>();
+   // DataBase test = new DataBase();
 
     private List<Team> allTeams = new LinkedList<>();
 
     Referee r1 = new Referee("r1", "rr", "bla bla", "ziv@ziv", "none");
     AssociationRepresentative a1 = new AssociationRepresentative("a1", "aa", "yiftah", "szoke@szoke");
 
-    private Team t1 = new Team("Maccabi Tel Aviv");
-    private Team t2 = new Team("Maccabi Haifa");
-
-    private String a = "Maccabi Tel Aviv";
-    private String b ="Maccabi Haifa";
-    private String c = "Beitar";
-    private String d = "Hapoel Beer Sheva";
-*/
-/*
-
-    */
-/**AssociationRepresentative in String**//*
-
-
+/**AssociationRepresentative in String**/
     ArrayList<String> stringRepresentatives = new ArrayList<>();
-    String representative1 = "representative1";
-    String representative2 = "representative2";
-    String representative3 = "representative3";
-    String representative4 = "representative4";
-    String representative5 = "representative5";
 
-    String representativeTest = "representative666";
-
-
-    */
-/**Referee in String**//*
-
+/**Referee in String**/
 
     ArrayList<String> stringReferees = new ArrayList<>();
     String referee1 = "referee1";
@@ -112,10 +84,7 @@ public class AssociationRepresentativeTest {
     Coach iii;
 
 
-    */
-/**Teams in String**//*
-
-
+/**Teams in String**/
 
     ArrayList<String> stringTeams = new ArrayList<>();
     String barca = "barca";
@@ -132,16 +101,14 @@ public class AssociationRepresentativeTest {
     League league;
     Season season;
 
-*/
-/**Policies-score**//*
 
+/**Policies-score**/
 
     IScorePolicy scorePolicy = new RegularScorePolicy();
     private IGameInlayPolicy gameInlayPolicy;
 
-*/
-/**Teams**//*
 
+/**Teams**/
 
     ArrayList<Team> teams = new ArrayList<>();
     Team a = new Team("barca");
@@ -184,10 +151,10 @@ public class AssociationRepresentativeTest {
     private AssociationRepresentative representativee4;
     private AssociationRepresentative representativee5;
 
-    */
+
 /**
      * Statistics
-     **//*
+     **/
 
     private Statistics statisticsA;
     private Statistics statisticsB;
@@ -202,7 +169,7 @@ public class AssociationRepresentativeTest {
 
     private Administrator administrator;
 
-*/
+
 
     @Before
     public void setUp() throws Exception {
@@ -212,7 +179,25 @@ public class AssociationRepresentativeTest {
         assoTest = new AssociationRepresentative("talish94", "taata", "Tali", "tali@gmail");
 
 
-      /*  *//**Statistics**//*
+        db = DB.getInstance();
+
+        /**Policies-score**/
+        scorePolicy = new RegularScorePolicy();
+
+        /**Teams**/
+        teams = new ArrayList<>();
+        Team a = new Team("barca");
+        Team b = new Team("real");
+        Team c = new Team("man u");
+        Team d = new Team("man city");
+        Team e = new Team("liverpool");
+        Team f = new Team("chelsea");
+        Team g = new Team("roma");
+        Team h = new Team("juve");
+        Team i = new Team("milan");
+        Team j = new Team("inter");
+
+        /**Statistics**/
         statisticsA = new Statistics(scorePolicy);
         a.setStatistics(statisticsA);
         statisticsB = new Statistics(scorePolicy);
@@ -245,123 +230,12 @@ public class AssociationRepresentativeTest {
         teams.add(i);
         teams.add(j);
 
+
+        /**Policies-game**/
         gameInlayPolicy = new OneRoundGamePolicy(teams, 2021);
 
 
-        LocalDate date1 = LocalDate.of(1985,1,12);
-        LocalDate date2 = LocalDate.of(1987,6,12);
-
-        vermut = new Player("ver","123","gili vermut","g",date1,"midelfer");
-        zahavi = new Player("ez7","123","rean zahavi","eeee",date2,"striker");
-        aa = new Player("ver1","123","gili vermut","g",date1,"midelfer");
-        bb = new Player("ez71","123","rean zahavi","eeee",date2,"striker");
-        cc = new Player("ver2","123","gili vermut","g",date1,"midelfer");
-        dd = new Player("ez72","123","rean zahavi","eeee",date2,"striker");
-        ee = new Player("ver3","123","gili vermut","g",date1,"midelfer");
-        ff = new Player("ez37","123","rean zahavi","eeee",date2,"striker");
-        gg = new Player("ver4","123","gili vermut","g",date1,"midelfer");
-        hh = new Player("ez75","123","rean zahavi","eeee",date2,"striker");
-
-        klinger = new Coach("kling","1212","nir klinger","dsdasd","head coach");
-        aaa = new Coach("klin","1212","nir klinger","dsdasd","head coach");
-        bbb = new Coach("kli","1212","nir klinger","dsdasd","head coach");
-        ccc = new Coach("kl","1212","nir klinger","dsdasd","head coach");
-        ddd = new Coach("k","1212","nir klinger","dsdasd","head coach");
-        eee = new Coach("klingg","1212","nir klinger","dsdasd","head coach");
-        fff = new Coach("klinggg","1212","nir klinger","dsdasd","head coach");
-        ggg = new Coach("klinggggg","1212","nir klinger","dsdasd","head coach");
-        hhh = new Coach("klnnning","1212","nir klinger","dsdasd","head coach");
-        iii = new Coach("klinssssg","1212","nir klinger","dsdasd","head coach");
-
-        //adds all coaches nd players.
-        db.addUser(vermut);
-        db.addUser(zahavi);
-        db.addUser(klinger);
-        db.addUser(aa);
-        db.addUser(aaa);
-        db.addUser(bb);
-        db.addUser(bbb);
-        db.addUser(cc);
-        db.addUser(ccc);
-        db.addUser(dd);
-        db.addUser(ddd);
-        db.addUser(ee);
-        db.addUser(eee);
-        db.addUser(ff);
-        db.addUser(fff);
-        db.addUser(gg);
-        db.addUser(ggg);
-        db.addUser(hh);
-        db.addUser(iii);
-
-        assoTest = new AssociationRepresentative("talish94", "taata", "Tali", "tali@gmail");
-        assoTest.addLeague("Alufot", 2);
-
-        stringRepresentatives.add(representative1);
-        stringRepresentatives.add(representative2);
-        stringRepresentatives.add(representative3);
-        stringRepresentatives.add(representative4);
-        stringRepresentatives.add(representative5);
-
-        stringReferees.add(referee1);
-        stringReferees.add(referee2);
-        stringReferees.add(referee3);
-        stringReferees.add(referee4);
-        stringReferees.add(referee5);
-        stringReferees.add(referee6);
-        stringReferees.add(referee7);
-        stringReferees.add(referee8);
-        stringReferees.add(referee9);
-        stringReferees.add(referee10);
-        stringReferees.add(referee11);
-        stringReferees.add(referee12);
-        stringReferees.add(referee13);
-        stringReferees.add(referee14);
-        stringReferees.add(referee15);
-
-        mainReferee1 = new MainReferee("mainReferee1", "a", "mainReferee1", "a", "a");
-        mainReferee2 = new MainReferee("mainReferee2", "a", "mainReferee2", "a", "a");
-        mainReferee3 = new MainReferee("mainReferee3", "a", "mainReferee3", "a", "a");
-        mainReferee4 = new MainReferee("mainReferee4", "a", "mainReferee4", "a", "a");
-        mainReferee5 = new MainReferee("mainReferee5", "a", "mainReferee5", "a", "a");
-
-        stringReferees.add(mainRefereee1);
-        stringReferees.add(mainRefereee2);
-        stringReferees.add(mainRefereee3);
-        stringReferees.add(mainRefereee4);
-        stringReferees.add(mainRefereee5);
-
-
-        stringTeams.add(barca);
-        stringTeams.add(real);
-        stringTeams.add(man_u);
-        stringTeams.add(man_city);
-        stringTeams.add(liverpool);
-        stringTeams.add(chelsea);
-        stringTeams.add(roma);
-        stringTeams.add(juve);
-        stringTeams.add(milan);
-        stringTeams.add(inter);
-
-        league =  db.getLeague("Champions league");
-        //season = league.getAllSeasons().get(0);
-
-        teams.add(a);
-        teams.add(b);
-        teams.add(c);
-        teams.add(d);
-        teams.add(e);
-        teams.add(f);
-        teams.add(g);
-        teams.add(h);
-        teams.add(i);
-        teams.add(j);
-
-        gameInlayPolicy = new OneRoundGamePolicy(teams, 2021);
-
-
-*//**Users**//*
-
+        /**Users**/
         referees = new ArrayList<>();
         refereee1 = new Referee("referee1", "a", "referee1", "a", "a");
         referees.add(refereee1);
@@ -405,7 +279,6 @@ public class AssociationRepresentativeTest {
         referees.add(mainReferee4);
         referees.add(mainReferee5);
 
-
         representatives = new ArrayList<>();
         representativee1 = new AssociationRepresentative("representative1", "a", "representative1", "a");
         representativee2 = new AssociationRepresentative("representative2", "a", "representative2", "a");
@@ -421,6 +294,134 @@ public class AssociationRepresentativeTest {
 
         administrator = new Administrator("The King", "1234", "Oren Hason", "OrenHason@gmail.com");
 
+/** Users that yet to be owners/managers **/
+
+        LocalDate date11 = LocalDate.of(1994, 6, 28);
+
+        /**Teams in String**/
+
+        String barca = "barca";
+        String real = "real";
+        String man_u = "man u";
+        String man_city = "man city";
+        String liverpool = "liverpool";
+        String chelsea = "chelsea";
+        String roma = "roma";
+        String juve = "juve";
+        String milan = "milan";
+        String inter = "inter";
+        stringTeams.add(barca);
+        stringTeams.add(real);
+        stringTeams.add(man_u);
+        stringTeams.add(man_city);
+        stringTeams.add(liverpool);
+        stringTeams.add(chelsea);
+        stringTeams.add(roma);
+        stringTeams.add(juve);
+        stringTeams.add(milan);
+        stringTeams.add(inter);
+
+        /**Referee in String**/
+
+        String referee1 = "referee1";
+        String referee2 = "referee2";
+        String referee3 = "referee3";
+        String referee4 = "referee4";
+        String referee5 = "referee5";
+        String referee6 = "referee6";
+        String referee7 = "referee7";
+        String referee8 = "referee8";
+        String referee9 = "referee9";
+        String referee10 = "referee10";
+        String referee11 = "referee11";
+        String referee12 = "referee12";
+        String referee13 = "referee13";
+        String referee14 = "referee14";
+        String referee15 = "referee15";
+
+        String mainRefereee1 = "mainReferee1";
+        String mainRefereee2 = "mainReferee2";
+        String mainRefereee3 = "mainReferee3";
+        String mainRefereee4 = "mainReferee4";
+        String mainRefereee5 = "mainReferee5";
+
+        stringReferees.add(referee1);
+        stringReferees.add(referee2);
+        stringReferees.add(referee3);
+        stringReferees.add(referee4);
+        stringReferees.add(referee5);
+        stringReferees.add(referee6);
+        stringReferees.add(referee7);
+        stringReferees.add(referee8);
+        stringReferees.add(referee9);
+        stringReferees.add(referee10);
+        stringReferees.add(referee11);
+        stringReferees.add(referee12);
+        stringReferees.add(referee13);
+        stringReferees.add(referee14);
+        stringReferees.add(referee15);
+
+        stringReferees.add(mainRefereee1);
+        stringReferees.add(mainRefereee2);
+        stringReferees.add(mainRefereee3);
+        stringReferees.add(mainRefereee4);
+        stringReferees.add(mainRefereee5);
+
+
+        /**AssociationRepresentative in String**/
+
+        String representative1 = "representative1";
+        String representative2 = "representative2";
+        String representative3 = "representative3";
+        String representative4 = "representative4";
+        String representative5 = "representative5";
+        String goodSubtitute = "goodSubtitute";
+
+        stringRepresentatives.add(representative1);
+        stringRepresentatives.add(representative2);
+        stringRepresentatives.add(representative3);
+        stringRepresentatives.add(representative4);
+        stringRepresentatives.add(representative5);
+
+
+        /**Management**/
+        //league = new League("Champions league", 10);
+        //season = new Season(2021, teams, referees, representatives, scorePolicy.getName(), gameInlayPolicy.getName());
+        //seasons = new ArrayList<>();
+        //seasons.add(season);
+        //league.setAllSeasons(seasons);
+        //representative = new AssociationRepresentative("representative", "a", "a", "a");
+        //representative.addSeasonToLeague("Champions league",2020,scorePolicy.getName(), gameInlayPolicy.getName(),stringTeams,stringReferees,stringRepresentatives);
+
+
+        /**Coach and Player - for teams**/
+
+        LocalDate date1 = LocalDate.of(1985, 1, 12);
+        LocalDate date2 = LocalDate.of(1987, 6, 12);
+
+        vermut = new Player("ver", "123", "gili vermut", "g", date1, "midelfer");
+        zahavi = new Player("ez7", "123", "rean zahavi", "eeee", date2, "striker");
+        aa = new Player("ver1", "123", "gili vermut", "g", date1, "midelfer");
+        bb = new Player("ez71", "123", "rean zahavi", "eeee", date2, "striker");
+        cc = new Player("ver2", "123", "gili vermut", "g", date1, "midelfer");
+        dd = new Player("ez72", "123", "rean zahavi", "eeee", date2, "striker");
+        ee = new Player("ver3", "123", "gili vermut", "g", date1, "midelfer");
+        ff = new Player("ez37", "123", "rean zahavi", "eeee", date2, "striker");
+        gg = new Player("ver4", "123", "gili vermut", "g", date1, "midelfer");
+        hh = new Player("ez75", "123", "rean zahavi", "eeee", date2, "striker");
+
+        klinger = new Coach("kling", "1212", "nir klinger", "dsdasd", "head coach");
+        aaa = new Coach("klin", "1212", "nir klinger", "dsdasd", "head coach");
+        bbb = new Coach("kli", "1212", "nir klinger", "dsdasd", "head coach");
+        ccc = new Coach("kl", "1212", "nir klinger", "dsdasd", "head coach");
+        ddd = new Coach("k", "1212", "nir klinger", "dsdasd", "head coach");
+        eee = new Coach("klingg", "1212", "nir klinger", "dsdasd", "head coach");
+        fff = new Coach("klinggg", "1212", "nir klinger", "dsdasd", "head coach");
+        ggg = new Coach("klinggggg", "1212", "nir klinger", "dsdasd", "head coach");
+        hhh = new Coach("klnnning", "1212", "nir klinger", "dsdasd", "head coach");
+        iii = new Coach("klinssssg", "1212", "nir klinger", "dsdasd", "head coach");
+
+        /**DB**/
 
         db.setLeague(league);
 
@@ -456,6 +457,39 @@ public class AssociationRepresentativeTest {
         db.setUser(klinger);
         db.setUser(zahavi);
 
+        db.setUser(administrator);
+
+        //adds all coaches nd players.
+        db.addUser(vermut);
+        db.addUser(zahavi);
+        db.addUser(klinger);
+        db.addUser(aa);
+        db.addUser(aaa);
+        db.addUser(bb);
+        db.addUser(bbb);
+        db.addUser(cc);
+        db.addUser(ccc);
+        db.addUser(dd);
+        db.addUser(ddd);
+        db.addUser(ee);
+        db.addUser(eee);
+        db.addUser(ff);
+        db.addUser(fff);
+        db.addUser(gg);
+        db.addUser(ggg);
+        db.addUser(hh);
+        db.addUser(iii);
+        db.setTeam(a);
+        db.setTeam(b);
+        db.setTeam(c);
+        db.setTeam(d);
+        db.setTeam(e);
+        db.setTeam(f);
+        db.setTeam(g);
+        db.setTeam(h);
+        db.setTeam(i);
+        db.setTeam(j);
+
 
         a.addCoach(klinger);
         b.addCoach(aaa);
@@ -479,19 +513,22 @@ public class AssociationRepresentativeTest {
         i.addPlayer(gg);
         j.addPlayer(hh);
 
+        ///create pages teams
+        c.createPage("team in england","england");
+        d.createPage("team in england","england");
 
-        db.setTeam(a);
-        db.setTeam(b);
-        db.setTeam(c);
-        db.setTeam(d);
-        db.setTeam(e);
-        db.setTeam(f);
-        db.setTeam(g);
-        db.setTeam(h);
-        db.setTeam(i);
-        db.setTeam(j);
+        db.addLeague(league);
 
-*/
+        AssociationRepresentative assoTest = new AssociationRepresentative("tester", "tt", "lala", "lili");
+        assoTest.addLeague("Alufot", 2);
+
+        assoTest.addSeasonToLeague("Alufot", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
+        //assoTest.addSeasonToLeague("Alufot", 2021, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
+
+
+
+        // Season season = db.getLeague("Alufot").getAllSeasons().get(0);
+        //season.getiGameInlayPolicy();
     }
 
     @After
@@ -625,28 +662,81 @@ public class AssociationRepresentativeTest {
         League league = db.getLeague("Alufot");
         Season season = league.getSeasonByYear(2020);
 
-        AssociationRepresentative passFrom =  (AssociationRepresentative)db.getUserType("AssociationRepresentative");
+        AssociationRepresentative passFrom = (AssociationRepresentative)db.getUserType("AssociationRepresentative");
+        String leagueToPassFrom = db.whatLeagueImAt(passFrom, 2020);
+        System.out.println(leagueToPassFrom);
+        //ArrayList<AssociationRepresentative> representatives = season.getAllRepresentatives();
 
 
-        ArrayList<AssociationRepresentative> representatives = season.getAllRepresentatives();
-
-        AssociationRepresentative asso666test = new AssociationRepresentative("taliTest", "taata", "representative666", "tali@gmail");
-        Team a = new Team("barca");
+        AssociationRepresentative goodSubtitute = new AssociationRepresentative("goodSubtitute", "taata", "goodSubtitute", "tali@gmail");
+       /* Team a = new Team("barca");
         Team b = new Team("real");
-
         LocalDateTime date2 = LocalDateTime.of(2020, 4, 19, 17, 30);
+
         Game game = new Game(a, b, date2);
+        goodSubtitute.setMyGame(game);*/
 
-        asso666test.setMyGame(game);
-        representatives.add(asso666test);
+        db.setUser(goodSubtitute);
 
-        season.setAllRepresentatives(representatives);
+        representatives.add(goodSubtitute);
+        //season.setAllRepresentatives(representatives); //now list has one more rep. to pass to !
 
-        db.setUser(asso666test);
-        //assoTest.addSeasonToLeague("Champions league", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
 
+        AssociationRepresentative representativee10 = new AssociationRepresentative("representativee10", "a", "representativee10", "a");
+        AssociationRepresentative representativee11 = new AssociationRepresentative("representativee11", "a", "representativee11", "a");
+        AssociationRepresentative representativee12 = new AssociationRepresentative("representativee12", "a", "representativee12", "a");
+        AssociationRepresentative representativee13 = new AssociationRepresentative("representativee13", "a", "representativee13", "a");
+
+        ArrayList<AssociationRepresentative> repsNEW = new ArrayList<>();
+        repsNEW.add(representativee10);
+        repsNEW.add(representativee11);
+        repsNEW.add(representativee12);
+        repsNEW.add(representativee13);
+
+        ArrayList<String> stringRepresentativesNEW = new ArrayList<>();
+
+        stringRepresentativesNEW.add("representativee10"); //by username.
+        stringRepresentativesNEW.add("representativee11"); //by username.
+        stringRepresentativesNEW.add("representativee12"); //by username.
+        stringRepresentativesNEW.add("representativee13"); //by username.
+
+        stringRepresentativesNEW.add("goodSubtitute"); //the new one, by username.
+
+        db.setUser(representativee10);
+        db.setUser(representativee11);
+        db.setUser(representativee12);
+        db.setUser(representativee13);
+
+        /*stringRepresentatives.remove("representative1");
+        stringRepresentatives.remove("representative2");
+        stringRepresentatives.remove("representative3");
+        stringRepresentatives.remove("representative4");
+        stringRepresentatives.remove("representative5");*/
+
+        /*representatives.remove("representative1");
+        representatives.remove("representative2");
+        representatives.remove("representative3");
+        representatives.remove("representative4");
+        representatives.remove("representative5");*/
+
+        db.removeUser("representative1");
+        db.removeUser("representative2");
+        db.removeUser("representative3");
+        db.removeUser("representative4");
+        db.removeUser("representative5");
+
+        League league1 = new League("Champions", 10);
+        db.setLeague(league1);
+
+        assoTest.addSeasonToLeague("Champions", 2020, scorePolicy.getName(), gameInlayPolicy.getName(), stringTeams, stringReferees, stringRepresentativesNEW); //adds
+
+        //Season newSeason = new Season(2021, teams, referees, representatives, scorePolicy.getName(), gameInlayPolicy.getName()); //creates a new
+
+        assertEquals(db.getUserTypeList("AssociationRepresentative").size(), 5);
         assertTrue(passFrom.passMyGames());
 
+
+        //assoTest.addSeasonToLeague("Champions league", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
         //Season test = db.getLeague("Alufot").getSeasonByYear(2020);
 
         //test.getYear();
@@ -655,19 +745,8 @@ public class AssociationRepresentativeTest {
         /*League league2 = new League("Champions league", 10);
         assoTest.addLeague("Champions league", 10);
         stringRepresentatives.add(representativeTest);
-        db.addLeague(league2);
+        db.addLeague(league2);*/
 
-        AssociationRepresentative asso666test = new AssociationRepresentative("taliTest", "taata", "representative666", "tali@gmail");
 
-        LocalDateTime date2 = LocalDateTime.of(2020, 4, 19, 17, 30);
-        Game game = new Game(a, b, date2);
-
-        asso666test.setMyGame(game);
-        representatives.add(asso666test);
-        db.setUser(asso666test);
-        assoTest.addSeasonToLeague("Champions league", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
-
-        assertTrue(representativee1.passMyGames());*/
     }
-
 }
