@@ -43,8 +43,13 @@ public class Player extends User implements Assent {
         page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, null);
         }
         else {
+            if(currTeam.getPlayers().containsValue(currTeam)){
             page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, team);
-            setCurrentTeam(currTeam.getName());
+            page.setCurrentTeam(currTeam);
+            }
+            else{
+                page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, null);
+            }
         }
         return page;
     }
@@ -102,7 +107,6 @@ public class Player extends User implements Assent {
     public boolean setCurrentTeam(String team){
        Team t =  DB1.getTeam(team);
        if(t==null){
-           page.setCurrentTeam(t);
            currentTeam=t;
            return false;
        }

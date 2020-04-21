@@ -37,8 +37,13 @@ public class Coach extends User implements Assent {
            page = new CoachPersonalPage(userFullName,birthDate,teamRole,null);
        }
        else{
-           page = new CoachPersonalPage(userFullName,birthDate,teamRole,team);
-           setCurrentTeam(currTeam.getName());
+           if(currTeam.getPlayers().containsValue(currTeam)) {
+               page = new CoachPersonalPage(userFullName, birthDate, teamRole, team);
+               setCurrentTeam(currTeam.getName());
+           }
+           else{
+               page = new CoachPersonalPage(userFullName,birthDate,teamRole,null);
+           }
        }
         return page;
    }
@@ -62,7 +67,6 @@ public class Coach extends User implements Assent {
         Team t =  DB1.getTeam(team);
 
         if(t==null){
-            page.setCurrentTeam(t);
             currentTeam=t;
             return false;
 

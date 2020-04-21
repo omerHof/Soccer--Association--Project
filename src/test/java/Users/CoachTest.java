@@ -36,7 +36,7 @@ public class CoachTest {
         dbtest.addUser(c1);
         dbtest.addUser(c2);
         dbtest.addUser(c3);
-        LocalDate localDate = LocalDate.now(); //creating LocalDate instance
+
 
 
     }
@@ -54,7 +54,8 @@ public class CoachTest {
 
     @Test
     public void createPersonalPage() {
-
+        t1.addCoach(c1);
+        LocalDate localDate = LocalDate.of(1970,4,4);
         PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1.getName());
         assertEquals(pepPage.getCurrentTeam().getName(),"Manchester city");
         assertEquals(pepPage.getName(),c1.getUserFullName());
@@ -128,6 +129,7 @@ public class CoachTest {
     @Test
     public void getPage() {
         //before crtating a page
+        LocalDate localDate = LocalDate.of(1970,4,4);
         assertEquals(c1.getPage(),null);
 
         //after
@@ -142,8 +144,9 @@ public class CoachTest {
         //before crtating a page
         assertEquals(c1.getCurrentTeam(),null);
 
-        //after create a page
-        PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1.getName());
+        //after adding team
+        t1.addCoach(c1);
+        //PersonalPage pepPage = c1.createCoachPersonalPage(localDate,t1.getName());
         assertEquals(c1.getCurrentTeam(),t1);
         assertEquals(c1.getCurrentTeam().getName(),t1.getName());
 
