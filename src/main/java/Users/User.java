@@ -2,6 +2,7 @@ package Users;
 
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
+import SystemLogic.Search;
 import Teams.Team;
 
 import java.util.*;
@@ -16,8 +17,36 @@ public abstract class User {
 
     protected ArrayList<Notification> receivedNotifications = new ArrayList<>();
     protected ArrayList<Notification> readNotifications = new ArrayList<>();
+    protected ArrayList<String> searchHistory = new ArrayList<>();
 
     protected boolean notReadNotifications = false;
+
+    public List<Object> search (String searchLine, String category){
+        Search.Category categoryToSend = null;
+
+        if(category!=null) {
+            switch (category) {
+                case "teams":
+                    categoryToSend = Search.Category.teams;
+                    break;
+
+                case "players":
+                    categoryToSend = Search.Category.players;
+                    break;
+
+                case "referees":
+                    categoryToSend = Search.Category.referees;
+                    break;
+
+                case "leagues":
+                    categoryToSend = Search.Category.leagues;
+                    break;
+            }
+        }
+        Search search = new Search(searchLine,categoryToSend);
+        searchHistory.add(searchLine);
+        return search.search();
+    }
 
     /**
      * This method is for any user that want to send complain for the team

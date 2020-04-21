@@ -249,6 +249,11 @@ public class FanTest {
 
         //t1.removePlayer(p1);
        // System.out.println(f1.getReceivedNotifications().get(1).getContext());
+        try {
+            Thread.sleep(120000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         User user = db.getUserByFullName("ido kest");
         Fan fan = (Fan)user;
         Team t1 = fan.getFollowedTeams().get("man u");

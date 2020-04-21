@@ -537,6 +537,19 @@ public class DataBase {
         i.addPlayer(gg);
         j.addPlayer(hh);
 
+        ///
+        c.addTeamOwner(teamOwner1);
+        d.addTeamOwner(teamOwner2);
+
+        ///create pages teams
+
+        c.createPage("team in england","england");
+        d.createPage("team in england","england");
+        ///fan follow team
+        fan1.followTeam(c.getName());
+        fan1.followTeam(d.getName());
+        db.setUser(fan1);
+
 
         db.addLeague(league);
 
@@ -546,13 +559,7 @@ public class DataBase {
         assoTest.addSeasonToLeague("Alufot", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
         assoTest.addSeasonToLeague("Alufot", 2021, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
 
-        ///create pages teams
 
-        c.createPage("team in england","england");
-        d.createPage("team in england","england");
-        ///fan follow team
-        fan1.followTeam(c.getName());
-        fan1.followTeam(d.getName());
 
 
 

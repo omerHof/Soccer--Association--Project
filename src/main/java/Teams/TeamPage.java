@@ -30,6 +30,9 @@ public class TeamPage extends Observable {
         this.history=history;
         this.nation = nation;
     }
+    public void setChange(){
+        this.setChanged();
+    }
 
     public String getName() {
         return name;

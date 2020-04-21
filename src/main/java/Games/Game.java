@@ -173,6 +173,14 @@ public class Game extends Observable {
 
     public void setScore(String score) {
         this.score = score;
+        if(homeTeam.getPage()!=null) {
+            homeTeam.getPage().setChange();
+            homeTeam.getPage().notifyObservers("GOAL!!!! the score is "+score+" in the game between: "+homeTeam.getName()+" and "+awayTeam.getName());
+        }
+        if(awayTeam.getPage()!=null) {
+            awayTeam.getPage().setChange();
+            awayTeam.getPage().notifyObservers("GOAL!!!! the score is "+score+" in the game between: "+homeTeam.getName()+" and "+awayTeam.getName());
+        }
     }
 
     public void setStatus(gameStatus status) {
@@ -208,10 +216,13 @@ class DayToGame extends TimerTask {
     @Override
     public void run() {
         game.setChange();
+
         if(homeTeam.getPage()!=null) {
+            homeTeam.getPage().setChange();
             homeTeam.getPage().notifyObservers("DayToGame between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo add
         }
         if(awayTeam.getPage()!=null) {
+            awayTeam.getPage().setChange();
             awayTeam.getPage().notifyObservers("DayToGame between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo add
         }
 
@@ -242,9 +253,11 @@ class StartGame extends TimerTask {
     @Override
     public void run() {
         if(homeTeam.getPage()!=null) {
+            homeTeam.getPage().setChange();
             homeTeam.getPage().notifyObservers("game Start between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo
         }
         if(awayTeam.getPage()!=null) {
+            awayTeam.getPage().setChange();
             awayTeam.getPage().notifyObservers("game Start between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo
         }
         game.setStatus(Game.gameStatus.active);
@@ -282,12 +295,7 @@ class EndGame extends TimerTask {
     @Override
     public void run() {
         game.setChange();
-        if(homeTeam.getPage()!=null) {
-            homeTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + "in a score: " + score);//todo
-        }
-        if(awayTeam.getPage()!=null) {
-            awayTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + "in a score: " + score);//todo
-        }
+
         game.setStatus(Game.gameStatus.finish);
         double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();//todo now there is'nt stadium
         homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);
@@ -296,6 +304,14 @@ class EndGame extends TimerTask {
         int randomNum2 = rand.nextInt((6 - 0) + 1) + 0;//todo remove
         game.setScore(randomNum + "-" + randomNum2);//todo remove
         setStatistic();
+        if(homeTeam.getPage()!=null) {
+            homeTeam.getPage().setChange();
+            homeTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + " in a score: " + this.game.getScore());//todo
+        }
+        if(awayTeam.getPage()!=null) {
+            awayTeam.getPage().setChange();
+            awayTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + " in a score: " + this.game.getScore());//todo
+        }
         game.setFinalReport(eventListToReport(game.getEventBook()));
         MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " ended. the score: " + game.getScore());
     }
