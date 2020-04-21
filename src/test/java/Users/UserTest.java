@@ -41,7 +41,6 @@ public class UserTest {
     @Test
     public void search() {
         DataBase test = new DataBase();
-
         User user = new Fan("","","","");
         List<Object> ans =  user.search("milan", "notCategory");
         assertEquals(ans.size(), 1);

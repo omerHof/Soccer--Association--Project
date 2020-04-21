@@ -1619,3 +1619,302 @@
 2020.04.21 16:45:17.022 INFO  SystemLogic.MainSystem - Special password changed at 
 2020.04.21 16:45:17.035 INFO  SystemLogic.MainSystem - Special password changed at 
 2020.04.21 16:45:17.039 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:03:45.972 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.04.22 00:03:45.977 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.04.22 00:03:45.977 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.04.22 00:03:45.977 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.04.22 00:03:45.977 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.04.22 00:03:45.977 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.04.22 00:03:45.982 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.04.22 00:03:45.987 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.04.22 00:03:45.987 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.04.22 00:03:45.987 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.04.22 00:03:45.992 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.04.22 00:03:45.992 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.04.22 00:03:45.992 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.04.22 00:03:45.992 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.04.22 00:03:45.992 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.04.22 00:03:45.992 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.04.22 00:03:45.992 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.04.22 00:03:45.992 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.04.22 00:03:45.992 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.04.22 00:03:45.992 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.04.22 00:03:45.997 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.04.22 00:03:45.997 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.04.22 00:03:45.997 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.04.22 00:03:45.997 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.04.22 00:03:45.997 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.04.22 00:03:45.997 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.04.22 00:03:45.997 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.04.22 00:03:45.997 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.04.22 00:03:45.997 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.04.22 00:03:46.002 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.04.22 00:03:46.002 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.04.22 00:03:46.004 INFO  SystemLogic.MainSystem - new league: Alufot were added.
+2020.04.22 00:03:46.057 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.04.22 00:03:46.075 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.04.22 00:03:46.087 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.04.22 00:03:46.088 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.04.22 00:03:46.089 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.04.22 00:03:46.090 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.04.22 00:03:46.092 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.04.22 00:03:46.093 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.04.22 00:03:46.093 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.04.22 00:03:46.094 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.04.22 00:03:46.094 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.04.22 00:03:46.094 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.04.22 00:03:46.095 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.04.22 00:03:46.095 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.04.22 00:03:46.095 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.04.22 00:03:46.096 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.04.22 00:03:46.096 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.04.22 00:03:46.097 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.04.22 00:03:46.098 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.04.22 00:03:46.099 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.04.22 00:03:46.099 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.04.22 00:03:46.100 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.04.22 00:03:46.100 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.04.22 00:03:46.100 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.04.22 00:03:46.101 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.04.22 00:03:46.101 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.04.22 00:03:46.102 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.04.22 00:03:46.102 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.04.22 00:03:46.103 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.04.22 00:03:46.103 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.04.22 00:03:46.103 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.04.22 00:03:46.104 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.04.22 00:03:46.104 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.04.22 00:03:46.105 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.04.22 00:03:46.105 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.04.22 00:03:46.105 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.04.22 00:03:46.106 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.04.22 00:03:46.106 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.04.22 00:03:46.107 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.04.22 00:03:46.107 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.04.22 00:03:46.108 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.04.22 00:03:46.108 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.04.22 00:03:46.109 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.04.22 00:03:46.109 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.04.22 00:03:46.110 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.04.22 00:03:46.113 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.04.22 00:03:46.131 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.04.22 00:03:46.148 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.04.22 00:03:46.152 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.04.22 00:03:46.152 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.04.22 00:03:46.153 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.04.22 00:03:46.153 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.04.22 00:03:46.153 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.04.22 00:03:46.154 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.04.22 00:03:46.154 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.04.22 00:03:46.154 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.04.22 00:03:46.154 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.04.22 00:03:46.154 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.04.22 00:03:46.155 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.04.22 00:03:46.156 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.04.22 00:03:46.156 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.04.22 00:03:46.156 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.04.22 00:03:46.157 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.04.22 00:03:46.157 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.04.22 00:03:46.157 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.04.22 00:03:46.157 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.04.22 00:03:46.158 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.04.22 00:03:46.158 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.04.22 00:03:46.158 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.04.22 00:03:46.159 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.04.22 00:03:46.159 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.04.22 00:03:46.159 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.04.22 00:03:46.160 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.04.22 00:03:46.160 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.04.22 00:03:46.160 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.04.22 00:03:46.160 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.04.22 00:03:46.161 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.04.22 00:03:46.161 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.04.22 00:03:46.161 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.04.22 00:03:46.161 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.04.22 00:03:46.162 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.04.22 00:03:46.164 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.04.22 00:03:46.165 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.04.22 00:03:46.166 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.04.22 00:03:46.166 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.04.22 00:03:46.166 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.04.22 00:03:46.166 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.04.22 00:03:46.166 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.04.22 00:03:46.167 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.04.22 00:03:46.167 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.04.22 00:03:46.167 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.04.22 00:03:46.167 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.04.22 00:03:46.201 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.04.22 00:03:46.230 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.04.22 00:03:46.234 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.04.22 00:03:46.235 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.04.22 00:03:46.235 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.04.22 00:03:46.235 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.04.22 00:03:46.236 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.04.22 00:03:46.236 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.04.22 00:03:46.244 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.04.22 00:03:46.244 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.04.22 00:03:46.246 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.04.22 00:03:46.247 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.04.22 00:03:46.247 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.04.22 00:03:46.247 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.04.22 00:03:46.249 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.04.22 00:03:46.249 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.04.22 00:03:46.249 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.04.22 00:03:46.250 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.04.22 00:03:46.250 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.04.22 00:03:46.250 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.04.22 00:03:46.251 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.04.22 00:03:46.253 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.04.22 00:03:46.253 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.04.22 00:03:46.254 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.04.22 00:03:46.254 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.04.22 00:03:46.254 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.04.22 00:03:46.255 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.04.22 00:03:46.259 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.04.22 00:03:46.259 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.04.22 00:03:46.259 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.04.22 00:03:46.260 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.04.22 00:03:46.260 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.04.22 00:03:46.260 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.04.22 00:03:46.261 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.04.22 00:03:46.261 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.04.22 00:03:46.262 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.04.22 00:03:46.263 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.04.22 00:03:46.263 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.04.22 00:03:46.264 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.04.22 00:03:46.264 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.04.22 00:03:46.264 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.04.22 00:03:46.265 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.04.22 00:03:46.265 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.04.22 00:03:46.265 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.04.22 00:03:46.266 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.04.22 00:03:46.266 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.04.22 00:03:46.294 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.04.22 00:03:46.315 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.04.22 00:03:46.405 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.04.22 00:03:46.405 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.04.22 00:03:46.406 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.04.22 00:03:46.409 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.04.22 00:03:46.410 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.04.22 00:03:46.411 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.04.22 00:03:46.411 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.04.22 00:03:46.411 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.04.22 00:03:46.412 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.04.22 00:03:46.412 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.04.22 00:03:46.412 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.04.22 00:03:46.412 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.04.22 00:03:46.413 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.04.22 00:03:46.413 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.04.22 00:03:46.413 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.04.22 00:03:46.414 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.04.22 00:03:46.415 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.04.22 00:03:46.415 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.04.22 00:03:46.416 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.04.22 00:03:46.416 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.04.22 00:03:46.416 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.04.22 00:03:46.416 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.04.22 00:03:46.417 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.04.22 00:03:46.417 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.04.22 00:03:46.417 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.04.22 00:03:46.417 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.04.22 00:03:46.417 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.04.22 00:03:46.418 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.04.22 00:03:46.418 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.04.22 00:03:46.418 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.04.22 00:03:46.418 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.04.22 00:03:46.419 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.04.22 00:03:46.419 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.04.22 00:03:46.419 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.04.22 00:03:46.419 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.04.22 00:03:46.419 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.04.22 00:03:46.419 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.04.22 00:03:46.420 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.04.22 00:03:46.420 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.04.22 00:03:46.420 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.04.22 00:03:46.420 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.04.22 00:03:46.420 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.04.22 00:03:46.421 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.04.22 00:03:46.421 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.04.22 00:03:46.471 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.04.22 00:03:46.527 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.04.22 00:03:46.530 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.04.22 00:03:46.531 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.04.22 00:03:46.531 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.04.22 00:03:46.531 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.04.22 00:03:46.531 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.04.22 00:03:46.531 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.04.22 00:03:46.531 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.04.22 00:03:46.531 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.04.22 00:03:46.532 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.04.22 00:03:46.532 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.04.22 00:03:46.532 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.04.22 00:03:46.532 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.04.22 00:03:46.532 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.04.22 00:03:46.532 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.04.22 00:03:46.533 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.04.22 00:03:46.533 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.04.22 00:03:46.533 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.04.22 00:03:46.533 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.04.22 00:03:46.533 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.04.22 00:03:46.534 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.04.22 00:03:46.534 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.04.22 00:03:46.534 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.04.22 00:03:46.534 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.04.22 00:03:46.534 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.04.22 00:03:46.534 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.04.22 00:03:46.535 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.04.22 00:03:46.535 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.04.22 00:03:46.535 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.04.22 00:03:46.536 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.04.22 00:03:46.536 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.04.22 00:03:46.536 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.04.22 00:03:46.536 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.04.22 00:03:46.536 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.04.22 00:03:46.537 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.04.22 00:03:46.537 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.04.22 00:03:46.537 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.04.22 00:03:46.537 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.04.22 00:03:46.537 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.04.22 00:03:46.537 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.04.22 00:03:46.537 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.04.22 00:03:46.538 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.04.22 00:03:46.538 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.04.22 00:03:46.538 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.04.22 00:03:46.538 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.04.22 00:03:46.554 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.04.22 00:03:46.582 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.04.22 00:03:46.595 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:03:48.529 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:03:50.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:03:52.529 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:03:54.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:03:56.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:03:58.529 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:00.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:02.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:04.529 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:06.529 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:08.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:10.529 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:12.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:14.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:16.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:18.529 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:20.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:22.530 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:24.529 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:26.529 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.04.22 00:04:28.530 INFO  SystemLogic.MainSystem - Special password changed at 
