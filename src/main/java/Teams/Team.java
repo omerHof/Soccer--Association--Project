@@ -304,6 +304,10 @@ public class Team implements Comparable {
 
     ////by object
     public boolean addPlayer(Player player) {
+        User user = db.getUserByFullName(player.getUserFullName());
+        if(user==null){
+            return false;
+        }
 
         if(player==null){
             return false;
@@ -349,6 +353,10 @@ public class Team implements Comparable {
 
 
     public boolean addCoach(Coach coach) {
+        User user = db.getUserByFullName(coach.getUserFullName());
+        if(user==null){
+            return false;
+        }
 
         if(coach==null){
             return false;
@@ -387,6 +395,11 @@ public class Team implements Comparable {
     }
 
     public boolean addManager(Manager manager) {
+        User user = db.getUserByFullName(manager.getUserFullName());
+        if(user==null){
+            return false;
+        }
+
         if(manager==null){
             return false;
         }
@@ -422,6 +435,10 @@ public class Team implements Comparable {
     }
 
     public boolean addTeamOwner(TeamOwner teamOwner) {
+        User user = db.getUserByFullName(teamOwner.getUserFullName());
+        if(user==null){
+            return false;
+        }
         if(teamOwner==null){
             return false;
         }
@@ -483,12 +500,6 @@ public class Team implements Comparable {
 
     }
 
-
-    public boolean containsPlayer(String player_name){
-        //return players.
-        return true;
-    }
-
     public ArrayList<Game> getGameList() {
         return gameList;
     }
@@ -505,8 +516,11 @@ public class Team implements Comparable {
         this.name = name;
         if(page!=null){
             page.setName(name);
-            db.setTeam(this);
+
         }
+        db.setTeam(this);
+        MainSystem.LOG.info("the team change her name to: "+name);
+
     }
 
     public void addGame (Game game){

@@ -66,9 +66,7 @@ public abstract class PersonalPage extends Observable {
         if(t!=null) {
             teamHistory.add(t.getName());
         }
-        else{
-            System.out.println("the team is not exist");
-        }
+
     }
 
 

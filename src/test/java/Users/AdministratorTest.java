@@ -184,43 +184,50 @@ team owner
 
         ///ref
         LocalDateTime date = LocalDateTime.of(2020,4,22,17,00);
-        /*
+
         Game g = new Game(team1,team2,date);
         team1.addGame(g);
         team2.addGame(g);
         referee.addGame(g);
 
 
-        String message = ad.deleteUserFromSystem(referee.getUserFullName());
+         message = ad.deleteUserFromSystem(referee.getUserFullName());
         assertEquals(message,"no delete, the referee has an open games");
         Referee ref2 = new Referee("dd","dd","dddd","dsdad","d");
         db.addUser(ref2);
         String message2 = ad.deleteUserFromSystem(ref2.getUserFullName());
         assertEquals(message2,"the user deleted succsesfully");
 
-         */
 
-/*
+
+
         team1.addManager(manager);
         String message5 = ad.deleteUserFromSystem(manager.getUserFullName());
-assertEquals("the user deleted succsesfully",message5);
+          assertEquals("the user deleted succsesfully",message5);
         ///player
         team1.addPlayer(player);
         assertEquals(team1.getPlayers().size(),1);
         String message3 = ad.deleteUserFromSystem(player.getUserFullName());
+        ///no delete
+        assertEquals(team1.getPlayers().size(),1);
+
+        g.setStatus(Game.gameStatus.close);
+        String message33 = ad.deleteUserFromSystem(player.getUserFullName());
+        assertEquals(message33,"the user deleted succsesfully");
         assertEquals(team1.getPlayers().size(),0);
-        assertEquals(message3,"the user deleted succsesfully");
+
         team1.addCoach(coach);
-String message4 = ad.deleteUserFromSystem(coach.getUserFullName());
-assertEquals(message4,"the user deleted succsesfully");
+        String message4 = ad.deleteUserFromSystem(coach.getUserFullName());
+        assertEquals(message4,"the user deleted succsesfully");
 
 
- */
+
 
 }
     @Test
     public void watchLog() {
         String str = ad.watchLog();
-        System.out.println(str);
+        assertTrue(str.contains("ystemLogic.MainSystem"));
+       // System.out.println(str);
     }
 }

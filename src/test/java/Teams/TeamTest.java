@@ -1,5 +1,6 @@
 package Teams;
 
+import Games.Game;
 import SystemLogic.DB;
 import Users.Coach;
 import Users.Manager;
@@ -10,6 +11,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -74,26 +77,6 @@ public class TeamTest {
         maccabi.createPage("team in israel, play in yellow","israel");
         assertFalse(hapoel.getPage()==maccabi.getPage());
 
-    }
-
-    @Test
-    public void getStatistics() {
-    }
-
-    @Test
-    public void setStatistics() {
-    }
-
-    @Test
-    public void containsAssent() {
-    }
-
-    @Test
-    public void addAssent() {
-    }
-
-    @Test
-    public void removeAssent() {
     }
 
     @Test
@@ -184,7 +167,10 @@ public class TeamTest {
 
     @Test
     public void addManager() {
-        Manager manager = new Manager("aa","aa","aaa","aaaa");
+        Manager manager = new Manager("aa","aa","new manager","aaaa");
+        hapoel.addManager(manager);
+        assertEquals(hapoel.getManagers().size(),0);
+        dbtest.addUser(manager);
         hapoel.addManager(manager);
         assertEquals(hapoel.getManagers().size(),1);
         maccabi.addManager(manager);
@@ -197,7 +183,8 @@ public class TeamTest {
 
     @Test
     public void removeManager() {
-        Manager manager = new Manager("aa","aa","aaa","aaaa");
+        Manager manager = new Manager("aa","aa","new manager","aaaa");
+        dbtest.addUser(manager);
         hapoel.addManager(manager);
         hapoel.removeManager(manager);
         assertEquals(hapoel.getManagers().size(),0);
@@ -205,10 +192,13 @@ public class TeamTest {
 
     @Test
     public void addTeamOwner() {
-        TeamOwner teamOwner = new TeamOwner("rerere","rerer","rrrr","rere");
+        TeamOwner teamOwner = new TeamOwner("leva","rerer","lev lebaiev","rere");
+        hapoel.addTeamOwner(teamOwner);
+        assertEquals(hapoel.getTeamOwners().size(),0);
+        dbtest.addUser(teamOwner);
         hapoel.addTeamOwner(teamOwner);
         assertEquals(hapoel.getTeamOwners().size(),1);
-        maccabi.addTeamOwner(teamOwner);
+        maccabi.addTeamOwner(teamOwner.getUserFullName());
         assertEquals(hapoel.getTeamOwners().size(),0);
         assertEquals(maccabi.getTeamOwners().size(),1);
 
@@ -217,8 +207,9 @@ public class TeamTest {
 
     @Test
     public void removeTeamOwner() {
-        TeamOwner teamOwner = new TeamOwner("rerere","rerer","rrrr","rere");
-        hapoel.addTeamOwner(teamOwner);
+        TeamOwner teamOwner = new TeamOwner("leva","rerer","lev lebaiev","rere");
+        dbtest.addUser(teamOwner);
+        hapoel.addTeamOwner(teamOwner.getUserFullName());
         assertEquals(hapoel.getTeamOwners().size(),1);
         hapoel.removeTeamOwner(teamOwner);
         assertEquals(hapoel.getTeamOwners().size(),0);
@@ -228,7 +219,6 @@ public class TeamTest {
 
     @Test
     public void getStadium() {
-        assertEquals(null,hapoel.getStadium());
 
         Stadium stadium = new Stadium(20000,15000,10000000);
         hapoel.setStadium(stadium);
@@ -246,16 +236,31 @@ public class TeamTest {
 
     }
 
-    @Test
-    public void containsPlayer() {
-    }
+
 
     @Test
     public void getGameList() {
+        assertEquals(hapoel.getGameList().size(),0);
+        LocalDateTime dateGame = LocalDateTime.of(2020,12,12,17,00);
+        Game g = new Game(hapoel,maccabi,dateGame);
+        hapoel.addGame(g);
+        maccabi.addGame(g);
+        assertEquals(hapoel.getGameList().size(),1);
+
+
     }
 
     @Test
     public void setGameList() {
+        assertEquals(hapoel.getGameList().size(),0);
+        LocalDateTime dateGame = LocalDateTime.of(2020,12,12,17,00);
+        Game g = new Game(hapoel,maccabi,dateGame);
+        ArrayList<Game>list = new ArrayList<>();
+        list.add(g);
+        hapoel.setGameList(list);
+        maccabi.setGameList(list);
+
+        assertEquals(hapoel.getGameList().size(),1);
     }
 
     @Test
@@ -272,6 +277,12 @@ public class TeamTest {
 
     @Test
     public void addGame() {
+        assertEquals(hapoel.getGameList().size(),0);
+        LocalDateTime dateGame = LocalDateTime.of(2020,12,12,17,00);
+        Game g = new Game(hapoel,maccabi,dateGame);
+        hapoel.addGame(g);
+        maccabi.addGame(g);
+        assertEquals(hapoel.getGameList().size(),1);
     }
 
     @Test

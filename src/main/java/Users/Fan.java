@@ -21,20 +21,9 @@ public class Fan extends User implements Observer {
     //private HashMap<String,PersonalPage> followedPages;
     private ArrayList<PersonalPage>followedPages;
     private HashMap<String,Team> followedTeams;
-    private HashMap<String,Team> notificationTeams;
-    private boolean pageAlert;
     private String pageMessage;
-    private boolean teamAlert;
     private String teamMessage;
 
-    private boolean preGameAlert;
-    private String preGameMessage;
-    private boolean startGameAlert;
-    private String startGameMessage;
-    private boolean endGameAlert;
-    private String endGameMessage;
-
-    //private Search searcher;
 
     public Fan(String userName, String password, String fullName, String email) {
 
@@ -42,24 +31,12 @@ public class Fan extends User implements Observer {
         this.userName = userName;
         this.userFullName = fullName;
         this.userEmail = email;
-        //followedPages = new HashMap<>();
         followedPages = new ArrayList<>();
         followedTeams = new HashMap<>();
-        pageAlert = false;
-        teamAlert = false;
-        preGameAlert=false;
-        startGameAlert = false;
-        endGameAlert = false;
+
 
     }
 
-    public boolean isPageAlert() {
-        return pageAlert;
-    }
-
-    public void setPageAlert(boolean pageAlert) {
-        this.pageAlert = pageAlert;
-    }
 
     public String getPageMessage() {
         return pageMessage;
@@ -160,20 +137,6 @@ public class Fan extends User implements Observer {
                 Notification notification = new Notification(managerSender,message,this);
                 notification.send();
 
-                /*
-                if(updateFromGame)
-                if (game.getStatus() == Game.gameStatus.preGame) {
-                    System.out.println("REMINDER! in 1 day the game between " + homeTeam + " and " + awayTeam + " will start");
-
-                }
-                if (game.getStatus() == Game.gameStatus.active) {
-                    System.out.println("new update! the game between " + homeTeam + " and " + awayTeam + " has started!");
-                }
-                if (game.getStatus() == Game.gameStatus.finish) {
-                    System.out.println("new update! the game between " + homeTeam + " and " + awayTeam + " has finish in score " + game.getScore());
-                }
-
-                 */
             }
         }
 
@@ -201,13 +164,16 @@ public ArrayList< PersonalPage> getFollowedPages() {
      */
 
     public void followThisPage(PersonalPage page){
-        page.addObserver(this);
-        //followedPages.put(page.getName(),page);
-        followedPages.add(page);
+        if(page!=null) {
+            page.addObserver(this);
+            //followedPages.put(page.getName(),page);
+            followedPages.add(page);
+            MainSystem.LOG.info(getUserFullName()+" follow the page of: "+page.getName());
+
+        }
 
     }
     public void followThisPage(String pageName){
-        MainSystem.LOG.info(getUserFullName()+" follow the page of: "+pageName);
 
         DB DB1;
         DB1=DB.getInstance();
@@ -234,11 +200,11 @@ public ArrayList< PersonalPage> getFollowedPages() {
 
                 followedPages.remove(page);
                 page.deleteObserver(this);
+                MainSystem.LOG.info(getUserFullName()+" stop follow the page of: "+pageName);
                 break;
             }
 
         }
-        MainSystem.LOG.info(getUserFullName()+" stop follow the page of: "+pageName);
 
     }
     public void stopFollowAllPages(){
@@ -247,6 +213,7 @@ public ArrayList< PersonalPage> getFollowedPages() {
               PersonalPage p =followedPages.get(i);
               followedPages.remove(p);
               p.deleteObserver(this);
+              MainSystem.LOG.info(getUserFullName()+" stop follow the page of: "+p.getName());
               i++;
           }
         MainSystem.LOG.info(getUserFullName()+" stop follow all pages");
@@ -298,54 +265,9 @@ public ArrayList< PersonalPage> getFollowedPages() {
 
     }
 
-   public void searchPage(String str){
-        ///maybe not here
-   }
-/*
-    public ArrayList<String> showFollowPages(){
-        ArrayList<String>nameOfThePages=new ArrayList<>();
-        for(HashMap.Entry<String,PersonalPage> page:followedPages.entrySet()){
-            String key = page.getKey();
-            nameOfThePages.add(key);
-        }
-
-        return nameOfThePages;
-    }
-
-
-    public ArrayList<String> showFollowTeams(){
-        ArrayList<String>teamNames=new ArrayList<>();
-        for(HashMap.Entry<String,Team> page:followedTeams.entrySet()){
-            String key = page.getKey();
-            teamNames.add(key);
-        }
-
-        return teamNames;
-    }
-
-
- */
-
 
     public HashMap<String, Team> getFollowedTeams() {
         return followedTeams;
-    }
-
-
-
-
-    public HashMap<String, Team> getNotificationTeams() {
-        return notificationTeams;
-    }
-
-
-
-    public boolean isTeamAlert() {
-        return teamAlert;
-    }
-
-    public void setTeamAlert(boolean teamAlert) {
-        this.teamAlert = teamAlert;
     }
 
     public String getTeamMessage() {
@@ -355,56 +277,4 @@ public ArrayList< PersonalPage> getFollowedPages() {
     public void setTeamMessage(String teamMessage) {
         this.teamMessage = teamMessage;
     }
-    /*
-    public void selectTeams(){
-      ArrayList<String>teams= showFollowTeams();
-      boolean chooseMore = true;
-        Scanner sc = new Scanner(System.in); //System.in is a standard input stream
-        while(chooseMore ==true){
-        System.out.println("please select team to get about them Notifications:");
-        for (String team :teams) {
-                System.out.println(team);
-            }
-        String choose = sc.nextLine();
-        if(teams.contains(choose)){
-
-                notificationTeams.put(choose,getTeamByName(choose));
-        }
-        else{
-                System.out.println("error! the team is not in the followed teams");
-            }
-
-            System.out.println("do you want to choose more?");
-             choose = sc.nextLine();
-             if(choose!="yes"){
-                 chooseMore=false;
-             }
-        }
-
-    }
-
-     */
-
-
-    /*
-    //next iteration
-
-    public void sendComplaint(){
-
-    }
-    public void fillForm(){
-
-    }
-    public void sendForm(){
-
-    }
-
-
-    public void watchHistory(){
-        //need to get into the log somehow
-
-    }
-     */
-
-
 }

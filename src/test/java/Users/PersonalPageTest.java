@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 
 import static org.junit.Assert.*;
@@ -32,8 +33,15 @@ public class PersonalPageTest {
         t2=new Team("Liverpool");
         t3=new Team("Hapoel tel aviv");
         LocalDate localDate2 = LocalDate.of(1999,1,1);
+        dbtest.addTeam(t1);
+        dbtest.addTeam(t2);
+        dbtest.addTeam(t3);
+        dbtest.addUser(c1);
+        dbtest.addUser(c2);
+        dbtest.addUser(c3);
 
         pepPage = c1.createCoachPersonalPage(localDate2,t1.getName());
+        t1.addCoach(c1);
 
 
 
@@ -79,27 +87,32 @@ public class PersonalPageTest {
 
     @Test
     public void setCurrentTeam() {
-        pepPage.setCurrentTeam(t2);
-        assertFalse(pepPage.getCurrentTeam().equals(t1));
+        t2.addCoach(c1);
+        assertEquals(t2,c1.getPage().getCurrentTeam());
     }
 
     @Test
     public void getAge() {
-    }
-
-    @Test
-    public void setAge() {
+        assertEquals(pepPage.getAge(),21);
     }
 
     @Test
     public void getTeamHistory() {
+        assertEquals(c1.getTeamHistory(),pepPage.getTeamHistory());
     }
 
     @Test
     public void setTeamHistory() {
+        ArrayList<String>teams = new ArrayList<>();
+        teams.add("Liverpool");
+        teams.add("Hapoel tel aviv");
+        c1.setTeamHistory(teams);
+        assertEquals(3,pepPage.getTeamHistory().size());
     }
 
     @Test
-    public void getAge1() {
+    public void setOneTeamToHistory() {
+        t2.addCoach(c1);
+        assertEquals(pepPage.getTeamHistory().size(),c1.getTeamHistory().size());
     }
 }
