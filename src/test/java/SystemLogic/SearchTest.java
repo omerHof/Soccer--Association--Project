@@ -37,6 +37,10 @@ public class SearchTest {
         Search search3 = new Search("milan", Search.Category.teams);
         ans = search3.search();
         assertEquals(ans.size(), 1);
+
+        Search search4 = new Search("milan", null);
+        ans = search4.search();
+        assertEquals(ans.size(), 1);
     }
 
     @Test

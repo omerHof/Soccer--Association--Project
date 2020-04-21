@@ -1,10 +1,13 @@
 package Users;
 
+import DataForTest.DataBase;
 import SystemLogic.DB;
 import Teams.Team;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -31,5 +34,16 @@ public class UserTest {
         fan.complain("you suck", team);
         String surprise = manager.getReceivedNotifications().get(0).read();
         assertEquals(surprise, "you suck");
+    }
+
+
+
+    @Test
+    public void search() {
+        DataBase test = new DataBase();
+
+        User user = new Fan("","","","");
+        List<Object> ans =  user.search("milan", "notCategory");
+        assertEquals(ans.size(), 1);
     }
 }
