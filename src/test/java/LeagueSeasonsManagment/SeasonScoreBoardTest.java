@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
 public class SeasonScoreBoardTest {
 
     private DB db;
-    private AssociationRepresentative assoTest;
+   // private AssociationRepresentative assoTest;
     private MainSystem mainSystem;
     DataBase test = new DataBase();
     Game game;
@@ -29,8 +29,8 @@ public class SeasonScoreBoardTest {
     public void setUp() throws Exception {
         db = DB.getInstance();
         mainSystem = MainSystem.getInstance();
-        assoTest = new AssociationRepresentative("YS", "123", "Yiftah Szoke", "yszoke@gmail.com");
-        game = db.getLeague("Alufot").getAllSeasons().get(1).getAllGames().get(1).get(0);
+        //assoTest = new AssociationRepresentative("YS", "123", "Yiftah Szoke", "yszoke@gmail.com");
+        game = db.getLeague("Alufot").getAllSeasons().get(0).getAllGames().get(1).get(0);
     }
 
     @After

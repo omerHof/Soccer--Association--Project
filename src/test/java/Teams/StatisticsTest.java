@@ -71,7 +71,7 @@ public class StatisticsTest {
     @Test
     public void getScore() {
         try{
-            assertTrue("not equal",statisticsA.getScore()==3);
+            assertTrue("not equal",statisticsA.getScore()==7);
 
         }catch (Exception e) {
             System.out.println("error");
@@ -207,6 +207,7 @@ public class StatisticsTest {
     @Test
     public void compareTo() {
         try{
+            statisticsB.setScore(4);
             assertTrue("not equal",statisticsA.compareTo(statisticsB)==1);
             assertTrue("not equal",statisticsC.compareTo(statisticsD)==-1);
         }catch (Exception e) {

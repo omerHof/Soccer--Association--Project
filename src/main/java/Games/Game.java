@@ -2,6 +2,7 @@ package Games;
 
 import SystemLogic.DB;
 import SystemLogic.MainSystem;
+import Teams.Stadium;
 import Teams.Statistics;
 import Teams.Team;
 import Users.AssociationRepresentative;
@@ -34,6 +35,7 @@ public class Game extends Observable {
     private String finalReport;
     private LocalDateTime timeOfGame;
     private Timer timer;
+    private Stadium stadium;
 
     /**
      * constructor
@@ -51,6 +53,7 @@ public class Game extends Observable {
         setAlarms();//set alarm to Stakeholders about the game
         this.eventBook = new ArrayList<>();
         this.score = "0-0";
+        this.stadium = homeTeam.getStadium();
     }
 
     /**
@@ -140,7 +143,6 @@ public class Game extends Observable {
         return score;
     }
 
-
     public ArrayList<Event> getEventBook() {
         return eventBook;
     }
@@ -172,7 +174,6 @@ public class Game extends Observable {
     public void setScore(String score) {
         this.score = score;
     }
-
 
     public void setStatus(gameStatus status) {
         this.status = status;
@@ -288,8 +289,8 @@ class EndGame extends TimerTask {
             awayTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + "in a score: " + score);//todo
         }
         game.setStatus(Game.gameStatus.finish);
-        //double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();//todo now there is'nt stadium
-        //homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);
+        double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();//todo now there is'nt stadium
+        homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);
         Random rand = new Random();//todo remove
         int randomNum = rand.nextInt((6 - 0) + 1) + 0;//todo remove
         int randomNum2 = rand.nextInt((6 - 0) + 1) + 0;//todo remove
