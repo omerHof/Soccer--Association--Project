@@ -115,6 +115,7 @@ public class TeamTest {
         assertEquals(hapoel.getPlayers().size(),1);
         hapoel.addPlayer(zahavi);
         assertEquals(hapoel.getPlayers().size(),2);
+
         maccabi.addPlayer(zahavi);
         assertEquals(hapoel.getPlayers().size(),1);
         assertEquals(maccabi.getPlayers().size(),1);
@@ -290,7 +291,5 @@ public class TeamTest {
         assertTrue(hapoel.getBudget()==1);
     }
 
-    @Test
-    public void compareTo() {
-    }
+
 }

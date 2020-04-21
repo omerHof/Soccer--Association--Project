@@ -52,19 +52,30 @@ public class PlayerTest {
 
     @Test
     public void createPersonalPage() {
+
+        ///before adding player to team
+        PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1.getName());
+        assertEquals(null,p1.getCurrentTeam());
+
+        ///after adding player to team
+
+        t1.addPlayer(p1);
+        assertEquals(p1.getCurrentTeam(),t1);
+
+
+        /*
+        t1.addPlayer(p1);
         PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1.getName());
         assertFalse(ronaldoPage.getCurrentTeam().getName()=="Manchester city");
         assertEquals(ronaldoPage.getName(),"cristiano ronaldo");
+
+         */
     }
 
     @Test
     public void getAge() {
         assertEquals(p2.getAge(),21);
         assertEquals(p1.getAge(),0);
-    }
-
-    @Test
-    public void setAge() {
     }
 
 
@@ -107,22 +118,35 @@ public class PlayerTest {
         //after
         PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1.getName());
         assertFalse(p1.getPage()==null);
-        assertEquals(p1.getPage().getCurrentTeam(),t1);
+        t1.addPlayer(p1);
 
+        assertEquals(p1.getPage().getCurrentTeam(),t1);
 
     }
 
     @Test
     public void setCurrentTeam() {
-        //before crtating a page
+        //before adding player to team
         assertEquals(p1.getCurrentTeam(),null);
 
-        //after create a page
+        //after adding player to team
+        t1.addPlayer(p1);
         PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1.getName());
         assertEquals(p1.getCurrentTeam(),t1);
-        p1.setCurrentTeam(t2.getName());
-        assertFalse(p1.getCurrentTeam().getName().equals("juventus"));
-        assertEquals(p1.getCurrentTeam().getName(),t2.getName());
+        t2.addPlayer(p1);
+        assertEquals(p1.getCurrentTeam(),t2);
+        assertEquals(ronaldoPage.getCurrentTeam(),t2);
+    }
+
+    @Test
+    public void getTeamHistory() {
+        PersonalPage ronaldoPage = p1.createPersonalPage(187,85,7,t1.getName());
+        t1.addPlayer(p1);
+        t2.addPlayer(p1);
+        t1.addPlayer(p1);
+        assertTrue(p1.getTeamHistory().contains(t1.getName()));
+        assertTrue(p1.getTeamHistory().contains(t2.getName()));
+
 
     }
 
