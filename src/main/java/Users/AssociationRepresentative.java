@@ -7,20 +7,28 @@ import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Team;
-import UserGenerator.IUserGenerator;
 import UserGenerator.PremiumUserGenertator;
 import UserGenerator.SimpleUserGenerator;
 
-import java.sql.Ref;
 import java.util.*;
 
+/**
+ * this class represent an AssociationRepresentative. He has a lot of permissions in the system.
+ */
 public class AssociationRepresentative extends User implements Observer {
 
     private static int numOfApprovals = 0 ;
     private DB db = DB.getInstance();
     private List<Game> myGames;
 
-
+    /**
+     * constructor - all tha person's details:
+     *
+     * @param userName
+     * @param password
+     * @param fullName
+     * @param userEmail
+     */
     public AssociationRepresentative(String userName, String password, String fullName,String userEmail) {
         this.userName = userName;
         this.password = password;
@@ -33,6 +41,11 @@ public class AssociationRepresentative extends User implements Observer {
         return myGames;
     }
 
+
+    /**
+     * this function randomly approve users that want to join the system.
+     * @return - true if approved, false if not.
+     */
     public boolean approveRegistration(String fullName, String role){ //random (symbolic) function
 
         if (numOfApprovals < 9) {
@@ -45,7 +58,7 @@ public class AssociationRepresentative extends User implements Observer {
         return false;
     }
 
-    ////////////////////////////// USE CASE 9.1 ////////////////////////////// VVV
+    ////////////////////////////// USE CASE 9.1 //////////////////////////////
     public boolean addLeague (String leagueName, int numOfTeams){
 
         League newLeague = new League(leagueName, numOfTeams);
@@ -57,7 +70,18 @@ public class AssociationRepresentative extends User implements Observer {
             return false;
     }
 
-    ////////////////////////////// USE CASE 9.2 ////////////////////////////// VVV
+    ////////////////////////////// USE CASE 9.2 //////////////////////////////
+    /**
+     * this function adds (and creates) a new season to an existing league
+     * @param leagueName - of the league we want to add to
+     * @param year - of the new season
+     * @param scorePolicy - of the new season
+     * @param gamePolicy - of the new season
+     * @param teams - list of Strings of the teams' names - to find in DB and add to this season's games.
+     * @param referees - list of Strings of the referees' names - to find in DB and add to this season's games.
+     * @param representatives - list of Strings of the representatives' names - to find in DB and add to this season's games.
+     * @return string with the function's outcome. - success, or any type of problem occurred.
+     */
     public String addSeasonToLeague (String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives){
 
         if (teams==null || referees== null || representatives==null || (referees.size() < (teams.size()*1.5)))
@@ -67,6 +91,7 @@ public class AssociationRepresentative extends User implements Observer {
         ArrayList<Referee> allReferees;
         ArrayList<AssociationRepresentative> allReps;
 
+        //sets all users and teams themselves from DB (out of strings)
         allTeams = setLeagueTeams(teams);
         allReferees = setLeagueReferees(referees);
         allReps = setLeagueRepresentatives(representatives);
@@ -77,16 +102,16 @@ public class AssociationRepresentative extends User implements Observer {
                 countMainRefereeConstraint++;
         }
 
-        if(countMainRefereeConstraint < (teams.size()/2))
+        if(countMainRefereeConstraint < (teams.size()/2)) //must have at least half on the teams' amount in the season.
             return "couldn't create a new season: " + year + " - not enough main referees";
 
         Season newSeason;
 
         if(scorePolicy!=null && gamePolicy!= null) {
-            newSeason = new Season(year, allTeams, allReferees, allReps, scorePolicy, gamePolicy);
+            newSeason = new Season(year, allTeams, allReferees, allReps, scorePolicy, gamePolicy); //constructor
 
             if (newSeason != null) {
-                db.addSeason(leagueName, newSeason); //adds the season to DB.}
+                db.addSeason(leagueName, newSeason); //adds the season to DB.
                 MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
                 return "new season: " + year + " was added to league: " + leagueName + ".";
             }
@@ -115,13 +140,11 @@ public class AssociationRepresentative extends User implements Observer {
                     allReps.add((AssociationRepresentative)currRepresentative);
             }
             return allReps;
-            //season.setAllRepresentatives(allRepresentatives);
             //MainSystem.LOG.info("Associations Representatives were added to league: " + leagueName + ", season: " + season.getYear());
         }
 
         else{
             return null;
-            ////////////////// display error ????????? ///////////////
         }
     }
 
@@ -141,19 +164,16 @@ public class AssociationRepresentative extends User implements Observer {
                     teams.add(currTeam);
             }
             return teams;
-            //season.setAllTeams(allTeams);
             //MainSystem.LOG.info("Teams were added to league: " + leagueName + ", season: " + season.getYear());
-
         }
         else {
             return null;
-            //////////////////// display error ??????? /////////////
         }
     }
 
-    ////////////////////////////// USE CASE 9.3.1 ////////////////////////////// VVV
+    ////////////////////////////// USE CASE 9.3.1 //////////////////////////////
     /**
-     * return user from requested type
+     * change this fan's status to be a referee.
      * @param fullName - of the fan user we want to nominate as a referee.
      * @return true if success, false if not.
      */
@@ -161,18 +181,17 @@ public class AssociationRepresentative extends User implements Observer {
 
         if(db.getUserByFullName(fullName)!= null) { //checks whether this referee already exists in the DB.
 
-
-            Fan oldFan = (Fan)db.getUserByFullName(fullName); //gets referee itself
+            Fan oldFan = (Fan)db.getUserByFullName(fullName); //gets fan itself
             PremiumUserGenertator premiumUserG = new PremiumUserGenertator();
 
-            /////////////// change שדותתתת
+            // creates a referee, based on the fan's attributes.
             Referee newReferee = (Referee) premiumUserG.generate(oldFan.userName, oldFan.password, "onlyChangeStatus", "Referee", fullName,
                     oldFan.userEmail, null, "linesmen", "", "");
 
-            db.removeUser(oldFan.userName); //removes the fan
-            db.addUser(newReferee); //adds the referee.
+            db.removeUser(oldFan.userName); //removes fan from DB
+            db.addUser(newReferee); //adds referee to DB.
 
-            Notification notification = new Notification(this, "Congrats! You were added as a referee in the system.", newReferee);
+            Notification notification = new Notification(this, "Congrats! You were added as a referee to the system.", newReferee);
             notification.send(); //send a notification to this added referee.
 
             MainSystem.LOG.info("the fan: " + oldFan.getUserName() + " became a referee.");
@@ -180,13 +199,18 @@ public class AssociationRepresentative extends User implements Observer {
         }
 
         else {
-            System.out.println("this user does not exist in the system.");
+            //System.out.println("this user does not exist in the system.");
             return false;
         }
     }
 
 
-    ////////////////////////////// USE CASE 9.3.2 ////////////////////////////// VVV
+    ////////////////////////////// USE CASE 9.3.2 //////////////////////////////
+    /**
+     * change this referee's status to be a simple fan.
+     * @param fullName - of the referee user we want to save as a fan.
+     * @return true if success, false if not.
+     */
     public boolean removeReferee (String fullName){
 
         if( db.getUserByFullName(fullName) != null ) { //checks whether this referee already exists in the DB.
@@ -208,14 +232,14 @@ public class AssociationRepresentative extends User implements Observer {
         }
 
         else {
-            System.out.println("Can not remove a referee that does not exist in the DB.");
+            //System.out.println("Can not remove a referee that does not exist in the DB.");
             return false;
         }
     }
 
-    ////////////////////////////// USE CASE 9.4 ////////////////////////////// VVV
+    ////////////////////////////// USE CASE 9.4 //////////////////////////////
     /**
-     * adds all teams to this season - help function
+     * adds all teams to this season - uses as an help function
      * @param refereesNames - list of referees' names
      */
     public ArrayList<Referee> setLeagueReferees (List<String> refereesNames) {
@@ -229,17 +253,15 @@ public class AssociationRepresentative extends User implements Observer {
                     allReferees.add((Referee)currReferee);
             }
             return allReferees;
-            //season.setAllReferees(allReferees);
             //MainSystem.LOG.info("Referees were added to league: " + leagueName + ", season: " + season.getYear());
         }
 
         else{
             return null;
-            ////////////////// display error ????????? ///////////////
         }
     }
 
-    ////////////////////////////// USE CASE 10.3 ////////////////////////////// VVV
+    ////////////////////////////// USE CASE 10.3 //////////////////////////////
     /**
      * this function adds an event to an active game's event book.
      * @return true if successes, false if not.
@@ -252,29 +274,29 @@ public class AssociationRepresentative extends User implements Observer {
             Event newEvent = new Event(type, time, playerName);
             gameToAdd.addEvent(newEvent);
 
-            if(type.toString().equals("goal")){
+            if(type.toString().equals("goal")){ //needs to update score.
                 String score = gameToAdd.getScore();
                 int homeScore = Integer.parseInt(score.substring(0,score.indexOf("-")));
                 int awayScore = Integer.parseInt(score.substring(score.indexOf("-")+1));
 
                 if (whichTeam.equals("home"))
-                    homeScore = homeScore+1;
+                    homeScore = homeScore+1; //adds one to home score.
                 else // away team
-                    awayScore = awayScore +1;
+                    awayScore = awayScore +1; //adds one to away score.
 
                 score = homeScore + "-" + awayScore;
-                gameToAdd.setScore(score);
+                gameToAdd.setScore(score); //set the new score to game.
             }
 
             MainSystem.LOG.info("A new event: " + type + "(" + playerName + ",'" + time + ") was added to game: " + gameToAdd.getHomeTeam().getName() + "-" + gameToAdd.getAwayTeam().getName() + ", " + gameToAdd.getGameDate());
             return true;
         }
         else //no active game to add events to.
-            return false;
+            return false; //could not add an event obviously.
     }
 
     /**
-     * gets the only active game
+     * gets the only active game of this representative - an help function.
      * @return Game
      */
     public Game findActiveGame(){
@@ -290,6 +312,11 @@ public class AssociationRepresentative extends User implements Observer {
         myGames.add(newGame);
     }
 
+
+    /**
+     * this function finds another representative in DB and passes this rep' games from
+     * @return true if successes, false if not.
+     */
     public boolean passMyGames (){
 
         int year = myGames.get(0).getTimeOfGame().getYear(); //my season's year. // just a random game.
@@ -319,11 +346,9 @@ public class AssociationRepresentative extends User implements Observer {
                 substituteAsso.setMyGame(game); //transfer game by game.
             }
             return true;
-
         }
         return false;
     }
-
 
 
     @Override
@@ -334,10 +359,12 @@ public class AssociationRepresentative extends User implements Observer {
         notification.send();
     }
 
-
+    /**
+     * this function adds the game to this representative list of games,
+     * and adds the representative as an observer to the game. (both directions)
+     */
     public void followThisGame(Game game){
         game.addObserver(this);
         myGames.add(game);
     }
-
 }

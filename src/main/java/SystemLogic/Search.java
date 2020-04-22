@@ -9,10 +9,17 @@ import Users.User;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Locale;
 
+
+/**
+ * this class represent a search in the system.
+ */
 public class Search {
 
+
+    /**
+     * ***** all category's options the user can search for:*******
+     */
     public enum Category {
         teams, players, referees, leagues ;
     }
@@ -21,14 +28,16 @@ public class Search {
     private Category category;
     private DB db = DB.getInstance();
 
+
+    /**
+     * constructor - all the search details:
+     * @param toSearch - string the user want to find about
+     * @param category - type of category the user want to focus on. can be null if none.
+     */
     public Search(String toSearch, Category category) {
         this.toSearch = toSearch;
         this.category = category;
     }
-
-   /* public Search(String toSearch) {
-        this.toSearch = toSearch;
-    }*/
 
     /**
      * this function calls to the specific search we want to do - all or by category
@@ -58,7 +67,6 @@ public class Search {
     public List<Object> searchByCategory (){
 
         List<Object> allObjects = new LinkedList<>();
-        //Object objectToAdd = new Object();
 
         if(category.equals(Category.leagues)) { //category search by League:
 
@@ -76,10 +84,6 @@ public class Search {
             if (objectToAdd != null && !allObjects.contains(objectToAdd)) //without duplicates))
                 allObjects.add(objectToAdd);
 
-        /*    objectToAdd = (Player)db.getUserType(toSearch);
-            if(objectToAdd!=null && !allObjects.contains(objectToAdd)) //without duplicates)))
-                allObjects.add(objectToAdd);
-*/
             ArrayList<User> obj = db.getUserTypeList(toSearch);
 
             user = db.getUser(toSearch); //username
@@ -134,7 +138,6 @@ public class Search {
     }
 
 
-
     /**
      * this function searches for all kind of Objects in the DB
      * @toSearch - the String we want to find
@@ -145,7 +148,7 @@ public class Search {
         List<Object> allObjects = new LinkedList<>();
         Object objectToAdd;
 
-        //using any kind of search from DB in 3.. 2.... 1......
+        //using any kind of search on DB in 3.. 2.... 1......
 
         objectToAdd = db.getUser(toSearch);
         if(objectToAdd!=null && !allObjects.contains(objectToAdd)) //without duplicates

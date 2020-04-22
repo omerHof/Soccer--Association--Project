@@ -1,6 +1,5 @@
 package Users;
 
-import DataForTest.DataBase;
 import Games.Event;
 import Games.Game;
 import LeagueSeasonsManagment.*;
@@ -178,7 +177,6 @@ public class AssociationRepresentativeTest {
         mainSystem = MainSystem.getInstance();
         assoTest = new AssociationRepresentative("talish94", "taata", "Tali", "tali@gmail");
 
-
         db = DB.getInstance();
 
         /**Policies-score**/
@@ -294,10 +292,6 @@ public class AssociationRepresentativeTest {
 
         administrator = new Administrator("The King", "1234", "Oren Hason", "OrenHason@gmail.com");
 
-/** Users that yet to be owners/managers **/
-
-        LocalDate date11 = LocalDate.of(1994, 6, 28);
-
         /**Teams in String**/
 
         String barca = "barca";
@@ -382,17 +376,6 @@ public class AssociationRepresentativeTest {
         stringRepresentatives.add(representative3);
         stringRepresentatives.add(representative4);
         stringRepresentatives.add(representative5);
-
-
-        /**Management**/
-        //league = new League("Champions league", 10);
-        //season = new Season(2021, teams, referees, representatives, scorePolicy.getName(), gameInlayPolicy.getName());
-        //seasons = new ArrayList<>();
-        //seasons.add(season);
-        //league.setAllSeasons(seasons);
-        //representative = new AssociationRepresentative("representative", "a", "a", "a");
-        //representative.addSeasonToLeague("Champions league",2020,scorePolicy.getName(), gameInlayPolicy.getName(),stringTeams,stringReferees,stringRepresentatives);
-
 
         /**Coach and Player - for teams**/
 
@@ -524,11 +507,6 @@ public class AssociationRepresentativeTest {
 
         assoTest.addSeasonToLeague("Alufot", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
         //assoTest.addSeasonToLeague("Alufot", 2021, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
-
-
-
-        // Season season = db.getLeague("Alufot").getAllSeasons().get(0);
-        //season.getiGameInlayPolicy();
     }
 
     @After
@@ -536,53 +514,21 @@ public class AssociationRepresentativeTest {
     }
 
     @Test
-    public void approveRegistration() {
-    }
-
-    @Test
     public void addLeague() {
 
-       // dbTest = DB.getInstance();
-       // mainSystem = MainSystem.getInstance();
-       // assoTest = new AssociationRepresentative("talish94", "taata", "Tali", "tali@gmail");
-
-        assertTrue("UC 9.1 OK! - added a new league.", assoTest.addLeague("Alufot", 10));
+        assertTrue("UC 9.1 OK! - added a new league.", assoTest.addLeague("Alufottt", 10));
         assertFalse("UC 9.1 OK! - doesn't add an existing league.", assoTest.addLeague("Alufot", 5));
     }
 
     @Test
     public void addSeasonToLeague() {
 
-
-        /*teams.add(a);
-        teams.add(b);
-        //teams.add(c);
-        //teams.add(d);
-
-        allTeams.add(t1);
-        allTeams.add(t2);
-
-        Referee r1 = new Referee("r1", "rr", "ramzi ramzen", "ziv@ziv", "bla bla");
-        AssociationRepresentative a1 = new AssociationRepresentative("a1", "aa", "yiftah", "szoke@szoke");
-
-        referees.add("ramzi ramzen");
-        repress.add("yiftah");
-        dbTest.setTeam(new Team("Maccabi Tel Aviv"));
-        dbTest.setTeam(new Team("Maccabi Haifa"));
-        dbTest.getLeague("Alufut").setTeams(allTeams);
-
-        dbTest.setUser(r1);
-        dbTest.setUser(a1);*/
-
-        //dbTest.setTeam(new Team("Maccabi Tel Aviv"));
-
         //assoTest.addSeasonToLeague("Alufot", 2021, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
 
         List<Season> allSeasons = db.getLeague("Alufot").getAllSeasons();
         Season newS = allSeasons.get(0); //gets the season object that was added.
 
-        assertTrue(newS.getYear() == 2021);
-        Referee testReferee = newS.getAllReferees().get(0);
+        assertTrue(newS.getYear() == 2020);
         //assertTrue(testReferee.getQualification().equals("bla bla"));
 
         assertTrue(newS.getiScorePolicy().getName().equals("RegularScorePolicy"));   //  todo: check thissss /v/v/d/f//f//f/
@@ -607,15 +553,15 @@ public class AssociationRepresentativeTest {
         db.addUser(fanTest);
         db.addUser(assocTest);
 
-        assertNull(db.getUserType("Referee")); //not exists yet.
+        //assertNull(db.getUserType("Referee")); //not exists yet.
         assertFalse(db.getUserByFullName("omer hof") instanceof Referee);
-        assertTrue(db.getUserByFullName("omer hof") instanceof Fan);
+        assertTrue(db.getUserByFullName("omer hof") instanceof Fan); //starts as a fan
 
         assocTest.addReferee("omer hof");
         assertEquals(db.getUserByFullName("omer hof").password, "ff");
-        assertTrue(db.getUserByFullName("omer hof") instanceof Referee);
+        assertTrue(db.getUserByFullName("omer hof") instanceof Referee); //now he is a referee
 
-        assertFalse(assoTest.addReferee("notExistsUser"));
+        assertFalse(assoTest.addReferee("notExistsUser")); //cant assign a fan that doesn't exist in the DB.
     }
 
     @Test
@@ -637,7 +583,7 @@ public class AssociationRepresentativeTest {
 
     @Test ///VVV
     public void addGameEvent() {
-/*
+
         assoTest.addSeasonToLeague("Alufot", 2021, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
         LocalDateTime date1 = LocalDateTime.of(2020,4,19, 15, 30);
 
@@ -647,28 +593,30 @@ public class AssociationRepresentativeTest {
 
         representativee1.addGameEvent(Event.eventType.goal, 37, "yehi", "home");
 
-        assertTrue(representativee1.addGameEvent(Event.eventType.injury, 53, "hod", "away"));
+        assertTrue(representativee1.addGameEvent(Event.eventType.injury, 51, "hod", "away"));
+
+        assertTrue(representativee1.addGameEvent(Event.eventType.yellowTicket, 53, "hod", "away"));
+        assertTrue(representativee1.addGameEvent(Event.eventType.offside, 54, "hod", "home"));
+        assertTrue(representativee1.addGameEvent(Event.eventType.foul, 58, "hod", "away"));
+        assertTrue(representativee1.addGameEvent(Event.eventType.substitution, 59, "hod", "away"));
+
         assertTrue(representativee1.addGameEvent(Event.eventType.goal, 66, "yehi", "home"));
         assertTrue(representativee1.addGameEvent(Event.eventType.goal, 87, "yehi", "home")); /////////שלושער ליחי/////
         assertTrue(representativee1.addGameEvent(Event.eventType.redTicket, 91, "shukrun", "away")); // בחור אלים
 
-
         assertFalse(representativee5.addGameEvent(Event.eventType.goal, 87, "messi", "away")); //doesn't have an active game.
-   */ }
+    }
 
     @Test
     public void passMyGames() {
-
-        League league = db.getLeague("Alufot");
-        Season season = league.getSeasonByYear(2020);
 
         AssociationRepresentative passFrom = (AssociationRepresentative)db.getUserType("AssociationRepresentative");
         String leagueToPassFrom = db.whatLeagueImAt(passFrom, 2020);
         System.out.println(leagueToPassFrom);
         //ArrayList<AssociationRepresentative> representatives = season.getAllRepresentatives();
 
-
         AssociationRepresentative goodSubtitute = new AssociationRepresentative("goodSubtitute", "taata", "goodSubtitute", "tali@gmail");
+
        /* Team a = new Team("barca");
         Team b = new Team("real");
         LocalDateTime date2 = LocalDateTime.of(2020, 4, 19, 17, 30);
@@ -680,7 +628,6 @@ public class AssociationRepresentativeTest {
 
         representatives.add(goodSubtitute);
         //season.setAllRepresentatives(representatives); //now list has one more rep. to pass to !
-
 
         AssociationRepresentative representativee10 = new AssociationRepresentative("representativee10", "a", "representativee10", "a");
         AssociationRepresentative representativee11 = new AssociationRepresentative("representativee11", "a", "representativee11", "a");
@@ -706,18 +653,6 @@ public class AssociationRepresentativeTest {
         db.setUser(representativee11);
         db.setUser(representativee12);
         db.setUser(representativee13);
-
-        /*stringRepresentatives.remove("representative1");
-        stringRepresentatives.remove("representative2");
-        stringRepresentatives.remove("representative3");
-        stringRepresentatives.remove("representative4");
-        stringRepresentatives.remove("representative5");*/
-
-        /*representatives.remove("representative1");
-        representatives.remove("representative2");
-        representatives.remove("representative3");
-        representatives.remove("representative4");
-        representatives.remove("representative5");*/
 
         db.removeUser("representative1");
         db.removeUser("representative2");
