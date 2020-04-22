@@ -5,17 +5,30 @@ import SystemLogic.MainSystem;
 import Users.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class PremiumUserGenertator implements IUserGenerator {
 
     @Override
+    /**
+     * constructor - with all the users' relevant details:
+     *
+     * @param userName
+     * @param password
+     * @param managementPassword
+     * @param role - manager/coach/player/teamOwner/referee
+     * @param fullName
+     * @param userEmail
+     * @param birthDate
+     * @param qualification
+     * @param courtRole
+     * @param teamRole
+     **/
     public User generate(String userName, String password, String managementPassword, String role, String fullName, String userEmail, LocalDate  birthDate, String qualification, String courtRole, String teamRole) {
 
-        boolean approved = askForApproval(fullName, role);
+        boolean approved = askForApproval(fullName, role); //from an association representative.
 
         if(approved) {
-            User newUser = whichUserAmI(userName, password, managementPassword, role, fullName, userEmail, birthDate, qualification, courtRole, teamRole);
+            User newUser = whichUserAmI(userName, password, managementPassword, role, fullName, userEmail, birthDate, qualification, courtRole, teamRole); //checks what kind of premium user needs to be generated.
             return newUser;
         }
         else
@@ -24,9 +37,18 @@ public class PremiumUserGenertator implements IUserGenerator {
     }
 
     /**
-     * this method checks what kind of Premium User it is, and creates the right one.
+     * this method checks what kind of Premium User it is, and creates the correct one.
      *
-     * @param userName, .......
+     * @param userName
+     * @param password
+     * @param managementPassword
+     * @param role - manager/coach/player/teamOwner/referee
+     * @param fullName
+     * @param userEmail
+     * @param birthDate
+     * @param qualification
+     * @param courtRole
+     * @param teamRole
      * @return User object
      */
     public User whichUserAmI(String userName, String password, String managementPassword, String role, String fullName, String userEmail, LocalDate birthDate, String qualification, String courtRole, String teamRole) {
@@ -75,7 +97,10 @@ public class PremiumUserGenertator implements IUserGenerator {
             return null;
 
     }
-
+    /**
+     * this function randomly chose an AssociationRepresentative and ask for an approval from him.
+     * @return - true if approved, false if not.
+     */
     public boolean askForApproval (String fullName, String role) {
 
         DB db1 = DB.getInstance();

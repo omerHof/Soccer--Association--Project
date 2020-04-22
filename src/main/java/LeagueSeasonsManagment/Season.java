@@ -2,18 +2,19 @@ package LeagueSeasonsManagment;
 
 import Games.Game;
 import SystemLogic.DB;
-import SystemLogic.MainSystem;
 import Teams.Team;
 import Users.AssociationRepresentative;
 import Users.MainReferee;
 import Users.Referee;
 import Users.User;
 
-import java.awt.*;
-import java.sql.Ref;
 import java.util.*;
 import java.util.List;
 
+
+/**
+ * this class represent a season in the system.
+ */
 public class Season {
 
     private int year;
@@ -26,6 +27,17 @@ public class Season {
     private SeasonScoreBoard seasonScoreBoard;
     private DB db;
 
+
+    /**
+     * constructor - with all season's details:
+     *
+     * @param year - of the new season
+     * @param scorePolicy - of the new season
+     * @param gamePolicy - of the new season
+     * @param allTeams - list of Teams - to assign to this season's games.
+     * @param allReferees - list of Referees - to assign to this season's games.
+     * @param allReps - list of AssociationRepresentatives - to assign to this season's games.
+     */
     public Season(int year, ArrayList<Team> allTeams, ArrayList<Referee> allReferees,
                   ArrayList<AssociationRepresentative> allReps, String scorePolicy, String gamePolicy) {
 
@@ -38,13 +50,10 @@ public class Season {
         setiGameInlayPolicy(gamePolicy);
         setIScorePolicy(scorePolicy);
 
-        //IGameInlayPolicy iGameInlayPolicy = getiGameInlayPolicy();
-
         this.allGames = iGameInlayPolicy.gameInlayPolicyAlgoImplementation(); //adds list of games to each mahzor.
 
         assignUsersToGames(3); //assign 3 referees for each game, 1 main referee, and 1 association rep.
         this.seasonScoreBoard = new SeasonScoreBoard(allTeams, iScorePolicy, allGames.get(1).get(0).getTimeOfGame(), allGames.size());
-
     }
 
     /**
@@ -90,7 +99,7 @@ public class Season {
                     mainReferee.followThisGame(game); //adds both ways.
                     mahzorRefereesAndAsso.add(mainReferee);
 
-                    //////////////////////////////////// set teams' games: /////////////////////////////////
+                    // set teams' games:
                     Team away = game.getAwayTeam();
                     Team home = game.getHomeTeam();
 
@@ -128,6 +137,12 @@ public class Season {
         return allRepresentatives.get(rand);
     }
 
+
+    /**
+     * this function returns a random MainReferee.
+     *
+     * @return MainReferee - to assign for a game.
+     */
     private MainReferee getRandomMainReferee() {
 
         Random random = new Random();
@@ -141,8 +156,8 @@ public class Season {
     }
 
 
+    /**********getters and setters**********/
 
-    //getters
     public int getYear() {
         return year;
     }
@@ -155,7 +170,6 @@ public class Season {
         return iScorePolicy;
     }
 
-    //setters
     public void setYear(int newYear){
         this.year=newYear;
     }
@@ -176,12 +190,6 @@ public class Season {
         this.allGames = allGames;
     }
 
-    /*
-    public void GameInlayPolicyAlgoImplementation(){
-        //////to complete
-    }
-
-     */
 
     public void setiGameInlayPolicy(String iGameInlayPolicy) {
         switch(iGameInlayPolicy) {
