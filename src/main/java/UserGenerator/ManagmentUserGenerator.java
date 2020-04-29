@@ -6,8 +6,6 @@ import Users.AssociationRepresentative;
 import Users.User;
 
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.Scanner;
 
 public class ManagmentUserGenerator implements IUserGenerator {
 
@@ -15,6 +13,21 @@ public class ManagmentUserGenerator implements IUserGenerator {
     private static String systemManagerPassword;
 
     @Override
+    /**
+     * constructor - with all the users' relevant details:
+     * (most of the inputs are not relevant for this kind of user generator)
+     *
+     * @param userName
+     * @param password
+     * @param managementPassword
+     * @param role - AssociationRepresentative/Administrator only.
+     * @param fullName
+     * @param userEmail
+     * @param birthDate
+     * @param qualification
+     * @param courtRole
+     * @param teamRole
+     **/
     public User generate(String userName, String password, String managementPassword, String role, String fullName, String userEmail, LocalDate birthDate, String qualification, String courtRole, String teamRole) {
 
         MainSystem mainSystem = MainSystem.getInstance();
@@ -30,15 +43,6 @@ public class ManagmentUserGenerator implements IUserGenerator {
         }
         else
             return null;
-    }
-
-
-    private String askForSpecialPassword() {
-
-        System.out.println("Please enter your management user's password:");
-
-        Scanner sc = new Scanner(System.in);
-        return sc.next();
     }
 
 

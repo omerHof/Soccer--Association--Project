@@ -5,21 +5,30 @@ import Teams.Team;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * this class represent a league in the system.
+ */
 public class League {
 
     private String name;
     private int numOfTeams;
     private List<Season> allSeasons;
-
-
     private List<Team>teams;
 
+    /**
+     * constructor - with all league's details:
+     *
+     * @param name - of the new league (unique)
+     * @param numOfTeams - total teams playing in the new league
+     */
     public League(String name, int numOfTeams) {
         this.name = name;
         this.numOfTeams = numOfTeams;
         allSeasons = new LinkedList<>();
     }
-///getters
+
+    /**********getters and setters**********/
+
     public List<Season> getAllSeasons() {
         return allSeasons;
     }
@@ -29,13 +38,10 @@ public class League {
     public int getNumOfTeams(){
         return numOfTeams;
     }
-
-    //ido add this
     public List<Team>getTeams(){
         return teams;
     }
 
-    //setters
     public void setAllSeasons(List<Season> allSeasons) {
         this.allSeasons = allSeasons;
     }
@@ -45,17 +51,9 @@ public class League {
     public void setNumOfTeams(int num){
         numOfTeams=num;
     }
-    //ido add this
     public void setTeams(List<Team> allTeams){
         teams=allTeams;
     }
-
-    /*
-    public void scorePolicyAlgoImplementation(){
-        //////to complete
-    }
-
-     */
 
     public Season getSeasonByYear (int year){
         if (year > 0){
@@ -66,6 +64,4 @@ public class League {
         }
         return null;
     }
-
-
 }

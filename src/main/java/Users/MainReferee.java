@@ -1,13 +1,6 @@
 package Users;
 
-import Games.Event;
 import Games.Game;
-import SystemLogic.MainSystem;
-import com.sun.javafx.collections.ArrayListenerHelper;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class MainReferee extends Referee {
 
@@ -81,16 +74,4 @@ public class MainReferee extends Referee {
 
         return null; //no finish game at the moment.
     }
-
-/*    private void createFinalReport (int numGame, List<String> allEvents){
-
-        Game gameToFinalReport = findCloseGame();
-
-        String finalReport = "";
-        for (String event : allEvents){
-            finalReport = finalReport + event;
-        }
-
-        gameToFinalReport.setFinalReport(finalReport);
-    }*/
 }
