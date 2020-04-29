@@ -418,4 +418,26 @@ public class DB {
         }
         return ""; //this asso' doesn't exist in any leaue-year requested.
     }
+
+    public ArrayList<String> getLeagueNames(){
+        return new ArrayList<>(this.leagues.keySet());
+    }
+
+    public ArrayList<String> getTeamsNames(){
+        return new ArrayList<>(this.teams.keySet());
+    }
+
+
+    public ArrayList<String> getAllUserByType(String type) {
+        ArrayList<String> allUsersByType = new ArrayList<>();
+        Iterator it = users.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            User user = (User) pair.getValue();
+            if (type.equals(user.getClass())) {
+                allUsersByType.add(user.getUserFullName());
+            }
+        }
+        return allUsersByType;
+    }
 }

@@ -21,10 +21,11 @@ public class TeamManagement {
         }
     }
 
-    public void openTeam(String team_name, double initialBudget){
+    public String openTeam(String team_name, double initialBudget){
         findTheUser();
         ((TeamOwner) currentUser).askPermissionToOpenTeam();
         ((TeamOwner) currentUser).openTeam(team_name,initialBudget);
+        return "team was open successfully";
     }
 
     public String addAssent(Assent assent, double new_assent){

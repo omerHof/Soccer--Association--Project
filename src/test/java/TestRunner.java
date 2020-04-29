@@ -3,7 +3,7 @@ import Games.DayToGameTest;
 import Games.EndGameTest;
 import Games.StartGameTest;
 import LeagueSeasonsManagment.*;
-import MainApp.AppTest;
+import UILayer.MainTest;
 import SystemLogic.DBTest;
 import SystemLogic.MainSystemTest;
 import SystemLogic.NotificationTest;
@@ -42,7 +42,7 @@ public class TestRunner {
         Result twoRoundsGamePolicy_result = JUnitCore.runClasses(TwoRoundsGamePolicyTest.class);
 
         /** MainApp**/
-        Result app_result = JUnitCore.runClasses(AppTest.class);
+        Result app_result = JUnitCore.runClasses(MainTest.class);
 
         /** System Logic **/
         Result DB_result = JUnitCore.runClasses(DBTest.class);
