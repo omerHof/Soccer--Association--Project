@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -26,6 +27,8 @@ public class Main extends Application {
         setStage(primaryStage);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Landing.fxml"));
         root = fxmlLoader.load();
+        Image icon = new Image(getClass().getResourceAsStream("/Views/soccerLogo.png"));
+        primaryStage.getIcons().add(icon);
         primaryStage.setTitle("SOCCER SYSTEM 2020");
         primaryStage.setScene(new Scene(root, 1200, 800));
         primaryStage.setMinWidth(700);

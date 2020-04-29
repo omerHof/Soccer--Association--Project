@@ -2,6 +2,8 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -12,14 +14,14 @@
             <top>
                 <AnchorPane prefHeight="76.0" prefWidth="1200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
                     <children>
-                        <JFXButton layoutX="609.0" layoutY="19.0" onAction="#goToPlayers" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Players" textFill="WHITE">
+                        <JFXButton layoutX="623.0" layoutY="19.0" onAction="#goToPlayers" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Players" textFill="WHITE">
                             <graphic>
                                 <FontAwesomeIcon fill="#bbe0e0" glyphName="MALE" size="1.5em" />
                             </graphic>
                      <font>
                         <Font size="16.0" />
                      </font></JFXButton>
-                        <JFXButton layoutX="751.0" layoutY="19.0" onAction="#goToCoaches" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Coaches" textFill="WHITE">
+                        <JFXButton layoutX="764.0" layoutY="19.0" onAction="#goToCoaches" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Coaches" textFill="WHITE">
                             <graphic>
 
                             </graphic>
@@ -29,21 +31,21 @@
                      <font>
                         <Font size="16.0" />
                      </font></JFXButton>
-                        <JFXButton buttonType="RAISED" layoutX="476.0" layoutY="19.0" onAction="#goToTeams" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Teams" textAlignment="CENTER" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" layoutX="503.0" layoutY="19.0" onAction="#goToTeams" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Teams" textAlignment="CENTER" textFill="WHITE">
                             <graphic>
                                 <FontAwesomeIcon fill="#bbe0e0" fontSmoothingType="LCD" glyphName="GROUP" size="1.5em" />
                             </graphic>
                      <font>
                         <Font size="16.0" />
                      </font></JFXButton>
-                        <JFXButton layoutX="343.0" layoutY="19.0" onAction="#goToLeagues" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Leagues" textFill="WHITE">
+                        <JFXButton layoutX="375.0" layoutY="18.0" onAction="#goToLeagues" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Leagues" textFill="WHITE">
                             <graphic>
                                 <FontAwesomeIcon fill="#bbe0e0" glyphName="FUTBOL_ALT" size="1.5em" />
                             </graphic>
                      <font>
                         <Font size="16.0" />
                      </font></JFXButton>
-                  <JFXButton fx:id="mainLabel" layoutY="19.0" onAction="#goToLanding" prefHeight="38.0" prefWidth="214.0" text="SOCCER SYSTEM 2020" textFill="#bbe0e0">
+                  <JFXButton fx:id="mainLabel" layoutX="73.0" layoutY="18.0" onAction="#goToLanding" prefHeight="38.0" prefWidth="214.0" text="SOCCER SYSTEM " textFill="#bbe0e0">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -64,7 +66,7 @@
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="223.0" layoutY="19.0" onAction="#openMyApps" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #66c2ff;" stylesheets="@Landing.css" text="MY APPS" visible="false">
+                  <JFXButton layoutX="248.0" layoutY="18.0" onAction="#openMyApps" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #66c2ff;" stylesheets="@Landing.css" text="MY APPS" visible="false">
                      <graphic>
                         <FontAwesomeIcon glyphName="STREET_VIEW" size="1.5em" />
                      </graphic>
@@ -88,8 +90,20 @@
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </JFXButton>
+                  <ImageView fitHeight="77.0" fitWidth="112.0" layoutX="14.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@soccerLogo.png" />
+                     </image>
+                  </ImageView>
                     </children></AnchorPane>
             </top>
+         <center>
+            <ImageView fitHeight="735.0" fitWidth="1079.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@SoccerWallpaper.jpg" />
+               </image>
+            </ImageView>
+         </center>
         </BorderPane>
     </children>
 </AnchorPane>
