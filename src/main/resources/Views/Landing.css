@@ -3,6 +3,11 @@
     -fx-border-wodth: 0px 0px 3px 0px;
 }
 
+.img{
+    max-width:100%;
+    height:auto;
+}
+
 .button {
     border-radius: 8px;
     background-color: #008CBA;
