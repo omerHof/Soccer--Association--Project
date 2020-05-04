@@ -9,8 +9,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
-import static java.util.concurrent.TimeUnit.DAYS;
-import static java.util.concurrent.TimeUnit.SECONDS;
+
+import static java.util.concurrent.TimeUnit.*;
 
 /**
  * this class represent the table of a season
@@ -35,7 +35,7 @@ public class SeasonScoreBoard {
         this.policy = policy;
         this.table = initTable();
         //this.firstGameDate = firstGameDate;//todo put this line
-        this.firstGameDate = LocalDateTime.now();//todo remove this line
+        this.firstGameDate = LocalDateTime.now().plus(15, ChronoUnit.SECONDS);//todo remove this line
         this.numOfWeeks = numOfWeeks;
         updateTable(); //class- update the table after every week game
     }
@@ -110,7 +110,7 @@ public class SeasonScoreBoard {
     public void updateTable() {
         try {
             LocalDateTime timeToUpdate;
-            timeToUpdate = firstGameDate.plus(10, ChronoUnit.SECONDS);//todo change to 2 hours
+            timeToUpdate = firstGameDate.plus(6, ChronoUnit.SECONDS);//todo change to 2 hours
             LocalDateTime from = LocalDateTime.now();
             Duration duration = Duration.between(from, timeToUpdate);
             UpdateTable updateTable = new UpdateTable(duration.getSeconds(), this, new AtomicInteger(numOfWeeks));
@@ -149,7 +149,7 @@ class UpdateTable {
             }
         };
         final ScheduledFuture<?> beeperHandle = scheduler.scheduleAtFixedRate(
-                beeper, delay, 30, SECONDS);//todo change to 7 days
+                beeper, delay, 30, MINUTES);//todo change to 7 days
     }
 }
 

@@ -31,7 +31,7 @@ public class OneRoundGamePolicy implements IGameInlayPolicy {
         this.tempListOfGames = new HashMap<>();
         this.day = DB.getInstance().getLeagues()+1;
         //this.timeOfGame = LocalDateTime.of(year, Month.JANUARY, day, 19, 0, 0);//todo add to code this line
-        timeOfGame = LocalDateTime.now().plus(5, ChronoUnit.SECONDS);
+        timeOfGame = LocalDateTime.now().plus(15, ChronoUnit.SECONDS);
     }
 
     @Override

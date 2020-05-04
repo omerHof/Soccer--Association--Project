@@ -54,13 +54,14 @@ public class Game extends Observable {
         this.eventBook = new ArrayList<>();
         this.score = "0-0";
         this.stadium = homeTeam.getStadium();
+        setAlarms();
     }
 
     /**
      * set the alarms before, after and on the game to all Stakeholders
      */
     public void setAlarms() {
-        dayToGame();//todo is problem to test because its negative time
+        dayToGame();
         startGame();
         endGame();
         closeGame();
@@ -74,7 +75,7 @@ public class Game extends Observable {
      * set alarms day before the game
      */
     private void dayToGame() {
-        LocalDateTime dayBefore = timeOfGame.minus(1, ChronoUnit.SECONDS);//todo change seconds to days
+        LocalDateTime dayBefore = timeOfGame.minus(5, ChronoUnit.SECONDS);//todo change seconds to days
         DayToGame dayToGame = new DayToGame(homeTeam, awayTeam, this);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, dayBefore);
@@ -97,7 +98,7 @@ public class Game extends Observable {
      * set alarms when the game start
      */
     private void endGame() {
-        LocalDateTime GameEndTime = timeOfGame.plus(3, ChronoUnit.SECONDS);//todo change to 90 minutes
+        LocalDateTime GameEndTime = timeOfGame.plus(5, ChronoUnit.SECONDS);//todo change to 90 minutes
         EndGame endGame = new EndGame(homeTeam, awayTeam, this, score);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, GameEndTime);
@@ -108,7 +109,7 @@ public class Game extends Observable {
      * set alarms when the game close
      */
     private void closeGame() {
-        LocalDateTime closeGameTime = timeOfGame.plus(6, ChronoUnit.SECONDS);//todo change to 6.5 hours
+        LocalDateTime closeGameTime = timeOfGame.plus(5, ChronoUnit.SECONDS);//todo change to 6.5 hours
         CloseGame closeGame = new CloseGame(homeTeam, awayTeam, this, score);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, closeGameTime);
@@ -219,11 +220,11 @@ class DayToGame extends TimerTask {
 
         if(homeTeam.getPage()!=null) {
             homeTeam.getPage().setChange();
-            homeTeam.getPage().notifyObservers("DayToGame between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo add
+            homeTeam.getPage().notifyObservers("DayToGame between: " + homeTeam.getName() + " and " + awayTeam.getName());
         }
         if(awayTeam.getPage()!=null) {
             awayTeam.getPage().setChange();
-            awayTeam.getPage().notifyObservers("DayToGame between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo add
+            awayTeam.getPage().notifyObservers("DayToGame between: " + homeTeam.getName() + " and " + awayTeam.getName());
         }
 
         game.notifyObservers("Day To Game you are assigned to between: "+homeTeam.getName()+" and "+awayTeam.getName());
@@ -254,11 +255,11 @@ class StartGame extends TimerTask {
     public void run() {
         if(homeTeam.getPage()!=null) {
             homeTeam.getPage().setChange();
-            homeTeam.getPage().notifyObservers("game Start between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo
+            homeTeam.getPage().notifyObservers("game Start between: " + homeTeam.getName() + " and " + awayTeam.getName());
         }
         if(awayTeam.getPage()!=null) {
             awayTeam.getPage().setChange();
-            awayTeam.getPage().notifyObservers("game Start between: " + homeTeam.getName() + " and " + awayTeam.getName());//todo
+            awayTeam.getPage().notifyObservers("game Start between: " + homeTeam.getName() + " and " + awayTeam.getName());
         }
         game.setStatus(Game.gameStatus.active);
         MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " started");
@@ -297,7 +298,7 @@ class EndGame extends TimerTask {
         game.setChange();
 
         game.setStatus(Game.gameStatus.finish);
-        double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();//todo now there is'nt stadium
+        double moneyFromGame=homeTeam.getStadium().getCapacity()*homeTeam.getStadium().getPrice();
         homeTeam.setBudget(homeTeam.getBudget()+moneyFromGame);
         Random rand = new Random();//todo remove
         int randomNum = rand.nextInt((6 - 0) + 1) + 0;//todo remove
@@ -306,11 +307,11 @@ class EndGame extends TimerTask {
         setStatistic();
         if(homeTeam.getPage()!=null) {
             homeTeam.getPage().setChange();
-            homeTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + " in a score: " + this.game.getScore());//todo
+            homeTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + " in a score: " + this.game.getScore());
         }
         if(awayTeam.getPage()!=null) {
             awayTeam.getPage().setChange();
-            awayTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + " in a score: " + this.game.getScore());//todo
+            awayTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + " in a score: " + this.game.getScore());
         }
         game.setFinalReport(eventListToReport(game.getEventBook()));
         MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " ended. the score: " + game.getScore());

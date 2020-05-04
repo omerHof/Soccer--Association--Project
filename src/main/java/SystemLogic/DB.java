@@ -180,7 +180,7 @@ public class DB {
      */
     public boolean addSeason(String name, Season season){
         if(leagues.containsKey(name)){
-            if(season!=null && !leagues.get(name).getAllSeasons().contains(season)){
+            if(season!=null && !leagues.get(name).getAllSeasons().contains(season) && checkSeasonYear(name,season.getYear())){
                 List<Season> newList=leagues.get(name).getAllSeasons();
                 newList.add(season);
                 leagues.get(name).setAllSeasons(newList);
@@ -189,6 +189,20 @@ public class DB {
             return false;
         }
         return false;
+    }
+
+    public boolean checkSeasonYear(String leagueName, int seasonYear){
+        try {
+            for (Season season : leagues.get(leagueName).getAllSeasons()) {
+                if (season.getYear() == seasonYear) {
+                    return false;
+                }
+            }
+
+        }catch (Exception e){
+
+        }
+        return true;
     }
 
     /**

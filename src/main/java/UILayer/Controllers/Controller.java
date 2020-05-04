@@ -138,8 +138,30 @@ public abstract class Controller implements Initializable {
         s.show();
     }
 
-    public void openMyApps(ActionEvent actionEvent) {
 
+    public void openMyApps() throws IOException {
+        FXMLLoader fxmlLoader;
+        fxmlLoader = new FXMLLoader(getClass().getResource("/Views/RepMyApp.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        MyAppController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
+
+    public void openAddSeason() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addSeason.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        SeasonController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
     }
 
 }

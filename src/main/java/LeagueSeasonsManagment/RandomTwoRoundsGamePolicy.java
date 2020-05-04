@@ -5,6 +5,7 @@ import SystemLogic.DB;
 import Teams.Team;
 import java.time.LocalDateTime;
 import java.time.Month;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -28,7 +29,9 @@ public class RandomTwoRoundsGamePolicy implements IGameInlayPolicy {
         this.ListTeam = teams;
         this.listOfGames = new HashMap<>();
         this.day = DB.getInstance().getLeagues()+1;
-        this.timeOfGame = LocalDateTime.of(year, Month.JANUARY, day, 19, 0, 0);
+        //this.timeOfGame = LocalDateTime.of(year, Month.JANUARY, day, 19, 0, 0);//todo
+        timeOfGame = LocalDateTime.now().plus(15, ChronoUnit.SECONDS);//todo
+
     }
 
     @Override
