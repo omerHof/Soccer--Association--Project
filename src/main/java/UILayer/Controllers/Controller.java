@@ -17,6 +17,7 @@ import java.io.IOException;
 
 public abstract class Controller implements Initializable {
 
+    @FXML
     protected String userName;
     protected String userType;
 
