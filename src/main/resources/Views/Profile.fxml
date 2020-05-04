@@ -1,19 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
 <?import com.jfoenix.controls.JFXButton?>
-<AnchorPane prefWidth="500"
-            prefHeight="500" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.ProfileController">
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500" prefWidth="500" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.ProfileController">
 
 
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
-        <JFXButton layoutX="387.0" layoutY="244.0" ripplerFill="#dc6464" stylesheets="@Landing.css" text="THIS IS Profile" />
+      <JFXTextField layoutX="53.0" layoutY="193.0" prefHeight="70.0" prefWidth="185.0" style="-fx-background-color: #28966E;" text="User name:">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField layoutX="53.0" layoutY="308.0" prefHeight="70.0" prefWidth="185.0" style="-fx-background-color: #28966E;" text="Password:">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField layoutX="53.0" layoutY="434.0" prefHeight="70.0" prefWidth="185.0" style="-fx-background-color: #28966E;" text="Full name:">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField layoutX="53.0" layoutY="548.0" prefHeight="70.0" prefWidth="185.0" style="-fx-background-color: #28966E;" text="Email:">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="userNameDetail" layoutX="323.0" layoutY="193.0" prefHeight="70.0" prefWidth="185.0" style="-fx-background-color: #28966E;">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="password" layoutX="323.0" layoutY="307.0" prefHeight="70.0" prefWidth="185.0" style="-fx-background-color: #28966E;">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="568.0" layoutY="548.0" onAction="#showEmailEditor" style="-fx-background-color: RED;" text="Edit">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="fullName" layoutX="323.0" layoutY="434.0" prefHeight="70.0" prefWidth="185.0" style="-fx-background-color: #28966E;">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="email" layoutX="323.0" layoutY="548.0" prefHeight="70.0" prefWidth="185.0" style="-fx-background-color: #28966E;">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="568.0" layoutY="434.0" onAction="#showFullNameEditor" style="-fx-background-color: RED;" text="Edit">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXButton>
+      <JFXTextArea fx:id="fullNameEditor" layoutX="718.0" layoutY="433.0" prefHeight="70.0" prefWidth="207.0" style="-fx-background-color: #28966E;" />
+      <JFXTextArea fx:id="emailEditor" layoutX="718.0" layoutY="548.0" prefHeight="70.0" prefWidth="207.0" style="-fx-background-color: #28966E;" />
+      <JFXButton fx:id="submitFullName" layoutX="985.0" layoutY="434.0" onAction="#submitFullName" style="-fx-background-color: RED;" text="Submit">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="submitEmail" layoutX="985.0" layoutY="548.0" onAction="#submitEmail" style="-fx-background-color: RED;" text="Submit">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXButton>
     </children>
 </AnchorPane>
-
