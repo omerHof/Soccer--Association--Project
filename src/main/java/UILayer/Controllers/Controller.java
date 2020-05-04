@@ -17,6 +17,10 @@ import java.io.IOException;
 
 public abstract class Controller implements Initializable {
 
+    protected String userName;
+    protected String userType;
+
+
     /**
      *  close the program with confirming
      *  close the servers
@@ -38,7 +42,7 @@ public abstract class Controller implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Landing.fxml"));
         Parent root = fxmlLoader.load();
         Stage s = Main.getStage();
-        Scene scene = new Scene(root,1200,800);
+        Scene scene = new Scene(root);
         s.setScene(scene);
         LandingController lc = fxmlLoader.getController();
 
@@ -52,7 +56,8 @@ public abstract class Controller implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Login.fxml"));
         Parent root = fxmlLoader.load();
         Stage s = Main.getStage();
-        Scene scene = new Scene(root,1200,800);
+        Scene scene = new Scene(root);
+
         s.setScene(scene);
         LoginController lg = fxmlLoader.getController();
 
@@ -65,7 +70,7 @@ public abstract class Controller implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Leagues.fxml"));
         Parent root = fxmlLoader.load();
         Stage s = Main.getStage();
-        Scene scene = new Scene(root,1200,800);
+        Scene scene = new Scene(root);
         s.setScene(scene);
         LeaguesController lc = fxmlLoader.getController();
 
@@ -78,7 +83,7 @@ public abstract class Controller implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/SignUp.fxml"));
         Parent root = fxmlLoader.load();
         Stage s = Main.getStage();
-        Scene scene = new Scene(root,1200,800);
+        Scene scene = new Scene(root);
         s.setScene(scene);
         SignUpController suc = fxmlLoader.getController();
 
@@ -90,7 +95,7 @@ public abstract class Controller implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Players.fxml"));
         Parent root = fxmlLoader.load();
         Stage s = Main.getStage();
-        Scene scene = new Scene(root,1200,800);
+        Scene scene = new Scene(root);
         s.setScene(scene);
         PlayersController pc = fxmlLoader.getController();
 
@@ -102,7 +107,7 @@ public abstract class Controller implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Coaches.fxml"));
         Parent root = fxmlLoader.load();
         Stage s = Main.getStage();
-        Scene scene = new Scene(root,1200,800);
+        Scene scene = new Scene(root);
         s.setScene(scene);
         CoachesController cc = fxmlLoader.getController();
 
@@ -114,10 +119,21 @@ public abstract class Controller implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Teams.fxml"));
         Parent root = fxmlLoader.load();
         Stage s = Main.getStage();
-        Scene scene = new Scene(root,1200,800);
+        Scene scene = new Scene(root);
         s.setScene(scene);
         TeamsController cc = fxmlLoader.getController();
 
+        Main.setStage(s);
+        s.show();
+    }
+
+    public void goToProfile() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Profile.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        ProfileController cc = fxmlLoader.getController();
         Main.setStage(s);
         s.show();
     }

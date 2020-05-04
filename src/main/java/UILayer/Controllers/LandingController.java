@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -21,6 +22,9 @@ public class LandingController extends Controller {
     @FXML
     JFXButton mainLabel;
 
+    @FXML
+    Screen screen;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -29,6 +33,7 @@ public class LandingController extends Controller {
             e.consume();
             closeProgram();
         });
+        screen = Screen.getPrimary();
     }
 
 
