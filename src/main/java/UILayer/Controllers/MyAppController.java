@@ -21,8 +21,12 @@ import java.util.ResourceBundle;
 
 public class MyAppController extends Controller {
 
-    User user= new AssociationRepresentative("","","","");
+    public MyAppController() {
+        userType="AssociationRepresentative";//todo remove only for test
+    }
 
+    @FXML
+    private Button createNewTeamButton;
     @FXML
     private Button initNewSeasonButton;
 
@@ -36,13 +40,33 @@ public class MyAppController extends Controller {
         setButton();
     }
 
-    public void setButton(){
-        try {
-            if (!(user instanceof AssociationRepresentative)) {
-                initNewSeasonButton.setVisible(false);
-            }
-        }catch (Exception e){
+    public void setButton() {
 
+        switch (userType) {
+            case "Fan":
+
+                break;
+            case "Player":
+
+                break;
+            case "Coach":
+
+                break;
+            case "AssociationRepresentative":
+                initNewSeasonButton.setVisible(true);
+                break;
+            case "TeamOwner":
+                createNewTeamButton.setVisible(true);
+                break;
+            case "Manager":
+
+                break;
+            case "Referee":
+
+                break;
+            case "MainReferee":
+
+                break;
         }
     }
 
