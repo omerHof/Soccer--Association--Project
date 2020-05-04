@@ -441,6 +441,19 @@ public class DB {
         return new ArrayList<>(this.teams.keySet());
     }
 
+    public ArrayList<String> getFullTeamsNames(){
+        ArrayList<String> reesult= new ArrayList<>();
+        Iterator it = teams.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            Team team=(Team)pair.getValue();
+            if(team.getCoaches().size()>0&&team.getPlayers().size()>0){
+                reesult.add((String)pair.getKey());
+            }
+        }
+        return reesult;
+    }
+
 
     public ArrayList<String> getAllUserByType(String type) {
         ArrayList<String> allUsersByType = new ArrayList<>();
@@ -448,7 +461,7 @@ public class DB {
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
             User user = (User) pair.getValue();
-            if (type.equals(user.getClass())) {
+            if (type.equals(user.getClass().getSimpleName())) {
                 allUsersByType.add(user.getUserFullName());
             }
         }

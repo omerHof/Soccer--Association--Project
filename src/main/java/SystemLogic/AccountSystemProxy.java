@@ -1,7 +1,7 @@
 package SystemLogic;
 
 public class AccountSystemProxy implements IExternalSystem {
-    AccountSystem accountSystem;
+    AccountSystem accountSystem= new AccountSystem();
 
     @Override
     public boolean connectToSystem() {

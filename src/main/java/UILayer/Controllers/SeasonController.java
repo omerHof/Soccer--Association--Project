@@ -1,6 +1,7 @@
 package UILayer.Controllers;
 
 import ServiceLayer.LeagueSeasonManagement;
+import ServiceLayer.SystemManagement;
 import UILayer.Main;
 import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
@@ -20,17 +21,20 @@ import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class SeasonController extends Controller {
-
     LeagueSeasonManagement seasonManagement = new LeagueSeasonManagement();
+    SystemManagement systemManagement = new SystemManagement();
     List<String> arrayTeams;
     List<String> arrayLeagues;
     List<String> arrayrepresentatives;
     List<String> arrayReferees;
+    List<String> arrayMainReferees;
+
 
     List<String> arrayTeamsChosen;
     String leaguesChosen;
     List<String> arrayrepresentativesChosen;
     List<String> arrayRefereesChosen;
+    List<String> arrayMainRefereesChosen;
     int yearChosen;
     String scoreChosen;
     String gameChosen;
@@ -50,6 +54,8 @@ public class SeasonController extends Controller {
     private ChoiceBox<String> choiceBox6;
     @FXML
     private ChoiceBox<String> choiceBox7;
+    @FXML
+    private ChoiceBox<String> choiceBox8;
 
     ObservableList<String> options = FXCollections.observableArrayList();
     ObservableList<String> options2 = FXCollections.observableArrayList();
@@ -58,20 +64,21 @@ public class SeasonController extends Controller {
     ObservableList<String> options5 = FXCollections.observableArrayList();
     ObservableList<String> options6 = FXCollections.observableArrayList();
     ObservableList<String> options7 = FXCollections.observableArrayList();
+    ObservableList<String> options8 = FXCollections.observableArrayList();
 
     ObservableList<String> league = FXCollections.observableArrayList();
     ObservableList<String> referees = FXCollections.observableArrayList();
+    ObservableList<String> mainReferees = FXCollections.observableArrayList();
     ObservableList<String> teams = FXCollections.observableArrayList();
     ObservableList<String> representatives = FXCollections.observableArrayList();
 
-
     public SeasonController() {
 
-
-        arrayLeagues = seasonManagement.getLeagues();
-        arrayTeams = seasonManagement.getTeams();
-        arrayReferees = seasonManagement.getReferees();
-        arrayrepresentatives = seasonManagement.getRepresentatives();
+        arrayLeagues = systemManagement.getLeagueNames();
+        arrayTeams = systemManagement.getFullTeamsNames();
+        arrayReferees = systemManagement.getAllUsersByType("Referee");
+        arrayMainReferees = systemManagement.getAllUsersByType("MainReferee");
+        arrayrepresentatives = systemManagement.getAllUsersByType("AssociationRepresentative");
 
         setInfo();
 
@@ -79,11 +86,12 @@ public class SeasonController extends Controller {
         choiceBox2 = new ChoiceBox<>();
         choiceBox3 = new ChoiceBox<>();
         choiceBox4 = new ChoiceBox<>();
+        choiceBox8 = new ChoiceBox<>();
 
         arrayTeamsChosen=new ArrayList<>();
         arrayrepresentativesChosen=new ArrayList<>();
         arrayRefereesChosen=new ArrayList<>();
-
+        arrayMainRefereesChosen=new ArrayList<>();
     }
 
     public void setInfo() {
@@ -92,6 +100,9 @@ public class SeasonController extends Controller {
         }
         for(String referee:arrayReferees){
             options2.add(referee);
+        }
+        for(String mainReferee:arrayMainReferees){
+            options8.add(mainReferee);
         }
         for(String team:arrayTeams){
             options3.add(team);
@@ -131,6 +142,8 @@ public class SeasonController extends Controller {
             choiceBox5.setItems(options5);
             choiceBox6.setItems(options6);
             choiceBox7.setItems(options7);
+            choiceBox8.setItems(options8);
+
 
         } catch (Exception e) {
 
@@ -171,6 +184,21 @@ public class SeasonController extends Controller {
     }
 
     @FXML
+    ComboBox comboMainReferee;
+
+    public void addMainReferee() {
+        try {
+            if (!mainReferees.contains(choiceBox8.getValue())) {
+                mainReferees.add(choiceBox8.getValue());
+            }
+            comboMainReferee.setItems(mainReferees);
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    @FXML
     ComboBox comboTeams;
 
     public void addTeam() {
@@ -199,6 +227,9 @@ public class SeasonController extends Controller {
     public void createSeason(ActionEvent actionEvent) {
         if(check()) {
             assertInfo();
+            for(String mainReferee:arrayMainRefereesChosen){
+                arrayRefereesChosen.add(mainReferee);
+            }
             seasonManagement.addSeasonToLeague(leaguesChosen, yearChosen, scoreChosen, gameChosen, arrayTeamsChosen, arrayRefereesChosen, arrayrepresentativesChosen);
         }
     }
@@ -212,6 +243,27 @@ public class SeasonController extends Controller {
         }
         if(comboReferee.getItems().size()==0){
             Alert alert = new Alert(Alert.AlertType.WARNING, "must choose referees\n", ButtonType.CLOSE);
+            alert.setHeaderText("Incorrect fill");
+            alert.showAndWait();
+            return false;
+
+        }
+        if(comboReferee.getItems().size()<comboTeams.getItems().size()/2*3){
+            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose more referees or less teams\n", ButtonType.CLOSE);
+            alert.setHeaderText("Incorrect fill");
+            alert.showAndWait();
+            return false;
+
+        }
+        if(comboMainReferee.getItems().size()==0){
+            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose main referees\n", ButtonType.CLOSE);
+            alert.setHeaderText("Incorrect fill");
+            alert.showAndWait();
+            return false;
+
+        }
+        if(comboMainReferee.getItems().size()<comboTeams.getItems().size()/2){
+            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose more main referees ot less teams\n", ButtonType.CLOSE);
             alert.setHeaderText("Incorrect fill");
             alert.showAndWait();
             return false;
@@ -236,22 +288,28 @@ public class SeasonController extends Controller {
             alert.showAndWait();
             return false;
         }
+        if(comboAsso.getItems().size()<comboTeams.getItems().size()/2){
+            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose more asso or less teams\n", ButtonType.CLOSE);
+            alert.setHeaderText("Incorrect fill");
+            alert.showAndWait();
+            return false;
+        }
         if(choiceBox5.getValue().equals("")){
-            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose year\n", ButtonType.CLOSE);//todo
+            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose year\n", ButtonType.CLOSE);
             alert.setHeaderText("Incorrect fill");
             alert.showAndWait();
             return false;
 
         }
         if(choiceBox6.getValue().equals("")){
-            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose game policy\n", ButtonType.CLOSE);//todo
+            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose game policy\n", ButtonType.CLOSE);
             alert.setHeaderText("Incorrect fill");
             alert.showAndWait();
             return false;
 
         }
         if(choiceBox7.getValue().equals("")){
-            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose score policy\n", ButtonType.CLOSE);//todo
+            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose score policy\n", ButtonType.CLOSE);
             alert.setHeaderText("Incorrect fill");
             alert.showAndWait();
             return false;
@@ -267,6 +325,9 @@ public class SeasonController extends Controller {
         }
         for(String referee:referees){
             arrayRefereesChosen.add(referee);
+        }
+        for(String mainReferee:mainReferees){
+            arrayMainRefereesChosen.add(mainReferee);
         }
 
         for(String team:teams){

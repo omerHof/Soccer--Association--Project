@@ -1,5 +1,6 @@
 package ServiceLayer;
 
+import DataForTest.DataBase;
 import SystemLogic.DB;
 import SystemLogic.MainSystem;
 
@@ -10,12 +11,14 @@ public class SystemManagement {
     private LeagueSeasonManagement leagueSeasonManagement;
     private TeamManagement teamManagement;
     private UserManagement userManagement;
-
-    public SystemManagement(LeagueSeasonManagement leagueSeasonManagement) {
+    private DataBase dataBase;//todo only for test
+    public SystemManagement() {
        this.leagueSeasonManagement = new LeagueSeasonManagement();
        this.teamManagement = new TeamManagement();
        this.userManagement = new UserManagement();
        systemInitialize();
+       dataBase= new DataBase();//todo remove- only for test
+
     }
 
     private void systemInitialize() {
@@ -23,14 +26,14 @@ public class SystemManagement {
 
     }
 
-    ArrayList<String> getLeagueNames(){
+    public ArrayList<String> getLeagueNames(){
         return DB.getInstance().getLeagueNames();
     }
-    ArrayList<String> getTeamsNames(){
-        return DB.getInstance().getTeamsNames();
+    public ArrayList<String> getFullTeamsNames(){
+        return DB.getInstance().getFullTeamsNames();
     }
 
-    ArrayList<String> getAllUsersByType( String type){
+    public ArrayList<String> getAllUsersByType( String type){
         return DB.getInstance().getAllUserByType(type);
     }
 }

@@ -1,7 +1,7 @@
 package SystemLogic;
 
 public class TaxSystemProxy implements IExternalSystem{
-    TaxSystem taxSystem;
+    TaxSystem taxSystem = new TaxSystem();
 
     @Override
     public boolean connectToSystem() {
