@@ -35,7 +35,7 @@
              </Label>
          </children></Pane>
 
-             <JFXButton fx:id="submit" layoutX="195.0" layoutY="284.0" onAction="#openNewTeam" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #393eff; -fx-border-color: black;" text="submit">
+             <JFXButton fx:id="submit" layoutX="195.0" layoutY="284.0" onAction="#submitOpenTeam" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #393eff; -fx-border-color: black;" text="submit">
                  <font>
                      <Font name="System Bold" size="24.0" />
                  </font>
