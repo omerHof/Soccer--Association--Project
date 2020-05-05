@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.LeaguesController">
+    <children>
+
+        <fx:include fx:id="navBar" source="Landing.fxml" />
+        <TextField fx:id="choosenTeamName" layoutX="420.0" layoutY="163.0" prefWidth="150.0" />
+        <TextField fx:id="choosenTeamBudget" layoutX="420.0" layoutY="223.0" prefWidth="150.0" />
+
+        <Pane layoutX="195.0" layoutY="148.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">         <children>
+            <JFXTextField alignment="CENTER" promptText="please choose name" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+         </children></Pane>
+        <Pane layoutX="195.0" layoutY="213.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+         <children>
+            <JFXTextField alignment="CENTER" promptText="please set a budgut" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+         </children></Pane>
+        <Pane layoutX="193.0" layoutY="338.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+         <children>
+            <JFXTextField alignment="CENTER" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+         </children></Pane>
+      <Label text="Team name" underline="true" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+        <Text layoutX="424.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE NEW TEAM" textAlignment="CENTER" wrappingWidth="339.79999999999984">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Text>
+        
+
+    </children>
+</AnchorPane>

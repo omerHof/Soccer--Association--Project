@@ -165,4 +165,30 @@ public abstract class Controller implements Initializable {
         s.show();
     }
 
+
+    public void openNewTeam() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addTeam.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        TeamsController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
+
+    public void openTeamPage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addTeamPage.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        TeamsController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
+
+
 }
