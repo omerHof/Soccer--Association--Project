@@ -27,7 +27,12 @@ public class MyAppController extends Controller {
     private Button createNewTeamButton;
     @FXML
     private Button initNewSeasonButton;
-
+    @FXML
+    private Button openTeamPage;
+    @FXML
+    private Button openPlayerPage;
+    @FXML
+    private Button openCoachPage;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Stage s = Main.getStage();
@@ -49,9 +54,11 @@ public class MyAppController extends Controller {
 
                 break;
             case "Player":
+                openPlayerPage.setVisible(true);
 
                 break;
             case "Coach":
+                openCoachPage.setVisible(true);
 
                 break;
             case "AssociationRepresentative":
@@ -59,9 +66,10 @@ public class MyAppController extends Controller {
                 break;
             case "TeamOwner":
                 createNewTeamButton.setVisible(true);
+                openTeamPage.setVisible(true);
                 break;
             case "Manager":
-
+                openTeamPage.setVisible(true);
                 break;
             case "Referee":
 
