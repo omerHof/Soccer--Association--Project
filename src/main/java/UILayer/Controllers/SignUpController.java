@@ -50,8 +50,6 @@ public class SignUpController extends Controller {
     private String managementPassword;
     private LocalDate birthDate;
 
-    private boolean detailsFilled = false;
-
     private String userType;
     private String generatorType;
 
@@ -93,31 +91,30 @@ public class SignUpController extends Controller {
     @FXML
     DatePicker birthdateDP;
     @FXML
-    Label birthdateLable;
+    Label birthdateLabel;
     @FXML
-    Label teamRoleLable;
+    Label teamRoleLabel;
     @FXML
     ChoiceBox coachTeamRoleCB;
     @FXML
-    Label courtRoleLable;
+    Label courtRoleLabel;
     @FXML
     ChoiceBox playerCourtRoleCB;
 
     @FXML
-    Label qualificationLable;
+    Label qualificationLabel;
     @FXML
     ChoiceBox refereeQualificationCB;
 
     @FXML
     TextField managePassTF;
     @FXML
-    Label managePassLable;
+    Label managePassLabel;
 
     @FXML
     JFXButton submit;
-
-
-
+    @FXML
+    JFXButton backBTN;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -127,8 +124,18 @@ public class SignUpController extends Controller {
             closeProgram();
         });
 
-        userManagement = new UserManagement();
+        refereeBTN.setFocusTraversable(false);
+        fanBTN.setFocusTraversable(false);
+        playerBTN.setFocusTraversable(false);
+        coachBTN.setFocusTraversable(false);
+        teamOwnerBTN.setFocusTraversable(false);
+        managerBTN.setFocusTraversable(false);
+        administratorBTN.setFocusTraversable(false);
+        associationRepresentativeBTN.setFocusTraversable(false);
+        backBTN.setFocusTraversable(false);
 
+
+        userManagement = new UserManagement();
 
         coachRoleOptions.add("Head Coach");
         coachRoleOptions.add("Assistant Coach");
@@ -166,12 +173,15 @@ public class SignUpController extends Controller {
     @FXML
     public void typePlayer() throws IOException {
 
+        hideAllUnderLines();
+        playerBTN.setUnderline(true);
+
         allExtraFieldsOff();
 
         birthdateDP.setVisible(true);
-        birthdateLable.setVisible(true);
+        birthdateLabel.setVisible(true);
         playerCourtRoleCB.setVisible(true);
-        courtRoleLable.setVisible(true);
+        courtRoleLabel.setVisible(true);
 
         userType = "Player";
 
@@ -182,10 +192,13 @@ public class SignUpController extends Controller {
     @FXML
     public void typeCoach() throws IOException {
 
+        hideAllUnderLines();
+
+        coachBTN.setUnderline(true);
         allExtraFieldsOff();
 
         coachTeamRoleCB.setVisible(true);
-        teamRoleLable.setVisible(true);
+        teamRoleLabel.setVisible(true);
 
         userType = "Coach";
 
@@ -197,10 +210,13 @@ public class SignUpController extends Controller {
     @FXML
     public void typeReferee() throws IOException {
 
+        hideAllUnderLines();
+
+        refereeBTN.setUnderline(true);
         allExtraFieldsOff();
 
         refereeQualificationCB.setVisible(true);
-        qualificationLable.setVisible(true);
+        qualificationLabel.setVisible(true);
 
         userType = "Referee";
 
@@ -208,45 +224,33 @@ public class SignUpController extends Controller {
 
     }
 
-    @FXML
-    public void typeManagement() throws IOException {
-
-        allExtraFieldsOff();
-
-        managePassTF.setVisible(true);
-        managePassLable.setVisible(true);
-
-        if (administratorBTN.isPressed())
-            userType = "Administrator";
-        else
-            userType = "AssociationRepresentative";
-
-        submit.setDisable(false); //now the user can try pressing the submit button.
-
-        //checkDetailsFilled();
-    }
 
     @FXML
     public void allExtraFieldsOff() throws IOException {
 
         birthdateDP.setVisible(false);
-        birthdateLable.setVisible(false);
+        birthdateLabel.setVisible(false);
         coachTeamRoleCB.setVisible(false);
-        teamRoleLable.setVisible(false);
+        teamRoleLabel.setVisible(false);
         playerCourtRoleCB.setVisible(false);
-        courtRoleLable.setVisible(false);
+        courtRoleLabel.setVisible(false);
         refereeQualificationCB.setVisible(false);
         playerCourtRoleCB.setVisible(false);
         coachTeamRoleCB.setVisible(false);
-        qualificationLable.setVisible(false);
+        qualificationLabel.setVisible(false);
         managePassTF.setVisible(false);
-        managePassLable.setVisible(false);
+        managePassLabel.setVisible(false);
 
         submit.setDisable(false); //now the user can try to push on the submit button.
+        submit.setFocusTraversable(false);
+
     }
 
 
     public void checkDetailsFilled() throws IOException {
+
+        submit.setFocusTraversable(false);
+
 
 //        usernameTF.addKeyListener(new KeyAdapter() {
 //
@@ -268,28 +272,32 @@ public class SignUpController extends Controller {
 
         if(fullnameTF.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter your name.");
+//            submit.setFocusTraversable(false);
             return;
         }
 
 
         if(emailTF.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter your email address.");
+            submit.setFocusTraversable(false);
             return;
         }
 
         if(usernameTF.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter a username.");
+            submit.setFocusTraversable(false);
             return;
         }
 
         if(passwordTF.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter a password.");
+            submit.setFocusTraversable(false);
             return;
         }
 
         //showAlert(Alert.AlertType.CONFIRMATION, "Registration Successful!", "Welcome " + usernameTF.getText());
 
-
+        submit.setFocusTraversable(false);
         checkDetailsCorrect();
     }
 
@@ -332,6 +340,8 @@ public class SignUpController extends Controller {
     @FXML
     public void checkDetailsCorrect() throws IOException {
 
+        submit.setFocusTraversable(false);
+
         username = usernameTF.getText();
         fullname = fullnameTF.getText();
         password = passwordTF.getText();
@@ -351,28 +361,29 @@ public class SignUpController extends Controller {
 
         if (!matcher.matches()) { //invalid email address.
             showAlert(Alert.AlertType.ERROR, "Form Error!", "The email address you entered is not valid. Please try again.");
+            submit.setFocusTraversable(false);
             return;
         }
 
         if (!username.matches("^[a-zA-Z0-9]*$")) { //check username validation (letters and nums)
             showAlert(Alert.AlertType.ERROR, "Form Error!", "The username you chose must contains only characters and digits. Please try again.");
+            submit.setFocusTraversable(false);
             return;
         }
 
         if (!password.matches("^[a-zA-Z0-9]*$")) { //check password validation  (letters and nums)
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Your password must contains only characters and digits. Please try again.");
+            submit.setFocusTraversable(false);
             return;
         }
 
         if (password.length() < 6) { //check password validation  (letters and nums)
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Your password must be at least 6 characters. Please try again.");
+            submit.setFocusTraversable(false);
             return;
         }
 
-
-
         //creates the correct user generator, to send through the service layer.
-
         if (userType.equals("Player") || userType.equals("Coach") || userType.equals("Manager") || userType.equals("Teamowner") || userType.equals("Referee"))
             generatorType = "PremiumUserGenerator";
 
@@ -381,7 +392,6 @@ public class SignUpController extends Controller {
 
         else // a fan
             generatorType = "SimpleUserGenerator";
-
 
 
         // gets details by user type:
@@ -395,6 +405,7 @@ public class SignUpController extends Controller {
 
             if(!isSelected) { //the user didn't choose any of the options.
                 showAlert(Alert.AlertType.ERROR, "Form Error!", "You must choose a qualification in order to submit the form.");
+                submit.setFocusTraversable(false);
                 return;
             }
             qualification = refereeQualificationCB.getValue().toString();
@@ -409,6 +420,7 @@ public class SignUpController extends Controller {
 
             if(!isSelected) { //the user didn't choose any of the options.
                 showAlert(Alert.AlertType.ERROR, "Form Error!", "You must choose a court role in order to submit the form.");
+                submit.setFocusTraversable(false);
                 return;
             }
             courtRole = playerCourtRoleCB.getValue().toString();
@@ -419,6 +431,7 @@ public class SignUpController extends Controller {
 
             if(birthDate==null){
                 showAlert(Alert.AlertType.ERROR, "Form Error!", "You must choose your birth date in order to submit the form.");
+                submit.setFocusTraversable(false);
                 return;
             }
 
@@ -431,6 +444,7 @@ public class SignUpController extends Controller {
 
             if(!isSelected) { //the user didn't choose any of the options.
                 showAlert(Alert.AlertType.ERROR, "Form Error!", "You must choose your team role in order to submit the form.");
+                submit.setFocusTraversable(false);
                 return;
             }
             teamRole = coachTeamRoleCB.getValue().toString();
@@ -444,6 +458,7 @@ public class SignUpController extends Controller {
 
             if(managementPassword.equals("")){
                 showAlert(Alert.AlertType.ERROR, "Form Error!", "You must enter your management password in order to submit the form.");
+                submit.setFocusTraversable(false);
                 return;
             }
 
@@ -458,11 +473,13 @@ public class SignUpController extends Controller {
 
         if(userCreatedMessage.equals("exist")){
             showAlert(Alert.AlertType.ERROR, "Form Error!", "The username you choose is already exist. Please choose a new one.");
+            submit.setFocusTraversable(false);
             return;
         }
 
         else if(userCreatedMessage.equals("null")){
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Something went wrong, please check the details you entered.");
+            submit.setFocusTraversable(false);
             return;
         }
 
@@ -472,12 +489,12 @@ public class SignUpController extends Controller {
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Confirmation Dialog");
-            alert.setHeaderText("Welcome abroad !");
+            alert.setHeaderText("Welcome aboard !");
             alert.setContentText(" Your user was added successfully to the system.");
 
             alert.showAndWait();
 
-//            showAlert(Alert.AlertType.CONFIRMATION, "Form Information", "Welcome abroad ! Your user was added successfully to the system.");
+//            showAlert(Alert.AlertType.CONFIRMATION, "Form Information", "Welcome aboard ! Your user was added successfully to the system.");
             goToLanding();
         }
     }
@@ -492,8 +509,13 @@ public class SignUpController extends Controller {
     }
 
 
-    public void typeFan(ActionEvent actionEvent) {
+    public void typeFan() {
+
+        hideAllUnderLines();
+
         userType = "Fan";
+        fanBTN.setUnderline(true);
+
 
         try {
             allExtraFieldsOff();
@@ -503,8 +525,11 @@ public class SignUpController extends Controller {
         }
     }
 
-    public void typeTeamOwner(ActionEvent actionEvent) {
+    public void typeTeamOwner() {
+
+        hideAllUnderLines();
         userType = "TeamOwner";
+        teamOwnerBTN.setUnderline(true);
 
         try {
             allExtraFieldsOff();
@@ -514,8 +539,13 @@ public class SignUpController extends Controller {
         }
     }
 
-    public void typeManager(ActionEvent actionEvent) {
+    public void typeManager() {
+
+        hideAllUnderLines();
+
         userType = "Manager";
+        managerBTN.setUnderline(true);
+
 
         try {
             allExtraFieldsOff();
@@ -525,7 +555,10 @@ public class SignUpController extends Controller {
         }
     }
 
-    public void typeAdministrator(ActionEvent actionEvent) {
+    public void typeAdministrator() {
+
+        hideAllUnderLines();
+        administratorBTN.setUnderline(true);
 
         try {
             allExtraFieldsOff();
@@ -535,17 +568,18 @@ public class SignUpController extends Controller {
         }
 
         managePassTF.setVisible(true);
-        managePassLable.setVisible(true);
+        managePassLabel.setVisible(true);
 
         userType = "Administrator";
 
         submit.setDisable(false); //now the user can try pressing the submit button.
     }
 
-    public void typeAssociationRepresentative(ActionEvent actionEvent) {
+    public void typeAssociationRepresentative() {
 
-        managePassTF.setVisible(true);
-        managePassLable.setVisible(true);
+        hideAllUnderLines();
+        associationRepresentativeBTN.setUnderline(true);
+        //associationRepresentativeBTN.setFocusTraversable(true);
 
         userType = "AssociationRepresentative";
 
@@ -556,6 +590,20 @@ public class SignUpController extends Controller {
 
         }
 
+        managePassTF.setVisible(true);
+        managePassLabel.setVisible(true);
         submit.setDisable(false); //now the user can try pressing the submit button.
+    }
+
+    private void hideAllUnderLines(){
+
+        refereeBTN.setUnderline(false);
+        fanBTN.setUnderline(false);
+        playerBTN.setUnderline(false);
+        coachBTN.setUnderline(false);
+        teamOwnerBTN.setUnderline(false);
+        managerBTN.setUnderline(false);
+        administratorBTN.setUnderline(false);
+        associationRepresentativeBTN.setUnderline(false);
     }
 }
