@@ -1,5 +1,6 @@
 package UILayer.Controllers;
 
+import DataForTest.DataBase;
 import UILayer.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +12,15 @@ import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public abstract class Controller implements Initializable {
+public class Controller implements Initializable {
 
     @FXML
-    protected String userName;
+    protected static String userName;
     protected String userType;
+    DataBase db = new DataBase();
 
 
     /**
@@ -43,6 +47,7 @@ public abstract class Controller implements Initializable {
         Scene scene = new Scene(root);
         s.setScene(scene);
         LandingController lc = fxmlLoader.getController();
+        lc.showUserButton();
 
         Main.setStage(s);
         s.show();
@@ -198,6 +203,33 @@ public abstract class Controller implements Initializable {
         Main.setStage(s);
         s.show();
     }
+    public void openPlayerPage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addPlayerPage.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        PlayersController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
+
+    public void openCoachPage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addCoachPage.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        CoachesController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
 
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }

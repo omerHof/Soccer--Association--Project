@@ -47,8 +47,10 @@ public class TeamPageTest {
         dbtest.addUser(klinger);
         dbtest.addUser(manager);
         dbtest.addUser(owner);
-        hapoelPage = hapoel.createPage("israel","israel");
-        maccabiPage = maccabi.createPage("israel","israel");
+       hapoel.createPage("israel","israel");
+       hapoelPage= hapoel.getPage();
+       maccabi.createPage("israel","israel");
+       maccabiPage=maccabi.getPage();
 
 
     }

@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import java.time.LocalDate;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 public class MainSystem {
     private static MainSystem single_instance = null;
@@ -28,8 +29,8 @@ public class MainSystem {
     private MainSystem() {
         timerPasswordBuilder = new TimerPasswordBuilder();
         Timer t = new Timer();
-        //t.scheduleAtFixedRate(timerPasswordBuilder, 0, TimeUnit.DAYS.toMillis(1));
-        t.scheduleAtFixedRate(timerPasswordBuilder, 0, 2000);
+        t.scheduleAtFixedRate(timerPasswordBuilder, 0, TimeUnit.DAYS.toMillis(1));
+        //t.scheduleAtFixedRate(timerPasswordBuilder, 0, 2000);
     }
 
     /**

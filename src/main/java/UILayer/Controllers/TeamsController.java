@@ -21,12 +21,17 @@ public class TeamsController extends Controller {
     TeamManagement teamManagement = new TeamManagement();
     String teamName;
     String budget;
+    boolean openTeam=false;
 
 
     @FXML
     private TextField choosenTeamName;
     @FXML
     private TextField  choosenTeamBudget;
+    @FXML
+    private TextField choosenNation;
+    @FXML
+    private TextField choosenHistory;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -54,18 +59,39 @@ public class TeamsController extends Controller {
     }
 
         public boolean validationName(String name) {
-            if (name == null || name.length() == 0) {
-                return false;
-            }
-            if (name.matches(".*\\d.*")) {
-                return false;
-            }
-            if (!name.matches("[a-z A-Z]+")) {
-                return false;
-            }
-            return true;
-
+        if (name == null || name.length() == 0) {
+            return false;
         }
+        if (name.matches(".*\\d.*")) {
+            return false;
+        }
+        if (!name.matches("[a-z A-Z]+")) {
+            return false;
+        }
+        return true;
+
+    }
+    public boolean validationNation(String name) {
+        if (name == null || name.length() == 0) {
+            return false;
+        }
+        if (name.matches(".*\\d.*")) {
+            return false;
+        }
+        if (!name.matches("[a-z A-Z]+")) {
+            return false;
+        }
+        return true;
+
+    }
+    public boolean validationHistory(String name) {
+        if (name == null || name.length() == 0) {
+            return false;
+        }
+
+        return true;
+
+    }
 
             public void submitOpenTeam(){
                 if(validationBudget(choosenTeamBudget.getText())==false){
@@ -82,12 +108,40 @@ public class TeamsController extends Controller {
                 ///need to add check if the name of the team exist!!!
 
                 //create team
+                openTeam =true;
+                teamName = choosenTeamName.getText();
                 String message = teamManagement.openTeam(choosenTeamName.getText(),Double.parseDouble(choosenTeamBudget.getText()));
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setContentText(message);
                 alert.show();
 
             }
+
+
+            public void createTeamPage(){
+        if(validationHistory(choosenHistory.getText())==false){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(" history not valid ");
+            alert.show();
+        }
+        if(validationNation(choosenNation.getText())==false){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(" nation not valid ");
+            alert.show();
+        }
+        if(openTeam==true){
+            String message =  teamManagement.openTeamPage(choosenHistory.getText(),choosenNation.getText());
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setContentText(message);
+            alert.show();
+        }
+        else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("The owner has no active team");
+            alert.show();
+        }
+
+    }
 
 
 }

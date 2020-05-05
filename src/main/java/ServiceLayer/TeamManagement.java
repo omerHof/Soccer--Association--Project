@@ -3,6 +3,7 @@ package ServiceLayer;
 import SystemLogic.MainSystem;
 import Teams.Assent;
 import Teams.Team;
+import Teams.TeamPage;
 import Users.Manager;
 import Users.TeamOwner;
 import Users.User;
@@ -26,6 +27,31 @@ public class TeamManagement {
         ((TeamOwner) currentUser).askPermissionToOpenTeam();
         ((TeamOwner) currentUser).openTeam(team_name,initialBudget);
         return "team was open successfully";
+    }
+
+    public String openTeamPage(String team_history,String team_nation){
+        findTheUser();
+        if(currentUser instanceof TeamOwner) {
+           String message = ((TeamOwner) currentUser).getTeam().createPage(team_history, team_nation);
+           if(message == "the team already has a page"){
+               return message;
+           }
+           else {
+               return "team page was open successfully";
+           }
+
+        }
+        if(currentUser instanceof Manager) {
+            String message =  ((Manager) currentUser).getTeam().createPage(team_history, team_nation);
+            if(message == "the team already has a page"){
+                return message;
+            }
+            else {
+                return "team page was open successfully";
+            }
+        }
+        return "the user not allowd to open a team page";
+
     }
 
     public String addAssent(Assent assent, double new_assent){
