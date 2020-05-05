@@ -36,6 +36,16 @@ public class SystemManagement {
     public ArrayList<String> getAllUsersByType( String type){
         return DB.getInstance().getAllUserByType(type);
     }
+
+    public int getLeagueTeamNumber(String league){
+        return DB.getInstance().getNumberOfTeamsInLeague(league);
+    }
+    public ArrayList<Integer> getAllSeasonYears(String league){
+        return DB.getInstance().getAllSeasonYearsFromLeague(league);
+    }
+    public ArrayList<String> closestGames(String league){
+        return DB.getInstance().closestGames(league);
+    }
 }
 
 

@@ -35,10 +35,11 @@ public class MyAppController extends Controller {
             e.consume();
             closeProgram();
         });
-        setButton();
         UserManagement userManagement = new UserManagement();
-        userManagement.getUserType(userName);
+        //userManagement.getUserType(userName);
         userType="AssociationRepresentative";//todo remove only for test
+        setButton();
+
     }
 
     public void setButton() {

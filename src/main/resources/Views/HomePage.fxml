@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.HomePageController">
+
+    <children>
+        <fx:include fx:id="navBar" source="Landing.fxml" />
+      <TableView fx:id="tab" layoutX="36.0" layoutY="99.0" prefHeight="203.0" prefWidth="900.0" style="-fx-background-color: transparent;">
+
+      </TableView>
+    </children>
+</AnchorPane>

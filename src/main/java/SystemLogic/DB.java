@@ -1,9 +1,12 @@
 package SystemLogic;
 
+import Games.Game;
 import LeagueSeasonsManagment.League;
 import LeagueSeasonsManagment.Season;
 import Teams.Team;
 import Users.*;
+
+import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -15,7 +18,7 @@ public class DB {
     /**
      * implement data structures
      */
-    private HashMap<String,User> users;
+    private HashMap<String, User> users;
     private HashMap<String, League> leagues;
     private HashMap<String, Team> teams;
 
@@ -23,9 +26,9 @@ public class DB {
      * constructor
      */
     private DB() {
-        users= new HashMap<>();
-        leagues= new HashMap<>();
-        teams= new HashMap<>();
+        users = new HashMap<>();
+        leagues = new HashMap<>();
+        teams = new HashMap<>();
     }
 
     /**
@@ -33,10 +36,10 @@ public class DB {
      *
      * @return instance of DB
      */
-    public static DB getInstance(){
-        if(db == null){
+    public static DB getInstance() {
+        if (db == null) {
             synchronized (DB.class) {
-                if(db == null){
+                if (db == null) {
                     db = new DB();
                 }
             }
@@ -48,10 +51,11 @@ public class DB {
 
     /**
      * get user by user name
+     *
      * @return user
      */
     public User getUser(String name) {
-        if(users.containsKey(name)) {
+        if (users.containsKey(name)) {
             return users.get(name);
         }
         return null;
@@ -59,6 +63,7 @@ public class DB {
 
     /**
      * get user by full name
+     *
      * @return user
      */
     public User getUserByFullName(String name) {
@@ -75,11 +80,12 @@ public class DB {
 
     /**
      * check if user exist
+     *
      * @param name- user's name
      * @return if user exist
      */
-    public boolean userExist (String name){
-        if(users.containsKey(name)) {
+    public boolean userExist(String name) {
+        if (users.containsKey(name)) {
             return true;
         }
         return false;
@@ -87,22 +93,24 @@ public class DB {
 
     /**
      * set user
+     *
      * @param user- the user object
      */
     public void setUser(User user) {
-        if(user!=null && user.getUserName()!=null && !userExist(user.getUserName())) {
+        if (user != null && user.getUserName() != null && !userExist(user.getUserName())) {
             users.put(user.getUserName(), user);
         }
     }
 
     /**
      * add user if user name not contain already
+     *
      * @param user- the user object
      * @return if user already contain- false
      */
-    public boolean addUser(User user){
-        if(user!=null && !users.containsKey(user.getUserName())){
-            users.put(user.getUserName(),user);
+    public boolean addUser(User user) {
+        if (user != null && !users.containsKey(user.getUserName())) {
+            users.put(user.getUserName(), user);
             return true;
         }
         return false;
@@ -110,11 +118,12 @@ public class DB {
 
     /**
      * remove user if exist
+     *
      * @param name- name of user
      * @return if user removed
      */
-    public boolean removeUser(String name){
-        if(users.containsKey(name)){
+    public boolean removeUser(String name) {
+        if (users.containsKey(name)) {
             users.remove(name);
             return true;
         }
@@ -125,10 +134,11 @@ public class DB {
 
     /**
      * get league
+     *
      * @return league
      */
     public League getLeague(String name) {
-        if(leagues.containsKey(name)) {
+        if (leagues.containsKey(name)) {
             return leagues.get(name);
         }
         return null;
@@ -136,11 +146,12 @@ public class DB {
 
     /**
      * check if league exist
+     *
      * @param name- league
      * @return if league exist
      */
-    public boolean leagueExist (String name){
-        if(leagues.containsKey(name)) {
+    public boolean leagueExist(String name) {
+        if (leagues.containsKey(name)) {
             return true;
         }
         return false;
@@ -148,6 +159,7 @@ public class DB {
 
     /**
      * set league
+     *
      * @param league object
      */
     public void setLeague(League league) {
@@ -155,18 +167,20 @@ public class DB {
             leagues.put(league.getName(), league);
         }
     }
-    public int getLeagues(){
+
+    public int getLeagues() {
         return leagues.size();
     }
 
     /**
      * add league if user name not contain already
+     *
      * @param league object
      * @return if already exist- false
      */
-    public boolean addLeague(League league){
-        if(league!=null && !leagues.containsKey(league.getName())){
-            leagues.put(league.getName(),league);
+    public boolean addLeague(League league) {
+        if (league != null && !leagues.containsKey(league.getName())) {
+            leagues.put(league.getName(), league);
             return true;
         }
         return false;
@@ -174,14 +188,15 @@ public class DB {
 
     /**
      * add season to league
-     * @param name of season
+     *
+     * @param name   of season
      * @param season object
      * @return if the name already exist
      */
-    public boolean addSeason(String name, Season season){
-        if(leagues.containsKey(name)){
-            if(season!=null && !leagues.get(name).getAllSeasons().contains(season) && checkSeasonYear(name,season.getYear())){
-                List<Season> newList=leagues.get(name).getAllSeasons();
+    public boolean addSeason(String name, Season season) {
+        if (leagues.containsKey(name)) {
+            if (season != null && !leagues.get(name).getAllSeasons().contains(season) && checkSeasonYear(name, season.getYear())) {
+                List<Season> newList = leagues.get(name).getAllSeasons();
                 newList.add(season);
                 leagues.get(name).setAllSeasons(newList);
                 return true;
@@ -191,7 +206,7 @@ public class DB {
         return false;
     }
 
-    public boolean checkSeasonYear(String leagueName, int seasonYear){
+    public boolean checkSeasonYear(String leagueName, int seasonYear) {
         try {
             for (Season season : leagues.get(leagueName).getAllSeasons()) {
                 if (season.getYear() == seasonYear) {
@@ -199,7 +214,7 @@ public class DB {
                 }
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
         return true;
@@ -207,11 +222,12 @@ public class DB {
 
     /**
      * remove league if exist
+     *
      * @param name of the league
      * @return if removed
      */
-    public boolean removeLeague(String name){
-        if(leagues.containsKey(name)){
+    public boolean removeLeague(String name) {
+        if (leagues.containsKey(name)) {
             leagues.remove(name);
             return true;
         }
@@ -222,10 +238,11 @@ public class DB {
 
     /**
      * get team
+     *
      * @return team
      */
     public Team getTeam(String name) {
-        if(teams.containsKey(name)) {
+        if (teams.containsKey(name)) {
             return teams.get(name);
         }
         return null;
@@ -233,11 +250,12 @@ public class DB {
 
     /**
      * check if team exist
+     *
      * @param name of team
      * @return if exist
      */
-    public boolean teamExist (String name){
-        if(teams.containsKey(name)) {
+    public boolean teamExist(String name) {
+        if (teams.containsKey(name)) {
             return true;
         }
         return false;
@@ -245,6 +263,7 @@ public class DB {
 
     /**
      * set team
+     *
      * @param team object
      */
     public void setTeam(Team team) {
@@ -256,12 +275,13 @@ public class DB {
 
     /**
      * add user if user name not contain already
+     *
      * @param team object
      * @return if already exist- false
      */
-    public boolean addTeam(Team team){
-        if(team!=null && !teams.containsKey(team.getName())){
-            teams.put(team.getName(),team);
+    public boolean addTeam(Team team) {
+        if (team != null && !teams.containsKey(team.getName())) {
+            teams.put(team.getName(), team);
             return true;
         }
         return false;
@@ -269,11 +289,12 @@ public class DB {
 
     /**
      * remove user if exist
+     *
      * @param name of team
      * @return if removed
      */
-    public boolean removeTeam(String name){
-        if(teams.containsKey(name)){
+    public boolean removeTeam(String name) {
+        if (teams.containsKey(name)) {
             teams.remove(name);
             return true;
         }
@@ -283,11 +304,12 @@ public class DB {
     /***************others***************/
     /**
      * return user from requested type
+     *
      * @param type of user
      * @return the user type object
      */
 
-    public User getUserType(String type){
+    public User getUserType(String type) {
 
         Iterator it = users.entrySet().iterator();
 
@@ -326,13 +348,14 @@ public class DB {
 
     /**
      * return users list from requested type
+     *
      * @param type string
      * @return ArrayList of users
      */
 
-    public ArrayList<User> getUserTypeList(String type){
+    public ArrayList<User> getUserTypeList(String type) {
         Iterator it = users.entrySet().iterator();
-        ArrayList<User>userTypeList=new ArrayList<>();
+        ArrayList<User> userTypeList = new ArrayList<>();
 
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
@@ -369,6 +392,7 @@ public class DB {
 
     /**
      * check amount of users from type
+     *
      * @param type string
      * @return amount
      */
@@ -411,11 +435,12 @@ public class DB {
 
     /**
      * this function searches for a league with the given season (year) that contains the given asso'
+     *
      * @param year - season requested
      * @param asso - the AssociationRepresentative to find
      * @return name of league found
      */
-    public String whatLeagueImAt (AssociationRepresentative asso, int year){
+    public String whatLeagueImAt(AssociationRepresentative asso, int year) {
 
         Iterator it = leagues.entrySet().iterator();
         while (it.hasNext()) {
@@ -433,22 +458,22 @@ public class DB {
         return ""; //this asso' doesn't exist in any leaue-year requested.
     }
 
-    public ArrayList<String> getLeagueNames(){
+    public ArrayList<String> getLeagueNames() {
         return new ArrayList<>(this.leagues.keySet());
     }
 
-    public ArrayList<String> getTeamsNames(){
+    public ArrayList<String> getTeamsNames() {
         return new ArrayList<>(this.teams.keySet());
     }
 
-    public ArrayList<String> getFullTeamsNames(){
-        ArrayList<String> reesult= new ArrayList<>();
+    public ArrayList<String> getFullTeamsNames() {
+        ArrayList<String> reesult = new ArrayList<>();
         Iterator it = teams.entrySet().iterator();
         while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry)it.next();
-            Team team=(Team)pair.getValue();
-            if(team.getCoaches().size()>0&&team.getPlayers().size()>0){
-                reesult.add((String)pair.getKey());
+            Map.Entry pair = (Map.Entry) it.next();
+            Team team = (Team) pair.getValue();
+            if (team.getCoaches().size() > 0 && team.getPlayers().size() > 0) {
+                reesult.add((String) pair.getKey());
             }
         }
         return reesult;
@@ -466,5 +491,60 @@ public class DB {
             }
         }
         return allUsersByType;
+    }
+
+    public int getNumberOfTeamsInLeague(String league) {
+        Iterator it = leagues.entrySet().iterator();
+        int result = 0;
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            if (pair.getKey().equals(league)) {
+                result = ((League) pair.getValue()).getNumOfTeams();
+            }
+        }
+        return result;
+    }
+
+    public ArrayList<Integer> getAllSeasonYearsFromLeague(String league) {
+        ArrayList<Integer> result = new ArrayList<>();
+        Iterator it = leagues.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            if (pair.getKey().equals(league)) {
+                League l = (League) pair.getValue();
+                for (Season season : l.getAllSeasons()) {
+                    result.add(season.getYear());
+                }
+                return result;
+            }
+        }
+        return result;
+    }
+
+    public ArrayList<String> closestGames(String leagueName) {
+        League league = leagues.get(leagueName);
+        for (Season season : league.getAllSeasons()) {
+            if (season.getYear() == LocalDateTime.now().getYear()||season.getYear()-1 == LocalDateTime.now().getYear()) {
+                Iterator it = season.getAllGames().entrySet().iterator();
+                while (it.hasNext()) {
+                    Map.Entry pair = (Map.Entry) it.next();
+                    ArrayList<Game> allGames = (ArrayList<Game>) pair.getValue();
+                    if (allGames.get(0).getGameDate().isAfter(LocalDateTime.now())) {
+                        return getStringGames(allGames);
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    private ArrayList<String> getStringGames(ArrayList<Game> allGames) {
+        ArrayList<String> result = new ArrayList<>();
+        for (Game game : allGames) {
+            result.add(game.getHomeTeam().getName() + "%" + game.getAwayTeam().getName() + "%" +
+                    game.getGameDate().getDayOfMonth()+"."+game.getGameDate().getMonth()+"."+game.getGameDate().getYear()+"%"+game.getGameDate().getHour()
+                    +"%"+game.getGameDate().getMinute()+"%"+game.getHomeTeam().getStadium().getName()+"%"+game.getStatus());
+        }
+        return result;
     }
 }

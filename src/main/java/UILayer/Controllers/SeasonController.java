@@ -4,6 +4,7 @@ import ServiceLayer.LeagueSeasonManagement;
 import ServiceLayer.SystemManagement;
 import UILayer.Main;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
@@ -12,6 +13,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -56,6 +58,25 @@ public class SeasonController extends Controller {
     private ChoiceBox<String> choiceBox7;
     @FXML
     private ChoiceBox<String> choiceBox8;
+
+    @FXML
+    private Pane refereePane;
+    @FXML
+    private JFXTextField refereeMessage;
+    @FXML
+    private Pane mainRefereePane;
+    @FXML
+    private JFXTextField mainRefereeMessage;
+    @FXML
+    private Pane teamPane;
+    @FXML
+    private JFXTextField teamMessage;
+    @FXML
+    private Pane assoPane;
+    @FXML
+    private JFXTextField assoMessage;
+
+
 
     ObservableList<String> options = FXCollections.observableArrayList();
     ObservableList<String> options2 = FXCollections.observableArrayList();
@@ -163,8 +184,56 @@ public class SeasonController extends Controller {
                 league.add(choiceBox1.getValue());
                 comboLeague.setItems(league);
             }
+            if(!choiceBox1.getValue().equals("")) {
+                int numOfTeams=systemManagement.getLeagueTeamNumber(choiceBox1.getValue());
+                refereePane.setVisible(true);
+                refereeMessage.setText("This league requires at least "+(numOfTeams/2*3)+" referees");
+                mainRefereePane.setVisible(true);
+                mainRefereeMessage.setText("This league requires at least "+(numOfTeams/2)+" main referees");
+                teamPane.setVisible(true);
+                teamMessage.setText("This league requires "+numOfTeams+" teams");
+                assoPane.setVisible(true);
+                assoMessage.setText("This league requires at least "+(numOfTeams/2)+" asso");
+            }
+
+
         } catch (Exception e) {
 
+        }
+    }
+
+    public void removeLeague() {
+        if(!comboLeague.getSelectionModel().isEmpty()) {
+            int y = comboLeague.getSelectionModel().getSelectedIndex();
+            comboLeague.getItems().remove(y);
+            refereePane.setVisible(false);
+            mainRefereePane.setVisible(false);
+            teamPane.setVisible(false);
+            assoPane.setVisible(false);
+        }
+    }
+    public void removeReferee() {
+        if (!comboReferee.getSelectionModel().isEmpty()) {
+            int y = comboReferee.getSelectionModel().getSelectedIndex();
+            comboReferee.getItems().remove(y);
+        }
+    }
+    public void removeMainReferee() {
+        if (!comboMainReferee.getSelectionModel().isEmpty()) {
+            int y = comboMainReferee.getSelectionModel().getSelectedIndex();
+            comboMainReferee.getItems().remove(y);
+        }
+    }
+    public void removeTeams() {
+        if (!comboTeams.getSelectionModel().isEmpty()) {
+            int y = comboTeams.getSelectionModel().getSelectedIndex();
+            comboTeams.getItems().remove(y);
+        }
+    }
+    public void removeAsso() {
+        if (!comboAsso.getSelectionModel().isEmpty()) {
+            int y = comboAsso.getSelectionModel().getSelectedIndex();
+            comboAsso.getItems().remove(y);
         }
     }
 
@@ -300,6 +369,14 @@ public class SeasonController extends Controller {
             alert.showAndWait();
             return false;
 
+        }
+        String league=(String)comboLeague.getItems().get(0);
+        ArrayList<Integer> seasonCreatedYears=systemManagement.getAllSeasonYears(league);
+        if(seasonCreatedYears.contains(choiceBox5.getValue())) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "this season year is already created in this league\n", ButtonType.CLOSE);
+            alert.setHeaderText("Incorrect fill");
+            alert.showAndWait();
+            return false;
         }
         if(choiceBox6.getValue().equals("")){
             Alert alert = new Alert(Alert.AlertType.WARNING, "must choose game policy\n", ButtonType.CLOSE);

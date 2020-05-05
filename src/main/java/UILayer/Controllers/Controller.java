@@ -1,8 +1,6 @@
 package UILayer.Controllers;
 
-import ServiceLayer.TeamManagement;
 import UILayer.Main;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,7 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -51,6 +48,18 @@ public abstract class Controller implements Initializable {
         s.show();
     }
 
+    @FXML
+    public void homePage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/HomePage.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        HomePageController cc = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
 
     @FXML
     protected void goToLogin() throws IOException {
