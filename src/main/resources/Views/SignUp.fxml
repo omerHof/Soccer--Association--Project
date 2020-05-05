@@ -1,18 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
 <?import com.jfoenix.controls.JFXButton?>
-<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.SignUpController">
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="553.0" prefWidth="1078.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.SignUpController">
+
+        <Label fx:id="pleaseChoseType" layoutX="43.0" layoutY="28.0" prefHeight="30.0" prefWidth="237.0" text="Please chose user type:">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font></Label>
+
+        <JFXButton fx:id="refereeBTN" layoutX="43.0" layoutY="64.0" onAction="#typeReferee" prefHeight="37.0" prefWidth="86.0" styleClass="d" stylesheets="@Landing.css" text="Referee" textFill="#2c9e5b">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </JFXButton>
+
+        <JFXButton fx:id="coachBTN" layoutX="305.0" layoutY="64.0" onAction="#typeCoach" prefHeight="37.0" prefWidth="79.0" styleClass="d" stylesheets="@Landing.css" text="Coach" textFill="#2c9e5b">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </JFXButton>
+
+        <JFXButton fx:id="playerBTN" layoutX="220.0" layoutY="64.0" onAction="#typePlayer" prefHeight="37.0" prefWidth="79.0" styleClass="d" stylesheets="@Landing.css" text="Player" textFill="#2c9e5b">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </JFXButton>
+
+        <JFXButton fx:id="fanBTN" layoutX="142.0" layoutY="64.0" onAction="#allExtraFieldsOff" prefHeight="37.0" prefWidth="59.0" styleClass="d" stylesheets="@Landing.css" text="Fan" textFill="#2c9e5b">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </JFXButton>
+
+        <JFXButton fx:id="teamOwnerBTN" layoutX="393.0" layoutY="64.0" onAction="#allExtraFieldsOff" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Team Owner" textFill="#2c9e5b">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </JFXButton>
+
+        <JFXButton fx:id="managerBTN" layoutX="522.0" layoutY="64.0" onAction="#allExtraFieldsOff" prefHeight="37.0" prefWidth="104.0" styleClass="d" stylesheets="@Landing.css" text="Manager" textFill="#2c9e5b">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </JFXButton>
+
+        <JFXButton fx:id="administratorBTN" layoutX="632.0" layoutY="64.0" onAction="#typeManagement" prefHeight="37.0" prefWidth="146.0" styleClass="d" stylesheets="@Landing.css" text="Administrator" textFill="#2c9e5b">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </JFXButton>
+
+        <JFXButton fx:id="associationRepresentativeBTN" layoutX="782.0" layoutY="64.0" onAction="#typeManagement" prefHeight="37.0" prefWidth="237.0" styleClass="d" stylesheets="@Landing.css" text="Association Representative" textFill="#2c9e5b">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </JFXButton>
 
 
-    <children>
-        <fx:include fx:id="navBar" source="Landing.fxml" />
-        <JFXButton layoutX="387.0" layoutY="244.0" ripplerFill="#dc6464" stylesheets="@Landing.css" text="THIS IS signUp" />
-    </children>
+        <JFXButton fx:id="backBTN" layoutX="97.0" layoutY="486.0" onAction="#goToLanding" prefHeight="37.0" prefWidth="129.0" styleClass="d" stylesheets="@Landing.css" text="Back" textFill="#2c9e5b">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </JFXButton>
+
+        <JFXButton fx:id="submit" layoutX="363.0" layoutY="486.0" onAction="#checkDetailsFilled" prefHeight="37.0" prefWidth="129.0" styleClass="d" stylesheets="@Landing.css" text="Submit" textFill="#2c9e5b">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </JFXButton>
+
+
+
+        <Label fx:id="pleaseDetails" layoutX="43.0" layoutY="154.0" prefHeight="30.0" prefWidth="237.0" text="Please fill in your details:">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font></Label>
+
+
+        <Label fx:id="emailLable" layoutX="417.0" layoutY="205.0" prefHeight="27.0" prefWidth="52.0" text="Email" />
+        <TextField fx:id="emailTF" layoutX="469.0" layoutY="205.0" prefHeight="0.0" prefWidth="152.0" />
+
+        <Label fx:id="usernameLable" layoutX="43.0" layoutY="260.0" prefHeight="27.0" prefWidth="86.0" text="Username" />
+        <TextField fx:id="usernameTF" layoutX="135.0" layoutY="260.0" prefHeight="0.0" prefWidth="170.0" />
+
+        <TextField fx:id="fullnameTF" layoutX="135.0" layoutY="211.0" prefHeight="0.0" prefWidth="224.0" />
+        <Label fx:id="fullnameLable" layoutX="43.0" layoutY="211.0" prefHeight="27.0" prefWidth="86.0" text="Full Name" />
+
+        <Label fx:id="passwordLable" layoutX="374.0" layoutY="260.0" prefHeight="27.0" prefWidth="86.0" text="Password" />
+        <PasswordField fx:id="passwordTF" layoutX="460.0" layoutY="260.0" prefHeight="0.0" prefWidth="170.0" />
+
+
+
+        <Label fx:id="birthdateLable" layoutX="384.0" layoutY="340.0" prefHeight="27.0" prefWidth="86.0" text="Birthdate" />
+        <DatePicker fx:id="birthdateDP" layoutX="450.0" layoutY="341.0" prefHeight="0.0" prefWidth="146.0" />
+
+        <Label fx:id="courtRoleLable" layoutX="43.0" layoutY="340.0" prefHeight="27.0" prefWidth="86.0" text="Court Role" />
+        <ChoiceBox fx:id="playerCourtRoleCB" layoutX="120.0" layoutY="340.0" prefHeight="0.0" prefWidth="172.0" />
+
+        <Label fx:id="teamRoleLable" layoutX="43.0" layoutY="340.0" prefHeight="27.0" prefWidth="104.0" text="Team Role" />
+        <ChoiceBox fx:id="coachTeamRoleCB" layoutX="120.0" layoutY="340.0" prefHeight="0.0" prefWidth="172.0" />
+
+        <Label fx:id="qualificationLable" layoutX="43.0" layoutY="340.0" prefHeight="27.0" prefWidth="104.0" text="Qualification" />
+        <ChoiceBox fx:id="refereeQualificationCB" layoutX="140.0" layoutY="340.0" prefHeight="0.0" prefWidth="172.0" />
+
+
+
+        <Label fx:id="managePassLable" layoutX="46.0" layoutY="340.0" prefHeight="27.0" prefWidth="192.0" text="Management Password" />
+        <TextField fx:id="managePassTF" layoutX="200.0" layoutY="340.0" prefHeight="0.0" prefWidth="152.0" />
 
 </AnchorPane>
