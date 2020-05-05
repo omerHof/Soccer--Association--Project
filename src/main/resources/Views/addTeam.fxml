@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.LeaguesController">
+<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.TeamsController">
     <children>
 
         <fx:include fx:id="navBar" source="Landing.fxml" />
@@ -33,20 +32,12 @@
          </children></Pane>
         <Pane layoutX="193.0" layoutY="338.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
          <children>
-            <JFXTextField alignment="CENTER" unFocusColor="BLACK">
+            <JFXButton fx:id="submit" onAction="#submitOpenTeam" prefHeight="131.0" prefWidth="191.0" style="-fx-background-color: #393eff; -fx-border-color: black;" text="submit">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
-            </JFXTextField>
+            </JFXButton>
          </children></Pane>
-      <Label text="Team name" underline="true" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font size="31.0" />
-         </font>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </Label>
         <Text layoutX="424.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE NEW TEAM" textAlignment="CENTER" wrappingWidth="339.79999999999984">
             <font>
                 <Font name="System Bold" size="36.0" />
