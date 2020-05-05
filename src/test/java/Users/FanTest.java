@@ -90,9 +90,14 @@ public class FanTest {
         DBTest.addTeam(barca);
         Team real = new Team("real madrid");
         DBTest.addTeam(real);
-        TeamPage barcaPage = barca.createPage("team in spain","spain");
-        TeamPage realPage = real.createPage("team in spain","spain");
-       TeamPage hapoelPage = t1.createPage("team in israel","israel");
+
+        barca.createPage("team in spain","spain");
+        real.createPage("team in spain","spain");
+       t1.createPage("team in israel","israel");
+        TeamPage barcaPage=barca.getPage();
+        TeamPage realPage=real.getPage();
+        TeamPage hapoelPage=t1.getPage();
+
 
        TeamOwner hapoelOwner = new TeamOwner("aa","aa","nisanov","dsdsadas");
         TeamOwner barcaOwner = new TeamOwner("arrrra","aa","bartulemeo","dsdsadffas");

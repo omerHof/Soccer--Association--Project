@@ -60,9 +60,15 @@ public class Team implements Comparable {
     }
 
 
-    public TeamPage createPage(String history,String nation){
-        page = new TeamPage(name,players,coaches,managers,stadium,history,nation);
-        return page;
+    public String createPage(String history,String nation){
+        if(page==null) {
+            page = new TeamPage(name, players, coaches, managers, stadium, history, nation);
+            return "the page  successfully opened";
+        }
+        else{
+            return "the team already has a page";
+
+        }
     }
 
     public TeamPage getPage() {

@@ -133,10 +133,13 @@ public class AdministratorTest {
           fan.followThisPage("pep guardiola");
           fan.followThisPage("leo messi");
           assertEquals(fan.getFollowedPages().size(),2);
-          TeamPage teamPage = team1.createPage("non","israel");
-          fan.followTeam("hapoel pardesia");
+          team1.createPage("non","israel");
+        TeamPage teamPage =team1.getPage();
+                fan.followTeam("hapoel pardesia");
           assertEquals(fan.getFollowedTeams().size(),1);
-        TeamPage teamPage2 = team2.createPage("non","israel");
+        team2.createPage("non","israel");
+        TeamPage teamPage2 =team2.getPage();
+
         fan.followTeam(team2.getName());
         assertEquals(fan.getFollowedTeams().size(),2);
        assertEquals(teamPage.countObservers(),1);
