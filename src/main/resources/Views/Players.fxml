@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -9,12 +8,7 @@
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
         <JFXButton layoutX="385.0" layoutY="119.0" ripplerFill="#dc6464" stylesheets="@Landing.css" text=" Players" />
-      <TableView fx:id="players_table" layoutX="145.0" layoutY="192.0" prefHeight="269.0" prefWidth="365.0">
-        <columns>
-          <TableColumn id="table1" prefWidth="75.0" text="Player" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-      </TableView>
+      <TableView fx:id="players_table" layoutX="145.0" layoutY="192.0" prefHeight="269.0" prefWidth="365.0" />
     </children>
 
 </AnchorPane>

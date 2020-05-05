@@ -9,9 +9,11 @@ import UserGenerator.ManagementUserGenerator;
 import UserGenerator.PremiumUserGenerator;
 import UserGenerator.SimpleUserGenerator;
 import Users.*;
+import javafx.util.Pair;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * This class represents a bridge for handling the user creation and functionality between the domain layer and the GUI layer
@@ -158,8 +160,16 @@ public class UserManagement {
 
     /** ---------------- PLAYER MANAGEMENT FUNCTIONALITY ---------------- **/
 
-    public ArrayList<String> getAllPlayers(){
-        return DB.getInstance().getAllUserByType("player");
+
+    public HashMap<String, String> getAllPlayers(){
+        return DB.getInstance().getAllUserNameByType("Player");
+    }
+
+    public Pair<String, ArrayList<String>> getPlayerPageDetails(String user_name){
+        Player player = (Player) DB.getInstance().getUser(user_name);
+        PlayerPersonalPage playerPersonalPage = player.getPage();
+
+        return playerPersonalPage.getAllDetails();
     }
 
     public void createPlayerPersonalPage(int height,int weight, int shirtNum,String team){
