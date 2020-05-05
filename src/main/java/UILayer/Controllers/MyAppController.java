@@ -1,6 +1,7 @@
 package UILayer.Controllers;
 
 import ServiceLayer.LeagueSeasonManagement;
+import ServiceLayer.UserManagement;
 import UILayer.Main;
 import Users.AssociationRepresentative;
 import Users.Fan;
@@ -21,9 +22,6 @@ import java.util.ResourceBundle;
 
 public class MyAppController extends Controller {
 
-    public MyAppController() {
-        userType="AssociationRepresentative";//todo remove only for test
-    }
 
     @FXML
     private Button createNewTeamButton;
@@ -38,6 +36,9 @@ public class MyAppController extends Controller {
             closeProgram();
         });
         setButton();
+        UserManagement userManagement = new UserManagement();
+        userManagement.getUserType(userName);
+        userType="AssociationRepresentative";//todo remove only for test
     }
 
     public void setButton() {

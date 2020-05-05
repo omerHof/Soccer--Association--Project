@@ -127,7 +127,7 @@ public abstract class Controller implements Initializable {
         Main.setStage(s);
         s.show();
     }
-
+    @FXML
     public void goToProfile() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Profile.fxml"));
         Parent root = fxmlLoader.load();
@@ -142,7 +142,7 @@ public abstract class Controller implements Initializable {
 
     public void openMyApps() throws IOException {
         FXMLLoader fxmlLoader;
-        fxmlLoader = new FXMLLoader(getClass().getResource("/Views/RepMyApp.fxml"));
+        fxmlLoader = new FXMLLoader(getClass().getResource("/Views/MyApp.fxml"));
         Parent root = fxmlLoader.load();
         Stage s = Main.getStage();
         Scene scene = new Scene(root);

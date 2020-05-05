@@ -102,6 +102,12 @@ public class MainSystem {
         LOG.info("Administrator was appointed successfully");
     }
 
+    public String getUserType(String userName){
+        User user = db.getUser(userName);
+        return user.getClass().getName();
+
+    }
+
 
     /**
      * This method is for user's signing up the system
@@ -242,6 +248,8 @@ class TimerPasswordBuilder extends TimerTask {
         password =  builder.toString();
         MainSystem.LOG.info("Special password changed at ");
     }
+
+
 
     public String getPassword(){
         return password;

@@ -4830,3 +4830,520 @@
 2020.05.03 09:59:26.255 INFO  SystemLogic.MainSystem - Special password changed at 
 2020.05.03 09:59:28.256 INFO  SystemLogic.MainSystem - Special password changed at 
 2020.05.03 09:59:30.255 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:33.352 INFO  SystemLogic.MainSystem - LOG FILE IS CONNECTED!
+2020.05.05 10:59:33.352 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:33.356 INFO  SystemLogic.MainSystem - Account System is Connected
+2020.05.05 10:59:33.357 INFO  SystemLogic.MainSystem - Tax System is Connected
+2020.05.05 10:59:33.363 INFO  SystemLogic.MainSystem - Administrator was appointed successfully
+2020.05.05 10:59:33.386 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 10:59:33.386 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 10:59:33.387 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 10:59:33.387 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 10:59:33.387 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 10:59:33.387 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 10:59:33.387 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 10:59:33.387 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 10:59:33.387 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 10:59:33.387 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 10:59:33.387 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 10:59:33.388 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 10:59:33.388 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 10:59:33.388 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 10:59:33.388 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 10:59:33.388 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 10:59:33.388 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 10:59:33.388 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 10:59:33.388 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 10:59:33.388 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 10:59:33.388 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 10:59:33.389 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 10:59:33.389 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 10:59:33.389 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 10:59:33.389 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 10:59:33.389 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 10:59:33.389 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 10:59:33.389 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 10:59:33.389 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 10:59:33.389 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 10:59:33.389 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 10:59:33.390 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 10:59:33.390 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 10:59:33.390 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 10:59:33.390 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 10:59:33.390 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 10:59:33.390 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 10:59:33.390 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 10:59:33.390 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 10:59:33.390 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 10:59:33.390 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 10:59:33.391 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 10:59:33.392 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 10:59:33.392 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 10:59:33.393 INFO  SystemLogic.MainSystem - new league: Alufot were added.
+2020.05.05 10:59:33.419 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.05.05 10:59:33.428 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.05.05 10:59:35.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:37.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:39.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:41.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:42.406 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:42.406 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:42.468 INFO  SystemLogic.MainSystem - The game between: real and man u will start in 24 hours!
+2020.05.05 10:59:42.468 INFO  SystemLogic.MainSystem - The game between: inter and barca will start in 24 hours!
+2020.05.05 10:59:42.468 INFO  SystemLogic.MainSystem - The game between: barca and man city will start in 24 hours!
+2020.05.05 10:59:42.468 INFO  SystemLogic.MainSystem - The game between: liverpool and milan will start in 24 hours!
+2020.05.05 10:59:42.468 INFO  SystemLogic.MainSystem - The game between: chelsea and inter will start in 24 hours!
+2020.05.05 10:59:42.468 INFO  SystemLogic.MainSystem - The game between: chelsea and milan will start in 24 hours!
+2020.05.05 10:59:42.468 INFO  SystemLogic.MainSystem - The game between: roma and real will start in 24 hours!
+2020.05.05 10:59:42.468 INFO  SystemLogic.MainSystem - The game between: roma and juve will start in 24 hours!
+2020.05.05 10:59:43.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:43.422 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:43.422 INFO  SystemLogic.MainSystem - The game between: liverpool and juve will start in 24 hours!
+2020.05.05 10:59:43.424 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:43.425 INFO  SystemLogic.MainSystem - The game between: man u and man city will start in 24 hours!
+2020.05.05 10:59:45.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:47.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:47.400 INFO  SystemLogic.MainSystem - The game between: chelsea and inter started
+2020.05.05 10:59:47.400 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:47.401 INFO  SystemLogic.MainSystem - The game between: liverpool and milan started
+2020.05.05 10:59:47.401 INFO  SystemLogic.MainSystem - The game between: roma and juve started
+2020.05.05 10:59:47.401 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:47.402 INFO  SystemLogic.MainSystem - The game between: real and man u started
+2020.05.05 10:59:47.402 INFO  SystemLogic.MainSystem - The game between: barca and man city started
+2020.05.05 10:59:47.420 INFO  SystemLogic.MainSystem - The game between: roma and real started
+2020.05.05 10:59:47.420 INFO  SystemLogic.MainSystem - The game between: chelsea and milan started
+2020.05.05 10:59:47.420 INFO  SystemLogic.MainSystem - The game between: inter and barca started
+2020.05.05 10:59:48.419 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:48.419 INFO  SystemLogic.MainSystem - The game between: liverpool and juve started
+2020.05.05 10:59:48.420 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:48.421 INFO  SystemLogic.MainSystem - The game between: man u and man city started
+2020.05.05 10:59:49.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:51.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:52.401 INFO  SystemLogic.MainSystem - The game between: chelsea and inter ended. the score: 0-2
+2020.05.05 10:59:52.401 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:52.401 INFO  SystemLogic.MainSystem - The game between: chelsea and inter is close
+2020.05.05 10:59:52.401 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:52.401 INFO  SystemLogic.MainSystem - The game between: real and man u ended. the score: 5-2
+2020.05.05 10:59:52.402 INFO  SystemLogic.MainSystem - The game between: real and man u is close
+2020.05.05 10:59:52.402 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:52.402 INFO  SystemLogic.MainSystem - The game between: roma and juve ended. the score: 0-2
+2020.05.05 10:59:52.402 INFO  SystemLogic.MainSystem - The game between: liverpool and milan ended. the score: 0-2
+2020.05.05 10:59:52.402 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:52.402 INFO  SystemLogic.MainSystem - The game between: roma and juve is close
+2020.05.05 10:59:52.402 INFO  SystemLogic.MainSystem - The game between: liverpool and milan is close
+2020.05.05 10:59:52.402 INFO  SystemLogic.MainSystem - The game between: barca and man city ended. the score: 4-3
+2020.05.05 10:59:52.402 INFO  SystemLogic.MainSystem - The game between: barca and man city is close
+2020.05.05 10:59:52.421 INFO  SystemLogic.MainSystem - The game between: chelsea and milan ended. the score: 4-0
+2020.05.05 10:59:52.421 INFO  SystemLogic.MainSystem - The game between: roma and real ended. the score: 4-2
+2020.05.05 10:59:52.421 INFO  SystemLogic.MainSystem - The game between: inter and barca ended. the score: 0-5
+2020.05.05 10:59:52.421 INFO  SystemLogic.MainSystem - The game between: roma and real is close
+2020.05.05 10:59:52.421 INFO  SystemLogic.MainSystem - The game between: chelsea and milan is close
+2020.05.05 10:59:52.421 INFO  SystemLogic.MainSystem - The game between: inter and barca is close
+2020.05.05 10:59:53.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:53.419 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:53.419 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:53.419 INFO  SystemLogic.MainSystem - The game between: liverpool and juve ended. the score: 0-2
+2020.05.05 10:59:53.419 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:53.419 INFO  SystemLogic.MainSystem - The game between: liverpool and juve is close
+2020.05.05 10:59:53.419 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 10:59:53.419 INFO  SystemLogic.MainSystem - The game between: man u and man city ended. the score: 2-1
+2020.05.05 10:59:53.420 INFO  SystemLogic.MainSystem - The game between: man u and man city is close
+2020.05.05 10:59:55.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:57.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 10:59:59.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:01.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:03.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:05.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:07.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:09.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:11.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:13.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:15.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:17.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:19.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:21.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:23.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:25.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:27.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:29.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:31.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:33.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:35.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:37.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:39.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:41.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:43.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:45.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:47.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:49.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:51.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:53.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:55.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:57.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:00:59.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:01.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:03.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:05.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:07.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:09.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:11.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:13.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:15.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:17.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:19.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:21.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:23.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:25.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:27.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:29.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:31.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:33.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:35.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:37.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:39.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:41.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:43.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:45.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:47.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:49.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:51.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:53.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:55.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:57.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:01:59.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:01.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:03.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:05.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:07.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:09.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:11.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:13.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:15.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:17.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:19.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:21.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:23.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:25.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:27.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:29.350 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:31.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:33.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:35.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:37.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:39.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:41.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:43.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:45.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:47.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:49.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:51.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:53.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:55.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:57.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:02:59.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:01.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:03.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:05.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:07.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:09.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:11.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:13.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:15.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:17.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:19.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:21.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:23.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:25.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:27.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:29.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:31.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:33.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:35.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:37.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:39.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:41.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:43.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:45.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:47.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:49.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:51.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:53.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:55.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:57.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:03:59.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:01.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:03.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:05.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:07.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:09.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:11.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:13.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:15.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:17.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:19.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:21.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:23.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:25.350 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:27.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:29.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:31.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:33.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:35.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:37.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:39.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:41.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:43.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:45.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:47.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:49.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:51.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:53.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:55.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:57.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:04:59.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:01.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:03.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:05.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:07.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:09.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:11.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:13.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:15.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:17.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:19.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:21.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:23.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:25.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:27.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:29.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:31.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:33.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:35.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:37.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:39.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:41.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:43.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:45.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:47.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:49.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:51.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:53.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:55.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:57.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:05:59.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:01.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:03.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:05.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:07.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:09.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:11.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:13.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:15.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:17.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:19.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:19.860 INFO  SystemLogic.MainSystem - LOG FILE IS CONNECTED!
+2020.05.05 11:06:19.860 INFO  SystemLogic.MainSystem - Account System is Connected
+2020.05.05 11:06:19.860 INFO  SystemLogic.MainSystem - Tax System is Connected
+2020.05.05 11:06:19.860 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 11:06:19.860 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 11:06:19.860 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 11:06:19.860 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 11:06:19.860 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 11:06:19.860 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 11:06:19.861 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 11:06:19.862 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 11:06:19.862 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 11:06:19.862 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 11:06:19.862 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 11:06:19.862 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 11:06:19.862 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 11:06:19.862 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 11:06:19.862 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 11:06:19.863 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 11:06:19.863 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 11:06:19.863 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 11:06:19.863 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 11:06:19.863 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 11:06:19.863 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 11:06:19.863 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 11:06:19.863 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 11:06:19.863 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 11:06:19.864 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 11:06:19.864 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 11:06:19.864 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 11:06:19.864 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 11:06:19.864 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 11:06:19.864 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 11:06:19.864 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 11:06:19.864 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 11:06:19.864 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 11:06:19.879 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.05.05 11:06:19.886 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.05.05 11:06:21.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:23.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:25.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:27.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:28.869 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:28.869 INFO  SystemLogic.MainSystem - The game between: inter and juve will start in 24 hours!
+2020.05.05 11:06:28.869 INFO  SystemLogic.MainSystem - The game between: roma and barca will start in 24 hours!
+2020.05.05 11:06:28.869 INFO  SystemLogic.MainSystem - The game between: liverpool and chelsea will start in 24 hours!
+2020.05.05 11:06:28.869 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:28.870 INFO  SystemLogic.MainSystem - The game between: milan and man u will start in 24 hours!
+2020.05.05 11:06:29.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:29.867 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:29.867 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:29.869 INFO  SystemLogic.MainSystem - The game between: real and man city will start in 24 hours!
+2020.05.05 11:06:29.886 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:29.886 INFO  SystemLogic.MainSystem - The game between: roma and juve will start in 24 hours!
+2020.05.05 11:06:29.886 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool will start in 24 hours!
+2020.05.05 11:06:29.886 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:29.886 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:29.886 INFO  SystemLogic.MainSystem - The game between: inter and real will start in 24 hours!
+2020.05.05 11:06:29.886 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:29.886 INFO  SystemLogic.MainSystem - The game between: milan and man city will start in 24 hours!
+2020.05.05 11:06:29.887 INFO  SystemLogic.MainSystem - The game between: man u and barca will start in 24 hours!
+2020.05.05 11:06:31.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:33.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:33.866 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:33.866 INFO  SystemLogic.MainSystem - The game between: liverpool and chelsea started
+2020.05.05 11:06:33.866 INFO  SystemLogic.MainSystem - The game between: roma and barca started
+2020.05.05 11:06:33.866 INFO  SystemLogic.MainSystem - The game between: inter and juve started
+2020.05.05 11:06:33.867 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:33.867 INFO  SystemLogic.MainSystem - The game between: milan and man u started
+2020.05.05 11:06:34.866 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:34.866 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:34.867 INFO  SystemLogic.MainSystem - The game between: real and man city started
+2020.05.05 11:06:34.880 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool started
+2020.05.05 11:06:34.880 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:34.880 INFO  SystemLogic.MainSystem - The game between: inter and real started
+2020.05.05 11:06:34.880 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:34.880 INFO  SystemLogic.MainSystem - The game between: roma and juve started
+2020.05.05 11:06:34.880 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:34.880 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:34.880 INFO  SystemLogic.MainSystem - The game between: man u and barca started
+2020.05.05 11:06:34.880 INFO  SystemLogic.MainSystem - The game between: milan and man city started
+2020.05.05 11:06:35.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:37.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The game between: inter and juve ended. the score: 0-2
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The game between: liverpool and chelsea ended. the score: 2-1
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The game between: inter and juve is close
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The game between: liverpool and chelsea is close
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The game between: roma and barca ended. the score: 2-6
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The game between: roma and barca is close
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The game between: milan and man u ended. the score: 6-6
+2020.05.05 11:06:38.866 INFO  SystemLogic.MainSystem - The game between: milan and man u is close
+2020.05.05 11:06:39.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:39.865 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.865 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.865 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.866 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.866 INFO  SystemLogic.MainSystem - The game between: real and man city ended. the score: 0-6
+2020.05.05 11:06:39.866 INFO  SystemLogic.MainSystem - The game between: real and man city is close
+2020.05.05 11:06:39.879 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool ended. the score: 5-2
+2020.05.05 11:06:39.879 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool is close
+2020.05.05 11:06:39.880 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.880 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.880 INFO  SystemLogic.MainSystem - The game between: roma and juve ended. the score: 2-2
+2020.05.05 11:06:39.880 INFO  SystemLogic.MainSystem - The game between: inter and real ended. the score: 1-0
+2020.05.05 11:06:39.880 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.880 INFO  SystemLogic.MainSystem - The game between: roma and juve is close
+2020.05.05 11:06:39.881 INFO  SystemLogic.MainSystem - The game between: inter and real is close
+2020.05.05 11:06:39.880 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.881 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.881 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.881 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.882 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 11:06:39.882 INFO  SystemLogic.MainSystem - The game between: man u and barca ended. the score: 5-5
+2020.05.05 11:06:39.882 INFO  SystemLogic.MainSystem - The game between: milan and man city ended. the score: 3-1
+2020.05.05 11:06:39.882 INFO  SystemLogic.MainSystem - The game between: man u and barca is close
+2020.05.05 11:06:39.882 INFO  SystemLogic.MainSystem - The game between: milan and man city is close
+2020.05.05 11:06:41.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:43.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:45.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:47.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:49.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:51.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:53.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:55.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:57.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:06:59.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:01.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:03.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:05.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:07.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:09.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:11.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:13.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:15.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:17.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:19.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:21.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:23.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:25.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:27.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:29.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:31.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:33.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:35.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:37.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:39.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:41.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:43.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:45.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:47.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:49.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:51.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:53.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:55.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:57.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:07:59.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:01.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:03.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:05.350 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:07.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:09.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:11.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:13.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:15.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:17.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:19.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:21.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:23.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:25.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:27.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:29.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:31.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:33.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:35.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:37.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:39.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:41.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:43.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:45.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:47.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:49.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:51.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:53.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:55.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:57.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:08:59.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:09:01.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:09:03.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:09:05.349 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:09:07.348 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 11:09:09.349 INFO  SystemLogic.MainSystem - Special password changed at 

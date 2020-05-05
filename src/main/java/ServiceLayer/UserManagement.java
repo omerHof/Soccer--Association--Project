@@ -44,6 +44,10 @@ public class UserManagement {
         return res;
     }
 
+    public String getUserType(String userName){
+        return MainSystem.getInstance().getUserType(userName);
+    }
+
 
     public String logIn(String userName, String password){
         String res = MainSystem.getInstance().logIn(userName,password);
