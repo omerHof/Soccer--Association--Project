@@ -1,5 +1,6 @@
 package ServiceLayer;
 
+import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Team;
@@ -20,7 +21,7 @@ public class UserManagement {
 
     User currentUser;
 
-    ////////////////USER MANAGEMENT FUNCTIONALITY//////////////////
+    /** ---------------- USER MANAGEMENT FUNCTIONALITY ----------------**/
 
     public String createNewUser(String userName, String password, String mangerPassword, String role, String fullName, String userEmail,
                                 LocalDate birthDate, String qualification, String courtRole, String teamRole,
@@ -88,7 +89,7 @@ public class UserManagement {
     }
 
 
-    ////////////////FAN MANAGEMENT FUNCTIONALITY//////////////////
+    /** ---------------- FAN MANAGEMENT FUNCTIONALITY ---------------- **/
 
     public void followPage(String pageName){
         ((Fan) currentUser).followThisPage(pageName);
@@ -114,7 +115,7 @@ public class UserManagement {
         ((Fan) currentUser).stopFollowAllTeams();
     }
 
-    ////////////////COACH MANAGEMENT FUNCTIONALITY//////////////////
+    /** ---------------- COACH MANAGEMENT FUNCTIONALITY ---------------- **/
 
     public void createCoachPersonalPage(LocalDate birthDate, String team){
         ((Coach) currentUser).createCoachPersonalPage(birthDate,team);
@@ -155,7 +156,11 @@ public class UserManagement {
         coachPersonalPage.setAge(age);
     }
 
-    ////////////////PLAYER MANAGEMENT FUNCTIONALITY//////////////////
+    /** ---------------- PLAYER MANAGEMENT FUNCTIONALITY ---------------- **/
+
+    public ArrayList<String> getAllPlayers(){
+        return DB.getInstance().getAllUserByType("player");
+    }
 
     public void createPlayerPersonalPage(int height,int weight, int shirtNum,String team){
         ((Player) currentUser).createPersonalPage(height, weight, shirtNum, team);

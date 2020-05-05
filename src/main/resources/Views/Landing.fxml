@@ -7,137 +7,125 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.LandingController">
-   <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-   </rowConstraints>
-   <children>
-        <BorderPane prefHeight="800" prefWidth="1200" style="-fx-background-color: #bbe0e0;" GridPane.hgrow="ALWAYS">
-            <top>
-                <AnchorPane style="-fx-background-color: #160604;" BorderPane.alignment="CENTER">
-                    <children>
-                        <JFXButton accessibleRole="PARENT" layoutX="646.0" layoutY="19.0" onAction="#goToPlayers" prefHeight="34.0" prefWidth="95.0" styleClass="d" stylesheets="@Landing.css" text="Players" textFill="WHITE" AnchorPane.leftAnchor="650.0">
-                            <graphic>
-                                <FontAwesomeIcon fill="#bbe0e0" glyphName="MALE" size="1.5em" />
-                            </graphic>
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </JFXButton>
-                        <JFXButton accessibleRole="PARENT" layoutX="773.0" layoutY="19.0" onAction="#goToCoaches" prefHeight="38.0" prefWidth="113.0" styleClass="d" stylesheets="@Landing.css" text="Coaches" textFill="WHITE" AnchorPane.leftAnchor="775.0">
-                            <graphic>
+
+  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0" style="-fx-background-color: #bbe0e0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.LandingController">
+      <top>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1300.0" style="-fx-background-color: #160604;" BorderPane.alignment="CENTER">
+              <children>
+                  <JFXButton accessibleRole="PARENT" layoutX="646.0" layoutY="19.0" onAction="#goToPlayers" prefHeight="34.0" prefWidth="95.0" styleClass="d" stylesheets="@Landing.css" text="Players" textFill="WHITE" AnchorPane.leftAnchor="650.0">
+                      <graphic>
+                          <FontAwesomeIcon fill="#bbe0e0" glyphName="MALE" size="1.5em" />
+                      </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+                  <JFXButton accessibleRole="PARENT" layoutX="773.0" layoutY="19.0" onAction="#goToCoaches" prefHeight="38.0" prefWidth="113.0" styleClass="d" stylesheets="@Landing.css" text="Coaches" textFill="WHITE" AnchorPane.leftAnchor="775.0">
+                      <graphic>
 
                             </graphic>
-                     <graphic>
-                        <FontAwesomeIcon fill="#bbe0f4" glyphName="USER_SECRET" size="1.5em" />
-                     </graphic>
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </JFXButton>
-                        <JFXButton accessibleRole="PARENT" layoutX="516.0" layoutY="18.0" onAction="#goToTeams" prefHeight="28.0" prefWidth="113.0" styleClass="d" stylesheets="@Landing.css" text="Teams" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="500.0">
-                            <graphic>
-                                <FontAwesomeIcon fill="#bbe0e0" fontSmoothingType="LCD" glyphName="GROUP" size="1.5em" />
-                            </graphic>
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </JFXButton>
-                        <JFXButton accessibleRole="PARENT" alignment="CENTER" layoutX="375.0" layoutY="18.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#goToLeagues" prefHeight="38.0" prefWidth="108.0" styleClass="d" stylesheets="@Landing.css" text="Leagues" textFill="WHITE" AnchorPane.leftAnchor="375.0">
-                            <graphic>
-                                <FontAwesomeIcon fill="#bbe0e0" glyphName="FUTBOL_ALT" size="1.5em" />
-                            </graphic>
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton fx:id="mainLabel" accessibleRole="PARENT" layoutX="97.0" layoutY="18.0" onAction="#goToLanding" prefHeight="38.0" prefWidth="214.0" text="SOCCER SYSTEM " textFill="#bbe0e0" AnchorPane.leftAnchor="97.0">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton accessibleRole="PARENT" layoutX="909.0" layoutY="19.0" onAction="#goToLogin" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="LogIn" textFill="WHITE" AnchorPane.rightAnchor="150.0">
-                     <graphic>
-                        <FontAwesomeIcon fill="#bbe0e0" glyphName="USER" size="1.5em" />
-                     </graphic>
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton id="d" accessibleRole="PARENT" layoutX="1040.0" layoutY="19.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#goToSignUp" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="SignUp" textFill="WHITE" AnchorPane.rightAnchor="16.0">
-                     <graphic>
-                        <FontAwesomeIcon fill="#bbe0e0" glyphName="USER_PLUS" size="1.5em" />
-                     </graphic>
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </JFXButton>
-                      <JFXButton layoutX="248.0" layoutY="18.0" onAction="#openMyApps" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #66c2ff;" stylesheets="@Landing.css" text="MY APPS" visible="true" AnchorPane.leftAnchor="260.0">
-                     <graphic>
-                        <FontAwesomeIcon glyphName="STREET_VIEW" size="1.5em" />
-                     </graphic>
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton layoutX="1476.0" layoutY="18.0" onAction="#goToProfile" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Omerh" textFill="WHITE" AnchorPane.rightAnchor="297.5999999999999">
-                     <graphic>
-                        <FontAwesomeIcon fill="#bbe0e0" glyphName="USER" size="1.5em" />
-                     </graphic>
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton layoutX="1013.0" layoutY="19.0" prefHeight="38.0" prefWidth="150.0" styleClass="d" stylesheets="@Landing.css" text="Notifications" textFill="WHITE" visible="false" AnchorPane.rightAnchor="16.0">
-                     <graphic>
-                        <FontAwesomeIcon fill="#bbe0e0" glyphName="BELL" size="1.5em" />
-                     </graphic>
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </JFXButton>
-                  <ImageView accessibleRole="PARENT" fitHeight="77.0" fitWidth="112.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
-                     <image>
-                        <Image url="@soccerLogo.png" />
-                     </image>
-                  </ImageView>
-                    </children>
-            </AnchorPane>
-         </top>
-         <bottom>
-            <AnchorPane prefHeight="97.0" prefWidth="1176.0" style="-fx-background-color: #160604;" BorderPane.alignment="CENTER">
-               <children>
-                  <FontAwesomeIcon fill="#bbe0e0" glyphName="COPYRIGHT" layoutX="109.0" layoutY="65.0" size="4em" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="167.0" layoutY="35.0" text="All right resreved to Team #7 - Yiftah Szoke, Tali Schvartz, Ido Kestenbaum, Omer Hofman and Roi Katz " textFill="#bbe0e0">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </bottom>
-         <center>
-            <ImageView accessibleRole="PARENT" fitHeight="778.0" fitWidth="1893.0" pickOnBounds="true" styleClass="img">
+               <graphic>
+                  <FontAwesomeIcon fill="#bbe0f4" glyphName="USER_SECRET" size="1.5em" />
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+                  <JFXButton accessibleRole="PARENT" layoutX="516.0" layoutY="18.0" onAction="#goToTeams" prefHeight="28.0" prefWidth="113.0" styleClass="d" stylesheets="@Landing.css" text="Teams" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="500.0">
+                      <graphic>
+                          <FontAwesomeIcon fill="#bbe0e0" fontSmoothingType="LCD" glyphName="GROUP" size="1.5em" />
+                      </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+                  <JFXButton accessibleRole="PARENT" alignment="CENTER" layoutX="375.0" layoutY="18.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#goToLeagues" prefHeight="38.0" prefWidth="108.0" styleClass="d" stylesheets="@Landing.css" text="Leagues" textFill="WHITE" AnchorPane.leftAnchor="375.0">
+                      <graphic>
+                          <FontAwesomeIcon fill="#bbe0e0" glyphName="FUTBOL_ALT" size="1.5em" />
+                      </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="mainLabel" accessibleRole="PARENT" layoutX="97.0" layoutY="18.0" onAction="#goToLanding" prefHeight="38.0" prefWidth="214.0" text="SOCCER SYSTEM " textFill="#bbe0e0" AnchorPane.leftAnchor="97.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton accessibleRole="PARENT" layoutX="909.0" layoutY="19.0" onAction="#goToLogin" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="LogIn" textFill="WHITE" AnchorPane.rightAnchor="150.0">
+               <graphic>
+                  <FontAwesomeIcon fill="#bbe0e0" glyphName="USER" size="1.5em" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="d" accessibleRole="PARENT" layoutX="1040.0" layoutY="19.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#goToSignUp" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="SignUp" textFill="WHITE" AnchorPane.rightAnchor="16.0">
+               <graphic>
+                  <FontAwesomeIcon fill="#bbe0e0" glyphName="USER_PLUS" size="1.5em" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+                <JFXButton layoutX="248.0" layoutY="18.0" onAction="#openMyApps" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #66c2ff;" stylesheets="@Landing.css" text="MY APPS" visible="true" AnchorPane.leftAnchor="260.0">
+               <graphic>
+                  <FontAwesomeIcon glyphName="STREET_VIEW" size="1.5em" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="1476.0" layoutY="18.0" onAction="#goToProfile" prefHeight="32.0" prefWidth="120.0" styleClass="d" stylesheets="@Landing.css" text="Omerh" textFill="WHITE" AnchorPane.rightAnchor="297.5999999999999">
+               <graphic>
+                  <FontAwesomeIcon fill="#bbe0e0" glyphName="USER" size="1.5em" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="1013.0" layoutY="19.0" prefHeight="38.0" prefWidth="150.0" styleClass="d" stylesheets="@Landing.css" text="Notifications" textFill="WHITE" visible="false" AnchorPane.rightAnchor="16.0">
+               <graphic>
+                  <FontAwesomeIcon fill="#bbe0e0" glyphName="BELL" size="1.5em" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <ImageView accessibleRole="PARENT" fitHeight="77.0" fitWidth="112.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
                <image>
-                  <Image url="@SoccerWallpaper.jpg" />
+                  <Image url="@soccerLogo.png" />
                </image>
             </ImageView>
-         </center>
-         <left>
-            <VBox prefHeight="626.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
-         </left>
-         <right>
-            <VBox prefHeight="626.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
-         </right>
-        </BorderPane>
-   </children>
-</GridPane>
+              </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="1300.0" style="-fx-background-color: #160604;" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIcon fill="#bbe0e0" glyphName="COPYRIGHT" layoutX="33.0" layoutY="55.0" size="4em" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="35.0" prefHeight="27.0" prefWidth="757.0" text="All right resreved to Team #7 - Yiftah Szoke, Tali Schvartz, Ido Kestenbaum, Omer Hofman and Roi Katz " textFill="#bbe0e0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <left>
+      <VBox prefHeight="626.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="626.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <ImageView accessibleRole="PARENT" fitHeight="410.0" fitWidth="1300.0" pickOnBounds="true" styleClass="img" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@SoccerWallpaper.jpg" />
+         </image>
+      </ImageView>
+   </center>
+  </BorderPane>
