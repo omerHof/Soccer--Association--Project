@@ -7,9 +7,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.time.LocalDate;
-import java.util.Date;
-
 import static org.junit.Assert.*;
 
 public class PremiumUserGenertatorTest {
@@ -17,7 +14,7 @@ public class PremiumUserGenertatorTest {
     private DB dbTest = DB.getInstance();
     private AssociationRepresentative assoTest = new AssociationRepresentative("aa", "", "alal", "a@a");
     private MainSystem mainSystem = MainSystem.getInstance();
-    private PremiumUserGenertator preG = new PremiumUserGenertator();
+    private PremiumUserGenerator preG = new PremiumUserGenerator();
 
     @Before
     public void setUp() throws Exception {

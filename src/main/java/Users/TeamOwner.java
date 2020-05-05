@@ -4,7 +4,7 @@ import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Assent;
 import Teams.Team;
-import UserGenerator.PremiumUserGenertator;
+import UserGenerator.PremiumUserGenerator;
 import UserGenerator.SimpleUserGenerator;
 import java.util.HashMap;
 
@@ -171,10 +171,10 @@ public class TeamOwner extends User implements Assent {
             return "money isn't growing on the trees!";
         }
 
-        PremiumUserGenertator premiumUserGenertator = new PremiumUserGenertator();
+        PremiumUserGenerator premiumUserGenerator = new PremiumUserGenerator();
         DB db = DB.getInstance();
         db.removeUser(user.getUserName());
-        User new_user =  premiumUserGenertator.generate(user.getUserName(),user.getPassword(),""
+        User new_user =  premiumUserGenerator.generate(user.getUserName(),user.getPassword(),""
                 ,role, user.getUserFullName(), user.getUserEmail(), null,"","","");
         if(role.equals("teamowner")){
             TeamOwner teamOwner = (TeamOwner)new_user;

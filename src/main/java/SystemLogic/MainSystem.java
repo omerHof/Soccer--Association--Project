@@ -1,7 +1,7 @@
 package SystemLogic;
 
 import UserGenerator.IUserGenerator;
-import UserGenerator.ManagmentUserGenerator;
+import UserGenerator.ManagementUserGenerator;
 import Users.Administrator;
 import Users.User;
 import org.apache.logging.log4j.LogManager;
@@ -93,9 +93,9 @@ public class MainSystem {
      * This method gets user from the data base and appoints him to administrator.
      */
     private void appointUserToSAdministrator() {
-        ManagmentUserGenerator managmentUserGenerator = new ManagmentUserGenerator();
+        ManagementUserGenerator managementUserGenerator = new ManagementUserGenerator();
         String special_password = timerPasswordBuilder.getPassword();
-        Administrator administrator = (Administrator) managmentUserGenerator.generate("admin","admin01",special_password
+        Administrator administrator = (Administrator) managementUserGenerator.generate("admin","admin01",special_password
                 ,"Administrator", "admin admin", "admin@gmail.com",
                 null,"","","");
         db.addUser(administrator);

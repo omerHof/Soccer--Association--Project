@@ -1,6 +1,5 @@
 package SystemLogic;
 
-import UserGenerator.PremiumUserGenertator;
 import UserGenerator.SimpleUserGenerator;
 import org.junit.*;
 import org.junit.FixMethodOrder;

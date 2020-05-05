@@ -7,8 +7,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Date;
-
 import static org.junit.Assert.*;
 
 public class ManagmentUserGeneratorTest {
@@ -16,7 +14,7 @@ public class ManagmentUserGeneratorTest {
     private DB dbTest = DB.getInstance();
     private AssociationRepresentative assoTest = new AssociationRepresentative("aa", "", "alal", "a@a");
     private MainSystem mainSystem = MainSystem.getInstance();
-    private ManagmentUserGenerator manG = new ManagmentUserGenerator();
+    private ManagementUserGenerator manG = new ManagementUserGenerator();
 
     @Before
     public void setUp() throws Exception {

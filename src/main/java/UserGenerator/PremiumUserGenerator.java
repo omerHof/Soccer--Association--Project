@@ -6,7 +6,7 @@ import Users.*;
 
 import java.time.LocalDate;
 
-public class PremiumUserGenertator implements IUserGenerator {
+public class PremiumUserGenerator implements IUserGenerator {
 
     @Override
     /**

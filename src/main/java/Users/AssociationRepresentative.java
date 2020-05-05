@@ -7,7 +7,7 @@ import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Team;
-import UserGenerator.PremiumUserGenertator;
+import UserGenerator.PremiumUserGenerator;
 import UserGenerator.SimpleUserGenerator;
 
 import java.util.*;
@@ -182,7 +182,7 @@ public class AssociationRepresentative extends User implements Observer {
         if(db.getUserByFullName(fullName)!= null) { //checks whether this referee already exists in the DB.
 
             Fan oldFan = (Fan)db.getUserByFullName(fullName); //gets fan itself
-            PremiumUserGenertator premiumUserG = new PremiumUserGenertator();
+            PremiumUserGenerator premiumUserG = new PremiumUserGenerator();
 
             // creates a referee, based on the fan's attributes.
             Referee newReferee = (Referee) premiumUserG.generate(oldFan.userName, oldFan.password, "onlyChangeStatus", "Referee", fullName,

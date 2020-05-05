@@ -7,7 +7,7 @@ import Users.User;
 
 import java.time.LocalDate;
 
-public class ManagmentUserGenerator implements IUserGenerator {
+public class ManagementUserGenerator implements IUserGenerator {
 
     private static String represantativePassword;
     private static String systemManagerPassword;

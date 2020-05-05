@@ -4,8 +4,8 @@ import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Team;
 import UserGenerator.IUserGenerator;
-import UserGenerator.ManagmentUserGenerator;
-import UserGenerator.PremiumUserGenertator;
+import UserGenerator.ManagementUserGenerator;
+import UserGenerator.PremiumUserGenerator;
 import UserGenerator.SimpleUserGenerator;
 import Users.*;
 
@@ -31,10 +31,10 @@ public class UserManagement {
                 iUserGenerator = new SimpleUserGenerator();
                 break;
             case "PremiumUserGenertator":
-                iUserGenerator = new PremiumUserGenertator();
+                iUserGenerator = new PremiumUserGenerator();
                 break;
             case "ManagmentUserGenerator":
-                iUserGenerator = new ManagmentUserGenerator();
+                iUserGenerator = new ManagementUserGenerator();
                 break;
             default:
                 iUserGenerator = new SimpleUserGenerator();
