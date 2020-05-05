@@ -30,10 +30,10 @@ public class UserManagement {
             case "SimpleUserGenerator":
                 iUserGenerator = new SimpleUserGenerator();
                 break;
-            case "PremiumUserGenertator":
+            case "PremiumUserGenerator":
                 iUserGenerator = new PremiumUserGenerator();
                 break;
-            case "ManagmentUserGenerator":
+            case "ManagementUserGenerator":
                 iUserGenerator = new ManagementUserGenerator();
                 break;
             default:
