@@ -60,7 +60,6 @@ public class SignUpController extends Controller {
     private ObservableList<String> playerCourtRoleOptions = FXCollections.observableArrayList();
 
 
-
     //all type buttons:
     @FXML
     JFXButton refereeBTN;
@@ -127,6 +126,9 @@ public class SignUpController extends Controller {
             e.consume();
             closeProgram();
         });
+
+        userManagement = new UserManagement();
+
 
         coachRoleOptions.add("Head Coach");
         coachRoleOptions.add("Assistant Coach");
@@ -287,6 +289,7 @@ public class SignUpController extends Controller {
 
         //showAlert(Alert.AlertType.CONFIRMATION, "Registration Successful!", "Welcome " + usernameTF.getText());
 
+
         checkDetailsCorrect();
     }
 
@@ -370,7 +373,7 @@ public class SignUpController extends Controller {
 
         //creates the correct user generator, to send through the service layer.
 
-        if (userType.equals("player") || userType.equals("coach") || userType.equals("manager") || userType.equals("teamowner") || userType.equals("referee"))
+        if (userType.equals("Player") || userType.equals("Coach") || userType.equals("Manager") || userType.equals("Teamowner") || userType.equals("Referee"))
             generatorType = "PremiumUserGenerator";
 
         else if (userType.equals("AssociationRepresentative") || userType.equals("Administrator"))
@@ -382,7 +385,7 @@ public class SignUpController extends Controller {
 
 
         // gets details by user type:
-        String userCreated;
+        String userCreatedMessage;
         boolean isSelected;
 
         if (userType.equals("Referee")){
@@ -397,7 +400,7 @@ public class SignUpController extends Controller {
             qualification = refereeQualificationCB.getValue().toString();
 
             // checks whether the user exists in the system already.
-            userCreated = userManagement.createNewUser(userName, password, "", userType, fullname, email, null, qualification, "", "", generatorType); //true if success //only necessary parameters.
+            userCreatedMessage = userManagement.createNewUser(userName, password, "", userType, fullname, email, null, qualification, "", "", generatorType); //true if success //only necessary parameters.
         }
 
         else if (userType.equals("Player")){
@@ -419,7 +422,7 @@ public class SignUpController extends Controller {
                 return;
             }
 
-            userCreated = userManagement.createNewUser(userName, password, "", userType, fullname, email, birthDate, "", courtRole, "", generatorType); //true if success
+            userCreatedMessage = userManagement.createNewUser(userName, password, "", userType, fullname, email, birthDate, "", courtRole, "", generatorType); //true if success
         }
 
         else if (userType.equals("Coach")){
@@ -432,7 +435,7 @@ public class SignUpController extends Controller {
             }
             teamRole = coachTeamRoleCB.getValue().toString();
 
-            userCreated = userManagement.createNewUser(userName, password, "", userType, fullname, email, null, "", "", teamRole, generatorType); //true if success
+            userCreatedMessage = userManagement.createNewUser(userName, password, "", userType, fullname, email, null, "", "", teamRole, generatorType); //true if success
         }
 
         else if ((userType.equals("AssociationRepresentative")) || (userType.equals("Administrator"))){
@@ -444,21 +447,21 @@ public class SignUpController extends Controller {
                 return;
             }
 
-            userCreated = userManagement.createNewUser(userName, password, managementPassword, userType, fullname, email, null, "", "", "", generatorType); //true if success
+            userCreatedMessage = userManagement.createNewUser(userName, password, managementPassword, userType, fullname, email, null, "", "", "", generatorType); //true if success
         }
 
-        else {
-            userCreated = userManagement.createNewUser(userName, password, "", userType, fullname, email, null, "", "", "", generatorType); // only the basic information.
+        else { // fan / manager / teamowner
+            userCreatedMessage = userManagement.createNewUser(userName, password, "", userType, fullname, email, null, "", "", "", generatorType); // only the basic information.
         }
 
 
 
-        if(userCreated.equals("exist")){
+        if(userCreatedMessage.equals("exist")){
             showAlert(Alert.AlertType.ERROR, "Form Error!", "The username you choose is already exist. Please choose a new one.");
             return;
         }
 
-        else if(userCreated.equals("null")){
+        else if(userCreatedMessage.equals("null")){
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Something went wrong, please check the details you entered.");
             return;
         }
@@ -467,8 +470,15 @@ public class SignUpController extends Controller {
             super.userType = this.userType; //updates attributes of the main controller
             super.userName = this.username;
 
-            showAlert(Alert.AlertType.INFORMATION, "Form Information", "Welcome abroad ! Your user was added successfully to the system.");
-            goToProfile();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Confirmation Dialog");
+            alert.setHeaderText("Welcome abroad !");
+            alert.setContentText(" Your user was added successfully to the system.");
+
+            alert.showAndWait();
+
+//            showAlert(Alert.AlertType.CONFIRMATION, "Form Information", "Welcome abroad ! Your user was added successfully to the system.");
+            goToLanding();
         }
     }
 
@@ -482,4 +492,70 @@ public class SignUpController extends Controller {
     }
 
 
+    public void typeFan(ActionEvent actionEvent) {
+        userType = "Fan";
+
+        try {
+            allExtraFieldsOff();
+        }
+        catch (IOException i){
+
+        }
+    }
+
+    public void typeTeamOwner(ActionEvent actionEvent) {
+        userType = "TeamOwner";
+
+        try {
+            allExtraFieldsOff();
+        }
+        catch (IOException i){
+
+        }
+    }
+
+    public void typeManager(ActionEvent actionEvent) {
+        userType = "Manager";
+
+        try {
+            allExtraFieldsOff();
+        }
+        catch (IOException i){
+
+        }
+    }
+
+    public void typeAdministrator(ActionEvent actionEvent) {
+
+        try {
+            allExtraFieldsOff();
+        }
+        catch (IOException i){
+
+        }
+
+        managePassTF.setVisible(true);
+        managePassLable.setVisible(true);
+
+        userType = "Administrator";
+
+        submit.setDisable(false); //now the user can try pressing the submit button.
+    }
+
+    public void typeAssociationRepresentative(ActionEvent actionEvent) {
+
+        managePassTF.setVisible(true);
+        managePassLable.setVisible(true);
+
+        userType = "AssociationRepresentative";
+
+        try {
+            allExtraFieldsOff();
+        }
+        catch (IOException i){
+
+        }
+
+        submit.setDisable(false); //now the user can try pressing the submit button.
+    }
 }
