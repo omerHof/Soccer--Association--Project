@@ -7917,3 +7917,1276 @@
 2020.05.05 17:10:02.431 INFO  SystemLogic.MainSystem - The game between: man city and milan started
 2020.05.05 17:10:02.431 INFO  SystemLogic.MainSystem - The user get update
 2020.05.05 17:10:02.431 INFO  SystemLogic.MainSystem - The game between: man u and inter started
+2020.05.05 19:34:48.414 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 19:34:48.414 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 19:34:48.416 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 19:36:16.544 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 19:36:16.544 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 19:36:16.546 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 19:41:48.652 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 19:41:48.652 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 19:41:48.654 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 19:44:13.209 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 19:44:13.209 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 19:44:13.211 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 19:46:12.048 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 19:46:12.048 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 19:46:12.051 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 19:49:26.840 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 19:49:26.840 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 19:49:26.842 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 19:55:07.613 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 19:55:07.613 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 19:55:07.615 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 19:56:21.944 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 19:56:21.944 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 19:56:21.946 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 19:57:14.400 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 19:57:14.400 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 19:57:14.402 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 19:59:11.267 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 19:59:11.267 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 19:59:11.270 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 20:02:39.734 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 20:02:39.734 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 20:02:39.736 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 20:04:17.648 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 20:04:17.648 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 20:04:17.650 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 20:05:29.499 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:05:29.502 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:05:29.502 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:05:29.502 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:05:29.502 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:05:29.502 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:05:29.503 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:05:29.503 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:05:29.503 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:05:29.503 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:05:29.503 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:05:29.503 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:05:29.503 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:05:29.504 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:05:29.504 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:05:29.504 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:05:29.504 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:05:29.504 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:05:29.505 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:05:29.506 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:05:29.506 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:05:29.506 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:05:29.506 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:05:29.506 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:05:29.506 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:05:29.507 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:05:29.507 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:05:29.507 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:05:29.507 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:05:29.507 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:05:29.507 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:05:29.507 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:05:29.508 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:05:29.508 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:05:29.508 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:05:29.508 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:05:29.508 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:05:29.508 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:05:29.508 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:05:29.508 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:05:29.509 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:05:29.509 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:05:29.510 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:05:29.510 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:05:29.512 INFO  SystemLogic.MainSystem - new league: Alufot were added.
+2020.05.05 20:05:29.540 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.05.05 20:05:29.551 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.05.05 20:05:36.472 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:05:36.472 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:05:36.472 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:05:36.472 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:05:36.473 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:05:36.473 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:05:36.473 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:05:36.473 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:05:36.473 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:05:36.473 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:05:36.473 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:05:36.473 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:05:36.473 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:05:36.473 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:05:36.474 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:05:36.474 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:05:36.474 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:05:36.474 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:05:36.474 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:05:36.474 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:05:36.474 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:05:36.474 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:05:36.474 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:05:36.474 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:05:36.475 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:05:36.476 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:05:36.476 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:05:36.476 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:05:36.476 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:05:36.476 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:05:36.476 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:05:36.476 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:05:36.476 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:05:36.476 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:05:36.495 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.05.05 20:05:36.502 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.05.05 20:05:36.503 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:05:36.504 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:05:36.505 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:05:36.505 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:05:36.505 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:05:36.505 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:05:36.505 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:05:36.505 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:05:36.505 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:05:36.505 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:05:36.505 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:05:36.505 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:05:36.506 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:05:36.506 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:05:36.506 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:05:36.506 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:05:36.506 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:05:36.506 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:05:36.506 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:05:36.506 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:05:36.506 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:05:36.506 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:05:36.507 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:05:36.507 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:05:36.507 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:05:36.507 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:05:36.507 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:05:36.507 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:05:36.507 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:05:36.507 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:05:36.507 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:05:36.508 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:05:36.508 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:05:36.515 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.05.05 20:05:36.521 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.05.05 20:05:38.526 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.526 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.536 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.536 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.536 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool will start in 24 hours!
+2020.05.05 20:05:38.536 INFO  SystemLogic.MainSystem - The game between: milan and inter will start in 24 hours!
+2020.05.05 20:05:38.536 INFO  SystemLogic.MainSystem - The game between: barca and juve will start in 24 hours!
+2020.05.05 20:05:38.536 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.536 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.536 INFO  SystemLogic.MainSystem - The game between: real and man u will start in 24 hours!
+2020.05.05 20:05:38.537 INFO  SystemLogic.MainSystem - The game between: man city and roma will start in 24 hours!
+2020.05.05 20:05:38.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.542 INFO  SystemLogic.MainSystem - The game between: real and juve will start in 24 hours!
+2020.05.05 20:05:38.542 INFO  SystemLogic.MainSystem - The game between: roma and barca will start in 24 hours!
+2020.05.05 20:05:38.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:38.543 INFO  SystemLogic.MainSystem - The game between: man u and inter will start in 24 hours!
+2020.05.05 20:05:38.543 INFO  SystemLogic.MainSystem - The game between: chelsea and man city will start in 24 hours!
+2020.05.05 20:05:39.541 INFO  SystemLogic.MainSystem - The game between: liverpool and milan will start in 24 hours!
+2020.05.05 20:05:43.522 INFO  SystemLogic.MainSystem - The game between: barca and juve started
+2020.05.05 20:05:43.522 INFO  SystemLogic.MainSystem - The game between: milan and inter started
+2020.05.05 20:05:43.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.524 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool started
+2020.05.05 20:05:43.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.524 INFO  SystemLogic.MainSystem - The game between: real and man u started
+2020.05.05 20:05:43.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.524 INFO  SystemLogic.MainSystem - The game between: man city and roma started
+2020.05.05 20:05:43.541 INFO  SystemLogic.MainSystem - The game between: real and juve started
+2020.05.05 20:05:43.541 INFO  SystemLogic.MainSystem - The game between: roma and barca started
+2020.05.05 20:05:43.541 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.541 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.541 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.541 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:43.542 INFO  SystemLogic.MainSystem - The game between: chelsea and man city started
+2020.05.05 20:05:43.542 INFO  SystemLogic.MainSystem - The game between: man u and inter started
+2020.05.05 20:05:44.541 INFO  SystemLogic.MainSystem - The game between: liverpool and milan started
+2020.05.05 20:05:45.479 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:45.480 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:45.480 INFO  SystemLogic.MainSystem - The game between: liverpool and inter will start in 24 hours!
+2020.05.05 20:05:45.480 INFO  SystemLogic.MainSystem - The game between: milan and chelsea will start in 24 hours!
+2020.05.05 20:05:45.480 INFO  SystemLogic.MainSystem - The game between: barca and juve will start in 24 hours!
+2020.05.05 20:05:45.480 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:45.480 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:45.480 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:45.480 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:45.481 INFO  SystemLogic.MainSystem - The game between: man city and roma will start in 24 hours!
+2020.05.05 20:05:45.481 INFO  SystemLogic.MainSystem - The game between: real and man u will start in 24 hours!
+2020.05.05 20:05:45.497 INFO  SystemLogic.MainSystem - The game between: liverpool and milan will start in 24 hours!
+2020.05.05 20:05:46.498 INFO  SystemLogic.MainSystem - The game between: chelsea and real will start in 24 hours!
+2020.05.05 20:05:46.497 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.497 INFO  SystemLogic.MainSystem - The game between: juve and barca will start in 24 hours!
+2020.05.05 20:05:46.497 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.498 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.498 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.498 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.498 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.500 INFO  SystemLogic.MainSystem - The game between: man city and roma will start in 24 hours!
+2020.05.05 20:05:46.500 INFO  SystemLogic.MainSystem - The game between: man u and inter will start in 24 hours!
+2020.05.05 20:05:46.512 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.512 INFO  SystemLogic.MainSystem - The game between: milan and roma will start in 24 hours!
+2020.05.05 20:05:46.512 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.513 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool will start in 24 hours!
+2020.05.05 20:05:46.513 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.513 INFO  SystemLogic.MainSystem - The game between: real and inter will start in 24 hours!
+2020.05.05 20:05:46.513 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.513 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.514 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.515 INFO  SystemLogic.MainSystem - The game between: barca and man city will start in 24 hours!
+2020.05.05 20:05:46.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.524 INFO  SystemLogic.MainSystem - The game between: milan and roma will start in 24 hours!
+2020.05.05 20:05:46.524 INFO  SystemLogic.MainSystem - The game between: inter and barca will start in 24 hours!
+2020.05.05 20:05:46.523 INFO  SystemLogic.MainSystem - The game between: juve and man u will start in 24 hours!
+2020.05.05 20:05:46.524 INFO  SystemLogic.MainSystem - The game between: real and liverpool will start in 24 hours!
+2020.05.05 20:05:46.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.524 INFO  SystemLogic.MainSystem - The game between: chelsea and juve will start in 24 hours!
+2020.05.05 20:05:46.525 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.525 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.525 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.525 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:46.528 INFO  SystemLogic.MainSystem - The game between: man u and man city will start in 24 hours!
+2020.05.05 20:05:48.523 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.523 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool ended. the score: 5-0
+2020.05.05 20:05:48.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.523 INFO  SystemLogic.MainSystem - The game between: milan and inter ended. the score: 5-6
+2020.05.05 20:05:48.523 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.523 INFO  SystemLogic.MainSystem - The game between: barca and juve ended. the score: 4-0
+2020.05.05 20:05:48.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.524 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool is close
+2020.05.05 20:05:48.524 INFO  SystemLogic.MainSystem - The game between: milan and inter is close
+2020.05.05 20:05:48.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.524 INFO  SystemLogic.MainSystem - The game between: barca and juve is close
+2020.05.05 20:05:48.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.524 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.525 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.525 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.525 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.525 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.525 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.525 INFO  SystemLogic.MainSystem - The game between: man city and roma ended. the score: 3-1
+2020.05.05 20:05:48.525 INFO  SystemLogic.MainSystem - The game between: real and man u ended. the score: 5-5
+2020.05.05 20:05:48.526 INFO  SystemLogic.MainSystem - The game between: man city and roma is close
+2020.05.05 20:05:48.526 INFO  SystemLogic.MainSystem - The game between: real and man u is close
+2020.05.05 20:05:48.541 INFO  SystemLogic.MainSystem - The game between: real and juve ended. the score: 1-1
+2020.05.05 20:05:48.541 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.541 INFO  SystemLogic.MainSystem - The game between: roma and barca ended. the score: 4-0
+2020.05.05 20:05:48.541 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.541 INFO  SystemLogic.MainSystem - The game between: real and juve is close
+2020.05.05 20:05:48.541 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.541 INFO  SystemLogic.MainSystem - The game between: roma and barca is close
+2020.05.05 20:05:48.541 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.542 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.543 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.543 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:48.543 INFO  SystemLogic.MainSystem - The game between: chelsea and man city ended. the score: 4-2
+2020.05.05 20:05:48.543 INFO  SystemLogic.MainSystem - The game between: man u and inter ended. the score: 0-4
+2020.05.05 20:05:48.543 INFO  SystemLogic.MainSystem - The game between: chelsea and man city is close
+2020.05.05 20:05:48.543 INFO  SystemLogic.MainSystem - The game between: man u and inter is close
+2020.05.05 20:05:49.541 INFO  SystemLogic.MainSystem - The game between: liverpool and milan ended. the score: 0-5
+2020.05.05 20:05:49.542 INFO  SystemLogic.MainSystem - The game between: liverpool and milan is close
+2020.05.05 20:05:50.477 INFO  SystemLogic.MainSystem - The game between: milan and chelsea started
+2020.05.05 20:05:50.477 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:50.477 INFO  SystemLogic.MainSystem - The game between: barca and juve started
+2020.05.05 20:05:50.477 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:50.478 INFO  SystemLogic.MainSystem - The game between: liverpool and inter started
+2020.05.05 20:05:50.478 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:50.478 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:50.478 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:50.478 INFO  SystemLogic.MainSystem - The game between: real and man u started
+2020.05.05 20:05:50.479 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:50.479 INFO  SystemLogic.MainSystem - The game between: man city and roma started
+2020.05.05 20:05:50.496 INFO  SystemLogic.MainSystem - The game between: liverpool and milan started
+2020.05.05 20:05:51.496 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.496 INFO  SystemLogic.MainSystem - The game between: chelsea and real started
+2020.05.05 20:05:51.496 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.496 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.496 INFO  SystemLogic.MainSystem - The game between: juve and barca started
+2020.05.05 20:05:51.496 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.497 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.497 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.497 INFO  SystemLogic.MainSystem - The game between: man u and inter started
+2020.05.05 20:05:51.497 INFO  SystemLogic.MainSystem - The game between: man city and roma started
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The game between: real and inter started
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The game between: milan and roma started
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The game between: juve and man u started
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool started
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.508 INFO  SystemLogic.MainSystem - The game between: barca and man city started
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The game between: milan and roma started
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The game between: real and liverpool started
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The game between: inter and barca started
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The game between: chelsea and juve started
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:51.516 INFO  SystemLogic.MainSystem - The game between: man u and man city started
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The game between: barca and juve ended. the score: 0-6
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The game between: milan and chelsea ended. the score: 4-5
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The game between: barca and juve is close
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The game between: milan and chelsea is close
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The game between: real and man u ended. the score: 6-5
+2020.05.05 20:05:55.478 INFO  SystemLogic.MainSystem - The game between: real and man u is close
+2020.05.05 20:05:55.479 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.479 INFO  SystemLogic.MainSystem - The game between: liverpool and inter ended. the score: 1-3
+2020.05.05 20:05:55.479 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.479 INFO  SystemLogic.MainSystem - The game between: liverpool and inter is close
+2020.05.05 20:05:55.479 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.479 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.479 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.479 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:55.479 INFO  SystemLogic.MainSystem - The game between: man city and roma ended. the score: 3-0
+2020.05.05 20:05:55.479 INFO  SystemLogic.MainSystem - The game between: man city and roma is close
+2020.05.05 20:05:55.497 INFO  SystemLogic.MainSystem - The game between: liverpool and milan ended. the score: 0-4
+2020.05.05 20:05:55.497 INFO  SystemLogic.MainSystem - The game between: liverpool and milan is close
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The game between: juve and barca ended. the score: 5-5
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The game between: juve and barca is close
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The game between: chelsea and real ended. the score: 0-2
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The game between: chelsea and real is close
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The game between: man city and roma ended. the score: 3-0
+2020.05.05 20:05:56.495 INFO  SystemLogic.MainSystem - The game between: man city and roma is close
+2020.05.05 20:05:56.496 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.496 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.496 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.496 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.496 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.496 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.496 INFO  SystemLogic.MainSystem - The game between: man u and inter ended. the score: 1-5
+2020.05.05 20:05:56.496 INFO  SystemLogic.MainSystem - The game between: man u and inter is close
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The game between: real and inter ended. the score: 4-3
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The game between: milan and roma ended. the score: 2-2
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool ended. the score: 4-4
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The game between: real and inter is close
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The game between: milan and roma is close
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The game between: chelsea and liverpool is close
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.509 INFO  SystemLogic.MainSystem - The game between: juve and man u ended. the score: 1-4
+2020.05.05 20:05:56.510 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.510 INFO  SystemLogic.MainSystem - The game between: barca and man city ended. the score: 3-0
+2020.05.05 20:05:56.510 INFO  SystemLogic.MainSystem - The game between: barca and man city is close
+2020.05.05 20:05:56.510 INFO  SystemLogic.MainSystem - The game between: juve and man u is close
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The game between: milan and roma ended. the score: 4-1
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The game between: chelsea and juve ended. the score: 3-1
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The game between: inter and barca ended. the score: 5-2
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The game between: chelsea and juve is close
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The game between: milan and roma is close
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The game between: real and liverpool ended. the score: 4-5
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The game between: inter and barca is close
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The game between: real and liverpool is close
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.515 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.516 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.516 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.516 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.516 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:05:56.516 INFO  SystemLogic.MainSystem - The game between: man u and man city ended. the score: 4-1
+2020.05.05 20:05:56.516 INFO  SystemLogic.MainSystem - The game between: man u and man city is close
+2020.05.05 20:05:58.441 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 20:05:58.441 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 20:05:58.441 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 20:05:59.677 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:05:59.677 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:05:59.677 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:05:59.677 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:05:59.677 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:05:59.677 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:05:59.677 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:05:59.677 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:05:59.678 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:05:59.679 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:05:59.687 INFO  SystemLogic.MainSystem - new season: 2020 was added to league: Alufot.
+2020.05.05 20:05:59.693 INFO  SystemLogic.MainSystem - new season: 2021 was added to league: Alufot.
+2020.05.05 20:06:08.682 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:08.682 INFO  SystemLogic.MainSystem - The game between: real and chelsea will start in 24 hours!
+2020.05.05 20:06:08.682 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:08.682 INFO  SystemLogic.MainSystem - The game between: roma and juve will start in 24 hours!
+2020.05.05 20:06:08.682 INFO  SystemLogic.MainSystem - The game between: barca and liverpool will start in 24 hours!
+2020.05.05 20:06:08.682 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:08.682 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:08.683 INFO  SystemLogic.MainSystem - The game between: man city and milan will start in 24 hours!
+2020.05.05 20:06:08.691 INFO  SystemLogic.MainSystem - The game between: inter and liverpool will start in 24 hours!
+2020.05.05 20:06:08.691 INFO  SystemLogic.MainSystem - The game between: real and juve will start in 24 hours!
+2020.05.05 20:06:08.691 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:08.691 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:08.691 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:08.691 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:08.692 INFO  SystemLogic.MainSystem - The game between: man u and barca will start in 24 hours!
+2020.05.05 20:06:09.683 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:09.684 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:09.684 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:09.684 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:09.687 INFO  SystemLogic.MainSystem - The game between: man u and inter will start in 24 hours!
+2020.05.05 20:06:09.690 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:09.692 INFO  SystemLogic.MainSystem - The game between: milan and chelsea will start in 24 hours!
+2020.05.05 20:06:09.692 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:09.692 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:09.692 INFO  SystemLogic.MainSystem - The user get update
+2020.05.05 20:06:09.693 INFO  SystemLogic.MainSystem - The game between: man city and roma will start in 24 hours!
+2020.05.05 20:06:31.792 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:06:31.793 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:06:31.793 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:06:31.794 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:06:31.794 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:06:31.794 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:06:31.794 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:06:31.794 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:06:31.794 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:06:31.794 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:06:31.794 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:06:31.795 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:06:31.795 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:06:31.795 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:06:31.795 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:06:31.795 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:06:31.795 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:06:31.795 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:06:31.795 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:06:31.795 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:06:31.796 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:06:31.796 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:06:31.796 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:06:31.796 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:06:31.796 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:06:31.796 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:06:31.796 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:06:31.797 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:06:31.797 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:06:31.797 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:06:31.797 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:06:31.797 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:06:31.797 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:06:31.797 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:06:31.798 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:06:31.798 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:06:31.798 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:06:31.798 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:06:31.798 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:06:31.798 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:06:31.798 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:06:31.798 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:06:31.799 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:06:31.799 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:06:31.800 INFO  SystemLogic.MainSystem - new league: Alufot were added.
+2020.05.05 20:06:34.180 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:06:34.180 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:06:34.181 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:06:34.181 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:06:34.181 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:06:34.181 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:06:34.181 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:06:34.182 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:06:34.182 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:06:34.182 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:06:34.182 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:06:34.182 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:06:34.183 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:06:34.183 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:06:34.183 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:06:34.183 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:06:34.183 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:06:34.183 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:06:34.184 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:06:34.184 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:06:34.184 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:06:34.184 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:06:34.185 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:06:34.185 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:06:34.185 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:06:34.185 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:06:34.185 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:06:34.185 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:06:34.186 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:06:34.186 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:06:34.186 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:06:34.186 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:06:34.186 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:06:34.186 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:06:34.186 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:06:34.187 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:06:34.187 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:06:34.187 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:06:34.187 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:06:34.187 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:06:34.187 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:06:34.187 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:06:34.187 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:06:34.187 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:06:34.191 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:06:34.191 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:06:34.191 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:06:34.191 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:06:34.191 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:06:34.191 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:06:34.192 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:06:34.192 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:06:34.192 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:06:34.192 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:06:34.192 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:06:34.192 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:06:34.192 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:06:34.192 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:06:34.192 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:06:34.193 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:06:34.194 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:06:34.194 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:06:34.194 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:06:34.194 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:06:34.194 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:06:34.194 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:06:34.194 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:06:34.194 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:06:34.194 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:06:34.194 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:06:34.195 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:06:34.195 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:06:34.195 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:06:34.195 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:06:34.195 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:06:34.195 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:06:34.195 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:06:34.195 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:07:03.602 INFO  SystemLogic.MainSystem - A new coach: null was created successfully !
+2020.05.05 20:07:03.603 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 20:07:03.603 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 20:07:03.603 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 20:07:10.000 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:07:10.000 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:07:10.000 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:07:10.000 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:07:10.000 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:07:10.000 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:07:10.000 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:07:10.000 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:07:10.001 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:07:10.001 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:07:10.001 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:07:10.001 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:07:10.001 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:07:10.001 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:07:10.001 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:07:10.001 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:07:10.001 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:07:10.001 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:07:10.002 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:07:10.002 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:07:10.002 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:07:10.002 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:07:10.002 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:07:10.002 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:07:10.002 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:07:10.002 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:07:10.002 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:07:10.002 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:07:10.003 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:07:10.004 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:07:10.004 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:07:10.004 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:07:10.004 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:07:10.004 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:10:42.064 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:10:42.066 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:10:42.066 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:10:42.067 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:10:42.067 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:10:42.067 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:10:42.067 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:10:42.067 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:10:42.067 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:10:42.067 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:10:42.067 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:10:42.068 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:10:42.068 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:10:42.068 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:10:42.068 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:10:42.068 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:10:42.068 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:10:42.069 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:10:42.069 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:10:42.069 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:10:42.069 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:10:42.069 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:10:42.070 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:10:42.070 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:10:42.070 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:10:42.070 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:10:42.070 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:10:42.070 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:10:42.070 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:10:42.070 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:10:42.071 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:10:42.071 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:10:42.071 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:10:42.071 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:10:42.071 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:10:42.071 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:10:42.071 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:10:42.071 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:10:42.071 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:10:42.072 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:10:42.072 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:10:42.072 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:10:42.073 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:10:42.073 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:10:42.074 INFO  SystemLogic.MainSystem - new league: Alufot were added.
+2020.05.05 20:10:44.404 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:10:44.404 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:10:44.404 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:10:44.405 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:10:44.405 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:10:44.405 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:10:44.405 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:10:44.405 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:10:44.405 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:10:44.405 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:10:44.405 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:10:44.406 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:10:44.406 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:10:44.406 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:10:44.406 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:10:44.406 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:10:44.406 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:10:44.406 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:10:44.406 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:10:44.407 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:10:44.407 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:10:44.407 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:10:44.407 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:10:44.407 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:10:44.407 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:10:44.407 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:10:44.407 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:10:44.407 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:10:44.407 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:10:44.408 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:10:44.409 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:10:44.409 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:10:44.409 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:10:44.409 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:10:44.411 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:10:44.411 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:10:44.411 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:10:44.411 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:10:44.411 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:10:44.411 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:10:44.411 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:10:44.411 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:10:44.412 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:10:44.413 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:10:44.413 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:10:44.413 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:10:44.413 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:10:44.413 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:10:44.413 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:10:44.413 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:10:44.413 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:10:44.413 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:10:44.413 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:10:44.414 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:10:44.414 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:10:44.414 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:10:44.414 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:10:44.414 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:10:44.414 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:10:44.414 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:10:44.414 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:10:44.414 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:10:44.415 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:10:44.415 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:10:44.415 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:10:44.415 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:10:44.415 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:11:23.436 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:11:23.438 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:11:23.438 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:11:23.438 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:11:23.438 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:11:23.438 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:11:23.439 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:11:23.439 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:11:23.439 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:11:23.439 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:11:23.439 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:11:23.439 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:11:23.439 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:11:23.439 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:11:23.439 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:11:23.440 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:11:23.440 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:11:23.440 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:11:23.440 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:11:23.440 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:11:23.440 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:11:23.440 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:11:23.440 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:11:23.440 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:11:23.441 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:11:23.441 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:11:23.441 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:11:23.441 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:11:23.441 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:11:23.441 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:11:23.441 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:11:23.441 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:11:23.441 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:11:23.442 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:11:23.442 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:11:23.442 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:11:23.442 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:11:23.442 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:11:23.442 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:11:23.442 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:11:23.442 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:11:23.442 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:11:23.443 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:11:23.443 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:11:23.444 INFO  SystemLogic.MainSystem - new league: Alufot were added.
+2020.05.05 20:11:25.609 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:11:25.609 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:11:25.609 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:11:25.610 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:11:25.610 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:11:25.610 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:11:25.610 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:11:25.611 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:11:25.611 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:11:25.611 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:11:25.612 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:11:25.612 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:11:25.612 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:11:25.613 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:11:25.613 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:11:25.613 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:11:25.613 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:11:25.614 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:11:25.614 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:11:25.614 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:11:25.614 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:11:25.614 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:11:25.615 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:11:25.616 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:11:25.620 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:11:25.620 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:11:25.620 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:11:25.620 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:11:25.620 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:11:25.620 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:11:25.620 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:11:25.620 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:11:25.620 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:11:25.621 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:11:25.622 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:11:25.622 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:11:25.622 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:11:25.622 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:11:25.622 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:11:25.622 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:11:25.622 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:11:25.622 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:11:25.622 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:11:25.622 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:11:25.623 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:12:12.799 INFO  SystemLogic.MainSystem - A new player: null was created successfully !
+2020.05.05 20:12:12.800 INFO  SystemLogic.MainSystem - A new user null was signed up successfully
+2020.05.05 20:12:12.800 INFO  SystemLogic.MainSystem - Special password changed at 
+2020.05.05 20:12:12.800 INFO  SystemLogic.MainSystem - null was logged in successfully
+2020.05.05 20:12:18.267 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:12:18.267 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:12:18.267 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:12:18.267 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:12:18.267 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:12:18.267 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:12:18.268 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:12:18.268 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:12:18.268 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:12:18.269 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:12:18.270 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:12:22.302 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:12:22.302 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:12:22.302 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:12:22.302 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:12:22.302 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:12:22.302 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:12:22.303 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:12:22.304 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:12:22.304 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:12:22.304 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:12:22.304 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:12:22.304 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:12:22.304 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:12:22.304 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:12:22.304 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:12:22.304 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:12:22.304 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:12:22.305 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:12:22.306 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:12:22.306 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:12:22.309 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:12:22.309 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:12:22.309 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:12:22.309 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:12:22.309 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:12:22.309 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:12:22.309 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:12:22.309 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:12:22.309 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:12:22.310 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:12:22.311 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:12:22.312 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:12:24.436 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:12:24.436 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:12:24.436 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:12:24.436 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:12:24.436 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:12:24.436 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:12:24.436 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:12:24.437 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:12:24.437 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:12:24.437 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:12:24.437 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:12:24.437 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:12:24.437 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:12:24.437 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:12:24.437 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:12:24.437 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:12:24.437 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:12:24.438 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:12:24.438 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:12:24.438 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:12:24.439 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:12:24.439 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:12:24.439 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:12:24.439 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:12:24.439 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:12:24.439 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:12:24.439 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:12:24.439 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:12:24.440 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:12:24.440 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:12:24.440 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:12:24.440 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:12:24.440 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:12:24.440 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:12:24.440 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:12:24.440 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:12:24.441 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:12:24.441 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:12:24.441 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:12:24.441 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:12:24.441 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:12:24.441 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:12:24.441 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:12:24.441 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:12:24.457 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:12:24.457 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:12:24.457 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:12:24.457 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:12:24.457 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:12:24.457 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:12:24.457 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:12:24.457 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:12:24.457 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:12:24.457 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:12:24.458 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:12:24.459 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:12:25.716 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:12:25.716 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:12:25.716 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:12:25.716 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:12:25.716 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:12:25.716 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:12:25.716 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:12:25.717 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:12:25.718 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:12:25.719 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:12:25.719 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:12:25.719 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:12:25.719 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:12:25.719 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.05 20:12:25.721 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.05 20:12:25.722 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.05 20:12:25.722 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.05 20:12:25.722 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.05 20:12:25.722 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.05 20:12:25.722 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.05 20:12:25.722 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.05 20:12:25.722 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.05 20:12:25.722 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team barca
+2020.05.05 20:12:25.723 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team barca
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team real
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team real
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team man u
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team man u
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team man city
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team man city
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team liverpool
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team liverpool
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team chelsea
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team chelsea
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team roma
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team roma
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team juve
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team juve
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - The player gili vermut has move to the team milan
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the player gili vermut was added successfully to the team milan
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - The player rean zahavi has move to the team inter
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the player rean zahavi was added successfully to the team inter
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.05 20:12:25.724 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.05 20:12:25.725 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.05 20:12:25.725 INFO  SystemLogic.MainSystem - ido kest follow the team : man city

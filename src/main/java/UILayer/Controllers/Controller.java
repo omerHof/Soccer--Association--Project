@@ -1,5 +1,6 @@
 package UILayer.Controllers;
 
+import DataForTest.DataBase;
 import UILayer.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +12,15 @@ import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public abstract class Controller implements Initializable {
+public class Controller implements Initializable {
 
     @FXML
-    protected String userName;
+    protected static String userName;
     protected String userType;
+    DataBase db = new DataBase();
 
 
     /**
@@ -43,6 +47,7 @@ public abstract class Controller implements Initializable {
         Scene scene = new Scene(root);
         s.setScene(scene);
         LandingController lc = fxmlLoader.getController();
+        lc.showUserButton();
 
         Main.setStage(s);
         s.show();
@@ -200,4 +205,8 @@ public abstract class Controller implements Initializable {
     }
 
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }
