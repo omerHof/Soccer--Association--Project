@@ -47,7 +47,7 @@ public class Controller implements Initializable {
         Scene scene = new Scene(root);
         s.setScene(scene);
         LandingController lc = fxmlLoader.getController();
-        lc.showUserButton();
+
 
         Main.setStage(s);
         s.show();

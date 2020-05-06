@@ -9,7 +9,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="553.0" prefWidth="1078.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.SignUpController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.SignUpController">
+    <children>
     <fx:include fx:id="navBar" source="Landing.fxml" />
         <Label fx:id="pleaseChoseType" layoutX="25.0" layoutY="109.0" prefHeight="30.0" prefWidth="237.0" text="Please chose user type:">
             <font>
@@ -117,9 +118,7 @@
         <Label fx:id="qualificationLabel" layoutX="29.0" layoutY="421.0" prefHeight="27.0" prefWidth="104.0" text="Qualification" />
         <ChoiceBox fx:id="refereeQualificationCB" layoutX="106.0" layoutY="421.0" prefHeight="0.0" prefWidth="172.0" />
 
-
-
         <Label fx:id="managePassLabel" layoutX="28.0" layoutY="421.0" prefHeight="27.0" prefWidth="192.0" text="Management Password" />
         <PasswordField fx:id="managePassTF" layoutX="182.0" layoutY="421.0" prefHeight="0.0" prefWidth="152.0" />
-
+    </children>
 </AnchorPane>

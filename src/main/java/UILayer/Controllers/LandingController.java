@@ -32,6 +32,7 @@ public class LandingController extends Controller {
             e.consume();
             closeProgram();
         });
+        showUserButton();
     }
 
     public void showUserButton(){
