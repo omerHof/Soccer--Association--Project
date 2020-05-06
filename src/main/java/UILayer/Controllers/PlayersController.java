@@ -8,10 +8,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Callback;
@@ -27,6 +24,14 @@ public class PlayersController extends Controller {
 
     @FXML
     TableView<SimpleStringProperty> players_table = new TableView<>();
+
+    @FXML
+    private TextField choosenHeight;
+    @FXML
+    private TextField choosenWeight;
+    @FXML
+    private TextField choosenNumber;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -98,6 +103,55 @@ public class PlayersController extends Controller {
         String position;
         String shirtNumber;
         ArrayList<String> teamHistory;
+    }
+
+    public void openPlayerPage(){
+        boolean error =false;
+        Alert alertError  = new Alert(Alert.AlertType.ERROR);
+        String errorMessage="";
+        if(playerInfoValidation(choosenHeight.getText())==false){
+            errorMessage = errorMessage +" height not valid"+ "\n";
+            alertError.setContentText(errorMessage);
+            error=true;
+
+        }
+        if(playerInfoValidation(choosenWeight.getText())==false){
+            errorMessage = errorMessage +" weight not valid"+ "\n";
+            alertError.setContentText(errorMessage);
+            error=true;
+        }
+        if(playerInfoValidation(choosenNumber.getText())==false){
+            errorMessage = errorMessage +" shirt number not valid"+ "\n";
+            alertError.setContentText(errorMessage);
+            error=true;
+        }
+        if(error==true){
+            alertError.show();
+        }
+        else {
+
+            int height = Integer.parseInt(choosenHeight.getText());
+            int weight = Integer.parseInt(choosenWeight.getText());
+            int shirtNumber = Integer.parseInt(choosenNumber.getText());
+
+            userManagement.createPlayerPersonalPage(height, weight, shirtNumber, "");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("the page open succsesfully");
+            alert.show();
+        }
+
+    }
+
+    public boolean playerInfoValidation(String text){
+        if(text==null){
+            return false;
+        }
+        String regex = "[0-9]+";
+        if(!text.matches(regex)){
+            return false;
+        }
+        return true;
+
     }
 
 

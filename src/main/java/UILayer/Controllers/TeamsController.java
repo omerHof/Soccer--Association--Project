@@ -94,41 +94,61 @@ public class TeamsController extends Controller {
     }
 
             public void submitOpenTeam(){
+                boolean error =false;
+                Alert alertError  = new Alert(Alert.AlertType.ERROR);
+                String errorMessage="";
+
                 if(validationBudget(choosenTeamBudget.getText())==false){
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setContentText(" budget not valid ");
-                    alert.show();
+
+                    errorMessage = errorMessage +" budget not valid"+ "\n";
+                    alertError.setContentText(errorMessage);
+                    error=true;
+
+
 
                 }
                 if(validationName(choosenTeamName.getText())==false){
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setContentText(" name not valid ");
-                    alert.show();
+                    errorMessage = errorMessage +" name not valid"+ "\n";
+                    alertError.setContentText(errorMessage);
+                    error=true;
                 }
+
                 ///need to add check if the name of the team exist!!!
 
-                //create team
-                openTeam =true;
-                teamName = choosenTeamName.getText();
-                String message = teamManagement.openTeam(choosenTeamName.getText(),Double.parseDouble(choosenTeamBudget.getText()));
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setContentText(message);
-                alert.show();
+                if(error==true){
+                    alertError.show();
+                }
+                else {
+                    //create team
+                    openTeam = true;
+                    teamName = choosenTeamName.getText();
+                    String message = teamManagement.openTeam(choosenTeamName.getText(), Double.parseDouble(choosenTeamBudget.getText()));
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setContentText(message);
+                    alert.show();
+                }
 
             }
 
 
             public void createTeamPage(){
+                boolean error =false;
+                Alert alertError  = new Alert(Alert.AlertType.ERROR);
+                String errorMessage="";
+
         if(validationHistory(choosenHistory.getText())==false){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText(" history not valid ");
-            alert.show();
+
+            errorMessage = errorMessage +" history not valid"+ "\n";
+            alertError.setContentText(errorMessage);
+            error=true;
+
         }
         if(validationNation(choosenNation.getText())==false){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText(" nation not valid ");
-            alert.show();
+            errorMessage = errorMessage +" nation not valid"+ "\n";
+            alertError.setContentText(errorMessage);
+            error=true;
         }
+
         if(openTeam==true){
             String message =  teamManagement.openTeamPage(choosenHistory.getText(),choosenNation.getText());
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -136,10 +156,14 @@ public class TeamsController extends Controller {
             alert.show();
         }
         else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("The owner has no active team");
-            alert.show();
+
+            errorMessage = errorMessage +" The owner has no active team"+ "\n";
+            alertError.setContentText(errorMessage);
+            error=true;
         }
+                if(error==true){
+                    alertError.show();
+                }
 
     }
 

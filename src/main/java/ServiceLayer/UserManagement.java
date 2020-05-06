@@ -120,6 +120,7 @@ public class UserManagement {
     /** ---------------- COACH MANAGEMENT FUNCTIONALITY ---------------- **/
 
     public void createCoachPersonalPage(LocalDate birthDate, String team){
+        currentUser = MainSystem.getInstance().getCurrentUser();
         ((Coach) currentUser).createCoachPersonalPage(birthDate,team);
     }
 
@@ -173,6 +174,7 @@ public class UserManagement {
     }
 
     public void createPlayerPersonalPage(int height,int weight, int shirtNum,String team){
+        currentUser = MainSystem.getInstance().getCurrentUser();
         ((Player) currentUser).createPersonalPage(height, weight, shirtNum, team);
     }
 

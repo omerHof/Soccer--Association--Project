@@ -38,7 +38,7 @@ public class Coach extends User implements Assent {
            page = new CoachPersonalPage(userFullName,birthDate,teamRole,null);
        }
        else{
-           if(currTeam.getPlayers().containsValue(currTeam)) {
+           if(currTeam.getPlayers().containsKey(userFullName)) {
                page = new CoachPersonalPage(userFullName, birthDate, teamRole, team);
                setCurrentTeam(currTeam.getName());
            }

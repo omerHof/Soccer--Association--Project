@@ -43,7 +43,7 @@ public class Player extends User implements Assent {
         page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, null);
         }
         else {
-            if(currTeam.getPlayers().containsValue(currTeam)){
+            if(currTeam.getPlayers().containsKey(userFullName)){
             page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, team);
             page.setCurrentTeam(currTeam);
             }
