@@ -2,6 +2,7 @@ package Users;
 
 import SystemLogic.DB;
 import Teams.Team;
+import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -27,7 +28,11 @@ public class PlayerPersonalPage extends PersonalPage {
         this.currentTeam = db.getTeam(team);
 //        this.teamHistory.add(team.getName());
     }
-
+    public Pair<String, ArrayList<String>> getAllDetails(){
+        String details = super.name + "," + super.age + "," + super.currentTeam +  "," + height + "," + weight + "," + position + "," + shirtNumber;
+        Pair<String, ArrayList<String>> result = new Pair<>(details ,teamHistory);
+        return result;
+    }
 
     public int getHeight() {
         return height;

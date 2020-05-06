@@ -493,6 +493,17 @@ public class DB {
         return allUsersByType;
     }
 
+    public HashMap<String, String> getAllUserNameByType(String type) {
+        HashMap<String, String> allUsersByType = new HashMap<>();
+        for(String userName: users.keySet()){
+            User user = users.get(userName);
+            if(type.equals(user.getClass().getSimpleName())){
+                allUsersByType.put(userName, user.getUserFullName());
+            }
+        }
+        return allUsersByType;
+    }
+
     public int getNumberOfTeamsInLeague(String league) {
         Iterator it = leagues.entrySet().iterator();
         int result = 0;

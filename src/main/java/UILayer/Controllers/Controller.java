@@ -203,6 +203,29 @@ public class Controller implements Initializable {
         Main.setStage(s);
         s.show();
     }
+    public void openPlayerPage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addPlayerPage.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        PlayersController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
+
+    public void openCoachPage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addCoachPage.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        CoachesController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
 
 
     @Override
