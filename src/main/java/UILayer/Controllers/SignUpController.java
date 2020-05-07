@@ -349,13 +349,13 @@ public class SignUpController extends Controller {
 
 
         //checks validation of the basic details entered:
-
-        if (!fullname.chars().allMatch(Character::isLetter)) { //check full name validation (only letters)
+        if (!fullname.matches("^[a-zA-Z ]*$|| ")) { //check full name validation (only letters)
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Your name must contains only characters. Please try again.");
             return;
         }
 
-        String regex = "^(.+)@(.+)$";
+        String regex = "^(.+)@(.+)$";//
+        //String regexxx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
 
@@ -487,13 +487,19 @@ public class SignUpController extends Controller {
             super.userType = this.userType; //updates attributes of the main controller
             super.userName = this.username;
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Confirmation Dialog");
-            alert.setHeaderText("Welcome aboard !");
-            alert.setContentText(" Your user was added successfully to the system.");
 
-            alert.showAndWait();
+            if (generatorType.equals("PremiumUserGenerator")){
+                showAlert(Alert.AlertType.INFORMATION, "Form Information", "You're all good! Please notice that your registration is subject to approval of one of our association representatives.");
+            }
 
+            else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Confirmation Dialog");
+                alert.setHeaderText("Welcome aboard !");
+                alert.setContentText("Your user was added successfully to the system.");
+                alert.showAndWait();
+
+            }
 //            showAlert(Alert.AlertType.CONFIRMATION, "Form Information", "Welcome aboard ! Your user was added successfully to the system.");
             goToLanding();
         }

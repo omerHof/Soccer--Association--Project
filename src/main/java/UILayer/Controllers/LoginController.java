@@ -48,6 +48,9 @@ public class LoginController extends Controller {
     @FXML
     JFXButton login;
 
+    @FXML
+    JFXButton backBTN;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Stage s = Main.getStage();
@@ -57,6 +60,9 @@ public class LoginController extends Controller {
         });
 
         userManagement = new UserManagement();
+        backBTN.setFocusTraversable(false);
+        login.setFocusTraversable(false);
+
 
     }
 
