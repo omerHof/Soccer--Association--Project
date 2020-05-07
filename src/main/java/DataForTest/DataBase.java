@@ -561,8 +561,8 @@ public class DataBase {
 
 
 
-
-
+        Fan forTest = new Fan("p", "p", "blabla", "test@test");
+        db.setUser(forTest);
 
 
         // Season season = db.getLeague("Alufot").getAllSeasons().get(0);
