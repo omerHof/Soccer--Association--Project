@@ -411,7 +411,7 @@ public class SignUpController extends Controller {
             qualification = refereeQualificationCB.getValue().toString();
 
             // checks whether the user exists in the system already.
-            userCreatedMessage = userManagement.createNewUser(userName, password, "", userType, fullname, email, null, qualification, "", "", generatorType); //true if success //only necessary parameters.
+            userCreatedMessage = userManagement.createNewUser(username, password, "", userType, fullname, email, null, qualification, "", "", generatorType); //true if success //only necessary parameters.
         }
 
         else if (userType.equals("Player")){
@@ -435,7 +435,7 @@ public class SignUpController extends Controller {
                 return;
             }
 
-            userCreatedMessage = userManagement.createNewUser(userName, password, "", userType, fullname, email, birthDate, "", courtRole, "", generatorType); //true if success
+            userCreatedMessage = userManagement.createNewUser(username, password, "", userType, fullname, email, birthDate, "", courtRole, "", generatorType); //true if success
         }
 
         else if (userType.equals("Coach")){
@@ -449,7 +449,7 @@ public class SignUpController extends Controller {
             }
             teamRole = coachTeamRoleCB.getValue().toString();
 
-            userCreatedMessage = userManagement.createNewUser(userName, password, "", userType, fullname, email, null, "", "", teamRole, generatorType); //true if success
+            userCreatedMessage = userManagement.createNewUser(username, password, "", userType, fullname, email, null, "", "", teamRole, generatorType); //true if success
         }
 
         else if ((userType.equals("AssociationRepresentative")) || (userType.equals("Administrator"))){
@@ -462,11 +462,11 @@ public class SignUpController extends Controller {
                 return;
             }
 
-            userCreatedMessage = userManagement.createNewUser(userName, password, managementPassword, userType, fullname, email, null, "", "", "", generatorType); //true if success
+            userCreatedMessage = userManagement.createNewUser(username, password, managementPassword, userType, fullname, email, null, "", "", "", generatorType); //true if success
         }
 
         else { // fan / manager / teamowner
-            userCreatedMessage = userManagement.createNewUser(userName, password, "", userType, fullname, email, null, "", "", "", generatorType); // only the basic information.
+            userCreatedMessage = userManagement.createNewUser(username, password, "", userType, fullname, email, null, "", "", "", generatorType); // only the basic information.
         }
 
 
@@ -501,6 +501,12 @@ public class SignUpController extends Controller {
 
             }
 //            showAlert(Alert.AlertType.CONFIRMATION, "Form Information", "Welcome aboard ! Your user was added successfully to the system.");
+
+            usernameTF.clear();
+            passwordTF.clear();
+            fullnameTF.clear();
+            emailTF.clear();
+
             goToLanding();
         }
     }

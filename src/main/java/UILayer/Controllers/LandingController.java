@@ -60,7 +60,6 @@ public class LandingController extends Controller {
 
         if (alert.getResult() == ButtonType.YES) {
 
-
             logInBTN.setVisible(true);
             signUpBtn.setVisible(true);
             notification.setVisible(false);
