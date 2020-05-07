@@ -105,7 +105,7 @@ public class MainSystem {
 
     public String getUserType(String userName){
         User user = db.getUser(userName);
-        return user.getClass().getName();
+        return user.getClass().getSimpleName();
 
     }
 

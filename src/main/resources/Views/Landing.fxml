@@ -70,7 +70,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
-                <JFXButton layoutX="270.0" layoutY="18.0" onAction="#openMyApps" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #66c2ff;" stylesheets="@Landing.css" text="MY APPS" visible="true" AnchorPane.leftAnchor="270.0">
+                <JFXButton id="myAppsBtn" layoutX="270.0" layoutY="18.0" onAction="#openMyApps" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #66c2ff;" stylesheets="@Landing.css" text="MY APPS" visible="false" AnchorPane.leftAnchor="270.0">
                <graphic>
                   <FontAwesomeIcon glyphName="STREET_VIEW" size="1.5em" />
                </graphic>

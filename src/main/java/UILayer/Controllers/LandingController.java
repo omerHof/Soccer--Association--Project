@@ -26,7 +26,8 @@ public class LandingController extends Controller {
     @FXML
     JFXButton signOut;
 
-
+    @FXML
+    JFXButton myAppsBtn;
 
 
     @Override
@@ -48,6 +49,7 @@ public class LandingController extends Controller {
             profileButton.setText(userName);
             profileButton.setVisible(true);
             signOut.setVisible(true);
+            myAppsBtn.setVisible(true);
         }
     }
 
@@ -65,6 +67,7 @@ public class LandingController extends Controller {
             notification.setVisible(false);
             profileButton.setVisible(false);
             signOut.setVisible(false);
+            myAppsBtn.setVisible(false);
 
             super.userName = null;
         }

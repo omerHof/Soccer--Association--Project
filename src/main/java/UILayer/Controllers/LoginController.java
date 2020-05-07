@@ -102,6 +102,8 @@ public class LoginController extends Controller {
         else{
             showAlert(Alert.AlertType.INFORMATION, "Form Information", "Now you logged in. Enjoy our system :)"); //todo: checkkkkkk !!!!!!!!! ..//////////////////////////////////////////
             super.userName = username;
+            userType = userManagement.getUserType(username);
+            super.userType = userType;
             goToLanding();
         }
 
