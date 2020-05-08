@@ -3,13 +3,14 @@ package UILayer.Controllers;
 import DataForTest.DataBase;
 import ServiceLayer.UserManagement;
 import UILayer.Main;
-import Users.Player;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.Pair;
@@ -24,6 +25,9 @@ public class PlayersController extends Controller {
 
     @FXML
     TableView<SimpleStringProperty> players_table = new TableView<>();
+
+    @FXML
+    TextFlow personal_page = new TextFlow();
 
     @FXML
     private TextField choosenHeight;
@@ -74,7 +78,7 @@ public class PlayersController extends Controller {
                                 } else {
                                     btn.setOnAction(event -> {
                                         SimpleStringProperty simple = getTableView().getItems().get(getIndex());
-                                       showPlayerPage(simple.getValue());
+                                       showPlayerPage(simple.getValue(), simple.getName());
                                     });
                                     setGraphic(btn);
                                     setText(null);
@@ -93,16 +97,20 @@ public class PlayersController extends Controller {
 
     }
 
-    private void showPlayerPage(String player_name) {
-        Pair<String, ArrayList<String>> details = userManagement.getPlayerPageDetails(player_name);
-        String full_name;
-        String age;
-        String team;
-        String height;
-        String Weight;
-        String position;
-        String shirtNumber;
-        ArrayList<String> teamHistory;
+    private void showPlayerPage(String user_name, String full_name) {
+
+        Pair<String, ArrayList<String>> detailsAsPair = userManagement.getPlayerPageDetails(user_name);
+        String[] details = detailsAsPair.getKey().split(",");
+        personal_page.getChildren().clear();
+        personal_page.getChildren().add(new Text(full_name + "'s Personal Page:" + "\n"));
+        for(String detail: details){
+            personal_page.getChildren().add(new Text(detail + "\n"));
+        }
+        personal_page.getChildren().add(new Text("Team History: "));
+        for(String team: detailsAsPair.getValue()){
+            personal_page.getChildren().add(new Text(team + ", "));
+        }
+
     }
 
     public void openPlayerPage(){

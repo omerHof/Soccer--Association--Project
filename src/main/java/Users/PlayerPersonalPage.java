@@ -29,9 +29,15 @@ public class PlayerPersonalPage extends PersonalPage {
 //        this.teamHistory.add(team.getName());
     }
     public Pair<String, ArrayList<String>> getAllDetails(){
-        String details = super.name + "," + super.age + "," + super.currentTeam +  "," + height + "," + weight + "," + position + "," + shirtNumber;
-        Pair<String, ArrayList<String>> result = new Pair<>(details ,teamHistory);
-        return result;
+        String details =
+                super.name + "," +
+                "Age: " + super.age + "," +
+                "Current Team: " +super.currentTeam.getName() +  "," +
+                "Height:" + height + "," +
+                "weight: " + weight + "," +
+                "Position: " + position + "," +
+                "Shirt Number: " + shirtNumber;
+        return new Pair<>(details ,teamHistory);//todo: no page
     }
 
     public int getHeight() {

@@ -68,7 +68,6 @@ public class DataBase {
     private Statistics statisticsI;
     private Statistics statisticsJ;
 
-
     /**
      * Users
      **/
@@ -278,12 +277,12 @@ public class DataBase {
 
         LocalDate date11 = LocalDate.of(1994, 6, 28);
 
-        almostOwner1 = new Player("almostOwner1", "1234", "playerName", "player.com", date11, "player_that_plays");
-        almostOwner2 = new Player("almostOwner2", "1234", "playerName", "player.com", date11, "player_that_plays");
-        almostOwner3 = new Coach("almostOwner3", "1234", "coachName", "coach.com", "coach_that_coaches");
-        almostOwner4 = new Coach("almostOwner4", "1234", "coachName", "coach.com", "coach_that_coaches");
-        almostManager1 = new Player("almostManager1", "1234", "playerName", "player.com", date11, "player_that_plays");
-        almostManager2 = new Coach("almostManager2", "1234", "coachName", "coach.com", "coach_that_coaches");
+//        almostOwner1 = new Player("almostOwner1", "1234", "playerName", "player.com", date11, "player_that_plays");
+//        almostOwner2 = new Player("almostOwner2", "1234", "playerName", "player.com", date11, "player_that_plays");
+//        almostOwner3 = new Coach("almostOwner3", "1234", "coachName", "coach.com", "coach_that_coaches");
+//        almostOwner4 = new Coach("almostOwner4", "1234", "coachName", "coach.com", "coach_that_coaches");
+//        almostManager1 = new Player("almostManager1", "1234", "playerName", "player.com", date11, "player_that_plays");
+//        almostManager2 = new Coach("almostManager2", "1234", "coachName", "coach.com", "coach_that_coaches");
 
 
         /** Managers **/
@@ -394,16 +393,26 @@ public class DataBase {
         LocalDate date1 = LocalDate.of(1985, 1, 12);
         LocalDate date2 = LocalDate.of(1987, 6, 12);
 
-        vermut = new Player("ver", "123", "gili vermut", "g", date1, "midelfer");
-        zahavi = new Player("ez7", "123", "rean zahavi", "eeee", date2, "striker");
-        aa = new Player("ver1", "123", "gili vermut", "g", date1, "midelfer");
-        bb = new Player("ez71", "123", "rean zahavi", "eeee", date2, "striker");
-        cc = new Player("ver2", "123", "gili vermut", "g", date1, "midelfer");
-        dd = new Player("ez72", "123", "rean zahavi", "eeee", date2, "striker");
-        ee = new Player("ver3", "123", "gili vermut", "g", date1, "midelfer");
-        ff = new Player("ez37", "123", "rean zahavi", "eeee", date2, "striker");
-        gg = new Player("ver4", "123", "gili vermut", "g", date1, "midelfer");
-        hh = new Player("ez75", "123", "rean zahavi", "eeee", date2, "striker");
+        vermut = new Player("ver", "123", "Gili Vermut", "g", date1, "midelfer");
+        vermut.createPersonalPage( 174, 87,7 , "Hapoel Tel Aviv" );
+        zahavi = new Player("ez7", "123", "Eran Zahavi", "eeee", date2, "striker");
+        zahavi.createPersonalPage( 182, 89,10 , "China" );
+        aa = new Player("ver1", "123", "Aduram Keisee", "g", date1, "midelfer");
+        aa.createPersonalPage( 178, 70,6 , "Macabi Heifa" );
+        bb = new Player("ez71", "123", "Leo Messi", "eeee", date2, "striker");
+       bb.createPersonalPage( 175, 72,10 , "Barcelona" );
+        cc = new Player("ver2", "123", "Gavriel Batistuta", "g", date1, "midelfer");
+        cc.createPersonalPage( 180, 72,10 , "Barcelona" );
+        dd = new Player("ez72", "123", "Alon Hazan", "eeee", date2, "striker");
+        dd.createPersonalPage(185, 90,10 , "Katar");
+        ee = new Player("ver3", "123", "David Beckham", "g", date1, "midelfer");
+        ee.createPersonalPage(170, 85,7 , "Manchester United");
+        ff = new Player("ez37", "123", "Yossi Benayun", "eeee", date2, "striker");
+        ff.createPersonalPage(185, 78,15 , "Dimona");
+        gg = new Player("ver4", "123", "Muhamad Salah", "g", date1, "midelfer");
+        gg.createPersonalPage(172, 77,9 , "Liverpool");
+        hh = new Player("ez75", "123", "Shlomi Arbeitman", "eeee", date2, "striker");
+        hh.createPersonalPage(170, 78,11 , "Betar Yerushlaim");
 
         klinger = new Coach("kling", "1212", "nir klinger", "dsdasd", "head coach");
         aaa = new Coach("klin", "1212", "nir klinger", "dsdasd", "head coach");
