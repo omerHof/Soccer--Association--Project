@@ -119,6 +119,17 @@ public class UserManagement {
 
     /** ---------------- COACH MANAGEMENT FUNCTIONALITY ---------------- **/
 
+    public HashMap<String, String> getAllCoaches() {
+        return DB.getInstance().getAllUserNameByType("Coach");
+    }
+
+    public Pair<String, ArrayList<String>> getCoachPageDetails(String user_name) {
+        Coach coach = (Coach) DB.getInstance().getUser(user_name);
+        CoachPersonalPage coachPersonalPage = coach.getPage();
+
+        return coachPersonalPage.getAllDetails();
+    }
+
     public void createCoachPersonalPage(LocalDate birthDate, String team){
         currentUser = MainSystem.getInstance().getCurrentUser();
         ((Coach) currentUser).createCoachPersonalPage(birthDate,team);
@@ -229,11 +240,6 @@ public class UserManagement {
     public int getSalary() {
         return  ((Player) currentUser).getSalary();
     }
-
-
-
-
-
 
 
 

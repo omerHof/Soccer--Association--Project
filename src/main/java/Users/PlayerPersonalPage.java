@@ -37,7 +37,7 @@ public class PlayerPersonalPage extends PersonalPage {
                 "weight: " + weight + "," +
                 "Position: " + position + "," +
                 "Shirt Number: " + shirtNumber;
-        return new Pair<>(details ,teamHistory);//todo: no page
+        return new Pair<>(details ,teamHistory);
     }
 
     public int getHeight() {

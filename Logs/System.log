@@ -3445,3 +3445,220 @@
 2020.05.08 19:20:16.007 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
 2020.05.08 19:20:16.007 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
 2020.05.08 19:20:16.007 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.08 19:51:33.354 INFO  SystemLogic.MainSystem - The player Gili Vermut create personal page
+2020.05.08 19:51:33.357 INFO  SystemLogic.MainSystem - The player Eran Zahavi create personal page
+2020.05.08 19:51:33.357 INFO  SystemLogic.MainSystem - The player Aduram Keisee create personal page
+2020.05.08 19:51:33.358 INFO  SystemLogic.MainSystem - The player Leo Messi create personal page
+2020.05.08 19:51:33.358 INFO  SystemLogic.MainSystem - The player Gavriel Batistuta create personal page
+2020.05.08 19:51:33.358 INFO  SystemLogic.MainSystem - The player Alon Hazan create personal page
+2020.05.08 19:51:33.359 INFO  SystemLogic.MainSystem - The player David Beckham create personal page
+2020.05.08 19:51:33.359 INFO  SystemLogic.MainSystem - The player Yossi Benayun create personal page
+2020.05.08 19:51:33.359 INFO  SystemLogic.MainSystem - The player Muhamad Salah create personal page
+2020.05.08 19:51:33.359 INFO  SystemLogic.MainSystem - The player Shlomi Arbeitman create personal page
+2020.05.08 19:51:33.361 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.08 19:51:33.361 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.08 19:51:33.361 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.08 19:51:33.361 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.08 19:51:33.362 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.08 19:51:33.362 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.08 19:51:33.362 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.08 19:51:33.362 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.08 19:51:33.362 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.08 19:51:33.362 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.08 19:51:33.363 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.08 19:51:33.363 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.08 19:51:33.363 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.08 19:51:33.363 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.08 19:51:33.363 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.08 19:51:33.364 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.08 19:51:33.364 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.08 19:51:33.364 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.08 19:51:33.364 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.08 19:51:33.364 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.08 19:51:33.365 INFO  SystemLogic.MainSystem - The player Eran Zahavi has move to the team barca
+2020.05.08 19:51:33.365 INFO  SystemLogic.MainSystem - the player Eran Zahavi was added successfully to the team barca
+2020.05.08 19:51:33.365 INFO  SystemLogic.MainSystem - The player Gili Vermut has move to the team real
+2020.05.08 19:51:33.365 INFO  SystemLogic.MainSystem - the player Gili Vermut was added successfully to the team real
+2020.05.08 19:51:33.365 INFO  SystemLogic.MainSystem - The player Aduram Keisee has move to the team man u
+2020.05.08 19:51:33.365 INFO  SystemLogic.MainSystem - the player Aduram Keisee was added successfully to the team man u
+2020.05.08 19:51:33.366 INFO  SystemLogic.MainSystem - The player Leo Messi has move to the team man city
+2020.05.08 19:51:33.366 INFO  SystemLogic.MainSystem - the player Leo Messi was added successfully to the team man city
+2020.05.08 19:51:33.366 INFO  SystemLogic.MainSystem - The player Gavriel Batistuta has move to the team liverpool
+2020.05.08 19:51:33.366 INFO  SystemLogic.MainSystem - the player Gavriel Batistuta was added successfully to the team liverpool
+2020.05.08 19:51:33.366 INFO  SystemLogic.MainSystem - The player Alon Hazan has move to the team chelsea
+2020.05.08 19:51:33.367 INFO  SystemLogic.MainSystem - the player Alon Hazan was added successfully to the team chelsea
+2020.05.08 19:51:33.367 INFO  SystemLogic.MainSystem - The player David Beckham has move to the team roma
+2020.05.08 19:51:33.367 INFO  SystemLogic.MainSystem - the player David Beckham was added successfully to the team roma
+2020.05.08 19:51:33.367 INFO  SystemLogic.MainSystem - The player Yossi Benayun has move to the team juve
+2020.05.08 19:51:33.367 INFO  SystemLogic.MainSystem - the player Yossi Benayun was added successfully to the team juve
+2020.05.08 19:51:33.367 INFO  SystemLogic.MainSystem - The player Muhamad Salah has move to the team milan
+2020.05.08 19:51:33.368 INFO  SystemLogic.MainSystem - the player Muhamad Salah was added successfully to the team milan
+2020.05.08 19:51:33.368 INFO  SystemLogic.MainSystem - The player Shlomi Arbeitman has move to the team inter
+2020.05.08 19:51:33.368 INFO  SystemLogic.MainSystem - the player Shlomi Arbeitman was added successfully to the team inter
+2020.05.08 19:51:33.368 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.08 19:51:33.369 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.08 19:51:33.370 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.08 19:51:33.370 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.08 19:51:33.372 INFO  SystemLogic.MainSystem - new league: Alufot were added.
+2020.05.08 19:51:38.554 INFO  SystemLogic.MainSystem - The player Gili Vermut create personal page
+2020.05.08 19:51:38.554 INFO  SystemLogic.MainSystem - The player Eran Zahavi create personal page
+2020.05.08 19:51:38.555 INFO  SystemLogic.MainSystem - The player Aduram Keisee create personal page
+2020.05.08 19:51:38.555 INFO  SystemLogic.MainSystem - The player Leo Messi create personal page
+2020.05.08 19:51:38.555 INFO  SystemLogic.MainSystem - The player Gavriel Batistuta create personal page
+2020.05.08 19:51:38.555 INFO  SystemLogic.MainSystem - The player Alon Hazan create personal page
+2020.05.08 19:51:38.555 INFO  SystemLogic.MainSystem - The player David Beckham create personal page
+2020.05.08 19:51:38.556 INFO  SystemLogic.MainSystem - The player Yossi Benayun create personal page
+2020.05.08 19:51:38.556 INFO  SystemLogic.MainSystem - The player Muhamad Salah create personal page
+2020.05.08 19:51:38.556 INFO  SystemLogic.MainSystem - The player Shlomi Arbeitman create personal page
+2020.05.08 19:51:38.556 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.08 19:51:38.556 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.08 19:51:38.557 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.08 19:51:38.557 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.08 19:51:38.557 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.08 19:51:38.557 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.08 19:51:38.557 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.08 19:51:38.557 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.08 19:51:38.557 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.08 19:51:38.558 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.08 19:51:38.558 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.08 19:51:38.558 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.08 19:51:38.558 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.08 19:51:38.558 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.08 19:51:38.558 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.08 19:51:38.559 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.08 19:51:38.559 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.08 19:51:38.559 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.08 19:51:38.559 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.08 19:51:38.559 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.08 19:51:38.559 INFO  SystemLogic.MainSystem - The player Eran Zahavi has move to the team barca
+2020.05.08 19:51:38.560 INFO  SystemLogic.MainSystem - the player Eran Zahavi was added successfully to the team barca
+2020.05.08 19:51:38.560 INFO  SystemLogic.MainSystem - The player Gili Vermut has move to the team real
+2020.05.08 19:51:38.560 INFO  SystemLogic.MainSystem - the player Gili Vermut was added successfully to the team real
+2020.05.08 19:51:38.560 INFO  SystemLogic.MainSystem - The player Aduram Keisee has move to the team man u
+2020.05.08 19:51:38.560 INFO  SystemLogic.MainSystem - the player Aduram Keisee was added successfully to the team man u
+2020.05.08 19:51:38.561 INFO  SystemLogic.MainSystem - The player Leo Messi has move to the team man city
+2020.05.08 19:51:38.561 INFO  SystemLogic.MainSystem - the player Leo Messi was added successfully to the team man city
+2020.05.08 19:51:38.561 INFO  SystemLogic.MainSystem - The player Gavriel Batistuta has move to the team liverpool
+2020.05.08 19:51:38.561 INFO  SystemLogic.MainSystem - the player Gavriel Batistuta was added successfully to the team liverpool
+2020.05.08 19:51:38.561 INFO  SystemLogic.MainSystem - The player Alon Hazan has move to the team chelsea
+2020.05.08 19:51:38.561 INFO  SystemLogic.MainSystem - the player Alon Hazan was added successfully to the team chelsea
+2020.05.08 19:51:38.561 INFO  SystemLogic.MainSystem - The player David Beckham has move to the team roma
+2020.05.08 19:51:38.562 INFO  SystemLogic.MainSystem - the player David Beckham was added successfully to the team roma
+2020.05.08 19:51:38.562 INFO  SystemLogic.MainSystem - The player Yossi Benayun has move to the team juve
+2020.05.08 19:51:38.562 INFO  SystemLogic.MainSystem - the player Yossi Benayun was added successfully to the team juve
+2020.05.08 19:51:38.562 INFO  SystemLogic.MainSystem - The player Muhamad Salah has move to the team milan
+2020.05.08 19:51:38.562 INFO  SystemLogic.MainSystem - the player Muhamad Salah was added successfully to the team milan
+2020.05.08 19:51:38.562 INFO  SystemLogic.MainSystem - The player Shlomi Arbeitman has move to the team inter
+2020.05.08 19:51:38.562 INFO  SystemLogic.MainSystem - the player Shlomi Arbeitman was added successfully to the team inter
+2020.05.08 19:51:38.563 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.08 19:51:38.563 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.08 19:51:38.563 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.08 19:51:38.564 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.08 19:51:38.605 INFO  SystemLogic.MainSystem - The player Gili Vermut create personal page
+2020.05.08 19:51:38.606 INFO  SystemLogic.MainSystem - The player Eran Zahavi create personal page
+2020.05.08 19:51:38.606 INFO  SystemLogic.MainSystem - The player Aduram Keisee create personal page
+2020.05.08 19:51:38.606 INFO  SystemLogic.MainSystem - The player Leo Messi create personal page
+2020.05.08 19:51:38.606 INFO  SystemLogic.MainSystem - The player Gavriel Batistuta create personal page
+2020.05.08 19:51:38.607 INFO  SystemLogic.MainSystem - The player Alon Hazan create personal page
+2020.05.08 19:51:38.607 INFO  SystemLogic.MainSystem - The player David Beckham create personal page
+2020.05.08 19:51:38.607 INFO  SystemLogic.MainSystem - The player Yossi Benayun create personal page
+2020.05.08 19:51:38.607 INFO  SystemLogic.MainSystem - The player Muhamad Salah create personal page
+2020.05.08 19:51:38.607 INFO  SystemLogic.MainSystem - The player Shlomi Arbeitman create personal page
+2020.05.08 19:51:38.608 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.08 19:51:38.608 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.08 19:51:38.608 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.08 19:51:38.608 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.08 19:51:38.608 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.08 19:51:38.608 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.08 19:51:38.609 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.08 19:51:38.609 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.08 19:51:38.609 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.08 19:51:38.609 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.08 19:51:38.610 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.08 19:51:38.610 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.08 19:51:38.610 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.08 19:51:38.610 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.08 19:51:38.610 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.08 19:51:38.610 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.08 19:51:38.610 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.08 19:51:38.611 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.08 19:51:38.611 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.08 19:51:38.611 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.08 19:51:38.611 INFO  SystemLogic.MainSystem - The player Eran Zahavi has move to the team barca
+2020.05.08 19:51:38.611 INFO  SystemLogic.MainSystem - the player Eran Zahavi was added successfully to the team barca
+2020.05.08 19:51:38.611 INFO  SystemLogic.MainSystem - The player Gili Vermut has move to the team real
+2020.05.08 19:51:38.611 INFO  SystemLogic.MainSystem - the player Gili Vermut was added successfully to the team real
+2020.05.08 19:51:38.612 INFO  SystemLogic.MainSystem - The player Aduram Keisee has move to the team man u
+2020.05.08 19:51:38.612 INFO  SystemLogic.MainSystem - the player Aduram Keisee was added successfully to the team man u
+2020.05.08 19:51:38.612 INFO  SystemLogic.MainSystem - The player Leo Messi has move to the team man city
+2020.05.08 19:51:38.612 INFO  SystemLogic.MainSystem - the player Leo Messi was added successfully to the team man city
+2020.05.08 19:51:38.612 INFO  SystemLogic.MainSystem - The player Gavriel Batistuta has move to the team liverpool
+2020.05.08 19:51:38.612 INFO  SystemLogic.MainSystem - the player Gavriel Batistuta was added successfully to the team liverpool
+2020.05.08 19:51:38.612 INFO  SystemLogic.MainSystem - The player Alon Hazan has move to the team chelsea
+2020.05.08 19:51:38.613 INFO  SystemLogic.MainSystem - the player Alon Hazan was added successfully to the team chelsea
+2020.05.08 19:51:38.613 INFO  SystemLogic.MainSystem - The player David Beckham has move to the team roma
+2020.05.08 19:51:38.613 INFO  SystemLogic.MainSystem - the player David Beckham was added successfully to the team roma
+2020.05.08 19:51:38.613 INFO  SystemLogic.MainSystem - The player Yossi Benayun has move to the team juve
+2020.05.08 19:51:38.613 INFO  SystemLogic.MainSystem - the player Yossi Benayun was added successfully to the team juve
+2020.05.08 19:51:38.613 INFO  SystemLogic.MainSystem - The player Muhamad Salah has move to the team milan
+2020.05.08 19:51:38.613 INFO  SystemLogic.MainSystem - the player Muhamad Salah was added successfully to the team milan
+2020.05.08 19:51:38.614 INFO  SystemLogic.MainSystem - The player Shlomi Arbeitman has move to the team inter
+2020.05.08 19:51:38.614 INFO  SystemLogic.MainSystem - the player Shlomi Arbeitman was added successfully to the team inter
+2020.05.08 19:51:38.614 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.08 19:51:38.614 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.08 19:51:38.614 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.08 19:51:38.614 INFO  SystemLogic.MainSystem - ido kest follow the team : man city
+2020.05.08 19:51:38.720 INFO  SystemLogic.MainSystem - The player Gili Vermut create personal page
+2020.05.08 19:51:38.721 INFO  SystemLogic.MainSystem - The player Eran Zahavi create personal page
+2020.05.08 19:51:38.721 INFO  SystemLogic.MainSystem - The player Aduram Keisee create personal page
+2020.05.08 19:51:38.721 INFO  SystemLogic.MainSystem - The player Leo Messi create personal page
+2020.05.08 19:51:38.721 INFO  SystemLogic.MainSystem - The player Gavriel Batistuta create personal page
+2020.05.08 19:51:38.722 INFO  SystemLogic.MainSystem - The player Alon Hazan create personal page
+2020.05.08 19:51:38.722 INFO  SystemLogic.MainSystem - The player David Beckham create personal page
+2020.05.08 19:51:38.722 INFO  SystemLogic.MainSystem - The player Yossi Benayun create personal page
+2020.05.08 19:51:38.722 INFO  SystemLogic.MainSystem - The player Muhamad Salah create personal page
+2020.05.08 19:51:38.722 INFO  SystemLogic.MainSystem - The player Shlomi Arbeitman create personal page
+2020.05.08 19:51:38.722 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team barca
+2020.05.08 19:51:38.723 INFO  SystemLogic.MainSystem - the coach kling was added successfully to the team barca
+2020.05.08 19:51:38.723 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team real
+2020.05.08 19:51:38.723 INFO  SystemLogic.MainSystem - the coach klin was added successfully to the team real
+2020.05.08 19:51:38.723 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man u
+2020.05.08 19:51:38.723 INFO  SystemLogic.MainSystem - the coach kli was added successfully to the team man u
+2020.05.08 19:51:38.723 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team man city
+2020.05.08 19:51:38.723 INFO  SystemLogic.MainSystem - the coach kl was added successfully to the team man city
+2020.05.08 19:51:38.723 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team liverpool
+2020.05.08 19:51:38.723 INFO  SystemLogic.MainSystem - the coach k was added successfully to the team liverpool
+2020.05.08 19:51:38.724 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team chelsea
+2020.05.08 19:51:38.724 INFO  SystemLogic.MainSystem - the coach klingg was added successfully to the team chelsea
+2020.05.08 19:51:38.724 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team roma
+2020.05.08 19:51:38.724 INFO  SystemLogic.MainSystem - the coach klinggg was added successfully to the team roma
+2020.05.08 19:51:38.724 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team juve
+2020.05.08 19:51:38.724 INFO  SystemLogic.MainSystem - the coach klinggggg was added successfully to the team juve
+2020.05.08 19:51:38.724 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team milan
+2020.05.08 19:51:38.724 INFO  SystemLogic.MainSystem - the coach klnnning was added successfully to the team milan
+2020.05.08 19:51:38.725 INFO  SystemLogic.MainSystem - The coach nir klinger has move to the team inter
+2020.05.08 19:51:38.725 INFO  SystemLogic.MainSystem - the coach klinssssg was added successfully to the team inter
+2020.05.08 19:51:38.725 INFO  SystemLogic.MainSystem - The player Eran Zahavi has move to the team barca
+2020.05.08 19:51:38.725 INFO  SystemLogic.MainSystem - the player Eran Zahavi was added successfully to the team barca
+2020.05.08 19:51:38.726 INFO  SystemLogic.MainSystem - The player Gili Vermut has move to the team real
+2020.05.08 19:51:38.726 INFO  SystemLogic.MainSystem - the player Gili Vermut was added successfully to the team real
+2020.05.08 19:51:38.726 INFO  SystemLogic.MainSystem - The player Aduram Keisee has move to the team man u
+2020.05.08 19:51:38.726 INFO  SystemLogic.MainSystem - the player Aduram Keisee was added successfully to the team man u
+2020.05.08 19:51:38.726 INFO  SystemLogic.MainSystem - The player Leo Messi has move to the team man city
+2020.05.08 19:51:38.726 INFO  SystemLogic.MainSystem - the player Leo Messi was added successfully to the team man city
+2020.05.08 19:51:38.728 INFO  SystemLogic.MainSystem - The player Gavriel Batistuta has move to the team liverpool
+2020.05.08 19:51:38.728 INFO  SystemLogic.MainSystem - the player Gavriel Batistuta was added successfully to the team liverpool
+2020.05.08 19:51:38.729 INFO  SystemLogic.MainSystem - The player Alon Hazan has move to the team chelsea
+2020.05.08 19:51:38.731 INFO  SystemLogic.MainSystem - the player Alon Hazan was added successfully to the team chelsea
+2020.05.08 19:51:38.731 INFO  SystemLogic.MainSystem - The player David Beckham has move to the team roma
+2020.05.08 19:51:38.731 INFO  SystemLogic.MainSystem - the player David Beckham was added successfully to the team roma
+2020.05.08 19:51:38.731 INFO  SystemLogic.MainSystem - The player Yossi Benayun has move to the team juve
+2020.05.08 19:51:38.731 INFO  SystemLogic.MainSystem - the player Yossi Benayun was added successfully to the team juve
+2020.05.08 19:51:38.731 INFO  SystemLogic.MainSystem - The player Muhamad Salah has move to the team milan
+2020.05.08 19:51:38.732 INFO  SystemLogic.MainSystem - the player Muhamad Salah was added successfully to the team milan
+2020.05.08 19:51:38.732 INFO  SystemLogic.MainSystem - The player Shlomi Arbeitman has move to the team inter
+2020.05.08 19:51:38.732 INFO  SystemLogic.MainSystem - the player Shlomi Arbeitman was added successfully to the team inter
+2020.05.08 19:51:38.732 INFO  SystemLogic.MainSystem - the team owner teamOwner1 was added successfully to the team man u
+2020.05.08 19:51:38.732 INFO  SystemLogic.MainSystem - the team owner teamOwner2 was added successfully to the team man city
+2020.05.08 19:51:38.732 INFO  SystemLogic.MainSystem - ido kest follow the team : man u
+2020.05.08 19:51:38.732 INFO  SystemLogic.MainSystem - ido kest follow the team : man city

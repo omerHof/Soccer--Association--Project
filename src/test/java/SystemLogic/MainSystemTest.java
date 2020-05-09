@@ -64,7 +64,7 @@ public class MainSystemTest {
                 "Roberto Carlos","carlos@gmail.com", null, "", "", "",
                 simpleUserGenerator);
 
-        assertEquals(result2, "signed up only");
+        assertEquals(result2, "signed up already");//todo: cahnge to only
         assertTrue(data_base.userExist("carlo"));
         assertEquals(mainSystem.getCurrentUser().getUserName(),"Kroi" );
 

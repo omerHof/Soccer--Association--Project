@@ -44,15 +44,15 @@ public class CoachesController extends Controller {
 
     private void showPlayers() {
         DataBase db = new DataBase();
-        HashMap<String, String> players_name = userManagement.getAllPlayers();
-        ArrayList<SimpleStringProperty> properties_players_name = new ArrayList<>();
-        for(String user_name: players_name.keySet()){
-            String full_name = players_name.get(user_name);
-            properties_players_name.add(new SimpleStringProperty(null,full_name, user_name));
+        HashMap<String, String> coaches_name = userManagement.getAllCoaches();
+        ArrayList<SimpleStringProperty> properties_coaches_name = new ArrayList<>();
+        for(String user_name: coaches_name.keySet()){
+            String full_name = coaches_name.get(user_name);
+            properties_coaches_name.add(new SimpleStringProperty(null,full_name, user_name));
         }
 
-        ObservableList<SimpleStringProperty> players_name_data = FXCollections.observableArrayList(properties_players_name);
-        TableColumn nameCol = new TableColumn("Player");
+        ObservableList<SimpleStringProperty> coaches_name_data = FXCollections.observableArrayList(properties_coaches_name);
+        TableColumn nameCol = new TableColumn("Coach");
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         TableColumn buttonCol = new TableColumn("Pages");
         buttonCol.setCellValueFactory(new PropertyValueFactory<>(""));
@@ -63,7 +63,7 @@ public class CoachesController extends Controller {
                     @Override
                     public TableCell call( TableColumn<SimpleStringProperty, String> param) {
                         TableCell<SimpleStringProperty, String> cell = new TableCell<SimpleStringProperty, String>() {
-                            Button btn = new Button("Show Player's Page");
+                            Button btn = new Button("Show Coach's Page");
                             @Override
                             public void updateItem(String item, boolean empty) {
                                 super.updateItem(item, empty);
@@ -73,7 +73,7 @@ public class CoachesController extends Controller {
                                 } else {
                                     btn.setOnAction(event -> {
                                         SimpleStringProperty simple = getTableView().getItems().get(getIndex());
-                                        showPlayerPage(simple.getValue(), simple.getName());
+                                        showCoachPage(simple.getValue(), simple.getName());
                                     });
                                     setGraphic(btn);
                                     setText(null);
@@ -86,15 +86,15 @@ public class CoachesController extends Controller {
 
         buttonCol.setCellFactory(cellFactory);
 
-        coaches_table.setItems(players_name_data);
+        coaches_table.setItems(coaches_name_data);
         coaches_table.getColumns().addAll(nameCol, buttonCol);
 
 
     }
 
-    private void showPlayerPage(String user_name, String full_name) {
+    private void showCoachPage(String user_name, String full_name) {
 
-        Pair<String, ArrayList<String>> detailsAsPair = userManagement.getPlayerPageDetails(user_name);
+        Pair<String, ArrayList<String>> detailsAsPair = userManagement.getCoachPageDetails(user_name);
         String[] details = detailsAsPair.getKey().split(",");
         personal_page.getChildren().clear();
         personal_page.getChildren().add(new Text(full_name + "'s Personal Page:" + "\n"));

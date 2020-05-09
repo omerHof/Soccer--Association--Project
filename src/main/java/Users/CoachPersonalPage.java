@@ -2,6 +2,7 @@ package Users;
 
 import SystemLogic.DB;
 import Teams.Team;
+import javafx.util.Pair;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -33,4 +34,13 @@ public  class CoachPersonalPage extends PersonalPage {
         this.teamRole = teamRole;
     }
 
+    public Pair<String, ArrayList<String>> getAllDetails() {
+        String details =
+                super.name + "," +
+                        "Age: " + super.age + "," +
+                        "Current Team: " +super.currentTeam.getName() +  "," +
+                        "Team Role:" + teamRole;
+
+        return new Pair<>(details ,teamHistory);
+    }
 }

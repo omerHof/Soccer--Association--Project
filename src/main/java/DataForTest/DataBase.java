@@ -414,16 +414,16 @@ public class DataBase {
         hh = new Player("ez75", "123", "Shlomi Arbeitman", "eeee", date2, "striker");
         hh.createPersonalPage(170, 78,11 , "Betar Yerushlaim");
 
-        klinger = new Coach("kling", "1212", "nir klinger", "dsdasd", "head coach");
-        aaa = new Coach("klin", "1212", "nir klinger", "dsdasd", "head coach");
-        bbb = new Coach("kli", "1212", "nir klinger", "dsdasd", "head coach");
-        ccc = new Coach("kl", "1212", "nir klinger", "dsdasd", "head coach");
-        ddd = new Coach("k", "1212", "nir klinger", "dsdasd", "head coach");
-        eee = new Coach("klingg", "1212", "nir klinger", "dsdasd", "head coach");
-        fff = new Coach("klinggg", "1212", "nir klinger", "dsdasd", "head coach");
-        ggg = new Coach("klinggggg", "1212", "nir klinger", "dsdasd", "head coach");
-        hhh = new Coach("klnnning", "1212", "nir klinger", "dsdasd", "head coach");
-        iii = new Coach("klinssssg", "1212", "nir klinger", "dsdasd", "head coach");
+        klinger = new Coach("kling", "1212", "Nir Klinger", "dsdasd", "head coach");
+        aaa = new Coach("klin", "1212", "Avraham Grant", "dsdasd", "head coach");
+        bbb = new Coach("kli", "1212", "Itzhak Shim", "dsdasd", "head coach");
+        ccc = new Coach("kl", "1212", "Alex Pergenson", "dsdasd", "head coach");
+        ddd = new Coach("k", "1212", "Quique Setién", "dsdasd", "head coach");
+        eee = new Coach("klingg", "1212", "Josep Guardiola", "dsdasd", "head coach");
+        fff = new Coach("klinggg", "1212", "Roni Levy", "dsdasd", "head coach");
+        ggg = new Coach("klinggggg", "1212", "Frank Lampard", "dsdasd", "head coach");
+        hhh = new Coach("klnnning", "1212", "Andreas Herzog", "dsdasd", "head coach");
+        iii = new Coach("klinssssg", "1212", "Marko Balbul", "dsdasd", "head coach");
 
         /**fan**/
 
