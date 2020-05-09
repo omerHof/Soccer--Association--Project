@@ -1,6 +1,7 @@
 package UILayer;
 
 
+import UILayer.Controllers.HomePageController;
 import UILayer.Controllers.LandingController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -26,7 +27,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
         setStage(primaryStage);
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Landing.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/HomePage.fxml"));
         root = fxmlLoader.load();
         Image icon = new Image(getClass().getResourceAsStream("/Views/soccerLogo.png"));
         primaryStage.getIcons().add(icon);
@@ -35,7 +36,7 @@ public class Main extends Application {
         primaryStage.setMinWidth(700);
         primaryStage.setMinHeight(700);
 
-        LandingController lc = fxmlLoader.getController();
+        HomePageController lc = fxmlLoader.getController();
 
         primaryStage.show();
 
