@@ -17,3 +17,17 @@
 JFXTextField{
     -fx-background-color: green;
 }
+
+
+TableView{
+    -fx-background-color: transparent;
+}
+
+TableView.table-row-cell:selected .text {
+    -fx-fill: blue ;
+}
+
+TableView.table-row-cell{
+    -fx-border-color:#d3d3d3;
+}
+

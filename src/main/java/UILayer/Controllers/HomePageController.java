@@ -2,28 +2,17 @@ package UILayer.Controllers;
 
 import ServiceLayer.SystemManagement;
 import UILayer.Main;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextField;
-import com.sun.rowset.internal.Row;
-import javafx.beans.property.ReadOnlyStringWrapper;
-import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.collections.ObservableListBase;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.ResourceBundle;
 
 public class HomePageController extends Controller {
@@ -32,10 +21,15 @@ public class HomePageController extends Controller {
     ArrayList<String> leaguesNames;
 
     @FXML
-    TableView<String[]> tab = new TableView();
+    TableView<String[]> tab1 = new TableView();
+    @FXML
+    TableView<String[]> tab2 = new TableView();
 
+    @FXML
+    Label leagueText1 = new Label();
 
-
+    @FXML
+    Label leagueText2 = new Label();
 
     public HomePageController() {
         systemManagement = new SystemManagement();
@@ -47,7 +41,7 @@ public class HomePageController extends Controller {
     public void initialize(URL location, ResourceBundle resources) {
 
         Stage s = Main.getStage();
-        s.setOnCloseRequest(e->{
+        s.setOnCloseRequest(e -> {
             e.consume();
             closeProgram();
         });
@@ -59,15 +53,31 @@ public class HomePageController extends Controller {
     public void setText() {
 
         String[][] data = new String[10][8];
-        int i=0;
-        for(String leagueString:leaguesNames) {
+        int i = 0;
+        int numOfTable=1;
+        for (String leagueString : leaguesNames) {
+            //leagueText.setText("LEAGUE: " + leagueString);
             ArrayList<String> games = systemManagement.closestGames(leagueString);
             for (String game : games) {
                 data[i] = new String[]{leagueString, game.split("%")[0], game.split("%")[1], game.split("%")[2],
                         game.split("%")[3], game.split("%")[4], game.split("%")[5], game.split("%")[6]};
                 i++;
             }
+            if(numOfTable==1) {
+                createTable(data,tab1,leagueText1,leagueString);
+                tab1.setVisible(true);
+            }
+            else {
+                createTable(data, tab2,leagueText2,leagueString);
+                tab2.setVisible(true);
+
+            }
+            numOfTable++;
         }
+    }
+
+    private void createTable(String[][] data, TableView<String[]> tab, Label leagueText, String leagueString) {
+        leagueText.setText("LEAGUE: " + leagueString);
 
         TableColumn<String[], String> columnOne = new TableColumn();
         columnOne.setText("League");
@@ -93,44 +103,62 @@ public class HomePageController extends Controller {
         TableColumn<String[], String> columneight = new TableColumn();
         columneight.setText("Status");
 
-        tab.getColumns().addAll(columnOne, columnTwo,columnThree,columnFour,columnFive,columnSix,columnSeven,columneight);
+        tab.getColumns().
+
+                addAll(columnOne, columnTwo, columnThree, columnFour, columnFive, columnSix, columnSeven, columneight);
 
         // Add cell value factories
-        columnOne.setCellValueFactory((p) -> {
+        columnOne.setCellValueFactory((p) ->
+
+        {
             String[] x = p.getValue();
             return new SimpleStringProperty(x != null && x.length > 0 ? x[0] : "<no name>");
         });
 
-        columnTwo.setCellValueFactory((p) -> {
+        columnTwo.setCellValueFactory((p) ->
+
+        {
             String[] x = p.getValue();
             return new SimpleStringProperty(x != null && x.length > 1 ? x[1] : "<no value>");
         });
 
-        columnThree.setCellValueFactory((p) -> {
+        columnThree.setCellValueFactory((p) ->
+
+        {
             String[] x = p.getValue();
             return new SimpleStringProperty(x != null && x.length > 1 ? x[2] : "<no value>");
         });
 
-        columnFour.setCellValueFactory((p) -> {
+        columnFour.setCellValueFactory((p) ->
+
+        {
             String[] x = p.getValue();
             return new SimpleStringProperty(x != null && x.length > 1 ? x[3] : "<no value>");
         });
 
-        columnFive.setCellValueFactory((p) -> {
+        columnFive.setCellValueFactory((p) ->
+
+        {
             String[] x = p.getValue();
             return new SimpleStringProperty(x != null && x.length > 1 ? x[4] : "<no value>");
         });
 
-        columnSix.setCellValueFactory((p) -> {
+        columnSix.setCellValueFactory((p) ->
+
+        {
             String[] x = p.getValue();
             return new SimpleStringProperty(x != null && x.length > 1 ? x[5] : "<no value>");
         });
-        columnSeven.setCellValueFactory((p) -> {
+        columnSeven.setCellValueFactory((p) ->
+
+        {
             String[] x = p.getValue();
             return new SimpleStringProperty(x != null && x.length > 1 ? x[6] : "<no value>");
         });
 
-        columneight.setCellValueFactory((p) -> {
+        columneight.setCellValueFactory((p) ->
+
+        {
             String[] x = p.getValue();
             return new SimpleStringProperty(x != null && x.length > 1 ? x[7] : "<no value>");
         });
@@ -223,8 +251,11 @@ public class HomePageController extends Controller {
                 }
             }
         });
-        tab.getItems().addAll(Arrays.asList(data));
+        tab.getItems().
 
+                addAll(Arrays.asList(data));
     }
-
 }
+
+
+
