@@ -42,7 +42,6 @@ public class MyAppController extends Controller {
         });
         UserManagement userManagement = new UserManagement();
         //userManagement.getUserType(userName);
-        userType="AssociationRepresentative";//todo remove only for test
         setButton();
 
     }

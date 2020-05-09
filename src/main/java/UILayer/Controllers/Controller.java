@@ -19,7 +19,7 @@ public class Controller implements Initializable {
 
     @FXML
     protected static String userName;
-    protected String userType;
+    protected static String userType;
     DataBase db = new DataBase();
 
 
